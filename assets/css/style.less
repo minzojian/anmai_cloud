@@ -1,0 +1,92 @@
+// @font-face {
+//   font-family: "Helvetica Neue";
+//   src: url(./Helvetica-Neue-2.ttf);
+// }
+@keyframes arrow-ani {
+  from {
+    margin-top: -10px;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
+
+@keyframes flash {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.25;
+  }
+}
+@keyframes flash2 {
+  from {
+    opacity: 0.75;
+  }
+  to {
+    opacity: 0.25;
+  }
+}
+div::-webkit-scrollbar {
+  /*滚动条整体样式*/
+
+  width: 10px; /*高宽分别对应横竖滚动条的尺寸*/
+
+  height: 1px;
+}
+
+div::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+
+  border-radius: 10px;
+
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+
+  background: hsla(0, 0%, 33%, 0.8);
+}
+
+div::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+
+  border-radius: 10px;
+
+  background: rgba(237, 237, 237, 0.5);
+}
+label {
+  cursor: unset;
+  display: unset;
+  margin-bottom: unset;
+  font-weight: unset;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div {
+  // text-transform: uppercase;
+  user-select: none;
+}
+body {
+  min-width: 1024px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.sticky {
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}

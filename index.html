@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=500" />
+    <meta name="keywords" content="anmai_cloud" />
+    <meta name="author" content="KentWood (www.lunastudio.cn)" />
+    <title>anmai_cloud</title>
+
+    <script>
+      var ua = navigator.userAgent,
+        isWindowsPhone = /(?:Windows Phone)/.test(ua),
+        isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+        isAndroid = /(?:Android)/.test(ua),
+        isFireFox = /(?:Firefox)/.test(ua),
+        isChrome = /(?:Chrome|CriOS)/.test(ua),
+        isTablet =
+          /(?:iPad|PlayBook)/.test(ua) ||
+          (isAndroid && !/(?:Mobile)/.test(ua)) ||
+          (isFireFox && /(?:Tablet)/.test(ua)),
+        isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+        isPc = !isPhone && !isAndroid && !isSymbian
+
+      //  if(isPhone){
+      //   window.location = "index_mobile.html";
+      //  }
+    </script>
+
+    <!-- <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:wght@200;300;400;600|Source+Sans+Pro:300,400,700,400italic|Josefin+Slab:400,700italic"
+      rel="stylesheet"
+      type="text/css"
+    /> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="./assets/css/normalize.css" type="text/css" />
+
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+
+    <!-- <link href="./assets/css/old-style.css" rel="stylesheet" type="text/css" /> -->
+    <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- <script
+      type="text/javascript"
+      src="./assets/js/lib/greensock/TweenMax.min.js"
+    ></script> -->
+
+    <script src="./assets/js/lib/gsap.min.js"></script>
+
+    <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./assets/js/lib/highlight.pack.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./assets/js/lib/modernizr.custom.min.js"
+    ></script>
+    <script type="text/javascript" src="./assets/js/common.js"></script>
+    <script type="text/javascript" src="./assets/js/sticky.js"></script>
+    <script
+      type="text/javascript"
+      src="./assets/scrollmagic/ScrollMagic.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./assets/scrollmagic/plugins/animation.gsap.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./assets/scrollmagic/plugins/debug.addIndicators.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="main_bg"></div>
+    <script>
+      var tweens = []
+      function createTimeline() {
+        var tween = gsap.timeline()
+        return tween
+      }
+
+      function createTween() {
+        var tween = gsap.fromTo.apply(gsap, arguments)
+        tweens.push(tween)
+        return tween
+      }
+
+      var controller = new ScrollMagic.Controller()
+    </script>
+
+    <div class="stage1" style="height: 650vh">
+      <div class="sticky">
+        <video
+          src="assets/media/test.mp4"
+          id="myvideo"
+          ontimeupdate="handleVideoPlaying(event)"
+          autoplay
+          muted
+        ></video>
+      </div>
+    </div>
+
+    <script>
+      /////////STAGE1/////////
+      ////////初始视频播放，同时可能会存在按钮////
+
+      var lastScroll = window.scrollY
+      var isMouseWheel = false
+      var mouseWheelTimer = 0
+      function handleVideoPlaying(e) {
+        console.log(e)
+        if (!isMouseWheel) window.scrollTo(getScrollYByVideo())
+      }
+
+      function getScrollYByVideo() {
+        return {
+          left: 0,
+          top: ((window.innerHeight * myvideo.currentTime) / 26) * 6.5,
+        }
+      }
+
+      function getTimerByScroll() {
+        return (26 * window.scrollY) / 6.5 / window.innerHeight
+      }
+
+      $(function () {
+        // pathPrepare($(".svg_path"));
+
+        // var tween = createTimeline()
+        // tween.add([
+        //   createTween(
+        //     ".new-mission3",
+        //     0.25 * window.innerHeight,
+        //     { width: 606 },
+        //     {  width: 0, ease: Linear.easeNone, immediateRender: false }
+        //   ),
+        //   createTween(
+        //     ".new-mission3-sm",
+        //     0.25 * window.innerHeight,
+        //     { width: 606 },
+        //     {  width: 0, ease: Linear.easeNone, immediateRender: false }
+        //   ),
+        //   createTween(
+        //     ".sitebar-ball-top-line-2",
+        //     .75 * window.innerHeight,
+        //     { width: 0 },
+        //     {
+        //       width: "100%",
+        //       ease: Linear.easeNone, immediateRender: false,
+        //     }
+        //   ),
+        // ]);
+
+        var scene = new ScrollMagic.Scene({
+          triggerHook: "0",
+          triggerElement: ".stage1",
+          duration: 6.5 * window.innerHeight,
+        })
+          // .setTween(tween)
+          // .setPin(".landing-section")
+          .addIndicators({ name: "first" }) // add indicators (requires plugin)
+          .addTo(controller)
+          .on("progress", function (progEvent) {
+            if (isMouseWheel) {
+              myvideo.currentTime = getTimerByScroll()
+            }
+            // myvideo.currentTime = 66 * progEvent.progress
+          })
+
+        function pausePlayVideo() {
+          // myvideo.paused = true
+          myvideo.pause()
+        }
+        function resumePlayVideo() {
+          // myvideo.paused = false
+          myvideo.play()
+        }
+
+        function wheeled(event) {
+          isMouseWheel = true
+          pausePlayVideo()
+          clearTimeout(mouseWheelTimer)
+
+          mouseWheelTimer = setTimeout(resumePlayVideo, 2000)
+
+          // if (learnCycleSwitch.checked) {
+          //   // if((window.scrollY+ event.deltaY)>=window.innerHeight * 11 || (window.scrollY+ event.deltaY)<=window.innerHeight * 9)
+          //     event.preventDefault()
+
+          // var s = Math.max(Math.min(window.scrollY+ event.deltaY, window.innerHeight * 11), window.innerHeight * 9)
+          //   window.scrollTo({ top: s });
+
+          // // window.scrollTo({ top: window.scrollY + event.deltaY,behavior: "smooth" });
+          // }
+        }
+
+        window.addEventListener("wheel", wheeled, {
+          passive: false,
+          capture: true,
+        })
+        // actual render code is in the `scrolled` handler because
+        // there are other wheel events in the code that adjust the scroll position
+        // window.addEventListener('scroll', scrolled, { passive: true })
+
+        $(window).on("scroll", function (event) {})
+      })
+    </script>
+
+    <div class="stage2"></div>
+
+    <script>
+      ////////STAGE2/////////
+
+      // $(function () {
+      //   var tween = createTimeline()
+
+      //   var scene = new ScrollMagic.Scene({
+      //     triggerHook: "0",
+      //     triggerElement: ".class-div2",
+      //     duration: 0.5 * window.innerHeight,
+      //     offset: -0.5 * window.innerHeight,
+      //   })
+      //     .setTween(tween)
+      //     // .setPin(".landing-section")
+      //     .addIndicators({ name: "classes-----" }) // add indicators (requires plugin)
+      //     .addTo(controller)
+      // })
+    </script>
+
+    <div class="stage3"></div>
+    <script>
+      // $(function () {
+      /////////////STAGE3/////////////
+
+      //   var tween = createTimeline()
+
+      //   var scene = new ScrollMagic.Scene({
+      //     triggerHook: "0",
+      //     triggerElement: ".contact-section",
+      //     duration: "100%",
+      //     offset: -100,
+      //   })
+      //     .setTween(tween)
+      //     //.setPin(".audio-screen")
+      //     .addIndicators({ name: "phone screen" }) // add indicators (requires plugin)
+      //     .addTo(controller)
+      //     .on("enter", function () {
+      //       cardOrImprintAndPrivacySwitch.checked = false
+      //       toggleCardOrImprintAndPrivacy()
+      //     })
+      // })
+    </script>
+
+    <div class="stage4"></div>
+    <script>
+      /////////STAGE4////////
+      /////////白色的背景，左侧MENU切换////////一共三组元素
+    </script>
+
+    <script>
+      var elements = document.querySelectorAll(".sticky")
+      Stickyfill.add(elements)
+    </script>
+
+    <div class="overview">
+
+<div></div>
+
+</div>
+  </body>
+</html>
