@@ -51,6 +51,7 @@
     ></script> -->
 
     <script src="./assets/js/lib/gsap.min.js"></script>
+    <script src="./assets/js/lib/ScrollToPlugin.min.js"></script>
 
     <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
 
@@ -76,9 +77,11 @@
       type="text/javascript"
       src="./assets/scrollmagic/plugins/debug.addIndicators.js"
     ></script>
+
+    <script src="./assets/js/lib/jquery.nicescroll.min.js"></script>
   </head>
 
-  <body>
+  <body class="dark_bg">
     <div class="main_bg"></div>
     <script>
       var tweens = []
@@ -93,18 +96,239 @@
         return tween
       }
 
-      var controller = new ScrollMagic.Controller()
+      var controller = new ScrollMagic.Controller({ addIndicators: true })
     </script>
 
-    <div class="stage1" style="height: 650vh">
+    <div class="stage1" style="height: 800vh">
       <div class="sticky">
         <video
-          src="assets/media/test.mp4"
+          class="bg_video"
+          src="assets/media/stage1.mp4"
           id="myvideo"
           ontimeupdate="handleVideoPlaying(event)"
           autoplay
           muted
         ></video>
+
+        <div class="left-progress state1">
+          <div class="trunk"></div>
+          <div class="bar"></div>
+          <span class="info"></span>
+        </div>
+
+        <div class="title_part title1 state1">
+          <span class="sub_part1">Web 3.0 分布式云计算平台</span>
+          <span class="sub_part2">全球去中心化云计算业务一站式服务商</span>
+          <div class="action_btn btn-with-arrow">
+            <span> 立刻探索 </span>
+            <img src="assets/img/right-arrow.png" />
+          </div>
+        </div>
+
+        <div class="title_part title2 state1">
+          <span class="sub_part1">Web 3.0 新型云计算平台</span>
+          <span class="sub_part2"
+            >用去中心化技术帮助每个人轻松迈入数字文明新世界</span
+          >
+          <div class="action_btn btn-with-arrow">
+            <span> 立刻探索 </span>
+            <img src="assets/img/right-arrow.png" />
+          </div>
+        </div>
+
+        <div class="title_part title3 state1">
+          <div class="inner_scroll_warpper">
+            <div class="sub_part">
+              <div class="left-part">
+                <div class="divider"></div>
+                <div class="sub_part_title">
+                  <span>企业里程碑</span>
+                  <span>milestone</span>
+                </div>
+                <div class="sub_part_content">
+                  <div class="sub_part_content_item">
+                    <img
+                      class="sub_part_content_item_img"
+                      src="assets/img/图层 502.png"
+                    />
+                    <div class="sub_part_content_item_caption">
+                      <span
+                        >安迈云主办“云领风潮-安迈云品牌交流会”，并加入GDCA全球分布式云联盟</span
+                      >
+                      <div class="round_btn btn-with-arrow">
+                        <img src="assets/img/right-arrow.png" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sub_part_content_item">
+                    <img
+                      class="sub_part_content_item_img"
+                      src="assets/img/图层 507.png"
+                    />
+                    <div class="sub_part_content_item_caption">
+                      <span
+                        >安迈云与中科曙光、乐讯科技签署EiB级存储战略合作协议</span
+                      >
+                      <div class="round_btn btn-with-arrow">
+                        <img src="assets/img/right-arrow.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="right-part">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="270px"
+                  height="92px"
+                  viewBox="0 0 330 100"
+                >
+                  <defs>
+                    <linearGradient id="gradient" y1="0" y2="1">
+                      <stop stop-color="#74d9b4" offset="0"></stop>
+                      <stop stop-color="#5aa1d8" offset="1"></stop>
+                    </linearGradient>
+                  </defs>
+                  <text
+                    class="side-title"
+                    stroke-width="2"
+                    stroke="url(#gradient)"
+                    fill="none"
+                    style="transform: translateY(calc(100% - 4px))"
+                  >
+                    2021
+                  </text>
+                </svg>
+              </div>
+            </div>
+            <div class="sub_part">
+              <div class="left-part">
+                <div class="divider"></div>
+                <div class="sub_part_title">
+                  <span>企业里程碑</span>
+                  <span>milestone</span>
+                </div>
+                <div class="sub_part_content">
+                  <div class="sub_part_content_item">
+                    <img
+                      class="sub_part_content_item_img"
+                      src="assets/img/图层 502.png"
+                    />
+                    <div class="sub_part_content_item_caption">
+                      <span
+                        >安迈云主办“云领风潮-安迈云品牌交流会”，并加入GDCA全球分布式云联盟</span
+                      >
+                      <div class="round_btn btn-with-arrow">
+                        <img src="assets/img/right-arrow.png" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sub_part_content_item">
+                    <img
+                      class="sub_part_content_item_img"
+                      src="assets/img/图层 507.png"
+                    />
+                    <div class="sub_part_content_item_caption">
+                      <span
+                        >安迈云与中科曙光、乐讯科技签署EiB级存储战略合作协议</span
+                      >
+                      <div class="round_btn btn-with-arrow">
+                        <img src="assets/img/right-arrow.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="right-part">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="270px"
+                  height="92px"
+                  viewBox="0 0 330 100"
+                >
+                  <defs>
+                    <linearGradient id="gradient" y1="0" y2="1">
+                      <stop stop-color="#74d9b4" offset="0"></stop>
+                      <stop stop-color="#5aa1d8" offset="1"></stop>
+                    </linearGradient>
+                  </defs>
+                  <text
+                    class="side-title"
+                    stroke-width="2"
+                    stroke="url(#gradient)"
+                    fill="none"
+                    style="transform: translateY(calc(100% - 4px))"
+                  >
+                    2020
+                  </text>
+                </svg>
+              </div>
+            </div>
+            <div class="sub_part">
+              <div class="left-part">
+                <div class="divider"></div>
+                <div class="sub_part_title">
+                  <span>企业里程碑</span>
+                  <span>milestone</span>
+                </div>
+                <div class="sub_part_content">
+                  <div class="sub_part_content_item">
+                    <img
+                      class="sub_part_content_item_img"
+                      src="assets/img/图层 502.png"
+                    />
+                    <div class="sub_part_content_item_caption">
+                      <span
+                        >安迈云主办“云领风潮-安迈云品牌交流会”，并加入GDCA全球分布式云联盟</span
+                      >
+                      <div class="round_btn btn-with-arrow">
+                        <img src="assets/img/right-arrow.png" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sub_part_content_item">
+                    <img
+                      class="sub_part_content_item_img"
+                      src="assets/img/图层 507.png"
+                    />
+                    <div class="sub_part_content_item_caption">
+                      <span
+                        >安迈云与中科曙光、乐讯科技签署EiB级存储战略合作协议</span
+                      >
+                      <div class="round_btn btn-with-arrow">
+                        <img src="assets/img/right-arrow.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="right-part">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="270px"
+                  height="92px"
+                  viewBox="0 0 330 100"
+                >
+                  <defs>
+                    <linearGradient id="gradient" y1="0" y2="1">
+                      <stop stop-color="#74d9b4" offset="0"></stop>
+                      <stop stop-color="#5aa1d8" offset="1"></stop>
+                    </linearGradient>
+                  </defs>
+                  <text
+                    class="side-title"
+                    stroke-width="2"
+                    stroke="url(#gradient)"
+                    fill="none"
+                    style="transform: translateY(calc(100% - 4px))"
+                  >
+                    2019
+                  </text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -112,66 +336,304 @@
       /////////STAGE1/////////
       ////////初始视频播放，同时可能会存在按钮////
 
-      var lastScroll = window.scrollY
+      var lastScroll = window.pageYOffset
       var isMouseWheel = false
+      var isEnterStage1 = false
       var mouseWheelTimer = 0
+      var mouseWheelTimer2 = 0
       function handleVideoPlaying(e) {
-        console.log(e)
-        if (!isMouseWheel) window.scrollTo(getScrollYByVideo())
+        // console.log(myvideo.currentTime, "video progress")
+        if (!isMouseWheel && isEnterStage1)
+          window.scrollTo({ ...getScrollYByVideo() }) //, behavior: "smooth" })
       }
 
-      function getScrollYByVideo() {
+      function getScrollYByVideo(t) {
         return {
           left: 0,
-          top: ((window.innerHeight * myvideo.currentTime) / 26) * 6.5,
+          top: (5.5 * window.innerHeight * (t || myvideo.currentTime)) / 20,
         }
       }
 
       function getTimerByScroll() {
-        return (26 * window.scrollY) / 6.5 / window.innerHeight
+        return (20 * window.pageYOffset) / 5.5 / window.innerHeight
       }
 
       $(function () {
         // pathPrepare($(".svg_path"));
 
-        // var tween = createTimeline()
-        // tween.add([
-        //   createTween(
-        //     ".new-mission3",
-        //     0.25 * window.innerHeight,
-        //     { width: 606 },
-        //     {  width: 0, ease: Linear.easeNone, immediateRender: false }
-        //   ),
-        //   createTween(
-        //     ".new-mission3-sm",
-        //     0.25 * window.innerHeight,
-        //     { width: 606 },
-        //     {  width: 0, ease: Linear.easeNone, immediateRender: false }
-        //   ),
-        //   createTween(
-        //     ".sitebar-ball-top-line-2",
-        //     .75 * window.innerHeight,
-        //     { width: 0 },
-        //     {
-        //       width: "100%",
-        //       ease: Linear.easeNone, immediateRender: false,
-        //     }
-        //   ),
-        // ]);
+        // requestAnimationFrame(handleVideoPlaying)
+
+        var tween = createTimeline()
+        tween.add([
+          createTween(
+            ".title1",
+            getScrollYByVideo(1).top,
+            // 0.2 * window.innerHeight,
+            {
+              // translateY: 30, opacity: 0
+            },
+            {
+              // translateY: 0,
+              // opacity: 1,
+              ease: Linear.easeNone,
+              immediateRender: false,
+              onEnter: function () {
+                $(".left-progress").removeClass("state2")
+                $(".left-progress").removeClass("state3")
+                $(".left-progress").addClass("state1")
+              },
+              onComplete: function () {
+                // console.log(this.targets)
+                this.targets().forEach((elem) => {
+                  elem.classList.add("state2")
+                  elem.classList.remove("state1")
+                })
+              },
+              onReverseComplete: function () {
+                this.targets().forEach((elem) => {
+                  elem.classList.add("state1")
+                  elem.classList.remove("state2")
+                })
+              },
+            }
+          ),
+          createTween(
+            ".title1",
+            getScrollYByVideo(1).top,
+            {
+              // translateY: 0, opacity: 1
+            },
+            {
+              delay: getScrollYByVideo(9).top,
+              // translateY: -30,
+              // opacity: 0,
+              ease: Linear.easeNone,
+              immediateRender: false,
+              onComplete: function () {
+                this.targets().forEach((elem) => {
+                  elem.classList.remove("state2")
+                  elem.classList.add("state3")
+                })
+              },
+              onReverseComplete: function () {
+                this.targets().forEach((elem) => {
+                  elem.classList.remove("state3")
+                  elem.classList.add("state2")
+                })
+              },
+            }
+          ),
+          createTween(
+            ".title2",
+            getScrollYByVideo(1).top,
+            {
+              //  translateY: 30, opacity: 0
+            },
+            {
+              delay: getScrollYByVideo(9.5).top,
+              // translateY: 0,
+              // opacity: 1,
+              // ease: Linear.easeNone,
+              immediateRender: false,
+              onEnter: function () {
+                $(".left-progress").removeClass("state1")
+                $(".left-progress").removeClass("state3")
+                $(".left-progress").addClass("state2")
+              },
+              onComplete: function () {
+                this.targets().forEach((elem) => {
+                  elem.classList.add("state2")
+                  elem.classList.remove("state1")
+                })
+              },
+              onReverseComplete: function () {
+                this.targets().forEach((elem) => {
+                  elem.classList.remove("state2")
+                  elem.classList.add("state1")
+                })
+              },
+            }
+          ),
+          createTween(
+            ".title2",
+            getScrollYByVideo(1).top,
+            {
+              // translateY: 0, opacity: 1
+            },
+            {
+              delay: getScrollYByVideo(18.5).top,
+              // translateY: -30,
+              // opacity: 0,
+              ease: Linear.easeNone,
+              immediateRender: false,
+              onComplete: function () {
+                this.targets().forEach((elem) => {
+                  elem.classList.remove("state2")
+                  elem.classList.add("state3")
+                })
+              },
+              onReverseComplete: function () {
+                this.targets().forEach((elem) => {
+                  elem.classList.remove("state3")
+                  elem.classList.add("state2")
+                })
+              },
+            }
+          ),
+
+          createTween(
+            ".title3",
+            getScrollYByVideo(1).top,
+            {
+              //  translateY: 30, opacity: 0
+            },
+            {
+              delay: getScrollYByVideo(19).top,
+              // translateY: 0,
+              // opacity: 1,
+              // ease: Linear.easeNone,
+              immediateRender: false,
+              onEnter: function () {
+                $(".left-progress").removeClass("state1")
+                $(".left-progress").removeClass("state2")
+                $(".left-progress").addClass("state3")
+              },
+              onComplete: function () {
+                this.targets().forEach((elem) => {
+                  elem.classList.add("state2")
+                  elem.classList.remove("state1")
+                })
+              },
+              onReverseComplete: function () {
+                this.targets().forEach((elem) => {
+                  elem.classList.remove("state2")
+                  elem.classList.add("state1")
+                })
+              },
+            }
+          ),
+
+          // createTween(
+          //   ".title3",
+          //   0.2 * window.innerHeight,
+          //   {
+          //     // translateY: 0, opacity: 1
+          //   },
+          //   {
+          //     delay: 6.2 * window.innerHeight,
+          //     // translateY: -30,
+          //     // opacity: 0,
+          //     ease: Linear.easeNone,
+          //     immediateRender: false,
+          //     onComplete: function () {
+          //       this.targets().forEach((elem) => {
+          //         elem.classList.remove("state2")
+          //         elem.classList.add("state3")
+          //       })
+          //     },
+          //     onReverseComplete: function () {
+          //       this.targets().forEach((elem) => {
+          //         elem.classList.remove("state3")
+          //         elem.classList.add("state2")
+          //       })
+          //     },
+          //   }
+          // ),
+          //   createTween(
+          //     ".new-mission3-sm",
+          //     0.25 * window.innerHeight,
+          //     { width: 606 },
+          //     {  width: 0, ease: Linear.easeNone, immediateRender: false }
+          //   ),
+          //   createTween(
+          //     ".sitebar-ball-top-line-2",
+          //     .75 * window.innerHeight,
+          //     { width: 0 },
+          //     {
+          //       width: "100%",
+          //       ease: Linear.easeNone, immediateRender: false,
+          //     }
+          //   ),
+        ])
+
+        // tween.add([gsap.to("body", getScrollYByVideo(5).top, {})])
+
+        // var scene = new ScrollMagic.Scene({
+        //   triggerHook: "0",
+        //   triggerElement: ".stage1",
+        //   duration: getScrollYByVideo(10).top,
+        // })
+        //   .addIndicators({ name: "first11111" })
+        //   .addTo(controller)
 
         var scene = new ScrollMagic.Scene({
           triggerHook: "0",
           triggerElement: ".stage1",
-          duration: 6.5 * window.innerHeight,
+          duration: getScrollYByVideo(20).top,
         })
-          // .setTween(tween)
+          .setTween(tween)
           // .setPin(".landing-section")
           .addIndicators({ name: "first" }) // add indicators (requires plugin)
           .addTo(controller)
+          .on("enter", function () {
+            console.log("entter..........")
+            isEnterStage1 = true
+          })
+          .on("leave", function () {
+            console.log("exit..........")
+            isEnterStage1 = false
+          })
           .on("progress", function (progEvent) {
             if (isMouseWheel) {
               myvideo.currentTime = getTimerByScroll()
+              // console.log("getTimerByScroll()", getTimerByScroll())
             }
+            // console.log(window.pageYOffset / window.innerHeight)
+            // myvideo.currentTime = 66 * progEvent.progress
+          })
+
+        var tween2 = createTimeline()
+        tween2.add([
+          createTween(
+            ".title3", // { v: 0 },
+            1,
+            {
+              scrollTo: 0,
+              //  translateY: 30, opacity: 0
+            },
+            {
+              // delay: 5.5 * window.innerHeight,
+              // v: $(".inner_scroll_warpper").height() - $(".title3").height(),
+              scrollTo:
+                $(".inner_scroll_warpper").height() - $(".title3").height(),
+              // translateY: 0,
+              // opacity: 1,
+              // ease: Linear.easeNone,
+              immediateRender: false,
+              onUpdate: function () {
+                // console.log(
+                //   // this.targets()[0].v,
+                //   $(".title3").get(0).scrollTop,
+                //   "vvvvvv"
+                // )
+                // gsap.to(".title3", 0.6, { scrollTo: this.targets()[0].v })
+              },
+            }
+          ),
+        ])
+
+        var scene2 = new ScrollMagic.Scene({
+          triggerHook: "0",
+          triggerElement: ".stage1",
+          duration: 1 * window.innerHeight,
+          offset: getScrollYByVideo(20).top,
+        })
+          .setTween(tween2)
+          // .setPin(".landing-section")
+          .addIndicators({ name: "first2" }) // add indicators (requires plugin)
+          .addTo(controller)
+          .on("progress", function (progEvent) {
+            // console.log(window.pageYOffset / window.innerHeight)
             // myvideo.currentTime = 66 * progEvent.progress
           })
 
@@ -181,6 +643,7 @@
         }
         function resumePlayVideo() {
           // myvideo.paused = false
+          isMouseWheel = false
           myvideo.play()
         }
 
@@ -188,29 +651,43 @@
           isMouseWheel = true
           pausePlayVideo()
           clearTimeout(mouseWheelTimer)
+          mouseWheelTimer = setTimeout(resumePlayVideo, 200)
 
-          mouseWheelTimer = setTimeout(resumePlayVideo, 2000)
+          $(nice.autohidedom).removeClass("hide")
+
+          clearTimeout(mouseWheelTimer2)
+          mouseWheelTimer2 = setTimeout(function () {
+            $(nice.autohidedom).addClass("hide")
+          }, 2000)
 
           // if (learnCycleSwitch.checked) {
-          //   // if((window.scrollY+ event.deltaY)>=window.innerHeight * 11 || (window.scrollY+ event.deltaY)<=window.innerHeight * 9)
+          //   // if((window.pageYOffset+ event.deltaY)>=window.innerHeight * 11 || (window.pageYOffset+ event.deltaY)<=window.innerHeight * 9)
           //     event.preventDefault()
 
-          // var s = Math.max(Math.min(window.scrollY+ event.deltaY, window.innerHeight * 11), window.innerHeight * 9)
+          // var s = Math.max(Math.min(window.pageYOffset+ event.deltaY, window.innerHeight * 11), window.innerHeight * 9)
           //   window.scrollTo({ top: s });
 
-          // // window.scrollTo({ top: window.scrollY + event.deltaY,behavior: "smooth" });
+          // // window.scrollTo({ top: window.pageYOffset + event.deltaY,behavior: "smooth" });
           // }
         }
 
         window.addEventListener("wheel", wheeled, {
-          passive: false,
-          capture: true,
+          // passive: false,
+          // capture: true,
         })
         // actual render code is in the `scrolled` handler because
         // there are other wheel events in the code that adjust the scroll position
         // window.addEventListener('scroll', scrolled, { passive: true })
 
         $(window).on("scroll", function (event) {})
+
+        $(window).resize(function () {
+          $(".stage1").height(
+            getScrollYByVideo(20).top + 2 * window.innerHeight
+          )
+        })
+
+        $(".stage1").height(getScrollYByVideo(20).top + 2 * window.innerHeight)
       })
     </script>
 
@@ -271,9 +748,19 @@
     </script>
 
     <div class="overview">
+      <div onclick="myvideo.pause()">pause</div>
+      <div onclick="myvideo.play()">play</div>
+    </div>
 
-<div></div>
+    <script>
+      var nice = false
+      $(function () {
+        nice = $("body").niceScroll({
+          cursorborder: "1px solid rgb(80,80,80,0.4)",
+        })
 
-</div>
+        $(nice.autohidedom).addClass("hide")
+      })
+    </script>
   </body>
 </html>

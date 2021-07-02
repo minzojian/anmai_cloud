@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./assets/css/detail.css" />
+  </head>
+  <body>
+    <div id="page-main" class="app-main news-show">
+      <header>
+        <div class="logo"><img src="./assets/img/Logo.png" /></div>
+        <div class="right-part">
+          <div class="nav">
+            <ul>
+              <li><a>首页</a></li>
+
+              <input id="product" type="checkbox" hidden />
+              <li class="active">
+                <label for="product">
+                  <a
+                    >产品
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </a>
+                </label>
+                <ul>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/图层 1.png" />
+                      </div>
+                      云计算</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/图层 1.png" />
+                      </div>
+                      云计算</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/图层 1.png" />
+                      </div>
+                      云计算</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <input id="solution" type="checkbox" hidden />
+              <li>
+                <label for="solution">
+                  <a
+                    >解决方案
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </a>
+                </label>
+                <ul>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/图层 1.png" />
+                      </div>
+                      方案1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/图层 1.png" />
+                      </div>
+                      方案2</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/图层 1.png" />
+                      </div>
+                      方案3</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <input id="esg" type="checkbox" hidden />
+              <li>
+                <label for="esg">
+                  <a
+                    >ESG
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </a>
+                </label>
+                <ul>
+                  <li><a>方案1</a></li>
+                  <li><a>方案2</a></li>
+                </ul>
+              </li>
+              <li><a>投资者关系</a></li>
+              <li><a>关于我们</a></li>
+            </ul>
+          </div>
+          <div class="lang_bt">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            English
+          </div>
+        </div>
+      </header>
+      <main class="main-container">
+        <div class="box-nav">
+          <a href="/">首页 ></a>
+          <a href="/news/0">资讯中心 ></a>
+          <a href="/news/0">用户视界 > </a>
+          <span>详情</span>
+        </div>
+        <div class="container">
+          <div class="box-left">
+            <div class="box-heading">
+              <h1 class="title">
+                CDN峰会丨安迈云以去中心化云计算抢先步入Web3.0时代
+              </h1>
+              <div class="line-two">
+                <div class="box-info">
+                  <span class="date">2021年6月10日</span>
+                </div>
+              </div>
+            </div>
+            <div class="box-content">
+              近日，亚太内容分发大会暨CDN峰会在北京召开，该峰会不仅邀请到了阿里云、腾讯云等一线云计算厂商，同时还有中兴、网宿科技等传统CDN产业核心成员，是全球内容流量技术和运维领域最重要、规模最大的活动之一。安迈云作为去中心化云计算核心企业代表受邀出席大会。
+              “Web3.0时代是智能机器的时代，它就如同智能手机的出现，将改变当前人们的生活方式”，安迈云产品副总裁王磊在峰会上这样评价Web3.0时代所带来的改变。
+            </div>
+            <div class="divider bottom-divider"></div>
+            <div class="box-control">
+              <a
+                href="`/news/${$route.params.category}/${prevID}`"
+                class="button text has-icon prev"
+              >
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                <span class="_txt">上一篇</span>
+              </a>
+              <a
+                href="`/news/${$route.params.category}/${nextID}`"
+                class="button text has-icon next disabled"
+              >
+                <span class="_txt">下一篇</span>
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="box-right">
+            <!-- 新闻标签开始 -->
+            <div class="news-tag">
+              <h3>新闻标签</h3>
+              <ul>
+                <li>
+                  <a href="#"><span>高新科研</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>高新科研</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>高新科研</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>高新科研</span></a>
+                </li>
+              </ul>
+            </div>
+            <!-- 分隔线 -->
+            <div class="divider"></div>
+            <!-- 新闻标签结束 -->
+            <div class="box-column feature-news">
+              <div class="header">
+                <h3 class="title">最新推荐</h3>
+                <a class="change" href="#">
+                  <i class="fa fa-refresh" aria-hidden="true"></i>
+                  <span>换一批</span>
+                </a>
+              </div>
+              <div class="content">
+                <div class="item">
+                  <div class="box-img">
+                    <a href="test.html"
+                      ><img src="./assets/img/图层 19.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="box-text">
+                    <a href="test.html" class="title"
+                      >安迈云矩阵存储产品动态获得Protocol
+                      Labs协议实验室官方关注</a
+                    >
+                    <div class="box-info">
+                      <span class="date">2021年06月07日</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- 分隔线 -->
+                <div class="divider"></div>
+                <div class="item">
+                  <div class="box-img">
+                    <a href="test.html"
+                      ><img src="./assets/img/图层 19.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="box-text">
+                    <a href="test.html" class="title"
+                      >安迈云矩阵存储产品动态获得Protocol
+                      Labs协议实验室官方关注</a
+                    >
+                    <div class="box-info">
+                      <span class="date">2021年06月07日</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="top-part">
+          <div class="left-part">
+            <div class="logo"><img src="./assets/img/Logo2.png" /></div>
+            <div class="lang_bt">
+              <i class="fa fa-globe" aria-hidden="true"></i>
+              English
+            </div>
+          </div>
+          <div class="right-part">
+            <div class="nav-item">
+              <span>产品</span>
+              <ul>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <span>解决方案·场景</span>
+              <ul>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <span>解决方案·行业</span>
+              <ul>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <span>解决方案·WEB3.0</span>
+              <ul>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <span>ESG</span>
+              <ul>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <span>关于我们</span>
+              <ul>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-part">
+          <div class="flex fd-c jc-between h-100-p">
+            <div class="flex">
+              <div class="flex ai-center">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                +86 898 3286 7007
+              </div>
+              <div class="divider-v"></div>
+              <div class="flex ai-center">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                contact@AnmaiCloud.com
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divider-v"></div>
+        <div class="flex fd-c jc-between h-100-p"></div>
+      </footer>
+    </div>
+  </body>
+</html>
