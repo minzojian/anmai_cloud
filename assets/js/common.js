@@ -150,6 +150,10 @@ function loadFont(fontFamily, src, style) {
 Promise.all(
   [
     {
+      fontFamily: "FZLanTingHeiS-DB1-GBK",
+      src: `url(../fonts/FZLanTingHei-DB-GBK.ttf)`,
+    },
+    {
       fontFamily: "Gilroy",
       src: `url(../fonts/gilroy-bold-4.otf)`,
       style: { weight: 700 },

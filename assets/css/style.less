@@ -13,6 +13,9 @@
 //   font-weight: 500;
 //   src: url(../fonts/OPPOSans-M.ttf);
 // }
+
+@import "./common.less";
+
 @keyframes arrow-ani {
   from {
     margin-top: -10px;
@@ -337,6 +340,15 @@ body {
 }
 
 .overview {
+  position: fixed;
+  z-index: 111;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.controls {
   position: fixed;
   z-index: 111;
   right: 0;
