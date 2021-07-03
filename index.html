@@ -41,7 +41,7 @@
       type="image/x-icon"
     />
     <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
     <!-- <link href="./assets/css/old-style.css" rel="stylesheet" type="text/css" /> -->
     <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
 
@@ -381,6 +381,10 @@
                 $(".left-progress").removeClass("state2")
                 $(".left-progress").removeClass("state3")
                 $(".left-progress").addClass("state1")
+
+                $(".header1").removeClass("state2")
+                $(".header1").removeClass("state3")
+                $(".header1").addClass("state1")
               },
               onComplete: function () {
                 // console.log(this.targets)
@@ -388,12 +392,16 @@
                   elem.classList.add("state2")
                   elem.classList.remove("state1")
                 })
+
+                $(".header1").removeClass("state1")
+                $(".header1").removeClass("state3")
+                $(".header1").addClass("state2")
               },
               onReverseComplete: function () {
-                this.targets().forEach((elem) => {
-                  elem.classList.add("state1")
-                  elem.classList.remove("state2")
-                })
+                // this.targets().forEach((elem) => {
+                //   elem.classList.add("state1")
+                //   elem.classList.remove("state2")
+                // })
               },
             }
           ),
@@ -512,48 +520,6 @@
               },
             }
           ),
-
-          // createTween(
-          //   ".title3",
-          //   0.2 * window.innerHeight,
-          //   {
-          //     // translateY: 0, opacity: 1
-          //   },
-          //   {
-          //     delay: 6.2 * window.innerHeight,
-          //     // translateY: -30,
-          //     // opacity: 0,
-          //     ease: Linear.easeNone,
-          //     immediateRender: false,
-          //     onComplete: function () {
-          //       this.targets().forEach((elem) => {
-          //         elem.classList.remove("state2")
-          //         elem.classList.add("state3")
-          //       })
-          //     },
-          //     onReverseComplete: function () {
-          //       this.targets().forEach((elem) => {
-          //         elem.classList.remove("state3")
-          //         elem.classList.add("state2")
-          //       })
-          //     },
-          //   }
-          // ),
-          //   createTween(
-          //     ".new-mission3-sm",
-          //     0.25 * window.innerHeight,
-          //     { width: 606 },
-          //     {  width: 0, ease: Linear.easeNone, immediateRender: false }
-          //   ),
-          //   createTween(
-          //     ".sitebar-ball-top-line-2",
-          //     .75 * window.innerHeight,
-          //     { width: 0 },
-          //     {
-          //       width: "100%",
-          //       ease: Linear.easeNone, immediateRender: false,
-          //     }
-          //   ),
         ])
 
         // tween.add([gsap.to("body", getScrollYByVideo(5).top, {})])
@@ -576,11 +542,9 @@
           .addIndicators({ name: "first" }) // add indicators (requires plugin)
           .addTo(controller)
           .on("enter", function () {
-            console.log("entter..........")
             isEnterStage1 = true
           })
           .on("leave", function () {
-            console.log("exit..........")
             isEnterStage1 = false
           })
           .on("progress", function (progEvent) {
@@ -691,25 +655,137 @@
       })
     </script>
 
-    <div class="stage2"></div>
+    <div class="stage2">
+      <div class="business_content flex">
+        <div class="left_part flex fd-c">
+          <div class="bussiness_title1">安迈云业务模式</div>
+          <div class="bussiness_title2">
+            IPFS网络设备及解决方案提供+IPFS云存储服务
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="bussiness_sub_item">
+            <div class="bussiness_sub_item_title">
+              01 云计算 Cloud Computing
+            </div>
+            <ul class="bussiness_sub_item_child">
+              <li></li>
+            </ul>
+          </div>
+          <div class="divider"></div>
+          <div class="bussiness_sub_item">
+            <div class="bussiness_sub_item_title"></div>
+            <ul class="bussiness_sub_item_child"></ul>
+          </div>
+          <div class="divider"></div>
+          <div class="bussiness_sub_item">
+            <div class="bussiness_sub_item_title"></div>
+            <ul class="bussiness_sub_item_child"></ul>
+          </div>
+          <div class="divider"></div>
+
+          <div class="bussiness_bottom_part">
+            <a class="action_btn btn-with-arrow">
+              <span> 探索更多 </span>
+              <img src="assets/img/right-arrow.png" />
+            </a>
+            <a class="action_btn btn-with-arrow">
+              <span> 相关解决方案 </span>
+              <img src="assets/img/right-arrow.png" />
+            </a>
+          </div>
+        </div>
+
+        <div class="right_part">
+          <div class="pic_part">
+            <img src="./assets/img/图层 76.png" />
+            <div class="info_part flex fd-c">
+              <img src="./assets/img/gif1.gif" />
+              <div class="title_part">矩阵存储</div>
+              <span
+                >矩阵存储提供简单易用的PaaS服务、OpenAPI服务和存储工具集套件，致力于用户有效使用稳定可靠的IPFS去中心化存储服务。</span
+              >
+            </div>
+            <div class="_number">01</div>
+          </div>
+          <div class="pic_part">
+            <img src="./assets/img/图层 76.png" />
+            <div class="info_part flex fd-c">
+              <img src="./assets/img/gif1.gif" />
+              <div class="title_part">矩阵存储</div>
+              <span
+                >矩阵存储提供简单易用的PaaS服务、OpenAPI服务和存储工具集套件，致力于用户有效使用稳定可靠的IPFS去中心化存储服务。</span
+              >
+            </div>
+            <div class="_number">02</div>
+          </div>
+          <div class="pic_part">
+            <img src="./assets/img/图层 76.png" />
+            <div class="info_part flex fd-c">
+              <img src="./assets/img/gif1.gif" />
+              <div class="title_part">矩阵存储</div>
+              <span
+                >矩阵存储提供简单易用的PaaS服务、OpenAPI服务和存储工具集套件，致力于用户有效使用稳定可靠的IPFS去中心化存储服务。</span
+              >
+            </div>
+            <div class="_number">03</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script>
       ////////STAGE2/////////
 
-      // $(function () {
-      //   var tween = createTimeline()
+      $(function () {
+        var tween = createTimeline()
+        tween.add([
+          createTween(
+            ".header1",
+            0.1 * window.innerHeight,
+            {},
+            {
+              onEnter: function () {
+                $(".header1").addClass("header_first")
+                $(".header1").removeClass("state1")
+                $(".header1").removeClass("state2")
+                $(".header1").addClass("state3")
+              },
+              onComplete: function () {
+                $(".header1").removeClass("header_first")
+              },
+            }
+          ),
+          createTween(
+            ".header1",
+            0.1 * window.innerHeight,
+            {},
+            {
+              onEnter: function () {
+                $(".header1").addClass("header_second")
+                $(".header1").removeClass("state1")
+                $(".header1").removeClass("state2")
+                $(".header1").addClass("state3")
+              },
+              onReverseComplete: function () {
+                $(".header1").removeClass("header_second")
+              },
+            }
+          ),
+        ])
 
-      //   var scene = new ScrollMagic.Scene({
-      //     triggerHook: "0",
-      //     triggerElement: ".class-div2",
-      //     duration: 0.5 * window.innerHeight,
-      //     offset: -0.5 * window.innerHeight,
-      //   })
-      //     .setTween(tween)
-      //     // .setPin(".landing-section")
-      //     .addIndicators({ name: "classes-----" }) // add indicators (requires plugin)
-      //     .addTo(controller)
-      // })
+        var scene = new ScrollMagic.Scene({
+          triggerHook: "0",
+          triggerElement: ".class-div2",
+          duration: 0.5 * window.innerHeight,
+          offset: -0.5 * window.innerHeight,
+        })
+          .setTween(tween)
+          // .setPin(".landing-section")
+          .addIndicators({ name: "classes-----" }) // add indicators (requires plugin)
+          .addTo(controller)
+      })
     </script>
 
     <div class="stage3"></div>
@@ -741,7 +817,7 @@
     <footer>
       <div class="top-part">
         <div class="left-part">
-          <div class="logo"><img src="./assets/img/Logo2.png" /></div>
+          <div class="logo"><img src="./assets/img/logo_bottom.png" /></div>
           <div class="lang_bt">
             <i class="fa fa-globe" aria-hidden="true"></i>
             English
@@ -857,8 +933,14 @@
     </script>
 
     <div class="overview">
-      <header>
-        <div class="logo"><img src="./assets/img/Logo.png" /></div>
+      <div class="mouse flex fd-c ai-center">
+        <span>scroll</span>
+        <div class="round flex jc-center">
+          <div class="dot"></div>
+        </div>
+      </div>
+      <header class="header1">
+        <div class="logo">&nbsp;</div>
         <div class="right-part">
           <div class="nav">
             <ul>
