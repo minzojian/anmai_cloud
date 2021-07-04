@@ -151,21 +151,21 @@ Promise.all(
   [
     {
       fontFamily: "FZLanTingHeiS-DB1-GBK",
-      src: `url(../fonts/FZLanTingHei-DB-GBK.ttf)`,
+      src: `url(../../assets/fonts/FZLanTingHei-DB-GBK.ttf)`,
     },
     {
       fontFamily: "Gilroy",
-      src: `url(../fonts/gilroy-bold-4.otf)`,
-      style: { weight: 700 },
+      src: `url(../../assets/fonts/gilroy-bold-4.otf)`,
+      style: { weight: "bold" },
     },
     {
       fontFamily: "OPPOSans",
-      src: `url(../fonts/OPPOSans-R.ttf)`,
+      src: `url(../../assets/fonts/OPPOSans-R.ttf)`,
       style: { weight: 400 },
     },
     {
       fontFamily: "OPPOSans",
-      src: `url(../fonts/OPPOSans-M.ttf)`,
+      src: `url(../../assets/fonts/OPPOSans-M.ttf)`,
       style: { weight: 500 },
     },
   ].map(({ fontFamily, src, style }) => loadFont(fontFamily, src, style))
