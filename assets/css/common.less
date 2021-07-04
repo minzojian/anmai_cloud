@@ -44,6 +44,10 @@ header {
 
     flex: 1;
 
+    .menu-btn {
+      display: none;
+    }
+
     & > .nav {
       li a {
         white-space: nowrap;
@@ -67,6 +71,7 @@ header {
             transform: translate(-50%, 0);
             opacity: 1;
             pointer-events: auto;
+            height: auto;
           }
           &::after {
             transform: scale(1, 1);
@@ -203,6 +208,15 @@ footer {
     }
     .sub-unit {
       margin-top: auto;
+      &:last-child {
+        margin-right: 100px;
+      }
+    }
+
+    .gzh {
+      position: absolute;
+      right: 0;
+      bottom: 0;
     }
   }
 
@@ -341,4 +355,209 @@ i.fa {
 svg text {
   font-family: Gilroy;
   font-weight: bold;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.pos-a {
+  position: absolute;
+}
+
+.not_mobile {
+  display: block;
+}
+.mobile {
+  display: none;
+}
+
+.switch_mask {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: -30px;
+  top: -30px;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+input#menuswtich:checked + label {
+  .switch_mask {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .not_mobile {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+
+  body {
+    min-width: auto;
+  }
+  .logo {
+    transform: scale(0.5);
+    transform-origin: left;
+  }
+
+  header {
+    margin: 30px;
+
+    .right-part {
+      margin-left: auto;
+      flex: none;
+    }
+    .lang_bt_mobile {
+      display: flex;
+      align-items: center;
+      i {
+        margin: 0 10px;
+      }
+    }
+
+    .menu-btn {
+      margin-left: auto;
+      display: block !important;
+    }
+
+    .nav {
+      opacity: 0;
+      padding: 10px;
+      width: auto;
+      margin-right: 0 !important;
+      background: white;
+      color: black;
+      border-radius: 4px;
+
+      position: absolute;
+      top: 100%;
+      transition: all 0.3s;
+      pointer-events: none;
+      transform: translateY(-10px);
+      > ul {
+        flex-direction: column;
+
+        // align-items: flex-end;
+        > li {
+          text-align: right;
+          padding: 10px;
+          box-sizing: border-box;
+          a {
+            justify-content: flex-end;
+            width: 100%;
+          }
+          ul {
+            position: relative !important;
+            height: 0;
+            padding: 0 !important;
+            li {
+              &:not(:last-child) {
+                margin-bottom: 5px !important ;
+              }
+              a {
+                font-weight: 400 !important;
+                color: #000000 !important;
+                line-height: 26px !important;
+                font-size: 14px !important;
+              }
+            }
+            .icon {
+              display: none !important;
+            }
+          }
+        }
+      }
+    }
+    input#menuswtich:checked ~ .nav {
+      opacity: 1;
+      transform: translateY(0px);
+      pointer-events: auto;
+    }
+  }
+  footer {
+    padding: 30px;
+    .top-part {
+      flex-direction: column;
+      margin-bottom: 10px;
+      .left-part {
+        width: 100%;
+        margin-bottom: 10px;
+        justify-content: space-between;
+      }
+      .right-part {
+        width: 100%;
+      }
+    }
+    .right-part {
+      flex-direction: column;
+
+      .nav-item {
+        margin-right: 0 !important;
+        margin-bottom: 10px;
+        .nav-title {
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+        }
+
+        ul {
+          height: 0;
+          transform: translateY(-10px);
+          pointer-events: none;
+          transition: all 0.3s;
+          position: relative;
+          overflow: hidden;
+          li {
+            text-align: left;
+          }
+        }
+
+        input[type="checkbox"]:checked ~ ul {
+          height: auto;
+          transform: translateY(0px);
+          pointer-events: auto;
+        }
+      }
+    }
+    .bottom-part {
+      .divider-v {
+        margin: 10px;
+      }
+      > .flex {
+        flex-direction: column;
+        > .sub-unit {
+          flex-direction: column;
+          margin-right: 0;
+          > .flex {
+            flex-direction: column;
+          }
+        }
+        .product_part {
+          position: relative;
+          .product_imgs {
+            img {
+              width: 30%;
+            }
+          }
+          .gzh {
+            img {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nicescroll-rails {
+    display: none !important;
+  }
 }

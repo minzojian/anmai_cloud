@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=500" />
-    <meta name="keywords" content="anmai_cloud" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <!-- <meta name="viewport" content="width=500" /> -->
+    <!-- <meta name="keywords" content="anmai_cloud" /> -->
     <meta name="author" content="KentWood (www.lunastudio.cn)" />
     <title>anmai_cloud</title>
 
@@ -43,6 +47,7 @@
     <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
     <!-- <link href="./assets/css/old-style.css" rel="stylesheet" type="text/css" /> -->
+    <link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
     <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
 
     <!-- <script
@@ -976,9 +981,9 @@
               trigger: ".stage2",
               //pin: true, // pin the trigger element while active
               start: "+=" + 0.6 * window.innerHeight, // when the top of the trigger hits the top of the viewport
-              end: "+=" + 1 * window.innerHeight, // end after scrolling 500px beyond the start
+              end: "+=" + 0.6 * window.innerHeight, // end after scrolling 500px beyond the start
               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              markers: true,
+              // markers: true,
               id: "4444",
               onEnter: function () {
                 $($(".stage2 .bussiness_sub_item")[0]).removeClass("active")
@@ -1033,8 +1038,8 @@
             scrollTrigger: {
               trigger: ".stage2",
               //pin: true, // pin the trigger element while active
-              start: "+=" + 2.1 * window.innerHeight, // when the top of the trigger hits the top of the viewport
-              end: "+=" + 1 * window.innerHeight, // end after scrolling 500px beyond the start
+              start: "+=" + 1.8 * window.innerHeight, // when the top of the trigger hits the top of the viewport
+              end: "+=" + 0.6 * window.innerHeight, // end after scrolling 500px beyond the start
               scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
               markers: false,
               id: "6666",
@@ -1080,9 +1085,9 @@
         )
 
         $(window).resize(function () {
-          $(".stage2").height(4.6 * window.innerHeight)
+          $(".stage2").height(4 * window.innerHeight)
         })
-        $(".stage2").height(4.6 * window.innerHeight)
+        $(".stage2").height(4 * window.innerHeight)
       })
     </script>
 
@@ -1188,7 +1193,18 @@
         </div>
         <div class="right-part">
           <div class="nav-item">
-            <span>产品</span>
+            <input
+              class="foldable_menu"
+              id="navswtich1"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich1">
+              <div class="nav-title flex">
+                <span>产品</span>
+                <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
             <ul>
               <li><a> 云计算</a></li>
               <li><a> 云计算</a></li>
@@ -1196,7 +1212,19 @@
             </ul>
           </div>
           <div class="nav-item">
-            <span>解决方案·场景</span>
+            <input
+              class="foldable_menu"
+              id="navswtich2"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich2">
+              <div class="nav-title flex">
+                <span>解决方案·场景</span>
+                <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+
             <ul>
               <li><a> 云计算</a></li>
               <li><a> 云计算</a></li>
@@ -1204,7 +1232,19 @@
             </ul>
           </div>
           <div class="nav-item">
-            <span>解决方案·行业</span>
+            <input
+              class="foldable_menu"
+              id="navswtich3"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich3">
+              <div class="nav-title flex">
+                <span>解决方案·行业</span>
+                <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+
             <ul>
               <li><a> 云计算</a></li>
               <li><a> 云计算</a></li>
@@ -1212,7 +1252,19 @@
             </ul>
           </div>
           <div class="nav-item">
-            <span>解决方案·WEB3.0</span>
+            <input
+              class="foldable_menu"
+              id="navswtich4"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich4">
+              <div class="nav-title flex">
+                <span>解决方案·WEB3.0</span>
+                <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+
             <ul>
               <li><a> 云计算</a></li>
               <li><a> 云计算</a></li>
@@ -1220,7 +1272,19 @@
             </ul>
           </div>
           <div class="nav-item">
-            <span>ESG</span>
+            <input
+              class="foldable_menu"
+              id="navswtich5"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich5">
+              <div class="nav-title flex">
+                <span>ESG</span>
+                <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+
             <ul>
               <li><a> 云计算</a></li>
               <li><a> 云计算</a></li>
@@ -1228,7 +1292,19 @@
             </ul>
           </div>
           <div class="nav-item">
-            <span>关于我们</span>
+            <input
+              class="foldable_menu"
+              id="navswtich6"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich6">
+              <div class="nav-title flex">
+                <span>关于我们</span>
+                <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+
             <ul>
               <li><a> 云计算</a></li>
               <li><a> 云计算</a></li>
@@ -1238,7 +1314,7 @@
         </div>
       </div>
       <div class="bottom-part">
-        <div class="flex jc-space flex-1">
+        <div class="flex jc-space flex-1 pos-r">
           <div class="sub-unit flex fd-c jc-between h-auto">
             <div class="flex">
               <div class="flex ai-center">
@@ -1258,12 +1334,20 @@
             </div>
           </div>
           <div class="divider-v ghost"></div>
-          <div class="sub-unit flex fd-c jc-between h-auto">
-            <div class="flex">产品平台</div>
-            <div class="flex line-2 ai-end">
-              <img src="assets/img/products1.png" />
-              <div class="divider-v ghost"></div>
-              <img src="assets/img/products2.png" />
+
+          <div class="product_part">
+            <div class="flex fd-c jc-between h-auto">
+              <div class="flex">产品平台</div>
+              <div class=" product_imgs flex line-2 ai-end">
+                <img src="assets/img/products1.png" />
+                <div class="divider-v ghost"></div>
+                <img src="assets/img/products2.png" />
+              </div>
+            </div>
+
+            <div class="gzh flex fd-c ai-end">
+              <div>关注公众号</div>
+              <img src="assets/img/qr_code.png" />
             </div>
           </div>
 
@@ -1277,10 +1361,6 @@
               >
             </div>
           </div>
-        </div>
-        <div class="flex fd-c ai-end">
-          <div>关注公众号</div>
-          <img src="assets/img/qr_code.png" />
         </div>
       </div>
     </footer>
@@ -1305,12 +1385,28 @@
       <header class="header1">
         <div class="logo">&nbsp;</div>
         <div class="right-part">
+          <input id="langswtich" type="checkbox" hidden />
+          <label for="langswtich">
+            <div class="lang_bt_mobile mobile">
+              EN
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </div>
+          </label>
+          <input id="menuswtich" type="checkbox" hidden />
+          <label for="menuswtich">
+            <div class="menu-btn">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+
+            <div class="switch_mask"></div>
+          </label>
+
           <div class="nav">
             <ul>
               <li><a>首页</a></li>
 
               <input id="product" type="checkbox" hidden />
-              <li class="active">
+              <li class="">
                 <label for="product">
                   <a
                     >产品
@@ -1397,7 +1493,7 @@
               <li><a>关于我们</a></li>
             </ul>
           </div>
-          <div class="lang_bt">
+          <div class="lang_bt not_mobile">
             <i class="fa fa-globe" aria-hidden="true"></i>
             English
           </div>

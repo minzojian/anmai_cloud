@@ -14,7 +14,7 @@
 //   src: url(../fonts/OPPOSans-M.ttf);
 // }
 
-@import "./common.less";
+// @import "./common.less";
 
 @keyframes arrow-ani {
   from {
@@ -588,5 +588,13 @@ body {
   opacity: 1 !important;
   &.hide {
     opacity: 0 !important;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .overview {
+    .mouse {
+      display: none;
+    }
   }
 }
