@@ -757,13 +757,13 @@
               ease: Linear.easeNone,
               immediateRender: false,
               onEnter: function () {
-                $(".header1").addClass("header_first")
+                $(".header1").addClass("header_light")
                 $(".header1").removeClass("state2")
                 $(".header1").addClass("state1")
                 console.log("header1 enter")
               },
               onComplete: function () {
-                $(".header1").removeClass("header_first")
+                $(".header1").removeClass("header_light")
                 console.log("header1 reverse")
               },
             }
@@ -777,16 +777,16 @@
               immediateRender: false,
               delay: 0.1 * window.innerHeight,
               onEnter: function () {
-                $(".header1").addClass("header_second")
+                $(".header1").addClass("header_dark")
                 $(".header1").removeClass("state1")
                 $(".header1").addClass("state2")
                 console.log("header1 enter22222222")
               },
-onEnterBack:function(){
- console.log("header1 enter0000000000")
-},
+              onEnterBack: function () {
+                console.log("header1 enter0000000000")
+              },
               onReverseComplete: function () {
-                $(".header1").removeClass("header_second")
+                $(".header1").removeClass("header_dark")
                 console.log("header1 reverse 22222222")
               },
             }

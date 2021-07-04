@@ -1,11 +1,22 @@
-@import "./common.less";
+// @import "./common.less";
 
 body {
+  color: #838f98;
   background: linear-gradient(180deg, rgb(210, 215, 224), rgb(240, 243, 248));
 }
 .app-main {
   display: flex;
   flex-direction: column;
+}
+
+.header1 {
+  color: #000;
+  .lang_bt {
+    border: 1px solid #3c3c3c42;
+  }
+  .logo {
+    background-position-y: -38px;
+  }
 }
 
 .main-container {
@@ -76,7 +87,6 @@ body {
     margin-bottom: 50px;
   }
   .box-heading {
-    margin-bottom: 50px;
     .title {
       font-size: 38px;
       font-weight: bold;
@@ -97,9 +107,9 @@ body {
     user-select: auto;
   }
   .bottom-divider {
-    height: 4px;
+    height: 2px;
     background: #e0e3e6;
-    opacity: 0.6;
+    opacity: 0.1;
   }
   .box-control {
     width: 230px;
@@ -125,5 +135,34 @@ body {
     font-weight: 500;
     color: #262221;
     line-height: 45px;
+  }
+}
+
+a {
+  color: #888888;
+}
+
+@media screen and (max-width: 750px) {
+  .header1 {
+    position: sticky;
+    top: 0;
+    margin: 0;
+    padding: 10px 30px;
+  }
+  .main-container {
+    padding: 10px 30px;
+    box-sizing: border-box;
+    .container {
+      flex-direction: column;
+      .box-left {
+        margin-bottom: 50px;
+      }
+      .box-right {
+        width: 100%;
+      }
+    }
+    .box-control {
+      width: 100%;
+    }
   }
 }

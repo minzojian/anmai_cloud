@@ -7,8 +7,6 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <!-- <meta name="viewport" content="width=500" /> -->
-    <!-- <meta name="keywords" content="anmai_cloud" /> -->
     <meta name="author" content="KentWood (www.lunastudio.cn)" />
     <title>anmai_cloud</title>
 
@@ -941,27 +939,27 @@
         //       markers: false,
         //       id: "2222",
         //       onEnter: function () {
-        //         $(".header1").addClass("header_first")
+        //         $(".header1").addClass("header_light")
         //         $(".header1").removeClass("state2")
         //         $(".header1").addClass("state1")
         //         console.log("header1 enter")
         //       },
         //       onLeave: function () {
-        //         $(".header1").removeClass("header_first")
-        //         $(".header1").addClass("header_second")
+        //         $(".header1").removeClass("header_light")
+        //         $(".header1").addClass("header_dark")
         //         $(".header1").removeClass("state1")
         //         $(".header1").addClass("state2")
         //         console.log("header1 leave....")
         //       },
         //       onEnterBack: function () {
-        //         $(".header1").addClass("header_second")
+        //         $(".header1").addClass("header_dark")
         //         $(".header1").removeClass("state2")
         //         $(".header1").addClass("state1")
         //         console.log("header1 enter back....")
         //       },
         //       onLeaveBack: function () {
-        //         $(".header1").removeClass("header_second")
-        //         $(".header1").addClass("header_first")
+        //         $(".header1").removeClass("header_dark")
+        //         $(".header1").addClass("header_light")
         //         $(".header1").removeClass("state1")
         //         $(".header1").addClass("state2")
         //         console.log("header1 leave back....")
@@ -1338,7 +1336,7 @@
           <div class="product_part">
             <div class="flex fd-c jc-between h-auto">
               <div class="flex">产品平台</div>
-              <div class=" product_imgs flex line-2 ai-end">
+              <div class="product_imgs flex line-2 ai-end">
                 <img src="assets/img/products1.png" />
                 <div class="divider-v ghost"></div>
                 <img src="assets/img/products2.png" />
@@ -1385,15 +1383,33 @@
       <header class="header1">
         <div class="logo">&nbsp;</div>
         <div class="right-part">
-          <input id="langswtich" type="checkbox" hidden />
-          <label for="langswtich">
-            <div class="lang_bt_mobile mobile">
+          <input id="langswtich" class="foldable_menu" type="checkbox" hidden />
+          <label for="langswtich" class="mobile">
+            <div class="lang_bt_mobile">
               EN
               <i class="fa fa-angle-down" aria-hidden="true"></i>
             </div>
+
+            <div class="switch_mask"></div>
           </label>
+
+          <ul class="lang-panel">
+            <li>
+              <a>
+                <i class="fa fa-check" aria-hidden="true"></i>
+                中文</a
+              >
+            </li>
+            <li class="selected">
+              <a>
+                <i class="fa fa-check" aria-hidden="true"></i>
+                English</a
+              >
+            </li>
+          </ul>
+
           <input id="menuswtich" type="checkbox" hidden />
-          <label for="menuswtich">
+          <label for="menuswtich" class="mobile">
             <div class="menu-btn">
               <i class="fa fa-bars" aria-hidden="true"></i>
             </div>
@@ -1493,10 +1509,12 @@
               <li><a>关于我们</a></li>
             </ul>
           </div>
-          <div class="lang_bt not_mobile">
-            <i class="fa fa-globe" aria-hidden="true"></i>
-            English
-          </div>
+          <label for="langswtich" class="not_mobile">
+            <div class="lang_bt">
+              <i class="fa fa-globe" aria-hidden="true"></i>
+              English
+            </div>
+          </label>
         </div>
       </header>
     </div>
@@ -1528,7 +1546,7 @@
               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
               markers: false,
               onEnter: function () {
-                $(".header1").addClass("header_first")
+                $(".header1").addClass("header_light")
                 $(".header1").addClass("state3")
                 $(".header1").removeClass("state2")
               },
@@ -1562,13 +1580,13 @@
               },
 
               onEnterBack: function () {
-                $(".header1").addClass("header_first")
-                $(".header1").removeClass("header_second")
+                $(".header1").addClass("header_light")
+                $(".header1").removeClass("header_dark")
               },
 
               onLeave: function () {
-                $(".header1").removeClass("header_first")
-                $(".header1").addClass("header_second")
+                $(".header1").removeClass("header_light")
+                $(".header1").addClass("header_dark")
               },
               onLeaveBack: function () {
                 $(".header1").addClass("state2")

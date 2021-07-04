@@ -37,6 +37,76 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 40px 64px 64px;
+
+  .logo {
+    &::after {
+      content: " ";
+    }
+    background: url("../img/logo.png") no-repeat;
+    background-position-y: 0;
+    width: 143px;
+    height: 38px;
+  }
+
+  color: #fff;
+  .lang_bt {
+    border: 1px solid #ffffff42;
+  }
+  &.header_light {
+  }
+  &.header_dark {
+    color: #000;
+    .lang_bt {
+      border: 1px solid #3c3c3c42;
+    }
+    .logo {
+      background-position-y: -38px;
+    }
+  }
+
+  .right-part {
+    position: relative;
+
+    ul.lang-panel {
+      top: calc(100% + 4px);
+      left: unset;
+      right: 16px;
+
+      background: white;
+      border-radius: 4px;
+      padding: 10px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-10px);
+      transition: all 0.3s;
+      position: absolute;
+      li {
+        text-align: left;
+      }
+      .selected {
+        i.fa {
+          opacity: 1;
+        }
+      }
+      a {
+        display: flex;
+        align-items: center;
+
+        i.fa {
+          opacity: 0;
+          margin-right: 8px;
+        }
+      }
+    }
+
+    input[type="checkbox"]:checked ~ ul {
+      height: auto;
+      opacity: 1;
+      transform: translateY(0px);
+      pointer-events: auto;
+    }
+  }
+
   .right-part {
     display: flex;
     align-items: center;
@@ -162,8 +232,6 @@ header {
       }
       width: 50%;
       margin-right: 60px;
-    }
-    .lang_bt {
     }
   }
 }
@@ -305,9 +373,9 @@ i.fa {
     background: transparent;
   }
 }
-
 .lang_bt {
   display: flex;
+  padding: 0 10px;
   justify-content: center;
   align-items: center;
   width: 102px;
@@ -366,7 +434,7 @@ svg text {
 }
 
 .not_mobile {
-  display: block;
+  display: inherit;
 }
 .mobile {
   display: none;
@@ -376,8 +444,8 @@ svg text {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  left: -30px;
-  top: -30px;
+  left: 0;
+  top: 0px;
   background: rgba(0, 0, 0, 0.1);
   z-index: 0;
   pointer-events: none;
@@ -385,7 +453,7 @@ svg text {
   transition: all 0.3s;
 }
 
-input#menuswtich:checked + label {
+input:checked + label {
   .switch_mask {
     opacity: 1;
     pointer-events: auto;
@@ -409,6 +477,13 @@ input#menuswtich:checked + label {
   }
 
   header {
+    transition: all 0.3s;
+    background: transparent;
+    z-index: 11;
+    &.scrolled {
+      background: white;
+    }
+
     margin: 30px;
 
     .right-part {
@@ -419,8 +494,9 @@ input#menuswtich:checked + label {
       display: flex;
       align-items: center;
       i {
-        margin: 0 10px;
+        margin-left: 5px;
       }
+      margin-right: 10px;
     }
 
     .menu-btn {
