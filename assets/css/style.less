@@ -68,20 +68,20 @@ body::-webkit-scrollbar-track {
 
   background: rgba(237, 237, 237, 0.5);
 }
-label {
-  cursor: unset;
-  display: unset;
-  margin-bottom: unset;
-  font-weight: unset;
-  // position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// label {
+//   cursor: unset;
+//   display: unset;
+//   margin-bottom: unset;
+//   font-weight: unset;
+//   // position: absolute;
+//   // width: 100%;
+//   height: 100%;
+//   left: 0;
+//   top: 0;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 div {
   // text-transform: uppercase;
   user-select: none;
@@ -568,6 +568,75 @@ body {
 }
 
 @media screen and (max-width: 750px) {
+  .header1 {
+    margin: 0;
+    padding: 10px 20px;
+  }
+
+  .stage1 .bg_video {
+    height: 50%;
+    top: 0;
+    object-fit: cover;
+  }
+
+  .stage1 .left-progress {
+    height: 20%;
+    top: 15%;
+  }
+
+  .stage1 .title_part {
+    height: 50%;
+    top: 50%;
+  }
+  .stage1 .title_part .sub_part2 {
+    width: 100%;
+    font-size: 27px;
+    line-height: 35px;
+  }
+  .stage2 .left_part {
+    width: 100%;
+  }
+  .stage2 .left_part .bussiness_title2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .stage2 .left_part .bussiness_sub_item .bussiness_sub_item_child li {
+    font-size: 14px;
+  }
+  .action_btn span {
+    font-size: 12px;
+  }
+
+  .stage3 .spots_content {
+    flex-direction: column-reverse;
+    padding: 50px 20px;
+    .left-part {
+      img {
+        width: 100%;
+      }
+    }
+    .right-part {
+      margin-bottom: 20px;
+      span {
+        margin-bottom: 10px;
+      }
+      svg {
+        width: 100%;
+      }
+      ul {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .page_content {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 58px;
+    height: calc(100% - 58px);
+  }
+
   .overview {
     .mouse {
       display: none;

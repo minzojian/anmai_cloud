@@ -21,7 +21,8 @@
           /(?:iPad|PlayBook)/.test(ua) ||
           (isAndroid && !/(?:Mobile)/.test(ua)) ||
           (isFireFox && /(?:Tablet)/.test(ua)),
-        isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+        isPhone =
+          (/(?:iPhone)/.test(ua) && !isTablet) || window.innerWidth < 750,
         isPc = !isPhone && !isAndroid && !isSymbian
 
       //  if(isPhone){
@@ -88,7 +89,6 @@
       <div class="sticky">
         <video
           class="bg_video"
-          src="assets/media/stage1.mp4"
           id="myvideo"
           ontimeupdate="handleVideoPlaying(event)"
           autoplay
@@ -321,6 +321,9 @@
       /////////STAGE1/////////
       ////////初始视频播放，同时可能会存在按钮////
 
+      myvideo.src = isPhone
+        ? "assets/media/test.mp4"
+        : "assets/media/stage1.mp4"
       var lastScroll = window.pageYOffset
       var isMouseWheel = false
       var isEnterStage1 = false
@@ -580,9 +583,7 @@
             },
             onUpdate: function () {
               if (isMouseWheel) {
-                console.log(getTimerByScroll(this.progress))
                 myvideo.currentTime = getTimerByScroll(this.progress)
-                // console.log("getTimerByScroll()", getTimerByScroll())
               }
             },
           },
@@ -1380,7 +1381,7 @@
           <div class="dot"></div>
         </div>
       </div>
-      <header class="header1">
+      <header class="header1 header_light">
         <div class="logo">&nbsp;</div>
         <div class="right-part">
           <input id="langswtich" class="foldable_menu" type="checkbox" hidden />
@@ -1390,7 +1391,7 @@
               <i class="fa fa-angle-down" aria-hidden="true"></i>
             </div>
 
-            <div class="switch_mask"></div>
+            <div class="langswtich_mask switch_mask"></div>
           </label>
 
           <ul class="lang-panel">
@@ -1514,14 +1515,15 @@
               <i class="fa fa-globe" aria-hidden="true"></i>
               English
             </div>
+            <div class="langswtich_mask switch_mask"></div>
           </label>
         </div>
       </header>
     </div>
-    <div class="controls">
+    <!-- <div class="controls">
       <div onclick="myvideo.pause()">pause</div>
       <div onclick="myvideo.play()">play</div>
-    </div>
+    </div> -->
 
     <script>
       var nice = false

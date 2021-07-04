@@ -1,384 +1,570 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>产品</title>
-    <link rel="stylesheet" href="./assets/css/normalize.css">
-    <link rel="stylesheet" href="./assets/css/common.css">
-    <link rel="stylesheet" href="./assets/css/product.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/product.css" />
     <!-- swiper -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/lib/gsap.min.js"></script>
+    <script src="./assets/js/lib/ScrollToPlugin.min.js"></script>
+    <script src="./assets/js/lib/ScrollTrigger.min.js"></script>
+
+    <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
+  </head>
+  <body>
     <div class="page-main">
-        <!-- header -->
-        <header>
-            <div class="logo"><img src="./assets/img/Logo2.png" /></div>
-            <div class="right-part">
-                <div class="nav">
-                    <ul>
-                        <li><a>首页</a></li>
-
-                        <input id="product" type="checkbox" hidden />
-                        <li class="active">
-                            <label for="product">
-                                <a>产品
-                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                </a>
-                            </label>
-                            <ul>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/图层 1.png" />
-                                        </div>
-                                        云计算
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/图层 1.png" />
-                                        </div>
-                                        云计算
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/图层 1.png" />
-                                        </div>
-                                        云计算
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <input id="solution" type="checkbox" hidden />
-                        <li>
-                            <label for="solution">
-                                <a>解决方案
-                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                </a>
-                            </label>
-                            <ul>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/图层 1.png" />
-                                        </div>
-                                        方案1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/图层 1.png" />
-                                        </div>
-                                        方案2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/图层 1.png" />
-                                        </div>
-                                        方案3
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <input id="esg" type="checkbox" hidden />
-                        <li>
-                            <label for="esg">
-                                <a>ESG
-                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                </a>
-                            </label>
-                            <ul>
-                                <li><a>方案1</a></li>
-                                <li><a>方案2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>投资者关系</a></li>
-                        <li><a>关于我们</a></li>
-                    </ul>
-                </div>
-                <div class="lang_bt">
-                    <i class="fa fa-globe" aria-hidden="true"></i>
-                    English
-                </div>
+      <!-- header -->
+      <header class="header1 header_light">
+        <div class="logo">&nbsp;</div>
+        <div class="right-part">
+          <input id="langswtich" class="foldable_menu" type="checkbox" hidden />
+          <label for="langswtich" class="mobile">
+            <div class="lang_bt_mobile">
+              EN
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
             </div>
-        </header>
-        <!-- main -->
-        <main class="main-container">
-            <section class="section banner">
-                <div class="wrapper">
-                    <div class="slogan">
-                        <div class="left">
-                            <h1>矩阵存储</h1>
-                            <h3>Matrix Storage</h3>
-                            <p>基于IPFS的去中心化存储交易服务平台 矩阵存储提供简单易用的PaaS服务、OpenAPI服务和存储工具集套件，致力于用户有效使用稳定可靠的IPFS去中心化存储服务。</p>
-                            <i><img src="./assets/img/product/img1.png" alt=""></i>
-                        </div>
-                        <div class="right"></div>
-                    </div>
-                </div>
-            </section>
-            <section class="section section2">
-                <div class="wrapper">
-                    <p class="desc">Multiple options for more convenient storage</p>
-                    <div class="tit_box">
-                        <h2 class="title">多种可选方案 存储更加便捷</h2>
-                        <div class="arrows">
-                            <!-- Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </div>
-                    </div>
-                    <!-- Swiper -->
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="items bg1">
-                                    <h2>01</h2>
-                                    <div class="contents">
-                                        <img src="./assets/img/product/87.png" alt="">
-                                        <h4>在线存储</h4>
-                                        <p>支持一键上传、拖拽等方式上传；存储状态即时可⻅，本地数据轻松上云</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="items bg2">
-                                    <h2>01</h2>
-                                    <div class="contents">
-                                        <img src="./assets/img/product/87.png" alt="">
-                                        <h4>在线存储</h4>
-                                        <p>支持一键上传、拖拽等方式上传；存储状态即时可⻅，本地数据轻松上云</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="items bg3">
-                                    <h2>01</h2>
-                                    <div class="contents">
-                                        <img src="./assets/img/product/87.png" alt="">
-                                        <h4>在线存储</h4>
-                                        <p>支持一键上传、拖拽等方式上传；存储状态即时可⻅，本地数据轻松上云</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="items bg1">
-                                    <h2>01</h2>
-                                    <div class="contents">
-                                        <img src="./assets/img/product/87.png" alt="">
-                                        <h4>在线存储</h4>
-                                        <p>支持一键上传、拖拽等方式上传；存储状态即时可⻅，本地数据轻松上云</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
+            <div class="langswtich_mask switch_mask"></div>
+          </label>
 
-                    </div>
-                </div>
-            </section>
-            <section class="section section3">
-                <div class="wrapper">
-                    <div class="left">
-                        <h1>Data</h1>
-                        <h4>构建去中心化<br>数据仓库</h4>
-                    </div>
-                    <div class="right">
-                        <div class="c_left">
-                            <div class="top_item">
-                                <h3>全链路校验</h3>
-                                <p>最安全的全链路数据校验机制</p>
-                                <span>Full link verification</span>
-                            </div>
-                            <div class="mid_item">
-                                <h4>存储<br>成本低</h4>
-                                <div class="text">
-                                    <p>最高节省</p>
-                                    <h3>70%</h3>
-                                </div>
-                            </div>
-                            <div class="bottom_item">
-                                <h3>IPFS技术与应用</h3>
-                                <p>基于区块链技术与IPFS结合，实现不可篡改的数据存储</p>
-                                <span>IPFs and Application</span>
-                            </div>
-                        </div>
-                        <div class="c_rirht">
-                            <div class="top_item">
-                                <div class="s_wrapper">
-                                    <div class="flex_block">
-                                        <h3>数据<br>可靠性</h3>
-                                        <p>全球多区域基建部署<br>可靠度高达99.9999%</p>
-                                    </div>
-                                    <h4>99.9999%</h4>
-                                </div>
-                            </div>
-                            <div class="mid_item">
-                                <h3>存储工具与API</h3>
-                                <p>提供去中心化存储工具与 API接口</p>
-                                <span>Storage tools and API</span>
-                            </div>
-                            <div class="bottom_item">
-                                <img src="./assets/img/product/cloud.png" alt="">
-                                <div class="text">
-                                    <h3>弹性数据扩容</h3>
-                                    <p>依托IPFS网络和技术支持数据弹性扩容</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section section4">
-                <div class="wrapper">
-                    <div class="earth"></div>
-                    <div class="city">
-                        <h4>Global network</h4>
-                        <h2>全球存储节点<span>72个</span></h2>
-                        <div class="box">
-                            <ul>
-                                <li><p>北京</p><p>上海</p><p>海口</p><p>成都</p><p>曼谷</p></li>
-                                <li><p>北京</p><p>上海</p><p>海口</p><p>成都</p><p>曼谷</p></li>
-                                <li><p>北京</p><p>上海</p><p>海口</p><p>成都</p><p>曼谷</p></li>
-                                <li><p>北京</p><p>上海</p><p>海口</p><p>成都</p><p>曼谷</p></li>
-                                <li><p>北京</p><p>上海</p><p>海口</p><p>成都</p><p>曼谷</p></li>
-                            </ul>
-                        </div>
-                        <p class="global"><img src="./assets/img/product/global-network.png" alt=""><span>全球布局</span></p>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <!-- footer -->
-        <footer>
-            <div class="top-part">
-                <div class="left-part">
-                    <div class="logo"><img src="./assets/img/logo_bottom.png" /></div>
-                    <div class="lang_bt">
-                        <i class="fa fa-globe" aria-hidden="true"></i>
-                        English
-                    </div>
-                </div>
-                <div class="right-part">
-                    <div class="nav-item">
-                        <span>产品</span>
-                        <ul>
-                            <li><a> 云计算</a></li>
-                            <li><a> 云计算</a></li>
-                            <li><a> 云计算</a></li>
-                        </ul>
-                    </div>
-                    <div class="nav-item">
-                        <span>解决方案·场景</span>
-                        <ul>
-                            <li><a> 云计算</a></li>
-                            <li><a> 云计算</a></li>
-                            <li><a> 云计算</a></li>
-                        </ul>
-                    </div>
-                    <div class="nav-item">
-                        <span>解决方案·行业</span>
-                        <ul>
-                            <li><a> 云计算</a></li>
-                            <li><a> 云计算</a></li>
-                            <li><a> 云计算</a></li>
-                        </ul>
-                    </div>
-                    <div class="nav-item">
-                        <span>解决方案·WEB3.0</span>
-                        <ul>
-                            <li><a> 云计算</a></li>
-                            <li><a> 云计算</a></li>
-                            <li><a> 云计算</a></li>
-                        </ul>
-                    </div>
-                    <div class="nav-item">
-                        <span>ESG</span>
-                        <ul>
-                            <li><a> 云计算</a></li>
-                            <li><a> 云计算</a></li>
-                            <li><a> 云计算</a></li>
-                        </ul>
-                    </div>
-                    <div class="nav-item">
-                        <span>关于我们</span>
-                        <ul>
-                            <li><a> 云计算</a></li>
-                            <li><a> 云计算</a></li>
-                            <li><a> 云计算</a></li>
-                        </ul>
-                    </div>
-                </div>
+          <ul class="lang-panel">
+            <li>
+              <a>
+                <i class="fa fa-check" aria-hidden="true"></i>
+                中文</a
+              >
+            </li>
+            <li class="selected">
+              <a>
+                <i class="fa fa-check" aria-hidden="true"></i>
+                English</a
+              >
+            </li>
+          </ul>
+
+          <input id="menuswtich" type="checkbox" hidden />
+          <label for="menuswtich" class="mobile">
+            <div class="menu-btn">
+              <i class="fa fa-bars" aria-hidden="true"></i>
             </div>
-            <div class="bottom-part">
-                <div class="flex jc-space flex-1">
-                    <div class="sub-unit flex fd-c jc-between h-auto">
-                        <div class="flex">
-                            <div class="flex ai-center">
-                                <i class="fa fa-phone" aria-hidden="true"></i>
-                                +86 898 3286 7007
-                            </div>
-                            <div class="divider-v"></div>
-                            <div class="flex ai-center">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                                contact@AnmaiCloud.com
-                            </div>
-                        </div>
-                        <div class="flex line-2">
-                            <span>地址：海南省省直辖县行政单位澄迈县老城镇高新技术产业示范区海南生态软件园A7幢二层3001</span>
-                        </div>
-                    </div>
-                    <div class="divider-v ghost"></div>
-                    <div class="sub-unit flex fd-c jc-between h-auto">
-                        <div class="flex">产品平台</div>
-                        <div class="flex line-2 ai-end">
-                            <img src="assets/img/products1.png" />
-                            <div class="divider-v ghost"></div>
-                            <img src="assets/img/products2.png" />
-                        </div>
-                    </div>
 
-                    <div class="divider-v ghost"></div>
-                    <div class="sub-unit flex fd-c jc-between h-auto">
-                        <div class="flex ai-center"></div>
-                        <div class="flex line-2">
-                            <span>琼ICP备20000109号-1 Copyright © 2013-2021 Anmai Cloud Rights
-                                Reserved.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex fd-c ai-end">
-                    <div>关注公众号</div>
-                    <img src="assets/img/qr_code.png" />
-                </div>
+            <div class="switch_mask"></div>
+          </label>
+
+          <div class="nav">
+            <ul>
+              <li><a>首页</a></li>
+
+              <input id="product" type="checkbox" hidden />
+              <li class="">
+                <label for="product">
+                  <a
+                    >产品
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </a>
+                </label>
+                <ul>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/图层 1.png" />
+                      </div>
+                      云计算</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/图层 1.png" />
+                      </div>
+                      云计算</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/图层 1.png" />
+                      </div>
+                      云计算</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <input id="solution" type="checkbox" hidden />
+              <li>
+                <label for="solution">
+                  <a
+                    >解决方案
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </a>
+                </label>
+                <ul>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/图层 1.png" />
+                      </div>
+                      方案1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/图层 1.png" />
+                      </div>
+                      方案2</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/图层 1.png" />
+                      </div>
+                      方案3</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <input id="esg" type="checkbox" hidden />
+              <li>
+                <label for="esg">
+                  <a
+                    >ESG
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </a>
+                </label>
+                <ul>
+                  <li><a>方案1</a></li>
+                  <li><a>方案2</a></li>
+                </ul>
+              </li>
+              <li><a>投资者关系</a></li>
+              <li><a>关于我们</a></li>
+            </ul>
+          </div>
+          <label for="langswtich" class="not_mobile">
+            <div class="lang_bt">
+              <i class="fa fa-globe" aria-hidden="true"></i>
+              English
             </div>
-        </footer>
+            <div class="langswtich_mask switch_mask"></div>
+          </label>
+        </div>
+      </header>
+      <!-- main -->
+      <main class="main-container">
+        <section class="section banner">
+          <div class="wrapper">
+            <div class="slogan">
+              <div class="left">
+                <h1>矩阵存储</h1>
+                <h3>Matrix Storage</h3>
+                <p>
+                  基于IPFS的去中心化存储交易服务平台
+                  矩阵存储提供简单易用的PaaS服务、OpenAPI服务和存储工具集套件，致力于用户有效使用稳定可靠的IPFS去中心化存储服务。
+                </p>
+                <i><img src="./assets/img/product/img1.png" alt="" /></i>
+              </div>
+              <div class="right"></div>
+            </div>
+          </div>
+        </section>
+        <section class="section section2">
+          <div class="wrapper">
+            <p class="desc">Multiple options for more convenient storage</p>
+            <div class="tit_box">
+              <h2 class="title">多种可选方案 存储更加便捷</h2>
+              <div class="arrows">
+                <!-- Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="items bg1">
+                    <h2>01</h2>
+                    <div class="contents">
+                      <img src="./assets/img/product/87.png" alt="" />
+                      <h4>在线存储</h4>
+                      <p>
+                        支持一键上传、拖拽等方式上传；存储状态即时可⻅，本地数据轻松上云
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="items bg2">
+                    <h2>01</h2>
+                    <div class="contents">
+                      <img src="./assets/img/product/87.png" alt="" />
+                      <h4>在线存储</h4>
+                      <p>
+                        支持一键上传、拖拽等方式上传；存储状态即时可⻅，本地数据轻松上云
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="items bg3">
+                    <h2>01</h2>
+                    <div class="contents">
+                      <img src="./assets/img/product/87.png" alt="" />
+                      <h4>在线存储</h4>
+                      <p>
+                        支持一键上传、拖拽等方式上传；存储状态即时可⻅，本地数据轻松上云
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="items bg1">
+                    <h2>01</h2>
+                    <div class="contents">
+                      <img src="./assets/img/product/87.png" alt="" />
+                      <h4>在线存储</h4>
+                      <p>
+                        支持一键上传、拖拽等方式上传；存储状态即时可⻅，本地数据轻松上云
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section3">
+          <div class="wrapper">
+            <div class="left">
+              <h1>Data</h1>
+              <h4>构建去中心化<br />数据仓库</h4>
+            </div>
+            <div class="right">
+              <div class="c_left">
+                <div class="top_item">
+                  <h3>全链路校验</h3>
+                  <p>最安全的全链路数据校验机制</p>
+                  <span>Full link verification</span>
+                </div>
+                <div class="mid_item">
+                  <h4>存储<br />成本低</h4>
+                  <div class="text">
+                    <p>最高节省</p>
+                    <h3>70%</h3>
+                  </div>
+                </div>
+                <div class="bottom_item">
+                  <h3>IPFS技术与应用</h3>
+                  <p>基于区块链技术与IPFS结合，实现不可篡改的数据存储</p>
+                  <span>IPFs and Application</span>
+                </div>
+              </div>
+              <div class="c_rirht">
+                <div class="top_item">
+                  <div class="s_wrapper">
+                    <div class="flex_block">
+                      <h3>数据<br />可靠性</h3>
+                      <p>全球多区域基建部署<br />可靠度高达99.9999%</p>
+                    </div>
+                    <h4>99.9999%</h4>
+                  </div>
+                </div>
+                <div class="mid_item">
+                  <h3>存储工具与API</h3>
+                  <p>提供去中心化存储工具与 API接口</p>
+                  <span>Storage tools and API</span>
+                </div>
+                <div class="bottom_item">
+                  <img src="./assets/img/product/cloud.png" alt="" />
+                  <div class="text">
+                    <h3>弹性数据扩容</h3>
+                    <p>依托IPFS网络和技术支持数据弹性扩容</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section4">
+          <div class="wrapper">
+            <div>
+              <img src="assets/img/企业微信截图_20210704233222.png" />
+            </div>
+            <div class="city">
+              <h4>Global network</h4>
+              <h2>全球存储节点<span>72个</span></h2>
+              <div class="box">
+                <ul>
+                  <li>
+                    <p>北京</p>
+                    <p>上海</p>
+                    <p>海口</p>
+                    <p>成都</p>
+                    <p>曼谷</p>
+                  </li>
+                  <li>
+                    <p>北京</p>
+                    <p>上海</p>
+                    <p>海口</p>
+                    <p>成都</p>
+                    <p>曼谷</p>
+                  </li>
+                  <li>
+                    <p>北京</p>
+                    <p>上海</p>
+                    <p>海口</p>
+                    <p>成都</p>
+                    <p>曼谷</p>
+                  </li>
+                  <li>
+                    <p>北京</p>
+                    <p>上海</p>
+                    <p>海口</p>
+                    <p>成都</p>
+                    <p>曼谷</p>
+                  </li>
+                  <li>
+                    <p>北京</p>
+                    <p>上海</p>
+                    <p>海口</p>
+                    <p>成都</p>
+                    <p>曼谷</p>
+                  </li>
+                </ul>
+              </div>
+              <p class="global">
+                <img
+                  src="./assets/img/product/global-network.png"
+                  alt=""
+                /><span>全球布局</span>
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- footer -->
+      <footer>
+        <div class="top-part">
+          <div class="left-part">
+            <div class="logo"><img src="./assets/img/logo_bottom.png" /></div>
+            <div class="lang_bt">
+              <i class="fa fa-globe" aria-hidden="true"></i>
+              English
+            </div>
+          </div>
+          <div class="right-part">
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich1"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich1">
+                <div class="nav-title flex">
+                  <span>产品</span>
+                  <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                </div>
+              </label>
+              <ul>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich2"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich2">
+                <div class="nav-title flex">
+                  <span>解决方案·场景</span>
+                  <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                </div>
+              </label>
+
+              <ul>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich3"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich3">
+                <div class="nav-title flex">
+                  <span>解决方案·行业</span>
+                  <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                </div>
+              </label>
+
+              <ul>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich4"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich4">
+                <div class="nav-title flex">
+                  <span>解决方案·WEB3.0</span>
+                  <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                </div>
+              </label>
+
+              <ul>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich5"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich5">
+                <div class="nav-title flex">
+                  <span>ESG</span>
+                  <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                </div>
+              </label>
+
+              <ul>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich6"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich6">
+                <div class="nav-title flex">
+                  <span>关于我们</span>
+                  <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                </div>
+              </label>
+
+              <ul>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+                <li><a> 云计算</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-part">
+          <div class="flex jc-space flex-1 pos-r">
+            <div class="sub-unit flex fd-c jc-between h-auto">
+              <div class="flex">
+                <div class="flex ai-center">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  +86 898 3286 7007
+                </div>
+                <div class="divider-v"></div>
+                <div class="flex ai-center">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  contact@AnmaiCloud.com
+                </div>
+              </div>
+              <div class="flex line-2">
+                <span
+                  >地址：海南省省直辖县行政单位澄迈县老城镇高新技术产业示范区海南生态软件园A7幢二层3001</span
+                >
+              </div>
+            </div>
+            <div class="divider-v ghost"></div>
+
+            <div class="product_part">
+              <div class="flex fd-c jc-between h-auto">
+                <div class="flex">产品平台</div>
+                <div class="product_imgs flex line-2 ai-end">
+                  <img src="assets/img/products1.png" />
+                  <div class="divider-v ghost"></div>
+                  <img src="assets/img/products2.png" />
+                </div>
+              </div>
+
+              <div class="gzh flex fd-c ai-end">
+                <div>关注公众号</div>
+                <img src="assets/img/qr_code.png" />
+              </div>
+            </div>
+
+            <div class="divider-v ghost"></div>
+            <div class="sub-unit flex fd-c jc-between h-auto">
+              <div class="flex ai-center"></div>
+              <div class="flex line-2">
+                <span
+                  >琼ICP备20000109号-1 Copyright © 2013-2021 Anmai Cloud Rights
+                  Reserved.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            freeMode: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        freeMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      })
     </script>
-</body>
 
-
+    <script>
+      $(function () {
+        ScrollTrigger.create({
+          start: "top -80",
+          end: 99999,
+          toggleClass: { className: "scrolled", targets: ".header1" },
+        })
+      })
+    </script>
+  </body>
 </html>

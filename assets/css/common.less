@@ -53,6 +53,11 @@ header {
     border: 1px solid #ffffff42;
   }
   &.header_light {
+    .lang-panel {
+      a {
+        color: black;
+      }
+    }
   }
   &.header_dark {
     color: #000;
@@ -105,6 +110,10 @@ header {
       transform: translateY(0px);
       pointer-events: auto;
     }
+
+    #langswtich:checked ~ label .langswtich_mask {
+      pointer-events: auto;
+    }
   }
 
   .right-part {
@@ -119,6 +128,8 @@ header {
     }
 
     & > .nav {
+      width: 50%;
+      margin-right: 60px;
       li a {
         white-space: nowrap;
         display: flex;
@@ -230,8 +241,6 @@ header {
           }
         }
       }
-      width: 50%;
-      margin-right: 60px;
     }
   }
 }
@@ -505,6 +514,7 @@ input:checked + label {
     }
 
     .nav {
+      width: auto;
       opacity: 0;
       padding: 10px;
       width: auto;
@@ -559,7 +569,7 @@ input:checked + label {
     }
   }
   footer {
-    padding: 30px;
+    padding: 20px;
     .top-part {
       flex-direction: column;
       margin-bottom: 10px;
@@ -635,5 +645,9 @@ input:checked + label {
 
   .nicescroll-rails {
     display: none !important;
+  }
+
+  .divider {
+    margin: 12px 0;
   }
 }
