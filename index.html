@@ -44,7 +44,7 @@
       type="image/x-icon"
     />
     <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./assets/css/iconfont.css" />
     <!-- <link href="./assets/css/old-style.css" rel="stylesheet" type="text/css" /> -->
     <link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
     <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
@@ -106,7 +106,7 @@
           <span class="sub_part2">全球去中心化云计算业务一站式服务商</span>
           <div class="action_btn btn-with-arrow">
             <span> 立刻探索 </span>
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
           </div>
         </div>
 
@@ -117,7 +117,7 @@
           >
           <div class="action_btn btn-with-arrow">
             <span> 立刻探索 </span>
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
           </div>
         </div>
 
@@ -141,7 +141,10 @@
                         >安迈云主办“云领风潮-安迈云品牌交流会”，并加入GDCA全球分布式云联盟</span
                       >
                       <div class="round_btn btn-with-arrow">
-                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        <i
+                          class="fa iconfont icon-youjiantou"
+                          aria-hidden="true"
+                        ></i>
                       </div>
                     </div>
                   </div>
@@ -155,7 +158,10 @@
                         >安迈云与中科曙光、乐讯科技签署EiB级存储战略合作协议</span
                       >
                       <div class="round_btn btn-with-arrow">
-                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        <i
+                          class="fa iconfont icon-youjiantou"
+                          aria-hidden="true"
+                        ></i>
                       </div>
                     </div>
                   </div>
@@ -204,7 +210,10 @@
                         >安迈云主办“云领风潮-安迈云品牌交流会”，并加入GDCA全球分布式云联盟</span
                       >
                       <div class="round_btn btn-with-arrow">
-                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        <i
+                          class="fa iconfont icon-youjiantou"
+                          aria-hidden="true"
+                        ></i>
                       </div>
                     </div>
                   </div>
@@ -218,7 +227,10 @@
                         >安迈云与中科曙光、乐讯科技签署EiB级存储战略合作协议</span
                       >
                       <div class="round_btn btn-with-arrow">
-                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        <i
+                          class="fa iconfont icon-youjiantou"
+                          aria-hidden="true"
+                        ></i>
                       </div>
                     </div>
                   </div>
@@ -267,7 +279,10 @@
                         >安迈云主办“云领风潮-安迈云品牌交流会”，并加入GDCA全球分布式云联盟</span
                       >
                       <div class="round_btn btn-with-arrow">
-                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        <i
+                          class="fa iconfont icon-youjiantou"
+                          aria-hidden="true"
+                        ></i>
                       </div>
                     </div>
                   </div>
@@ -281,7 +296,10 @@
                         >安迈云与中科曙光、乐讯科技签署EiB级存储战略合作协议</span
                       >
                       <div class="round_btn btn-with-arrow">
-                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        <i
+                          class="fa iconfont icon-youjiantou"
+                          aria-hidden="true"
+                        ></i>
                       </div>
                     </div>
                   </div>
@@ -576,7 +594,6 @@
 
             onEnter: function () {
               isEnterStage1 = true
-              console.log("eeeeeeeee")
             },
             onLeave: function () {
               isEnterStage1 = false
@@ -762,7 +779,7 @@
           clearTimeout(mouseWheelTimer)
           mouseWheelTimer = setTimeout(resumePlayVideo, 200)
 
-          $(nice.autohidedom).removeClass("hide")
+          nice && nice.autohidedom && $(nice.autohidedom).removeClass("hide")
 
           clearTimeout(mouseWheelTimer2)
           mouseWheelTimer2 = setTimeout(function () {
@@ -808,71 +825,77 @@
             <div class="bussiness_title2">
               IPFS网络设备及解决方案提供+IPFS云存储服务
             </div>
+            <div class="bussiness_content flex fd-c">
+              <div class="divider"></div>
 
-            <div class="divider"></div>
-
-            <div class="bussiness_sub_item active">
-              <div class="bussiness_sub_item_title">
-                01 云计算 Cloud Computing
+              <div class="bussiness_sub_item active">
+                <div class="bussiness_sub_item_title">
+                  01 云计算 Cloud Computing
+                </div>
+                <ul class="bussiness_sub_item_child">
+                  <li>
+                    <span>超级算力触手可及：</span
+                    >遍布全球的海量计算资源形成去中心化网络
+                  </li>
+                  <li><span>分布式计算：</span>支持在网分布的多种计算设备</li>
+                  <li>
+                    <span>区块链：</span>点对点数据传输及离散结构的分布式账本
+                  </li>
+                  <li><span>AI大数据：</span>超大规模、多源异构、实时变化</li>
+                </ul>
               </div>
-              <ul class="bussiness_sub_item_child">
-                <li>
-                  <span>超级算力触手可及：</span
-                  >遍布全球的海量计算资源形成去中心化网络
-                </li>
-                <li><span>分布式计算：</span>支持在网分布的多种计算设备</li>
-                <li>
-                  <span>区块链：</span>点对点数据传输及离散结构的分布式账本
-                </li>
-                <li><span>AI大数据：</span>超大规模、多源异构、实时变化</li>
-              </ul>
-            </div>
-            <div class="divider"></div>
-            <div class="bussiness_sub_item">
-              <div class="bussiness_sub_item_title">
-                02 矩阵存储 Matrix Storage
+              <div class="divider"></div>
+              <div class="bussiness_sub_item">
+                <div class="bussiness_sub_item_title">
+                  02 矩阵存储 Matrix Storage
+                </div>
+                <ul class="bussiness_sub_item_child">
+                  <li><span>在线存储：</span>支持一键上传、拖拽等方式上传</li>
+                  <li>
+                    <span>API对接：</span>OpenAPI，为开发者提供灵活的访问接口
+                  </li>
+                  <li>
+                    <span>应用SDK：</span
+                    >提供Java、Python、C等多语言完成二次开发
+                  </li>
+                  <li>
+                    <span>离线存储：</span>无惧带宽，专属定制化硬件设备迁移数据
+                  </li>
+                </ul>
               </div>
-              <ul class="bussiness_sub_item_child">
-                <li><span>在线存储：</span>支持一键上传、拖拽等方式上传</li>
-                <li>
-                  <span>API对接：</span>OpenAPI，为开发者提供灵活的访问接口
-                </li>
-                <li>
-                  <span>应用SDK：</span>提供Java、Python、C等多语言完成二次开发
-                </li>
-                <li>
-                  <span>离线存储：</span>无惧带宽，专属定制化硬件设备迁移数据
-                </li>
-              </ul>
-            </div>
-            <div class="divider"></div>
-            <div class="bussiness_sub_item">
-              <div class="bussiness_sub_item_title">03 云GPU Cloud GPU</div>
-              <ul class="bussiness_sub_item_child">
-                <li>
-                  <span>高校科研：</span
-                  >一键部署海量学习环境场景进入计算“云”时代
-                </li>
-                <li><span>智能驾驶：</span>满足高性能计算，缩短算法训练周期</li>
-                <li><span>AI智能：</span>缩短训练环境部署，加速AI落地使用</li>
-                <li>
-                  <span>云游戏：</span>提供低成本优质稳定的存储能力和解决方案
-                </li>
-                <li><span>区块链：</span>提供关于IPFS相关服务加速C2处理</li>
-                <li><span>视频渲染：</span>集群调配，高弹性高灵活性渲染资源</li>
-              </ul>
-            </div>
-            <div class="divider"></div>
+              <div class="divider"></div>
+              <div class="bussiness_sub_item">
+                <div class="bussiness_sub_item_title">03 云GPU Cloud GPU</div>
+                <ul class="bussiness_sub_item_child">
+                  <li>
+                    <span>高校科研：</span
+                    >一键部署海量学习环境场景进入计算“云”时代
+                  </li>
+                  <li>
+                    <span>智能驾驶：</span>满足高性能计算，缩短算法训练周期
+                  </li>
+                  <li><span>AI智能：</span>缩短训练环境部署，加速AI落地使用</li>
+                  <li>
+                    <span>云游戏：</span>提供低成本优质稳定的存储能力和解决方案
+                  </li>
+                  <li><span>区块链：</span>提供关于IPFS相关服务加速C2处理</li>
+                  <li>
+                    <span>视频渲染：</span>集群调配，高弹性高灵活性渲染资源
+                  </li>
+                </ul>
+              </div>
+              <div class="divider"></div>
 
-            <div class="bussiness_bottom_part flex">
-              <a class="action_btn btn-with-arrow first">
-                <span> 探索更多 </span>
-                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-              </a>
-              <a class="action_btn btn-with-arrow">
-                <span> 相关解决方案 </span>
-                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-              </a>
+              <div class="bussiness_bottom_part flex">
+                <a class="action_btn btn-with-arrow first">
+                  <span> 探索更多 </span>
+                  <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
+                </a>
+                <a class="action_btn btn-with-arrow">
+                  <span> 相关解决方案 </span>
+                  <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -1124,33 +1147,42 @@
               </text>
             </svg>
           </div>
-          <ul>
-            <li><a href="#">北京</a></li>
-            <li><a href="#">北京</a></li>
-            <li><a href="#">北京</a></li>
-            <li><a href="#">北京</a></li>
-            <li><a href="#">北京</a></li>
-            <li><a href="#">北京</a></li>
-            <li><a href="#">北京</a></li>
-            <li><a href="#">北京</a></li>
-            <li><a href="#">北京</a></li>
-            <li><a href="#">北京</a></li>
-            <li><a href="#">北京</a></li>
-            <li><a href="#">北京</a></li>
-            <li><a href="#">北京</a></li>
-            <li><a href="#">北京</a></li>
-            <li><a href="#">北京</a></li>
-            <li><a href="#">北京</a></li>
-            <li><a href="#">北京</a></li>
-          </ul>
+          <div class="locations">
+            <ul>
+              <li><a href="#">北京</a></li>
+              <li><a href="#">上海</a></li>
+              <li><a href="#">海口</a></li>
+              <li><a href="#">成都</a></li>
+              <li><a href="#">曼谷</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">东京</a></li>
+              <li><a href="#">悉尼</a></li>
+              <li><a href="#">伦敦</a></li>
+              <li><a href="#">巴黎</a></li>
+              <li><a href="#">柏林 </a></li>
+            </ul>
+            <ul>
+              <li><a href="#">首尔</a></li>
+              <li><a href="#">莫斯科</a></li>
+              <li><a href="#">加沙</a></li>
+              <li><a href="#">披风</a></li>
+              <li><a href="#">纽约</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">曼彻斯特</a></li>
+              <li><a href="#">中国台北</a></li>
+              <li><a href="#">阿拉木图 </a></li>
+            </ul>
+          </div>
           <div class="bussiness_bottom_part flex">
             <a class="action_btn btn-with-arrow first">
               <span> 关于我们 </span>
-              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
             </a>
             <a class="action_btn btn-with-arrow second">
               <span> 联系我们 </span>
-              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -1183,12 +1215,38 @@
 
     <footer>
       <div class="top-part">
-        <div class="left-part">
+        <div class="left-part pos-r">
           <div class="logo"><img src="./assets/img/logo_bottom.png" /></div>
-          <div class="lang_bt">
-            <i class="fa fa-globe" aria-hidden="true"></i>
-            English
-          </div>
+
+          <input
+            id="langswtich2"
+            class="langswtich foldable_menu"
+            type="checkbox"
+            hidden
+          />
+          <label for="langswtich2">
+            <div class="lang_bt">
+              <i class="fa iconfont icon-yuyan" aria-hidden="true"></i>
+              English
+            </div>
+
+            <div class="langswtich_mask switch_mask"></div>
+          </label>
+
+          <ul class="lang-panel lang-panel-bottom">
+            <li>
+              <a>
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+                中文</a
+              >
+            </li>
+            <li class="selected">
+              <a>
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+                English</a
+              >
+            </li>
+          </ul>
         </div>
         <div class="right-part">
           <div class="nav-item">
@@ -1201,13 +1259,13 @@
             <label for="navswtich1">
               <div class="nav-title flex">
                 <span>产品</span>
-                <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
               </div>
             </label>
             <ul>
-              <li><a> 云计算</a></li>
-              <li><a> 云计算</a></li>
-              <li><a> 云计算</a></li>
+              <li><a>云计算</a></li>
+              <li><a>矩阵存储</a></li>
+              <li><a>云GPU</a></li>
             </ul>
           </div>
           <div class="nav-item">
@@ -1220,14 +1278,18 @@
             <label for="navswtich2">
               <div class="nav-title flex">
                 <span>解决方案·场景</span>
-                <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
               </div>
             </label>
 
             <ul>
-              <li><a> 云计算</a></li>
-              <li><a> 云计算</a></li>
-              <li><a> 云计算</a></li>
+              <li><a>存储</a></li>
+              <li><a>容灾与备份</a></li>
+              <li><a>科学计算</a></li>
+              <li><a>安全计算</a></li>
+              <li><a>物理云</a></li>
+              <li><a>内容分发</a></li>
+              <li><a>机器学习</a></li>
             </ul>
           </div>
           <div class="nav-item">
@@ -1240,14 +1302,16 @@
             <label for="navswtich3">
               <div class="nav-title flex">
                 <span>解决方案·行业</span>
-                <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
               </div>
             </label>
 
             <ul>
-              <li><a> 云计算</a></li>
-              <li><a> 云计算</a></li>
-              <li><a> 云计算</a></li>
+              <li><a>人工智能</a></li>
+              <li><a>科研</a></li>
+              <li><a>大健康</a></li>
+              <li><a>政务</a></li>
+              <li><a>生物基因</a></li>
             </ul>
           </div>
           <div class="nav-item">
@@ -1260,14 +1324,14 @@
             <label for="navswtich4">
               <div class="nav-title flex">
                 <span>解决方案·WEB3.0</span>
-                <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
               </div>
             </label>
 
             <ul>
-              <li><a> 云计算</a></li>
-              <li><a> 云计算</a></li>
-              <li><a> 云计算</a></li>
+              <li><a>边缘计算</a></li>
+              <li><a>区块链</a></li>
+              <li><a>人工智能</a></li>
             </ul>
           </div>
           <div class="nav-item">
@@ -1280,14 +1344,14 @@
             <label for="navswtich5">
               <div class="nav-title flex">
                 <span>ESG</span>
-                <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
               </div>
             </label>
 
             <ul>
-              <li><a> 云计算</a></li>
-              <li><a> 云计算</a></li>
-              <li><a> 云计算</a></li>
+              <li><a>社会责任</a></li>
+              <li><a>信任承诺</a></li>
+              <li><a>公司治理</a></li>
             </ul>
           </div>
           <div class="nav-item">
@@ -1300,29 +1364,31 @@
             <label for="navswtich6">
               <div class="nav-title flex">
                 <span>关于我们</span>
-                <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
               </div>
             </label>
 
             <ul>
-              <li><a> 云计算</a></li>
-              <li><a> 云计算</a></li>
-              <li><a> 云计算</a></li>
+              <li><a>公司介绍</a></li>
+              <li><a>发展历程</a></li>
+              <li><a>新闻动态</a></li>
+              <li><a>人才招聘</a></li>
+              <li><a>联系方式</a></li>
             </ul>
           </div>
         </div>
       </div>
       <div class="bottom-part">
-        <div class="flex jc-space flex-1 pos-r">
-          <div class="sub-unit flex fd-c jc-between h-auto">
+        <div class="flex jc-between flex-1 pos-r">
+          <div class="contacts sub-unit flex fd-c jc-between h-auto">
             <div class="flex">
               <div class="flex ai-center">
-                <i class="fa fa-phone" aria-hidden="true"></i>
+                <i class="fa iconfont icon-dianhua" aria-hidden="true"></i>
                 +86 898 3286 7007
               </div>
               <div class="divider-v"></div>
               <div class="flex ai-center">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <i class="fa iconfont icon-youjian" aria-hidden="true"></i>
                 contact@AnmaiCloud.com
               </div>
             </div>
@@ -1335,8 +1401,8 @@
           <div class="divider-v ghost"></div>
 
           <div class="product_part">
-            <div class="flex fd-c jc-between h-auto">
-              <div class="flex">产品平台</div>
+            <div class="products flex fd-c jc-between h-auto">
+              <div class="title flex">产品平台</div>
               <div class="product_imgs flex line-2 ai-end">
                 <img src="assets/img/products1.png" />
                 <div class="divider-v ghost"></div>
@@ -1351,12 +1417,12 @@
           </div>
 
           <div class="divider-v ghost"></div>
-          <div class="sub-unit flex fd-c jc-between h-auto">
+          <div class="beian sub-unit flex fd-c jc-between h-auto">
             <div class="flex ai-center"></div>
             <div class="flex line-2">
               <span
-                >琼ICP备20000109号-1 Copyright © 2013-2021 Anmai Cloud Rights
-                Reserved.</span
+                >琼ICP备20000109号-1<br />
+                Copyright © 2013-2021 Anmai Cloud Rights Reserved.</span
               >
             </div>
           </div>
@@ -1384,11 +1450,16 @@
       <header class="header1 header_light">
         <div class="logo">&nbsp;</div>
         <div class="right-part">
-          <input id="langswtich" class="foldable_menu" type="checkbox" hidden />
+          <input
+            id="langswtich"
+            class="langswtich foldable_menu"
+            type="checkbox"
+            hidden
+          />
           <label for="langswtich" class="mobile">
             <div class="lang_bt_mobile">
               EN
-              <i class="fa fa-angle-down" aria-hidden="true"></i>
+              <i class="fa iconfont icon-xia" aria-hidden="true"></i>
             </div>
 
             <div class="langswtich_mask switch_mask"></div>
@@ -1397,13 +1468,13 @@
           <ul class="lang-panel">
             <li>
               <a>
-                <i class="fa fa-check" aria-hidden="true"></i>
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
                 中文</a
               >
             </li>
             <li class="selected">
               <a>
-                <i class="fa fa-check" aria-hidden="true"></i>
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
                 English</a
               >
             </li>
@@ -1412,7 +1483,7 @@
           <input id="menuswtich" type="checkbox" hidden />
           <label for="menuswtich" class="mobile">
             <div class="menu-btn">
-              <i class="fa fa-bars" aria-hidden="true"></i>
+              <i class="fa iconfont icon-menu" aria-hidden="true"></i>
             </div>
 
             <div class="switch_mask"></div>
@@ -1427,7 +1498,7 @@
                 <label for="product">
                   <a
                     >产品
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <i class="fa iconfont icon-xia" aria-hidden="true"></i>
                   </a>
                 </label>
                 <ul>
@@ -1462,7 +1533,7 @@
                 <label for="solution">
                   <a
                     >解决方案
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <i class="fa iconfont icon-xia" aria-hidden="true"></i>
                   </a>
                 </label>
                 <ul>
@@ -1498,7 +1569,7 @@
                 <label for="esg">
                   <a
                     >ESG
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <i class="fa iconfont icon-xia" aria-hidden="true"></i>
                   </a>
                 </label>
                 <ul>
@@ -1512,7 +1583,7 @@
           </div>
           <label for="langswtich" class="not_mobile">
             <div class="lang_bt">
-              <i class="fa fa-globe" aria-hidden="true"></i>
+              <i class="fa iconfont icon-yuyan" aria-hidden="true"></i>
               English
             </div>
             <div class="langswtich_mask switch_mask"></div>
@@ -1526,7 +1597,7 @@
     </div> -->
 
     <script>
-      var nice = false
+      var nice = undefined
       $(function () {
         nice = $("body").niceScroll({
           cursorborder: "1px solid rgb(80,80,80,0.4)",
@@ -1564,6 +1635,41 @@
 
         gsap.fromTo(
           ".header1",
+          1 * window.innerHeight,
+          {},
+          {
+            scrollTrigger: {
+              trigger: ".stage2",
+              // pin: true, // pin the trigger element while active
+              // pinSpacing: false,
+              start: "-=" + 1 * window.innerHeight, // when the top of the trigger hits the top of the viewport
+              end: "+=" + window.innerHeight, // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              markers: true,
+              id: "1111123123",
+              onEnter: function () {
+                $(".header1").removeClass("state1")
+                $(".header1").removeClass("state2")
+                $(".header1").removeClass("state3")
+              },
+              onEnterBack: function () {
+                $(".header1").removeClass("state1")
+                $(".header1").removeClass("state2")
+                $(".header1").removeClass("state3")
+              },
+              onUpdate: function (self) {
+                $(".header1").css({
+                  transform: `translateY(${
+                    window.innerHeight * self.progress * -1
+                  }px)`,
+                })
+              },
+            },
+          }
+        )
+
+        gsap.fromTo(
+          ".header1",
           100,
           {},
           {
@@ -1584,16 +1690,73 @@
               onEnterBack: function () {
                 $(".header1").addClass("header_light")
                 $(".header1").removeClass("header_dark")
+                // $(".header1").removeClass("floated")
               },
 
               onLeave: function () {
                 $(".header1").removeClass("header_light")
                 $(".header1").addClass("header_dark")
+                // $(".header1").addClass("floated")
               },
               onLeaveBack: function () {
                 $(".header1").addClass("state2")
                 $(".header1").removeClass("state3")
               },
+            },
+          }
+        )
+
+        gsap.fromTo(
+          ".header1",
+          1 * window.innerHeight,
+          {},
+          {
+            scrollTrigger: {
+              trigger: ".stage2",
+              // pin: true, // pin the trigger element while active
+              // pinSpacing: false,
+              start: "+=" + 3 * window.innerHeight, // when the top of the trigger hits the top of the viewport
+              end: "+=" + window.innerHeight, // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              markers: true,
+              id: "hhhhhhh12312",
+              onEnter: function () {
+                $(".header1").removeClass("state1")
+                $(".header1").removeClass("state2")
+                $(".header1").removeClass("state3")
+              },
+              onEnterBack: function () {
+                $(".header1").removeClass("state1")
+                $(".header1").removeClass("state2")
+                $(".header1").removeClass("state3")
+              },
+              onUpdate: function (self) {
+                $(".header1").css({
+                  transform: `translateY(${
+                    window.innerHeight * self.progress * -1
+                  }px)`,
+                })
+              },
+              // onEnter: function () {
+              //   $(".header1").addClass("state3")
+              //   $(".header1").removeClass("state2")
+              // },
+
+              // onEnterBack: function () {
+              //   $(".header1").addClass("header_light")
+              //   $(".header1").removeClass("header_dark")
+              //   // $(".header1").removeClass("floated")
+              // },
+
+              // onLeave: function () {
+              //   $(".header1").removeClass("header_light")
+              //   $(".header1").addClass("header_dark")
+              //   // $(".header1").addClass("floated")
+              // },
+              // onLeaveBack: function () {
+              //   $(".header1").addClass("state2")
+              //   $(".header1").removeClass("state3")
+              // },
             },
           }
         )

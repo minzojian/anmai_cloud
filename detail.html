@@ -8,7 +8,7 @@
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <title>产品详情</title>
-    <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./assets/css/iconfont.css" />
     <link rel="stylesheet" href="./assets/css/common.css" />
     <link rel="stylesheet" href="./assets/css/detail.css" />
     <script src="./assets/js/common.js"></script>
@@ -20,14 +20,19 @@
   </head>
   <body>
     <div id="page-main" class="app-main news-show">
-     <header class="header1 header_dark">
+      <header class="header1 header_dark">
         <div class="logo">&nbsp;</div>
         <div class="right-part">
-          <input id="langswtich" class="foldable_menu" type="checkbox" hidden />
+          <input
+            id="langswtich"
+            class="langswtich foldable_menu"
+            type="checkbox"
+            hidden
+          />
           <label for="langswtich" class="mobile">
             <div class="lang_bt_mobile">
               EN
-              <i class="fa fa-angle-down" aria-hidden="true"></i>
+              <i class="fa iconfont icon-xia" aria-hidden="true"></i>
             </div>
 
             <div class="langswtich_mask switch_mask"></div>
@@ -36,13 +41,13 @@
           <ul class="lang-panel">
             <li>
               <a>
-                <i class="fa fa-check" aria-hidden="true"></i>
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
                 中文</a
               >
             </li>
             <li class="selected">
               <a>
-                <i class="fa fa-check" aria-hidden="true"></i>
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
                 English</a
               >
             </li>
@@ -51,7 +56,7 @@
           <input id="menuswtich" type="checkbox" hidden />
           <label for="menuswtich" class="mobile">
             <div class="menu-btn">
-              <i class="fa fa-bars" aria-hidden="true"></i>
+              <i class="fa iconfont icon-menu" aria-hidden="true"></i>
             </div>
 
             <div class="switch_mask"></div>
@@ -66,7 +71,7 @@
                 <label for="product">
                   <a
                     >产品
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <i class="fa iconfont icon-xia" aria-hidden="true"></i>
                   </a>
                 </label>
                 <ul>
@@ -101,7 +106,7 @@
                 <label for="solution">
                   <a
                     >解决方案
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <i class="fa iconfont icon-xia" aria-hidden="true"></i>
                   </a>
                 </label>
                 <ul>
@@ -137,7 +142,7 @@
                 <label for="esg">
                   <a
                     >ESG
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <i class="fa iconfont icon-xia" aria-hidden="true"></i>
                   </a>
                 </label>
                 <ul>
@@ -151,7 +156,7 @@
           </div>
           <label for="langswtich" class="not_mobile">
             <div class="lang_bt">
-              <i class="fa fa-globe" aria-hidden="true"></i>
+              <i class="fa iconfont icon-yuyan" aria-hidden="true"></i>
               English
             </div>
             <div class="langswtich_mask switch_mask"></div>
@@ -168,27 +173,35 @@
         <div class="container">
           <div class="box-left">
             <div class="box-heading">
-              <h1 class="title">
+              <div class="title">
                 CDN峰会丨安迈云以去中心化云计算抢先步入Web3.0时代
-              </h1>
+              </div>
               <div class="line-two">
                 <div class="box-info">
                   <span class="date">2021年6月10日</span>
                 </div>
               </div>
             </div>
-            <div class="divider"></div>
             <div class="box-content">
               近日，亚太内容分发大会暨CDN峰会在北京召开，该峰会不仅邀请到了阿里云、腾讯云等一线云计算厂商，同时还有中兴、网宿科技等传统CDN产业核心成员，是全球内容流量技术和运维领域最重要、规模最大的活动之一。安迈云作为去中心化云计算核心企业代表受邀出席大会。
               “Web3.0时代是智能机器的时代，它就如同智能手机的出现，将改变当前人们的生活方式”，安迈云产品副总裁王磊在峰会上这样评价Web3.0时代所带来的改变。
+              <img src="assets/img/图层 16.png" />
+              智能机器时代，同样也是数据时代，有调研机构的分析数据显示，在2020年全球生成的数据量达到了58ZB，预计在未来三年中，还将增长三倍。通过中国信通院提供的数据显示，在2020年大数据产业的市场规模达到了586亿，在这庞大的市场规模下，也引发了新一轮的技术革新。成本问题、隐私安全问题、数据资产流动性问题是现阶段中心化云计算面临的三大难题。无法解决这三个问题，也就无法应对Web3.0下对计算和存储的更高需求。
+              <img src="assets/img/图层 17.png" />
+              在数据安全性上，得益于区块链技术的支持，具有高安全性的数据校验机制。正是这些特性，使矩阵存储非常适合应用在以下几大场景：
+              <img src="assets/img/图层 18.png" />
+              现场有很多嘉宾对安迈云提出的Web3.0分布式云计算平台表达了关注，对去中心化云计算这一概念十分感兴趣。去中心化云计算作为未来云计算新十年的起点，其未来发展速度将超越中心化云计算。从技术的角度来看，不管是边缘计算还是传统的中心化云计算，与去中心化云计算最主要的差别在于提供服务的模式。
+              去中心化云计算摆脱了某一个平台集中调配管理资源的方式，将每一个节点都作为一个独立的资源相互提供服务。安迈云所扮演的角色是为用户提供进入到节点网络上的平台。所以这样的技术特点，造就了它能够在Web3.0时代成为创新工具的重要基础设施。
+              王磊最后也谈到，希望能够有更多的合作伙伴一起推进Web3.0价值互联网的发展。去中心化云计算并非是取代中心化云计算而诞生的，两者是相互互补，产生出更多的应用场景。
+              相信随着去中心化云计算这一概念逐渐被更多企业所理解，在Web3.0的背景下，新的应用、新的需求将会不断涌现，安迈云会以去中心化技术，帮助更多人轻松迈入数字文明新世界。
             </div>
-            <div class="divider"></div>
+            <div class="divider bottom-divider"></div>
             <div class="box-control">
               <a
                 href="`/news/${$route.params.category}/${prevID}`"
                 class="button text has-icon prev"
               >
-                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                <i class="fa iconfont icon-zuo" aria-hidden="true"></i>
                 <span class="_txt">上一篇</span>
               </a>
               <a
@@ -196,7 +209,7 @@
                 class="button text has-icon next disabled"
               >
                 <span class="_txt">下一篇</span>
-                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                <i class="fa iconfont icon-you" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -226,7 +239,7 @@
               <div class="header">
                 <h3 class="title">最新推荐</h3>
                 <a class="change" href="#">
-                  <i class="fa fa-refresh" aria-hidden="true"></i>
+                  <i class="fa iconfont icon-shuaxin" aria-hidden="true"></i>
                   <span>换一批</span>
                 </a>
               </div>
@@ -273,12 +286,38 @@
 
       <footer>
         <div class="top-part">
-          <div class="left-part">
+          <div class="left-part pos-r">
             <div class="logo"><img src="./assets/img/logo_bottom.png" /></div>
-            <div class="lang_bt">
-              <i class="fa fa-globe" aria-hidden="true"></i>
-              English
-            </div>
+
+            <input
+              id="langswtich2"
+              class="langswtich foldable_menu"
+              type="checkbox"
+              hidden
+            />
+            <label for="langswtich2">
+              <div class="lang_bt">
+                <i class="fa iconfont icon-yuyan" aria-hidden="true"></i>
+                English
+              </div>
+
+              <div class="langswtich_mask switch_mask"></div>
+            </label>
+
+            <ul class="lang-panel lang-panel-bottom">
+              <li>
+                <a>
+                  <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+                  中文</a
+                >
+              </li>
+              <li class="selected">
+                <a>
+                  <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+                  English</a
+                >
+              </li>
+            </ul>
           </div>
           <div class="right-part">
             <div class="nav-item">
@@ -291,13 +330,13 @@
               <label for="navswtich1">
                 <div class="nav-title flex">
                   <span>产品</span>
-                  <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                  <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
                 </div>
               </label>
               <ul>
-                <li><a> 云计算</a></li>
-                <li><a> 云计算</a></li>
-                <li><a> 云计算</a></li>
+                <li><a>云计算</a></li>
+                <li><a>矩阵存储</a></li>
+                <li><a>云GPU</a></li>
               </ul>
             </div>
             <div class="nav-item">
@@ -310,14 +349,18 @@
               <label for="navswtich2">
                 <div class="nav-title flex">
                   <span>解决方案·场景</span>
-                  <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                  <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
                 </div>
               </label>
 
               <ul>
-                <li><a> 云计算</a></li>
-                <li><a> 云计算</a></li>
-                <li><a> 云计算</a></li>
+                <li><a>存储</a></li>
+                <li><a>容灾与备份</a></li>
+                <li><a>科学计算</a></li>
+                <li><a>安全计算</a></li>
+                <li><a>物理云</a></li>
+                <li><a>内容分发</a></li>
+                <li><a>机器学习</a></li>
               </ul>
             </div>
             <div class="nav-item">
@@ -330,14 +373,16 @@
               <label for="navswtich3">
                 <div class="nav-title flex">
                   <span>解决方案·行业</span>
-                  <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                  <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
                 </div>
               </label>
 
               <ul>
-                <li><a> 云计算</a></li>
-                <li><a> 云计算</a></li>
-                <li><a> 云计算</a></li>
+                <li><a>人工智能</a></li>
+                <li><a>科研</a></li>
+                <li><a>大健康</a></li>
+                <li><a>政务</a></li>
+                <li><a>生物基因</a></li>
               </ul>
             </div>
             <div class="nav-item">
@@ -350,14 +395,14 @@
               <label for="navswtich4">
                 <div class="nav-title flex">
                   <span>解决方案·WEB3.0</span>
-                  <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                  <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
                 </div>
               </label>
 
               <ul>
-                <li><a> 云计算</a></li>
-                <li><a> 云计算</a></li>
-                <li><a> 云计算</a></li>
+                <li><a>边缘计算</a></li>
+                <li><a>区块链</a></li>
+                <li><a>人工智能</a></li>
               </ul>
             </div>
             <div class="nav-item">
@@ -370,14 +415,14 @@
               <label for="navswtich5">
                 <div class="nav-title flex">
                   <span>ESG</span>
-                  <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                  <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
                 </div>
               </label>
 
               <ul>
-                <li><a> 云计算</a></li>
-                <li><a> 云计算</a></li>
-                <li><a> 云计算</a></li>
+                <li><a>社会责任</a></li>
+                <li><a>信任承诺</a></li>
+                <li><a>公司治理</a></li>
               </ul>
             </div>
             <div class="nav-item">
@@ -390,29 +435,31 @@
               <label for="navswtich6">
                 <div class="nav-title flex">
                   <span>关于我们</span>
-                  <i class="fa fa-angle-down mobile" aria-hidden="true"></i>
+                  <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
                 </div>
               </label>
 
               <ul>
-                <li><a> 云计算</a></li>
-                <li><a> 云计算</a></li>
-                <li><a> 云计算</a></li>
+                <li><a>公司介绍</a></li>
+                <li><a>发展历程</a></li>
+                <li><a>新闻动态</a></li>
+                <li><a>人才招聘</a></li>
+                <li><a>联系方式</a></li>
               </ul>
             </div>
           </div>
         </div>
         <div class="bottom-part">
-          <div class="flex jc-space flex-1 pos-r">
-            <div class="sub-unit flex fd-c jc-between h-auto">
+          <div class="flex jc-between flex-1 pos-r">
+            <div class="contacts sub-unit flex fd-c jc-between h-auto">
               <div class="flex">
                 <div class="flex ai-center">
-                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <i class="fa iconfont icon-dianhua" aria-hidden="true"></i>
                   +86 898 3286 7007
                 </div>
                 <div class="divider-v"></div>
                 <div class="flex ai-center">
-                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <i class="fa iconfont icon-youjian" aria-hidden="true"></i>
                   contact@AnmaiCloud.com
                 </div>
               </div>
@@ -425,8 +472,8 @@
             <div class="divider-v ghost"></div>
 
             <div class="product_part">
-              <div class="flex fd-c jc-between h-auto">
-                <div class="flex">产品平台</div>
+              <div class="products flex fd-c jc-between h-auto">
+                <div class="title flex">产品平台</div>
                 <div class="product_imgs flex line-2 ai-end">
                   <img src="assets/img/products1.png" />
                   <div class="divider-v ghost"></div>
@@ -441,12 +488,12 @@
             </div>
 
             <div class="divider-v ghost"></div>
-            <div class="sub-unit flex fd-c jc-between h-auto">
+            <div class="beian sub-unit flex fd-c jc-between h-auto">
               <div class="flex ai-center"></div>
               <div class="flex line-2">
                 <span
-                  >琼ICP备20000109号-1 Copyright © 2013-2021 Anmai Cloud Rights
-                  Reserved.</span
+                  >琼ICP备20000109号-1<br />
+                  Copyright © 2013-2021 Anmai Cloud Rights Reserved.</span
                 >
               </div>
             </div>
@@ -460,7 +507,7 @@
         ScrollTrigger.create({
           start: "top -80",
           end: 99999,
-          toggleClass: { className: "scrolled", targets: ".header1" },
+          toggleClass: { className: "floated", targets: ".header1" },
         })
       })
     </script>

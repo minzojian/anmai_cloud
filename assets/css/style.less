@@ -109,25 +109,27 @@ body {
 
 .page_content {
   position: absolute;
-  left: 10%;
-  right: 10%;
-  top: 200px;
-  height: calc(100% - 200px);
+  // top: 200px;
+  // height: calc(100% - 200px);
+  height: auto;
+  width: 1440px;
+  left: calc(calc(100% - 1440px) / 2);
+  // margin: auto;
 }
 
 .collaseable() {
   transition: all 0.5s ease-out;
   &.state1 {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(10px) !important;
   }
   &.state2 {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(0px) !important;
   }
   &.state3 {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-10px) !important;
   }
 }
 
@@ -187,11 +189,12 @@ body {
     width: 100%;
     height: 100%;
     background: rgb(16, 25, 32);
+    object-fit: cover;
   }
 
   .left-progress {
     height: 30%;
-    left: 5%;
+    left: 73px;
     position: absolute;
     width: 2px;
     display: flex;
@@ -317,6 +320,7 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                color: #afafaf;
               }
             }
           }
@@ -352,11 +356,19 @@ body {
 .stage2 {
   background: linear-gradient(180deg, rgb(210, 215, 224), rgb(240, 243, 248));
   position: relative;
+
+  .page_content {
+    top: 100px;
+    height: calc(100% - 100px);
+    max-width: 1440px;
+    margin: auto;
+  }
+
   .left_part {
     color: #000;
     margin-right: 80px;
     flex: 1;
-
+    justify-content: center;
     .bussiness_title1 {
       font-size: 18px;
       font-weight: 500;
@@ -369,56 +381,65 @@ body {
       color: #000000;
       line-height: 60px;
     }
-    .bussiness_sub_item {
-      &.active {
+    .bussiness_content {
+      margin-right: 120px;
+      .bussiness_sub_item {
+        &.active {
+          .bussiness_sub_item_title {
+            color: #3b60bf;
+            margin-bottom: 20px;
+          }
+          .bussiness_sub_item_child {
+            height: auto;
+            opacity: 1;
+          }
+        }
         .bussiness_sub_item_title {
+          font-size: 18px;
+          font-weight: bold;
           color: #3b60bf;
-          margin-bottom: 20px;
         }
         .bussiness_sub_item_child {
-          height: auto;
-          opacity: 1;
+          transition: all 0.3s;
+          height: 0;
+          opacity: 0;
+          overflow: hidden;
+          li {
+            position: relative;
+            padding-left: 20px;
+            line-height: 28px;
+            font-size: 16px;
+          }
+          li::after {
+            content: "";
+            height: 8px;
+            width: 8px;
+            background: #2c5094;
+            display: block;
+            position: absolute;
+            transform: rotate(45deg);
+            top: 9px;
+            left: 4px;
+            opacity: 0.3;
+          }
+          // list-style-image: url(i/icon.gif)
+          font-size: 16px;
+          font-family: OPPOSans;
+          color: #78797b;
+          li span {
+            font-weight: bold;
+            color: #3f547b;
+          }
         }
       }
-      .bussiness_sub_item_title {
-        font-size: 18px;
-        font-weight: 500;
-        color: #0c1d2a;
-      }
-      .bussiness_sub_item_child {
-        transition: all 0.3s;
-        height: 0;
-        opacity: 0;
-        overflow: hidden;
-        li {
-          position: relative;
-          padding-left: 20px;
-        }
-        li::after {
-          content: "";
-          height: 8px;
-          width: 8px;
-          background: #2c5094;
-          display: block;
-          position: absolute;
-          transform: rotate(45deg);
-          top: 9px;
-          left: 4px;
-          opacity: 0.3;
-        }
-        // list-style-image: url(i/icon.gif)
-        font-size: 16px;
-        font-family: OPPOSans;
-        color: #78797b;
-        li span {
-          font-weight: bold;
-          color: #3f547b;
-        }
+      .bussiness_bottom_part {
+        margin-top: 10px;
       }
     }
   }
   .right_part {
-    height: 100%;
+    // height: 100%;
+
     overflow: hidden;
     position: relative;
     flex: 1;
@@ -426,15 +447,19 @@ body {
     .pic_part {
       position: absolute;
       width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
       &:nth-child(2) {
         top: 100%;
       }
       &:nth-child(3) {
         top: 200%;
       }
-      height: 100%;
+
       & > .wrapper {
-        margin-bottom: auto;
+        margin: auto;
         position: relative;
         & > img {
           height: 100%;
@@ -480,33 +505,59 @@ body {
 
 .stage3 {
   background: rgb(10, 20, 29);
-  justify-content: space-between;
+  height: 756px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .spots_content {
+    max-width: 1440px;
     padding: 100px 10%;
+    flex: 1;
   }
   .left-part {
+    img {
+      width: 641px;
+      height: 586px;
+    }
   }
   .right-part {
+    margin: auto;
     justify-content: space-between;
     .title > span {
       font-size: 18px;
       font-weight: 500;
-      margin-bottom: 20px;
+      margin-bottom: 23px;
     }
-    ul {
-      max-height: 120px;
+    .title > svg {
+      margin-bottom: 66px;
+    }
+    .locations {
+      margin-bottom: 81px;
       display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      li {
+      width: 100%;
+      justify-content: space-between;
+      ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
         border-left: 1px solid rgba(255, 255, 255, 0.1);
-        padding-left: 16px;
-        a {
-          color: #fff;
+        li {
+          padding-left: 18px;
+          &:not(:last-child) {
+            margin-bottom: 18px;
+          }
+          a {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+          }
         }
       }
     }
-
+    .action_btn.first {
+      margin-right: 24px;
+    }
     .action_btn.second {
       color: #ffffff;
       border: 1px solid #ffffff3b;
@@ -529,6 +580,11 @@ body {
     bottom: 64px;
     span {
       transform: rotate(-90deg) translateX(20px);
+      font-size: 12px;
+      font-weight: 400;
+      color: #ffffff;
+      line-height: 28px;
+      opacity: 0.2;
     }
     .round {
       width: 20px;
