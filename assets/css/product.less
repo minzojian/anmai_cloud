@@ -28,7 +28,7 @@
       padding-top: 0 !important;
 
       .wrapper {
-        max-width: 1280px;
+        max-width: 1440px;
         margin: 0 auto;
         width: 100%;
 
@@ -39,22 +39,18 @@
           .left {
             width: 470px;
 
-            h1 {
+            color: #fff;
+            .title1 {
               font-size: 54px;
-              color: #fff;
-            }
-
-            h3 {
               font-size: 54px;
-              color: #fff;
-              font-weight: normal;
+              font-weight: 500;
             }
 
             p {
-              font-size: 16px;
-              color: #fff;
               margin-top: 40px;
-              opacity: 0.8;
+              font-size: 16px;
+              line-height: 28px;
+              opacity: 0.96;
             }
 
             i {
@@ -85,20 +81,18 @@
 
       .wrapper {
         width: 100%;
-
+        max-width: 1440px;
+        margin: 0 auto;
         .desc {
           font-size: 24px;
           font-family: Gilroy;
           font-weight: 500;
           color: #42505b;
           line-height: 23px;
-          max-width: 1280px;
-          margin: 0 auto;
+          margin-bottom: 24px;
         }
 
         .tit_box {
-          max-width: 1280px;
-          margin: 0 auto;
           display: flex;
           justify-content: space-between;
 
@@ -111,8 +105,12 @@
           }
 
           .arrows {
-            width: 300px;
             position: relative;
+            display: flex;
+            .round_btn:first-child {
+              margin-right: 11px;
+              transform: scaleX(-1);
+            }
           }
         }
 
@@ -122,8 +120,6 @@
           margin-top: 60px;
 
           .swiper-wrapper {
-            margin-left: 110px;
-
             .swiper-slide {
               width: 400px !important;
 
@@ -451,14 +447,18 @@
     .section4 {
       background-color: #eaf1f9;
       width: 100%;
-      padding: 120px 0;
-      .gloab_img{
-        width: 600px;
-        img{width: 100%;}
+      display: flex;
+      align-items: center;
+      height: 950px;
+      .gloab_img {
+        img {
+          width: 641px;
+          height: 585px;
+        }
       }
       .wrapper {
         width: 100%;
-        max-width: 1280px;
+        max-width: 1440px;
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -473,45 +473,62 @@
         .city {
           margin-left: 100px;
 
-          h4 {
+          .title1 {
             color: #b2bfcf;
             font-size: 36px;
             font-family: Gilroy;
             font-weight: bold;
+            margin-bottom: 23px;
           }
 
-          h2 {
+          .title2 {
             font-size: 50px;
-            font-family: OPPOSans;
             font-weight: 500;
             color: #000000;
-            margin: 20px 0px 35px;
             line-height: 1;
-            border-bottom: 1px solid #dde4ec;
-            padding-bottom: 35px;
 
             span {
               color: #486587;
             }
           }
+          .divider {
+            margin: 45px 0;
+            background: #dde4ec;
+          }
 
-          .box {
-            margin: 30px 0;
-
+          .locations {
+            margin-bottom: 42px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
             ul {
               display: flex;
-              justify-content: space-between;
-
+              flex-direction: column;
+              flex-wrap: nowrap;
+              &:not(:last-child) {
+                margin-right: 77px;
+              }
               li {
-                p {
-                  color: #000;
+                white-space: nowrap;
+                &:not(:last-child) {
+                  margin-bottom: 12px;
+                }
+                a {
+                  color: #000000;
+                  font-size: 16px;
+                  font-weight: 400;
                 }
               }
             }
           }
+
           .global {
             display: flex;
             align-items: center;
+
+            font-size: 18px;
+            font-weight: 500;
+            color: #486587;
           }
         }
       }

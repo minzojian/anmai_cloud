@@ -716,3 +716,26 @@ input:checked + label {
     margin: 12px 0;
   }
 }
+
+.round_btn {
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #afafaf;
+  outline: none !important;
+  &:hover {
+    i {
+      transform: translateX(10px);
+    }
+  }
+  i {
+    transition: all 0.3s;
+    font-size: 20px;
+    margin: 0;
+  }
+}
