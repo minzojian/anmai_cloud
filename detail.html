@@ -505,9 +505,15 @@
     <script>
       $(function () {
         ScrollTrigger.create({
-          start: "top -80",
-          end: 99999,
-          toggleClass: { className: "floated", targets: ".header1" },
+          start: "top top",
+          end: "+=10",
+          onLeave: function () {
+            $(".header1").addClass("floated header_dark")
+          },
+          onEnterBack: function () {
+            $(".header1").removeClass("floated header_dark")
+          },
+          id: "header",
         })
       })
     </script>
