@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="./assets/css/iconfont.css" />
   <link rel="stylesheet" href="./assets/css/common.css" />
   <link rel="stylesheet" href="./assets/css/product.css" />
+  <!-- 动画 -->
+  <link rel="stylesheet" href="https://cdn.dowebok.com/98/css/animate.min.css" />
   <!-- swiper -->
   <link rel="stylesheet" href="./assets/js/lib/swiper-bundle.min.css" />
   <script src="./assets/js/lib/swiper-bundle.min.js"></script>
@@ -263,18 +265,18 @@
           <source src="./assets/media/jzbg.webm">
         </video>
         <div class="wrapper">
-          <div class="left">
+          <div class="left wow fadeInLeft " data-wow-duration="1s" data-wow-delay=".3s">
             <h1>Data</h1>
             <h4>构建去中心化<br />数据仓库</h4>
           </div>
           <div class="right">
             <div class="c_left ">
-              <div class="top_item animated_fadeIn">
+              <div class="top_item wow fadeInUp " data-wow-duration="1s" data-wow-delay=".1s">
                 <h3>全链路校验</h3>
                 <p>最安全的全链路数据校验机制</p>
                 <span>Full link verification</span>
               </div>
-              <div class="mid_item">
+              <div class="mid_item wow fadeInUp " data-wow-duration="1s" data-wow-delay=".2s" >
                 <h4>存储<br />成本低</h4>
                 <div class="line"></div>
                 <div class="text">
@@ -282,14 +284,14 @@
                   <h3>70%</h3>
                 </div>
               </div>
-              <div class="bottom_item">
+              <div class="bottom_item wow fadeInUp " data-wow-duration="1s" data-wow-delay=".3s">
                 <h3>IPFS技术与应用</h3>
                 <p>基于区块链技术与IPFS结合，实现不可篡改的数据存储</p>
                 <span>IPFs and Application</span>
               </div>
             </div>
             <div class="c_rirht">
-              <div class="top_item">
+              <div class="top_item wow fadeInUp " data-wow-duration="1s" data-wow-delay=".15s">
                 <div class="s_wrapper">
                   <div class="flex_block">
                     <h3>数据<br />可靠性</h3>
@@ -299,12 +301,12 @@
                   <h4>99.9999%</h4>
                 </div>
               </div>
-              <div class="mid_item">
+              <div class="mid_item wow fadeInUp " data-wow-duration="1s" data-wow-delay=".25s">
                 <h3>存储工具与API</h3>
                 <p>提供去中心化存储工具与 API接口</p>
                 <span>Storage tools and API</span>
               </div>
-              <div class="bottom_item">
+              <div class="bottom_item wow fadeInUp " data-wow-duration="1s" data-wow-delay=".35s">
                 <img src="./assets/img/product/cloud.png" alt="" />
                 <div class="text">
                   <h3>弹性数据扩容</h3>
@@ -547,6 +549,8 @@
   </div>
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- wow JS -->
+  <script src="./assets/js/lib/wow.min.js"></script>
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".swiper-container", {
@@ -558,25 +562,9 @@
         prevEl: ".btn-prev",
       },
     })
-    // gsap.fromTo(".title1",3,{opacity:0},{opacity:1})
-    // gsap.fromTo(".title2",5,{opacity:0},{opacity:1})
-    // gsap.fromTo(
-    //   ".animated_fadeIn", 2, {
-    //     opacity: 0,
-    //     translateY:100
-    //   }, {
-    //     opacity: 1,
-    //     translateY:0,
-    //     scrollTrigger: {
-    //       trigger: ".section3",
-    //       start: "top",
-    //       end: "+=100",
-    //       scrub: true,
-    //       markers: true,
-    //     },
-    //   },
 
-    // )
+    new WOW().init();
+    
   </script>
 
   <script>
@@ -592,7 +580,7 @@
         },
         id: "header",
       });
-
+      
 
     })
   </script>
