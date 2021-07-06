@@ -20,14 +20,15 @@ body {
   user-select: none;
   letter-spacing: 0;
 
-  font-family: OPPOSans, "SourceHanSansCN-Regular", Arial, Helvetica;
+  font-family: OPPOSans;
   font-weight: 400;
   font-size: 14px;
   overflow-x: hidden;
   background: linear-gradient(180deg, #97a0b2, #eef1f6);
   // text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
   color: white;
-  // -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 header {
@@ -36,7 +37,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 40px 64px 64px;
-  transition: .3s linear;
+  transition: 0.3s linear;
   &.floated {
     background: white;
     position: sticky;
@@ -108,21 +109,24 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        letter-spacing: 1px;
       }
 
       & > ul {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        input[type="checkbox"]:checked + li {
-          & > label {
+
+        // input[type="checkbox"]:checked + li {
+        > li:hover {
+          & > a {
             i.fa {
-              transform: rotate(-90deg);
+              transform: translateY(3px);
             }
           }
           & > ul {
             // display: block;
-            transform: translate(-50%, 0);
+            transform: translateX(-50%);
             opacity: 1;
             pointer-events: auto;
             height: auto;
@@ -135,7 +139,6 @@ header {
         & > li {
           position: relative;
           padding: 10px 0;
-          min-width: 60px;
           text-align: center;
 
           &::after {
@@ -143,10 +146,11 @@ header {
             position: absolute;
             left: 0;
             bottom: 0;
-            width: 100%;
+            width: 14px;
             height: 2px;
             background: #3aab8b;
             transition: all 0.3s;
+            transform-origin: left;
             transform: scale(0, 1);
           }
           &:hover::after,
@@ -157,16 +161,15 @@ header {
           i.fa {
             transition: all 0.3s;
             margin-right: 0;
-            margin-left: 10px;
-            color: #6a6a6a;
-            opacity: 0.5;
+            margin-left: 8px;
+            opacity: 0.3;
           }
 
           & > ul {
             // display: none;
-            transform: translate(-50%, -10px);
+            transform: translateX(calc(-50% - 10px));
             opacity: 0;
-            transition: all 0.3s;
+            transition: all 0.3s 0.1s;
             pointer-events: none;
           }
 
@@ -174,11 +177,13 @@ header {
             position: absolute;
             left: 50%;
 
-            top: calc(100% + 4px);
+            top: calc(100% + 1px);
             padding: 24px;
             background: #ffffff;
             border-radius: 14px;
             li {
+              justify-content: flex-start;
+              display: flex;
               a {
                 display: flex;
                 white-space: nowrap;
@@ -219,7 +224,7 @@ header {
     }
   }
 }
-
+///////////////// footer
 footer {
   font-family: PingFangSC;
   font-weight: 400;
@@ -317,6 +322,7 @@ footer {
     border: 1px solid #ffffff42;
   }
 }
+////////////////end footer
 
 ul.lang-panel {
   top: calc(100% + 4px);
@@ -395,9 +401,10 @@ a {
   display: inline-flex;
   text-decoration: none;
   transition: all 0.3s;
-
-  &:hover {
-    color: #3aab8b !important;
+  &.changeable {
+    &:hover {
+      color: #3aab8b !important;
+    }
   }
   &.disabled {
     color: #999 !important;
@@ -455,11 +462,11 @@ i.fa {
   justify-content: center;
   align-items: center;
   width: 102px;
-  height: 41px;
+  height: 40px;
   border: 1px solid #3c3c3c42;
   border-radius: 20px;
 
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
 
   .fa {
@@ -472,21 +479,25 @@ i.fa {
   width: 186px;
   height: 52px;
 
-  background: transparent;
   border: 1px solid #3c3c3c3b;
 
   border-radius: 26px;
   padding: 18px 33px;
-  color: #616161;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
   cursor: pointer;
 
+  background: #2c5094;
   &.first {
-    background: #2c5094;
     color: #ffffff;
+    margin-right: 16px;
+  }
+  &.second {
+    background: transparent;
+    color: #616161;
     margin-right: 16px;
   }
 
@@ -729,9 +740,9 @@ input:checked + label {
   justify-content: center;
   color: #afafaf;
   outline: none !important;
-  transition: .3s linear;
+  transition: 0.3s linear;
   &:hover {
-    border: 2px solid rgba(255,255,255,0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
     i {
       // transform: translateX(10px);
     }

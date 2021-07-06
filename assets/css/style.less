@@ -162,26 +162,25 @@ body {
       margin-bottom: 52px;
     }
 
-    .action_btn {
-      width: 186px;
-      height: 52px;
-      background: linear-gradient(227deg, #3c98cc, #3aab8b);
-      border-radius: 26px;
-      padding: 18px 33px;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-sizing: border-box;
-      cursor: pointer;
+    // .action_btn {
+    //   width: 186px;
+    //   height: 52px;
+    //   border-radius: 26px;
+    //   padding: 18px 33px;
+    //   color: #ffffff;
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: space-between;
+    //   box-sizing: border-box;
+    //   cursor: pointer;
 
-      span {
-        font-size: 14px;
-        font-weight: 500;
-        color: #ffffff;
-        line-height: 28px;
-      }
-    }
+    //   span {
+    //     font-size: 14px;
+    //     font-weight: 500;
+    //     color: #ffffff;
+    //     line-height: 28px;
+    //   }
+    // }
   }
 
   .bg_video {
@@ -250,16 +249,27 @@ body {
       content: "3/3";
     }
   }
-
+  .title3_mask {
+    pointer-events: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
   .title3 {
     height: 90%;
-    top: 10%;
+    top: 0;
+    padding-top: 10%;
+
     overflow: hidden;
     .inner_scroll_warpper {
     }
     .sub_part {
       &:first-child {
-        margin-top: 20%;
+        margin-top: 10%;
       }
       margin-bottom: 120px;
       width: 100%;
@@ -319,11 +329,18 @@ body {
         width: 20%;
         .side-title {
           height: 88px;
-          font-size: 110px;
+          font-size: 120px;
           font-family: Gilroy, "SourceHanSansCN-Regular", Arial, Helvetica;
           font-weight: bold;
           color: #0c1217;
           background: linear-gradient(0deg, #041627 0%, #081521 100%);
+        }
+        svg {
+          position: sticky;
+          top: 0%;
+          &.year {
+            position: relative;
+          }
         }
       }
     }
@@ -337,18 +354,21 @@ body {
   }
   &:hover {
     i.fa {
-      transform: translateX(5px);
+      transform: translateX(3px);
     }
   }
 }
 
 .stage2 {
-  background: linear-gradient(180deg, rgb(210, 215, 224), rgb(240, 243, 248));
+  // background: linear-gradient(180deg, rgb(210, 215, 224), rgb(240, 243, 248));
   position: relative;
 
+  .sticky {
+    background: linear-gradient(180deg, #97a0b2, #fff);
+  }
   .page_content {
-    top: 100px;
-    height: calc(100% - 100px);
+    top: 150px;
+    height: calc(100% - 200px);
     max-width: 1440px;
     margin: auto;
   }
@@ -386,7 +406,7 @@ body {
         .bussiness_sub_item_title {
           font-size: 18px;
           font-weight: bold;
-          color: #3b60bf;
+          color: #0d141a;
         }
         .bussiness_sub_item_child {
           transition: all 0.3s;
@@ -456,21 +476,27 @@ body {
         }
         .info_part {
           position: absolute;
-          top: calc(50% - 30px);
-          left: 30px;
-          width: calc(52% - 60px);
+
+          left: 60px;
+          height: calc(58% - 120px);
+          top: calc(41% + 60px);
+          width: calc(53% - 120px);
           display: flex;
-          justify-content: center;
+          font-weight: 400;
           .title_part {
             font-size: 30px;
             line-height: 1;
+            font-weight: 500;
           }
           span {
             font-size: 16px;
-            line-height: 22px;
+            line-height: 27px;
+            letter-spacing: 1px;
           }
           img {
             width: fit-content;
+            margin-bottom: 40px;
+            width: 100px;
           }
           & > * {
             margin-bottom: 20px;
@@ -494,7 +520,7 @@ body {
 
 .stage3 {
   background: rgb(10, 20, 29);
-  height: 756px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -524,6 +550,7 @@ body {
       margin-bottom: 81px;
       display: flex;
       width: 100%;
+      max-width: 510px;
       justify-content: space-between;
       ul {
         display: flex;

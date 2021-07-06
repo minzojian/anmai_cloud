@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>解决方案</title>
     <link rel="stylesheet" href="./assets/css/normalize.css" />
     <link rel="stylesheet" href="./assets/css/iconfont.css" />
@@ -13,389 +12,441 @@
     <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
     <script src="./assets/js/common.js"></script>
     <script src="./assets/js/nav.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="page-main">
-        <!-- header -->
-        <header class="solution-head">
-            <div class="logo">&nbsp;</div>
-            <div class="right-part">
-                <input id="langswtich" class="langswtich foldable_menu" type="checkbox" hidden />
-                <label for="langswtich" class="mobile">
-                    <div class="lang_bt_mobile">
-                        EN
-                        <i class="fa iconfont icon-xia" aria-hidden="true"></i>
-                    </div>
+      <!-- header -->
+      <header class="solution-head header1 header_dark">
+        <div class="logo">&nbsp;</div>
+        <div class="right-part">
+          <input
+            id="langswtich"
+            class="langswtich foldable_menu"
+            type="checkbox"
+            hidden
+          />
+          <label for="langswtich" class="mobile">
+            <div class="lang_bt_mobile">
+              EN
+              <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+            </div>
 
-                    <div class="langswtich_mask switch_mask"></div>
-                </label>
+            <div class="langswtich_mask switch_mask"></div>
+          </label>
 
-                <ul class="lang-panel">
-                    <li>
-                        <a>
-                            <i class="fa iconfont icon-gou" aria-hidden="true"></i>
-                            中文</a>
-                    </li>
-                    <li class="selected">
-                        <a>
-                            <i class="fa iconfont icon-gou" aria-hidden="true"></i>
-                            English</a>
-                    </li>
+          <ul class="lang-panel">
+            <li>
+              <a>
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+                中文</a
+              >
+            </li>
+            <li class="selected">
+              <a>
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+                English</a
+              >
+            </li>
+          </ul>
+
+          <input id="menuswtich" type="checkbox" hidden />
+          <label for="menuswtich" class="mobile">
+            <div class="menu-btn">
+              <i class="fa iconfont icon-menu" aria-hidden="true"></i>
+            </div>
+
+            <div class="switch_mask"></div>
+          </label>
+
+          <div class="nav">
+            <ul>
+              <li><a>首页</a></li>
+
+              <li class="">
+                <a
+                  >产品
+                  <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/云计算.png" />
+                      </div>
+                      分布式数据中心</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/云计算.png" />
+                      </div>
+                      分布式CDN</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/矩阵存储.png" />
+                      </div>
+                      矩阵存储
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/云GPU.png" />
+                      </div>
+                      云GPU
+                    </a>
+                  </li>
                 </ul>
-
-                <input id="menuswtich" type="checkbox" hidden />
-                <label for="menuswtich" class="mobile">
-                    <div class="menu-btn">
-                        <i class="fa iconfont icon-menu" aria-hidden="true"></i>
-                    </div>
-
-                    <div class="switch_mask"></div>
-                </label>
-
-                <div class="nav">
-                    <ul>
-                        <li><a>首页</a></li>
-
-                        <input id="product" type="checkbox" hidden />
-                        <li class="">
-                            <label for="product">
-                                <a>产品
-                                    <i class="fa iconfont icon-xia" aria-hidden="true"></i>
-                                </a>
-                            </label>
-                            <ul>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/图层 1.png" />
-                                        </div>
-                                        云计算
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/图层 1.png" />
-                                        </div>
-                                        云计算
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/图层 1.png" />
-                                        </div>
-                                        云计算
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <input id="solution" type="checkbox" hidden />
-                        <li>
-                            <label for="solution">
-                                <a>解决方案
-                                    <i class="fa iconfont icon-xia" aria-hidden="true"></i>
-                                </a>
-                            </label>
-                            <ul>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/图层 1.png" />
-                                        </div>
-                                        方案1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/图层 1.png" />
-                                        </div>
-                                        方案2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/图层 1.png" />
-                                        </div>
-                                        方案3
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <input id="esg" type="checkbox" hidden />
-                        <li>
-                            <label for="esg">
-                                <a>ESG
-                                    <i class="fa iconfont icon-xia" aria-hidden="true"></i>
-                                </a>
-                            </label>
-                            <ul>
-                                <li><a>方案1</a></li>
-                                <li><a>方案2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>投资者关系</a></li>
-                        <li><a>关于我们</a></li>
-                    </ul>
-                </div>
-                <label for="langswtich" class="not_mobile">
-                    <div class="lang_bt">
-                        <i class="fa iconfont icon-yuyan" aria-hidden="true"></i>
-                        English
-                    </div>
-                    <div class="langswtich_mask switch_mask"></div>
-                </label>
-            </div>
-        </header>
-        <!-- main -->
-        <div class="banner"></div>
-        <div class="nav-height" id="navHeight">
-            <nav class="nav-wrap" id="nav-wrap">
-                <div class="nav-mobile">Click</div>
-                <ul class="clearfix">
-                    <li><a class="active" href="#section1">nav1</a></li>
-                    <li><a class="" href="#section2">nav2</a></li>
-                    <li><a class="" href="#section3">nav3</a></li>
-                    <li><a class="" href="#section4">nav4</a></li>
-                    <li><a class="" href="#section5">nav5</a></li>
-                    <li><a class="" href="#section6">nav6</a></li>
-                    <li><a class="" href="#section7">nav7</a></li>
+              </li>
+              <li>
+                <a
+                  >解决方案
+                  <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/云计算.png" />
+                      </div>
+                      方案1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/云计算.png" />
+                      </div>
+                      方案2</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      ><div class="icon">
+                        <img src="./assets/img/云计算.png" />
+                      </div>
+                      方案3</a
+                    >
+                  </li>
                 </ul>
-            </nav>
-        </div>
-        <div id="section1" class="section-content">
-            1
-        </div>
-        <div id="section2" class="section-content">
-            2
-        </div>
-        <div id="section3" class="section-content">
-            3
-        </div>
-        <div id="section4" class="section-content">
-            4
-        </div>
-        <div id="section5" class="section-content">
-            5
-        </div>
-        <div id="section6" class="section-content">
-           6
-        </div>
-        <div id="section7" class="section-content">
-           7
-        </div>
-        <!-- footer -->
-        <footer>
-            <div class="top-part">
-                <div class="left-part pos-r">
-                    <div class="logo"><img src="./assets/img/logo_bottom.png" /></div>
+              </li>
 
-                    <input id="langswtich2" class="langswtich foldable_menu" type="checkbox" hidden />
-                    <label for="langswtich2">
-                        <div class="lang_bt">
-                            <i class="fa iconfont icon-yuyan" aria-hidden="true"></i>
-                            English
-                        </div>
-
-                        <div class="langswtich_mask switch_mask"></div>
-                    </label>
-
-                    <ul class="lang-panel lang-panel-bottom">
-                        <li>
-                            <a>
-                                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
-                                中文</a>
-                        </li>
-                        <li class="selected">
-                            <a>
-                                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
-                                English</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="right-part">
-                    <div class="nav-item">
-                        <input class="foldable_menu" id="navswtich1" type="checkbox" hidden />
-                        <label for="navswtich1">
-                            <div class="nav-title flex">
-                                <span>产品</span>
-                                <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
-                            </div>
-                        </label>
-                        <ul>
-                            <li><a>云计算</a></li>
-                            <li><a>矩阵存储</a></li>
-                            <li><a>云GPU</a></li>
-                        </ul>
-                    </div>
-                    <div class="nav-item">
-                        <input class="foldable_menu" id="navswtich2" type="checkbox" hidden />
-                        <label for="navswtich2">
-                            <div class="nav-title flex">
-                                <span>解决方案·场景</span>
-                                <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
-                            </div>
-                        </label>
-
-                        <ul>
-                            <li><a>存储</a></li>
-                            <li><a>容灾与备份</a></li>
-                            <li><a>科学计算</a></li>
-                            <li><a>安全计算</a></li>
-                            <li><a>物理云</a></li>
-                            <li><a>内容分发</a></li>
-                            <li><a>机器学习</a></li>
-                        </ul>
-                    </div>
-                    <div class="nav-item">
-                        <input class="foldable_menu" id="navswtich3" type="checkbox" hidden />
-                        <label for="navswtich3">
-                            <div class="nav-title flex">
-                                <span>解决方案·行业</span>
-                                <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
-                            </div>
-                        </label>
-
-                        <ul>
-                            <li><a>人工智能</a></li>
-                            <li><a>科研</a></li>
-                            <li><a>大健康</a></li>
-                            <li><a>政务</a></li>
-                            <li><a>生物基因</a></li>
-                        </ul>
-                    </div>
-                    <div class="nav-item">
-                        <input class="foldable_menu" id="navswtich4" type="checkbox" hidden />
-                        <label for="navswtich4">
-                            <div class="nav-title flex">
-                                <span>解决方案·WEB3.0</span>
-                                <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
-                            </div>
-                        </label>
-
-                        <ul>
-                            <li><a>边缘计算</a></li>
-                            <li><a>区块链</a></li>
-                            <li><a>人工智能</a></li>
-                        </ul>
-                    </div>
-                    <div class="nav-item">
-                        <input class="foldable_menu" id="navswtich5" type="checkbox" hidden />
-                        <label for="navswtich5">
-                            <div class="nav-title flex">
-                                <span>ESG</span>
-                                <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
-                            </div>
-                        </label>
-
-                        <ul>
-                            <li><a>社会责任</a></li>
-                            <li><a>信任承诺</a></li>
-                            <li><a>公司治理</a></li>
-                        </ul>
-                    </div>
-                    <div class="nav-item">
-                        <input class="foldable_menu" id="navswtich6" type="checkbox" hidden />
-                        <label for="navswtich6">
-                            <div class="nav-title flex">
-                                <span>关于我们</span>
-                                <i class="fa iconfont icon-xia mobile" aria-hidden="true"></i>
-                            </div>
-                        </label>
-
-                        <ul>
-                            <li><a>公司介绍</a></li>
-                            <li><a>发展历程</a></li>
-                            <li><a>新闻动态</a></li>
-                            <li><a>人才招聘</a></li>
-                            <li><a>联系方式</a></li>
-                        </ul>
-                    </div>
-                </div>
+              <!-- <li>
+                  <a
+                    >ESG
+                    <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+                  </a>
+                <ul>
+                  <li><a>方案1</a></li>
+                  <li><a>方案2</a></li>
+                </ul>
+              </li>
+              <li><a>投资者关系</a></li> -->
+              <li><a>关于我们</a></li>
+            </ul>
+          </div>
+          <label for="langswtich" class="not_mobile">
+            <div class="lang_bt">
+              <i class="fa iconfont icon-yuyan" aria-hidden="true"></i>
+              English
             </div>
-            <div class="bottom-part">
-                <div class="flex jc-between flex-1 pos-r">
-                    <div class="contacts sub-unit flex fd-c jc-between h-auto">
-                        <div class="flex">
-                            <div class="flex ai-center">
-                                <i class="fa iconfont icon-dianhua" aria-hidden="true"></i>
-                                +86 898 3286 7007
-                            </div>
-                            <div class="divider-v"></div>
-                            <div class="flex ai-center">
-                                <i class="fa iconfont icon-youjian" aria-hidden="true"></i>
-                                contact@AnmaiCloud.com
-                            </div>
-                        </div>
-                        <div class="flex line-2">
-                            <span>地址：海南省省直辖县行政单位澄迈县老城镇高新技术产业示范区海南生态软件园A7幢二层3001</span>
-                        </div>
-                    </div>
-                    <div class="divider-v ghost"></div>
+            <div class="langswtich_mask switch_mask"></div>
+          </label>
+        </div>
+      </header>
+      <!-- main -->
+      <div class="banner"></div>
+      <div class="nav-height" id="navHeight">
+        <nav class="nav-wrap" id="nav-wrap">
+          <div class="nav-mobile">Click</div>
+          <ul class="clearfix">
+            <li><a class="active" href="#section1">nav1</a></li>
+            <li><a class="" href="#section2">nav2</a></li>
+            <li><a class="" href="#section3">nav3</a></li>
+            <li><a class="" href="#section4">nav4</a></li>
+            <li><a class="" href="#section5">nav5</a></li>
+            <li><a class="" href="#section6">nav6</a></li>
+            <li><a class="" href="#section7">nav7</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="section1" class="section-content">1</div>
+      <div id="section2" class="section-content">2</div>
+      <div id="section3" class="section-content">3</div>
+      <div id="section4" class="section-content">4</div>
+      <div id="section5" class="section-content">5</div>
+      <div id="section6" class="section-content">6</div>
+      <div id="section7" class="section-content">7</div>
+      <!-- footer -->
+      <footer>
+        <div class="top-part">
+          <div class="left-part pos-r">
+            <div class="logo"><img src="./assets/img/logo_bottom.png" /></div>
 
-                    <div class="product_part">
-                        <div class="products flex fd-c jc-between h-auto">
-                            <div class="title flex">产品平台</div>
-                            <div class="product_imgs flex line-2 ai-end">
-                                <img src="assets/img/products1.png" />
-                                <div class="divider-v ghost"></div>
-                                <img src="assets/img/products2.png" />
-                            </div>
-                        </div>
+            <input
+              id="langswtich2"
+              class="langswtich foldable_menu"
+              type="checkbox"
+              hidden
+            />
+            <label for="langswtich2">
+              <div class="lang_bt">
+                <i class="fa iconfont icon-yuyan" aria-hidden="true"></i>
+                English
+              </div>
 
-                        <div class="gzh flex fd-c ai-end">
-                            <div>关注公众号</div>
-                            <img src="assets/img/qr_code.png" />
-                        </div>
-                    </div>
+              <div class="langswtich_mask switch_mask"></div>
+            </label>
 
-                    <div class="divider-v ghost"></div>
-                    <div class="beian sub-unit flex fd-c jc-between h-auto">
-                        <div class="flex ai-center"></div>
-                        <div class="flex line-2">
-                            <span>琼ICP备20000109号-1<br />
-                                Copyright © 2013-2021 Anmai Cloud Rights Reserved.</span>
-                        </div>
-                    </div>
+            <ul class="lang-panel lang-panel-bottom">
+              <li>
+                <a>
+                  <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+                  中文</a
+                >
+              </li>
+              <li class="selected">
+                <a>
+                  <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+                  English</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="right-part">
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich1"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich1">
+                <div class="nav-title flex">
+                  <span>产品</span>
+                  <i
+                    class="fa iconfont icon-Down mobile"
+                    aria-hidden="true"
+                  ></i>
                 </div>
+              </label>
+              <ul>
+                <li><a>云计算</a></li>
+                <li><a>矩阵存储</a></li>
+                <li><a>云GPU</a></li>
+              </ul>
             </div>
-        </footer>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich2"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich2">
+                <div class="nav-title flex">
+                  <span>解决方案·场景</span>
+                  <i
+                    class="fa iconfont icon-Down mobile"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </label>
+
+              <ul>
+                <li><a>存储</a></li>
+                <li><a>容灾与备份</a></li>
+                <li><a>科学计算</a></li>
+                <li><a>安全计算</a></li>
+                <li><a>物理云</a></li>
+                <li><a>内容分发</a></li>
+                <li><a>机器学习</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich3"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich3">
+                <div class="nav-title flex">
+                  <span>解决方案·行业</span>
+                  <i
+                    class="fa iconfont icon-Down mobile"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </label>
+
+              <ul>
+                <li><a>人工智能</a></li>
+                <li><a>科研</a></li>
+                <li><a>大健康</a></li>
+                <li><a>政务</a></li>
+                <li><a>生物基因</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich4"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich4">
+                <div class="nav-title flex">
+                  <span>解决方案·WEB3.0</span>
+                  <i
+                    class="fa iconfont icon-Down mobile"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </label>
+
+              <ul>
+                <li><a>边缘计算</a></li>
+                <li><a>区块链</a></li>
+                <li><a>人工智能</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich5"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich5">
+                <div class="nav-title flex">
+                  <span>ESG</span>
+                  <i
+                    class="fa iconfont icon-Down mobile"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </label>
+
+              <ul>
+                <li><a>社会责任</a></li>
+                <li><a>信任承诺</a></li>
+                <li><a>公司治理</a></li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich6"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich6">
+                <div class="nav-title flex">
+                  <span>关于我们</span>
+                  <i
+                    class="fa iconfont icon-Down mobile"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </label>
+
+              <ul>
+                <li><a>公司介绍</a></li>
+                <li><a>发展历程</a></li>
+                <li><a>新闻动态</a></li>
+                <li><a>人才招聘</a></li>
+                <li><a>联系方式</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-part">
+          <div class="flex jc-between flex-1 pos-r">
+            <div class="contacts sub-unit flex fd-c jc-between h-auto">
+              <div class="flex">
+                <div class="flex ai-center">
+                  <i class="fa iconfont icon-dianhua" aria-hidden="true"></i>
+                  +86 898 3286 7007
+                </div>
+                <div class="divider-v"></div>
+                <div class="flex ai-center">
+                  <i class="fa iconfont icon-youjian" aria-hidden="true"></i>
+                  contact@AnmaiCloud.com
+                </div>
+              </div>
+              <div class="flex line-2">
+                <span
+                  >地址：海南省省直辖县行政单位澄迈县老城镇高新技术产业示范区海南生态软件园A7幢二层3001</span
+                >
+              </div>
+            </div>
+            <div class="divider-v ghost"></div>
+
+            <div class="product_part">
+              <div class="products flex fd-c jc-between h-auto">
+                <div class="title flex">产品平台</div>
+                <div class="product_imgs flex line-2 ai-end">
+                  <img src="assets/img/products1.png" />
+                  <div class="divider-v ghost"></div>
+                  <img src="assets/img/products2.png" />
+                </div>
+              </div>
+
+              <div class="gzh flex fd-c ai-end">
+                <div>关注公众号</div>
+                <img src="assets/img/qr_code.png" />
+              </div>
+            </div>
+
+            <div class="divider-v ghost"></div>
+            <div class="beian sub-unit flex fd-c jc-between h-auto">
+              <div class="flex ai-center"></div>
+              <div class="flex line-2">
+                <span
+                  >琼ICP备20000109号-1<br />
+                  Copyright © 2013-2021 Anmai Cloud Rights Reserved.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script>
-        //内容信息导航吸顶
-        $(document).ready(function () {
-            var navHeight = $("#navHeight").offset().top;
-            var navFix = $("#nav-wrap");
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > navHeight) {
-                    navFix.addClass("navFix");
-                }
-                else {
-                    navFix.removeClass("navFix");
-                }
-            })
+      //内容信息导航吸顶
+      $(document).ready(function () {
+        var navHeight = $("#navHeight").offset().top
+        var navFix = $("#nav-wrap")
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > navHeight) {
+            navFix.addClass("navFix")
+          } else {
+            navFix.removeClass("navFix")
+          }
         })
-        //内容信息导航锚点
-        $('.nav-wrap').navScroll({
-            mobileDropdown: true,
-            mobileBreakpoint: 768,
-            scrollSpy: true
-        });
+      })
+      //内容信息导航锚点
+      $(".nav-wrap").navScroll({
+        mobileDropdown: true,
+        mobileBreakpoint: 768,
+        scrollSpy: true,
+      })
 
-        $('.click-me').navScroll({
-            navHeight: 0
-        });
+      $(".click-me").navScroll({
+        navHeight: 0,
+      })
 
-        $('.nav-wrap').on('click', '.nav-mobile', function (e) {
-            e.preventDefault();
-            $('.nav-wrap ul').slideToggle('fast');
-        });
+      $(".nav-wrap").on("click", ".nav-mobile", function (e) {
+        e.preventDefault()
+        $(".nav-wrap ul").slideToggle("fast")
+      })
     </script>
-</body>
-
+  </body>
 </html>
