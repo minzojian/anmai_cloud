@@ -36,6 +36,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 40px 64px 64px;
+  transition: .3s linear;
   &.floated {
     background: white;
     position: sticky;
@@ -728,9 +729,11 @@ input:checked + label {
   justify-content: center;
   color: #afafaf;
   outline: none !important;
+  transition: .3s linear;
   &:hover {
+    border: 2px solid rgba(255,255,255,0.3);
     i {
-      transform: translateX(10px);
+      // transform: translateX(10px);
     }
   }
   i {
