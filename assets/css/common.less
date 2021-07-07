@@ -20,11 +20,12 @@ body {
   user-select: none;
   letter-spacing: 0;
 
-  font-family: OPPOSans;
+  font-family: OPPOSans, -apple-system, sans-serif, "Microsoft Yahei";
   font-weight: 400;
   font-size: 14px;
   overflow-x: hidden;
   background: linear-gradient(180deg, #97a0b2, #eef1f6);
+  background-attachment: fixed;
   // text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
   color: white;
   -webkit-font-smoothing: antialiased;
@@ -171,6 +172,11 @@ header {
             opacity: 0;
             transition: all 0.3s 0.1s;
             pointer-events: none;
+          }
+          a {
+            &:hover {
+              color: #3aab8b;
+            }
           }
 
           ul {
@@ -626,7 +632,7 @@ input:checked + label {
               }
               a {
                 font-weight: 400 !important;
-                color: #000000 !important;
+                // color: #000000 !important;
                 line-height: 26px !important;
                 font-size: 14px !important;
               }

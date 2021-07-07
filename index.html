@@ -169,7 +169,8 @@
                 </div>
               </div>
               <div class="right-part">
-                <svg class="year"
+                <svg
+                  class="year"
                   xmlns="http://www.w3.org/2000/svg"
                   width="270px"
                   height="92px"
@@ -270,10 +271,7 @@
                     stroke-width="2"
                     stroke="url(#gradient)"
                     fill="none"
-                    style="
-                      transform: translateY(calc(100% - 4px))
-                        ;
-                    "
+                    style="transform: translateY(calc(100% - 4px))"
                   >
                     04
                   </text>
@@ -338,10 +336,7 @@
                     stroke-width="2"
                     stroke="url(#gradient)"
                     fill="none"
-                    style="
-                      transform: translateY(calc(100% - 4px))
-                        ;
-                    "
+                    style="transform: translateY(calc(100% - 4px))"
                   >
                     03
                   </text>
@@ -362,7 +357,7 @@
         : "assets/media/stage1.mp4"
       var lastScroll = window.pageYOffset
       var isMouseWheel = false
-      var isEnterStage1 = false
+      var isEnterStage1 = true
       var mouseWheelTimer = 0
       var mouseWheelTimer2 = 0
       function handleVideoPlaying(e) {
@@ -519,6 +514,7 @@
             getScrollYByVideo(1).top,
             { opacity: 0 },
             {
+              immediateRender: false,
               delay: getScrollYByVideo(19).top,
               opacity: 1,
             }
@@ -1038,6 +1034,7 @@
           50,
           { opacity: 1 },
           {
+            immediateRender: false,
             opacity: 0,
             scrollTrigger: {
               trigger: ".stage2",
