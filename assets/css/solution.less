@@ -11,12 +11,82 @@ body {
     position: absolute;
     width: 100%;
     box-sizing: border-box;
+    color: #fff !important;
 }
 
 .banner {
     height: 760px;
     background: url('../img/solution/banner.png') no-repeat center;
     width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    .wrapper {
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .slogan {
+            width: auto;
+            min-width: 390px;
+
+            h1 {
+                font-size: 54px;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                line-height: 1;
+                font-family: OPPOSans;
+                font-weight: 500;
+            }
+
+            h2 {
+                font-size: 54px;
+                color: #fff;
+                display: flex;
+                line-height: 1;
+                font-family: OPPOSans;
+                font-weight: 500;
+            }
+
+            .line {
+                width: 2px;
+                height: 46px;
+                display: inline-block;
+                margin: 0 25px;
+            }
+
+            .downBtn {
+                width: 187px;
+                height: 53px;
+                border: 1px solid rgba(242,244,248,.4);
+                // opacity: .3;
+                border-radius: 26px;
+                font-size: 14px;
+                font-family: OPPOSans;
+                font-weight: 500;
+                color: #FFFFFF;
+                line-height: 53px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 63px;
+                .arrow_icon{
+                    background: url(../img/solution/arrow_down.png) no-repeat center;
+                    width: 9px;
+                    height: 15px;
+                    display: inline-block;
+                    opacity: .4;
+                    background-size: cover;
+                    margin-left: 59px;
+                }
+            }
+        }
+    }
 }
 
 .section-content {
@@ -50,7 +120,7 @@ body {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            
+
 
             li {
                 display: inline-block;
