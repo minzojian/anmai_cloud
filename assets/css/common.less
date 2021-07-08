@@ -103,8 +103,9 @@ header {
     }
 
     & > .nav {
-      width: 50%;
-      margin-right: 60px;
+      li {
+        margin-right: 80px;
+      }
       li a {
         white-space: nowrap;
         display: flex;
@@ -154,9 +155,15 @@ header {
             transform-origin: left;
             transform: scale(0, 1);
           }
-          &:hover::after,
-          &.active::after {
-            transform: scale(1, 1);
+
+          &:hover,
+          &.active {
+            &::after {
+              transform: scale(1, 1);
+            }
+            a {
+              color: #3aab8b;
+            }
           }
 
           i.fa {
@@ -738,7 +745,7 @@ input:checked + label {
 .round_btn {
   width: 60px;
   height: 60px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -747,8 +754,10 @@ input:checked + label {
   color: #afafaf;
   outline: none !important;
   transition: 0.3s linear;
+  opacity: 0.5;
   &:hover {
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    // border: 2px solid rgba(255, 255, 255, 0.3);
     i {
       // transform: translateX(10px);
     }

@@ -17,9 +17,6 @@
       rel="stylesheet"
       href="https://cdn.dowebok.com/98/css/animate.min.css"
     />
-    <!-- swiper -->
-    <link rel="stylesheet" href="./assets/js/lib/swiper-bundle.min.css" />
-    <script src="./assets/js/lib/swiper-bundle.min.js"></script>
     <script src="./assets/js/lib/gsap.min.js"></script>
     <script src="./assets/js/lib/ScrollToPlugin.min.js"></script>
     <script src="./assets/js/lib/ScrollTrigger.min.js"></script>
@@ -75,7 +72,7 @@
 
           <div class="nav">
             <ul>
-              <li><a>首页</a></li>
+              <li class="active"><a>首页</a></li>
 
               <li class="">
                 <a
@@ -241,7 +238,7 @@
                   <div class="items bg1">
                     <h2>01</h2>
                     <div class="contents">
-                      <img src="./assets/img/product/87.png" alt="" />
+                      <img src="./assets/img/product/87.gif" alt="" />
                       <h4>在线存储</h4>
                       <p>
                         支持一键上传、拖拽等方式上传；存储状态即时可⻅，本地数据轻松上云
@@ -253,7 +250,7 @@
                   <div class="items bg2">
                     <h2>02</h2>
                     <div class="contents">
-                      <img src="./assets/img/product/88.png" alt="" />
+                      <img src="./assets/img/product/88.gif" alt="" />
                       <h4>API对接</h4>
                       <p>
                         开放API接口；可视化调试、在线命令行工具助你完成进阶操作
@@ -265,7 +262,7 @@
                   <div class="items bg3">
                     <h2>03</h2>
                     <div class="contents">
-                      <img src="./assets/img/product/89.png" alt="" />
+                      <img src="./assets/img/product/89.gif" alt="" />
                       <h4>应用SDK</h4>
                       <p>
                         提供Java、Python、C等多语言SDK，完成二次开发;有效提升效率和性能
@@ -277,7 +274,7 @@
                   <div class="items bg1">
                     <h2>04</h2>
                     <div class="contents">
-                      <img src="./assets/img/product/90.png" alt="" />
+                      <img src="./assets/img/product/90.gif" alt="" />
                       <h4>离线存储</h4>
                       <p>
                         无惧带宽，通过专属定制化硬件设备，实现PB等量级数据迁移上云
@@ -289,7 +286,7 @@
                   <div class="items bg5">
                     <h2>05</h2>
                     <div class="contents">
-                      <img src="./assets/img/product/3.png" alt="" />
+                      <img src="./assets/img/product/3.gif" alt="" />
                       <h4>EASY NFT</h4>
                       <p>
                         面向Web3.0，支持连接多个应用程序和自动化任务平台，帮NFT开发者轻松接入IPFS网络
@@ -679,13 +676,14 @@
       </footer>
     </div>
     <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+ <link rel="stylesheet" href="./assets/js/lib/swiper-bundle.min.css" />
+    <script src="./assets/js/lib/swiper-bundle.min.js"></script>
     <!-- wow JS -->
     <script src="./assets/js/lib/wow.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
       var swiper = new Swiper(".swiper-container", {
-        slidesPerView: 3,
+       slidesPerView: "auto",
         spaceBetween: 30,
         freeMode: true,
         navigation: {
