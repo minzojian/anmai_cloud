@@ -768,3 +768,24 @@ input:checked + label {
     margin: 0;
   }
 }
+
+a.fade {
+  cursor: pointer;
+  transition: all 0.3s;
+  opacity: 0.5;
+  &:hover,
+  &.active {
+    opacity: 1;
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: 0px;
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  width: 100vw;
+  height: 100vh;
+  // align-items: center;
+}

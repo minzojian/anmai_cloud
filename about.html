@@ -10,6 +10,14 @@
   <link rel="stylesheet" href="./assets/css/common.css" />
   <link rel="stylesheet" href="./assets/css/about.css" />
   <script src="./assets/js/common.js"></script>
+  <script src="./assets/js/lib/macy@2.js"></script>
+
+    <script src="./assets/js/lib/gsap.min.js"></script>
+    <script src="./assets/js/lib/ScrollToPlugin.min.js"></script>
+    <script src="./assets/js/lib/ScrollTrigger.min.js"></script>
+
+    <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
+
   <title>关于我们</title>
 </head>
 <div class="page-main">
@@ -129,6 +137,7 @@
   <!-- main -->
   <main class="main-container">
     <section class="section banner">
+      <video src="assets/media/about_banner.mp4" class="banner_video" loop autoplay muted></video>
       <div class="wrapper">
         <div class="slogan">
           <div class="left">
@@ -215,7 +224,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="items bg2">
-                 <div class="title1">04</div>
+                  <div class="title1">04</div>
                   <div class="contents">
                     <div class="title2">April04</div>
                     <div class="title3">矩阵存储Matrix Storage上线</div>
@@ -225,7 +234,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="items bg3">
-                 <div class="title1">02</div>
+                  <div class="title1">02</div>
                   <div class="contents">
                     <div class="title2">February02</div>
                     <div class="title3">持续扩大IPFS产业应用生态合作伙伴</div>
@@ -235,7 +244,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="items bg1">
-                 <div class="title1">06</div>
+                  <div class="title1">06</div>
                   <div class="contents">
                     <div class="title2">June06</div>
                     <div class="title3">矩阵存储Matrix Storage 推出EASY NFT中间件</div>
@@ -258,7 +267,7 @@
         </div>
       </div>
     </section>
-    <section class="news-section">
+    <section class="section4">
       <div class="wrapper">
         <div class="title1">What's News</div>
         <div class="title-part">
@@ -322,30 +331,464 @@
         </div>
       </div>
     </section>
+    <section class="section5">
+ <div class="sticky">
+      <div class="top-part">
+        <div class="title1">Anmai Clound Recruitment</div>
+        <div class="title2">安迈云人才招聘</div>
+        <div class="title3"><a class="fade">查看所有职位 <i class="iconfont icon-you"></i></a></div>
+      </div>
+<div class="job-list-wraper">
+      <div class="job-list">
+        <div class="job-item">
+          <div class="j-title">K8S运维工程师</div>
+          <div class="j-sub-info">
+            <div>
+              <i class="iconfont icon-renyuan"></i> 1人
+            </div>
+            <span>|</span>
+            <div>
+              <i class="iconfont icon-briefcase"></i> 研发
+            </div>
+            <span>|</span>
+            <div>
+              <i class="iconfont icon-dingwei"></i> 成都市
+            </div>
+          </div>
+<div class="divider"></div>
+
+ <div class="j-sub-desc">
+1.负责业务系统的环境搭建和部署发布；
+2.监控和处理网站系统服务故障，保障各系统和业务的安全稳定运行；
+3.负责协助业务团队和现场技术维护团队进行故障排除；
+4.参与自动化/标准化的应用发布和运维平台建设（运维平台，监控平台，日志分析系统）
+5.研究新型系统优劣，对团队内部资源做出合理的优化建议；
+6.参与标准化实施制度的制定，能从宏观和微观两个维度提出合理意见；
+</div>
+
+        </div>
+ <div class="job-item">
+          <div class="j-title">Python工程师 </div>
+          <div class="j-sub-info">
+            <div>
+              <i class="iconfont icon-renyuan"></i> 1人
+            </div>
+            <span>|</span>
+            <div>
+              <i class="iconfont icon-briefcase"></i> 研发
+            </div>
+            <span>|</span>
+            <div>
+              <i class="iconfont icon-dingwei"></i> 成都市
+            </div>
+          </div>
+<div class="divider"></div>
+
+ <div class="j-sub-desc">
+1.根据开发需求，完成基于Python的模块开发
+2.负责产品的接口优化和性能优化；
+3.与各部门团队成员协同配合，完成迭代开发4.任务，确保产品的顺利上线；
+5.遵循开发流程和开发规范，完善代码注释；
+</div>
+
+        </div>
+ <div class="job-item">
+          <div class="j-title">PHP工程师 </div>
+          <div class="j-sub-info">
+            <div>
+              <i class="iconfont icon-renyuan"></i> 1人
+            </div>
+            <span>|</span>
+            <div>
+              <i class="iconfont icon-briefcase"></i> 研发
+            </div>
+            <span>|</span>
+            <div>
+              <i class="iconfont icon-dingwei"></i> 成都市
+            </div>
+          </div>
+<div class="divider"></div>
+
+ <div class="j-sub-desc">
+1.负责APP和PC的接口，后台开发；
+2.参与公司后端项目的架构设计，代码编写；
+3.参与系统需求分析与设计，并负责完成PHP核心代码，接口规范制定; 
+</div>
+
+        </div>
+ <div class="job-item">
+          <div class="j-title">WEB前端工程师 </div>
+          <div class="j-sub-info">
+            <div>
+              <i class="iconfont icon-renyuan"></i> 1人
+            </div>
+            <span>|</span>
+            <div>
+              <i class="iconfont icon-briefcase"></i> 研发
+            </div>
+            <span>|</span>
+            <div>
+              <i class="iconfont icon-dingwei"></i> 成都市
+            </div>
+          </div>
+<div class="divider"></div>
+
+ <div class="j-sub-desc">
+1.负责APP和PC的网页的开发；
+2.参与公司前端项目的设计，代码编写工作；
+3.主要参与混合式APP，相关业务的开发工作
+</div>
+
+        </div>
+ <div class="job-item">
+          <div class="j-title">行政助理 </div>
+          <div class="j-sub-info">
+            <div>
+              <i class="iconfont icon-renyuan"></i> 1人
+            </div>
+            <span>|</span>
+            <div>
+              <i class="iconfont icon-briefcase"></i> 研发
+            </div>
+            <span>|</span>
+            <div>
+              <i class="iconfont icon-dingwei"></i> 成都市
+            </div>
+          </div>
+<div class="divider"></div>
+
+ <div class="j-sub-desc">
+1.负责协调、处理部门有关的日常工作，包括但不限于会议、访客接待、办公用品管理等； 
+2.负责所在办公区环境规划，安全管理；
+3.高质量响应办公区各部门行政需求，以及突发情况汇报及处理； 
+4.行政相关费用账单核对统计；
+5.行政各种供应商管理，按部门要求控制成本
+6.完成领导安排的其他临时性事务； 
+</div>
+
+        </div>
+ <div class="job-item">
+          <div class="j-title">运营专员 </div>
+          <div class="j-sub-info">
+            <div>
+              <i class="iconfont icon-renyuan"></i> 1人
+            </div>
+            <span>|</span>
+            <div>
+              <i class="iconfont icon-briefcase"></i> 研发
+            </div>
+            <span>|</span>
+            <div>
+              <i class="iconfont icon-dingwei"></i> 成都市
+            </div>
+          </div>
+<div class="divider"></div>
+
+ <div class="j-sub-desc">
+1.按照公司要求，输出相关项目合同；
+2.按照公司要求建立标准合同台账，定期梳理和完善部门合同文书等资料备案存档； 
+3.监督项目款项进度，及时和甲方，己方财务保持良好沟通； 
+4.按时协调与项目有关的各个部门，并与之保持良好的关系； 
+</div>
+
+        </div>
+      </div>
+</div>
+</div>
+    </section>
+<section class="section6">
+ <div class="top-part">
+        <div class="title1">Contact Us</div>
+        <div class="title2">联系我们</div>
+      </div>
+<div class="map-part"></div>
+<div class="bottom-part">
+<div class="bottom-part-wrapper">
+<div class="item"><div class="sub-top-part"><i class="iconfont icon-weizhi"></i>ADD</div><div class="sub-bottom-part">海南省省直辖县行政单位澄迈县老城镇高新技术产业
+示范区海南生态软件园A7幢二层3001
+</div> </div>
+<div class="item"><div class="sub-top-part"><i class="iconfont icon-youjian"></i>MAIL</div><div class="sub-bottom-part">contact@anmaicloud.com
+</div> </div>
+<div class="item"><div class="sub-top-part"><i class="iconfont icon-dianhua"></i>TEL</div><div class="sub-bottom-part">+86 898 3286 7007
+</div> </div>
+<div class="item"><div class="sub-top-part"><i class="iconfont icon-weixin"></i>微信公众号</div><div class="sub-bottom-part">
+<a class="fade"><i class="iconfont icon-qrcode"></i></a>
+</div>
+</div> </div>
+</div>
+</section>
+
+ <footer>
+      <div class="top-part">
+        <div class="left-part pos-r">
+          <div class="logo"><img src="./assets/img/logo_bottom.png" /></div>
+
+          <input
+            id="langswtich2"
+            class="langswtich foldable_menu"
+            type="checkbox"
+            hidden
+          />
+          <label for="langswtich2">
+            <div class="lang_bt">
+              <i class="fa iconfont icon-yuyan" aria-hidden="true"></i>
+              English
+            </div>
+
+            <div class="langswtich_mask switch_mask"></div>
+          </label>
+
+          <ul class="lang-panel lang-panel-bottom">
+            <li>
+              <a>
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+                中文</a
+              >
+            </li>
+            <li class="selected">
+              <a>
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+                English</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="right-part">
+          <div class="nav-item">
+            <input
+              class="foldable_menu"
+              id="navswtich1"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich1">
+              <div class="nav-title flex">
+                <span>产品</span>
+                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+            <ul>
+              <li><a>云计算</a></li>
+              <li><a>矩阵存储</a></li>
+              <li><a>云GPU</a></li>
+            </ul>
+          </div>
+          <div class="nav-item">
+            <input
+              class="foldable_menu"
+              id="navswtich2"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich2">
+              <div class="nav-title flex">
+                <span>解决方案·场景</span>
+                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+
+            <ul>
+              <li><a>存储</a></li>
+              <li><a>容灾与备份</a></li>
+              <li><a>科学计算</a></li>
+              <li><a>安全计算</a></li>
+              <li><a>物理云</a></li>
+              <li><a>内容分发</a></li>
+              <li><a>机器学习</a></li>
+            </ul>
+          </div>
+          <div class="nav-item">
+            <input
+              class="foldable_menu"
+              id="navswtich3"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich3">
+              <div class="nav-title flex">
+                <span>解决方案·行业</span>
+                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+
+            <ul>
+              <li><a>人工智能</a></li>
+              <li><a>科研</a></li>
+              <li><a>大健康</a></li>
+              <li><a>政务</a></li>
+              <li><a>生物基因</a></li>
+            </ul>
+          </div>
+          <div class="nav-item">
+            <input
+              class="foldable_menu"
+              id="navswtich4"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich4">
+              <div class="nav-title flex">
+                <span>解决方案·WEB3.0</span>
+                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+
+            <ul>
+              <li><a>边缘计算</a></li>
+              <li><a>区块链</a></li>
+              <li><a>人工智能</a></li>
+            </ul>
+          </div>
+          <div class="nav-item">
+            <input
+              class="foldable_menu"
+              id="navswtich5"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich5">
+              <div class="nav-title flex">
+                <span>ESG</span>
+                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+
+            <ul>
+              <li><a>社会责任</a></li>
+              <li><a>信任承诺</a></li>
+              <li><a>公司治理</a></li>
+            </ul>
+          </div>
+          <div class="nav-item">
+            <input
+              class="foldable_menu"
+              id="navswtich6"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich6">
+              <div class="nav-title flex">
+                <span>关于我们</span>
+                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+
+            <ul>
+              <li><a>公司介绍</a></li>
+              <li><a>发展历程</a></li>
+              <li><a>新闻动态</a></li>
+              <li><a>人才招聘</a></li>
+              <li><a>联系方式</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-part">
+        <div class="flex jc-between flex-1 pos-r">
+          <div class="contacts sub-unit flex fd-c jc-between h-auto">
+            <div class="flex">
+              <div class="flex ai-center">
+                <i class="fa iconfont icon-dianhua" aria-hidden="true"></i>
+                +86 898 3286 7007
+              </div>
+              <div class="divider-v"></div>
+              <div class="flex ai-center">
+                <i class="fa iconfont icon-youjian" aria-hidden="true"></i>
+                contact@AnmaiCloud.com
+              </div>
+            </div>
+            <div class="flex line-2">
+              <span
+                >地址：海南省省直辖县行政单位澄迈县老城镇高新技术产业示范区海南生态软件园A7幢二层3001</span
+              >
+            </div>
+          </div>
+          <div class="divider-v ghost"></div>
+
+          <div class="product_part">
+            <div class="products flex fd-c jc-between h-auto">
+              <div class="title flex">产品平台</div>
+              <div class="product_imgs flex line-2 ai-end">
+                <img src="assets/img/products1.png" />
+                <div class="divider-v ghost"></div>
+                <img src="assets/img/products2.png" />
+              </div>
+            </div>
+
+            <div class="gzh flex fd-c ai-end">
+              <div>关注公众号</div>
+              <img src="assets/img/qr_code.png" />
+            </div>
+          </div>
+
+          <div class="divider-v ghost"></div>
+          <div class="beian sub-unit flex fd-c jc-between h-auto">
+            <div class="flex ai-center"></div>
+            <div class="flex line-2">
+              <span
+                >琼ICP备20000109号-1<br />
+                Copyright © 2013-2021 Anmai Cloud Rights Reserved.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
   </main>
+  <!-- swiper -->
+  <link rel="stylesheet" href="./assets/js/lib/swiper-bundle.min.css" />
+  <script src="./assets/js/lib/swiper-bundle.min.js"></script>
+  <!-- wow JS -->
+  <script src="./assets/js/lib/wow.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".swiper-container", {
+      slidesPerView: "auto",
+      spaceBetween: 0,
+      freeMode: true,
+      navigation: {
+        nextEl: ".btn-next",
+        prevEl: ".btn-prev",
+      },
+    })
+
+    new WOW().init()
+
+Macy({
+    container: '.job-list',
+columns:3,
+margin:41
+}); 
 
 
-        <!-- swiper -->
-    <link rel="stylesheet" href="./assets/js/lib/swiper-bundle.min.css" />
-    <script src="./assets/js/lib/swiper-bundle.min.js"></script>
-    <!-- wow JS -->
-    <script src="./assets/js/lib/wow.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".swiper-container", {
-        slidesPerView: "auto",
-        spaceBetween: 0,
-        freeMode: true,
-        navigation: {
-          nextEl: ".btn-next",
-          prevEl: ".btn-prev",
-        },
-      })
+$(function(){
+gsap.fromTo(
+          ".section5 .job-list-wraper",
+          3 * window.innerHeight,
+          { scrollTo: 0 },
+          {
+            scrollTo: $(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight()+350,
+            immediateRender: false,
 
-      new WOW().init()
-    </script>
+            scrollTrigger: {
+              trigger: ".section5",
+              //pin: true, // pin the trigger element while active
+              start: "+=" + 0.4 * window.innerHeight, // when the top of the trigger hits the top of the viewport
+              end: "+=" + 1 * window.innerHeight, // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              // markers: true,
+              id: "44414",
+            },
+          }
+        )
 
-
+ $(window).resize(function () {
+          $(".section5").height(2.4 * window.innerHeight)
+        })
+        $(".section5").height(2.4 * window.innerHeight)
+})
+  </script>
   </body>
 
 </html>
