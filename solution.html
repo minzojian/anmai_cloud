@@ -25,117 +25,207 @@
 <body>
     <div class="page-main">
         <!-- header -->
-        <header class="solution-head header1 header_dark">
-            <div class="logo">&nbsp;</div>
-            <div class="right-part">
-                <input id="langswtich" class="langswtich foldable_menu" type="checkbox" hidden />
-                <label for="langswtich" class="mobile">
-                    <div class="lang_bt_mobile">
-                        EN
-                        <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-                    </div>
-
-                    <div class="langswtich_mask switch_mask"></div>
-                </label>
-
-                <ul class="lang-panel">
-                    <li>
-                        <a>
-                            <i class="fa iconfont icon-gou" aria-hidden="true"></i>
-                            中文</a>
-                    </li>
-                    <li class="selected">
-                        <a>
-                            <i class="fa iconfont icon-gou" aria-hidden="true"></i>
-                            English</a>
-                    </li>
+        <header class="header1 header_dark">
+      <div class="logo">&nbsp;</div>
+      <div class="right-part">
+        <input id="langswtich" class="langswtich foldable_menu" type="checkbox" hidden />
+        <label for="langswtich" class="mobile">
+          <div class="lang_bt_mobile"> EN <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+          </div>
+          <div class="langswtich_mask switch_mask"></div>
+        </label>
+        <ul class="lang-panel">
+          <li>
+            <a>
+              <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a>
+          </li>
+          <li class="selected">
+            <a>
+              <i class="fa iconfont icon-gou" aria-hidden="true"></i> English</a>
+          </li>
+        </ul>
+        <input id="menuswtich" type="checkbox" hidden />
+        <label for="menuswtich" class="mobile">
+          <div class="menu-btn">
+            <i class="fa iconfont icon-menu" aria-hidden="true"></i>
+          </div>
+          <div class="switch_mask"></div>
+        </label>
+        <div class="nav">
+          <ul>
+            <li class="active"><a>首页</a></li>
+            <li class="">
+              <a>产品 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+              </a>
+              <div class="submenu product_submenu">
+                <ul>
+                  <li>
+                    <a>
+                      <div class="icon">
+                        <img src="./assets/img/icons/products/云计算.png" />
+                      </div> 分布式数据中心
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <div class="icon">
+                        <img src="./assets/img/icons/products/分布式CDN.png" />
+                      </div> 分布式CDN
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <div class="icon">
+                        <img src="./assets/img/icons/products/矩阵存储.png" />
+                      </div> 矩阵存储
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <div class="icon">
+                        <img src="./assets/img/icons/products/云GPU.png" />
+                      </div> 云GPU
+                    </a>
+                  </li>
                 </ul>
+              </div>
+            </li>
+            <li>
+              <a>解决方案 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+              </a>
+              <div class="submenu solution_submenu">
+                <div class="submenu-unit">
+                  <div class="title">场景 Scenario</div>
+                  <ul>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/图层 5.png" />
+                        </div> 存储
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/图层 6.png" />
+                        </div> 容灾与备份
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/图层 7.png" />
+                        </div> 科学计算
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/图层 8.png" />
+                        </div> 安全计算
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/图层 9.png" />
+                        </div> 物理云
+                      </a>
+                    </li>
+<li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/图层 10.png" />
+                        </div> 内容分发
 
-                <input id="menuswtich" type="checkbox" hidden />
-                <label for="menuswtich" class="mobile">
-                    <div class="menu-btn">
-                        <i class="fa iconfont icon-menu" aria-hidden="true"></i>
-                    </div>
+                      </a>
+                    </li>
+<li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/图层 11.png" />
+                        </div> 机器学习
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+<div class="divider-v"></div>
+<div class="submenu-unit">
+                  <div class="title">行业 Industry</div>
+                  <ul>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/矢量智能对象.png" />
+                        </div> 人工智能
 
-                    <div class="switch_mask"></div>
-                </label>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/矢量智能对象 (1).png" />
+                        </div> 科研
 
-                <div class="nav">
-                    <ul>
-                        <li><a>首页</a></li>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/矢量智能对象 (2).png" />
+                        </div> 大健康
 
-                        <li class="">
-                            <a>产品
-                                <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-                            </a>
-                            <ul>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/云计算.png" />
-                                        </div>
-                                        分布式数据中心
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/云计算.png" />
-                                        </div>
-                                        分布式CDN
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/矩阵存储.png" />
-                                        </div>
-                                        矩阵存储
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/云GPU.png" />
-                                        </div>
-                                        云GPU
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a>解决方案
-                                <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-                            </a>
-                            <ul>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/云计算.png" />
-                                        </div>
-                                        方案1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/云计算.png" />
-                                        </div>
-                                        方案2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <div class="icon">
-                                            <img src="./assets/img/云计算.png" />
-                                        </div>
-                                        方案3
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/矢量智能对象 (3).png" />
+                        </div> 政务
 
-                        <!-- <li>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/矢量智能对象 (4).png" />
+                        </div> 生物基因
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+<div class="divider-v"></div>
+<div class="submenu-unit">
+                  <div class="title">Web 3.0</div>
+                  <ul>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/矢量智能对象 (5).png" />
+                        </div> 边缘计算
+
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/矢量智能对象 (6).png" />
+                        </div> 区块链
+
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/矢量智能对象 拷贝.png" />
+                        </div> 人工智能
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- <li>
                   <a
                     >ESG
                     <i class="fa iconfont icon-Down" aria-hidden="true"></i>
@@ -146,18 +236,17 @@
                 </ul>
               </li>
               <li><a>投资者关系</a></li> -->
-                        <li><a>关于我们</a></li>
-                    </ul>
-                </div>
-                <label for="langswtich" class="not_mobile">
-                    <div class="lang_bt">
-                        <i class="fa iconfont icon-yuyan" aria-hidden="true"></i>
-                        English
-                    </div>
-                    <div class="langswtich_mask switch_mask"></div>
-                </label>
-            </div>
-        </header>
+            <li><a>关于我们</a></li>
+          </ul>
+        </div>
+        <label for="langswtich" class="not_mobile">
+          <div class="lang_bt">
+            <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> English
+          </div>
+          <div class="langswtich_mask switch_mask"></div>
+        </label>
+      </div>
+    </header>
         <!-- main -->
         <div class="banner">
             <div class="wrapper">

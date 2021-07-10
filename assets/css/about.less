@@ -6,7 +6,9 @@
 .page-main {
   display: flex;
   flex-direction: column;
-
+  header {
+    z-index: 111;
+  }
   .main-container {
     margin-top: -150px !important;
     width: 100%;
@@ -19,15 +21,15 @@
       // background: url("../img/about/banner.jpg") no-repeat center;
       background-size: cover;
       width: 100%;
-      height: 100vh;
+      height: min(810px, 100vh);
       display: flex;
       align-items: center;
       background-color: #19242d;
       padding-top: 0 !important;
-
+      position: relative;
       .banner_video {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
@@ -70,6 +72,7 @@
 
     .section2 {
       background: linear-gradient(180deg, #97a0b2, #fff);
+      background-attachment: fixed;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -170,17 +173,18 @@
       background: white;
       height: 100vh;
       display: flex;
-      align-items: center;
+      // align-items: center;
       .wrapper {
         width: 100%;
-        height: calc(100% - 136px);
+        // height: calc(100% - 136px);
+        height: 100%;
         display: flex;
         // max-width: 1440px;
         padding-top: 136px;
         box-sizing: border-box;
 
         padding-left: calc((100% - min(1440px, 100%)) / 2);
-        margin: auto;
+        margin: 0 auto;
 
         .left-part {
           display: flex;
@@ -268,6 +272,7 @@
                   line-height: 256px;
                 }
                 .contents {
+                  height: 40%;
                   display: flex;
                   flex-direction: column;
                   margin-bottom: 74px;
@@ -287,6 +292,7 @@
                     color: #78797b;
                     margin-bottom: 30px;
                     line-height: 28px;
+                    flex: 1;
                   }
                   img {
                     width: 100%;
@@ -387,8 +393,13 @@
       }
 
       .news-item {
+        cursor: pointer;
         position: relative;
         width: calc(33.333% - 15px);
+        transition: all 1s;
+        &:hover {
+          transform: scale(1.01);
+        }
         img {
           width: 100%;
           height: 100%;
@@ -532,8 +543,10 @@
     // }
 
     .job-item {
-      background: linear-gradient(180deg, rgb(212, 225, 248), #fff);
-      background-attachment: fixed;
+      // background: linear-gradient(180deg, rgb(212, 225, 248), #fff);
+      // background-attachment: fixed;
+      cursor: pointer;
+      background: white;
       border-radius: 14px;
 
       padding: 70px 58px;
@@ -557,6 +570,9 @@
         font-weight: 400;
         color: #58616d;
         line-height: 1;
+        span {
+          color: #d3d3d3;
+        }
       }
       .j-sub-desc {
         font-size: 16px;
@@ -808,8 +824,22 @@
         font-weight: normal;
         color: #111821;
         line-height: 20px;
+        position: relative;
         i {
           font-size: 20px;
+        }
+        .qrcode {
+          transition: all 0.5s;
+          position: absolute;
+          opacity: 0;
+          left: 10px;
+          top: 10px;
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+        .qrcode_small:hover ~ .qrcode {
+          opacity: 1;
         }
       }
     }

@@ -1,145 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <meta name="author" content="KentWood (www.lunastudio.cn)" />
-    <title>anmai_cloud</title>
 
-    <script>
-      var ua = navigator.userAgent,
-        isWindowsPhone = /(?:Windows Phone)/.test(ua),
-        isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
-        isAndroid = /(?:Android)/.test(ua),
-        isFireFox = /(?:Firefox)/.test(ua),
-        isChrome = /(?:Chrome|CriOS)/.test(ua),
-        isTablet =
-          /(?:iPad|PlayBook)/.test(ua) ||
-          (isAndroid && !/(?:Mobile)/.test(ua)) ||
-          (isFireFox && /(?:Tablet)/.test(ua)),
-        isPhone =
-          (/(?:iPhone)/.test(ua) && !isTablet) || window.innerWidth < 750,
-        isPc = !isPhone && !isAndroid && !isSymbian
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="author" content="KentWood (www.lunastudio.cn)" />
+  <title>anmai_cloud</title>
+  <script>
+    var ua = navigator.userAgent,
+      isWindowsPhone = /(?:Windows Phone)/.test(ua),
+      isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+      isAndroid = /(?:Android)/.test(ua),
+      isFireFox = /(?:Firefox)/.test(ua),
+      isChrome = /(?:Chrome|CriOS)/.test(ua),
+      isTablet =
+        /(?:iPad|PlayBook)/.test(ua) ||
+        (isAndroid && !/(?:Mobile)/.test(ua)) ||
+        (isFireFox && /(?:Tablet)/.test(ua)),
+      isPhone =
+        (/(?:iPhone)/.test(ua) && !isTablet) || window.innerWidth < 750,
+      isPc = !isPhone && !isAndroid && !isSymbian
 
       //  if(isPhone){
       //   window.location = "index_mobile.html";
       //  }
-    </script>
-
-    <!-- <link
+  </script>
+  <!-- <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:wght@200;300;400;600|Source+Sans+Pro:300,400,700,400italic|Josefin+Slab:400,700italic"
       rel="stylesheet"
       type="text/css"
     /> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet"> -->
-    <link rel="stylesheet" href="./assets/css/normalize.css" type="text/css" />
-
-    <link
-      rel="shortcut icon"
-      href="./assets/img/favicon.ico"
-      type="image/x-icon"
-    />
-    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./assets/css/iconfont.css" />
-    <!-- <link href="./assets/css/old-style.css" rel="stylesheet" type="text/css" /> -->
-    <link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
-    <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
-
-    <!-- <script
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="./assets/css/normalize.css" type="text/css" />
+  <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./assets/css/iconfont.css" />
+  <!-- <link href="./assets/css/old-style.css" rel="stylesheet" type="text/css" /> -->
+  <link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+  <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+  <!-- <script
       type="text/javascript"
       src="./assets/js/lib/greensock/TweenMax.min.js"
     ></script> -->
+  <script src="./assets/js/lib/gsap.min.js"></script>
+  <script src="./assets/js/lib/ScrollToPlugin.min.js"></script>
+  <script src="./assets/js/lib/ScrollTrigger.min.js"></script>
+  <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
+  <script type="text/javascript" src="./assets/js/lib/modernizr.custom.min.js"></script>
+  <script type="text/javascript" src="./assets/js/common.js"></script>
+  <script src="./assets/js/lib/jquery.nicescroll.min.js"></script>
+</head>
 
-    <script src="./assets/js/lib/gsap.min.js"></script>
-    <script src="./assets/js/lib/ScrollToPlugin.min.js"></script>
-    <script src="./assets/js/lib/ScrollTrigger.min.js"></script>
+<body class="dark_bg">
+  <div class="main_bg"></div>
+  <script>
+    var tweens = []
+    function createTimeline() {
+      var tween = gsap.timeline()
+      return tween
+    }
 
-    <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
-
-    <script
-      type="text/javascript"
-      src="./assets/js/lib/modernizr.custom.min.js"
-    ></script>
-    <script type="text/javascript" src="./assets/js/common.js"></script>
-
-    <script src="./assets/js/lib/jquery.nicescroll.min.js"></script>
-  </head>
-
-  <body class="dark_bg">
-    <div class="main_bg"></div>
-    <script>
-      var tweens = []
-      function createTimeline() {
-        var tween = gsap.timeline()
-        return tween
-      }
-
-      function createTween() {
-        var tween = gsap.fromTo.apply(gsap, arguments)
-        tweens.push(tween)
-        return tween
-      }
-    </script>
-
-    <div class="stage1">
-      <div class="sticky">
-        <video
-          class="bg_video"
-          id="myvideo"
-          ontimeupdate="handleVideoPlaying(event)"
-          autoplay
-          muted
-        ></video>
-
-        <div class="left-progress state1">
-          <div class="trunk"></div>
-          <div class="bar"></div>
-          <span class="info"></span>
-        </div>
-
-        <div class="page_content title_part title1">
-          <span class="sub_part1">Web 3.0 分布式云计算平台</span>
-          <span class="sub_part2">全球去中心化云计算业务一站式服务商</span>
-          <div class="action_btn btn-with-arrow">
-            <span> 立刻探索 </span>
-            <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-          </div>
-        </div>
-
-        <div class="page_content title_part title2 state1">
-          <span class="sub_part1">Web 3.0 新型云计算平台</span>
-          <span class="sub_part2"
-            >用去中心化技术<br />帮助每个人轻松迈入<br />数字文明新世界</span
-          >
-          <div class="action_btn btn-with-arrow">
-            <span> 立刻探索 </span>
-            <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-          </div>
-        </div>
-
-        <div class="title3_mask"></div>
-        <div class="page_content title_part title3 state1">
-          <div class="inner_scroll_warpper"></div>
+    function createTween() {
+      var tween = gsap.fromTo.apply(gsap, arguments)
+      tweens.push(tween)
+      return tween
+    }
+  </script>
+  <div class="stage1">
+    <div class="sticky">
+      <video class="bg_video" id="myvideo" ontimeupdate="handleVideoPlaying(event)" autoplay muted></video>
+      <div class="left-progress state1">
+        <div class="trunk"></div>
+        <div class="bar"></div>
+        <span class="info"></span>
+      </div>
+      <div class="page_content title_part title1">
+        <span class="sub_part1">Web 3.0 分布式云计算平台</span>
+        <span class="sub_part2">全球去中心化云计算<br />业务一站式服务商</span>
+        <div class="action_btn btn-with-arrow">
+          <span> 立刻探索 </span>
+          <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
         </div>
       </div>
+      <div class="page_content title_part title2 state1">
+        <span class="sub_part1">Web 3.0 新型云计算平台</span>
+        <span class="sub_part2">用去中心化技术<br />帮助每个人轻松迈入<br />数字文明新世界</span>
+        <div class="action_btn btn-with-arrow">
+          <span> 立刻探索 </span>
+          <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="title3_mask"></div>
+      <div class="page_content title_part title3 state1">
+        <div class="inner_scroll_warpper"></div>
+      </div>
     </div>
+  </div>
+  <script>
+    /////////STAGE1/////////
+    ////////初始视频播放，同时可能会存在按钮////
+    $.get("http://ixiezhi.vicp.cc/amyos/news/company_dynamic").then(
+      function (data) {
+        // console.log(data)
+        setMileStones(data)
+      }
+    )
 
-    <script>
-      /////////STAGE1/////////
-      ////////初始视频播放，同时可能会存在按钮////
-      $.get("http://ixiezhi.vicp.cc/amyos/news/company_dynamic").then(
-        function (data) {
-          // console.log(data)
-setMileStones(data)
-        }
-      )
-
-function setMileStones(data){
-      window.meilestoneData = data||window.meilestoneData || [
+    function setMileStones(data) {
+      window.meilestoneData = data || window.meilestoneData || [
         {
           year: "2021",
           records: [
@@ -196,19 +166,18 @@ function setMileStones(data){
             `<div class="sub_part">
               <div class="left-part">
                 <div class="divider"></div>
-                ${
-                  yindex == 0 && mIndex == 0
-                    ? `<div class="sub_part_title">
+                ${yindex == 0 && mIndex == 0
+              ? `<div class="sub_part_title">
                   <span>企业里程碑</span>
                   <span>milestone</span>
                 </div>`
-                    : ``
-                }
+              : ``
+            }
 
                 <div class="sub_part_content">
 ${monthData.items
-  .map(function (recData, rindex) {
-    return `<div class="sub_part_content_item">
+              .map(function (recData, rindex) {
+                return `<div class="sub_part_content_item">
 
                     <img
                       class="sub_part_content_item_img"
@@ -226,8 +195,8 @@ ${monthData.items
                       </div></a>
                     </div>
                   </div>`
-  })
-  .join("")}
+              })
+              .join("")}
 
                  
                  
@@ -235,9 +204,8 @@ ${monthData.items
               </div>
               <div class="right-part">
 
-${
-  mIndex == 0
-    ? `<svg
+${mIndex == 0
+              ? `<svg
                   class="year"
                   xmlns="http://www.w3.org/2000/svg"
                   width="270px"
@@ -260,8 +228,8 @@ ${
                     ${yearData.year}
                   </text>
                 </svg>`
-    : ``
-}
+              : ``
+            }
                 
 
                 <svg
@@ -291,410 +259,224 @@ ${
           )
         })
       })
-}
-      myvideo.src = isPhone
-        ? "assets/media/stage1_mobile.mp4"
-        : "assets/media/stage1.mp4"
-      var lastScroll = window.pageYOffset
-      var isMouseWheel = false
-      var isEnterStage1 = true
-      var mouseWheelTimer = 0
-      var mouseWheelTimer2 = 0
-      function handleVideoPlaying(e) {
-        // console.log(myvideo.currentTime, "video progress")
-        if (!isMouseWheel && isEnterStage1)
-          window.scrollTo({ ...getScrollYByVideo() }) //, behavior: "smooth" })
+    }
+    myvideo.src = isPhone
+      ? "assets/media/stage1_mobile.mp4"
+      : "assets/media/stage1.mp4"
+    var lastScroll = window.pageYOffset
+    var isMouseWheel = false
+    var isEnterStage1 = true
+    var mouseWheelTimer = 0
+    var mouseWheelTimer2 = 0
+    function handleVideoPlaying(e) {
+      // console.log(myvideo.currentTime, "video progress")
+      if (!isMouseWheel && isEnterStage1)
+        window.scrollTo({ ...getScrollYByVideo() }) //, behavior: "smooth" })
+    }
+
+    function getScrollYByVideo(t) {
+      return {
+        left: 0,
+        top: (5.5 * window.innerHeight * (t || myvideo.currentTime)) / 20,
       }
+    }
 
-      function getScrollYByVideo(t) {
-        return {
-          left: 0,
-          top: (5.5 * window.innerHeight * (t || myvideo.currentTime)) / 20,
-        }
-      }
+    function getTimerByScroll(prog) {
+      let p = 20 * (prog || window.pageYOffset / (5.5 * window.innerHeight))
 
-      function getTimerByScroll(prog) {
-        let p = 20 * (prog || window.pageYOffset / (5.5 * window.innerHeight))
+      return Math.min(20, p)
+    }
 
-        return Math.min(20, p)
-      }
+    $(function () {
+      // pathPrepare($(".svg_path"));
 
-      $(function () {
-        // pathPrepare($(".svg_path"));
+      // requestAnimationFrame(handleVideoPlaying)
 
-        // requestAnimationFrame(handleVideoPlaying)
-
-        var tween = createTimeline()
-        tween.add([
-          createTween(
-            ".title1",
-            getScrollYByVideo(1).top,
-            // 0.2 * window.innerHeight,
-            {
-              // translateY: 30, opacity: 0
-            },
-            {
-              // translateY: 0,
-              // opacity: 1,
-              ease: Linear.easeNone,
-              immediateRender: false,
-              onStart: function () {
-                // $(".left-progress").removeClass("state2")
-                // $(".left-progress").removeClass("state3")
-                // $(".left-progress").addClass("state1")
-                // $(".header1").removeClass("state2")
-                // $(".header1").removeClass("state3")
-                // $(".header1").addClass("state1")
-              },
-              onComplete: function () {
-                // console.log(this.targets)
-                this.targets().forEach((elem) => {
-                  elem.classList.add("state2")
-                  elem.classList.remove("state1")
-                })
-
-                // $(".header1").removeClass("state1")
-                // $(".header1").removeClass("state3")
-                // $(".header1").addClass("state2")
-              },
-              onReverseComplete: function () {
-                // this.targets().forEach((elem) => {
-                //   elem.classList.add("state1")
-                //   elem.classList.remove("state2")
-                // })
-              },
-            }
-          ),
-          createTween(
-            ".title1",
-            getScrollYByVideo(1).top,
-            {
-              // translateY: 0, opacity: 1
-            },
-            {
-              delay: getScrollYByVideo(9).top,
-              // translateY: -30,
-              // opacity: 0,
-              ease: Linear.easeNone,
-              immediateRender: false,
-              onComplete: function () {
-                this.targets().forEach((elem) => {
-                  elem.classList.remove("state2")
-                  elem.classList.add("state3")
-                })
-              },
-              onReverseComplete: function () {
-                this.targets().forEach((elem) => {
-                  elem.classList.remove("state3")
-                  elem.classList.add("state2")
-                })
-              },
-            }
-          ),
-          createTween(
-            ".title2",
-            getScrollYByVideo(1).top,
-            {
-              //  translateY: 30, opacity: 0
-            },
-            {
-              delay: getScrollYByVideo(9.5).top,
-              // translateY: 0,
-              // opacity: 1,
-              // ease: Linear.easeNone,
-              immediateRender: false,
-              onStart: function () {
-                // $(".left-progress").removeClass("state1")
-                // $(".left-progress").removeClass("state3")
-                // $(".left-progress").addClass("state2")
-              },
-              onComplete: function () {
-                this.targets().forEach((elem) => {
-                  elem.classList.add("state2")
-                  elem.classList.remove("state1")
-                })
-              },
-              onReverseComplete: function () {
-                this.targets().forEach((elem) => {
-                  elem.classList.remove("state2")
-                  elem.classList.add("state1")
-                })
-              },
-            }
-          ),
-          createTween(
-            ".title2",
-            getScrollYByVideo(1).top,
-            {
-              // translateY: 0, opacity: 1
-            },
-            {
-              delay: getScrollYByVideo(18.5).top,
-              // translateY: -30,
-              // opacity: 0,
-              ease: Linear.easeNone,
-              immediateRender: false,
-              onComplete: function () {
-                this.targets().forEach((elem) => {
-                  elem.classList.remove("state2")
-                  elem.classList.add("state3")
-                })
-              },
-              onReverseComplete: function () {
-                this.targets().forEach((elem) => {
-                  elem.classList.remove("state3")
-                  elem.classList.add("state2")
-                })
-              },
-            }
-          ),
-
-          createTween(
-            ".title3_mask",
-            getScrollYByVideo(1).top,
-            { opacity: 0 },
-            {
-              immediateRender: false,
-              delay: getScrollYByVideo(19).top,
-              opacity: 1,
-            }
-          ),
-
-          createTween(
-            ".title3",
-            getScrollYByVideo(1).top,
-            {
-              //  translateY: 30, opacity: 0
-            },
-            {
-              delay: getScrollYByVideo(19).top,
-              // translateY: 0,
-              // opacity: 1,
-              // ease: Linear.easeNone,
-              immediateRender: false,
-              onStart: function () {
-                // $(".left-progress").removeClass("state1")
-                // $(".left-progress").removeClass("state2")
-                // $(".left-progress").addClass("state3")
-              },
-              onComplete: function () {
-                this.targets().forEach((elem) => {
-                  elem.classList.add("state2")
-                  elem.classList.remove("state1")
-                })
-              },
-              onReverseComplete: function () {
-                this.targets().forEach((elem) => {
-                  elem.classList.remove("state2")
-                  elem.classList.add("state1")
-                })
-              },
-            }
-          ),
-
-          //   createTween(
-          //     ".title3", // { v: 0 },
-          //     2 * window.innerHeight,
-          //     {
-          //       scrollTo: 0,
-          //       //  translateY: 30, opacity: 0
-          //     },
-          //     {
-          //       delay: getScrollYByVideo(20).top,
-          //       // v: $(".inner_scroll_warpper").height() - $(".title3").height(),
-          //       scrollTo:
-          //         $(".inner_scroll_warpper").height() - $(".title3").height(),
-          //       // translateY: 0,
-          //       // opacity: 1,
-          //       // ease: Linear.easeNone,
-          //       immediateRender: false,
-          //       onUpdate: function () {
-          //         // console.log(
-          //         //   // this.targets()[0].v,
-          //         //   $(".title3").get(0).scrollTop,
-          //         //   "vvvvvv"
-          //         // )
-          //         // gsap.to(".title3", 0.6, { scrollTo: this.targets()[0].v })
-          //       },
-          //     }
-          //   ),
-        ])
-
-        // tween.add([gsap.to("body", getScrollYByVideo(5).top, {})])
-
-        // var scene = new ScrollMagic.Scene({
-        //   triggerHook: "0",
-        //   triggerElement: ".stage1",
-        //   duration: getScrollYByVideo(10).top,
-        // })
-        //   .addIndicators({ name: "first11111" })
-        //   .addTo(controller)
-
-        // var scene = new ScrollMagic.Scene({
-        //   triggerHook: "0",
-        //   triggerElement: ".stage1",
-        //   duration: getScrollYByVideo(20).top,
-        // })
-        //   .setTween(tween)
-
-        var tl = gsap.timeline({
-          // yes, we can add it to an entire timeline!
-          scrollTrigger: {
-            trigger: ".stage1",
-            // pin: true, // pin the trigger element while active
-            start: "top top", // when the top of the trigger hits the top of the viewport
-            end: getScrollYByVideo(20).top, // end after scrolling 500px beyond the start
-            scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-            markers: false,
-            id: "aaa",
-            // pinType: "fixed",
-            // anticipatePin: 1,
-            //   snap: {
-            //     snapTo: "labels", // snap to the closest label in the timeline
-            //     duration: {min: 0.2, max: 3}, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-            //     delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-            //     ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
-            //   }
-
-            onEnter: function () {
-              isEnterStage1 = true
-            },
-            onLeave: function () {
-              isEnterStage1 = false
-              myvideo.currentTime = myvideo.duration
-              myvideo.pause()
-            },
-            onEnterBack: function () {
-              isEnterStage1 = true
-            },
-
-            onUpdate: function () {
-              if (isMouseWheel) {
-                myvideo.currentTime = getTimerByScroll(this.progress)
-              }
-            },
+      var tween = createTimeline()
+      tween.add([
+        createTween(
+          ".title1",
+          getScrollYByVideo(1).top,
+          // 0.2 * window.innerHeight,
+          {
+            // translateY: 30, opacity: 0
           },
-        })
-
-        tl.add(tween)
-
-        gsap.fromTo(
-          ".title1",
-          getScrollYByVideo(1).top,
-          {},
           {
+            // translateY: 0,
+            // opacity: 1,
+            ease: Linear.easeNone,
             immediateRender: false,
+            onStart: function () {
+              // $(".left-progress").removeClass("state2")
+              // $(".left-progress").removeClass("state3")
+              // $(".left-progress").addClass("state1")
+              // $(".header1").removeClass("state2")
+              // $(".header1").removeClass("state3")
+              // $(".header1").addClass("state1")
+            },
+            onComplete: function () {
+              // console.log(this.targets)
+              this.targets().forEach((elem) => {
+                elem.classList.add("state2")
+                elem.classList.remove("state1")
+              })
 
-            scrollTrigger: {
-              trigger: ".stage1",
-              // pin: true, // pin the trigger element while active
-              start: "top top", // when the top of the trigger hits the top of the viewport
-              end: getScrollYByVideo(9).top, // end after scrolling 500px beyond the start
-              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              markers: false,
-              id: "aaa",
-              onEnter: function () {
-                $(".left-progress").removeClass("state2")
-                $(".left-progress").removeClass("state3")
-                $(".left-progress").addClass("state1")
-
-                // $(".header1").removeClass("state2")
-                // $(".header1").removeClass("state3")
-                // $(".header1").addClass("state1")
-              },
+              // $(".header1").removeClass("state1")
+              // $(".header1").removeClass("state3")
+              // $(".header1").addClass("state2")
+            },
+            onReverseComplete: function () {
+              // this.targets().forEach((elem) => {
+              //   elem.classList.add("state1")
+              //   elem.classList.remove("state2")
+              // })
             },
           }
-        )
-
-        gsap.fromTo(
+        ),
+        createTween(
           ".title1",
           getScrollYByVideo(1).top,
-          {},
           {
+            // translateY: 0, opacity: 1
+          },
+          {
+            delay: getScrollYByVideo(9).top,
+            // translateY: -30,
+            // opacity: 0,
+            ease: Linear.easeNone,
             immediateRender: false,
-
-            scrollTrigger: {
-              trigger: ".stage1",
-              // pin: true, // pin the trigger element while active
-              start: getScrollYByVideo(9).top, // when the top of the trigger hits the top of the viewport
-              end: "+=" + getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
-              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              markers: false,
-              id: "aaa",
-              onEnter: function () {
-                $(".left-progress").removeClass("state1")
-                $(".left-progress").removeClass("state3")
-                $(".left-progress").addClass("state2")
-
-                // $(".header1").removeClass("state2")
-                // $(".header1").removeClass("state3")
-                // $(".header1").addClass("state1")
-              },
-              onLeaveBack: function () {
-                $(".left-progress").removeClass("state2")
-                $(".left-progress").removeClass("state3")
-                $(".left-progress").addClass("state1")
-              },
+            onComplete: function () {
+              this.targets().forEach((elem) => {
+                elem.classList.remove("state2")
+                elem.classList.add("state3")
+              })
+            },
+            onReverseComplete: function () {
+              this.targets().forEach((elem) => {
+                elem.classList.remove("state3")
+                elem.classList.add("state2")
+              })
             },
           }
-        )
-
-        gsap.fromTo(
-          ".title1",
+        ),
+        createTween(
+          ".title2",
           getScrollYByVideo(1).top,
-          {},
           {
+            //  translateY: 30, opacity: 0
+          },
+          {
+            delay: getScrollYByVideo(9.5).top,
+            // translateY: 0,
+            // opacity: 1,
+            // ease: Linear.easeNone,
             immediateRender: false,
-
-            scrollTrigger: {
-              trigger: ".stage1",
-              // pin: true, // pin the trigger element while active
-              start: getScrollYByVideo(19).top, // when the top of the trigger hits the top of the viewport
-              end: "+=" + getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
-              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              markers: false,
-              id: "aaa",
-              onEnter: function () {
-                $(".left-progress").removeClass("state1")
-                $(".left-progress").removeClass("state2")
-                $(".left-progress").addClass("state3")
-
-                // $(".header1").removeClass("state2")
-                // $(".header1").removeClass("state3")
-                // $(".header1").addClass("state1")
-              },
-              onLeaveBack: function () {
-                $(".left-progress").removeClass("state1")
-                $(".left-progress").removeClass("state3")
-                $(".left-progress").addClass("state2")
-              },
+            onStart: function () {
+              // $(".left-progress").removeClass("state1")
+              // $(".left-progress").removeClass("state3")
+              // $(".left-progress").addClass("state2")
+            },
+            onComplete: function () {
+              this.targets().forEach((elem) => {
+                elem.classList.add("state2")
+                elem.classList.remove("state1")
+              })
+            },
+            onReverseComplete: function () {
+              this.targets().forEach((elem) => {
+                elem.classList.remove("state2")
+                elem.classList.add("state1")
+              })
             },
           }
-        )
+        ),
+        createTween(
+          ".title2",
+          getScrollYByVideo(1).top,
+          {
+            // translateY: 0, opacity: 1
+          },
+          {
+            delay: getScrollYByVideo(18.5).top,
+            // translateY: -30,
+            // opacity: 0,
+            ease: Linear.easeNone,
+            immediateRender: false,
+            onComplete: function () {
+              this.targets().forEach((elem) => {
+                elem.classList.remove("state2")
+                elem.classList.add("state3")
+              })
+            },
+            onReverseComplete: function () {
+              this.targets().forEach((elem) => {
+                elem.classList.remove("state3")
+                elem.classList.add("state2")
+              })
+            },
+          }
+        ),
 
-        // var tween2 = createTimeline()
-        // tween2.add([
+        createTween(
+          ".title3_mask",
+          getScrollYByVideo(1).top,
+          { opacity: 0 },
+          {
+            immediateRender: false,
+            delay: getScrollYByVideo(19).top,
+            opacity: 1,
+          }
+        ),
+
+        createTween(
+          ".title3",
+          getScrollYByVideo(1).top,
+          {
+            //  translateY: 30, opacity: 0
+          },
+          {
+            delay: getScrollYByVideo(19).top,
+            // translateY: 0,
+            // opacity: 1,
+            // ease: Linear.easeNone,
+            immediateRender: false,
+            onStart: function () {
+              // $(".left-progress").removeClass("state1")
+              // $(".left-progress").removeClass("state2")
+              // $(".left-progress").addClass("state3")
+            },
+            onComplete: function () {
+              this.targets().forEach((elem) => {
+                elem.classList.add("state2")
+                elem.classList.remove("state1")
+              })
+            },
+            onReverseComplete: function () {
+              this.targets().forEach((elem) => {
+                elem.classList.remove("state2")
+                elem.classList.add("state1")
+              })
+            },
+          }
+        ),
+
         //   createTween(
         //     ".title3", // { v: 0 },
-        //     window.innerHeight,
+        //     2 * window.innerHeight,
         //     {
-        //       // scrollTo: 0,
+        //       scrollTo: 0,
         //       //  translateY: 30, opacity: 0
         //     },
         //     {
-        //       // delay: 5.5 * window.innerHeight,
+        //       delay: getScrollYByVideo(20).top,
         //       // v: $(".inner_scroll_warpper").height() - $(".title3").height(),
-        //       // scrollTo:
-        //       //   $(".inner_scroll_warpper").height() - $(".title3").height(),
+        //       scrollTo:
+        //         $(".inner_scroll_warpper").height() - $(".title3").height(),
         //       // translateY: 0,
         //       // opacity: 1,
         //       // ease: Linear.easeNone,
         //       immediateRender: false,
-        //       onUpdate: function (self) {
-        //         $(".title3").get(0).scrollTop =
-        //           ($(".inner_scroll_warpper").height() -
-        //             $(".title3").height()) *
-        //           self.progress
+        //       onUpdate: function () {
         //         // console.log(
         //         //   // this.targets()[0].v,
         //         //   $(".title3").get(0).scrollTop,
@@ -704,591 +486,738 @@ ${
         //       },
         //     }
         //   ),
-        // ])
-        // tween2.add([gsap.to("body", window.innerHeight, {})])
+      ])
 
-        gsap.timeline({
-          // yes, we can add it to an entire timeline!
+      // tween.add([gsap.to("body", getScrollYByVideo(5).top, {})])
+
+      // var scene = new ScrollMagic.Scene({
+      //   triggerHook: "0",
+      //   triggerElement: ".stage1",
+      //   duration: getScrollYByVideo(10).top,
+      // })
+      //   .addIndicators({ name: "first11111" })
+      //   .addTo(controller)
+
+      // var scene = new ScrollMagic.Scene({
+      //   triggerHook: "0",
+      //   triggerElement: ".stage1",
+      //   duration: getScrollYByVideo(20).top,
+      // })
+      //   .setTween(tween)
+
+      var tl = gsap.timeline({
+        // yes, we can add it to an entire timeline!
+        scrollTrigger: {
+          trigger: ".stage1",
+          // pin: true, // pin the trigger element while active
+          start: "top top", // when the top of the trigger hits the top of the viewport
+          end: getScrollYByVideo(20).top, // end after scrolling 500px beyond the start
+          scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          markers: false,
+          id: "aaa",
+          // pinType: "fixed",
+          // anticipatePin: 1,
+          //   snap: {
+          //     snapTo: "labels", // snap to the closest label in the timeline
+          //     duration: {min: 0.2, max: 3}, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+          //     delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+          //     ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
+          //   }
+
+          onEnter: function () {
+            isEnterStage1 = true
+          },
+          onLeave: function () {
+            isEnterStage1 = false
+            myvideo.currentTime = myvideo.duration
+            myvideo.pause()
+          },
+          onEnterBack: function () {
+            isEnterStage1 = true
+          },
+
+          onUpdate: function () {
+            if (isMouseWheel) {
+              myvideo.currentTime = getTimerByScroll(this.progress)
+            }
+          },
+        },
+      })
+
+      tl.add(tween)
+
+      gsap.fromTo(
+        ".title1",
+        getScrollYByVideo(1).top,
+        {},
+        {
+          immediateRender: false,
+
           scrollTrigger: {
             trigger: ".stage1",
-            //pin: true, // pin the trigger element while active
-            start: getScrollYByVideo(20).top, // when the top of the trigger hits the top of the viewport
-            end: getScrollYByVideo(20).top + window.innerHeight, // end after scrolling 500px beyond the start
+            // pin: true, // pin the trigger element while active
+            start: "top top", // when the top of the trigger hits the top of the viewport
+            end: getScrollYByVideo(9).top, // end after scrolling 500px beyond the start
             scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
             markers: false,
-            id: "ttttt",
-            onUpdate: function (self) {
-              $(".title3").get(0).scrollTop =
-                ($(".inner_scroll_warpper").height() - $(".title3").height()) *
-                self.progress
-              // console.log(
-              //   // this.targets()[0].v,
-              //   $(".title3").get(0).scrollTop,
-              //   "vvvvvv"
-              // )
-              // gsap.to(".title3", 0.6, { scrollTo: this.targets()[0].v })
+            id: "aaa",
+            onEnter: function () {
+              $(".left-progress").removeClass("state2")
+              $(".left-progress").removeClass("state3")
+              $(".left-progress").addClass("state1")
+
+              // $(".header1").removeClass("state2")
+              // $(".header1").removeClass("state3")
+              // $(".header1").addClass("state1")
             },
           },
-        })
-        // .add(tween2)
-
-        // var scene2 = new ScrollMagic.Scene({
-        //   triggerHook: "0",
-        //   triggerElement: ".stage1",
-        //   duration: 1 * window.innerHeight,
-        //   offset: getScrollYByVideo(20).top,
-        // })
-        //   .setTween(tween2)
-        //   // .setPin(".landing-section")
-        //   .addIndicators({ name: "first2" }) // add indicators (requires plugin)
-        //   .addTo(controller)
-        //   .on("progress", function (progEvent) {
-        //     // console.log(window.pageYOffset / window.innerHeight)
-        //     // myvideo.currentTime = 66 * progEvent.progress
-        //   })
-
-        function pausePlayVideo() {
-          // myvideo.paused = true
-          myvideo.pause()
         }
-        function resumePlayVideo() {
-          // myvideo.paused = false
-          isMouseWheel = false
-          if (isEnterStage1) myvideo.play()
+      )
+
+      gsap.fromTo(
+        ".title1",
+        getScrollYByVideo(1).top,
+        {},
+        {
+          immediateRender: false,
+
+          scrollTrigger: {
+            trigger: ".stage1",
+            // pin: true, // pin the trigger element while active
+            start: getScrollYByVideo(9).top, // when the top of the trigger hits the top of the viewport
+            end: "+=" + getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
+            scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+            markers: false,
+            id: "aaa",
+            onEnter: function () {
+              $(".left-progress").removeClass("state1")
+              $(".left-progress").removeClass("state3")
+              $(".left-progress").addClass("state2")
+
+              // $(".header1").removeClass("state2")
+              // $(".header1").removeClass("state3")
+              // $(".header1").addClass("state1")
+            },
+            onLeaveBack: function () {
+              $(".left-progress").removeClass("state2")
+              $(".left-progress").removeClass("state3")
+              $(".left-progress").addClass("state1")
+            },
+          },
         }
+      )
 
-        function wheeled(event) {
-          isMouseWheel = true
-          pausePlayVideo()
-          clearTimeout(mouseWheelTimer)
-          mouseWheelTimer = setTimeout(resumePlayVideo, 200)
+      gsap.fromTo(
+        ".title1",
+        getScrollYByVideo(1).top,
+        {},
+        {
+          immediateRender: false,
 
-          nice && nice.autohidedom && $(nice.autohidedom).removeClass("hide")
+          scrollTrigger: {
+            trigger: ".stage1",
+            // pin: true, // pin the trigger element while active
+            start: getScrollYByVideo(19).top, // when the top of the trigger hits the top of the viewport
+            end: "+=" + getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
+            scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+            markers: false,
+            id: "aaa",
+            onEnter: function () {
+              $(".left-progress").removeClass("state1")
+              $(".left-progress").removeClass("state2")
+              $(".left-progress").addClass("state3")
 
-          clearTimeout(mouseWheelTimer2)
-          mouseWheelTimer2 = setTimeout(function () {
-            $(nice.autohidedom).addClass("hide")
-          }, 2000)
-
-          // if (learnCycleSwitch.checked) {
-          //   // if((window.pageYOffset+ event.deltaY)>=window.innerHeight * 11 || (window.pageYOffset+ event.deltaY)<=window.innerHeight * 9)
-          //     event.preventDefault()
-
-          // var s = Math.max(Math.min(window.pageYOffset+ event.deltaY, window.innerHeight * 11), window.innerHeight * 9)
-          //   window.scrollTo({ top: s });
-
-          // // window.scrollTo({ top: window.pageYOffset + event.deltaY,behavior: "smooth" });
-          // }
+              // $(".header1").removeClass("state2")
+              // $(".header1").removeClass("state3")
+              // $(".header1").addClass("state1")
+            },
+            onLeaveBack: function () {
+              $(".left-progress").removeClass("state1")
+              $(".left-progress").removeClass("state3")
+              $(".left-progress").addClass("state2")
+            },
+          },
         }
+      )
 
-        window.addEventListener("wheel", wheeled, {
-          // passive: false,
-          // capture: true,
-        })
-        // actual render code is in the `scrolled` handler because
-        // there are other wheel events in the code that adjust the scroll position
-        // window.addEventListener('scroll', scrolled, { passive: true })
+      // var tween2 = createTimeline()
+      // tween2.add([
+      //   createTween(
+      //     ".title3", // { v: 0 },
+      //     window.innerHeight,
+      //     {
+      //       // scrollTo: 0,
+      //       //  translateY: 30, opacity: 0
+      //     },
+      //     {
+      //       // delay: 5.5 * window.innerHeight,
+      //       // v: $(".inner_scroll_warpper").height() - $(".title3").height(),
+      //       // scrollTo:
+      //       //   $(".inner_scroll_warpper").height() - $(".title3").height(),
+      //       // translateY: 0,
+      //       // opacity: 1,
+      //       // ease: Linear.easeNone,
+      //       immediateRender: false,
+      //       onUpdate: function (self) {
+      //         $(".title3").get(0).scrollTop =
+      //           ($(".inner_scroll_warpper").height() -
+      //             $(".title3").height()) *
+      //           self.progress
+      //         // console.log(
+      //         //   // this.targets()[0].v,
+      //         //   $(".title3").get(0).scrollTop,
+      //         //   "vvvvvv"
+      //         // )
+      //         // gsap.to(".title3", 0.6, { scrollTo: this.targets()[0].v })
+      //       },
+      //     }
+      //   ),
+      // ])
+      // tween2.add([gsap.to("body", window.innerHeight, {})])
 
-        $(window).on("scroll", function (event) {})
-
-        $(window).resize(function () {
-          $(".stage1").height(
-            getScrollYByVideo(20).top + 2 * window.innerHeight
-          )
-        })
-
-        $(".stage1").height(getScrollYByVideo(20).top + 2 * window.innerHeight)
+      gsap.timeline({
+        // yes, we can add it to an entire timeline!
+        scrollTrigger: {
+          trigger: ".stage1",
+          //pin: true, // pin the trigger element while active
+          start: getScrollYByVideo(20).top, // when the top of the trigger hits the top of the viewport
+          end: getScrollYByVideo(20).top + window.innerHeight, // end after scrolling 500px beyond the start
+          scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+          markers: false,
+          id: "ttttt",
+          onUpdate: function (self) {
+            $(".title3").get(0).scrollTop =
+              ($(".inner_scroll_warpper").height() - $(".title3").height()) *
+              self.progress
+            // console.log(
+            //   // this.targets()[0].v,
+            //   $(".title3").get(0).scrollTop,
+            //   "vvvvvv"
+            // )
+            // gsap.to(".title3", 0.6, { scrollTo: this.targets()[0].v })
+          },
+        },
       })
-    </script>
+      // .add(tween2)
 
-    <div class="stage2">
-      <div class="sticky">
-        <div class="page_content business_content flex">
-          <div class="left_part flex fd-c">
-            <div class="bussiness_title1">安迈云业务模式</div>
-            <div class="bussiness_title2">
-              IPFS网络设备及解决方案提供+IPFS云存储服务
+      // var scene2 = new ScrollMagic.Scene({
+      //   triggerHook: "0",
+      //   triggerElement: ".stage1",
+      //   duration: 1 * window.innerHeight,
+      //   offset: getScrollYByVideo(20).top,
+      // })
+      //   .setTween(tween2)
+      //   // .setPin(".landing-section")
+      //   .addIndicators({ name: "first2" }) // add indicators (requires plugin)
+      //   .addTo(controller)
+      //   .on("progress", function (progEvent) {
+      //     // console.log(window.pageYOffset / window.innerHeight)
+      //     // myvideo.currentTime = 66 * progEvent.progress
+      //   })
+
+      function pausePlayVideo() {
+        // myvideo.paused = true
+        myvideo.pause()
+      }
+      function resumePlayVideo() {
+        // myvideo.paused = false
+        isMouseWheel = false
+        if (isEnterStage1) myvideo.play()
+      }
+
+      function wheeled(event) {
+        isMouseWheel = true
+        pausePlayVideo()
+        clearTimeout(mouseWheelTimer)
+        mouseWheelTimer = setTimeout(resumePlayVideo, 200)
+
+        nice && nice.autohidedom && $(nice.autohidedom).removeClass("hide")
+
+        clearTimeout(mouseWheelTimer2)
+        mouseWheelTimer2 = setTimeout(function () {
+          $(nice.autohidedom).addClass("hide")
+        }, 2000)
+
+        // if (learnCycleSwitch.checked) {
+        //   // if((window.pageYOffset+ event.deltaY)>=window.innerHeight * 11 || (window.pageYOffset+ event.deltaY)<=window.innerHeight * 9)
+        //     event.preventDefault()
+
+        // var s = Math.max(Math.min(window.pageYOffset+ event.deltaY, window.innerHeight * 11), window.innerHeight * 9)
+        //   window.scrollTo({ top: s });
+
+        // // window.scrollTo({ top: window.pageYOffset + event.deltaY,behavior: "smooth" });
+        // }
+      }
+
+      window.addEventListener("wheel", wheeled, {
+        // passive: false,
+        // capture: true,
+      })
+      // actual render code is in the `scrolled` handler because
+      // there are other wheel events in the code that adjust the scroll position
+      // window.addEventListener('scroll', scrolled, { passive: true })
+
+      $(window).on("scroll", function (event) { })
+
+      $(window).resize(function () {
+        $(".stage1").height(
+          getScrollYByVideo(20).top + 2 * window.innerHeight
+        )
+      })
+
+      $(".stage1").height(getScrollYByVideo(20).top + 2 * window.innerHeight)
+    })
+  </script>
+  <div class="stage2">
+    <div class="sticky">
+      <div class="page_content business_content flex">
+        <div class="left_part flex fd-c">
+          <div class="bussiness_title1">安迈云业务模式</div>
+          <div class="bussiness_title2"> IPFS网络设备及解决方案提供+IPFS云存储服务 </div>
+          <div class="bussiness_content flex fd-c">
+            <div class="divider"></div>
+            <div class="bussiness_sub_item active">
+              <div class="bussiness_sub_item_title"> 01 分布式数据中心 Distributed data center </div>
+              <ul class="bussiness_sub_item_child">
+                <li>建造 “精/简”机房</li>
+                <li>保护硬件投资</li>
+                <li>高性能</li>
+                <li>高可靠，故障自愈</li>
+                <li>单一界面，易于管理</li>
+              </ul>
             </div>
-            <div class="bussiness_content flex fd-c">
-              <div class="divider"></div>
-
-              <div class="bussiness_sub_item active">
-                <div class="bussiness_sub_item_title">
-                  01 分布式数据中心 Distributed data center
-                </div>
-                <ul class="bussiness_sub_item_child">
-                  <li>建造 “精/简”机房</li>
-                  <li>保护硬件投资</li>
-                  <li>高性能</li>
-                  <li>高可靠，故障自愈</li>
-                  <li>单一界面，易于管理</li>
-                </ul>
+            <div class="divider"></div>
+            <div class="bussiness_sub_item">
+              <div class="bussiness_sub_item_title"> 02 分布式CDN Distributed CDN </div>
+              <ul class="bussiness_sub_item_child">
+                <li>全网覆盖</li>
+                <li>安全稳定</li>
+                <li>节约成本</li>
+              </ul>
+            </div>
+            <div class="divider"></div>
+            <div class="bussiness_sub_item">
+              <div class="bussiness_sub_item_title"> 03 矩阵存储 Matrix Storage </div>
+              <ul class="bussiness_sub_item_child">
+                <li><span>在线存储：</span>支持一键上传、拖拽等方式上传</li>
+                <li>
+                  <span>API对接：</span>OpenAPI，为开发者提供灵活的访问接口
+                </li>
+                <li>
+                  <span>应用SDK：</span>提供Java、Python、C等多语言完成二次开发
+                </li>
+                <li>
+                  <span>离线存储：</span>无惧带宽，专属定制化硬件设备迁移数据
+                </li>
+              </ul>
+            </div>
+            <div class="divider"></div>
+            <div class="bussiness_sub_item">
+              <div class="bussiness_sub_item_title">04 云GPU Cloud GPU</div>
+              <ul class="bussiness_sub_item_child">
+                <li>
+                  <span>高校科研：</span>一键部署海量学习环境场景进入计算“云”时代
+                </li>
+                <li>
+                  <span>智能驾驶：</span>满足高性能计算，缩短算法训练周期
+                </li>
+                <li><span>AI智能：</span>缩短训练环境部署，加速AI落地使用</li>
+                <li>
+                  <span>云游戏：</span>提供低成本优质稳定的存储能力和解决方案
+                </li>
+                <li><span>区块链：</span>提供关于IPFS相关服务加速C2处理</li>
+                <li>
+                  <span>视频渲染：</span>集群调配，高弹性高灵活性渲染资源
+                </li>
+              </ul>
+            </div>
+            <div class="divider"></div>
+            <div class="bussiness_bottom_part flex">
+              <div class="action_btn btn-with-arrow first">
+                <span> 探索更多 </span>
+                <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
               </div>
-              <div class="divider"></div>
-              <div class="bussiness_sub_item">
-                <div class="bussiness_sub_item_title">
-                  02 分布式CDN Distributed CDN
-                </div>
-                <ul class="bussiness_sub_item_child">
-                  <li>全网覆盖</li>
-                  <li>安全稳定</li>
-                  <li>节约成本</li>
-                </ul>
-              </div>
-              <div class="divider"></div>
-              <div class="bussiness_sub_item">
-                <div class="bussiness_sub_item_title">
-                  03 矩阵存储 Matrix Storage
-                </div>
-                <ul class="bussiness_sub_item_child">
-                  <li><span>在线存储：</span>支持一键上传、拖拽等方式上传</li>
-                  <li>
-                    <span>API对接：</span>OpenAPI，为开发者提供灵活的访问接口
-                  </li>
-                  <li>
-                    <span>应用SDK：</span
-                    >提供Java、Python、C等多语言完成二次开发
-                  </li>
-                  <li>
-                    <span>离线存储：</span>无惧带宽，专属定制化硬件设备迁移数据
-                  </li>
-                </ul>
-              </div>
-              <div class="divider"></div>
-              <div class="bussiness_sub_item">
-                <div class="bussiness_sub_item_title">04 云GPU Cloud GPU</div>
-                <ul class="bussiness_sub_item_child">
-                  <li>
-                    <span>高校科研：</span
-                    >一键部署海量学习环境场景进入计算“云”时代
-                  </li>
-                  <li>
-                    <span>智能驾驶：</span>满足高性能计算，缩短算法训练周期
-                  </li>
-                  <li><span>AI智能：</span>缩短训练环境部署，加速AI落地使用</li>
-                  <li>
-                    <span>云游戏：</span>提供低成本优质稳定的存储能力和解决方案
-                  </li>
-                  <li><span>区块链：</span>提供关于IPFS相关服务加速C2处理</li>
-                  <li>
-                    <span>视频渲染：</span>集群调配，高弹性高灵活性渲染资源
-                  </li>
-                </ul>
-              </div>
-              <div class="divider"></div>
-
-              <div class="bussiness_bottom_part flex">
-                <div class="action_btn btn-with-arrow first">
-                  <span> 探索更多 </span>
-                  <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-                </div>
-                <div class="action_btn btn-with-arrow second">
-                  <span> 相关解决方案 </span>
-                  <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-                </div>
+              <div class="action_btn btn-with-arrow second">
+                <span> 相关解决方案 </span>
+                <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
               </div>
             </div>
           </div>
-
-          <div class="right_part state1">
-            <div class="pic_part">
-              <div class="wrapper">
-                <img src="./assets/img/图层 72.png" />
-                <div class="info_part flex fd-c">
-                  <img src="./assets/img/gif1.gif" />
-                  <div class="title_part">云计算</div>
-                  <span
-                    >通过区块链技术让人工智能的运算。去中心化分布在全世界海量节点之上，打造AI大数据时代下去中心云计算市场的基础设施，构建算力供需精准对接平台。
-                  </span>
-                </div>
-                <div class="_number">01</div>
+        </div>
+        <div class="right_part state1">
+          <div class="pic_part">
+            <div class="wrapper">
+              <img src="./assets/img/图层 72.png" />
+              <div class="info_part flex fd-c">
+                <img src="./assets/img/gif1.gif" />
+                <div class="title_part">云计算</div>
+                <span>通过区块链技术让人工智能的运算。去中心化分布在全世界海量节点之上，打造AI大数据时代下去中心云计算市场的基础设施，构建算力供需精准对接平台。 </span>
               </div>
+              <div class="_number">01</div>
             </div>
-            <div class="pic_part">
-              <div class="wrapper">
-                <img src="./assets/img/图层 76.png" />
-                <div class="info_part flex fd-c">
-                  <img src="./assets/img/gif2.gif" />
-                  <div class="title_part">矩阵存储</div>
-                  <span
-                    >矩阵存储提供简单易用的PaaS服务、OpenAPI服务和存储工具集套件，致力于用户有效使用稳定可靠的IPFS去中心化存储服务。</span
-                  >
-                </div>
-                <div class="_number">02</div>
+          </div>
+          <div class="pic_part">
+            <div class="wrapper">
+              <img src="./assets/img/图层 76.png" />
+              <div class="info_part flex fd-c">
+                <img src="./assets/img/gif2.gif" />
+                <div class="title_part">矩阵存储</div>
+                <span>矩阵存储提供简单易用的PaaS服务、OpenAPI服务和存储工具集套件，致力于用户有效使用稳定可靠的IPFS去中心化存储服务。</span>
               </div>
+              <div class="_number">02</div>
             </div>
-            <div class="pic_part">
-              <div class="wrapper">
-                <img src="./assets/img/图层 530.png" />
-                <div class="info_part flex fd-c">
-                  <img src="./assets/img/gif3.gif" />
-                  <div class="title_part">云GPU</div>
-                  <span
-                    >依托自建规模化存储能力中心与强大的供应链体系；汇集业内顶尖GPU显卡集群，为客户提供海量GPU存储能力服务。</span
-                  >
-                </div>
-                <div class="_number">03</div>
+          </div>
+          <div class="pic_part">
+            <div class="wrapper">
+              <img src="./assets/img/图层 530.png" />
+              <div class="info_part flex fd-c">
+                <img src="./assets/img/gif3.gif" />
+                <div class="title_part">云GPU</div>
+                <span>依托自建规模化存储能力中心与强大的供应链体系；汇集业内顶尖GPU显卡集群，为客户提供海量GPU存储能力服务。</span>
               </div>
+              <div class="_number">03</div>
             </div>
-            <div class="pic_part">
-              <div class="wrapper">
-                <img src="./assets/img/图层 530.png" />
-                <div class="info_part flex fd-c">
-                  <img src="./assets/img/gif3.gif" />
-                  <div class="title_part">云GPU</div>
-                  <span
-                    >依托自建规模化存储能力中心与强大的供应链体系；汇集业内顶尖GPU显卡集群，为客户提供海量GPU存储能力服务。</span
-                  >
-                </div>
-                <div class="_number">04</div>
+          </div>
+          <div class="pic_part">
+            <div class="wrapper">
+              <img src="./assets/img/图层 530.png" />
+              <div class="info_part flex fd-c">
+                <img src="./assets/img/gif3.gif" />
+                <div class="title_part">云GPU</div>
+                <span>依托自建规模化存储能力中心与强大的供应链体系；汇集业内顶尖GPU显卡集群，为客户提供海量GPU存储能力服务。</span>
               </div>
+              <div class="_number">04</div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <script>
+    ////////STAGE2/////////
 
-    <script>
-      ////////STAGE2/////////
+    $(function () {
+      // createTween(
+      //   ".header1",
+      //   0.1 * window.innerHeight,
+      //   {},
+      //   {
+      //     immediateRender: false,
+      //     scrollTrigger: {
+      //       trigger: ".stage2",
+      //       //pin: true, // pin the trigger element while active
+      //       start: "top top", // when the top of the trigger hits the top of the viewport
+      //       end: "+=" + 0.1 * window.innerHeight, // end after scrolling 500px beyond the start
+      //       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      //       markers: false,
+      //       id: "2222",
+      //       onEnter: function () {
+      //         $(".header1").addClass("header_light")
+      //         $(".header1").removeClass("state2")
+      //         $(".header1").addClass("state1")
+      //         console.log("header1 enter")
+      //       },
+      //       onLeave: function () {
+      //         $(".header1").removeClass("header_light")
+      //         $(".header1").addClass("header_dark")
+      //         $(".header1").removeClass("state1")
+      //         $(".header1").addClass("state2")
+      //         console.log("header1 leave....")
+      //       },
+      //       onEnterBack: function () {
+      //         $(".header1").addClass("header_dark")
+      //         $(".header1").removeClass("state2")
+      //         $(".header1").addClass("state1")
+      //         console.log("header1 enter back....")
+      //       },
+      //       onLeaveBack: function () {
+      //         $(".header1").removeClass("header_dark")
+      //         $(".header1").addClass("header_light")
+      //         $(".header1").removeClass("state1")
+      //         $(".header1").addClass("state2")
+      //         console.log("header1 leave back....")
+      //       },
+      //     },
+      //   }
+      // )
 
-      $(function () {
-        // createTween(
-        //   ".header1",
-        //   0.1 * window.innerHeight,
-        //   {},
-        //   {
-        //     immediateRender: false,
-        //     scrollTrigger: {
-        //       trigger: ".stage2",
-        //       //pin: true, // pin the trigger element while active
-        //       start: "top top", // when the top of the trigger hits the top of the viewport
-        //       end: "+=" + 0.1 * window.innerHeight, // end after scrolling 500px beyond the start
-        //       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-        //       markers: false,
-        //       id: "2222",
-        //       onEnter: function () {
-        //         $(".header1").addClass("header_light")
-        //         $(".header1").removeClass("state2")
-        //         $(".header1").addClass("state1")
-        //         console.log("header1 enter")
-        //       },
-        //       onLeave: function () {
-        //         $(".header1").removeClass("header_light")
-        //         $(".header1").addClass("header_dark")
-        //         $(".header1").removeClass("state1")
-        //         $(".header1").addClass("state2")
-        //         console.log("header1 leave....")
-        //       },
-        //       onEnterBack: function () {
-        //         $(".header1").addClass("header_dark")
-        //         $(".header1").removeClass("state2")
-        //         $(".header1").addClass("state1")
-        //         console.log("header1 enter back....")
-        //       },
-        //       onLeaveBack: function () {
-        //         $(".header1").removeClass("header_dark")
-        //         $(".header1").addClass("header_light")
-        //         $(".header1").removeClass("state1")
-        //         $(".header1").addClass("state2")
-        //         console.log("header1 leave back....")
-        //       },
-        //     },
-        //   }
-        // )
-
-        createTween(
-          ".title3_mask",
-          50,
-          { opacity: 1 },
-          {
-            immediateRender: false,
-            opacity: 0,
-            scrollTrigger: {
-              trigger: ".stage2",
-              //pin: true, // pin the trigger element while active
-              start: "0", // when the top of the trigger hits the top of the viewport
-              end: "+=50", // end after scrolling 500px beyond the start
-              scrub: true,
-            },
-          }
-        ),
-          gsap.fromTo(
-            ".stage2 .right_part",
-            0.1 * window.innerHeight,
-            {},
-            {
-              immediateRender: false,
-
-              scrollTrigger: {
-                trigger: ".stage2",
-                //pin: true, // pin the trigger element while active
-                start: "+=" + 0.6 * window.innerHeight, // when the top of the trigger hits the top of the viewport
-                end: "+=" + 0.6 * window.innerHeight, // end after scrolling 500px beyond the start
-                scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-                // markers: true,
-                id: "4444",
-                onEnter: function () {
-                  $($(".stage2 .bussiness_sub_item")[0]).removeClass("active")
-                  $($(".stage2 .bussiness_sub_item")[1]).addClass("active")
-                  // $(".stage2 .right_part").removeClass('state1')
-                  // $(".stage2 .right_part").addClass('state2')
-
-                  // gsap.fromTo(
-                  //   ".stage2 .right_part",
-                  //   0.3,
-                  //   {
-                  //     scrollTo: 0,
-                  //   },
-                  //   {
-                  //     immediateRender: false,
-                  //     scrollTo: $(".stage2 .right_part").innerHeight(),
-                  //   }
-                  // )
-                },
-                onLeaveBack: function () {
-                  $($(".stage2 .bussiness_sub_item")[0]).addClass("active")
-                  $($(".stage2 .bussiness_sub_item")[1]).removeClass("active")
-                  //                 $(".stage2 .right_part").removeClass('state2')
-                  // $(".stage2 .right_part").addClass('state1')
-
-                  // gsap.fromTo(
-                  //   ".stage2 .right_part",
-                  //   0.3,
-                  //   {
-                  //     scrollTo: $(".stage2 .right_part").innerHeight(),
-                  //   },
-                  //   {
-                  //     immediateRender: false,
-                  //     scrollTo: 0,
-                  //   }
-                  // )
-                },
-              },
-            }
-          )
-
+      createTween(
+        ".title3_mask",
+        50,
+        { opacity: 1 },
+        {
+          immediateRender: false,
+          opacity: 0,
+          scrollTrigger: {
+            trigger: ".stage2",
+            //pin: true, // pin the trigger element while active
+            start: "0", // when the top of the trigger hits the top of the viewport
+            end: "+=50", // end after scrolling 500px beyond the start
+            scrub: true,
+          },
+        }
+      ),
         gsap.fromTo(
           ".stage2 .right_part",
           0.1 * window.innerHeight,
-          {
-            // scrollTo: $(".stage2 .right_part").innerHeight(),
-          },
+          {},
           {
             immediateRender: false,
 
-            // scrollTo: 2 * $(".stage2 .right_part").innerHeight(),
             scrollTrigger: {
               trigger: ".stage2",
               //pin: true, // pin the trigger element while active
-              start: "+=" + 1.8 * window.innerHeight, // when the top of the trigger hits the top of the viewport
+              start: "+=" + 0.6 * window.innerHeight, // when the top of the trigger hits the top of the viewport
               end: "+=" + 0.6 * window.innerHeight, // end after scrolling 500px beyond the start
-              scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              markers: false,
-              id: "6666",
-              onEnter: function () {
-                $($(".stage2 .bussiness_sub_item")[1]).removeClass("active")
-                $($(".stage2 .bussiness_sub_item")[2]).addClass("active")
-                //                 $(".stage2 .right_part").removeClass('state2')
-                // $(".stage2 .right_part").addClass('state3')
-
-                // gsap.fromTo(
-                //   ".stage2 .right_part",
-                //   0.3,
-                //   {
-                //     scrollTo: $(".stage2 .right_part").innerHeight(),
-                //   },
-                //   {
-                //     immediateRender: false,
-                //     scrollTo: 2 * $(".stage2 .right_part").innerHeight(),
-                //   }
-                // )
-              },
-              onLeaveBack: function () {
-                $($(".stage2 .bussiness_sub_item")[1]).addClass("active")
-                $($(".stage2 .bussiness_sub_item")[2]).removeClass("active")
-                //                 $(".stage2 .right_part").removeClass('state3')
-                // $(".stage2 .right_part").addClass('state2')
-
-                // gsap.fromTo(
-                //   ".stage2 .right_part",
-                //   0.3,
-                //   {
-                //     scrollTo: 2 * $(".stage2 .right_part").innerHeight(),
-                //   },
-                //   {
-                //     immediateRender: false,
-                //     scrollTo: $(".stage2 .right_part").innerHeight(),
-                //   }
-                // )
-              },
-              onUpdate: function () {},
-            },
-          }
-        )
-
-        gsap.fromTo(
-          ".stage2 .right_part",
-          0.1 * window.innerHeight,
-          {
-            // scrollTo: $(".stage2 .right_part").innerHeight(),
-          },
-          {
-            immediateRender: false,
-
-            // scrollTo: 2 * $(".stage2 .right_part").innerHeight(),
-            scrollTrigger: {
-              trigger: ".stage2",
-              //pin: true, // pin the trigger element while active
-              start: "+=" + 3.0 * window.innerHeight, // when the top of the trigger hits the top of the viewport
-              end: "+=" + 0.6 * window.innerHeight, // end after scrolling 500px beyond the start
-              scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              markers: false,
-              id: "6666",
-              onEnter: function () {
-                $($(".stage2 .bussiness_sub_item")[2]).removeClass("active")
-                $($(".stage2 .bussiness_sub_item")[3]).addClass("active")
-                //                 $(".stage2 .right_part").removeClass('state2')
-                // $(".stage2 .right_part").addClass('state3')
-
-                // gsap.fromTo(
-                //   ".stage2 .right_part",
-                //   0.3,
-                //   {
-                //     scrollTo: $(".stage2 .right_part").innerHeight(),
-                //   },
-                //   {
-                //     immediateRender: false,
-                //     scrollTo: 2 * $(".stage2 .right_part").innerHeight(),
-                //   }
-                // )
-              },
-              onLeaveBack: function () {
-                $($(".stage2 .bussiness_sub_item")[2]).addClass("active")
-                $($(".stage2 .bussiness_sub_item")[3]).removeClass("active")
-                //                 $(".stage2 .right_part").removeClass('state3')
-                // $(".stage2 .right_part").addClass('state2')
-
-                // gsap.fromTo(
-                //   ".stage2 .right_part",
-                //   0.3,
-                //   {
-                //     scrollTo: 2 * $(".stage2 .right_part").innerHeight(),
-                //   },
-                //   {
-                //     immediateRender: false,
-                //     scrollTo: $(".stage2 .right_part").innerHeight(),
-                //   }
-                // )
-              },
-              onUpdate: function () {},
-            },
-          }
-        )
-
-        gsap.fromTo(
-          ".stage2 .right_part",
-          4 * window.innerHeight,
-          { scrollTo: 0 },
-          {
-            scrollTo: 3 * $(".stage2 .right_part").innerHeight(),
-            immediateRender: false,
-
-            scrollTrigger: {
-              trigger: ".stage2",
-              //pin: true, // pin the trigger element while active
-              start: "+=" + 0.4 * window.innerHeight, // when the top of the trigger hits the top of the viewport
-              end: "+=" + 4.2 * window.innerHeight, // end after scrolling 500px beyond the start
               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
               // markers: true,
-              id: "44414",
+              id: "4444",
+              onEnter: function () {
+                $($(".stage2 .bussiness_sub_item")[0]).removeClass("active")
+                $($(".stage2 .bussiness_sub_item")[1]).addClass("active")
+                // $(".stage2 .right_part").removeClass('state1')
+                // $(".stage2 .right_part").addClass('state2')
+
+                // gsap.fromTo(
+                //   ".stage2 .right_part",
+                //   0.3,
+                //   {
+                //     scrollTo: 0,
+                //   },
+                //   {
+                //     immediateRender: false,
+                //     scrollTo: $(".stage2 .right_part").innerHeight(),
+                //   }
+                // )
+              },
+              onLeaveBack: function () {
+                $($(".stage2 .bussiness_sub_item")[0]).addClass("active")
+                $($(".stage2 .bussiness_sub_item")[1]).removeClass("active")
+                //                 $(".stage2 .right_part").removeClass('state2')
+                // $(".stage2 .right_part").addClass('state1')
+
+                // gsap.fromTo(
+                //   ".stage2 .right_part",
+                //   0.3,
+                //   {
+                //     scrollTo: $(".stage2 .right_part").innerHeight(),
+                //   },
+                //   {
+                //     immediateRender: false,
+                //     scrollTo: 0,
+                //   }
+                // )
+              },
             },
           }
         )
 
-        $(window).resize(function () {
-          $(".stage2").height(5 * window.innerHeight)
-        })
+      gsap.fromTo(
+        ".stage2 .right_part",
+        0.1 * window.innerHeight,
+        {
+          // scrollTo: $(".stage2 .right_part").innerHeight(),
+        },
+        {
+          immediateRender: false,
+
+          // scrollTo: 2 * $(".stage2 .right_part").innerHeight(),
+          scrollTrigger: {
+            trigger: ".stage2",
+            //pin: true, // pin the trigger element while active
+            start: "+=" + 1.8 * window.innerHeight, // when the top of the trigger hits the top of the viewport
+            end: "+=" + 0.6 * window.innerHeight, // end after scrolling 500px beyond the start
+            scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+            markers: false,
+            id: "6666",
+            onEnter: function () {
+              $($(".stage2 .bussiness_sub_item")[1]).removeClass("active")
+              $($(".stage2 .bussiness_sub_item")[2]).addClass("active")
+              //                 $(".stage2 .right_part").removeClass('state2')
+              // $(".stage2 .right_part").addClass('state3')
+
+              // gsap.fromTo(
+              //   ".stage2 .right_part",
+              //   0.3,
+              //   {
+              //     scrollTo: $(".stage2 .right_part").innerHeight(),
+              //   },
+              //   {
+              //     immediateRender: false,
+              //     scrollTo: 2 * $(".stage2 .right_part").innerHeight(),
+              //   }
+              // )
+            },
+            onLeaveBack: function () {
+              $($(".stage2 .bussiness_sub_item")[1]).addClass("active")
+              $($(".stage2 .bussiness_sub_item")[2]).removeClass("active")
+              //                 $(".stage2 .right_part").removeClass('state3')
+              // $(".stage2 .right_part").addClass('state2')
+
+              // gsap.fromTo(
+              //   ".stage2 .right_part",
+              //   0.3,
+              //   {
+              //     scrollTo: 2 * $(".stage2 .right_part").innerHeight(),
+              //   },
+              //   {
+              //     immediateRender: false,
+              //     scrollTo: $(".stage2 .right_part").innerHeight(),
+              //   }
+              // )
+            },
+            onUpdate: function () { },
+          },
+        }
+      )
+
+      gsap.fromTo(
+        ".stage2 .right_part",
+        0.1 * window.innerHeight,
+        {
+          // scrollTo: $(".stage2 .right_part").innerHeight(),
+        },
+        {
+          immediateRender: false,
+
+          // scrollTo: 2 * $(".stage2 .right_part").innerHeight(),
+          scrollTrigger: {
+            trigger: ".stage2",
+            //pin: true, // pin the trigger element while active
+            start: "+=" + 3.0 * window.innerHeight, // when the top of the trigger hits the top of the viewport
+            end: "+=" + 0.6 * window.innerHeight, // end after scrolling 500px beyond the start
+            scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+            markers: false,
+            id: "6666",
+            onEnter: function () {
+              $($(".stage2 .bussiness_sub_item")[2]).removeClass("active")
+              $($(".stage2 .bussiness_sub_item")[3]).addClass("active")
+              //                 $(".stage2 .right_part").removeClass('state2')
+              // $(".stage2 .right_part").addClass('state3')
+
+              // gsap.fromTo(
+              //   ".stage2 .right_part",
+              //   0.3,
+              //   {
+              //     scrollTo: $(".stage2 .right_part").innerHeight(),
+              //   },
+              //   {
+              //     immediateRender: false,
+              //     scrollTo: 2 * $(".stage2 .right_part").innerHeight(),
+              //   }
+              // )
+            },
+            onLeaveBack: function () {
+              $($(".stage2 .bussiness_sub_item")[2]).addClass("active")
+              $($(".stage2 .bussiness_sub_item")[3]).removeClass("active")
+              //                 $(".stage2 .right_part").removeClass('state3')
+              // $(".stage2 .right_part").addClass('state2')
+
+              // gsap.fromTo(
+              //   ".stage2 .right_part",
+              //   0.3,
+              //   {
+              //     scrollTo: 2 * $(".stage2 .right_part").innerHeight(),
+              //   },
+              //   {
+              //     immediateRender: false,
+              //     scrollTo: $(".stage2 .right_part").innerHeight(),
+              //   }
+              // )
+            },
+            onUpdate: function () { },
+          },
+        }
+      )
+
+      gsap.fromTo(
+        ".stage2 .right_part",
+        4 * window.innerHeight,
+        { scrollTo: 0 },
+        {
+          scrollTo: 3 * $(".stage2 .right_part").innerHeight(),
+          immediateRender: false,
+
+          scrollTrigger: {
+            trigger: ".stage2",
+            //pin: true, // pin the trigger element while active
+            start: "+=" + 0.4 * window.innerHeight, // when the top of the trigger hits the top of the viewport
+            end: "+=" + 4.2 * window.innerHeight, // end after scrolling 500px beyond the start
+            scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+            // markers: true,
+            id: "44414",
+          },
+        }
+      )
+
+      $(window).resize(function () {
         $(".stage2").height(5 * window.innerHeight)
       })
-    </script>
-
-    <div class="stage3">
-      <div class="padding_area"></div>
-      <div class="spots_content flex jc-between">
-        <div class="left-part flex-1">
-          <img src="assets/img/企业微信截图_20210704114552.png" />
+      $(".stage2").height(5 * window.innerHeight)
+    })
+  </script>
+  <div class="stage3">
+    <div class="padding_area"></div>
+    <div class="spots_content flex jc-between">
+      <div class="left-part flex-1">
+        <img src="assets/img/企业微信截图_20210704114552.png" />
+      </div>
+      <div class="right-part flex-1 flex fd-c">
+        <div class="title flex fd-c">
+          <span>全球基础设施</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="401px" height="115px" viewBox="0 0 401 115">
+            <defs>
+              <linearGradient id="gradient" y1="0" y2="1">
+                <stop stop-color="#74d9b4" offset="0"></stop>
+                <stop stop-color="#5aa1d8" offset="1"></stop>
+              </linearGradient>
+            </defs>
+            <text class="side-title" stroke-width="2" stroke="url(#gradient)" fill="none" font-size="120px"
+              letter-spacing="-2px" font-weight="bold" style="transform: translateY(calc(100% - 4px))"> Global </text>
+          </svg>
         </div>
-        <div class="right-part flex-1 flex fd-c">
-          <div class="title flex fd-c">
-            <span>全球基础设施</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="401px"
-              height="115px"
-              viewBox="0 0 401 115"
-            >
-              <defs>
-                <linearGradient id="gradient" y1="0" y2="1">
-                  <stop stop-color="#74d9b4" offset="0"></stop>
-                  <stop stop-color="#5aa1d8" offset="1"></stop>
-                </linearGradient>
-              </defs>
-              <text
-                class="side-title"
-                stroke-width="2"
-                stroke="url(#gradient)"
-                fill="none"
-                font-size="120px"
-                letter-spacing="-2px"
-                font-weight="bold"
-                style="transform: translateY(calc(100% - 4px))"
-              >
-                Global
-              </text>
-            </svg>
+        <div class="locations">
+          <ul>
+            <li><a href="#">北京</a></li>
+            <li><a href="#">上海</a></li>
+            <li><a href="#">海口</a></li>
+            <li><a href="#">成都</a></li>
+            <li><a href="#">曼谷</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">东京</a></li>
+            <li><a href="#">悉尼</a></li>
+            <li><a href="#">伦敦</a></li>
+            <li><a href="#">巴黎</a></li>
+            <li><a href="#">柏林 </a></li>
+          </ul>
+          <ul>
+            <li><a href="#">首尔</a></li>
+            <li><a href="#">莫斯科</a></li>
+            <li><a href="#">加沙</a></li>
+            <li><a href="#">披风</a></li>
+            <li><a href="#">纽约</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">曼彻斯特</a></li>
+            <li><a href="#">中国台北</a></li>
+            <li><a href="#">阿拉木图 </a></li>
+          </ul>
+        </div>
+        <div class="bussiness_bottom_part flex">
+          <div class="action_btn btn-with-arrow first">
+            <span> 关于我们 </span>
+            <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
           </div>
-          <div class="locations">
-            <ul>
-              <li><a href="#">北京</a></li>
-              <li><a href="#">上海</a></li>
-              <li><a href="#">海口</a></li>
-              <li><a href="#">成都</a></li>
-              <li><a href="#">曼谷</a></li>
-            </ul>
-            <ul>
-              <li><a href="#">东京</a></li>
-              <li><a href="#">悉尼</a></li>
-              <li><a href="#">伦敦</a></li>
-              <li><a href="#">巴黎</a></li>
-              <li><a href="#">柏林 </a></li>
-            </ul>
-            <ul>
-              <li><a href="#">首尔</a></li>
-              <li><a href="#">莫斯科</a></li>
-              <li><a href="#">加沙</a></li>
-              <li><a href="#">披风</a></li>
-              <li><a href="#">纽约</a></li>
-            </ul>
-            <ul>
-              <li><a href="#">曼彻斯特</a></li>
-              <li><a href="#">中国台北</a></li>
-              <li><a href="#">阿拉木图 </a></li>
-            </ul>
-          </div>
-          <div class="bussiness_bottom_part flex">
-            <div class="action_btn btn-with-arrow first">
-              <span> 关于我们 </span>
-              <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-            </div>
-            <div class="action_btn btn-with-arrow second">
-              <span> 联系我们 </span>
-              <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-            </div>
+          <div class="action_btn btn-with-arrow second">
+            <span> 联系我们 </span>
+            <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
           </div>
         </div>
       </div>
     </div>
-    <script>
+  </div>
+  <script>
       // $(function () {
       /////////////STAGE3/////////////
 
@@ -1309,364 +1238,382 @@ ${
       //       toggleCardOrImprintAndPrivacy()
       //     })
       // })
-    </script>
-
-    <div class="stage4"></div>
-
-    <footer>
-      <div class="top-part">
-        <div class="left-part pos-r">
-          <div class="logo"><img src="./assets/img/logo_bottom.png" /></div>
-
-          <input
-            id="langswtich2"
-            class="langswtich foldable_menu"
-            type="checkbox"
-            hidden
-          />
-          <label for="langswtich2">
-            <div class="lang_bt">
-              <i class="fa iconfont icon-yuyan" aria-hidden="true"></i>
-              English
+  </script>
+  <div class="stage4"></div>
+  <footer>
+    <div class="top-part">
+      <div class="left-part pos-r">
+        <div class="logo"><img src="./assets/img/logo_bottom.png" /></div>
+        <input id="langswtich2" class="langswtich foldable_menu" type="checkbox" hidden />
+        <label for="langswtich2">
+          <div class="lang_bt">
+            <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> English
+          </div>
+          <div class="langswtich_mask switch_mask"></div>
+        </label>
+        <ul class="lang-panel lang-panel-bottom">
+          <li>
+            <a>
+              <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a>
+          </li>
+          <li class="selected">
+            <a>
+              <i class="fa iconfont icon-gou" aria-hidden="true"></i> English</a>
+          </li>
+        </ul>
+      </div>
+      <div class="right-part">
+        <div class="nav-item">
+          <input class="foldable_menu" id="navswtich1" type="checkbox" hidden />
+          <label for="navswtich1">
+            <div class="nav-title flex">
+              <span>产品</span>
+              <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
             </div>
-
-            <div class="langswtich_mask switch_mask"></div>
           </label>
-
-          <ul class="lang-panel lang-panel-bottom">
-            <li>
-              <a>
-                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
-                中文</a
-              >
-            </li>
-            <li class="selected">
-              <a>
-                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
-                English</a
-              >
-            </li>
+          <ul>
+            <li><a>云计算</a></li>
+            <li><a>矩阵存储</a></li>
+            <li><a>云GPU</a></li>
           </ul>
         </div>
-        <div class="right-part">
-          <div class="nav-item">
-            <input
-              class="foldable_menu"
-              id="navswtich1"
-              type="checkbox"
-              hidden
-            />
-            <label for="navswtich1">
-              <div class="nav-title flex">
-                <span>产品</span>
-                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-              </div>
-            </label>
-            <ul>
-              <li><a>云计算</a></li>
-              <li><a>矩阵存储</a></li>
-              <li><a>云GPU</a></li>
-            </ul>
+        <div class="nav-item">
+          <input class="foldable_menu" id="navswtich2" type="checkbox" hidden />
+          <label for="navswtich2">
+            <div class="nav-title flex">
+              <span>解决方案·场景</span>
+              <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+            </div>
+          </label>
+          <ul>
+            <li><a>存储</a></li>
+            <li><a>容灾与备份</a></li>
+            <li><a>科学计算</a></li>
+            <li><a>安全计算</a></li>
+            <li><a>物理云</a></li>
+            <li><a>内容分发</a></li>
+            <li><a>机器学习</a></li>
+          </ul>
+        </div>
+        <div class="nav-item">
+          <input class="foldable_menu" id="navswtich3" type="checkbox" hidden />
+          <label for="navswtich3">
+            <div class="nav-title flex">
+              <span>解决方案·行业</span>
+              <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+            </div>
+          </label>
+          <ul>
+            <li><a>人工智能</a></li>
+            <li><a>科研</a></li>
+            <li><a>大健康</a></li>
+            <li><a>政务</a></li>
+            <li><a>生物基因</a></li>
+          </ul>
+        </div>
+        <div class="nav-item">
+          <input class="foldable_menu" id="navswtich4" type="checkbox" hidden />
+          <label for="navswtich4">
+            <div class="nav-title flex">
+              <span>解决方案·WEB3.0</span>
+              <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+            </div>
+          </label>
+          <ul>
+            <li><a>边缘计算</a></li>
+            <li><a>区块链</a></li>
+            <li><a>人工智能</a></li>
+          </ul>
+        </div>
+        <div class="nav-item">
+          <input class="foldable_menu" id="navswtich5" type="checkbox" hidden />
+          <label for="navswtich5">
+            <div class="nav-title flex">
+              <span>ESG</span>
+              <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+            </div>
+          </label>
+          <ul>
+            <li><a>社会责任</a></li>
+            <li><a>信任承诺</a></li>
+            <li><a>公司治理</a></li>
+          </ul>
+        </div>
+        <div class="nav-item">
+          <input class="foldable_menu" id="navswtich6" type="checkbox" hidden />
+          <label for="navswtich6">
+            <div class="nav-title flex">
+              <span>关于我们</span>
+              <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+            </div>
+          </label>
+          <ul>
+            <li><a>公司介绍</a></li>
+            <li><a>发展历程</a></li>
+            <li><a>新闻动态</a></li>
+            <li><a>人才招聘</a></li>
+            <li><a>联系方式</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-part">
+      <div class="flex jc-between flex-1 pos-r">
+        <div class="contacts sub-unit flex fd-c jc-between h-auto">
+          <div class="flex">
+            <div class="flex ai-center">
+              <i class="fa iconfont icon-dianhua" aria-hidden="true"></i> +86 898 3286 7007
+            </div>
+            <div class="divider-v"></div>
+            <div class="flex ai-center">
+              <i class="fa iconfont icon-youjian" aria-hidden="true"></i> contact@AnmaiCloud.com
+            </div>
           </div>
-          <div class="nav-item">
-            <input
-              class="foldable_menu"
-              id="navswtich2"
-              type="checkbox"
-              hidden
-            />
-            <label for="navswtich2">
-              <div class="nav-title flex">
-                <span>解决方案·场景</span>
-                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-              </div>
-            </label>
-
-            <ul>
-              <li><a>存储</a></li>
-              <li><a>容灾与备份</a></li>
-              <li><a>科学计算</a></li>
-              <li><a>安全计算</a></li>
-              <li><a>物理云</a></li>
-              <li><a>内容分发</a></li>
-              <li><a>机器学习</a></li>
-            </ul>
+          <div class="flex line-2">
+            <span>地址：海南省省直辖县行政单位澄迈县老城镇高新技术产业示范区海南生态软件园A7幢二层3001</span>
           </div>
-          <div class="nav-item">
-            <input
-              class="foldable_menu"
-              id="navswtich3"
-              type="checkbox"
-              hidden
-            />
-            <label for="navswtich3">
-              <div class="nav-title flex">
-                <span>解决方案·行业</span>
-                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-              </div>
-            </label>
-
-            <ul>
-              <li><a>人工智能</a></li>
-              <li><a>科研</a></li>
-              <li><a>大健康</a></li>
-              <li><a>政务</a></li>
-              <li><a>生物基因</a></li>
-            </ul>
+        </div>
+        <div class="divider-v ghost"></div>
+        <div class="product_part">
+          <div class="products flex fd-c jc-between h-auto">
+            <div class="title flex">产品平台</div>
+            <div class="product_imgs flex line-2 ai-end">
+              <img src="assets/img/products1.png" />
+              <div class="divider-v ghost"></div>
+              <img src="assets/img/products2.png" />
+            </div>
           </div>
-          <div class="nav-item">
-            <input
-              class="foldable_menu"
-              id="navswtich4"
-              type="checkbox"
-              hidden
-            />
-            <label for="navswtich4">
-              <div class="nav-title flex">
-                <span>解决方案·WEB3.0</span>
-                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-              </div>
-            </label>
-
-            <ul>
-              <li><a>边缘计算</a></li>
-              <li><a>区块链</a></li>
-              <li><a>人工智能</a></li>
-            </ul>
+          <div class="gzh flex fd-c ai-end">
+            <div>关注公众号</div>
+            <img src="assets/img/qr_code.png" />
           </div>
-          <div class="nav-item">
-            <input
-              class="foldable_menu"
-              id="navswtich5"
-              type="checkbox"
-              hidden
-            />
-            <label for="navswtich5">
-              <div class="nav-title flex">
-                <span>ESG</span>
-                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-              </div>
-            </label>
-
-            <ul>
-              <li><a>社会责任</a></li>
-              <li><a>信任承诺</a></li>
-              <li><a>公司治理</a></li>
-            </ul>
-          </div>
-          <div class="nav-item">
-            <input
-              class="foldable_menu"
-              id="navswtich6"
-              type="checkbox"
-              hidden
-            />
-            <label for="navswtich6">
-              <div class="nav-title flex">
-                <span>关于我们</span>
-                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-              </div>
-            </label>
-
-            <ul>
-              <li><a>公司介绍</a></li>
-              <li><a>发展历程</a></li>
-              <li><a>新闻动态</a></li>
-              <li><a>人才招聘</a></li>
-              <li><a>联系方式</a></li>
-            </ul>
+        </div>
+        <div class="divider-v ghost"></div>
+        <div class="beian sub-unit flex fd-c jc-between h-auto">
+          <div class="flex ai-center"></div>
+          <div class="flex line-2">
+            <span>琼ICP备20000109号-1<br /> Copyright © 2013-2021 Anmai Cloud Rights Reserved.</span>
           </div>
         </div>
       </div>
-      <div class="bottom-part">
-        <div class="flex jc-between flex-1 pos-r">
-          <div class="contacts sub-unit flex fd-c jc-between h-auto">
-            <div class="flex">
-              <div class="flex ai-center">
-                <i class="fa iconfont icon-dianhua" aria-hidden="true"></i>
-                +86 898 3286 7007
-              </div>
-              <div class="divider-v"></div>
-              <div class="flex ai-center">
-                <i class="fa iconfont icon-youjian" aria-hidden="true"></i>
-                contact@AnmaiCloud.com
-              </div>
-            </div>
-            <div class="flex line-2">
-              <span
-                >地址：海南省省直辖县行政单位澄迈县老城镇高新技术产业示范区海南生态软件园A7幢二层3001</span
-              >
-            </div>
-          </div>
-          <div class="divider-v ghost"></div>
-
-          <div class="product_part">
-            <div class="products flex fd-c jc-between h-auto">
-              <div class="title flex">产品平台</div>
-              <div class="product_imgs flex line-2 ai-end">
-                <img src="assets/img/products1.png" />
-                <div class="divider-v ghost"></div>
-                <img src="assets/img/products2.png" />
-              </div>
-            </div>
-
-            <div class="gzh flex fd-c ai-end">
-              <div>关注公众号</div>
-              <img src="assets/img/qr_code.png" />
-            </div>
-          </div>
-
-          <div class="divider-v ghost"></div>
-          <div class="beian sub-unit flex fd-c jc-between h-auto">
-            <div class="flex ai-center"></div>
-            <div class="flex line-2">
-              <span
-                >琼ICP备20000109号-1<br />
-                Copyright © 2013-2021 Anmai Cloud Rights Reserved.</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script>
+    </div>
+  </footer>
+  <script>
       /////////STAGE4////////
       /////////白色的背景，左侧MENU切换////////一共三组元素
-    </script>
-
-    <script>
+  </script>
+  <script>
       //   var elements = document.querySelectorAll(".sticky")
       //   Stickyfill.add(elements)
-    </script>
-
-    <div class="overview">
-      <div class="mouse flex fd-c ai-center">
-        <span>scroll</span>
-        <div class="round flex jc-center">
-          <div class="dot"></div>
-        </div>
+  </script>
+  <div class="overview">
+    <div class="mouse flex fd-c ai-center">
+      <span>scroll</span>
+      <div class="round flex jc-center">
+        <div class="dot"></div>
       </div>
-      <header class="header1 header_light">
-        <div class="logo">&nbsp;</div>
-        <div class="right-part">
-          <input
-            id="langswtich"
-            class="langswtich foldable_menu"
-            type="checkbox"
-            hidden
-          />
-          <label for="langswtich" class="mobile">
-            <div class="lang_bt_mobile">
-              EN
-              <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-            </div>
-
-            <div class="langswtich_mask switch_mask"></div>
-          </label>
-
-          <ul class="lang-panel">
+    </div>
+    <header class="header1 header_light">
+      <div class="logo">&nbsp;</div>
+      <div class="right-part">
+        <input id="langswtich" class="langswtich foldable_menu" type="checkbox" hidden />
+        <label for="langswtich" class="mobile">
+          <div class="lang_bt_mobile"> EN <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+          </div>
+          <div class="langswtich_mask switch_mask"></div>
+        </label>
+        <ul class="lang-panel">
+          <li>
+            <a>
+              <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a>
+          </li>
+          <li class="selected">
+            <a>
+              <i class="fa iconfont icon-gou" aria-hidden="true"></i> English</a>
+          </li>
+        </ul>
+        <input id="menuswtich" type="checkbox" hidden />
+        <label for="menuswtich" class="mobile">
+          <div class="menu-btn">
+            <i class="fa iconfont icon-menu" aria-hidden="true"></i>
+          </div>
+          <div class="switch_mask"></div>
+        </label>
+        <div class="nav">
+          <ul>
+            <li class="active"><a>首页</a></li>
+            <li class="">
+              <a>产品 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+              </a>
+              <div class="submenu product_submenu">
+                <ul>
+                  <li>
+                    <a>
+                      <div class="icon">
+                        <img src="./assets/img/icons/products/云计算.png" />
+                      </div> 分布式数据中心
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <div class="icon">
+                        <img src="./assets/img/icons/products/分布式CDN.png" />
+                      </div> 分布式CDN
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <div class="icon">
+                        <img src="./assets/img/icons/products/矩阵存储.png" />
+                      </div> 矩阵存储
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <div class="icon">
+                        <img src="./assets/img/icons/products/云GPU.png" />
+                      </div> 云GPU
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             <li>
-              <a>
-                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
-                中文</a
-              >
+              <a>解决方案 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+              </a>
+              <div class="submenu solution_submenu">
+                <div class="submenu-unit">
+                  <div class="title">场景 Scenario</div>
+                  <ul>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/图层 5.png" />
+                        </div> 存储
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/图层 6.png" />
+                        </div> 容灾与备份
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/图层 7.png" />
+                        </div> 科学计算
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/图层 8.png" />
+                        </div> 安全计算
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/图层 9.png" />
+                        </div> 物理云
+                      </a>
+                    </li>
+<li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/图层 10.png" />
+                        </div> 内容分发
+
+                      </a>
+                    </li>
+<li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/图层 11.png" />
+                        </div> 机器学习
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+<div class="divider-v"></div>
+<div class="submenu-unit">
+                  <div class="title">行业 Industry</div>
+                  <ul>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/矢量智能对象.png" />
+                        </div> 人工智能
+
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/矢量智能对象 (1).png" />
+                        </div> 科研
+
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/矢量智能对象 (2).png" />
+                        </div> 大健康
+
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/矢量智能对象 (3).png" />
+                        </div> 政务
+
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/矢量智能对象 (4).png" />
+                        </div> 生物基因
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+<div class="divider-v"></div>
+<div class="submenu-unit">
+                  <div class="title">Web 3.0</div>
+                  <ul>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/矢量智能对象 (5).png" />
+                        </div> 边缘计算
+
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/矢量智能对象 (6).png" />
+                        </div> 区块链
+
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <div class="icon">
+                          <img src="./assets/img/icons/solutions/矢量智能对象 拷贝.png" />
+                        </div> 人工智能
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </li>
-            <li class="selected">
-              <a>
-                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
-                English</a
-              >
-            </li>
-          </ul>
-
-          <input id="menuswtich" type="checkbox" hidden />
-          <label for="menuswtich" class="mobile">
-            <div class="menu-btn">
-              <i class="fa iconfont icon-menu" aria-hidden="true"></i>
-            </div>
-
-            <div class="switch_mask"></div>
-          </label>
-
-          <div class="nav">
-            <ul>
-              <li class="active"><a>首页</a></li>
-
-              <li class="">
-                <a
-                  >产品
-                  <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-                </a>
-                <ul>
-                  <li>
-                    <a
-                      ><div class="icon">
-                        <img src="./assets/img/云计算.png" />
-                      </div>
-                      分布式数据中心</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      ><div class="icon">
-                        <img src="./assets/img/云计算.png" />
-                      </div>
-                      分布式CDN</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      ><div class="icon">
-                        <img src="./assets/img/矩阵存储.png" />
-                      </div>
-                      矩阵存储
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      ><div class="icon">
-                        <img src="./assets/img/云GPU.png" />
-                      </div>
-                      云GPU
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a
-                  >解决方案
-                  <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-                </a>
-                <ul>
-                  <li>
-                    <a
-                      ><div class="icon">
-                        <img src="./assets/img/云计算.png" />
-                      </div>
-                      方案1</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      ><div class="icon">
-                        <img src="./assets/img/云计算.png" />
-                      </div>
-                      方案2</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      ><div class="icon">
-                        <img src="./assets/img/云计算.png" />
-                      </div>
-                      方案3</a
-                    >
-                  </li>
-                </ul>
-              </li>
-
-              <!-- <li>
+            <!-- <li>
                   <a
                     >ESG
                     <i class="fa iconfont icon-Down" aria-hidden="true"></i>
@@ -1677,218 +1624,216 @@ ${
                 </ul>
               </li>
               <li><a>投资者关系</a></li> -->
-              <li><a>关于我们</a></li>
-            </ul>
-          </div>
-          <label for="langswtich" class="not_mobile">
-            <div class="lang_bt">
-              <i class="fa iconfont icon-yuyan" aria-hidden="true"></i>
-              English
-            </div>
-            <div class="langswtich_mask switch_mask"></div>
-          </label>
+            <li><a>关于我们</a></li>
+          </ul>
         </div>
-      </header>
-    </div>
-    <!-- <div class="controls">
+        <label for="langswtich" class="not_mobile">
+          <div class="lang_bt">
+            <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> English
+          </div>
+          <div class="langswtich_mask switch_mask"></div>
+        </label>
+      </div>
+    </header>
+  </div>
+  <!-- <div class="controls">
       <div onclick="myvideo.pause()">pause</div>
       <div onclick="myvideo.play()">play</div>
     </div> -->
-
-    <script>
-      var nice = undefined
-      $(function () {
-        nice = $("body").niceScroll({
-          cursorborder: "1px solid rgb(80,80,80,0.4)",
-        })
-
-        ////////////////header
-
-        gsap.fromTo(
-          ".header1",
-          50,
-          {},
-          {
-            scrollTrigger: {
-              trigger: ".stage1",
-              //   pin: true, // pin the trigger element while active
-              //   pinSpacing: false,
-              start: "top top", // when the top of the trigger hits the top of the viewport
-              end: "+=50", // end after scrolling 500px beyond the start
-              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              markers: false,
-              onEnter: function () {
-                $(".header1").addClass("header_light")
-                $(".header1").addClass("state3")
-                $(".header1").removeClass("state2")
-              },
-              onLeave: function () {
-                $(".header1").addClass("state2")
-                $(".header1").removeClass("state3")
-              },
-            },
-          }
-        )
-
-        /////header退去
-
-        gsap.fromTo(
-          ".header1",
-          1 * window.innerHeight,
-          {},
-          {
-            scrollTrigger: {
-              trigger: ".stage2",
-              // pin: true, // pin the trigger element while active
-              // pinSpacing: false,
-              start: "-=" + 2 * window.innerHeight, // when the top of the trigger hits the top of the viewport
-              end: "+=" + window.innerHeight, // end after scrolling 500px beyond the start
-              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              // markers: true,
-              id: "1111123123",
-              onEnter: function () {
-                $(".header1").removeClass("state1")
-                $(".header1").removeClass("state2")
-                $(".header1").removeClass("state3")
-              },
-              onEnterBack: function () {
-                $(".header1").removeClass("state1")
-                $(".header1").removeClass("state2")
-                $(".header1").removeClass("state3")
-              },
-              onUpdate: function (self) {
-                $(".header1").css({
-                  transform: `translateY(${
-                    window.innerHeight * self.progress * -1
-                  }px)`,
-                })
-              },
-            },
-          }
-        )
-
-        // gsap.fromTo(
-        //   ".header1",
-        //   100,
-        //   {},
-        //   {
-        //     scrollTrigger: {
-        //       trigger: ".stage2",
-        //       //   pin: true, // pin the trigger element while active
-        //       //   pinSpacing: false,
-        //       start: "-=100", // when the top of the trigger hits the top of the viewport
-        //       end: "top bottom", // end after scrolling 500px beyond the start
-        //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-        //       markers: false,
-        //       id: "hhhhhhh",
-        //       onEnter: function () {
-        //         // $(".header1").addClass("state3")
-        //         // $(".header1").removeClass("state2")
-        //       },
-
-        //       onEnterBack: function () {
-        //         $(".header1").addClass("header_light")
-        //         $(".header1").removeClass("header_dark")
-        //         // $(".header1").removeClass("floated")
-        //       },
-
-        //       onLeave: function () {
-        //         $(".header1").removeClass("header_light")
-        //         $(".header1").addClass("header_dark")
-        //         // $(".header1").addClass("floated")
-        //       },
-        //       onLeaveBack: function () {
-        //         // $(".header1").addClass("state2")
-        //         // $(".header1").removeClass("state3")
-        //       },
-        //     },
-        //   }
-        // )
-
-        // gsap.fromTo(
-        //   ".header1",
-        //   1 * window.innerHeight,
-        //   {},
-        //   {
-        //     scrollTrigger: {
-        //       trigger: ".stage3",
-        //       // pin: true, // pin the trigger element while active
-        //       // pinSpacing: false,
-        //       start: "+=" + 3 * window.innerHeight, // when the top of the trigger hits the top of the viewport
-        //       end: "+=" + window.innerHeight, // end after scrolling 500px beyond the start
-        //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-        //       // markers: true,
-        //       id: "hhhhhhh12312",
-        //       onEnter: function () {
-        //         $(".header1").removeClass("state1")
-        //         $(".header1").removeClass("state2")
-        //         $(".header1").removeClass("state3")
-        //       },
-        //       onEnterBack: function () {
-        //         $(".header1").removeClass("state1")
-        //         $(".header1").removeClass("state2")
-        //         $(".header1").removeClass("state3")
-        //       },
-        //       onUpdate: function (self) {
-        //         $(".header1").css({
-        //           transform: `translateY(${
-        //             window.innerHeight * self.progress * -1
-        //           }px)`,
-        //         })
-        //       },
-        //       // onEnter: function () {
-        //       //   $(".header1").addClass("state3")
-        //       //   $(".header1").removeClass("state2")
-        //       // },
-
-        //       // onEnterBack: function () {
-        //       //   $(".header1").addClass("header_light")
-        //       //   $(".header1").removeClass("header_dark")
-        //       //   // $(".header1").removeClass("floated")
-        //       // },
-
-        //       // onLeave: function () {
-        //       //   $(".header1").removeClass("header_light")
-        //       //   $(".header1").addClass("header_dark")
-        //       //   // $(".header1").addClass("floated")
-        //       // },
-        //       // onLeaveBack: function () {
-        //       //   $(".header1").addClass("state2")
-        //       //   $(".header1").removeClass("state3")
-        //       // },
-        //     },
-        //   }
-        // )
-
-        // gsap.fromTo(
-        //   ".header1",
-        //   100,
-        //   {},
-        //   {
-        //     scrollTrigger: {
-        //       trigger: ".stage3",
-        //       //   pin: true, // pin the trigger element while active
-        //       //   pinSpacing: false,
-        //       start: "top top", // when the top of the trigger hits the top of the viewport
-        //       end: "+=100", // end after scrolling 500px beyond the start
-        //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-        //       markers: false,
-        //       id: "mmmmmm",
-        //       onEnter: function () {
-        //         $(".header1").addClass("state2")
-        //         $(".header1").removeClass("state3")
-        //       },
-
-        //       onEnterBack: function () {
-        //         $(".header1").addClass("state3")
-        //         $(".header1").removeClass("state2")
-        //       },
-        //     },
-        //   }
-        // )
-
-        // $(nice.autohidedom).addClass("hide")
+  <script>
+    var nice = undefined
+    $(function () {
+      nice = $("body").niceScroll({
+        cursorborder: "1px solid rgb(80,80,80,0.4)",
       })
-    </script>
-  </body>
+
+      ////////////////header
+
+      gsap.fromTo(
+        ".header1",
+        50,
+        {},
+        {
+          scrollTrigger: {
+            trigger: ".stage1",
+            //   pin: true, // pin the trigger element while active
+            //   pinSpacing: false,
+            start: "top top", // when the top of the trigger hits the top of the viewport
+            end: "+=50", // end after scrolling 500px beyond the start
+            scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+            markers: false,
+            onEnter: function () {
+              $(".header1").addClass("header_light")
+              $(".header1").addClass("state3")
+              $(".header1").removeClass("state2")
+            },
+            onLeave: function () {
+              $(".header1").addClass("state2")
+              $(".header1").removeClass("state3")
+            },
+          },
+        }
+      )
+
+      /////header退去
+
+      gsap.fromTo(
+        ".header1",
+        1 * window.innerHeight,
+        {},
+        {
+          scrollTrigger: {
+            trigger: ".stage2",
+            // pin: true, // pin the trigger element while active
+            // pinSpacing: false,
+            start: "-=" + 2 * window.innerHeight, // when the top of the trigger hits the top of the viewport
+            end: "+=" + window.innerHeight, // end after scrolling 500px beyond the start
+            scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+            // markers: true,
+            id: "1111123123",
+            onEnter: function () {
+              $(".header1").removeClass("state1")
+              $(".header1").removeClass("state2")
+              $(".header1").removeClass("state3")
+            },
+            onEnterBack: function () {
+              $(".header1").removeClass("state1")
+              $(".header1").removeClass("state2")
+              $(".header1").removeClass("state3")
+            },
+            onUpdate: function (self) {
+              $(".header1").css({
+                transform: `translateY(${window.innerHeight * self.progress * -1
+                  }px)`,
+              })
+            },
+          },
+        }
+      )
+
+      // gsap.fromTo(
+      //   ".header1",
+      //   100,
+      //   {},
+      //   {
+      //     scrollTrigger: {
+      //       trigger: ".stage2",
+      //       //   pin: true, // pin the trigger element while active
+      //       //   pinSpacing: false,
+      //       start: "-=100", // when the top of the trigger hits the top of the viewport
+      //       end: "top bottom", // end after scrolling 500px beyond the start
+      //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      //       markers: false,
+      //       id: "hhhhhhh",
+      //       onEnter: function () {
+      //         // $(".header1").addClass("state3")
+      //         // $(".header1").removeClass("state2")
+      //       },
+
+      //       onEnterBack: function () {
+      //         $(".header1").addClass("header_light")
+      //         $(".header1").removeClass("header_dark")
+      //         // $(".header1").removeClass("floated")
+      //       },
+
+      //       onLeave: function () {
+      //         $(".header1").removeClass("header_light")
+      //         $(".header1").addClass("header_dark")
+      //         // $(".header1").addClass("floated")
+      //       },
+      //       onLeaveBack: function () {
+      //         // $(".header1").addClass("state2")
+      //         // $(".header1").removeClass("state3")
+      //       },
+      //     },
+      //   }
+      // )
+
+      // gsap.fromTo(
+      //   ".header1",
+      //   1 * window.innerHeight,
+      //   {},
+      //   {
+      //     scrollTrigger: {
+      //       trigger: ".stage3",
+      //       // pin: true, // pin the trigger element while active
+      //       // pinSpacing: false,
+      //       start: "+=" + 3 * window.innerHeight, // when the top of the trigger hits the top of the viewport
+      //       end: "+=" + window.innerHeight, // end after scrolling 500px beyond the start
+      //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      //       // markers: true,
+      //       id: "hhhhhhh12312",
+      //       onEnter: function () {
+      //         $(".header1").removeClass("state1")
+      //         $(".header1").removeClass("state2")
+      //         $(".header1").removeClass("state3")
+      //       },
+      //       onEnterBack: function () {
+      //         $(".header1").removeClass("state1")
+      //         $(".header1").removeClass("state2")
+      //         $(".header1").removeClass("state3")
+      //       },
+      //       onUpdate: function (self) {
+      //         $(".header1").css({
+      //           transform: `translateY(${
+      //             window.innerHeight * self.progress * -1
+      //           }px)`,
+      //         })
+      //       },
+      //       // onEnter: function () {
+      //       //   $(".header1").addClass("state3")
+      //       //   $(".header1").removeClass("state2")
+      //       // },
+
+      //       // onEnterBack: function () {
+      //       //   $(".header1").addClass("header_light")
+      //       //   $(".header1").removeClass("header_dark")
+      //       //   // $(".header1").removeClass("floated")
+      //       // },
+
+      //       // onLeave: function () {
+      //       //   $(".header1").removeClass("header_light")
+      //       //   $(".header1").addClass("header_dark")
+      //       //   // $(".header1").addClass("floated")
+      //       // },
+      //       // onLeaveBack: function () {
+      //       //   $(".header1").addClass("state2")
+      //       //   $(".header1").removeClass("state3")
+      //       // },
+      //     },
+      //   }
+      // )
+
+      // gsap.fromTo(
+      //   ".header1",
+      //   100,
+      //   {},
+      //   {
+      //     scrollTrigger: {
+      //       trigger: ".stage3",
+      //       //   pin: true, // pin the trigger element while active
+      //       //   pinSpacing: false,
+      //       start: "top top", // when the top of the trigger hits the top of the viewport
+      //       end: "+=100", // end after scrolling 500px beyond the start
+      //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      //       markers: false,
+      //       id: "mmmmmm",
+      //       onEnter: function () {
+      //         $(".header1").addClass("state2")
+      //         $(".header1").removeClass("state3")
+      //       },
+
+      //       onEnterBack: function () {
+      //         $(".header1").addClass("state3")
+      //         $(".header1").removeClass("state2")
+      //       },
+      //     },
+      //   }
+      // )
+
+      // $(nice.autohidedom).addClass("hide")
+    })
+  </script>
+</body>
+
 </html>
