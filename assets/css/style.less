@@ -252,9 +252,9 @@ body {
     opacity: 0;
   }
   .title3 {
-    height: 90%;
+    height: 100%;
     top: 0;
-    padding-top: 10%;
+    // padding-top: 10%;
 
     overflow: hidden;
     .inner_scroll_warpper {
@@ -290,16 +290,21 @@ body {
         }
 
         .sub_part_content {
-          display: flex;
-          justify-content: space-between;
+          // display: flex;
+          // justify-content: space-between;
+          display: grid;
+          grid-template-areas: "a a";
+          grid-auto-columns: 1fr 1fr;
+          grid-gap: 94px;
+
           .sub_part_content_item {
             display: flex;
             flex-direction: column;
             flex: 1;
             overflow: hidden;
-            &:first-child {
-              margin-right: 94px;
-            }
+            // &:first-child {
+            //   margin-right: 94px;
+            // }
 
             .sub_part_content_item_img {
               margin-bottom: 57px;

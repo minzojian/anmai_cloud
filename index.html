@@ -123,53 +123,121 @@
 
         <div class="title3_mask"></div>
         <div class="page_content title_part title3 state1">
-          <div class="inner_scroll_warpper">
-            <div class="sub_part">
+          <div class="inner_scroll_warpper"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /////////STAGE1/////////
+      ////////初始视频播放，同时可能会存在按钮////
+      $.get("http://ixiezhi.vicp.cc/amyos/news/company_dynamic").then(
+        function (data) {
+          // console.log(data)
+setMileStones(data)
+        }
+      )
+
+function setMileStones(data){
+      window.meilestoneData = data||window.meilestoneData || [
+        {
+          year: "2021",
+          records: [
+            {
+              month: "07",
+              items: [
+                {
+                  id: "Z00096e73",
+                  pic: "https://xnmatrix.oss-cn-hangzhou.aliyuncs.com/微信图片_202107061814011625792742.png",
+                  title: "分布式智囊团首期对话，安迈云与行业共话云安全的新选择",
+                },
+                {
+                  id: "Z00096e75",
+                  pic: "https://xnmatrix.oss-cn-hangzhou.aliyuncs.com/微信图片_202107091144581625807577.jpg",
+                  title: "安迈云矩阵存储携手中经天平，强化电子证据防篡改能力",
+                },
+                {
+                  id: "T00096e71",
+                  pic: "https://xnmatrix.oss-cn-hangzhou.aliyuncs.com/微信图片_202107060951041625567765.jpg",
+                  title:
+                    "安迈云正式成为中国开源云联盟成员，为去中心化云计算贡献力量",
+                },
+              ],
+            },
+            {
+              month: "06",
+              items: [
+                {
+                  id: "R00096e6f",
+                  pic: "https://xnmatrix.oss-cn-hangzhou.aliyuncs.com/微信图片_202106281002421624845786.png",
+                  title:
+                    "《新一代云计算技术洞察报告》正式发布，安迈云被引用为Web3.0云计算典型案例",
+                },
+                {
+                  id: "U00096e6b",
+                  pic: "https://xnmatrix.oss-cn-hangzhou.aliyuncs.com/31623288048.jpg",
+                  title: "CDN峰会丨安迈云以去中心化云计算抢先步入Web3.0时代",
+                },
+                {
+                  id: "U00096e6b",
+                  pic: "https://xnmatrix.oss-cn-hangzhou.aliyuncs.com/31623288048.jpg",
+                  title: "CDN峰会丨安迈云以去中心化云计算抢先步入Web3.0时代",
+                },
+              ],
+            },
+          ],
+        },
+      ]
+
+
+      window.meilestoneData.forEach(function (yearData, yindex) {
+        yearData.records.forEach(function (monthData, mIndex) {
+          $(".inner_scroll_warpper").append(
+            `<div class="sub_part">
               <div class="left-part">
                 <div class="divider"></div>
-                <div class="sub_part_title">
+                ${
+                  yindex == 0 && mIndex == 0
+                    ? `<div class="sub_part_title">
                   <span>企业里程碑</span>
                   <span>milestone</span>
-                </div>
+                </div>`
+                    : ``
+                }
+
                 <div class="sub_part_content">
-                  <div class="sub_part_content_item">
+${monthData.items
+  .map(function (recData, rindex) {
+    return `<div class="sub_part_content_item">
+
                     <img
                       class="sub_part_content_item_img"
-                      src="assets/img/图层 502.png"
+                      src="${recData.pic}"
                     />
                     <div class="sub_part_content_item_caption">
                       <span
-                        >安迈云受邀出席2021软件定义存储峰会，推动分布式存储与计算应用落地</span
+                        >${recData.title}</span
                       >
-                      <div class="round_btn btn-with-arrow">
+                      <a href="${recData.link}"><div class="round_btn btn-with-arrow">
                         <i
                           class="fa iconfont icon-youjiantou"
                           aria-hidden="true"
                         ></i>
-                      </div>
+                      </div></a>
                     </div>
-                  </div>
-                  <div class="sub_part_content_item">
-                    <img
-                      class="sub_part_content_item_img"
-                      src="assets/img/图层 507.png"
-                    />
-                    <div class="sub_part_content_item_caption">
-                      <span
-                        >安迈云出席Web3.0云响力峰会，与一线云厂商共话分布式计算未来</span
-                      >
-                      <div class="round_btn btn-with-arrow">
-                        <i
-                          class="fa iconfont icon-youjiantou"
-                          aria-hidden="true"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
+                  </div>`
+  })
+  .join("")}
+
+                 
+                 
                 </div>
               </div>
               <div class="right-part">
-                <svg
+
+${
+  mIndex == 0
+    ? `<svg
                   class="year"
                   xmlns="http://www.w3.org/2000/svg"
                   width="270px"
@@ -189,9 +257,12 @@
                     fill="none"
                     style="transform: translateY(calc(100% - 4px))"
                   >
-                    2021
+                    ${yearData.year}
                   </text>
-                </svg>
+                </svg>`
+    : ``
+}
+                
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -212,146 +283,15 @@
                     fill="none"
                     style="transform: translateY(calc(100% - 4px))"
                   >
-                    05
+                    ${monthData.month}
                   </text>
                 </svg>
               </div>
-            </div>
-            <div class="sub_part">
-              <div class="left-part">
-                <div class="divider"></div>
-                <div class="sub_part_content">
-                  <div class="sub_part_content_item">
-                    <img
-                      class="sub_part_content_item_img"
-                      src="assets/img/图层 502.png"
-                    />
-                    <div class="sub_part_content_item_caption">
-                      <span>《安迈云链接世界名校》专题系列活动正式上线</span>
-                      <div class="round_btn btn-with-arrow">
-                        <i
-                          class="fa iconfont icon-youjiantou"
-                          aria-hidden="true"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="sub_part_content_item">
-                    <img
-                      class="sub_part_content_item_img"
-                      src="assets/img/图层 507.png"
-                    />
-                    <div class="sub_part_content_item_caption">
-                      <span>安迈云矩阵存储Matrix Storage上线</span>
-                      <div class="round_btn btn-with-arrow">
-                        <i
-                          class="fa iconfont icon-youjiantou"
-                          aria-hidden="true"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="right-part">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="270px"
-                  height="92px"
-                  viewBox="0 0 330 100"
-                >
-                  <defs>
-                    <linearGradient id="gradient" y1="0" y2="1">
-                      <stop stop-color="#74d9b4" offset="0"></stop>
-                      <stop stop-color="#5aa1d8" offset="1"></stop>
-                    </linearGradient>
-                  </defs>
-                  <text
-                    class="side-title"
-                    stroke-width="2"
-                    stroke="url(#gradient)"
-                    fill="none"
-                    style="transform: translateY(calc(100% - 4px))"
-                  >
-                    04
-                  </text>
-                </svg>
-              </div>
-            </div>
-            <div class="sub_part">
-              <div class="left-part">
-                <div class="divider"></div>
-                <div class="sub_part_content">
-                  <div class="sub_part_content_item">
-                    <img
-                      class="sub_part_content_item_img"
-                      src="assets/img/图层 502.png"
-                    />
-                    <div class="sub_part_content_item_caption">
-                      <span
-                        >安迈云主办“云领风潮-安迈云品牌交流会”，并加入GDCA全球分布式云联盟</span
-                      >
-                      <div class="round_btn btn-with-arrow">
-                        <i
-                          class="fa iconfont icon-youjiantou"
-                          aria-hidden="true"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="sub_part_content_item">
-                    <img
-                      class="sub_part_content_item_img"
-                      src="assets/img/图层 507.png"
-                    />
-                    <div class="sub_part_content_item_caption">
-                      <span
-                        >安迈云与中科曙光、乐讯科技签署EiB级存储战略合作协议</span
-                      >
-                      <div class="round_btn btn-with-arrow">
-                        <i
-                          class="fa iconfont icon-youjiantou"
-                          aria-hidden="true"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="right-part">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="270px"
-                  height="92px"
-                  viewBox="0 0 330 100"
-                >
-                  <defs>
-                    <linearGradient id="gradient" y1="0" y2="1">
-                      <stop stop-color="#74d9b4" offset="0"></stop>
-                      <stop stop-color="#5aa1d8" offset="1"></stop>
-                    </linearGradient>
-                  </defs>
-                  <text
-                    class="side-title"
-                    stroke-width="2"
-                    stroke="url(#gradient)"
-                    fill="none"
-                    style="transform: translateY(calc(100% - 4px))"
-                  >
-                    03
-                  </text>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      /////////STAGE1/////////
-      ////////初始视频播放，同时可能会存在按钮////
-
+            </div>`
+          )
+        })
+      })
+}
       myvideo.src = isPhone
         ? "assets/media/stage1_mobile.mp4"
         : "assets/media/stage1.mp4"
@@ -732,51 +672,65 @@
           }
         )
 
-        var tween2 = createTimeline()
-        tween2.add([
-          createTween(
-            ".title3", // { v: 0 },
-            window.innerHeight,
-            {
-              scrollTo: 0,
-              //  translateY: 30, opacity: 0
-            },
-            {
-              // delay: 5.5 * window.innerHeight,
-              // v: $(".inner_scroll_warpper").height() - $(".title3").height(),
-              scrollTo:
-                $(".inner_scroll_warpper").height() - $(".title3").height(),
-              // translateY: 0,
-              // opacity: 1,
-              // ease: Linear.easeNone,
-              immediateRender: false,
-              onUpdate: function () {
-                // console.log(
-                //   // this.targets()[0].v,
-                //   $(".title3").get(0).scrollTop,
-                //   "vvvvvv"
-                // )
-                // gsap.to(".title3", 0.6, { scrollTo: this.targets()[0].v })
-              },
-            }
-          ),
-        ])
+        // var tween2 = createTimeline()
+        // tween2.add([
+        //   createTween(
+        //     ".title3", // { v: 0 },
+        //     window.innerHeight,
+        //     {
+        //       // scrollTo: 0,
+        //       //  translateY: 30, opacity: 0
+        //     },
+        //     {
+        //       // delay: 5.5 * window.innerHeight,
+        //       // v: $(".inner_scroll_warpper").height() - $(".title3").height(),
+        //       // scrollTo:
+        //       //   $(".inner_scroll_warpper").height() - $(".title3").height(),
+        //       // translateY: 0,
+        //       // opacity: 1,
+        //       // ease: Linear.easeNone,
+        //       immediateRender: false,
+        //       onUpdate: function (self) {
+        //         $(".title3").get(0).scrollTop =
+        //           ($(".inner_scroll_warpper").height() -
+        //             $(".title3").height()) *
+        //           self.progress
+        //         // console.log(
+        //         //   // this.targets()[0].v,
+        //         //   $(".title3").get(0).scrollTop,
+        //         //   "vvvvvv"
+        //         // )
+        //         // gsap.to(".title3", 0.6, { scrollTo: this.targets()[0].v })
+        //       },
+        //     }
+        //   ),
+        // ])
         // tween2.add([gsap.to("body", window.innerHeight, {})])
 
-        gsap
-          .timeline({
-            // yes, we can add it to an entire timeline!
-            scrollTrigger: {
-              trigger: ".stage1",
-              //pin: true, // pin the trigger element while active
-              start: getScrollYByVideo(20).top, // when the top of the trigger hits the top of the viewport
-              end: getScrollYByVideo(20).top + window.innerHeight, // end after scrolling 500px beyond the start
-              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              markers: false,
-              id: "ttttt",
+        gsap.timeline({
+          // yes, we can add it to an entire timeline!
+          scrollTrigger: {
+            trigger: ".stage1",
+            //pin: true, // pin the trigger element while active
+            start: getScrollYByVideo(20).top, // when the top of the trigger hits the top of the viewport
+            end: getScrollYByVideo(20).top + window.innerHeight, // end after scrolling 500px beyond the start
+            scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+            markers: false,
+            id: "ttttt",
+            onUpdate: function (self) {
+              $(".title3").get(0).scrollTop =
+                ($(".inner_scroll_warpper").height() - $(".title3").height()) *
+                self.progress
+              // console.log(
+              //   // this.targets()[0].v,
+              //   $(".title3").get(0).scrollTop,
+              //   "vvvvvv"
+              // )
+              // gsap.to(".title3", 0.6, { scrollTo: this.targets()[0].v })
             },
-          })
-          .add(tween2)
+          },
+        })
+        // .add(tween2)
 
         // var scene2 = new ScrollMagic.Scene({
         //   triggerHook: "0",
