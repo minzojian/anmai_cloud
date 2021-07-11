@@ -248,7 +248,7 @@
       </div>
     </header>
         <!-- main -->
-        <div class="banner">
+        <div class="section  banner">
             <div class="wrapper">
                 <div class="slogan">
                     <h1 class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0">解决方案 <img
@@ -260,8 +260,8 @@
                 <div class="emptybox"></div>
             </div>
         </div>
-        <div class="nav-height" id="navHeight">
-            <nav class="nav-wrap" id="nav-wrap">
+        <div class="section nav-height" id="navHeight">
+            <nav class="wrapper nav-wrap" id="nav-wrap">
                 <div class="nav-mobile">Click</div>
                 <ul class="clearfix">
                     <li><a class="active" href="#section1"><img class="icon" src="./assets/img/solution/图层 5.png"
@@ -281,7 +281,7 @@
                 </ul>
             </nav>
         </div>
-        <div id="section1" class="section-content ">
+        <div id="section1" class="section section-content  ">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -334,7 +334,7 @@
                 </div>
             </div>
         </div>
-        <div id="section2" class="section-content">
+        <div id="section2" class="section section-content ">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -386,7 +386,7 @@
                 </div>
             </div>
         </div>
-        <div id="section3" class="section-content">
+        <div id="section3" class="section section-content ">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -439,7 +439,7 @@
                 </div>
             </div>
         </div>
-        <div id="section4" class="section-content">
+        <div id="section4" class="section section-content ">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -493,7 +493,7 @@
                 </div>
             </div>
         </div>
-        <div id="section5" class="section-content">
+        <div id="section5" class="section section-content ">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -544,7 +544,7 @@
                 </div>
             </div>
         </div>
-        <div id="section6" class="section-content">
+        <div id="section6" class="section section-content ">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -583,7 +583,7 @@
 
             </div>
         </div>
-        <div id="section7" class="section-content">
+        <div id="section7" class="section section-content ">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -634,8 +634,8 @@
                 </div>
             </div>
         </div>
-        <div id="section8" class="section-content">
-            <div class="flex_center">
+        <div id="section8" class="section section-content ">
+            <div class="wrapper flex_center">
                 <div class="left">
                     <img src="./assets/img/solution/HELLO.png" alt="">
                     <h2>与安迈云解决方案专家沟通</h2>
@@ -881,7 +881,7 @@
         <div class="product_part">
           <div class="products flex fd-c jc-between h-auto">
             <div class="title flex">产品平台</div>
-            <div class="product_imgs flex line-2 ai-end">
+            <div class="product_imgs flex line-2 ai-start">
               <img src="assets/img/products1.png" />
               <div class="divider-v ghost"></div>
               <img src="assets/img/products2.png" />
@@ -947,11 +947,21 @@
 
 
         //内容信息导航锚点
-        $(".nav-wrap").navScroll({
-            mobileDropdown: true,
-            mobileBreakpoint: 768,
-            scrollSpy: true,
-        })
+        // $(".nav-wrap").navScroll({
+        //     mobileDropdown: true,
+        //     mobileBreakpoint: 768,
+        //     scrollSpy: true,
+
+        // })
+
+
+ $(".nav-wrap a").on("click",function(e){
+$(".nav-wrap a").removeClass('active');
+$(e.target).addClass('active');
+$($(e.target).prop("href").slice($(e.target).prop("href").lastIndexOf("#"))).get(0).scrollIntoView({behavior:'smooth'})
+e.preventDefault();
+})
+
 
         $(".click-me").navScroll({
             navHeight: 0,

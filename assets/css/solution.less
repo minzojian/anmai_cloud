@@ -14,6 +14,13 @@ body {
   color: #fff !important;
 }
 
+.section .wrapper {
+  width: min(88%, 1440px);
+  max-width: 1440px;
+  margin-left: calc(calc(100% - min(88%, 1440px)) / 2);
+  overflow: hidden;
+}
+
 .banner {
   height: 760px;
   background: url("../img/solution/banner.png") no-repeat center;
@@ -23,9 +30,9 @@ body {
   align-items: center;
 
   .wrapper {
-    max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
+    // max-width: 1400px;
+    // width: 100%;
+    // margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -102,8 +109,9 @@ body {
   position: relative;
   /* top: -40px; */
   /* margin-top: -40px; */
-  width: 1399px;
-  margin: -40px auto 0;
+  //   width: 1399px;
+  //   margin: -40px auto 0;
+  margin-top: -40px;
   z-index: 9;
 
   .nav-wrap {
@@ -121,14 +129,15 @@ body {
 
       li {
         display: inline-block;
-        text-align: left;
+        text-align: center;
         height: 80px;
         line-height: 80px;
         /* float: left; */
-        width: 200px;
+        // width: 200px;
         text-align: center;
 
         a {
+          //   width: 100%;
           display: block;
           padding: 0 20px;
           color: #818f9a;
@@ -139,6 +148,11 @@ body {
           font-size: 16px;
           font-family: OPPOSans;
           font-weight: bold;
+          border-radius: 40px;
+
+          margin: 10px 0;
+          line-height: 1;
+          height: calc(100% - 20px);
 
           .icon {
             width: 19px;
@@ -154,7 +168,10 @@ body {
       }
 
       li a.active {
-        background: url("../img/solution/nab_active_bg.png");
+        // background: url("../img/solution/nab_active_bg.png");
+
+        background: linear-gradient(45deg, rgb(79 162 225), rgb(72 211 180));
+
         color: #fff;
       }
     }
@@ -163,10 +180,10 @@ body {
   .nav-wrap.navFix {
     position: fixed;
     top: 20px;
-    left: 50%;
+    // left: 50%;
     box-shadow: 0px 0px 59px 0px rgba(25, 36, 45, 0.05);
     z-index: 99999;
-    margin-left: -699.5px;
+    // margin-left: -699.5px;
   }
 
   .nav-wrap.navFix ul {
@@ -176,7 +193,10 @@ body {
 
 #section1 {
   width: 100%;
-  padding: 140px 0 205px 0;
+  .wrapper {
+    padding-top: 140px;
+    padding-bottom: 205px;
+  }
   background: linear-gradient(
     180deg,
     rgba(151, 160, 178, 0.23),
@@ -187,7 +207,10 @@ body {
 
 #section2 {
   width: 100%;
-  padding: 115px 0 198px 0;
+  .wrapper {
+    padding-top: 115px;
+    padding-bottom: 198px;
+  }
   background: #fff;
 
   .wrapper .bottom {
@@ -197,7 +220,10 @@ body {
 
 #section3 {
   width: 100%;
-  padding: 113px 0 154px 0;
+  .wrapper {
+    padding-top: 113px;
+    padding-bottom: 154px;
+  }
   background: linear-gradient(
     180deg,
     rgba(151, 160, 178, 0.23),
@@ -211,7 +237,10 @@ body {
 
 #section4 {
   width: 100%;
-  padding: 115px 0 199px 0;
+  .wrapper {
+    padding-top: 115px;
+    padding-bottom: 199px;
+  }
   background: #ffffff;
 
   .wrapper .bottom {
@@ -231,7 +260,11 @@ body {
 
 #section5 {
   width: 100%;
-  padding: 71px 0 154px 0;
+
+  .wrapper {
+    padding-top: 71px;
+    padding-bottom: 154px;
+  }
   background: linear-gradient(
     180deg,
     rgba(151, 160, 178, 0.23),
@@ -251,7 +284,11 @@ body {
 #section6 {
   background: #ffffff;
   width: 100%;
-  padding: 124px 0 187px 0;
+
+  .wrapper {
+    padding-top: 124px;
+    padding-bottom: 187px;
+  }
   .wrapper .mid .ietms {
     width: 361px;
   }
@@ -269,7 +306,12 @@ body {
     rgba(238, 241, 246, 0.23)
   );
   width: 100%;
-  padding: 166px 0 154px 0;
+
+  .wrapper {
+    padding-top: 166px;
+    padding-bottom: 154px;
+  }
+
   .flex_between .left_tit .text {
     line-height: 1;
     margin-top: 56px;
@@ -300,9 +342,9 @@ body {
   .flex_center {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
+    // width: 100%;
+    // max-width: 1400px;
+    // margin: 0 auto;
     align-items: flex-end;
 
     .left {
@@ -370,9 +412,9 @@ body {
 
 .section-content {
   .wrapper {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
+    // width: 100%;
+    // max-width: 1400px;
+    // margin: 0 auto;
 
     .top {
       border-bottom: 1px solid #d7dce4;
@@ -657,4 +699,14 @@ body {
   transform: translateY(-37px);
   transition-delay: 0.1s;
   font-size: 14px;
+}
+
+@media screen and (min-width: 750px) and (max-width: 1440px) {
+  .nav-height {
+    ul li {
+      .icon {
+        display: none !important;
+      }
+    }
+  }
 }

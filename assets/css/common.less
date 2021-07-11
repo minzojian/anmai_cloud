@@ -308,7 +308,7 @@ footer {
   font-weight: 400;
   font-size: 14px;
 
-  height: 644px;
+  min-height: 644px;
   padding: 85px 64px 100px 64px;
   box-sizing: border-box;
   background: black;
@@ -332,7 +332,7 @@ footer {
     .right-part {
       display: flex;
       justify-content: space-between;
-      width: 50%;
+      // width: 50%;
       .nav-item {
         .nav-title {
           color: #737373;
@@ -386,6 +386,11 @@ footer {
       .title {
         font-size: 12px;
         color: #7e7e7e;
+      }
+      .product_imgs {
+        img {
+          width: fit-content;
+        }
       }
     }
 
@@ -638,6 +643,18 @@ input:checked + label {
 @media screen and (min-width: 750px) and (max-width: 1440px) {
   header .right-part > .nav li {
     margin-right: 40px;
+  }
+  footer {
+    .contacts > .flex {
+      flex-direction: column;
+    }
+
+    .products .product_imgs {
+      flex-direction: column;
+      img:nth-child(3) {
+        margin-top: 20px;
+      }
+    }
   }
 }
 

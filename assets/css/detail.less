@@ -20,8 +20,13 @@ body {
 }
 
 .main-container {
-  width: 100%;
+  // width: 100%;
+  // max-width: 1440px;
+
+  width: min(88%, 1440px);
   max-width: 1440px;
+  padding-left: calc(calc(100% - min(88%, 1440px)) / 2);
+
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -37,7 +42,8 @@ body {
 }
 
 .container {
-  width: 100%;
+  // width: 100%;
+
   display: flex;
   justify-content: space-between;
 

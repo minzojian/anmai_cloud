@@ -19,6 +19,13 @@
     //   padding-top: 150px;
     // }
 
+    .section .wrapper {
+      width: min(88%, 1440px);
+      max-width: 1440px;
+      padding-left: calc(calc(100% - min(88%, 1440px)) / 2);
+      overflow: hidden;
+    }
+
     .banner {
       background: url("../img/product/banner.png") no-repeat center;
       width: 100%;
@@ -29,9 +36,9 @@
       padding-top: 0 !important;
 
       .wrapper {
-        max-width: 1440px;
+        // max-width: 1440px;
         margin: 0 auto;
-        width: 100%;
+        // width: 100%;
         margin-top: 150px;
 
         .slogan {
@@ -83,7 +90,7 @@
       padding: 90px 0 180px;
 
       .wrapper {
-        width: 100%;
+        // width: 100%;
         // max-width: 1440px;
         // margin: 0 auto;
 
@@ -221,9 +228,9 @@
       }
 
       .wrapper {
-        width: 100%;
-        max-width: 1440px;
-        margin: 0 auto;
+        // width: 100%;
+        // max-width: 1440px;
+        // margin: 0 auto;
         display: flex;
         justify-content: space-between;
 
@@ -258,7 +265,7 @@
           .c_left {
             .bottom_item,
             .top_item {
-              width: 420px;
+              // width: 420px;
               height: 540px;
               position: relative;
               background: url("../img/product/98.png") center no-repeat;
@@ -295,7 +302,7 @@
             }
 
             .mid_item {
-              width: 420px;
+              // width: 420px;
               height: 129px;
               border-radius: 14px;
               background: linear-gradient(211deg, #8be5cf, #6cb2e7);
@@ -342,7 +349,7 @@
             }
 
             .bottom_item {
-              width: 420px;
+              // width: 420px;
               height: 500px;
               position: relative;
               background: url("../img/product/99.png") center no-repeat;
@@ -357,7 +364,7 @@
             margin-left: 21px;
 
             .top_item {
-              width: 420px;
+              // width: 420px;
               height: 231px;
               background: #edf3fd;
               border-radius: 14px;
@@ -501,26 +508,24 @@
       align-items: center;
       height: 950px;
 
-      .gloab_img {
-      }
-
       .wrapper {
-        width: 100%;
-        max-width: 1440px;
-        margin: 0 auto;
+        // width: 100%;
+        // max-width: 1440px;
+        // margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        .earth {
-          width: 641px;
-          height: 585px;
-          border: 1px solid;
+        .gloab_img {
+          margin-right: 120px;
+          display: flex;
+          video {
+            width: 100%;
+            max-width: 756px;
+          }
         }
 
         .city {
-          margin-left: 120px;
-
           .title1 {
             color: #b2bfcf;
             font-size: 36px;
