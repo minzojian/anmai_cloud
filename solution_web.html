@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>解决方案-web 3.0</title>
     <link rel="stylesheet" href="./assets/css/normalize.css" />
     <link rel="stylesheet" href="./assets/css/iconfont.css" />
     <link rel="stylesheet" href="./assets/css/common.css" />
     <link rel="stylesheet" href="./assets/css/solution.css" />
-    <link rel="stylesheet" href="./assets/css/solution-media.css">
-    <link rel="stylesheet" href="https://cdn.dowebok.com/98/css/animate.min.css" />
+    <link rel="stylesheet" href="./assets/css/solution-media.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.dowebok.com/98/css/animate.min.css"
+    />
     <!-- script -->
     <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
     <script src="./assets/js/common.js"></script>
@@ -20,242 +24,301 @@
     <script src="./assets/js/lib/gsap.min.js"></script>
     <script src="./assets/js/lib/ScrollToPlugin.min.js"></script>
     <script src="./assets/js/lib/ScrollTrigger.min.js"></script>
-
-</head>
-<style>
+  </head>
+  <style>
     .banner {
-        background: url("./assets/img/solution/解决方案-web/图层 29.png") no-repeat center
+      background: url("./assets/img/solution/解决方案-web/图层 29.png")
+        no-repeat center;
     }
 
     #section1 .wrapper .bottom {
-        background: url("./assets/img/solution/解决方案-web/150927753.png") no-repeat center
+      background: url("./assets/img/solution/解决方案-web/150927753.png")
+        no-repeat center;
     }
 
     #section2 .wrapper .bottom {
-        background: url("./assets/img/solution/解决方案-web/图层 29.png") no-repeat center
+      background: url("./assets/img/solution/解决方案-web/图层 29.png")
+        no-repeat center;
     }
-    #section3 .wrapper .bottom{
-        background: url("./assets/img/solution/解决方案-web/图层 33.png") no-repeat center
+    #section3 .wrapper .bottom {
+      background: url("./assets/img/solution/解决方案-web/图层 33.png")
+        no-repeat center;
     }
-    #section1 .wrapper .flex_between .img{
-        margin-bottom: 45px;
+    #section1 .wrapper .flex_between .img {
+      margin-bottom: 45px;
     }
-    .section-content .wrapper .mid .ietms h2{
-        line-height: 1.2;
+    .section-content .wrapper .mid .ietms h2 {
+      line-height: 1.2;
     }
-    
-    #section1 .wrapper .bottom .card .d_wrp .btn{
-        margin-top: 31px;
-    }
-  
-    
-</style>
 
+    #section1 .wrapper .bottom .card .d_wrp .btn {
+      margin-top: 31px;
+    }
+  </style>
 
-<body>
+  <body>
     <div class="page-main">
-        <!-- header -->
-        <header class="header1 header_dark">
-            <div class="logo">&nbsp;</div>
-            <div class="right-part">
-                <input id="langswtich" class="langswtich foldable_menu" type="checkbox" hidden />
-                <label for="langswtich" class="mobile">
-                    <div class="lang_bt_mobile"> EN <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-                    </div>
-                    <div class="langswtich_mask switch_mask"></div>
-                </label>
-                <ul class="lang-panel">
+      <!-- header -->
+      <header class="header1 header_dark">
+        <div class="logo">&nbsp;</div>
+        <div class="right-part">
+          <input
+            id="langswtich"
+            class="langswtich foldable_menu"
+            type="checkbox"
+            hidden
+          />
+          <label for="langswtich" class="mobile">
+            <div class="lang_bt_mobile">
+              EN <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+            </div>
+            <div class="langswtich_mask switch_mask"></div>
+          </label>
+          <ul class="lang-panel">
+            <li>
+              <a>
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a
+              >
+            </li>
+            <li class="selected">
+              <a>
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+                English</a
+              >
+            </li>
+          </ul>
+          <input id="menuswtich" type="checkbox" hidden />
+          <label for="menuswtich" class="mobile">
+            <div class="menu-btn">
+              <i class="fa iconfont icon-menu" aria-hidden="true"></i>
+            </div>
+            <div class="switch_mask"></div>
+          </label>
+          <div class="nav">
+            <ul>
+              <li class="active"><a href="./">首页</a></li>
+              <li class="">
+                <a
+                  >产品 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+                </a>
+                <div class="submenu product_submenu">
+                  <ul>
                     <li>
-                        <a>
-                            <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a>
+                      <a href="./product_fbssjzx.html">
+                        <div class="icon">
+                          <img src="./assets/img/icons/products/云计算.png" />
+                        </div>
+                        分布式数据中心
+                      </a>
                     </li>
-                    <li class="selected">
-                        <a>
-                            <i class="fa iconfont icon-gou" aria-hidden="true"></i> English</a>
+                    <li>
+                      <a
+                        href="./product_fbscdn.html"
+                        style="pointer-events: none"
+                      >
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/products/分布式CDN.png"
+                          />
+                        </div>
+                        分布式CDN(即将上线)
+                      </a>
                     </li>
-                </ul>
-                <input id="menuswtich" type="checkbox" hidden />
-                <label for="menuswtich" class="mobile">
-                    <div class="menu-btn">
-                        <i class="fa iconfont icon-menu" aria-hidden="true"></i>
-                    </div>
-                    <div class="switch_mask"></div>
-                </label>
-                <div class="nav">
+                    <li>
+                      <a href="./product_jzcc.html">
+                        <div class="icon">
+                          <img src="./assets/img/icons/products/矩阵存储.png" />
+                        </div>
+                        矩阵存储
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./product_ygpu.html">
+                        <div class="icon">
+                          <img src="./assets/img/icons/products/云GPU.png" />
+                        </div>
+                        云GPU
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  >解决方案
+                  <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+                </a>
+                <div class="submenu solution_submenu">
+                  <div class="submenu-unit">
+                    <div class="title">场景 Scenario</div>
                     <ul>
-                        <li class="active"><a href="./">首页</a></li>
-                        <li class="">
-                            <a>产品 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-                            </a>
-                            <div class="submenu product_submenu">
-                                <ul>
-                                    <li>
-                                        <a href="./product_fbssjzx.html">
-                                            <div class="icon">
-                                                <img src="./assets/img/icons/products/云计算.png" />
-                                            </div> 分布式数据中心
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="./product_fbscdn.html">
-                                            <div class="icon">
-                                                <img src="./assets/img/icons/products/分布式CDN.png" />
-                                            </div> 分布式CDN
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="./product_jzcc.html">
-                                            <div class="icon">
-                                                <img src="./assets/img/icons/products/矩阵存储.png" />
-                                            </div> 矩阵存储
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="./product_ygpu.html">
-                                            <div class="icon">
-                                                <img src="./assets/img/icons/products/云GPU.png" />
-                                            </div> 云GPU
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a>解决方案 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-                            </a>
-                            <div class="submenu solution_submenu">
-                                <div class="submenu-unit">
-                                    <div class="title">场景 Scenario</div>
-                                    <ul>
-                                        <li>
-                                            <a href="./solution_cj.html#cc">
-                                                <div class="icon">
-                                                    <img src="./assets/img/icons/solutions/图层 5.png" />
-                                                </div> 存储
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="./solution_cj.html#rzybf">
-                                                <div class="icon">
-                                                    <img src="./assets/img/icons/solutions/图层 6.png" />
-                                                </div> 容灾与备份
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/solution_cj.html#kxjs">
-                                                <div class="icon">
-                                                    <img src="./assets/img/icons/solutions/图层 7.png" />
-                                                </div> 科学计算
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/solution_cj.html#aqjs">
-                                                <div class="icon">
-                                                    <img src="./assets/img/icons/solutions/图层 8.png" />
-                                                </div> 安全计算
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/solution_cj.html#wly">
-                                                <div class="icon">
-                                                    <img src="./assets/img/icons/solutions/图层 9.png" />
-                                                </div> 物理云
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/solution_cj.html#nrff">
-                                                <div class="icon">
-                                                    <img src="./assets/img/icons/solutions/图层 10.png" />
-                                                </div> 内容分发
-
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="./solution_cj.html#jqxx">
-                                                <div class="icon">
-                                                    <img src="./assets/img/icons/solutions/图层 11.png" />
-                                                </div> 机器学习
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="divider-v"></div>
-                                <div class="submenu-unit">
-                                    <div class="title">行业 Industry</div>
-                                    <ul>
-                                        <li>
-                                            <a href="./solution_hy.html#rgzn">
-                                                <div class="icon">
-                                                    <img src="./assets/img/icons/solutions/矢量智能对象.png" />
-                                                </div> 人工智能
-
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="./solution_hy.html#ky">
-                                                <div class="icon">
-                                                    <img src="./assets/img/icons/solutions/矢量智能对象 (1).png" />
-                                                </div> 科研
-
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="./solution_hy.html#djk">
-                                                <div class="icon">
-                                                    <img src="./assets/img/icons/solutions/矢量智能对象 (2).png" />
-                                                </div> 大健康
-
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="./solution_hy.html#zw">
-                                                <div class="icon">
-                                                    <img src="./assets/img/icons/solutions/矢量智能对象 (3).png" />
-                                                </div> 政务
-
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="./solution_hy.html#swjy">
-                                                <div class="icon">
-                                                    <img src="./assets/img/icons/solutions/矢量智能对象 (4).png" />
-                                                </div> 生物基因
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="divider-v"></div>
-                                <div class="submenu-unit">
-                                    <div class="title">Web 3.0</div>
-                                    <ul>
-                                        <li>
-                                            <a href="./solution_web.html#byjs">
-                                                <div class="icon">
-                                                    <img src="./assets/img/icons/solutions/矢量智能对象 (5).png" />
-                                                </div> 边缘计算
-
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="./solution_web.html#qkl">
-                                                <div class="icon">
-                                                    <img src="./assets/img/icons/solutions/矢量智能对象 (6).png" />
-                                                </div> 区块链
-
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="./solution_web.html#rgzn">
-                                                <div class="icon">
-                                                    <img src="./assets/img/icons/solutions/矢量智能对象 拷贝.png" />
-                                                </div> 人工智能
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- <li>
+                      <li>
+                        <a href="./solution_cj.html#cc">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/图层 5.png"
+                            />
+                          </div>
+                          存储
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_cj.html#rzybf">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/图层 6.png"
+                            />
+                          </div>
+                          容灾与备份
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_cj.html#kxjs">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/图层 7.png"
+                            />
+                          </div>
+                          科学计算
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_cj.html#aqjs">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/图层 8.png"
+                            />
+                          </div>
+                          安全计算
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_cj.html#wly">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/图层 9.png"
+                            />
+                          </div>
+                          物理云
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_cj.html#nrff">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/图层 10.png"
+                            />
+                          </div>
+                          内容分发
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_cj.html#jqxx">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/图层 11.png"
+                            />
+                          </div>
+                          机器学习
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="divider-v"></div>
+                  <div class="submenu-unit">
+                    <div class="title">行业 Industry</div>
+                    <ul>
+                      <li>
+                        <a href="./solution_hy.html#rgzn">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/矢量智能对象.png"
+                            />
+                          </div>
+                          人工智能
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_hy.html#ky">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/矢量智能对象 (1).png"
+                            />
+                          </div>
+                          科研
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_hy.html#djk">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/矢量智能对象 (2).png"
+                            />
+                          </div>
+                          大健康
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_hy.html#zw">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/矢量智能对象 (3).png"
+                            />
+                          </div>
+                          政务
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_hy.html#swjy">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/矢量智能对象 (4).png"
+                            />
+                          </div>
+                          生物基因
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="divider-v"></div>
+                  <div class="submenu-unit">
+                    <div class="title">Web 3.0</div>
+                    <ul>
+                      <li>
+                        <a href="./solution_web.html#byjs">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/矢量智能对象 (5).png"
+                            />
+                          </div>
+                          边缘计算
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_web.html#qkl">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/矢量智能对象 (6).png"
+                            />
+                          </div>
+                          区块链
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_web.html#rgzn">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/矢量智能对象 拷贝.png"
+                            />
+                          </div>
+                          人工智能
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <!-- <li>
                   <a
                     >ESG
                     <i class="fa iconfont icon-Down" aria-hidden="true"></i>
@@ -266,379 +329,560 @@
                 </ul>
               </li>
               <li><a>投资者关系</a></li> -->
-                        <li><a href="./about.html">关于我们</a></li>
-                    </ul>
-                </div>
-                <label for="langswtich" class="not_mobile">
-                    <div class="lang_bt">
-                        <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> English
-                    </div>
-                    <div class="langswtich_mask switch_mask"></div>
-                </label>
+              <li><a href="./about.html">关于我们</a></li>
+            </ul>
+          </div>
+          <label for="langswtich" class="not_mobile">
+            <div class="lang_bt">
+              <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> English
             </div>
-        </header>
-        <!-- main -->
-        <div class="banner section">
-            <div class="wrapper">
-                <div class="slogan">
-                    <h1 class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0">解决方案 <img
-                            src="./assets/img/solution/line.png" class="line"> WEB3.0</h1>
-                    <h2 class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0.1">Solution</h2>
-                    <a href="javascript:;" onclick="click_scroll()" class="downBtn fadeInUp" data-wow-duration=".8s"
-                        data-wow-delay="0.2">方案咨询 <i class="arrow_icon"></i></a>
+            <div class="langswtich_mask switch_mask"></div>
+          </label>
+        </div>
+      </header>
+      <!-- main -->
+      <div class="banner section">
+        <div class="wrapper">
+          <div class="slogan">
+            <h1 class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0">
+              解决方案
+              <img src="./assets/img/solution/line.png" class="line" /> WEB3.0
+            </h1>
+            <h2
+              class="wow fadeInUp"
+              data-wow-duration=".8s"
+              data-wow-delay="0.1"
+            >
+              Solution
+            </h2>
+            <a
+              href="javascript:;"
+              onclick="click_scroll()"
+              class="downBtn fadeInUp"
+              data-wow-duration=".8s"
+              data-wow-delay="0.2"
+              >方案咨询 <i class="arrow_icon"></i
+            ></a>
+          </div>
+          <div class="emptybox"></div>
+        </div>
+      </div>
+      <div class="section nav-height" id="navHeight">
+        <nav class="wrapper nav-wrap" id="nav-wrap">
+          <div class="nav-mobile">Click</div>
+          <ul class="clearfix">
+            <li>
+              <a class="active" href="#section1"
+                ><img
+                  class="icon"
+                  src="./assets/img/solution/图层 5.png"
+                  alt=""
+                />边缘计算</a
+              >
+            </li>
+            <li>
+              <a class="" href="#section2"
+                ><img
+                  class="icon"
+                  src="./assets/img/solution/图层 6.png"
+                  alt=""
+                />区块链</a
+              >
+            </li>
+            <li>
+              <a class="" href="#section3"
+                ><img
+                  class="icon"
+                  src="./assets/img/solution/图层 7.png"
+                  alt=""
+                />人工智能</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="section1" class="section-content section">
+        <div class="wrapper">
+          <div class="top">
+            <div class="flex_between">
+              <div class="left_tit">
+                <h1
+                  class="wow fadeInUp"
+                  data-wow-duration=".8s"
+                  data-wow-delay=".1s"
+                >
+                  <p>01</p>
+                  <span>边缘计算</span>
+                </h1>
+                <p
+                  class="desc wow fadeInUp"
+                  data-wow-duration=".8s"
+                  data-wow-delay=".1s"
+                >
+                  安迈云提供广泛覆盖的边缘计算基础设施，包括计算、存储、网络等基础能力，支持将业务应用部署到边缘，形成全域化或者本地化的边缘服务覆盖。
+                </p>
+                <div
+                  class="text wow fadeInUp"
+                  data-wow-duration=".8s"
+                  data-wow-delay=".1s"
+                >
+                  Edge Computing
                 </div>
-                <div class="emptybox"></div>
+              </div>
+              <div class="img">
+                <img
+                  src="./assets/img/solution/解决方案-web/矢量智能对象(3).png"
+                  alt=""
+                />
+              </div>
             </div>
-        </div>
-        <div class="section nav-height" id="navHeight">
-            <nav class="wrapper nav-wrap" id="nav-wrap">
-                <div class="nav-mobile">Click</div>
-                <ul class="clearfix">
-                    <li><a class="active" href="#section1"><img class="icon" src="./assets/img/solution/图层 5.png"
-                                alt="">边缘计算</a></li>
-                    <li><a class="" href="#section2"><img class="icon" src="./assets/img/solution/图层 6.png"
-                                alt="">区块链</a></li>
-                    <li><a class="" href="#section3"><img class="icon" src="./assets/img/solution/图层 7.png"
-                                alt="">人工智能</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div id="section1" class="section-content section">
-            <div class="wrapper">
-                <div class="top">
-                    <div class="flex_between">
-                        <div class="left_tit">
-                            <h1 class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
-                                <p>01</p><span>边缘计算</span>
-                            </h1>
-                            <p class="desc wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
-                                安迈云提供广泛覆盖的边缘计算基础设施，包括计算、存储、网络等基础能力，支持将业务应用部署到边缘，形成全域化或者本地化的边缘服务覆盖。</p>
-                            <div class="text wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
-                                Edge Computing
-                            </div>
-                        </div>
-                        <div class="img">
-                            <img src="./assets/img/solution/解决方案-web/矢量智能对象(3).png" alt="">
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="mid">
-                    <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
-                        <div class="icon"><img src="./assets/img/solution/图层 5 拷贝.png" alt=""></div>
-                        <h2>全国省会三大<br>运营商全域覆盖<span class="text1"></span></h2>
-                    </div>
-                    <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                        <div class="icon"><img src="./assets/img/solution/图层 18.png" alt=""></div>
-                        <h2>秒级批量下发的、<br>安全稳定的边缘算力<span class="text2"></span></h2>
-                    </div>
-                    <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".3s">
-                        <div class="icon"><img src="./assets/img/solution/图层 19.png" alt=""></div>
-                        <h2>多边、边云的<br>全网链路优化<span class="text3"></span></h2>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="card wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".3s">
-                        <div class="d_wrp">
-                            <p class="til">案例 Cases</p>
-                            <h3>华栖云</h3>
-                            <p class="desc">边缘计算为华栖云提供稳定可靠的计算和网络服务，具备弹性和分钟级交付能力，边缘就近收流、合流、转码、弹幕的架构，有效提升链路质量，降低骨干网络压力。 </p>
-                            <div class="btn">
-                                <div class="left"><img src="./assets/img/solution/左箭头.png" alt=""></div>
-                                <div class="right"><img src="./assets/img/solution/右箭头.png" alt=""></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="mid">
+            <div
+              class="ietms wow fadeInUp"
+              data-wow-duration=".8s"
+              data-wow-delay=".1s"
+            >
+              <div class="icon">
+                <img src="./assets/img/solution/图层 5 拷贝.png" alt="" />
+              </div>
+              <h2>
+                全国省会三大<br />运营商全域覆盖<span class="text1"></span>
+              </h2>
             </div>
-        </div>
-        <div id="section2" class="section-content section">
-            <div class="wrapper">
-                <div class="top">
-                    <div class="flex_between">
-                        <div class="left_tit">
-                            <h1 class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
-                                <p>02</p><span>区块链</span>
-                            </h1>
-                            <p class="desc wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
-                                安迈云致力打造业界易用稳健的区块链技术和产品，让各行各业的客户和合作伙伴专注商业化区块链应用和创新，让区块链充分激发信任商业时代的潜力。</p>
-                            <div class="text wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
-                                Blockchain
-                            </div>
-                        </div>
-                        <div class="img">
-                            <img src="./assets/img/solution/解决方案-web/图层 31.png" alt="">
-                        </div>
-                    </div>
-
-                </div>
-                <div class="mid">
-                    <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
-                        <div class="icon"><img src="./assets/img/solution/图层 22.png" alt=""></div>
-                        <h2>高性能平台<span class="text1"></span></h2>
-                        <p>平台依托安迈云多年区块链行业研发经验，提供海量数据存储，具备万级 TPS 的处理能力。</p>
-                    </div>
-                    <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                        <div class="icon"><img src="./assets/img/solution/图层 23.png" alt=""></div>
-                        <h2>安全可信<span class="text2"></span></h2>
-                        <p>平台不仅从区块链底层实现了金融级别的隐私保护能力，在应用层也提供了对于企业身份、实人身份、内容安全等认证的能力；</p>
-                    </div>
-                    <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".3s">
-                        <div class="icon"><img src="./assets/img/solution/图层 24.png" alt=""></div>
-                        <h2>简单易用<span class="text3"></span></h2>
-                        <p>快速的区块链部署能力、丰富的落地业务场景，极大减少客户的 区块链投入成本。</p>
-                    </div>
-                </div>
+            <div
+              class="ietms wow fadeInUp"
+              data-wow-duration=".8s"
+              data-wow-delay=".2s"
+            >
+              <div class="icon">
+                <img src="./assets/img/solution/图层 18.png" alt="" />
+              </div>
+              <h2>
+                秒级批量下发的、<br />安全稳定的边缘算力<span
+                  class="text2"
+                ></span>
+              </h2>
             </div>
-        </div>
-        <div id="section3" class="section section-content ">
-            <div class="wrapper">
-                <div class="top">
-                    <div class="flex_between">
-                        <div class="left_tit">
-                            <h1 class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
-                                <p>03</p><span>人工智能</span>
-                            </h1>
-                            <p class="desc wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
-                                安迈云人工智能平台致力于帮助加速企业的数字化转型及促进AI行业生态共建，平台支持快速接入各种数据、算法和智能设备，并提供可视化编排工具进行服务和资源的管理及调度，进一步通过AI服务组件集成和标准化接口开放，降低AI应用开发成本。</p>
-                            <div class="text wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">Artificial Intelligence</div>
-                        </div>
-                        <div class="img">
-                            <img src="./assets/img/solution/图层 32.png" alt="">
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="mid">
-                    <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
-                        <div class="icon"><img src="./assets/img/solution/图层 22.png" alt=""></div>
-                        <h2>可视化调度<span class="text1"></span></h2>
-                        <p>提供可视化、可拖拽的任务编排和调度能力，提供包括数据连接、AI 服务、操作网关等组件，轻松实现多算法融合、多数据组件拼装和多业务服务组合，快速构建满足企业业务场景诉求的应用。</p>
-                    </div>
-                    <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                        <div class="icon"><img src="./assets/img/solution/图层 23.png" alt=""></div>
-                        <h2>部署维护简单<span class="text2"></span></h2>
-                        <p>以容器镜像方式部署，有效解决环境差异问题，降低平台维护成本。完全兼容 kubernetes 全能力，支持灵活集群托管以及负载均衡，实现服务故障自动修复，保障平台的高可用性和高可靠性。</p>
-                    </div>
-                    <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".3s">
-                        <div class="icon"><img src="./assets/img/solution/图层 24.png" alt=""></div>
-                        <h2>多数据接入<span class="text3"></span></h2>
-                        <p>为开发者提供多种数据接入的能力，支持完善的存储、汇总和分析等一站式服务，实现用户数据、设备数据与平台服务的全周期连接，便捷完成客户业务的数据分析，让数据从“看见”到“看懂”。</p>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="card wow fadeInUp" data-wow-duration=".4s" data-wow-delay=".3s">
-                        <div class="d_wrp">
-                            <p class="til">案例 Cases</p>
-                            <h3>KODA</h3>
-                            <p class="desc">满足Koda机器狗的去中心化存储需求和深度学习需求。</p>
-                            <div class="btn">
-                                <div class="left"><img src="./assets/img/solution/左箭头.png" alt=""></div>
-                                <div class="right"><img src="./assets/img/solution/右箭头.png" alt=""></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div
+              class="ietms wow fadeInUp"
+              data-wow-duration=".8s"
+              data-wow-delay=".3s"
+            >
+              <div class="icon">
+                <img src="./assets/img/solution/图层 19.png" alt="" />
+              </div>
+              <h2>多边、边云的<br />全网链路优化<span class="text3"></span></h2>
             </div>
-        </div>
-        <div id="section8" class="section-content section">
-            <div class="flex_center wrapper">
-                <div class="left">
-                    <img src="./assets/img/solution/HELLO.png" alt="">
-                    <h2>与安迈云解决方案专家沟通</h2>
-                    <p class="desc">安迈云致⼒于为您提供更加⾼效、更加专业的解决⽅案以及更加优质的解决服务</p>
-                    <div class="contact">
-                        您可以通过<a href="">邮件、电话</a>或者<a href="">方案咨询</a>的形式与安迈云解决方案专家获得联系，获取更多信息
-                    </div>
+          </div>
+          <div class="bottom">
+            <div
+              class="card wow fadeInUp"
+              data-wow-duration=".8s"
+              data-wow-delay=".3s"
+            >
+              <div class="d_wrp">
+                <p class="til">案例 Cases</p>
+                <h3>华栖云</h3>
+                <p class="desc">
+                  边缘计算为华栖云提供稳定可靠的计算和网络服务，具备弹性和分钟级交付能力，边缘就近收流、合流、转码、弹幕的架构，有效提升链路质量，降低骨干网络压力。
+                </p>
+                <div class="btn">
+                  <div class="left">
+                    <img src="./assets/img/solution/左箭头.png" alt="" />
+                  </div>
+                  <div class="right">
+                    <img src="./assets/img/solution/右箭头.png" alt="" />
+                  </div>
                 </div>
-                <div class="right">
-                    <div class="input_box">
-                        <label for="inp" class="inp">
-                            <input type="text" id="inp" placeholder=" ">
-                            <span class="label">联系邮箱</span>
-                        </label>
-                        <label for="inp" class="inp">
-                            <input type="text" id="inp" placeholder=" ">
-                            <span class="label">联系电话</span>
-                        </label>
-                    </div>
-                    <div class="submit"><img src="./assets/img/solution/右箭头.png" alt=""></div>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- footer -->
-        <footer>
-            <div class="top-part">
-                <div class="left-part pos-r">
-                    <div class="logo"><img src="./assets/img/logo_bottom.png" /></div>
-                    <input id="langswtich2" class="langswtich foldable_menu" type="checkbox" hidden />
-                    <label for="langswtich2">
-                        <div class="lang_bt">
-                            <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> English
-                        </div>
-                        <div class="langswtich_mask switch_mask"></div>
-                    </label>
-                    <ul class="lang-panel lang-panel-bottom">
-                        <li>
-                            <a>
-                                <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a>
-                        </li>
-                        <li class="selected">
-                            <a>
-                                <i class="fa iconfont icon-gou" aria-hidden="true"></i> English</a>
-                        </li>
-                    </ul>
+      </div>
+      <div id="section2" class="section-content section">
+        <div class="wrapper">
+          <div class="top">
+            <div class="flex_between">
+              <div class="left_tit">
+                <h1
+                  class="wow fadeInUp"
+                  data-wow-duration=".8s"
+                  data-wow-delay=".1s"
+                >
+                  <p>02</p>
+                  <span>区块链</span>
+                </h1>
+                <p
+                  class="desc wow fadeInUp"
+                  data-wow-duration=".8s"
+                  data-wow-delay=".1s"
+                >
+                  安迈云致力打造业界易用稳健的区块链技术和产品，让各行各业的客户和合作伙伴专注商业化区块链应用和创新，让区块链充分激发信任商业时代的潜力。
+                </p>
+                <div
+                  class="text wow fadeInUp"
+                  data-wow-duration=".8s"
+                  data-wow-delay=".1s"
+                >
+                  Blockchain
                 </div>
-                <div class="right-part">
-                    <div class="nav-item">
-                        <input class="foldable_menu" id="navswtich1" type="checkbox" hidden />
-                        <label for="navswtich1">
-                            <div class="nav-title flex">
-                                <span>产品</span>
-                                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-                            </div>
-                        </label>
-                        <ul>
-                            <li>
-                                <a href="./product_fbssjzx.html">
-                                    分布式数据中心
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./product_fbscdn.html">
-                                    分布式CDN
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./product_jzcc.html">
-                                    矩阵存储
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./product_ygpu.html">
-                                    云GPU
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="nav-item">
-                        <input class="foldable_menu" id="navswtich2" type="checkbox" hidden />
-                        <label for="navswtich2">
-                            <div class="nav-title flex">
-                                <span>解决方案·场景</span>
-                                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-                            </div>
-                        </label>
-                        <ul>
-                            <li>
-                                <a href="./solution_cj.html#cc">
-                                    存储
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./solution_cj.html#rzybf">
-                                    容灾与备份
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/solution_cj.html#kxjs">
-                                    科学计算
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/solution_cj.html#aqjs">
-                                    安全计算
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/solution_cj.html#wly">
-                                    物理云
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/solution_cj.html#nrff">
-                                    内容分发
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./solution_cj.html#jqxx">
-                                    机器学习
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="nav-item">
-                        <input class="foldable_menu" id="navswtich3" type="checkbox" hidden />
-                        <label for="navswtich3">
-                            <div class="nav-title flex">
-                                <span>解决方案·行业</span>
-                                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-                            </div>
-                        </label>
-                        <ul>
-                            <li>
-                                <a href="./solution_hy.html#rgzn">
-                                    人工智能
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./solution_hy.html#ky">
-                                    科研
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./solution_hy.html#djk">
-                                    大健康
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./solution_hy.html#zw">
-                                    政务
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./solution_hy.html#swjy">
-                                    生物基因
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="nav-item">
-                        <input class="foldable_menu" id="navswtich4" type="checkbox" hidden />
-                        <label for="navswtich4">
-                            <div class="nav-title flex">
-                                <span>解决方案·WEB3.0</span>
-                                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-                            </div>
-                        </label>
-                        <ul>
-                            <li>
-                                <a href="./solution_web.html#byjs">
-                                    边缘计算
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./solution_web.html#qkl">
-                                    区块链
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./solution_web.html#rgzn">
-                                    人工智能
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- <div class="nav-item">
+              </div>
+              <div class="img">
+                <img
+                  src="./assets/img/solution/解决方案-web/图层 31.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="mid">
+            <div
+              class="ietms wow fadeInUp"
+              data-wow-duration=".8s"
+              data-wow-delay=".1s"
+            >
+              <div class="icon">
+                <img src="./assets/img/solution/图层 22.png" alt="" />
+              </div>
+              <h2>高性能平台<span class="text1"></span></h2>
+              <p>
+                平台依托安迈云多年区块链行业研发经验，提供海量数据存储，具备万级
+                TPS 的处理能力。
+              </p>
+            </div>
+            <div
+              class="ietms wow fadeInUp"
+              data-wow-duration=".8s"
+              data-wow-delay=".2s"
+            >
+              <div class="icon">
+                <img src="./assets/img/solution/图层 23.png" alt="" />
+              </div>
+              <h2>安全可信<span class="text2"></span></h2>
+              <p>
+                平台不仅从区块链底层实现了金融级别的隐私保护能力，在应用层也提供了对于企业身份、实人身份、内容安全等认证的能力；
+              </p>
+            </div>
+            <div
+              class="ietms wow fadeInUp"
+              data-wow-duration=".8s"
+              data-wow-delay=".3s"
+            >
+              <div class="icon">
+                <img src="./assets/img/solution/图层 24.png" alt="" />
+              </div>
+              <h2>简单易用<span class="text3"></span></h2>
+              <p>
+                快速的区块链部署能力、丰富的落地业务场景，极大减少客户的
+                区块链投入成本。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="section3" class="section section-content">
+        <div class="wrapper">
+          <div class="top">
+            <div class="flex_between">
+              <div class="left_tit">
+                <h1
+                  class="wow fadeInUp"
+                  data-wow-duration=".8s"
+                  data-wow-delay=".1s"
+                >
+                  <p>03</p>
+                  <span>人工智能</span>
+                </h1>
+                <p
+                  class="desc wow fadeInUp"
+                  data-wow-duration=".8s"
+                  data-wow-delay=".1s"
+                >
+                  安迈云人工智能平台致力于帮助加速企业的数字化转型及促进AI行业生态共建，平台支持快速接入各种数据、算法和智能设备，并提供可视化编排工具进行服务和资源的管理及调度，进一步通过AI服务组件集成和标准化接口开放，降低AI应用开发成本。
+                </p>
+                <div
+                  class="text wow fadeInUp"
+                  data-wow-duration=".8s"
+                  data-wow-delay=".1s"
+                >
+                  Artificial Intelligence
+                </div>
+              </div>
+              <div class="img">
+                <img src="./assets/img/solution/图层 32.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="mid">
+            <div
+              class="ietms wow fadeInUp"
+              data-wow-duration=".8s"
+              data-wow-delay=".1s"
+            >
+              <div class="icon">
+                <img src="./assets/img/solution/图层 22.png" alt="" />
+              </div>
+              <h2>可视化调度<span class="text1"></span></h2>
+              <p>
+                提供可视化、可拖拽的任务编排和调度能力，提供包括数据连接、AI
+                服务、操作网关等组件，轻松实现多算法融合、多数据组件拼装和多业务服务组合，快速构建满足企业业务场景诉求的应用。
+              </p>
+            </div>
+            <div
+              class="ietms wow fadeInUp"
+              data-wow-duration=".8s"
+              data-wow-delay=".2s"
+            >
+              <div class="icon">
+                <img src="./assets/img/solution/图层 23.png" alt="" />
+              </div>
+              <h2>部署维护简单<span class="text2"></span></h2>
+              <p>
+                以容器镜像方式部署，有效解决环境差异问题，降低平台维护成本。完全兼容
+                kubernetes
+                全能力，支持灵活集群托管以及负载均衡，实现服务故障自动修复，保障平台的高可用性和高可靠性。
+              </p>
+            </div>
+            <div
+              class="ietms wow fadeInUp"
+              data-wow-duration=".8s"
+              data-wow-delay=".3s"
+            >
+              <div class="icon">
+                <img src="./assets/img/solution/图层 24.png" alt="" />
+              </div>
+              <h2>多数据接入<span class="text3"></span></h2>
+              <p>
+                为开发者提供多种数据接入的能力，支持完善的存储、汇总和分析等一站式服务，实现用户数据、设备数据与平台服务的全周期连接，便捷完成客户业务的数据分析，让数据从“看见”到“看懂”。
+              </p>
+            </div>
+          </div>
+          <div class="bottom">
+            <div
+              class="card wow fadeInUp"
+              data-wow-duration=".4s"
+              data-wow-delay=".3s"
+            >
+              <div class="d_wrp">
+                <p class="til">案例 Cases</p>
+                <h3>KODA</h3>
+                <p class="desc">
+                  满足Koda机器狗的去中心化存储需求和深度学习需求。
+                </p>
+                <div class="btn">
+                  <div class="left">
+                    <img src="./assets/img/solution/左箭头.png" alt="" />
+                  </div>
+                  <div class="right">
+                    <img src="./assets/img/solution/右箭头.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="section8" class="section-content section">
+        <div class="flex_center wrapper">
+          <div class="left">
+            <img src="./assets/img/solution/HELLO.png" alt="" />
+            <h2>与安迈云解决方案专家沟通</h2>
+            <p class="desc">
+              安迈云致⼒于为您提供更加⾼效、更加专业的解决⽅案以及更加优质的解决服务
+            </p>
+            <div class="contact">
+              您可以通过<a href="">邮件、电话</a>或者<a href="">方案咨询</a
+              >的形式与安迈云解决方案专家获得联系，获取更多信息
+            </div>
+          </div>
+          <div class="right">
+            <div class="input_box">
+              <label for="inp" class="inp">
+                <input type="text" id="inp" placeholder=" " />
+                <span class="label">联系邮箱</span>
+              </label>
+              <label for="inp" class="inp">
+                <input type="text" id="inp" placeholder=" " />
+                <span class="label">联系电话</span>
+              </label>
+            </div>
+            <div class="submit">
+              <img src="./assets/img/solution/右箭头.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <footer>
+        <div class="top-part">
+          <div class="left-part pos-r">
+            <div class="logo"><img src="./assets/img/logo_bottom.png" /></div>
+            <input
+              id="langswtich2"
+              class="langswtich foldable_menu"
+              type="checkbox"
+              hidden
+            />
+            <label for="langswtich2">
+              <div class="lang_bt">
+                <i class="fa iconfont icon-yuyan" aria-hidden="true"></i>
+                English
+              </div>
+              <div class="langswtich_mask switch_mask"></div>
+            </label>
+            <ul class="lang-panel lang-panel-bottom">
+              <li>
+                <a>
+                  <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+                  中文</a
+                >
+              </li>
+              <li class="selected">
+                <a>
+                  <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+                  English</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="right-part">
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich1"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich1">
+                <div class="nav-title flex">
+                  <span>产品</span>
+                  <i
+                    class="fa iconfont icon-Down mobile"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </label>
+              <ul>
+                <li>
+                  <a href="./product_fbssjzx.html"> 分布式数据中心 </a>
+                </li>
+                <li>
+                  <a href="./product_fbscdn.html" style="pointer-events: none">
+                    分布式CDN(即将上线)
+                  </a>
+                </li>
+                <li>
+                  <a href="./product_jzcc.html"> 矩阵存储 </a>
+                </li>
+                <li>
+                  <a href="./product_ygpu.html"> 云GPU </a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich2"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich2">
+                <div class="nav-title flex">
+                  <span>解决方案·场景</span>
+                  <i
+                    class="fa iconfont icon-Down mobile"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </label>
+              <ul>
+                <li>
+                  <a href="./solution_cj.html#cc"> 存储 </a>
+                </li>
+                <li>
+                  <a href="./solution_cj.html#rzybf"> 容灾与备份 </a>
+                </li>
+                <li>
+                  <a href="./solution_cj.html#kxjs"> 科学计算 </a>
+                </li>
+                <li>
+                  <a href="./solution_cj.html#aqjs"> 安全计算 </a>
+                </li>
+                <li>
+                  <a href="./solution_cj.html#wly"> 物理云 </a>
+                </li>
+                <li>
+                  <a href="./solution_cj.html#nrff"> 内容分发 </a>
+                </li>
+                <li>
+                  <a href="./solution_cj.html#jqxx"> 机器学习 </a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich3"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich3">
+                <div class="nav-title flex">
+                  <span>解决方案·行业</span>
+                  <i
+                    class="fa iconfont icon-Down mobile"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </label>
+              <ul>
+                <li>
+                  <a href="./solution_hy.html#rgzn"> 人工智能 </a>
+                </li>
+                <li>
+                  <a href="./solution_hy.html#ky"> 科研 </a>
+                </li>
+                <li>
+                  <a href="./solution_hy.html#djk"> 大健康 </a>
+                </li>
+                <li>
+                  <a href="./solution_hy.html#zw"> 政务 </a>
+                </li>
+                <li>
+                  <a href="./solution_hy.html#swjy"> 生物基因 </a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich4"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich4">
+                <div class="nav-title flex">
+                  <span>解决方案·WEB3.0</span>
+                  <i
+                    class="fa iconfont icon-Down mobile"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </label>
+              <ul>
+                <li>
+                  <a href="./solution_web.html#byjs"> 边缘计算 </a>
+                </li>
+                <li>
+                  <a href="./solution_web.html#qkl"> 区块链 </a>
+                </li>
+                <li>
+                  <a href="./solution_web.html#rgzn"> 人工智能 </a>
+                </li>
+              </ul>
+            </div>
+            <!-- <div class="nav-item">
           <input class="foldable_menu" id="navswtich5" type="checkbox" hidden />
           <label for="navswtich5">
             <div class="nav-title flex">
@@ -652,113 +896,137 @@
             <li><a>公司治理</a></li>
           </ul>
         </div> -->
-                    <div class="nav-item">
-                        <input class="foldable_menu" id="navswtich6" type="checkbox" hidden />
-                        <label for="navswtich6">
-                            <div class="nav-title flex">
-                                <span>关于我们</span>
-                                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-                            </div>
-                        </label>
-                        <ul>
-                            <li><a href="./about.html#gsjs">公司介绍</a></li>
-                            <li><a href="./about.html#fzlc">发展历程</a></li>
-                            <li><a href="./about.html#xwdt">新闻动态</a></li>
-                            <li><a href="./about.html#rczp">人才招聘</a></li>
-                            <li><a href="./about.html#lxfs">联系方式</a></li>
-                        </ul>
-                    </div>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich6"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich6">
+                <div class="nav-title flex">
+                  <span>关于我们</span>
+                  <i
+                    class="fa iconfont icon-Down mobile"
+                    aria-hidden="true"
+                  ></i>
                 </div>
+              </label>
+              <ul>
+                <li><a href="./about.html#gsjs">公司介绍</a></li>
+                <li><a href="./about.html#fzlc">发展历程</a></li>
+                <li><a href="./about.html#xwdt">新闻动态</a></li>
+                <li><a href="./about.html#rczp">人才招聘</a></li>
+                <li><a href="./about.html#lxfs">联系方式</a></li>
+              </ul>
             </div>
-            <div class="bottom-part">
-                <div class="flex jc-between flex-1 pos-r">
-                    <div class="contacts sub-unit flex fd-c jc-between h-auto">
-                        <div class="flex">
-                            <div class="flex ai-center">
-                                <i class="fa iconfont icon-dianhua" aria-hidden="true"></i> +86 898 3286 7007
-                            </div>
-                            <div class="divider-v"></div>
-                            <div class="flex ai-center">
-                                <i class="fa iconfont icon-youjian" aria-hidden="true"></i> contact@AnmaiCloud.com
-                            </div>
-                        </div>
-                        <div class="flex line-2">
-                            <span>地址：海南省省直辖县行政单位澄迈县老城镇高新技术产业示范区海南生态软件园A7幢二层3001</span>
-                        </div>
-                    </div>
-                    <div class="divider-v ghost"></div>
-                    <div class="product_part">
-                        <div class="products flex fd-c jc-between h-auto">
-                            <div class="title flex">产品平台</div>
-                            <div class="product_imgs flex line-2 ai-end">
-                                <img src="assets/img/products1.png" />
-                                <div class="divider-v ghost"></div>
-                                <img src="assets/img/products2.png" />
-                            </div>
-                        </div>
-                        <div class="gzh flex fd-c ai-end">
-                            <div>关注公众号</div>
-                            <img src="assets/img/qr_code.png" />
-                        </div>
-                    </div>
-                    <div class="divider-v ghost"></div>
-                    <div class="beian sub-unit flex fd-c jc-between h-auto">
-                        <div class="flex ai-center"></div>
-                        <div class="flex line-2">
-                            <span>琼ICP备20000109号-1<br /> Copyright © 2013-2021 Anmai Cloud Rights Reserved.</span>
-                        </div>
-                    </div>
+          </div>
+        </div>
+        <div class="bottom-part">
+          <div class="flex jc-between flex-1 pos-r">
+            <div class="contacts sub-unit flex fd-c jc-between h-auto">
+              <div class="flex">
+                <div class="flex ai-center">
+                  <i class="fa iconfont icon-dianhua" aria-hidden="true"></i>
+                  +86 898 3286 7007
                 </div>
+                <div class="divider-v"></div>
+                <div class="flex ai-center">
+                  <i class="fa iconfont icon-youjian" aria-hidden="true"></i>
+                  contact@AnmaiCloud.com
+                </div>
+              </div>
+              <div class="flex line-2">
+                <span
+                  >地址：海南省省直辖县行政单位澄迈县老城镇高新技术产业示范区海南生态软件园A7幢二层3001</span
+                >
+              </div>
             </div>
-        </footer>
+            <div class="divider-v ghost"></div>
+            <div class="product_part">
+              <div class="products flex fd-c jc-between h-auto">
+                <div class="title flex">产品平台</div>
+                <div class="product_imgs flex line-2 ai-end">
+                  <a href="./product_jzcc.html"
+                    ><img src="assets/img/products1.png"
+                  /></a>
+                  <div class="divider-v ghost"></div>
+                  <a href="./product_ygpu.html"
+                    ><img src="assets/img/products2.png"
+                  /></a>
+                </div>
+              </div>
+              <div class="gzh flex fd-c ai-end">
+                <div>关注公众号</div>
+                <img src="assets/img/qr_code.png" />
+              </div>
+            </div>
+            <div class="divider-v ghost"></div>
+            <div class="beian sub-unit flex fd-c jc-between h-auto">
+              <div class="flex ai-center"></div>
+              <div class="flex line-2">
+                <span
+                  >琼ICP备20000109号-1<br />
+                  Copyright © 2013-2021 Anmai Cloud Rights Reserved.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="./assets/js/lib/wow.min.js"></script>
     <script>
-        new WOW().init()
+      new WOW().init()
 
-        function click_scroll() {
-            $("body,html").animate({
-                scrollTop: $("#section8").offset().top
-            }, 1000);
+      function click_scroll() {
+        $("body,html").animate(
+          {
+            scrollTop: $("#section8").offset().top,
+          },
+          1000
+        )
+      }
+
+      gsap.fromTo(
+        "#nav-wrap",
+        100,
+        {},
+        {
+          immediateRender: false,
+
+          scrollTrigger: {
+            trigger: "#section1",
+            start: "-=60", // when the top of the trigger hits the top of the viewport
+            end: 99999, // end after scrolling 500px beyond the start
+            scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+            markers: false,
+            id: "aaa",
+            onEnter: function () {
+              $("#nav-wrap").addClass("navFix")
+            },
+            onLeaveBack: function () {
+              $("#nav-wrap").removeClass("navFix")
+            },
+          },
         }
+      )
 
+      //内容信息导航锚点
+      $(".nav-wrap").navScroll({
+        mobileDropdown: true,
+        mobileBreakpoint: 768,
+        scrollSpy: true,
+      })
 
-        gsap.fromTo("#nav-wrap", 100, {}, {
-            immediateRender: false,
+      $(".click-me").navScroll({
+        navHeight: 0,
+      })
 
-            scrollTrigger: {
-                trigger: "#section1",
-                start: "-=60", // when the top of the trigger hits the top of the viewport
-                end: 99999, // end after scrolling 500px beyond the start
-                scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-                markers: false,
-                id: "aaa",
-                onEnter: function () {
-                    $("#nav-wrap").addClass("navFix")
-                },
-                onLeaveBack: function () {
-                    $("#nav-wrap").removeClass("navFix")
-                },
-            }
-        })
-
-
-        //内容信息导航锚点
-        $(".nav-wrap").navScroll({
-            mobileDropdown: true,
-            mobileBreakpoint: 768,
-            scrollSpy: true,
-        })
-
-        $(".click-me").navScroll({
-            navHeight: 0,
-        })
-
-        $(".nav-wrap").on("click", ".nav-mobile", function (e) {
-            e.preventDefault()
-            $(".nav-wrap ul").slideToggle("fast")
-        })
+      $(".nav-wrap").on("click", ".nav-mobile", function (e) {
+        e.preventDefault()
+        $(".nav-wrap ul").slideToggle("fast")
+      })
     </script>
-</body>
-
+  </body>
 </html>

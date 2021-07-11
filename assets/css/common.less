@@ -33,6 +33,7 @@ body {
 }
 
 header {
+  z-index: 11;
   pointer-events: auto;
   display: flex;
   justify-content: space-between;
@@ -390,6 +391,7 @@ footer {
       .product_imgs {
         img {
           width: fit-content;
+          object-fit: contain;
         }
       }
     }
@@ -677,7 +679,6 @@ input:checked + label {
   header {
     transition: all 0.3s;
     background: transparent;
-    z-index: 11;
 
     margin: 30px;
 
@@ -770,6 +771,7 @@ input:checked + label {
       }
     }
     .right-part {
+      min-width: 50%;
       flex-direction: column;
 
       .nav-item {

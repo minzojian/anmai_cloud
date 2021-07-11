@@ -18,6 +18,7 @@
   <script src="./assets/js/lib/jquery.nicescroll.min.js"></script>
   <title>关于我们</title>
 </head>
+<body>
 <div class="page-main">
   <!-- header -->
 <header class="header1 header_light">
@@ -62,11 +63,10 @@
                     </a>
                   </li>
                   <li>
-                    <a href="./product_fbscdn.html">
+                    <a href="./product_fbscdn.html" style='pointer-events:none;'>
                       <div class="icon">
                         <img src="./assets/img/icons/products/分布式CDN.png" />
-                      </div> 分布式CDN
-                    </a>
+                      </div> 分布式CDN(即将上线)                    </a>
                   </li>
                   <li>
                     <a href="./product_jzcc.html">
@@ -107,28 +107,28 @@
                       </a>
                     </li>
                     <li>
-                      <a  href="/solution_cj.html#kxjs">
+                      <a  href="./solution_cj.html#kxjs">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/图层 7.png" />
                         </div> 科学计算
                       </a>
                     </li>
                     <li>
-                      <a  href="/solution_cj.html#aqjs">
+                      <a  href="./solution_cj.html#aqjs">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/图层 8.png" />
                         </div> 安全计算
                       </a>
                     </li>
                     <li>
-                      <a  href="/solution_cj.html#wly">
+                      <a  href="./solution_cj.html#wly">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/图层 9.png" />
                         </div> 物理云
                       </a>
                     </li>
 <li>
-                      <a  href="/solution_cj.html#nrff">
+                      <a  href="./solution_cj.html#nrff">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/图层 10.png" />
                         </div> 内容分发
@@ -559,9 +559,8 @@
                     </a>
                   </li>
                   <li>
-                    <a href="./product_fbscdn.html">
-                        分布式CDN
-                    </a>
+                    <a href="./product_fbscdn.html" style='pointer-events:none;'>
+                        分布式CDN(即将上线)                    </a>
                   </li>
                   <li>
                     <a href="./product_jzcc.html">
@@ -595,22 +594,22 @@
                       </a>
                     </li>
                     <li>
-                      <a  href="/solution_cj.html#kxjs">
+                      <a  href="./solution_cj.html#kxjs">
                          科学计算
                       </a>
                     </li>
                     <li>
-                      <a  href="/solution_cj.html#aqjs">
+                      <a  href="./solution_cj.html#aqjs">
                          安全计算
                       </a>
                     </li>
                     <li>
-                      <a  href="/solution_cj.html#wly">
+                      <a  href="./solution_cj.html#wly">
                           物理云
                       </a>
                     </li>
 <li>
-                      <a  href="/solution_cj.html#nrff">
+                      <a  href="./solution_cj.html#nrff">
                           内容分发
 
                       </a>
@@ -743,9 +742,9 @@
           <div class="products flex fd-c jc-between h-auto">
             <div class="title flex">产品平台</div>
             <div class="product_imgs flex line-2 ai-start">
-              <img src="assets/img/products1.png" />
+              <a href="./product_jzcc.html"><img src="assets/img/products1.png" /></a>
               <div class="divider-v ghost"></div>
-              <img src="assets/img/products2.png" />
+              <a href="./product_ygpu.html"><img src="assets/img/products2.png" /></a>
             </div>
           </div>
           <div class="gzh flex fd-c ai-end">
@@ -944,7 +943,7 @@ scrollWheel:false
 
 
       jobs.forEach(function (job, i) {
-        $(".job-list-wraper .job-list").append(`<div class="job-item">
+        $(".job-list-wraper .job-list").append(`<div class="job-item" data-index="${i}">
               <div class="j-title">${job[0]}</div>
               <div class="j-sub-info">
                 <div>
@@ -1053,6 +1052,20 @@ ${["岗位职责:", job[5], "", '任职要求:', job[6], "", bouns].join(`
         })
         $(".section5").height(2.4 * window.innerHeight)
 
+ $(".job-list-wraper .job-list").on("click", ".job-item", function (e) {
+          $("#job-pop-switch").get(0).checked=true;
+          $(".list-wrapper").removeClass('show');
+          $(".detail-wrapper").addClass('show');
+          $(".detail-wrapper li").removeClass("show");
+          $($(".detail-wrapper li")[$(this).data('index')]).addClass("show");
+
+$("#rczp").get(0).scrollIntoView();
+
+          window.nice.resize();
+
+          window.nice.doScrollPos({ top: 0 })
+
+        })
 
 
         $(".job-list-ul").on("click", "li", function (e) {

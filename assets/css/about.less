@@ -6,6 +6,7 @@
 .page-main {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   header {
     z-index: 111;
   }
@@ -26,7 +27,7 @@
     section .wrapper {
       width: min(88%, 1440px);
       max-width: 1440px;
-      left: calc(calc(100% - min(88%, 1440px)) / 2);
+      padding-left: calc(calc(100% - min(88%, 1440px)) / 2);
     }
 
     .banner {
@@ -192,13 +193,18 @@
       .wrapper {
         // width: 100%;
         // height: calc(100% - 136px);
-        height: 100%;
+
+        width: 94%;
+        padding-left: 6%;
+        max-width: unset;
+
+        // height: 100%;
         display: flex;
         // max-width: 1440px;
         padding-top: 136px;
-        box-sizing: border-box;
+        // box-sizing: border-box;
 
-        padding-left: calc((100% - min(1440px, 100%)) / 2);
+        // padding-left: calc((100% - min(1440px, 100%)) / 2);
         margin: 0 auto;
 
         .left-part {
