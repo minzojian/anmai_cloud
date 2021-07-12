@@ -15,7 +15,7 @@
     <!-- script -->
     <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
     <script src="./assets/js/common.js"></script>
-    <script src="./assets/js/nav.js"></script>
+    <!-- <script src="./assets/js/nav.js"></script> -->
 
     <script src="./assets/js/lib/gsap.min.js"></script>
     <script src="./assets/js/lib/ScrollToPlugin.min.js"></script>
@@ -89,7 +89,7 @@
     <div class="page-main">
         <!-- header -->
         <header class="header1 header_dark">
-            <div class="logo">&nbsp;</div>
+            <a href="./index.html"> <div class="logo">&nbsp;</div></a>
             <div class="right-part">
                 <input id="langswtich" class="langswtich foldable_menu" type="checkbox" hidden />
                 <label for="langswtich" class="mobile">
@@ -340,7 +340,7 @@
                 </ul>
             </nav>
         </div>
-        <div id="rgzn" class="section-content section section1">
+        <div id="rgzn" data-index="0" class="section-content section section1">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -395,7 +395,7 @@
                 </div>
             </div>
         </div>
-        <div id="ky" class="section-content section section2">
+        <div id="ky" data-index="1" class="section-content section section2">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -447,7 +447,7 @@
                 </div>
             </div>
         </div>
-        <div id="djk" class="section-content section section3">
+        <div id="djk" data-index="2" class="section-content section section3">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -508,7 +508,7 @@
                 </div>
             </div>
         </div>
-        <div id="zw" class="section-content section section4">
+        <div id="zw" data-index="3" class="section-content section section4">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -562,7 +562,7 @@
                 </div>
             </div>
         </div>
-        <div id="swjy" class="section-content section section5">
+        <div id="swjy" data-index="4" class="section-content section section5">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -613,7 +613,7 @@
                 </div>
             </div>
         </div>
-        <div id="section8" class=" section section-content section8">
+        <div id="section8" data-index="7" class=" section section-content section8">
             <div class="flex_center wrapper">
                 <div class="left">
                     <img src="./assets/img/solution/HELLO.png" alt="">
@@ -861,9 +861,9 @@
                         <div class="products flex fd-c jc-between h-auto">
                             <div class="title flex">产品平台</div>
                             <div class="product_imgs flex line-2 ai-end">
-                                <a href="./product_jzcc.html"><img src="assets/img/products1.png" /></a>
+                                <a href="https://storage.anmaicloud.com/" target="_blank"><img src="assets/img/products1.png" /></a>
                                 <div class="divider-v ghost"></div>
-                                <a href="./product_ygpu.html"><img src="assets/img/products2.png" /></a>
+                                <a href="https://gpu.anmaicloud.com/" target="_blank"><img src="assets/img/products2.png" /></a>
                             </div>
                         </div>
                         <div class="gzh flex fd-c ai-end">
@@ -926,15 +926,36 @@
 
 
         //内容信息导航锚点
-        $(".nav-wrap").navScroll({
-            mobileDropdown: true,
-            mobileBreakpoint: 768,
-            scrollSpy: true,
-        })
+        // $(".nav-wrap").navScroll({
+        //     mobileDropdown: true,
+        //     mobileBreakpoint: 768,
+        //     scrollSpy: true,
+        // })
 
-        $(".click-me").navScroll({
-            navHeight: 0,
-        })
+
+ $(".nav-wrap a").on("click",function(e){
+$(".nav-wrap a").removeClass('active');
+$(e.target).addClass('active');
+$($(e.target).prop("href").slice($(e.target).prop("href").lastIndexOf("#"))).get(0).scrollIntoView({behavior:'smooth'})
+e.preventDefault();
+})
+$(".nav-wrap a").removeClass('active');
+if(location.hash){
+$($(".nav-wrap a")[$(location.hash).data("index")]).addClass('active');
+}
+window.addEventListener('scroll',function(){
+$(".nav-wrap a").removeClass('active');
+$(".section-content").each(function(index,sc){
+if($(sc).offset().top<window.pageYOffset+60 && $(sc).offset().top+$(sc).innerHeight()>window.pageYOffset+60){
+$($(".nav-wrap a").get(index)).addClass('active');
+}
+})
+})
+
+
+        // $(".click-me").navScroll({
+        //     navHeight: 0,
+        // })
 
         $(".nav-wrap").on("click", ".nav-mobile", function (e) {
             e.preventDefault()

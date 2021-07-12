@@ -95,20 +95,24 @@
           <span class="sub_part2"
             >全球去中心化云计算<br />业务一站式服务商</span
           >
-          <div class="action_btn btn-with-arrow">
-            <span> 立刻探索 </span>
-            <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-          </div>
+          <a href="./about.html" target="_blank">
+            <div class="action_btn btn-with-arrow">
+              <span> 立刻探索 </span>
+              <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
+            </div>
+          </a>
         </div>
         <div class="page_content title_part title2 state1">
           <span class="sub_part1">Web 3.0 新型云计算平台</span>
           <span class="sub_part2"
             >用去中心化技术<br />帮助每个人轻松迈入<br />数字文明新世界</span
           >
-          <div class="action_btn btn-with-arrow">
-            <span> 立刻探索 </span>
-            <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-          </div>
+          <a href="./about.html" target="_blank">
+            <div class="action_btn btn-with-arrow">
+              <span> 立刻探索 </span>
+              <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
+            </div>
+          </a>
         </div>
         <div class="title3_mask"></div>
         <div class="page_content title_part title3 state1">
@@ -817,7 +821,7 @@ ${
               <div class="divider"></div>
               <div class="bussiness_sub_item">
                 <div class="bussiness_sub_item_title">
-                  02 分布式CDN(即将上线)Distributed CDN
+                  02 分布式CDN Distributed CDN (即将上线)
                 </div>
                 <ul class="bussiness_sub_item_child">
                   <li>全网覆盖</li>
@@ -867,14 +871,28 @@ ${
               </div>
               <div class="divider"></div>
               <div class="bussiness_bottom_part flex">
-                <div class="action_btn btn-with-arrow first">
-                  <span> 探索更多 </span>
-                  <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-                </div>
-                <div class="action_btn btn-with-arrow second">
-                  <span> 相关解决方案 </span>
-                  <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-                </div>
+                <a
+                  id="product_url"
+                  href="./product_fbssjzx.html"
+                  target="_blank"
+                >
+                  <div class="action_btn btn-with-arrow first">
+                    <span> 探索更多 </span>
+                    <i
+                      class="fa iconfont icon-youjiantou"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </a>
+                <a href="./solution_hy.html" target="_blank">
+                  <div class="action_btn btn-with-arrow second">
+                    <span> 相关解决方案 </span>
+                    <i
+                      class="fa iconfont icon-youjiantou"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -1017,6 +1035,7 @@ ${
                 onEnter: function () {
                   $($(".stage2 .bussiness_sub_item")[0]).removeClass("active")
                   $($(".stage2 .bussiness_sub_item")[1]).addClass("active")
+
                   // $(".stage2 .right_part").removeClass('state1')
                   // $(".stage2 .right_part").addClass('state2')
 
@@ -1035,6 +1054,7 @@ ${
                 onLeaveBack: function () {
                   $($(".stage2 .bussiness_sub_item")[0]).addClass("active")
                   $($(".stage2 .bussiness_sub_item")[1]).removeClass("active")
+                  $("#product_url").prop("href", "./product_fbssjzx.html")
                   //                 $(".stage2 .right_part").removeClass('state2')
                   // $(".stage2 .right_part").addClass('state1')
 
@@ -1075,6 +1095,8 @@ ${
               onEnter: function () {
                 $($(".stage2 .bussiness_sub_item")[1]).removeClass("active")
                 $($(".stage2 .bussiness_sub_item")[2]).addClass("active")
+                $("#product_url").prop("href", "./product_jzcc.html")
+
                 //                 $(".stage2 .right_part").removeClass('state2')
                 // $(".stage2 .right_part").addClass('state3')
 
@@ -1093,6 +1115,7 @@ ${
               onLeaveBack: function () {
                 $($(".stage2 .bussiness_sub_item")[1]).addClass("active")
                 $($(".stage2 .bussiness_sub_item")[2]).removeClass("active")
+                $("#product_url").prop("href", "./product_jzcc.html")
                 //                 $(".stage2 .right_part").removeClass('state3')
                 // $(".stage2 .right_part").addClass('state2')
 
@@ -1134,6 +1157,7 @@ ${
               onEnter: function () {
                 $($(".stage2 .bussiness_sub_item")[2]).removeClass("active")
                 $($(".stage2 .bussiness_sub_item")[3]).addClass("active")
+                $("#product_url").prop("href", "./product_ygpu.html")
                 //                 $(".stage2 .right_part").removeClass('state2')
                 // $(".stage2 .right_part").addClass('state3')
 
@@ -1152,6 +1176,7 @@ ${
               onLeaveBack: function () {
                 $($(".stage2 .bussiness_sub_item")[2]).addClass("active")
                 $($(".stage2 .bussiness_sub_item")[3]).removeClass("active")
+                $("#product_url").prop("href", "./product_jzcc.html")
                 //                 $(".stage2 .right_part").removeClass('state3')
                 // $(".stage2 .right_part").addClass('state2')
 
@@ -1263,14 +1288,18 @@ ${
             </ul>
           </div>
           <div class="bussiness_bottom_part flex">
-            <div class="action_btn btn-with-arrow first">
-              <span> 关于我们 </span>
-              <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-            </div>
-            <div class="action_btn btn-with-arrow second">
-              <span> 联系我们 </span>
-              <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-            </div>
+            <a href="./about.html">
+              <div class="action_btn btn-with-arrow first">
+                <span> 关于我们 </span>
+                <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
+              </div>
+            </a>
+            <a href="./about.html#lxfs">
+              <div class="action_btn btn-with-arrow second">
+                <span> 联系我们 </span>
+                <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -1514,11 +1543,11 @@ ${
             <div class="products flex fd-c jc-between h-auto">
               <div class="title flex">产品平台</div>
               <div class="product_imgs flex line-2 ai-start">
-                <a href="./product_jzcc.html"
+                <a href="https://storage.anmaicloud.com/" target="_blank"
                   ><img src="assets/img/products1.png"
                 /></a>
                 <div class="divider-v ghost"></div>
-                <a href="./product_ygpu.html"
+                <a href="https://gpu.anmaicloud.com/" target="_blank"
                   ><img src="assets/img/products2.png"
                 /></a>
               </div>
@@ -1557,7 +1586,7 @@ ${
         </div>
       </div>
       <header class="header1 header_light">
-        <div class="logo">&nbsp;</div>
+        <a href="./index.html"> <div class="logo">&nbsp;</div></a>
         <div class="right-part">
           <input
             id="langswtich"

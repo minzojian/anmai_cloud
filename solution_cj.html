@@ -15,7 +15,7 @@
     <!-- script -->
     <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
     <script src="./assets/js/common.js"></script>
-    <script src="./assets/js/nav.js"></script>
+    <!-- <script src="./assets/js/nav.js"></script> -->
 
     <script src="./assets/js/lib/gsap.min.js"></script>
     <script src="./assets/js/lib/ScrollToPlugin.min.js"></script>
@@ -27,7 +27,7 @@
     <div class="page-main">
         <!-- header -->
         <header class="header1 header_dark">
-      <div class="logo">&nbsp;</div>
+      <a href="./index.html"> <div class="logo">&nbsp;</div></a>
       <div class="right-part">
         <input id="langswtich" class="langswtich foldable_menu" type="checkbox" hidden />
         <label for="langswtich" class="mobile">
@@ -281,7 +281,7 @@
                 </ul>
             </nav>
         </div>
-        <div id="cc" class="section section-content section1 ">
+        <div id="cc" data-index="0" class="section section-content section1 ">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -334,7 +334,7 @@
                 </div>
             </div>
         </div>
-        <div id="rzybf" class="section section-content section2">
+        <div id="rzybf" data-index="1" class="section section-content section2">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -386,7 +386,7 @@
                 </div>
             </div>
         </div>
-        <div id="kxjs" class="section section-content section3">
+        <div id="kxjs" data-index="2"  class="section section-content section3">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -439,7 +439,7 @@
                 </div>
             </div>
         </div>
-        <div id="aqjs" class="section section-content section4">
+        <div id="aqjs" data-index="3" class="section section-content section4">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -493,7 +493,7 @@
                 </div>
             </div>
         </div>
-        <div id="wly" class="section section-content section5">
+        <div id="wly" data-index="4" class="section section-content section5">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -544,7 +544,7 @@
                 </div>
             </div>
         </div>
-        <div id="nrff" class="section section-content section6">
+        <div id="nrff" data-index="5" class="section section-content section6">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -583,7 +583,7 @@
 
             </div>
         </div>
-        <div id="jqxx" class="section section-content section7">
+        <div id="jqxx" data-index="6" class="section section-content section7">
             <div class="wrapper">
                 <div class="top">
                     <div class="flex_between">
@@ -634,7 +634,7 @@
                 </div>
             </div>
         </div>
-        <div id="section8" class="section section-content section8">
+        <div id="section8" data-index="7" class="section section-content section8">
             <div class="wrapper flex_center">
                 <div class="left">
                     <img src="./assets/img/solution/HELLO.png" alt="">
@@ -881,9 +881,9 @@
           <div class="products flex fd-c jc-between h-auto">
             <div class="title flex">产品平台</div>
             <div class="product_imgs flex line-2 ai-start">
-              <a href="./product_jzcc.html"><img src="assets/img/products1.png" /></a>
+              <a href="https://storage.anmaicloud.com/" target="_blank"><img src="assets/img/products1.png" /></a>
               <div class="divider-v ghost"></div>
-              <a href="./product_ygpu.html"><img src="assets/img/products2.png" /></a>
+              <a href="https://gpu.anmaicloud.com/" target="_blank"><img src="assets/img/products2.png" /></a>
             </div>
           </div>
           <div class="gzh flex fd-c ai-end">
@@ -960,11 +960,27 @@ $(e.target).addClass('active');
 $($(e.target).prop("href").slice($(e.target).prop("href").lastIndexOf("#"))).get(0).scrollIntoView({behavior:'smooth'})
 e.preventDefault();
 })
+$(".nav-wrap a").removeClass('active');
+if(location.hash){
+$($(".nav-wrap a")[$(location.hash).data("index")]).addClass('active');
+
+$(location.hash).get(0).scrollIntoView({behavior:'smooth'})
+
+}
+window.addEventListener('scroll',function(){
+$(".nav-wrap a").removeClass('active');
+$(".section-content").each(function(index,sc){
+if($(sc).offset().top<window.pageYOffset+60 && $(sc).offset().top+$(sc).innerHeight()>window.pageYOffset+60){
+$($(".nav-wrap a").get(index)).addClass('active');
+}
+})
+})
 
 
-        $(".click-me").navScroll({
-            navHeight: 0,
-        })
+
+        // $(".click-me").navScroll({
+        //     navHeight: 0,
+        // })
 
         $(".nav-wrap").on("click", ".nav-mobile", function (e) {
             e.preventDefault()
