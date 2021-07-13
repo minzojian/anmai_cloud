@@ -135,6 +135,7 @@ header {
             opacity: 1;
             pointer-events: auto;
             height: auto;
+            z-index: 111;
           }
           &::after {
             transform: scale(1, 1);
@@ -685,11 +686,22 @@ input:checked + label {
     transition: all 0.3s;
     background: transparent;
 
-    margin: 30px;
+    margin: 0;
+    padding: 10px 20px;
+
+    // margin: 30px;
 
     .right-part {
       margin-left: auto;
       flex: none;
+
+      & > .nav > ul > li {
+        margin-right: unset;
+        min-width: 120px;
+        a {
+          justify-content: space-between;
+        }
+      }
     }
     .lang_bt_mobile {
       display: none;
@@ -733,13 +745,33 @@ input:checked + label {
             justify-content: flex-end;
             width: 100%;
           }
+          .submenu {
+            left: unset;
+            right: -10px;
+            transform: unset;
+            position: absolute;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            .submenu-unit .title {
+              margin-bottom: 16px !important;
+              height: 40px !important;
+            }
+          }
+          .solution_submenu.solution_submenu.solution_submenu {
+            width: calc(100vw - 40px);
+            position: absolute;
+            right: -10px;
+            top: 0;
+            box-sizing: border-box;
+            .divider-v {
+              margin: auto 10px;
+            }
+          }
           ul {
             position: relative !important;
-            height: 0;
             padding: 0 !important;
             li {
               &:not(:last-child) {
-                margin-bottom: 5px !important ;
+                margin-bottom: 0px !important ;
               }
               a {
                 font-weight: 400 !important;
@@ -823,9 +855,9 @@ input:checked + label {
         .product_part {
           position: relative;
           .product_imgs {
-            img {
-              width: 30%;
-            }
+            // img {
+            //   width: 30%;
+            // }
           }
           .gzh {
             img {
@@ -895,7 +927,7 @@ a.fade {
   // justify-content: center;
   // align-items: center;
   width: 100%;
-  height: max(640px, var(--fullheight));
+  height: var(--fullheight);
 
   // align-items: center;
 }

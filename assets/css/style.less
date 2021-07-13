@@ -543,6 +543,7 @@ body {
   background: #eef2f9;
   color: #808692;
   height: var(--fullheight);
+  position: relative;
   display: flex;
   flex-direction: column;
   // justify-content: center;
@@ -699,7 +700,7 @@ body {
   }
 
   .stage1 .bg_video {
-    height: 50%;
+    height: 100%;
     top: 0;
     object-fit: cover;
   }
@@ -712,11 +713,35 @@ body {
   .stage1 .title_part {
     height: 50%;
     top: 50%;
+
+    &.title3 {
+      height: 100%;
+      top: 0%;
+      .sub_part {
+        flex-direction: column-reverse;
+        .left-part,
+        .right-part {
+          width: 100%;
+        }
+        .left-part {
+          .sub_part_title {
+            margin-top: 80px;
+          }
+          .sub_part_content {
+            grid-template-areas: unset;
+          }
+        }
+      }
+    }
   }
+
   .stage1 .title_part .sub_part2 {
     width: 100%;
     font-size: 27px;
     line-height: 35px;
+  }
+  .stage2 .page_content {
+    height: calc(100% - 58px);
   }
   .stage2 .left_part {
     width: 100%;
@@ -725,26 +750,43 @@ body {
     font-size: 24px;
     line-height: 30px;
   }
+
   .stage2 .left_part .bussiness_sub_item .bussiness_sub_item_child li {
     font-size: 14px;
   }
+  .stage2 .left_part .bussiness_content {
+    margin-right: 0;
+  }
+
   .action_btn span {
     font-size: 12px;
   }
-
+  .stage3 {
+    height: auto !important;
+  }
   .stage3 .page_content {
+    position: unset !important;
     flex-direction: column-reverse;
     padding: 50px 20px;
+    height: auto !important;
     .left-part {
-      img {
+      margin-right: 0;
+      video {
         width: 100%;
       }
     }
     .right-part {
+      width: 100%;
       margin-bottom: 20px;
-      span {
-        margin-bottom: 10px;
+      .title > img {
+        width: 100%;
       }
+      .bussiness_bottom_part {
+        justify-content: center;
+      }
+      // span {
+      //   margin-bottom: 10px;
+      // }
       svg {
         width: 100%;
       }
@@ -760,11 +802,20 @@ body {
     right: 20px;
     top: 58px;
     height: calc(100% - 58px);
+    width: auto;
   }
 
   .overview {
     .mouse {
       display: none;
+    }
+  }
+
+  .action_btn {
+    width: 136px;
+    padding: 12px 20px;
+    &.second {
+      margin-right: 0;
     }
   }
 }
