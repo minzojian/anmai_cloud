@@ -305,12 +305,12 @@ ${
       function getScrollYByVideo(t) {
         return {
           left: 0,
-          top: (5.5 * window.innerHeight * (t || myvideo.currentTime)) / 20,
+          top: (3.5 * window.innerHeight * (t || myvideo.currentTime)) / 20,
         }
       }
 
       function getTimerByScroll(prog) {
-        let p = 20 * (prog || window.pageYOffset / (5.5 * window.innerHeight))
+        let p = 20 * (prog || window.pageYOffset / (3.5 * window.innerHeight))
 
         return Math.min(20, p)
       }
@@ -344,9 +344,11 @@ ${
               },
               onComplete: function () {
                 // console.log(this.targets)
+                $(".title_part").addClass("state3")
                 this.targets().forEach((elem) => {
                   elem.classList.add("state2")
                   elem.classList.remove("state1")
+                  elem.classList.remove("state3")
                 })
 
                 // $(".header1").removeClass("state1")
@@ -374,13 +376,17 @@ ${
               ease: Linear.easeNone,
               immediateRender: false,
               onComplete: function () {
+                $(".title_part").addClass("state3")
                 this.targets().forEach((elem) => {
+                  elem.classList.remove("state1")
                   elem.classList.remove("state2")
                   elem.classList.add("state3")
                 })
               },
               onReverseComplete: function () {
+                $(".title_part").addClass("state3")
                 this.targets().forEach((elem) => {
+                  elem.classList.remove("state1")
                   elem.classList.remove("state3")
                   elem.classList.add("state2")
                 })
@@ -405,13 +411,17 @@ ${
                 // $(".left-progress").addClass("state2")
               },
               onComplete: function () {
+                $(".title_part").addClass("state3")
                 this.targets().forEach((elem) => {
                   elem.classList.add("state2")
                   elem.classList.remove("state1")
+                  elem.classList.remove("state3")
                 })
               },
               onReverseComplete: function () {
+                $(".title_part").addClass("state3")
                 this.targets().forEach((elem) => {
+                  elem.classList.remove("state3")
                   elem.classList.remove("state2")
                   elem.classList.add("state1")
                 })
@@ -431,13 +441,17 @@ ${
               ease: Linear.easeNone,
               immediateRender: false,
               onComplete: function () {
+                $(".title_part").addClass("state3")
                 this.targets().forEach((elem) => {
+                  elem.classList.remove("state1")
                   elem.classList.remove("state2")
                   elem.classList.add("state3")
                 })
               },
               onReverseComplete: function () {
+                $(".title_part").addClass("state3")
                 this.targets().forEach((elem) => {
+                  elem.classList.remove("state1")
                   elem.classList.remove("state3")
                   elem.classList.add("state2")
                 })
@@ -474,14 +488,19 @@ ${
                 // $(".left-progress").addClass("state3")
               },
               onComplete: function () {
+                $(".title_part").addClass("state3")
+
                 this.targets().forEach((elem) => {
                   elem.classList.add("state2")
                   elem.classList.remove("state1")
+                  elem.classList.remove("state3")
                 })
               },
               onReverseComplete: function () {
+                $(".title_part").addClass("state3")
                 this.targets().forEach((elem) => {
                   elem.classList.remove("state2")
+                  elem.classList.remove("state3")
                   elem.classList.add("state1")
                 })
               },
@@ -807,8 +826,8 @@ ${
             <div class="bussiness_content flex fd-c">
               <div class="divider"></div>
               <div class="bussiness_sub_item active">
-                <div class="bussiness_sub_item_title">
-                  01 分布式数据中心 Distributed data center
+                <div class="bussiness_sub_item_title" data-index="0">
+                  01 分布式数据中心 Distributed Data Center
                 </div>
                 <ul class="bussiness_sub_item_child">
                   <li>建造 “精/简”机房</li>
@@ -820,7 +839,7 @@ ${
               </div>
               <div class="divider"></div>
               <div class="bussiness_sub_item">
-                <div class="bussiness_sub_item_title">
+                <div class="bussiness_sub_item_title" data-index="1">
                   02 分布式CDN Distributed CDN (即将上线)
                 </div>
                 <ul class="bussiness_sub_item_child">
@@ -831,7 +850,7 @@ ${
               </div>
               <div class="divider"></div>
               <div class="bussiness_sub_item">
-                <div class="bussiness_sub_item_title">
+                <div class="bussiness_sub_item_title" data-index="2">
                   03 矩阵存储 Matrix Storage
                 </div>
                 <ul class="bussiness_sub_item_child">
@@ -850,7 +869,9 @@ ${
               </div>
               <div class="divider"></div>
               <div class="bussiness_sub_item">
-                <div class="bussiness_sub_item_title">04 云GPU Cloud GPU</div>
+                <div class="bussiness_sub_item_title" data-index="3">
+                  04 云GPU Cloud GPU
+                </div>
                 <ul class="bussiness_sub_item_child">
                   <li>
                     <span>高校科研：</span
@@ -955,7 +976,9 @@ ${
     </div>
     <script>
       ////////STAGE2/////////
-
+      function getStage2Height(p) {
+        return 4 * window.innerHeight * p
+      }
       $(function () {
         // createTween(
         //   ".header1",
@@ -1027,8 +1050,8 @@ ${
               scrollTrigger: {
                 trigger: ".stage2",
                 //pin: true, // pin the trigger element while active
-                start: "+=" + 0.6 * window.innerHeight, // when the top of the trigger hits the top of the viewport
-                end: "+=" + 0.6 * window.innerHeight, // end after scrolling 500px beyond the start
+                start: "+=" + getStage2Height(0.2), // when the top of the trigger hits the top of the viewport
+                end: "+=" + getStage2Height(0.1), // end after scrolling 500px beyond the start
                 scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
                 // markers: true,
                 id: "4444",
@@ -1087,8 +1110,8 @@ ${
             scrollTrigger: {
               trigger: ".stage2",
               //pin: true, // pin the trigger element while active
-              start: "+=" + 1.8 * window.innerHeight, // when the top of the trigger hits the top of the viewport
-              end: "+=" + 0.6 * window.innerHeight, // end after scrolling 500px beyond the start
+              start: "+=" + getStage2Height(0.4), // when the top of the trigger hits the top of the viewport
+              end: "+=" + getStage2Height(0.1), // end after scrolling 500px beyond the start
               scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
               markers: false,
               id: "6666",
@@ -1149,8 +1172,8 @@ ${
             scrollTrigger: {
               trigger: ".stage2",
               //pin: true, // pin the trigger element while active
-              start: "+=" + 3.0 * window.innerHeight, // when the top of the trigger hits the top of the viewport
-              end: "+=" + 0.6 * window.innerHeight, // end after scrolling 500px beyond the start
+              start: "+=" + getStage2Height(0.6), // when the top of the trigger hits the top of the viewport
+              end: "+=" + getStage2Height(0.1), // end after scrolling 500px beyond the start
               scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
               markers: false,
               id: "6666",
@@ -1199,7 +1222,7 @@ ${
 
         gsap.fromTo(
           ".stage2 .right_part",
-          4 * window.innerHeight,
+          getStage2Height(0.8),
           { scrollTo: 0 },
           {
             scrollTo: 3 * $(".stage2 .right_part").innerHeight(),
@@ -1208,8 +1231,8 @@ ${
             scrollTrigger: {
               trigger: ".stage2",
               //pin: true, // pin the trigger element while active
-              start: "+=" + 0.4 * window.innerHeight, // when the top of the trigger hits the top of the viewport
-              end: "+=" + 4.2 * window.innerHeight, // end after scrolling 500px beyond the start
+              start: "+=" + getStage2Height(0.2), // when the top of the trigger hits the top of the viewport
+              end: "+=" + getStage2Height(0.6), // end after scrolling 500px beyond the start
               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
               // markers: true,
               id: "44414",
@@ -1217,10 +1240,29 @@ ${
           }
         )
 
-        $(window).resize(function () {
-          $(".stage2").height(5 * window.innerHeight)
+        $(".bussiness_sub_item_title").on("click", function (e) {
+          var i = $(this).data("index")
+          // window.pageYOffset =
+
+          window.scrollTo({
+            top:
+              Number(
+                $(".stage2").offset().top +
+                  Number(i) * getStage2Height(0.2) +
+                  getStage2Height(0.1)
+              ) ^ 0,
+            behavior: "smooth",
+          })
         })
-        $(".stage2").height(5 * window.innerHeight)
+
+        $(window).on("scroll", function () {
+          ScrollTrigger.refresh()
+        })
+
+        $(window).resize(function () {
+          $(".stage2").height(getStage2Height(1))
+        })
+        $(".stage2").height(getStage2Height(1))
       })
     </script>
     <div class="stage3">
@@ -1261,30 +1303,30 @@ ${
           </div>
           <div class="locations">
             <ul>
-              <li><a href="#">北京</a></li>
-              <li><a href="#">上海</a></li>
-              <li><a href="#">海口</a></li>
-              <li><a href="#">成都</a></li>
-              <li><a href="#">曼谷</a></li>
+              <li><a href="#" style="pointer-events: none">北京</a></li>
+              <li><a href="#" style="pointer-events: none">上海</a></li>
+              <li><a href="#" style="pointer-events: none">海口</a></li>
+              <li><a href="#" style="pointer-events: none">成都</a></li>
+              <li><a href="#" style="pointer-events: none">曼谷</a></li>
             </ul>
             <ul>
-              <li><a href="#">东京</a></li>
-              <li><a href="#">悉尼</a></li>
-              <li><a href="#">伦敦</a></li>
-              <li><a href="#">巴黎</a></li>
-              <li><a href="#">柏林 </a></li>
+              <li><a href="#" style="pointer-events: none">东京</a></li>
+              <li><a href="#" style="pointer-events: none">悉尼</a></li>
+              <li><a href="#" style="pointer-events: none">伦敦</a></li>
+              <li><a href="#" style="pointer-events: none">巴黎</a></li>
+              <li><a href="#" style="pointer-events: none">柏林 </a></li>
             </ul>
             <ul>
-              <li><a href="#">首尔</a></li>
-              <li><a href="#">莫斯科</a></li>
-              <li><a href="#">加沙</a></li>
-              <li><a href="#">披风</a></li>
-              <li><a href="#">纽约</a></li>
+              <li><a href="#" style="pointer-events: none">首尔</a></li>
+              <li><a href="#" style="pointer-events: none">莫斯科</a></li>
+              <li><a href="#" style="pointer-events: none">加沙</a></li>
+              <li><a href="#" style="pointer-events: none">披风</a></li>
+              <li><a href="#" style="pointer-events: none">纽约</a></li>
             </ul>
             <ul>
-              <li><a href="#">曼彻斯特</a></li>
-              <li><a href="#">中国台北</a></li>
-              <li><a href="#">阿拉木图 </a></li>
+              <li><a href="#" style="pointer-events: none">曼彻斯特</a></li>
+              <li><a href="#" style="pointer-events: none">中国台北</a></li>
+              <li><a href="#" style="pointer-events: none">阿拉木图 </a></li>
             </ul>
           </div>
           <div class="bussiness_bottom_part flex">
@@ -1622,7 +1664,7 @@ ${
           </label>
           <div class="nav">
             <ul>
-              <li class="active"><a href="./">首页</a></li>
+              <li class="active"><a href="./index.html">首页</a></li>
               <li class="">
                 <a
                   >产品 <i class="fa iconfont icon-Down" aria-hidden="true"></i>

@@ -1,0 +1,74 @@
+<head>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+
+  <script src="//unpkg.com/three"></script>
+  <script src="//unpkg.com/topojson-client"></script>
+
+  <script src="//unpkg.com/globe.gl"></script>
+  <!--  <script src="../../dist/globe.gl.js"></script>-->
+</head>
+
+<body>
+  <div id="globeViz"></div>
+
+  <script>
+    const world = Globe()(document.getElementById("globeViz"))
+      .backgroundColor("rgba(0,0,0,0)")
+      .globeImageUrl("./assets/img/world_image_nansha.jpg")
+      .showGlobe(true)
+      .showAtmosphere(true)
+      .globeMaterial(
+        new THREE.MeshBasicMaterial({
+          color: "rgb(20,20,20)",
+          //   emissive: "rgba(250,0,0,1)",
+          //   refractionRatio: 0.1,
+          //   aoMapIntensity: 0.1,
+          //   reflectivity: 0.1,
+          //   specular: "rgba(40,40,40,1)",
+          //   emissiveIntensity: 0.1,
+          //   lightMapIntensity: 0.1,
+          //   combine: THREE.AddOperation,
+          //   side: THREE.DoubleSide,
+        })
+      )
+
+    //   .showGraticules(true)
+
+    fetch("./assets/js/places3.json")
+      .then((res) => res.json())
+      .then((landTopo) => {
+        console.log(topojson.feature(landTopo))
+        // world
+        //   .polygonsData(
+        //     topojson.feature(landTopo, landTopo.objects.land).features
+        //   )
+        //   .polygonCapMaterial(
+        //     new THREE.MeshLambertMaterial({
+        //       color: "rgb(220,220,220)",
+        //       //   side: THREE.DoubleSide,
+        //     })
+        //   )
+        //   .polygonSideColor(() => "rgba(0,0,0,0.5)")
+      })
+
+    // fetch("//unpkg.com/world-atlas/land-110m.json")
+    //   .then((res) => res.json())
+    //   .then((landTopo) => {
+    //     world
+    //       .polygonsData(
+    //         topojson.feature(landTopo, landTopo.objects.land).features
+    //       )
+    //       .polygonCapMaterial(
+    //         new THREE.MeshLambertMaterial({
+    //           color: "rgb(220,220,220)",
+    //           //   side: THREE.DoubleSide,
+    //         })
+    //       )
+    //       .polygonSideColor(() => "rgba(0,0,0,0.5)")
+    //   })
+  </script>
+</body>

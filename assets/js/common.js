@@ -78,3 +78,12 @@ Promise.all(
     document.fonts.add(f)
   })
 })
+
+$(function () {
+  $(window).on("resize", function () {
+    window.onePageHeight = Math.max(window.innerHeight, 640)
+    document.body.style.setProperty("--fullheight", window.onePageHeight + "px")
+  })
+  window.onePageHeight = Math.max(window.innerHeight, 640)
+  document.body.style.setProperty("--fullheight", window.onePageHeight + "px")
+})

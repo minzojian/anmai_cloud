@@ -84,7 +84,7 @@ body::-webkit-scrollbar-track {
 // }
 div {
   // text-transform: uppercase;
-  user-select: none;
+  // user-select: none;
 }
 html,
 body,
@@ -106,6 +106,14 @@ body {
   max-width: 1440px;
   left: calc(calc(100% - min(88%, 1440px)) / 2);
   // margin: auto;
+
+  &.state2 {
+    pointer-events: auto;
+  }
+  &.state1,
+  &.state3 {
+    pointer-events: none;
+  }
 }
 
 .collaseable() {
@@ -412,6 +420,7 @@ body {
           font-size: 18px;
           font-weight: bold;
           color: #0d141a;
+          cursor: pointer;
         }
         .bussiness_sub_item_child {
           transition: all 0.3s;
@@ -423,6 +432,7 @@ body {
             padding-left: 20px;
             line-height: 28px;
             font-size: 16px;
+            white-space: nowrap;
           }
           li::after {
             content: "";
@@ -532,7 +542,7 @@ body {
 .stage3 {
   background: #eef2f9;
   color: #808692;
-  height: 100vh;
+  height: var(--fullheight);
   display: flex;
   flex-direction: column;
   // justify-content: center;

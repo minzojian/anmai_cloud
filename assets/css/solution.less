@@ -24,6 +24,7 @@ body {
 .banner {
   height: 760px;
   background: url("../img/solution/banner.png") no-repeat center;
+  background-size: cover;
   width: 100%;
   display: flex;
   justify-content: start;
@@ -116,7 +117,7 @@ body {
 
   .nav-wrap {
     background: #f2f4f8;
-    box-shadow: 0 0 59px 0 rgb(25 36 45 / 5%);
+    box-shadow: 0 0 5px 0 rgb(25 36 45 / 5%);
     border-radius: 40px;
 
     ul {
@@ -181,7 +182,7 @@ body {
     position: fixed;
     top: 20px;
     // left: 50%;
-    box-shadow: 0px 0px 59px 0px rgba(25, 36, 45, 0.05);
+    box-shadow: 0px 0px 5px 0px rgba(25, 36, 45, 0.05);
     z-index: 99999;
     // margin-left: -699.5px;
   }
@@ -334,6 +335,7 @@ body {
 .section8 {
   width: 100%;
   background: url("../img/solution/图层 20.png") no-repeat center;
+  background-size: cover;
   height: 788px;
   box-sizing: border-box;
   display: flex;
@@ -357,6 +359,7 @@ body {
         color: #ffffff;
         line-height: 1;
         margin: 22px 0 45px;
+        white-space: nowrap;
       }
 
       .desc {
@@ -428,9 +431,9 @@ body {
           width: 566px;
 
           h1 {
-            font-size: 64px;
-            font-family: Gilroy;
-            font-weight: 400;
+            font-size: 54px;
+            font-family: OPPOSans;
+            font-weight: 500;
             color: #000000;
             display: flex;
 
@@ -438,6 +441,11 @@ body {
               color: #486587;
               font-weight: normal;
               margin-right: 24px;
+              font-size: 64px;
+              font-family: Gilroy;
+              font-weight: 400;
+              color: #486587;
+              line-height: 75px;
             }
           }
 
@@ -595,7 +603,8 @@ body {
           }
 
           .btn {
-            display: flex;
+            display: none; //暂时隐藏
+            // display: flex;
             margin-top: 120px;
 
             div {

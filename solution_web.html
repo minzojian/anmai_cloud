@@ -28,7 +28,7 @@
   <style>
     .banner {
       background: url("./assets/img/solution/解决方案-web/图层 29.png")
-        no-repeat center;
+        no-repeat center cover;
     }
 
     #byjs .wrapper .bottom {
@@ -96,7 +96,7 @@
           </label>
           <div class="nav">
             <ul>
-              <li class="active"><a href="./">首页</a></li>
+              <li class="active"><a href="./index.html">首页</a></li>
               <li class="">
                 <a
                   >产品 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
@@ -946,7 +946,7 @@
             <div class="product_part">
               <div class="products flex fd-c jc-between h-auto">
                 <div class="title flex">产品平台</div>
-                <div class="product_imgs flex line-2 ai-end">
+                <div class="product_imgs flex line-2 ai-start">
                   <a href="https://storage.anmaicloud.com/" target="_blank"
                     ><img src="assets/img/products1.png"
                   /></a>
@@ -1023,25 +1023,33 @@
       //   navHeight: 0,
       // })
 
- $(".nav-wrap a").on("click",function(e){
-$(".nav-wrap a").removeClass('active');
-$(e.target).addClass('active');
-$($(e.target).prop("href").slice($(e.target).prop("href").lastIndexOf("#"))).get(0).scrollIntoView({behavior:'smooth'})
-e.preventDefault();
-})
-$(".nav-wrap a").removeClass('active');
-if(location.hash){
-$($(".nav-wrap a")[$(location.hash).data("index")]).addClass('active');
-}
-window.addEventListener('scroll',function(){
-$(".nav-wrap a").removeClass('active');
-$(".section-content").each(function(index,sc){
-if($(sc).offset().top<window.pageYOffset+60 && $(sc).offset().top+$(sc).innerHeight()>window.pageYOffset+60){
-$($(".nav-wrap a").get(index)).addClass('active');
-}
-})
-})
-
+      $(".nav-wrap a").on("click", function (e) {
+        $(".nav-wrap a").removeClass("active")
+        $(e.target).addClass("active")
+        $(
+          $(e.target)
+            .prop("href")
+            .slice($(e.target).prop("href").lastIndexOf("#"))
+        )
+          .get(0)
+          .scrollIntoView({ behavior: "smooth" })
+        e.preventDefault()
+      })
+      $(".nav-wrap a").removeClass("active")
+      if (location.hash) {
+        $($(".nav-wrap a")[$(location.hash).data("index")]).addClass("active")
+      }
+      window.addEventListener("scroll", function () {
+        $(".nav-wrap a").removeClass("active")
+        $(".section-content").each(function (index, sc) {
+          if (
+            $(sc).offset().top < window.pageYOffset + 60 &&
+            $(sc).offset().top + $(sc).innerHeight() > window.pageYOffset + 60
+          ) {
+            $($(".nav-wrap a").get(index)).addClass("active")
+          }
+        })
+      })
 
       $(".nav-wrap").on("click", ".nav-mobile", function (e) {
         e.preventDefault()
