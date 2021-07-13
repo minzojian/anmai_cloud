@@ -57,8 +57,8 @@
       type="text/javascript"
       src="./assets/js/lib/modernizr.custom.min.js"
     ></script>
-    <script type="text/javascript" src="./assets/js/common.js"></script>
     <script src="./assets/js/lib/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="./assets/js/common.js"></script>
   </head>
 
   <body class="dark_bg">
@@ -305,12 +305,12 @@ ${
       function getScrollYByVideo(t) {
         return {
           left: 0,
-          top: (3.5 * window.innerHeight * (t || myvideo.currentTime)) / 20,
+          top: (3.5 * window.onePageHeight * (t || myvideo.currentTime)) / 20,
         }
       }
 
       function getTimerByScroll(prog) {
-        let p = 20 * (prog || window.pageYOffset / (3.5 * window.innerHeight))
+        let p = 20 * (prog || window.pageYOffset / (3.5 * window.onePageHeight))
 
         return Math.min(20, p)
       }
@@ -325,7 +325,7 @@ ${
           createTween(
             ".title1",
             getScrollYByVideo(1).top,
-            // 0.2 * window.innerHeight,
+            // 0.2 * window.onePageHeight,
             {
               // translateY: 30, opacity: 0
             },
@@ -509,7 +509,7 @@ ${
 
           //   createTween(
           //     ".title3", // { v: 0 },
-          //     2 * window.innerHeight,
+          //     2 * window.onePageHeight,
           //     {
           //       scrollTo: 0,
           //       //  translateY: 30, opacity: 0
@@ -691,13 +691,13 @@ ${
         // tween2.add([
         //   createTween(
         //     ".title3", // { v: 0 },
-        //     window.innerHeight,
+        //     window.onePageHeight,
         //     {
         //       // scrollTo: 0,
         //       //  translateY: 30, opacity: 0
         //     },
         //     {
-        //       // delay: 5.5 * window.innerHeight,
+        //       // delay: 5.5 * window.onePageHeight,
         //       // v: $(".inner_scroll_warpper").height() - $(".title3").height(),
         //       // scrollTo:
         //       //   $(".inner_scroll_warpper").height() - $(".title3").height(),
@@ -720,7 +720,7 @@ ${
         //     }
         //   ),
         // ])
-        // tween2.add([gsap.to("body", window.innerHeight, {})])
+        // tween2.add([gsap.to("body", window.onePageHeight, {})])
 
         gsap.timeline({
           // yes, we can add it to an entire timeline!
@@ -728,7 +728,7 @@ ${
             trigger: ".stage1",
             //pin: true, // pin the trigger element while active
             start: getScrollYByVideo(20).top, // when the top of the trigger hits the top of the viewport
-            end: getScrollYByVideo(20).top + window.innerHeight, // end after scrolling 500px beyond the start
+            end: getScrollYByVideo(20).top + window.onePageHeight, // end after scrolling 500px beyond the start
             scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
             markers: false,
             id: "ttttt",
@@ -750,7 +750,7 @@ ${
         // var scene2 = new ScrollMagic.Scene({
         //   triggerHook: "0",
         //   triggerElement: ".stage1",
-        //   duration: 1 * window.innerHeight,
+        //   duration: 1 * window.onePageHeight,
         //   offset: getScrollYByVideo(20).top,
         // })
         //   .setTween(tween2)
@@ -758,7 +758,7 @@ ${
         //   .addIndicators({ name: "first2" }) // add indicators (requires plugin)
         //   .addTo(controller)
         //   .on("progress", function (progEvent) {
-        //     // console.log(window.pageYOffset / window.innerHeight)
+        //     // console.log(window.pageYOffset / window.onePageHeight)
         //     // myvideo.currentTime = 66 * progEvent.progress
         //   })
 
@@ -786,10 +786,10 @@ ${
           }, 2000)
 
           // if (learnCycleSwitch.checked) {
-          //   // if((window.pageYOffset+ event.deltaY)>=window.innerHeight * 11 || (window.pageYOffset+ event.deltaY)<=window.innerHeight * 9)
+          //   // if((window.pageYOffset+ event.deltaY)>=window.onePageHeight * 11 || (window.pageYOffset+ event.deltaY)<=window.onePageHeight * 9)
           //     event.preventDefault()
 
-          // var s = Math.max(Math.min(window.pageYOffset+ event.deltaY, window.innerHeight * 11), window.innerHeight * 9)
+          // var s = Math.max(Math.min(window.pageYOffset+ event.deltaY, window.onePageHeight * 11), window.onePageHeight * 9)
           //   window.scrollTo({ top: s });
 
           // // window.scrollTo({ top: window.pageYOffset + event.deltaY,behavior: "smooth" });
@@ -808,11 +808,13 @@ ${
 
         $(window).resize(function () {
           $(".stage1").height(
-            getScrollYByVideo(20).top + 2 * window.innerHeight
+            getScrollYByVideo(20).top + 2 * window.onePageHeight
           )
         })
 
-        $(".stage1").height(getScrollYByVideo(20).top + 2 * window.innerHeight)
+        $(".stage1").height(
+          getScrollYByVideo(20).top + 2 * window.onePageHeight
+        )
       })
     </script>
     <div class="stage2">
@@ -977,12 +979,12 @@ ${
     <script>
       ////////STAGE2/////////
       function getStage2Height(p) {
-        return 4 * window.innerHeight * p
+        return 4 * window.onePageHeight * p
       }
       $(function () {
         // createTween(
         //   ".header1",
-        //   0.1 * window.innerHeight,
+        //   0.1 * window.onePageHeight,
         //   {},
         //   {
         //     immediateRender: false,
@@ -990,7 +992,7 @@ ${
         //       trigger: ".stage2",
         //       //pin: true, // pin the trigger element while active
         //       start: "top top", // when the top of the trigger hits the top of the viewport
-        //       end: "+=" + 0.1 * window.innerHeight, // end after scrolling 500px beyond the start
+        //       end: "+=" + 0.1 * window.onePageHeight, // end after scrolling 500px beyond the start
         //       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
         //       markers: false,
         //       id: "2222",
@@ -1042,7 +1044,7 @@ ${
         ),
           gsap.fromTo(
             ".stage2 .right_part",
-            0.1 * window.innerHeight,
+            0.1 * window.onePageHeight,
             {},
             {
               immediateRender: false,
@@ -1099,7 +1101,7 @@ ${
 
         gsap.fromTo(
           ".stage2 .right_part",
-          0.1 * window.innerHeight,
+          0.1 * window.onePageHeight,
           {
             // scrollTo: $(".stage2 .right_part").innerHeight(),
           },
@@ -1161,7 +1163,7 @@ ${
 
         gsap.fromTo(
           ".stage2 .right_part",
-          0.1 * window.innerHeight,
+          0.1 * window.onePageHeight,
           {
             // scrollTo: $(".stage2 .right_part").innerHeight(),
           },
@@ -1674,7 +1676,9 @@ ${
                     <li>
                       <a href="./product_fbssjzx.html">
                         <div class="icon">
-                          <img src="./assets/img/icons/products/云计算.png" />
+                          <img
+                            src="./assets/img/icons/products/分布式数据中心.svg"
+                          />
                         </div>
                         分布式数据中心
                       </a>
@@ -1686,7 +1690,7 @@ ${
                       >
                         <div class="icon">
                           <img
-                            src="./assets/img/icons/products/分布式CDN.png"
+                            src="./assets/img/icons/products/分布式CDN.svg"
                           />
                         </div>
                         分布式CDN(即将上线)
@@ -1695,7 +1699,7 @@ ${
                     <li>
                       <a href="./product_jzcc.html">
                         <div class="icon">
-                          <img src="./assets/img/icons/products/矩阵存储.png" />
+                          <img src="./assets/img/icons/products/矩阵存储.svg" />
                         </div>
                         矩阵存储
                       </a>
@@ -1703,7 +1707,7 @@ ${
                     <li>
                       <a href="./product_ygpu.html">
                         <div class="icon">
-                          <img src="./assets/img/icons/products/云GPU.png" />
+                          <img src="./assets/img/icons/products/云GPU.svg" />
                         </div>
                         云GPU
                       </a>
@@ -1724,7 +1728,7 @@ ${
                         <a href="./solution_cj.html#cc">
                           <div class="icon">
                             <img
-                              src="./assets/img/icons/solutions/图层 5.png"
+                              src="./assets/img/icons/solutions/icon-15_存储.svg"
                             />
                           </div>
                           存储
@@ -1734,7 +1738,7 @@ ${
                         <a href="./solution_cj.html#rzybf">
                           <div class="icon">
                             <img
-                              src="./assets/img/icons/solutions/图层 6.png"
+                              src="./assets/img/icons/solutions/icon-15_容灾与备份.svg"
                             />
                           </div>
                           容灾与备份
@@ -1744,7 +1748,7 @@ ${
                         <a href="./solution_cj.html#kxjs">
                           <div class="icon">
                             <img
-                              src="./assets/img/icons/solutions/图层 7.png"
+                              src="./assets/img/icons/solutions/icon-15_科学计算.svg"
                             />
                           </div>
                           科学计算
@@ -1754,7 +1758,7 @@ ${
                         <a href="./solution_cj.html#aqjs">
                           <div class="icon">
                             <img
-                              src="./assets/img/icons/solutions/图层 8.png"
+                              src="./assets/img/icons/solutions/icon-15_安全计算.svg"
                             />
                           </div>
                           安全计算
@@ -1764,7 +1768,7 @@ ${
                         <a href="./solution_cj.html#wly">
                           <div class="icon">
                             <img
-                              src="./assets/img/icons/solutions/图层 9.png"
+                              src="./assets/img/icons/solutions/icon-15_物理云.svg"
                             />
                           </div>
                           物理云
@@ -1774,7 +1778,7 @@ ${
                         <a href="./solution_cj.html#nrff">
                           <div class="icon">
                             <img
-                              src="./assets/img/icons/solutions/图层 10.png"
+                              src="./assets/img/icons/solutions/icon-15_内容分发.svg"
                             />
                           </div>
                           内容分发
@@ -1784,7 +1788,7 @@ ${
                         <a href="./solution_cj.html#jqxx">
                           <div class="icon">
                             <img
-                              src="./assets/img/icons/solutions/图层 11.png"
+                              src="./assets/img/icons/solutions/icon-15_机器学习.svg"
                             />
                           </div>
                           机器学习
@@ -1800,7 +1804,7 @@ ${
                         <a href="./solution_hy.html#rgzn">
                           <div class="icon">
                             <img
-                              src="./assets/img/icons/solutions/矢量智能对象.png"
+                              src="./assets/img/icons/solutions/icon-15_人工智能-08.svg"
                             />
                           </div>
                           人工智能
@@ -1810,7 +1814,7 @@ ${
                         <a href="./solution_hy.html#ky">
                           <div class="icon">
                             <img
-                              src="./assets/img/icons/solutions/矢量智能对象 (1).png"
+                              src="./assets/img/icons/solutions/icon-15_科研.svg"
                             />
                           </div>
                           科研
@@ -1820,7 +1824,7 @@ ${
                         <a href="./solution_hy.html#djk">
                           <div class="icon">
                             <img
-                              src="./assets/img/icons/solutions/矢量智能对象 (2).png"
+                              src="./assets/img/icons/solutions/icon-15_大健康.svg"
                             />
                           </div>
                           大健康
@@ -1830,7 +1834,7 @@ ${
                         <a href="./solution_hy.html#zw">
                           <div class="icon">
                             <img
-                              src="./assets/img/icons/solutions/矢量智能对象 (3).png"
+                              src="./assets/img/icons/solutions/icon-15_政务.svg"
                             />
                           </div>
                           政务
@@ -1840,7 +1844,7 @@ ${
                         <a href="./solution_hy.html#swjy">
                           <div class="icon">
                             <img
-                              src="./assets/img/icons/solutions/矢量智能对象 (4).png"
+                              src="./assets/img/icons/solutions/icon-15_生物基因.svg"
                             />
                           </div>
                           生物基因
@@ -1856,7 +1860,7 @@ ${
                         <a href="./solution_web.html#byjs">
                           <div class="icon">
                             <img
-                              src="./assets/img/icons/solutions/矢量智能对象 (5).png"
+                              src="./assets/img/icons/solutions/icon-15_边缘计算.svg"
                             />
                           </div>
                           边缘计算
@@ -1866,7 +1870,7 @@ ${
                         <a href="./solution_web.html#qkl">
                           <div class="icon">
                             <img
-                              src="./assets/img/icons/solutions/矢量智能对象 (6).png"
+                              src="./assets/img/icons/solutions/icon-15_区块链.svg"
                             />
                           </div>
                           区块链
@@ -1876,7 +1880,7 @@ ${
                         <a href="./solution_web.html#rgzn">
                           <div class="icon">
                             <img
-                              src="./assets/img/icons/solutions/矢量智能对象 拷贝.png"
+                              src="./assets/img/icons/solutions/icon-15_人工智能-09.svg"
                             />
                           </div>
                           人工智能
@@ -1953,15 +1957,15 @@ ${
 
         gsap.fromTo(
           ".header1",
-          1 * window.innerHeight,
+          1 * window.onePageHeight,
           {},
           {
             scrollTrigger: {
               trigger: ".stage2",
               // pin: true, // pin the trigger element while active
               // pinSpacing: false,
-              start: "-=" + 2 * window.innerHeight, // when the top of the trigger hits the top of the viewport
-              end: "+=" + window.innerHeight, // end after scrolling 500px beyond the start
+              start: "-=" + 2 * window.onePageHeight, // when the top of the trigger hits the top of the viewport
+              end: "+=" + window.onePageHeight, // end after scrolling 500px beyond the start
               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
               // markers: true,
               id: "1111123123",
@@ -1978,7 +1982,7 @@ ${
               onUpdate: function (self) {
                 $(".header1").css({
                   transform: `translateY(${
-                    window.innerHeight * self.progress * -1
+                    window.onePageHeight * self.progress * -1
                   }px)`,
                 })
               },
@@ -2026,15 +2030,15 @@ ${
 
         // gsap.fromTo(
         //   ".header1",
-        //   1 * window.innerHeight,
+        //   1 * window.onePageHeight,
         //   {},
         //   {
         //     scrollTrigger: {
         //       trigger: ".stage3",
         //       // pin: true, // pin the trigger element while active
         //       // pinSpacing: false,
-        //       start: "+=" + 3 * window.innerHeight, // when the top of the trigger hits the top of the viewport
-        //       end: "+=" + window.innerHeight, // end after scrolling 500px beyond the start
+        //       start: "+=" + 3 * window.onePageHeight, // when the top of the trigger hits the top of the viewport
+        //       end: "+=" + window.onePageHeight, // end after scrolling 500px beyond the start
         //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
         //       // markers: true,
         //       id: "hhhhhhh12312",
@@ -2051,7 +2055,7 @@ ${
         //       onUpdate: function (self) {
         //         $(".header1").css({
         //           transform: `translateY(${
-        //             window.innerHeight * self.progress * -1
+        //             window.onePageHeight * self.progress * -1
         //           }px)`,
         //         })
         //       },
