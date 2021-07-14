@@ -320,7 +320,7 @@
         <div class="right-part">
           <div class="swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
+              <!-- <div class="swiper-slide">
                 <div class="items bg1">
                   <div class="title1">06</div>
                   <div class="contents">
@@ -349,7 +349,7 @@
                     <img src="./assets/img/about/图层 10@2x.png" alt="" />
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -361,14 +361,14 @@
         <div class="title-part">
           <div class="title2">企业最新动态</div>
           <div class="right-part">
-            <a class="active" href="#">全部</a>
+            <!-- <a class="active" href="#">全部</a>
             <a href="#">新闻</a>
             <a href="#">公告</a>
-            <a href="#">动态</a>
+            <a href="#">动态</a> -->
           </div>
         </div>
         <div class="news-list">
-          <div class="news-item">
+          <!-- <div class="news-item">
             <img src="./assets/img/图层 15.png" />
             <div class="info">
               <div class="date">2021. 07. 02</div>
@@ -402,10 +402,10 @@
               <div class="date">2021. 07. 02</div>
               <div class="title"> 安迈云主办“云领风潮-安迈云品牌交流会”，并加入GDCA全球分布式 </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="page-part">
-          <a href="`/news/${$route.params.category}/${prevID}`" class="button text has-icon prev">
+          <!-- <a   class="button text has-icon prev">
             <i class="fa iconfont icon-zuojiantou" aria-hidden="true"></i>
           </a>
           <a class="active">1</a>
@@ -413,9 +413,9 @@
           <a class="">3</a>
           <a class="">4</a>
           <a class="">5</a>
-          <a href="`/news/${$route.params.category}/${nextID}`" class="button text has-icon next disabled">
+          <a  class="button text has-icon next disabled">
             <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-          </a>
+          </a> -->
         </div>
       </div>
     </section>
@@ -769,15 +769,7 @@ scrollWheel:false
       map.add(marker)
     }
 
-    var swiper = new Swiper(".swiper-container", {
-      slidesPerView: "auto",
-      spaceBetween: 0,
-      freeMode: true,
-      navigation: {
-        nextEl: ".btn-next",
-        prevEl: ".btn-prev",
-      },
-    })
+   
 
     new WOW().init()
 
@@ -908,9 +900,117 @@ scrollWheel:false
 
     ]
 
+var allTypes=[]
+var currentTypeIndex=0;
+var currentPage=1;
+function changeNewType(type){
+currentTypeIndex=type;
+currentPage=1;
 
+$("#xwdt .title-part .right-part .newstype").removeClass('active');
+$($("#xwdt .title-part .right-part .newstype").get(type)).addClass('active');
+loadNews();
+}
+
+function loadNews(page){
+if(page)currentPage=page;
+$.get("http://ixiezhi.vicp.cc/amyos/news/getArticle",{l:currentPage,t:allTypes[currentTypeIndex]}).then(function(data){
+
+var newsStr=``
+data.data.forEach(function(news){
+
+newsStr+=`
+<a  class="news-item" href="detail.html?id=`+news.id+`">
+            <img src="`+news.img+`" />
+            <div class="info">
+              <div class="date">`+news.open_at+`</div>
+              <div class="title"> `+news.title+` </div>
+            </div>
+          </a>
+`
+
+
+
+})
+
+$("#xwdt .news-list").html(newsStr);
+
+
+var pageStr=`<a   class="button text has-icon prev `+(currentPage<=1?'disabled':'')+` onclick="loadNews(`+(currentPage-1)+`)" ">
+            <i class="fa iconfont icon-zuojiantou" aria-hidden="true"></i>
+          </a>`
+
+ for(var p=1;p<data.page.length+1;p++){
+pageStr+=` <a class="`+(currentPage==p?'active':'')+`" onclick="loadNews(`+p+`)">`+p+`</a>`
+}
+
+pageStr+=`<a   class="button text has-icon next  `+(currentPage>=data.page.length?'disabled':'')+` onclick="loadNews(`+(currentPage+1)+`)" ">
+           <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
+          </a>`
+
+$("#xwdt .page-part").html(pageStr);
+
+})
+}
 
     $(function () {
+///////////发展历程
+
+
+$.get("http://ixiezhi.vicp.cc/amyos/contact/article_year_top").then(function(data){
+
+let slideStr=``;
+
+data.forEach(function(d){
+slideStr+=`<a class="swiper-slide" href="detail.html?id=`+d.id+`">
+                <div class="items bg1">
+                  <div class="title1">`+d.month+`</div>
+                  <div class="contents">
+                    <div class="title2">`+d.month_en+`</div>
+                    <div class="title3">`+d.title+`</div>
+                    <img src="`+d.img+`" alt="" />
+                  </div>
+                </div>
+              </a>`
+})
+
+$("#fzlc .swiper-wrapper").html(slideStr)
+
+ var swiper = new Swiper(".swiper-container", {
+      slidesPerView: "auto",
+      spaceBetween: 0,
+      freeMode: true,
+      navigation: {
+        nextEl: ".btn-next",
+        prevEl: ".btn-prev",
+      },
+    })
+
+})
+
+//////////新闻列表
+
+
+$.get("http://ixiezhi.vicp.cc/amyos/contact/article_type").then(function(data){
+
+var typesStr=` <a class="newstype `+(currentTypeIndex==0?'active':'')+`"  onclick="changeNewType(0)">全部</a>`;
+var typeIds=[0]
+data.data.forEach(function(t,i){
+typesStr+=`<a class="newstype `+(currentTypeIndex==i+1?'active':'')+`"   onclick="changeNewType(`+(i+1)+`)">`+t.name_cn+`</a>`
+typeIds.push(t.id)
+})
+$("#xwdt .title-part .right-part").html(typesStr)
+allTypes=typeIds;
+
+var selectedType=/newstype=([^#&])/ig.exec(location.search)[1];
+var selectedTypeIndex=0;
+if(selectedType){
+selectedTypeIndex=allTypes.findIndex(function(t){return String(t)==selectedType});
+}
+changeNewType(selectedTypeIndex);
+})
+
+
 
 
 
@@ -996,14 +1096,29 @@ ${["岗位职责:", job[5], "", '任职要求:', job[6], "", bouns].join(`
               </li> 
 `)
 
-        Macy({
+        window.macy=Macy({
           container: '.job-list',
           columns: 3,
-          margin: 41
+          margin: 41,
+
+breakAt: {
+    760: {
+      margin: {
+        x: 20,
+      },
+      columns: 1
+    }
+  }
+
         });
 
 
-        gsap.fromTo(
+
+ScrollTrigger.matchMedia({
+	
+  // desktop
+  "(min-width: 751px)": function() {
+gsap.fromTo(
           ".section5 .job-list-wraper",
           1,
           {},
@@ -1026,11 +1141,43 @@ ${["岗位职责:", job[5], "", '任职要求:', job[6], "", bouns].join(`
             },
           }
         )
+$(".section5").height(2.4 * window.onePageHeight)
+},
+"(max-width: 750px)": function() {
+gsap.fromTo(
+          ".section5 .job-list-wraper",
+          1,
+          {},
+          {
+            // scrollTo: $(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight()+350 ,
+            immediateRender: false,
 
-        $(window).resize(function () {
-          $(".section5").height(2.4 * window.onePageHeight)
-        })
-        $(".section5").height(2.4 * window.onePageHeight)
+            scrollTrigger: {
+              trigger: ".section5",
+              //pin: true, // pin the trigger element while active
+              start: "+=" + 350, // when the top of the trigger hits the top of the viewport
+              end: "+=" + ($(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight() ), // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              // markers: true,
+              id: "44414",
+              onUpdate: function (self) {
+
+                $(".section5 .job-list-wraper").get(0).scrollTop = ($(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight()+350 ) * self.progress
+              }
+            },
+          }
+        )
+$(".section5").height($(".section5 .job-list").innerHeight() +window.onePageHeight)
+}
+})
+
+
+        
+
+        // $(window).resize(function () {
+        //   $(".section5").height(2.4 * window.onePageHeight)
+        // })
+        
 
  $(".job-list-wraper .job-list").on("click", ".job-item", function (e) {
           $("#job-pop-switch").get(0).checked=true;
