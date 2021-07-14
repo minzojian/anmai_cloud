@@ -87,3 +87,30 @@ $(function () {
   window.onePageHeight = Math.max(window.innerHeight, 640)
   document.body.style.setProperty("--fullheight", window.onePageHeight + "px")
 })
+
+function checkOs() {
+  var ua = navigator.userAgent,
+    isWindowsPhone = /(?:Windows Phone)/.test(ua),
+    isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+    isAndroid = /(?:Android)/.test(ua),
+    isFireFox = /(?:Firefox)/.test(ua),
+    isChrome = /(?:Chrome|CriOS)/.test(ua),
+    isWeixin =
+      ua.match(/MicroMessenger/i) &&
+      ua.match(/MicroMessenger/i)[0] == "micromessenger"
+  ;(isTablet =
+    /(?:iPad|PlayBook)/.test(ua) ||
+    (isAndroid && !/(?:Mobile)/.test(ua)) ||
+    (isFireFox && /(?:Tablet)/.test(ua))),
+    (isIPhone = /(?:iPhone)/.test(ua) && !isTablet),
+    (isPc = !isIPhone && !isAndroid && !isSymbian)
+
+  window.isTablet = isTablet
+  window.isIPhone = isIPhone
+  window.isAndroid = isAndroid
+  window.isPc = isPc
+  window.isPhone = !isPc
+  window.isWeixin = isWeixin
+}
+
+checkOs()
