@@ -562,6 +562,8 @@ ${
         //   }
         // ),
 
+if(!isPhone)
+{
         createTween(
           ".title3_mask",
           getScrollYByVideo(1).top,
@@ -633,6 +635,7 @@ ${
             },
           }
         )
+}
 
         // createTween(
         //   ".title3",
@@ -887,7 +890,8 @@ ${
         //   ),
         // ])
         // tween2.add([gsap.to("body", window.onePageHeight, {})])
-
+if(!isPhone)
+{
         gsap.timeline({
           // yes, we can add it to an entire timeline!
           scrollTrigger: {
@@ -915,6 +919,7 @@ ${
             },
           },
         })
+}
         // .add(tween2)
 
         // var scene2 = new ScrollMagic.Scene({
@@ -977,18 +982,24 @@ ${
 
         $(window).on("scroll", function (event) {})
 
+
+if(isPhone){
+$(".title3").hide()
+$(".title3_mask").hide()
+}
+
         $(window).resize(function () {
           $(".stage1").height(
             getScrollYByVideo(20).top +
-              1 * window.onePageHeight +
-              ($(".inner_scroll_warpper").height() - $(".title3").height())
+            (isPhone?0:(1 * window.onePageHeight +
+            ($(".inner_scroll_warpper").height() - $(".title3").height())))
           )
         })
 
         $(".stage1").height(
           getScrollYByVideo(20).top +
-            1 * window.onePageHeight +
-            ($(".inner_scroll_warpper").height() - $(".title3").height())
+            (isPhone?0:(1 * window.onePageHeight +
+            ($(".inner_scroll_warpper").height() - $(".title3").height())))
         )
       })
     </script>

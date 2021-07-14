@@ -475,9 +475,11 @@
         }
 
         .info {
-          background: linear-gradient(180deg,
-              rgba(0, 0, 0, 0),
-              rgba(0, 0, 0, 0.6));
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.6)
+          );
           padding: 37px;
           position: absolute;
           width: 100%;
@@ -665,7 +667,7 @@
     }
   }
 
-  input#job-pop-switch:checked~.all-job-popup-container {
+  input#job-pop-switch:checked ~ .all-job-popup-container {
     opacity: 1;
     transform: translateY(0px);
     pointer-events: auto;
@@ -750,7 +752,8 @@
         line-height: 6px;
       }
 
-      ul.job-list-ul {}
+      ul.job-list-ul {
+      }
 
       ul.job-detail-ul {
         li {
@@ -944,7 +947,7 @@
           box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
         }
 
-        .qrcode_small:hover~.qrcode {
+        .qrcode_small:hover ~ .qrcode {
           opacity: 1;
         }
       }
@@ -952,11 +955,53 @@
   }
 }
 
-@media screen and (max-width: 1440px) {}
+@media screen and (max-width: 1440px) {
+}
 
 @media screen and (max-width: 750px) {
   .page-main .main-container .banner .wrapper .slogan .left .title2 {
     font-size: 44px;
+  }
+
+  .all-job-popup-container {
+    .all-job-popup {
+      width: 100% !important;
+      height: 100% !important;
+      ul {
+        padding-right: 0 !important;
+        li {
+          padding: 22px 0 !important;
+        }
+      }
+      .p-wrapper {
+        padding: 20px !important;
+      }
+      .job-list-ul {
+        .p-job-item {
+          .l-j-top-part {
+            justify-content: center !important;
+          }
+        }
+      }
+      .job-detail-ul {
+        .p-job-item {
+          .l-j-top-part {
+            flex-direction: column !important;
+            align-items: center !important;
+            .l-j-title {
+              margin-bottom: 10px !important;
+            }
+          }
+        }
+      }
+
+      .l-j-bottom-part {
+        flex-direction: column !important;
+        .l-j-left-part {
+          margin-bottom: 20px;
+        }
+      }
+    }
   }
 }
 
@@ -1168,7 +1213,7 @@
               margin-bottom: 20px;
               .sub-top-part {
                 font-size: 18px;
-                margin-bottom: 8px
+                margin-bottom: 8px;
               }
             }
           }
