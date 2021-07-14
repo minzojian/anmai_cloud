@@ -85,7 +85,7 @@
           <div class="bar"></div>
           <span class="info"></span>
         </div>
-        <div class="page_content title_part title1">
+        <div class="page_content title_part title1 state1">
           <span class="sub_part1">Web 3.0 分布式云计算平台</span>
           <span class="sub_part2"
             >全球去中心化云计算<br />业务一站式服务商</span
@@ -179,7 +179,7 @@
               ],
             },
           ]
-
+        $(".inner_scroll_warpper").html("")
         window.meilestoneData.forEach(function (yearData, yindex) {
           yearData.records.forEach(function (monthData, mIndex) {
             $(".inner_scroll_warpper").append(
@@ -327,20 +327,29 @@ ${
 
         // requestAnimationFrame(handleVideoPlaying)
 
-        var tween = createTimeline()
-        tween.add([
-          createTween(
-            ".title1",
-            getScrollYByVideo(1).top,
-            // 0.2 * window.onePageHeight,
-            {
-              // translateY: 30, opacity: 0
-            },
-            {
-              // translateY: 0,
-              // opacity: 1,
-              ease: Linear.easeNone,
-              immediateRender: false,
+        // var tween = createTimeline()
+        // tween.add([
+        createTween(
+          ".title1",
+          getScrollYByVideo(1).top,
+          // 0.2 * window.onePageHeight,
+          {
+            // translateY: 30, opacity: 0
+          },
+          {
+            // translateY: 0,
+            // opacity: 1,
+            ease: Linear.easeNone,
+            immediateRender: false,
+
+            scrollTrigger: {
+              trigger: ".stage1",
+              // pin: true, // pin the trigger element while active
+              start: "-=100", // when the top of the trigger hits the top of the viewport
+              end: "+=100", // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              markers: false,
+              id: "aaa",
               onStart: function () {
                 // $(".left-progress").removeClass("state2")
                 // $(".left-progress").removeClass("state3")
@@ -349,14 +358,17 @@ ${
                 // $(".header1").removeClass("state3")
                 // $(".header1").addClass("state1")
               },
-              onComplete: function () {
+              onLeave: function () {
                 // console.log(this.targets)
-                $(".title_part").addClass("state3")
-                this.targets().forEach((elem) => {
-                  elem.classList.add("state2")
-                  elem.classList.remove("state1")
-                  elem.classList.remove("state3")
-                })
+                $(".title1")
+                  .removeClass(["state1", "state3"])
+                  .addClass("state2")
+                //$(".title_part").addClass("state3")
+                // this.targets().forEach((elem) => {
+                //   elem.classList.add("state2")
+                //   elem.classList.remove("state1")
+                //   elem.classList.remove("state3")
+                // })
 
                 // $(".header1").removeClass("state1")
                 // $(".header1").removeClass("state3")
@@ -368,179 +380,324 @@ ${
                 //   elem.classList.remove("state2")
                 // })
               },
-            }
-          ),
-          createTween(
-            ".title1",
-            getScrollYByVideo(1).top,
-            {
-              // translateY: 0, opacity: 1
             },
-            {
-              delay: getScrollYByVideo(9).top,
-              // translateY: -30,
-              // opacity: 0,
-              ease: Linear.easeNone,
-              immediateRender: false,
-              onComplete: function () {
-                $(".title_part").addClass("state3")
-                this.targets().forEach((elem) => {
-                  elem.classList.remove("state1")
-                  elem.classList.remove("state2")
-                  elem.classList.add("state3")
-                })
+          }
+        )
+        createTween(
+          ".title1",
+          getScrollYByVideo(1).top,
+          {
+            // translateY: 0, opacity: 1
+          },
+          {
+            // delay: getScrollYByVideo(9).top,
+            // translateY: -30,
+            // opacity: 0,
+            ease: Linear.easeNone,
+            immediateRender: false,
+            scrollTrigger: {
+              trigger: ".stage1",
+              // pin: true, // pin the trigger element while active
+              start: "+=" + getScrollYByVideo(9).top, // when the top of the trigger hits the top of the viewport
+              end: getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              markers: false,
+              id: "aaa",
+              onLeave: function () {
+                //$(".title_part").addClass("state3")
+                $(".title1")
+                  .removeClass(["state1", "state2"])
+                  .addClass("state3")
+                // this.targets().forEach((elem) => {
+                // elem.classList.remove("state1")
+                // elem.classList.remove("state2")
+                // elem.classList.add("state3")
+                // })
               },
-              onReverseComplete: function () {
-                $(".title_part").addClass("state3")
-                this.targets().forEach((elem) => {
-                  elem.classList.remove("state1")
-                  elem.classList.remove("state3")
-                  elem.classList.add("state2")
-                })
+              onLeaveBack: function () {
+                $(".title1")
+                  .removeClass(["state1", "state3"])
+                  .addClass("state2")
+                //$(".title_part").addClass("state3")
+                // this.targets().forEach((elem) => {
+                //   elem.classList.remove("state1")
+                //   elem.classList.remove("state3")
+                //   elem.classList.add("state2")
+                // })
               },
-            }
-          ),
-          createTween(
-            ".title2",
-            getScrollYByVideo(1).top,
-            {
-              //  translateY: 30, opacity: 0
             },
-            {
-              delay: getScrollYByVideo(9.5).top,
-              // translateY: 0,
-              // opacity: 1,
-              // ease: Linear.easeNone,
-              immediateRender: false,
+          }
+        )
+
+        createTween(
+          ".title2",
+          getScrollYByVideo(1).top,
+          {
+            //  translateY: 30, opacity: 0
+          },
+          {
+            // delay: getScrollYByVideo(9.5).top,
+            // translateY: 0,
+            // opacity: 1,
+            // ease: Linear.easeNone,
+            immediateRender: false,
+            scrollTrigger: {
+              trigger: ".stage1",
+              // pin: true, // pin the trigger element while active
+              start: "+=" + getScrollYByVideo(9.5).top, // when the top of the trigger hits the top of the viewport
+              end: getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              markers: false,
+              id: "aaa",
               onStart: function () {
                 // $(".left-progress").removeClass("state1")
                 // $(".left-progress").removeClass("state3")
                 // $(".left-progress").addClass("state2")
               },
-              onComplete: function () {
-                $(".title_part").addClass("state3")
-                this.targets().forEach((elem) => {
-                  elem.classList.add("state2")
-                  elem.classList.remove("state1")
-                  elem.classList.remove("state3")
-                })
+              onLeave: function () {
+                //$(".title_part").addClass("state3")
+                $(".title2")
+                  .removeClass(["state1", "state3"])
+                  .addClass("state2")
+                // this.targets().forEach((elem) => {
+                // elem.classList.remove("state1")
+                // elem.classList.remove("state2")
+                // elem.classList.add("state3")
+                // })
               },
-              onReverseComplete: function () {
-                $(".title_part").addClass("state3")
-                this.targets().forEach((elem) => {
-                  elem.classList.remove("state3")
-                  elem.classList.remove("state2")
-                  elem.classList.add("state1")
-                })
+              onLeaveBack: function () {
+                $(".title2")
+                  .removeClass(["state2", "state3"])
+                  .addClass("state1")
+                //$(".title_part").addClass("state3")
+                // this.targets().forEach((elem) => {
+                //   elem.classList.remove("state1")
+                //   elem.classList.remove("state3")
+                //   elem.classList.add("state2")
+                // })
               },
-            }
-          ),
-          createTween(
-            ".title2",
-            getScrollYByVideo(1).top,
-            {
-              // translateY: 0, opacity: 1
             },
-            {
-              delay: getScrollYByVideo(18.5).top,
-              // translateY: -30,
-              // opacity: 0,
-              ease: Linear.easeNone,
-              immediateRender: false,
-              onComplete: function () {
-                $(".title_part").addClass("state3")
-                this.targets().forEach((elem) => {
-                  elem.classList.remove("state1")
-                  elem.classList.remove("state2")
-                  elem.classList.add("state3")
-                })
-              },
-              onReverseComplete: function () {
-                $(".title_part").addClass("state3")
-                this.targets().forEach((elem) => {
-                  elem.classList.remove("state1")
-                  elem.classList.remove("state3")
-                  elem.classList.add("state2")
-                })
-              },
-            }
-          ),
+          }
+        )
 
-          createTween(
-            ".title3_mask",
-            getScrollYByVideo(1).top,
-            { opacity: 0 },
-            {
-              immediateRender: false,
-              delay: getScrollYByVideo(19).top,
-              opacity: 1,
-            }
-          ),
-
-          createTween(
-            ".title3",
-            getScrollYByVideo(1).top,
-            {
-              //  translateY: 30, opacity: 0
-            },
-            {
-              delay: getScrollYByVideo(19).top,
-              // translateY: 0,
-              // opacity: 1,
-              // ease: Linear.easeNone,
-              immediateRender: false,
+        createTween(
+          ".title2",
+          getScrollYByVideo(1).top,
+          {
+            //  translateY: 30, opacity: 0
+          },
+          {
+            // delay: getScrollYByVideo(9.5).top,
+            // translateY: 0,
+            // opacity: 1,
+            // ease: Linear.easeNone,
+            immediateRender: false,
+            scrollTrigger: {
+              trigger: ".stage1",
+              // pin: true, // pin the trigger element while active
+              start: "+=" + getScrollYByVideo(18.5).top, // when the top of the trigger hits the top of the viewport
+              end: getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              markers: false,
+              id: "aaa",
               onStart: function () {
                 // $(".left-progress").removeClass("state1")
-                // $(".left-progress").removeClass("state2")
-                // $(".left-progress").addClass("state3")
+                // $(".left-progress").removeClass("state3")
+                // $(".left-progress").addClass("state2")
               },
-              onComplete: function () {
-                $(".title_part").addClass("state3")
+              onLeave: function () {
+                //$(".title_part").addClass("state3")
+                $(".title2")
+                  .removeClass(["state1", "state2"])
+                  .addClass("state3")
+                // this.targets().forEach((elem) => {
+                // elem.classList.remove("state1")
+                // elem.classList.remove("state2")
+                // elem.classList.add("state3")
+                // })
+              },
+              onLeaveBack: function () {
+                $(".title2")
+                  .removeClass(["state1", "state3"])
+                  .addClass("state2")
+                //$(".title_part").addClass("state3")
+                // this.targets().forEach((elem) => {
+                //   elem.classList.remove("state1")
+                //   elem.classList.remove("state3")
+                //   elem.classList.add("state2")
+                // })
+              },
+            },
+          }
+        )
 
-                this.targets().forEach((elem) => {
-                  elem.classList.add("state2")
-                  elem.classList.remove("state1")
-                  elem.classList.remove("state3")
-                })
-              },
-              onReverseComplete: function () {
-                $(".title_part").addClass("state3")
-                this.targets().forEach((elem) => {
-                  elem.classList.remove("state2")
-                  elem.classList.remove("state3")
-                  elem.classList.add("state1")
-                })
-              },
-            }
-          ),
+        // createTween(
+        //   ".title2",
+        //   getScrollYByVideo(1).top,
+        //   {
+        //     // translateY: 0, opacity: 1
+        //   },
+        //   {
+        //     delay: getScrollYByVideo(18.5).top,
+        //     // translateY: -30,
+        //     // opacity: 0,
+        //     ease: Linear.easeNone,
+        //     immediateRender: false,
+        //     onComplete: function () {
+        //       //$(".title_part").addClass("state3")
+        //       this.targets().forEach((elem) => {
+        //         elem.classList.remove("state1")
+        //         elem.classList.remove("state2")
+        //         elem.classList.add("state3")
+        //       })
+        //     },
+        //     onReverseComplete: function () {
+        //       //$(".title_part").addClass("state3")
+        //       this.targets().forEach((elem) => {
+        //         elem.classList.remove("state1")
+        //         elem.classList.remove("state3")
+        //         elem.classList.add("state2")
+        //       })
+        //     },
+        //   }
+        // ),
 
-          //   createTween(
-          //     ".title3", // { v: 0 },
-          //     2 * window.onePageHeight,
-          //     {
-          //       scrollTo: 0,
-          //       //  translateY: 30, opacity: 0
-          //     },
-          //     {
-          //       delay: getScrollYByVideo(20).top,
-          //       // v: $(".inner_scroll_warpper").height() - $(".title3").height(),
-          //       scrollTo:
-          //         $(".inner_scroll_warpper").height() - $(".title3").height(),
-          //       // translateY: 0,
-          //       // opacity: 1,
-          //       // ease: Linear.easeNone,
-          //       immediateRender: false,
-          //       onUpdate: function () {
-          //         // console.log(
-          //         //   // this.targets()[0].v,
-          //         //   $(".title3").get(0).scrollTop,
-          //         //   "vvvvvv"
-          //         // )
-          //         // gsap.to(".title3", 0.6, { scrollTo: this.targets()[0].v })
-          //       },
-          //     }
-          //   ),
-        ])
+        createTween(
+          ".title3_mask",
+          getScrollYByVideo(1).top,
+          { opacity: 0 },
+          {
+            immediateRender: false,
+            // delay: getScrollYByVideo(19).top,
+            opacity: 1,
+
+            scrollTrigger: {
+              trigger: ".stage1",
+              // pin: true, // pin the trigger element while active
+              start: "+=" + getScrollYByVideo(19).top, // when the top of the trigger hits the top of the viewport
+              end: getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              markers: false,
+              id: "aaa",
+            },
+          }
+        )
+
+        createTween(
+          ".title3",
+          getScrollYByVideo(1).top,
+          {
+            //  translateY: 30, opacity: 0
+          },
+          {
+            // delay: getScrollYByVideo(9.5).top,
+            // translateY: 0,
+            // opacity: 1,
+            // ease: Linear.easeNone,
+            immediateRender: false,
+            scrollTrigger: {
+              trigger: ".stage1",
+              // pin: true, // pin the trigger element while active
+              start: "+=" + getScrollYByVideo(19).top, // when the top of the trigger hits the top of the viewport
+              end: getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              markers: false,
+              id: "aaa",
+              onStart: function () {
+                // $(".left-progress").removeClass("state1")
+                // $(".left-progress").removeClass("state3")
+                // $(".left-progress").addClass("state2")
+              },
+              onLeave: function () {
+                //$(".title_part").addClass("state3")
+                $(".title3")
+                  .removeClass(["state1", "state3"])
+                  .addClass("state2")
+                // this.targets().forEach((elem) => {
+                // elem.classList.remove("state1")
+                // elem.classList.remove("state2")
+                // elem.classList.add("state3")
+                // })
+              },
+              onLeaveBack: function () {
+                $(".title3")
+                  .removeClass(["state2", "state3"])
+                  .addClass("state1")
+                //$(".title_part").addClass("state3")
+                // this.targets().forEach((elem) => {
+                //   elem.classList.remove("state1")
+                //   elem.classList.remove("state3")
+                //   elem.classList.add("state2")
+                // })
+              },
+            },
+          }
+        )
+
+        // createTween(
+        //   ".title3",
+        //   getScrollYByVideo(1).top,
+        //   {
+        //     //  translateY: 30, opacity: 0
+        //   },
+        //   {
+        //     delay: getScrollYByVideo(19).top,
+        //     // translateY: 0,
+        //     // opacity: 1,
+        //     // ease: Linear.easeNone,
+        //     immediateRender: false,
+        //     onStart: function () {
+        //       // $(".left-progress").removeClass("state1")
+        //       // $(".left-progress").removeClass("state2")
+        //       // $(".left-progress").addClass("state3")
+        //     },
+        //     onComplete: function () {
+        //       //$(".title_part").addClass("state3")
+
+        //       this.targets().forEach((elem) => {
+        //         elem.classList.add("state2")
+        //         elem.classList.remove("state1")
+        //         elem.classList.remove("state3")
+        //       })
+        //     },
+        //     onReverseComplete: function () {
+        //       //$(".title_part").addClass("state3")
+        //       this.targets().forEach((elem) => {
+        //         elem.classList.remove("state2")
+        //         elem.classList.remove("state3")
+        //         elem.classList.add("state1")
+        //       })
+        //     },
+        //   }
+        // ),
+
+        //   createTween(
+        //     ".title3", // { v: 0 },
+        //     2 * window.onePageHeight,
+        //     {
+        //       scrollTo: 0,
+        //       //  translateY: 30, opacity: 0
+        //     },
+        //     {
+        //       delay: getScrollYByVideo(20).top,
+        //       // v: $(".inner_scroll_warpper").height() - $(".title3").height(),
+        //       scrollTo:
+        //         $(".inner_scroll_warpper").height() - $(".title3").height(),
+        //       // translateY: 0,
+        //       // opacity: 1,
+        //       // ease: Linear.easeNone,
+        //       immediateRender: false,
+        //       onUpdate: function () {
+        //         // console.log(
+        //         //   // this.targets()[0].v,
+        //         //   $(".title3").get(0).scrollTop,
+        //         //   "vvvvvv"
+        //         // )
+        //         // gsap.to(".title3", 0.6, { scrollTo: this.targets()[0].v })
+        //       },
+        //     }
+        //   ),
+        // ])
 
         // tween.add([gsap.to("body", getScrollYByVideo(5).top, {})])
 
@@ -567,7 +724,7 @@ ${
             start: "top top", // when the top of the trigger hits the top of the viewport
             end: getScrollYByVideo(20).top, // end after scrolling 500px beyond the start
             scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-            markers: true,
+            markers: false,
             id: "aaa",
             // pinType: "fixed",
             // anticipatePin: 1,
@@ -583,22 +740,24 @@ ${
             },
             onLeave: function () {
               isEnterStage1 = false
-              myVideo.currentTime = myVideo.duration
-              myVideo.pause()
+              if (!window.isPhone) {
+                myVideo.currentTime = myVideo.duration
+                myVideo.pause()
+              }
             },
             onEnterBack: function () {
               isEnterStage1 = true
             },
 
             onUpdate: function () {
-              if (isMouseWheel) {
+              if (!window.isPhone && isMouseWheel) {
                 myVideo.currentTime = getTimerByScroll(this.progress)
               }
             },
           },
         })
 
-        tl.add(tween)
+        // tl.add(tween)
 
         gsap.fromTo(
           ".title1",
@@ -613,7 +772,7 @@ ${
               start: "top top", // when the top of the trigger hits the top of the viewport
               end: getScrollYByVideo(9).top, // end after scrolling 500px beyond the start
               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              markers: true,
+              markers: false,
               id: "aaa",
               onEnter: function () {
                 $(".left-progress").removeClass("state2")
@@ -641,7 +800,7 @@ ${
               start: getScrollYByVideo(9).top, // when the top of the trigger hits the top of the viewport
               end: "+=" + getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              markers: true,
+              markers: false,
               id: "aaa",
               onEnter: function () {
                 $(".left-progress").removeClass("state1")
@@ -674,7 +833,7 @@ ${
               start: getScrollYByVideo(19).top, // when the top of the trigger hits the top of the viewport
               end: "+=" + getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              markers: true,
+              markers: false,
               id: "aaa",
               onEnter: function () {
                 $(".left-progress").removeClass("state1")
@@ -733,6 +892,7 @@ ${
           // yes, we can add it to an entire timeline!
           scrollTrigger: {
             trigger: ".stage1",
+            immediateRender: false,
             //pin: true, // pin the trigger element while active
             start: getScrollYByVideo(20).top, // when the top of the trigger hits the top of the viewport
             end:
@@ -740,7 +900,7 @@ ${
               $(".inner_scroll_warpper").height() -
               $(".title3").height(), // end after scrolling 500px beyond the start
             scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-            markers: true,
+            markers: false,
             id: "ttttt",
             onUpdate: function (self) {
               $(".title3").get(0).scrollTop =
@@ -819,12 +979,16 @@ ${
 
         $(window).resize(function () {
           $(".stage1").height(
-            getScrollYByVideo(20).top + 1 * window.onePageHeight +($(".inner_scroll_warpper").height() - $(".title3").height())
+            getScrollYByVideo(20).top +
+              1 * window.onePageHeight +
+              ($(".inner_scroll_warpper").height() - $(".title3").height())
           )
         })
 
         $(".stage1").height(
-          getScrollYByVideo(20).top + 1 * window.onePageHeight +($(".inner_scroll_warpper").height() - $(".title3").height())
+          getScrollYByVideo(20).top +
+            1 * window.onePageHeight +
+            ($(".inner_scroll_warpper").height() - $(".title3").height())
         )
       })
     </script>
@@ -1005,7 +1169,7 @@ ${
         //       start: "top top", // when the top of the trigger hits the top of the viewport
         //       end: "+=" + 0.1 * window.onePageHeight, // end after scrolling 500px beyond the start
         //       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-        //       markers: true,
+        //       markers: false,
         //       id: "2222",
         //       onEnter: function () {
         //         $(".header1").addClass("header_light")
@@ -1066,7 +1230,7 @@ ${
                 start: "+=" + getStage2Height(0.2), // when the top of the trigger hits the top of the viewport
                 end: "+=" + getStage2Height(0.1), // end after scrolling 500px beyond the start
                 scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-                // markers: true,
+                // markers: false,
                 id: "4444",
                 onEnter: function () {
                   $($(".stage2 .bussiness_sub_item")[0]).removeClass("active")
@@ -1126,7 +1290,7 @@ ${
               start: "+=" + getStage2Height(0.4), // when the top of the trigger hits the top of the viewport
               end: "+=" + getStage2Height(0.1), // end after scrolling 500px beyond the start
               scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              markers: true,
+              markers: false,
               id: "6666",
               onEnter: function () {
                 $($(".stage2 .bussiness_sub_item")[1]).removeClass("active")
@@ -1188,7 +1352,7 @@ ${
               start: "+=" + getStage2Height(0.6), // when the top of the trigger hits the top of the viewport
               end: "+=" + getStage2Height(0.1), // end after scrolling 500px beyond the start
               scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              markers: true,
+              markers: false,
               id: "6666",
               onEnter: function () {
                 $($(".stage2 .bussiness_sub_item")[2]).removeClass("active")
@@ -1247,7 +1411,7 @@ ${
               start: "+=" + getStage2Height(0.2), // when the top of the trigger hits the top of the viewport
               end: "+=" + getStage2Height(0.6), // end after scrolling 500px beyond the start
               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              // markers: true,
+              // markers: false,
               id: "44414",
             },
           }
@@ -1978,7 +2142,7 @@ x5-video-player-type="h5"
               start: "top top", // when the top of the trigger hits the top of the viewport
               end: "+=50", // end after scrolling 500px beyond the start
               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              markers: true,
+              markers: false,
               onEnter: function () {
                 $(".header1").addClass("header_light")
                 $(".header1").addClass("state3")
@@ -2006,7 +2170,7 @@ x5-video-player-type="h5"
               start: "-=" + 2 * window.onePageHeight, // when the top of the trigger hits the top of the viewport
               end: "+=" + window.onePageHeight, // end after scrolling 500px beyond the start
               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              // markers: true,
+              // markers: false,
               id: "1111123123",
               onEnter: function () {
                 $(".header1").removeClass("state1")
@@ -2041,7 +2205,7 @@ x5-video-player-type="h5"
         //       start: "-=100", // when the top of the trigger hits the top of the viewport
         //       end: "top bottom", // end after scrolling 500px beyond the start
         //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-        //       markers: true,
+        //       markers: false,
         //       id: "hhhhhhh",
         //       onEnter: function () {
         //         // $(".header1").addClass("state3")
@@ -2079,7 +2243,7 @@ x5-video-player-type="h5"
         //       start: "+=" + 3 * window.onePageHeight, // when the top of the trigger hits the top of the viewport
         //       end: "+=" + window.onePageHeight, // end after scrolling 500px beyond the start
         //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-        //       // markers: true,
+        //       // markers: false,
         //       id: "hhhhhhh12312",
         //       onEnter: function () {
         //         $(".header1").removeClass("state1")
@@ -2134,7 +2298,7 @@ x5-video-player-type="h5"
         //       start: "top top", // when the top of the trigger hits the top of the viewport
         //       end: "+=100", // end after scrolling 500px beyond the start
         //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-        //       markers: true,
+        //       markers: false,
         //       id: "mmmmmm",
         //       onEnter: function () {
         //         $(".header1").addClass("state2")
@@ -2157,9 +2321,9 @@ x5-video-player-type="h5"
     <script>
       $(function () {
         myVideo = document.getElementById("myVideo")
-        // myVideo.play()
+        myVideo.play()
         earthVideo = document.getElementById("earthVideo")
-        // earthVideo.play()
+        earthVideo.play()
 
         document.addEventListener(
           "WeixinJSBridgeReady",
