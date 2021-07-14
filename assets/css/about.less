@@ -475,11 +475,9 @@
         }
 
         .info {
-          background: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0.6)
-          );
+          background: linear-gradient(180deg,
+              rgba(0, 0, 0, 0),
+              rgba(0, 0, 0, 0.6));
           padding: 37px;
           position: absolute;
           width: 100%;
@@ -667,7 +665,7 @@
     }
   }
 
-  input#job-pop-switch:checked ~ .all-job-popup-container {
+  input#job-pop-switch:checked~.all-job-popup-container {
     opacity: 1;
     transform: translateY(0px);
     pointer-events: auto;
@@ -752,8 +750,7 @@
         line-height: 6px;
       }
 
-      ul.job-list-ul {
-      }
+      ul.job-list-ul {}
 
       ul.job-detail-ul {
         li {
@@ -947,7 +944,7 @@
           box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
         }
 
-        .qrcode_small:hover ~ .qrcode {
+        .qrcode_small:hover~.qrcode {
           opacity: 1;
         }
       }
@@ -955,8 +952,8 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
-}
+@media screen and (max-width: 1440px) {}
+
 @media screen and (max-width: 750px) {
   .page-main .main-container .banner .wrapper .slogan .left .title2 {
     font-size: 44px;
@@ -997,6 +994,7 @@
               margin-bottom: 30px;
               height: auto;
               padding: 55px 0;
+
               .sub_title2 {
                 width: 80%;
               }
@@ -1011,6 +1009,7 @@
     }
   }
 }
+
 @media screen and (max-width: 750px) {
   .page-main {
     .main-container {
@@ -1058,32 +1057,62 @@
         height: auto;
 
         .wrapper {
-          padding: 60px;
+          padding-top: 60px;
           width: 100%;
           margin-left: 0;
           display: block;
 
           .left-part {
+            padding: 30px;
             margin-right: 0;
             height: auto;
 
             .bottom-part {
-              margin-top: 80px;
-              margin-bottom: 60px;
+              margin-top: 20px;
+              margin-bottom: 0;
+
+              .arrows {
+                display: none;
+              }
             }
           }
+
           .right-part {
+            padding: 30px;
+
             .swiper-container {
               .swiper-wrapper {
                 height: 100%;
                 display: block;
                 transform: translate3d(0, 0, 0) !important;
                 white-space: normal;
+
                 .swiper-slide {
                   width: 100% !important;
+
                   .items {
                     border-left: none;
                     border-bottom: 4px solid #e5ebf2;
+                    padding: 0;
+                    margin-bottom: 60px;
+
+                    .contents {
+                      margin-bottom: 30px;
+                    }
+
+                    .title1 {
+                      line-height: 1;
+                      font-size: 90px;
+                    }
+
+                    .title2 {
+                      margin-bottom: 15px;
+                      margin-top: 20px;
+                    }
+
+                    .title3 {
+                      margin-bottom: 20px;
+                    }
                   }
                 }
               }
@@ -1091,6 +1120,7 @@
           }
         }
       }
+
       // .section4 .wrapper .news-list .news-item:nth-child(1), .section4 .wrapper .news-list .news-item:nth-child(2){
       //   width: 100%;
       // }
@@ -1099,11 +1129,47 @@
           .title-part {
             display: block;
           }
+
           .news-list {
             .news-item {
               width: 100%;
               margin-bottom: 30px;
               margin-right: 0;
+            }
+          }
+        }
+      }
+
+      .section5 {
+        .sticky {
+          .job-list .job-item {
+            padding: 30px;
+            // box-sizing: border-box;
+            // max-width: none;
+            // width: 100% !important;
+            // top: 100px !important;
+            // left: 0 !important;
+            // position: relative !important;
+            // margin-bottom: 40px;
+          }
+        }
+      }
+
+      .section6 {
+        .bottom-part {
+          height: auto;
+
+          .bottom-part-wrapper {
+            padding: 30px;
+            display: block;
+
+            .item {
+              width: 100%;
+              margin-bottom: 20px;
+              .sub-top-part {
+                font-size: 18px;
+                margin-bottom: 8px
+              }
             }
           }
         }
