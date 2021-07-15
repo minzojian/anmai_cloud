@@ -903,16 +903,16 @@ scrollWheel:false
 var allTypes=[]
 var currentTypeIndex=0;
 var currentPage=1;
-function changeNewType(type){
+function change_new_type(type){
 currentTypeIndex=type;
 currentPage=1;
 
 $("#xwdt .title-part .right-part .newstype").removeClass('active');
 $($("#xwdt .title-part .right-part .newstype").get(type)).addClass('active');
-loadNews();
+load_news();
 }
 
-function loadNews(page){
+function load_news(page){
 if(page)currentPage=page;
 $.get("http://ixiezhi.vicp.cc/amyos/news/getArticle",{l:currentPage,t:allTypes[currentTypeIndex]}).then(function(data){
 
@@ -936,15 +936,15 @@ newsStr+=`
 $("#xwdt .news-list").html(newsStr);
 
 
-var pageStr=`<a   class="button text has-icon prev `+(currentPage<=1?'disabled':'')+` onclick="loadNews(`+(currentPage-1)+`)" ">
+var pageStr=`<a   class="button text has-icon prev `+(currentPage<=1?'disabled':'')+`"  onclick="load_news(`+(currentPage-1)+`)" >
             <i class="fa iconfont icon-zuojiantou" aria-hidden="true"></i>
           </a>`
 
  for(var p=1;p<data.page.length+1;p++){
-pageStr+=` <a class="`+(currentPage==p?'active':'')+`" onclick="loadNews(`+p+`)">`+p+`</a>`
+pageStr+=` <a class="`+(currentPage==p?'active':'')+`" onclick="load_news(`+p+`)">`+p+`</a>`
 }
 
-pageStr+=`<a   class="button text has-icon next  `+(currentPage>=data.page.length?'disabled':'')+` onclick="loadNews(`+(currentPage+1)+`)" ">
+pageStr+=`<a   class="button text has-icon next   `+(currentPage>=data.page.length?'disabled':'')+`"  onclick="load_news(`+(currentPage+1)+`)" >
            <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
           </a>`
 
@@ -993,21 +993,21 @@ $("#fzlc .swiper-wrapper").html(slideStr)
 
 $.get("http://ixiezhi.vicp.cc/amyos/contact/article_type").then(function(data){
 
-var typesStr=` <a class="newstype `+(currentTypeIndex==0?'active':'')+`"  onclick="changeNewType(0)">全部</a>`;
+var typesStr=` <a class="newstype `+(currentTypeIndex==0?'active':'')+`"  onclick="change_new_type(0)">全部</a>`;
 var typeIds=[0]
 data.data.forEach(function(t,i){
-typesStr+=`<a class="newstype `+(currentTypeIndex==i+1?'active':'')+`"   onclick="changeNewType(`+(i+1)+`)">`+t.name_cn+`</a>`
+typesStr+=`<a class="newstype `+(currentTypeIndex==i+1?'active':'')+`"   onclick="change_new_type(`+(i+1)+`)">`+t.name_cn+`</a>`
 typeIds.push(t.id)
 })
 $("#xwdt .title-part .right-part").html(typesStr)
 allTypes=typeIds;
 
-var selectedType=/newstype=([^#&])/ig.exec(location.search)[1];
+var selectedType=/newstype=([^#&])/ig.exec(location.search)  && /newstype=([^#&])/ig.exec(location.search)[1];
 var selectedTypeIndex=0;
 if(selectedType){
 selectedTypeIndex=allTypes.findIndex(function(t){return String(t)==selectedType});
 }
-changeNewType(selectedTypeIndex);
+change_new_type(selectedTypeIndex);
 })
 
 
