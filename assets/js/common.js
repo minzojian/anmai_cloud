@@ -98,12 +98,12 @@ function checkOs() {
     isWeixin =
       ua.match(/MicroMessenger/i) &&
       ua.match(/MicroMessenger/i)[0] == "micromessenger"
-  ;(isTablet =
-    /(?:iPad|PlayBook)/.test(ua) ||
-    (isAndroid && !/(?:Mobile)/.test(ua)) ||
-    (isFireFox && /(?:Tablet)/.test(ua))),
-    (isIPhone = /(?:iPhone)/.test(ua) && !isTablet),
-    (isPc = !isIPhone && !isAndroid && !isSymbian)
+    ; (isTablet =
+      /(?:iPad|PlayBook)/.test(ua) ||
+      (isAndroid && !/(?:Mobile)/.test(ua)) ||
+      (isFireFox && /(?:Tablet)/.test(ua))),
+      (isIPhone = /(?:iPhone)/.test(ua) && !isTablet),
+      (isPc = !isIPhone && !isAndroid && !isSymbian)
 
   window.isTablet = isTablet
   window.isIPhone = isIPhone
@@ -113,4 +113,24 @@ function checkOs() {
   window.isWeixin = isWeixin
 }
 
-checkOs()
+checkOs();
+
+$(document).ready(function () {
+  $('.formSubmit').on('click', function () {
+    console.log('submit')
+    if ($('#email').val() == "" || $('#phone').val() == "") return false;
+    else
+      $.ajax({
+        url: "http://ixiezhi.vicp.cc/amyos/contact/add_contact",
+        type: "POST",
+        data: { email: $('#email').val(), phone: $('#phone').val() },
+        dataType: 'json',
+        success: function (data) {
+          console.info(data);
+          alert(data.msg)
+        },
+
+      })
+  })
+})
+
