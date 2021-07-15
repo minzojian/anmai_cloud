@@ -699,20 +699,71 @@
             </div>
           </div>
           <div class="right">
-            <div class="input_box">
-              <label for="email" class="inp">
-                <input type="text" id="email" placeholder=" " />
-                <span class="label">联系邮箱</span>
-              </label>
-              <label for="phone" class="inp">
-                <input type="text" id="phone" placeholder=" " />
-                <span class="label">联系电话</span>
-              </label>
+            <div class="wrap">
+                <div class="label-icon">
+                    <p class="text email">联系邮箱</p>
+                    <span>solution@anmaicloud.com</span>
+                </div>
+                <div class="label-icon">
+                    <p class="text phone">联系电话</p>
+                    <span>400 898 3286</span>
+                </div>
+                <div class="action_btn btn-with-arrow modalShow">
+                    <span>留言咨询</span>
+                    <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
+                </div>
             </div>
-            <div class="submit formSubmit">
-              <img src="./assets/img/solution/右箭头.png" alt="" />
+        </div>
+        </div>
+        <div class="modalMask"></div>
+        <div class="contactModal">
+            <a href="javascript:;" class="closeBtn"></a>
+            <div class="wrap">
+                <h2 class="til">解决方案咨询</h2>
+                <p class="dec">请您先填写一下基本信息，以便我们可以更好地服务您</p>
+                <div class="concact_form">
+                    <section>
+                        <div class="input_box">                               
+                            <label >
+                                <span>如何称呼您 *</span>
+                                <input type="text" id="nickname">
+                            </label>
+                        </div>
+                        <div class="input_box">
+                            <label >
+                                <span>您的电话 *</span>
+                                <input type="text" id="phone">
+                            </label>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="input_box">
+                            <label >
+                                <span>您的邮箱 *</span>
+                                <input type="text" id="email">
+                            </label>
+                        </div>
+                        <div class="input_box">
+                            <label >
+                                <span>您想咨询的行业</span>
+                                <input type="text" id="industry">
+                            </label>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="input_box">
+                            <label >
+                                <span class="label">请描述您想咨询的内容</span>
+                                <input type="text" class="contents" id="content">
+                            </label>
+                        </div>
+                    </section>
+                    <div class="action_btn btn-with-arrow submitConcact">
+                        <span>立即咨询</span>
+                        <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
       </div>
       <!-- footer -->
