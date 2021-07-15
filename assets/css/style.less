@@ -92,6 +92,7 @@ body,
   height: 100%;
 }
 body {
+  background: white;
   &.dark_bg {
     background: rgb(16, 25, 32);
   }
@@ -315,12 +316,14 @@ body {
             // &:first-child {
             //   margin-right: 94px;
             // }
-
-            .sub_part_content_item_img {
+            .pic_wrapper {
               margin-bottom: 57px;
-              height: 200px;
-              overflow: hidden;
-              object-fit: cover;
+              .sub_part_content_item_img {
+                border-radius: 8px;
+                // height: 200px;
+                // overflow: hidden;
+                object-fit: cover;
+              }
             }
 
             .sub_part_content_item_caption {
@@ -857,7 +860,19 @@ body {
       width: 100%;
       margin-bottom: 20px;
       .title > img {
-        width: 100%;
+        width: 60%;
+        margin-bottom: 32px;
+      }
+      .locations {
+        margin-bottom: 48px;
+        ul {
+          margin-bottom: 0 !important;
+        }
+        li {
+          &:not(:last-child) {
+            margin-bottom: 8px !important;
+          }
+        }
       }
       .bussiness_bottom_part {
         justify-content: center;

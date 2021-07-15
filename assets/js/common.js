@@ -51,25 +51,25 @@ Promise.all(
   [
     {
       fontFamily: "FZLanTingHeiS-DB1-GBK",
-      src: `url(../../assets/fonts/FZLanTingHei-DB-GBK.ttf)`,
+      src: `url(./assets/fonts/FZLanTingHei-DB-GBK.ttf)`,
     },
     {
       fontFamily: "PingFangSC",
-      src: `url(../../assets/fonts/PingFang-Regular.ttf)`,
+      src: `url(./assets/fonts/PingFang-Regular.ttf)`,
     },
     {
       fontFamily: "Gilroy",
-      src: `url(../../assets/fonts/gilroy-bold-4.otf)`,
+      src: `url(./assets/fonts/gilroy-bold-4.otf)`,
       style: { weight: "bold" },
     },
     {
       fontFamily: "OPPOSans",
-      src: `url(../../assets/fonts/OPPOSans-R.ttf)`,
+      src: `url(./assets/fonts/OPPOSans-R.ttf)`,
       style: { weight: 400 },
     },
     {
       fontFamily: "OPPOSans",
-      src: `url(../../assets/fonts/OPPOSans-M.ttf)`,
+      src: `url(./assets/fonts/OPPOSans-M.ttf)`,
       style: { weight: 500 },
     },
   ].map(({ fontFamily, src, style }) => loadFont(fontFamily, src, style))
@@ -98,12 +98,12 @@ function checkOs() {
     isWeixin =
       ua.match(/MicroMessenger/i) &&
       ua.match(/MicroMessenger/i)[0] == "micromessenger"
-    ; (isTablet =
-      /(?:iPad|PlayBook)/.test(ua) ||
-      (isAndroid && !/(?:Mobile)/.test(ua)) ||
-      (isFireFox && /(?:Tablet)/.test(ua))),
-      (isIPhone = /(?:iPhone)/.test(ua) && !isTablet),
-      (isPc = !isIPhone && !isAndroid && !isSymbian)
+  ;(isTablet =
+    /(?:iPad|PlayBook)/.test(ua) ||
+    (isAndroid && !/(?:Mobile)/.test(ua)) ||
+    (isFireFox && /(?:Tablet)/.test(ua))),
+    (isIPhone = /(?:iPhone)/.test(ua) && !isTablet),
+    (isPc = !isIPhone && !isAndroid && !isSymbian)
 
   window.isTablet = isTablet
   window.isIPhone = isIPhone
@@ -113,39 +113,37 @@ function checkOs() {
   window.isWeixin = isWeixin
 }
 
-checkOs();
+checkOs()
 
 $(document).ready(function () {
-  $('.closeBtn').on('click', function () {
-    $('.modalMask, .contactModal').hide()
+  $(".closeBtn").on("click", function () {
+    $(".modalMask, .contactModal").hide()
   })
-  $('.modalShow').on('click', function () {
-    $('.modalMask, .contactModal').show()
+  $(".modalShow").on("click", function () {
+    $(".modalMask, .contactModal").show()
   })
-  $('.submitConcact').on('click', function () {
-    console.log('submit')
-    if ($('#email').val() == "" || $('#phone').val() == "") return false;
+  $(".submitConcact").on("click", function () {
+    console.log("submit")
+    if ($("#email").val() == "" || $("#phone").val() == "") return false
     else
       $.ajax({
         url: "http://ixiezhi.vicp.cc/amyos/contact/add_contact",
         type: "POST",
-        data: { 
-          nickname: $('#nickname').val(),
-          email: $('#email').val(),
-          phone: $('#phone').val(),
-          content:$('#content').val(),
-          industry:$('#industry').val()
+        data: {
+          nickname: $("#nickname").val(),
+          email: $("#email").val(),
+          phone: $("#phone").val(),
+          content: $("#content").val(),
+          industry: $("#industry").val(),
         },
-        dataType: 'json',
+        dataType: "json",
         success: function (data) {
-          console.info(data);
+          console.info(data)
           alert(data.msg)
-          if(data.code === 0){
-            $('.modalMask, .contactModal').hide()
+          if (data.code === 0) {
+            $(".modalMask, .contactModal").hide()
           }
         },
-
       })
   })
 })
-

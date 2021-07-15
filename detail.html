@@ -116,7 +116,9 @@
                 </a>
                 <div class="submenu solution_submenu">
                   <div class="submenu-unit">
-                    <div class="title">场景 Scenario</div>
+                     <a href="./solution_cj.html">
+                    <div class="title">场景 Scenario</div></a
+                  >
                     <ul>
                       <li>
                         <a href="./solution_cj.html#cc">
@@ -192,7 +194,9 @@
                   </div>
                   <div class="divider-v"></div>
                   <div class="submenu-unit">
-                    <div class="title">行业 Industry</div>
+                     <a href="./solution_hy.html">
+                    <div class="title">行业 Industry</div></a
+                  >
                     <ul>
                       <li>
                         <a href="./solution_hy.html#rgzn">
@@ -248,7 +252,9 @@
                   </div>
                   <div class="divider-v"></div>
                   <div class="submenu-unit">
-                    <div class="title">Web 3.0</div>
+                   <a href="./solution_web.html">
+                    <div class="title">Web 3.0</div></a
+                  >
                     <ul>
                       <li>
                         <a href="./solution_web.html#byjs">
@@ -308,8 +314,8 @@
       </header>
       <main class="main-container">
         <div class="box-nav">
-          <a href="/">首页 ></a>
-          <a href="/about.html#xwdt">资讯中心 ></a>
+          <a href="index.html">首页 ></a>
+          <a href="about.html#xwdt">资讯中心 ></a>
           <a href="/news/0" class="actType">用户视界 > </a>
           <span>详情</span>
         </div>
@@ -380,7 +386,7 @@
                 </a>
               </div>
               <div class="content">
-                <div class="item item_top">
+                <!-- <div class="item item_top">
                   <div class="box-img">
                     <a href="test.html"
                       ><img src="./assets/img/图层 19.png" alt=""
@@ -396,7 +402,6 @@
                     </div>
                   </div>
                 </div>
-                <!-- 分隔线 -->
                 <div class="divider"></div>
                 <div class="item item_bot">
                   <div class="box-img">
@@ -413,7 +418,7 @@
                       <span class="date">2021年06月07日</span>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -686,7 +691,7 @@
       $(function () {
         ScrollTrigger.create({
           start: "top top",
-          end: "+=10",
+          end: "+=50",
           onLeave: function () {
             $(".header1").addClass("floated header_dark")
           },
@@ -696,6 +701,8 @@
           id: "header",
         })
       })
+
+
       let urlId =
         getQueryString("id") != null ? getQueryString("id") : "S00096e73" //文章id暂时 S00096e73
       var currentAtcId = "" //当前帖子类型id
@@ -750,8 +757,9 @@
             let obj = data.data.find(function (e) {
               return e.id === currentTypeId
             })
-            console.log("obj", obj)
-            $(".actType").text(obj.name_cn + " >")
+            $(".actType")
+              .text(obj.name_cn + " >")
+              .prop("href", "about.html?newstype=" + currentTypeId + "#xwdt")
           },
         })
       }
@@ -774,7 +782,7 @@
             $(".box-heading .title").text(data.title)
             $(".box-heading .box-info .date").text(data.open_at)
             $(".box-content").html(data.content)
-            currentAtcId = data.id
+            currentAtcId = urlId
             currentTypeId = data.type_id
             getNeighborId()
             getArticleType()
@@ -789,7 +797,7 @@
           type: "GET",
           data: {
             k: newPageId, //页数
-            l: 0, //文章ID
+            l: urlId, //文章ID
           },
           dataType: "json",
           success: function (data) {
@@ -797,21 +805,58 @@
             // const page = data.page
             newPageId = data.page
             const info = data.data
-            $(".feature-news .content .item_top img").attr("src", info[0].img)
-            $(".feature-news .content .item_top .box-text a").text(
-              info[0].title
-            )
-            $(".feature-news .content .item_top .box-info .date").text(
-              info[0].open_at
-            )
 
-            $(".feature-news .content .item_bot img").attr("src", info[1].img)
-            $(".feature-news .content .item_top .box-text a").text(
-              info[1].title
-            )
-            $(".feature-news .content .item_top .box-info .date").text(
-              info[1].open_at
-            )
+            var newsStr = ``
+            Object.values(info).forEach(function (d, i, arr) {
+              if (d.id.slice(1) == currentAtcId.slice(1)) return
+              newsStr +=
+                `<div class="item item_top">
+                        <div class="box-img">
+                          <a class="pic_wrapper" href="detail.html?id=` +
+                d.id +
+                `"
+                            ><img src="` +
+                d.img +
+                `" alt=""
+                          /></a>
+                        </div>
+                        <div class="box-text">
+                          <a  href="detail.html?id=` +
+                d.id +
+                `" class="title"
+                            >` +
+                d.title +
+                `</a
+                          >
+                          <div class="box-info">
+                            <span class="date">` +
+                d.open_at +
+                `</span>
+                          </div>
+                        </div>
+                      </div>`
+
+              if (i < arr.length - 1) {
+                newsStr += `<div class="divider"></div>`
+              }
+            })
+            $(".feature-news .content").html(newsStr)
+
+            // $(".feature-news .content .item_top img").attr("src", info[0].img)
+            // $(".feature-news .content .item_top .box-text a").text(
+            //   info[0].title
+            // )
+            // $(".feature-news .content .item_top .box-info .date").text(
+            //   info[0].open_at
+            // )
+
+            // $(".feature-news .content .item_bot img").attr("src", info[1].img)
+            // $(".feature-news .content .item_top .box-text a").text(
+            //   info[1].title
+            // )
+            // $(".feature-news .content .item_top .box-info .date").text(
+            //   info[1].open_at
+            // )
           },
         })
       }

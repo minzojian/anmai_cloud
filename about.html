@@ -99,7 +99,9 @@
               </a>
               <div class="submenu solution_submenu">
                 <div class="submenu-unit">
-                  <div class="title">场景 Scenario</div>
+                   <a href="./solution_cj.html">
+                    <div class="title">场景 Scenario</div></a
+                  >
                   <ul>
                     <li>
                       <a href="./solution_cj.html#cc">
@@ -155,7 +157,9 @@
                 </div>
 <div class="divider-v"></div>
 <div class="submenu-unit">
-                  <div class="title">行业 Industry</div>
+                   <a href="./solution_hy.html">
+                    <div class="title">行业 Industry</div></a
+                  >
                   <ul>
                     <li>
                       <a href="./solution_hy.html#rgzn">
@@ -200,7 +204,9 @@
                 </div>
 <div class="divider-v"></div>
 <div class="submenu-unit">
-                  <div class="title">Web 3.0</div>
+                 <a href="./solution_web.html">
+                    <div class="title">Web 3.0</div></a
+                  >
                   <ul>
                     <li>
                       <a href="./solution_web.html#byjs">
@@ -929,8 +935,10 @@ var newsStr=``
 data.data.forEach(function(news){
 
 newsStr+=`
-<a  class="news-item" href="detail.html?id=`+news.id+`">
+<a  class="news-item " href="detail.html?id=`+news.id+`">
+<div class="pic_wrapper">
             <img src="`+news.img+`" />
+</div>
             <div class="info">
               <div class="date">`+news.open_at+`</div>
               <div class="title"> `+news.title+` </div>
@@ -974,10 +982,12 @@ data.forEach(function(d){
 slideStr+=`<a class="swiper-slide" href="detail.html?id=`+d.id+`">
                 <div class="items bg1">
                   <div class="title1">`+d.month+`</div>
-                  <div class="contents">
+                  <div class="contents ">
                     <div class="title2">`+d.month_en+`</div>
                     <div class="title3">`+d.title+`</div>
+<div class="pic_wrapper">
                     <img src="`+d.img+`" alt="" />
+</div>
                   </div>
                 </div>
               </a>`
