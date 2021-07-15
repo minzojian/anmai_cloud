@@ -699,6 +699,7 @@
       let urlId =
         getQueryString("id") != null ? getQueryString("id") : "S00096e73" //文章id暂时 S00096e73
       var currentAtcId = "" //当前帖子类型id
+      var currentTypeId = 1 //当前帖子类型
       var lastId = "",
         nextId = ""
       $(document).ready(function () {
@@ -730,6 +731,11 @@
             console.info(data)
             lastId = data.last_id
             nextId = data.next_id
+            if (!lastId) $(".box-control .prev").addClass("disabled")
+            else $(".box-control .prev").removeClass("disabled")
+
+            if (!nextId) $(".box-control .next").addClass("disabled")
+            else $(".box-control .next").removeClass("disabled")
           },
         })
       }
@@ -742,7 +748,7 @@
           success: function (data) {
             console.info(data)
             let obj = data.data.find(function (e) {
-              return e.id === currentAtcId
+              return e.id === currentTypeId
             })
             console.log("obj", obj)
             $(".actType").text(obj.name_cn + " >")
@@ -769,7 +775,9 @@
             $(".box-heading .box-info .date").text(data.open_at)
             $(".box-content").html(data.content)
             currentAtcId = data.id
+            currentTypeId = data.type_id
             getNeighborId()
+            getArticleType()
           },
         })
       }
@@ -809,9 +817,6 @@
       }
 
       getRecommendNews()
-      setTimeout(() => {
-        getArticleType()
-      })
       getArticleContents()
     </script>
   </body>
