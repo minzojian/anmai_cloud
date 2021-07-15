@@ -52,7 +52,7 @@ header {
     z-index: 111;
 
     .submenu.solution_submenu {
-      top: 59px!important;
+      top: 59px !important;
     }
   }
   .logo {
@@ -155,7 +155,7 @@ header {
             content: " ";
             position: absolute;
             left: 0;
-            bottom: 0;
+            top: 30px;
             width: 14px;
             height: 2px;
             background: #3aab8b;
@@ -682,7 +682,7 @@ input:checked + label {
     min-width: auto;
   }
   .logo {
-    transform: scale(0.5);
+    transform: scale(0.7);
     transform-origin: left;
   }
 
@@ -702,6 +702,7 @@ input:checked + label {
     .right-part {
       margin-left: auto;
       flex: none;
+      margin: auto 0;
 
       & > .nav > ul > li {
         margin-right: unset;
@@ -754,30 +755,53 @@ input:checked + label {
             width: 100%;
           }
           .submenu {
-            left: unset;
-            right: -10px;
-            transform: unset;
-            position: absolute;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            // left: unset;
+            // right: -10px;
+            // transform: unset;
+            // position: absolute;
+            // box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+            position: relative !important;
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+            transform: none !important;
+            margin-top: 5px !important;
+            left: auto !important;
+            top: auto !important;
+            right: auto !important;
             .submenu-unit .title {
               margin-bottom: 16px !important;
               height: 40px !important;
             }
           }
-          .solution_submenu.solution_submenu.solution_submenu {
-            width: calc(100vw - 40px);
-            position: absolute;
-            right: -10px;
-            top: 0;
-            box-sizing: border-box;
+          .solution_submenu {
+            right: auto !important;
+            top: auto !important;
+            flex-direction: column;
+            ul {
+              display: none !important;
+            }
             .divider-v {
-              margin: auto 10px;
+              display: none !important;
             }
           }
+          // .solution_submenu.solution_submenu.solution_submenu {
+          //   width: calc(100vw - 40px);
+          //   position: absolute;
+          //   right: -10px;
+          //   top: 0;
+          //   box-sizing: border-box;
+          //   .divider-v {
+          //     margin: auto 10px;
+          //   }
+          // }
           ul {
             position: relative !important;
             padding: 0 !important;
             li {
+              padding: 0 !important;
               &:not(:last-child) {
                 margin-bottom: 0px !important ;
               }
