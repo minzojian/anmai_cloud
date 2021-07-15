@@ -194,24 +194,26 @@ body {
 
 .section1 {
   width: 100%;
+
   .wrapper {
     padding-top: 140px;
     padding-bottom: 205px;
   }
-  background: linear-gradient(
-    180deg,
+
+  background: linear-gradient(180deg,
     rgba(151, 160, 178, 0.23),
-    rgba(238, 241, 246, 1)
-  );
+    rgba(238, 241, 246, 1));
   margin-top: -40px;
 }
 
 .section2 {
   width: 100%;
+
   .wrapper {
     padding-top: 115px;
     padding-bottom: 198px;
   }
+
   background: #fff;
 
   .wrapper .bottom {
@@ -221,15 +223,15 @@ body {
 
 .section3 {
   width: 100%;
+
   .wrapper {
     padding-top: 113px;
     padding-bottom: 154px;
   }
-  background: linear-gradient(
-    180deg,
+
+  background: linear-gradient(180deg,
     rgba(151, 160, 178, 0.23),
-    rgba(238, 241, 246, 0.23)
-  );
+    rgba(238, 241, 246, 0.23));
 
   .wrapper .bottom {
     background: url(../img/solution/131472841.png) no-repeat center;
@@ -238,10 +240,12 @@ body {
 
 .section4 {
   width: 100%;
+
   .wrapper {
     padding-top: 115px;
     padding-bottom: 199px;
   }
+
   background: #ffffff;
 
   .wrapper .bottom {
@@ -266,11 +270,10 @@ body {
     padding-top: 71px;
     padding-bottom: 154px;
   }
-  background: linear-gradient(
-    180deg,
+
+  background: linear-gradient(180deg,
     rgba(151, 160, 178, 0.23),
-    rgba(238, 241, 246, 0.23)
-  );
+    rgba(238, 241, 246, 0.23));
 
   .wrapper .bottom {
     background: url("../img/solution/图层 37.png") no-repeat center;
@@ -290,9 +293,11 @@ body {
     padding-top: 124px;
     padding-bottom: 187px;
   }
+
   .wrapper .mid .ietms {
     width: 361px;
   }
+
   .mid .ietms p {
     color: #000;
     font-size: 30px;
@@ -300,12 +305,11 @@ body {
     line-height: 1;
   }
 }
+
 .section7 {
-  background: linear-gradient(
-    180deg,
-    rgba(151, 160, 178, 0.23),
-    rgba(238, 241, 246, 0.23)
-  );
+  background: linear-gradient(180deg,
+      rgba(151, 160, 178, 0.23),
+      rgba(238, 241, 246, 0.23));
   width: 100%;
 
   .wrapper {
@@ -317,15 +321,19 @@ body {
     line-height: 1;
     margin-top: 56px;
   }
+
   .wrapper .mid .ietms {
     width: 355px;
   }
+
   .wrapper .top .flex_between {
     padding-bottom: 59px;
   }
+
   .top .flex_between .left_tit {
     width: 597px;
   }
+
   .wrapper .bottom {
     background: url("../img/solution/图层 39.png") no-repeat center;
     margin-top: 126px;
@@ -340,6 +348,7 @@ body {
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  position: relative;
 
   .flex_center {
     display: flex;
@@ -389,24 +398,161 @@ body {
 
     .right {
       display: flex;
+      width: 355px;
+      justify-content: center;
+      align-items: flex-end;
+      height: 400px;
+      border-left: 1px solid rgba(255, 255, 255, .3);
 
-      .input_box {
-        display: flex;
+      .wrap {
+        text-align: left;
+
+        .label-icon {
+          margin-bottom: 34px;
+
+          .text {
+            height: 14px;
+            font-size: 14px;
+            font-family: OPPOSans;
+            font-weight: 400;
+            color: #707B89;
+            margin-bottom: 13px;
+          }
+
+          .text.email::before {
+            content: '';
+            display: inline-block;
+            background: url('../../assets/img/solution/邮箱.png');
+            width: 16px;
+            height: 14px;
+            margin-right: 10px;
+          }
+
+          .text.phone::before {
+            content: '';
+            display: inline-block;
+            background: url('../../assets/img/solution/电话.png');
+            width: 13px;
+            height: 13px;
+            margin-right: 10px;
+          }
+
+
+          span {
+            font-size: 20px;
+            font-family: Gilroy;
+            font-weight: 400;
+            color: #FFFFFF;
+          }
+        }
+
+        .modalShow {
+          margin-top: 167px;
+        }
       }
 
-      .submit {
-        width: 53px;
-        height: 53px;
-        border: 1px solid #f2f4f8;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    }
+  }
 
-        img {
-          display: inline-block;
-          width: 30px;
-          height: 18px;
+  .modalMask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .6);
+    height: 100%;
+    display: none;
+    z-index: 999;
+  }
+
+  .contactModal {
+    position: absolute;
+    width: 741px;
+    height: 594px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: none;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+
+    .closeBtn {
+      background: url(../img/solution/close.png) no-repeat center;
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      position: absolute;
+      right: 24px;
+      top: 24px;
+      background-size: cover;
+    }
+
+    .wrap {
+      padding: 60px;
+      text-align: left;
+
+      .til {
+        font-size: 28px;
+        font-family: OPPOSans;
+        font-weight: bold;
+        color: #000000;
+        line-height: 1;
+        margin-bottom: 17px;
+      }
+
+      .dec {
+        font-size: 15px;
+        font-family: OPPOSans;
+        font-weight: 400;
+        color: #000000;
+      }
+
+      .concact_form {
+        margin-top: 57px;
+        section {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 50px;
+          .input_box {
+            label {
+              position: relative;
+              span {
+                font-size: 16px;
+                font-family: OPPOSans;
+                font-weight: 500;
+                color: #000000;
+                display: block;
+                position: absolute;
+                top: -30px;
+              }
+              .contents{
+                width: 625px;
+              }
+              input{
+                width: 287px;
+                border: 0;
+                font-family: inherit;
+                /* padding: 12px 0; */
+                height: 38px;
+                font-size: 20px;
+                color: #000;
+                font-weight: 500;
+                font-size: 16px;
+                outline: none;
+                background: none;
+                border-radius: 0;
+                transition: all .25s ease;
+                border-bottom: 2px solid #eee;
+              }
+            }
+          }
+        }
+        .submitConcact{
+          margin-top: 62px;
         }
       }
     }
@@ -426,6 +572,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+
         .left_tit {
           text-align: left;
           width: 566px;
@@ -561,6 +708,7 @@ body {
       height: 600px;
       margin-top: 130px;
       border-radius: 12px;
+
       .card {
         width: 375px;
         height: 449px;
@@ -692,7 +840,7 @@ body {
   border-bottom: 2px solid #fff;
 }
 
-.inp input:not(:placeholder-shown) + span {
+.inp input:not(:placeholder-shown)+span {
   color: #707b89;
   transform: translateY(-37px);
   font-size: 14px;
@@ -703,7 +851,7 @@ body {
   outline: none;
 }
 
-.inp input:focus + span {
+.inp input:focus+span {
   color: #707b89;
   transform: translateY(-37px);
   transition-delay: 0.1s;

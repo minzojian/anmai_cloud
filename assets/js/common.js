@@ -116,18 +116,33 @@ function checkOs() {
 checkOs();
 
 $(document).ready(function () {
-  $('.formSubmit').on('click', function () {
+  $('.closeBtn').on('click', function () {
+    $('.modalMask, .contactModal').hide()
+  })
+  $('.modalShow').on('click', function () {
+    $('.modalMask, .contactModal').show()
+  })
+  $('.submitConcact').on('click', function () {
     console.log('submit')
     if ($('#email').val() == "" || $('#phone').val() == "") return false;
     else
       $.ajax({
         url: "http://ixiezhi.vicp.cc/amyos/contact/add_contact",
         type: "POST",
-        data: { email: $('#email').val(), phone: $('#phone').val() },
+        data: { 
+          nickname: $('#nickname').val(),
+          email: $('#email').val(),
+          phone: $('#phone').val(),
+          content:$('#content').val(),
+          industry:$('#industry').val()
+        },
         dataType: 'json',
         success: function (data) {
           console.info(data);
           alert(data.msg)
+          if(data.code === 0){
+            $('.modalMask, .contactModal').hide()
+          }
         },
 
       })
