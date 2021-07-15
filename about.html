@@ -913,7 +913,7 @@ load_news();
 }
 
 function load_news(page){
-if(page)currentPage=page;
+if(page && !isNaN(page))currentPage=Number(page);
 $.get("http://ixiezhi.vicp.cc/amyos/news/getArticle",{l:currentPage,t:allTypes[currentTypeIndex]}).then(function(data){
 
 var newsStr=``
@@ -940,11 +940,11 @@ var pageStr=`<a   class="button text has-icon prev `+(currentPage<=1?'disabled':
             <i class="fa iconfont icon-zuojiantou" aria-hidden="true"></i>
           </a>`
 
- for(var p=1;p<data.page.length+1;p++){
-pageStr+=` <a class="`+(currentPage==p?'active':'')+`" onclick="load_news(`+p+`)">`+p+`</a>`
+ for(var p=0;p<data.page.length;p++){
+pageStr+=` <a class="`+(currentPage==Number(data.page[p])?'active':'')+`" onclick="load_news(`+data.page[p]+`)">`+data.page[p]+`</a>`
 }
 
-pageStr+=`<a   class="button text has-icon next   `+(currentPage>=data.page.length?'disabled':'')+`"  onclick="load_news(`+(currentPage+1)+`)" >
+pageStr+=`<a   class="button text has-icon next   `+(data.co!=1?'disabled':'')+`"  onclick="load_news(`+(currentPage+1)+`)" >
            <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
           </a>`
 

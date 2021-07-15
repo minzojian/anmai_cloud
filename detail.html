@@ -1,243 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>产品详情</title>
+    <link rel="stylesheet" href="./assets/css/iconfont.css" />
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/detail.css" />
+    <script src="./assets/js/lib/gsap.min.js"></script>
+    <script src="./assets/js/lib/ScrollToPlugin.min.js"></script>
+    <script src="./assets/js/lib/ScrollTrigger.min.js"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>产品详情</title>
-  <link rel="stylesheet" href="./assets/css/iconfont.css" />
-  <link rel="stylesheet" href="./assets/css/common.css" />
-  <link rel="stylesheet" href="./assets/css/detail.css" />
-  <script src="./assets/js/lib/gsap.min.js"></script>
-  <script src="./assets/js/lib/ScrollToPlugin.min.js"></script>
-  <script src="./assets/js/lib/ScrollTrigger.min.js"></script>
+    <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
+    <script src="./assets/js/common.js"></script>
+  </head>
 
-  <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
-  <script src="./assets/js/common.js"></script>
-</head>
-
-<body>
-  <div id="page-main" class="app-main news-show">
-    <header class="header1 header_dark">
-      <a href="./index.html">
-        <div class="logo">&nbsp;</div>
-      </a>
-      <div class="right-part">
-        <input id="langswtich" class="langswtich foldable_menu" type="checkbox" hidden />
-        <label for="langswtich" class="mobile">
-          <div class="lang_bt_mobile">
-            EN <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-          </div>
-          <div class="langswtich_mask switch_mask"></div>
-        </label>
-        <ul class="lang-panel">
-          <li>
-            <a>
-              <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a>
-          </li>
-          <li class="selected">
-            <a>
-              <i class="fa iconfont icon-gou" aria-hidden="true"></i>
-              English</a>
-          </li>
-        </ul>
-        <input id="menuswtich" type="checkbox" hidden />
-        <label for="menuswtich" class="mobile">
-          <div class="menu-btn">
-            <i class="fa iconfont icon-menu" aria-hidden="true"></i>
-          </div>
-          <div class="switch_mask"></div>
-        </label>
-        <div class="nav">
-          <ul>
-            <li class="active"><a href="./index.html">首页</a></li>
-            <li class="">
-              <a>产品 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-              </a>
-              <div class="submenu product_submenu">
-                <ul>
-                  <li>
-                    <a href="./product_fbssjzx.html">
-                      <div class="icon">
-                        <img src="./assets/img/icons/products/分布式数据中心.svg" />
-                      </div>
-                      分布式数据中心
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./product_fbscdn.html" style="pointer-events: none">
-                      <div class="icon">
-                        <img src="./assets/img/icons/products/分布式CDN.svg" />
-                      </div>
-                      分布式CDN(即将上线)
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./product_jzcc.html">
-                      <div class="icon">
-                        <img src="./assets/img/icons/products/矩阵存储.svg" />
-                      </div>
-                      矩阵存储
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./product_ygpu.html">
-                      <div class="icon">
-                        <img src="./assets/img/icons/products/云GPU.svg" />
-                      </div>
-                      云GPU
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
+  <body>
+    <div id="page-main" class="app-main news-show">
+      <header class="header1 header_dark">
+        <a href="./index.html">
+          <div class="logo">&nbsp;</div>
+        </a>
+        <div class="right-part">
+          <input
+            id="langswtich"
+            class="langswtich foldable_menu"
+            type="checkbox"
+            hidden
+          />
+          <label for="langswtich" class="mobile">
+            <div class="lang_bt_mobile">
+              EN <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+            </div>
+            <div class="langswtich_mask switch_mask"></div>
+          </label>
+          <ul class="lang-panel">
             <li>
-              <a>解决方案
-                <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-              </a>
-              <div class="submenu solution_submenu">
-                <div class="submenu-unit">
-                  <div class="title">场景 Scenario</div>
-                  <ul>
-                    <li>
-                      <a href="./solution_cj.html#cc">
-                        <div class="icon">
-                          <img src="./assets/img/icons/solutions/icon-15_存储.svg" />
-                        </div>
-                        存储
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./solution_cj.html#rzybf">
-                        <div class="icon">
-                          <img src="./assets/img/icons/solutions/icon-15_容灾与备份.svg" />
-                        </div>
-                        容灾与备份
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./solution_cj.html#kxjs">
-                        <div class="icon">
-                          <img src="./assets/img/icons/solutions/icon-15_科学计算.svg" />
-                        </div>
-                        科学计算
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./solution_cj.html#aqjs">
-                        <div class="icon">
-                          <img src="./assets/img/icons/solutions/icon-15_安全计算.svg" />
-                        </div>
-                        安全计算
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./solution_cj.html#wly">
-                        <div class="icon">
-                          <img src="./assets/img/icons/solutions/icon-15_物理云.svg" />
-                        </div>
-                        物理云
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./solution_cj.html#nrff">
-                        <div class="icon">
-                          <img src="./assets/img/icons/solutions/icon-15_内容分发.svg" />
-                        </div>
-                        内容分发
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./solution_cj.html#jqxx">
-                        <div class="icon">
-                          <img src="./assets/img/icons/solutions/icon-15_机器学习.svg" />
-                        </div>
-                        机器学习
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="divider-v"></div>
-                <div class="submenu-unit">
-                  <div class="title">行业 Industry</div>
-                  <ul>
-                    <li>
-                      <a href="./solution_hy.html#rgzn">
-                        <div class="icon">
-                          <img src="./assets/img/icons/solutions/icon-15_人工智能-08.svg" />
-                        </div>
-                        人工智能
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./solution_hy.html#ky">
-                        <div class="icon">
-                          <img src="./assets/img/icons/solutions/icon-15_科研.svg" />
-                        </div>
-                        科研
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./solution_hy.html#djk">
-                        <div class="icon">
-                          <img src="./assets/img/icons/solutions/icon-15_大健康.svg" />
-                        </div>
-                        大健康
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./solution_hy.html#zw">
-                        <div class="icon">
-                          <img src="./assets/img/icons/solutions/icon-15_政务.svg" />
-                        </div>
-                        政务
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./solution_hy.html#swjy">
-                        <div class="icon">
-                          <img src="./assets/img/icons/solutions/icon-15_生物基因.svg" />
-                        </div>
-                        生物基因
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="divider-v"></div>
-                <div class="submenu-unit">
-                  <div class="title">Web 3.0</div>
-                  <ul>
-                    <li>
-                      <a href="./solution_web.html#byjs">
-                        <div class="icon">
-                          <img src="./assets/img/icons/solutions/icon-15_边缘计算.svg" />
-                        </div>
-                        边缘计算
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./solution_web.html#qkl">
-                        <div class="icon">
-                          <img src="./assets/img/icons/solutions/icon-15_区块链.svg" />
-                        </div>
-                        区块链
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./solution_web.html#rgzn">
-                        <div class="icon">
-                          <img src="./assets/img/icons/solutions/icon-15_人工智能-09.svg" />
-                        </div>
-                        人工智能
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <a>
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a
+              >
             </li>
-            <!-- <li>
+            <li class="selected">
+              <a>
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+                English</a
+              >
+            </li>
+          </ul>
+          <input id="menuswtich" type="checkbox" hidden />
+          <label for="menuswtich" class="mobile">
+            <div class="menu-btn">
+              <i class="fa iconfont icon-menu" aria-hidden="true"></i>
+            </div>
+            <div class="switch_mask"></div>
+          </label>
+          <div class="nav">
+            <ul>
+              <li class="active"><a href="./index.html">首页</a></li>
+              <li class="">
+                <a
+                  >产品 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+                </a>
+                <div class="submenu product_submenu">
+                  <ul>
+                    <li>
+                      <a href="./product_fbssjzx.html">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/products/分布式数据中心.svg"
+                          />
+                        </div>
+                        分布式数据中心
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="./product_fbscdn.html"
+                        style="pointer-events: none"
+                      >
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/products/分布式CDN.svg"
+                          />
+                        </div>
+                        分布式CDN(即将上线)
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./product_jzcc.html">
+                        <div class="icon">
+                          <img src="./assets/img/icons/products/矩阵存储.svg" />
+                        </div>
+                        矩阵存储
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./product_ygpu.html">
+                        <div class="icon">
+                          <img src="./assets/img/icons/products/云GPU.svg" />
+                        </div>
+                        云GPU
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  >解决方案
+                  <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+                </a>
+                <div class="submenu solution_submenu">
+                  <div class="submenu-unit">
+                    <div class="title">场景 Scenario</div>
+                    <ul>
+                      <li>
+                        <a href="./solution_cj.html#cc">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/icon-15_存储.svg"
+                            />
+                          </div>
+                          存储
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_cj.html#rzybf">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/icon-15_容灾与备份.svg"
+                            />
+                          </div>
+                          容灾与备份
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_cj.html#kxjs">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/icon-15_科学计算.svg"
+                            />
+                          </div>
+                          科学计算
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_cj.html#aqjs">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/icon-15_安全计算.svg"
+                            />
+                          </div>
+                          安全计算
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_cj.html#wly">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/icon-15_物理云.svg"
+                            />
+                          </div>
+                          物理云
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_cj.html#nrff">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/icon-15_内容分发.svg"
+                            />
+                          </div>
+                          内容分发
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_cj.html#jqxx">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/icon-15_机器学习.svg"
+                            />
+                          </div>
+                          机器学习
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="divider-v"></div>
+                  <div class="submenu-unit">
+                    <div class="title">行业 Industry</div>
+                    <ul>
+                      <li>
+                        <a href="./solution_hy.html#rgzn">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/icon-15_人工智能-08.svg"
+                            />
+                          </div>
+                          人工智能
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_hy.html#ky">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/icon-15_科研.svg"
+                            />
+                          </div>
+                          科研
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_hy.html#djk">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/icon-15_大健康.svg"
+                            />
+                          </div>
+                          大健康
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_hy.html#zw">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/icon-15_政务.svg"
+                            />
+                          </div>
+                          政务
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_hy.html#swjy">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/icon-15_生物基因.svg"
+                            />
+                          </div>
+                          生物基因
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="divider-v"></div>
+                  <div class="submenu-unit">
+                    <div class="title">Web 3.0</div>
+                    <ul>
+                      <li>
+                        <a href="./solution_web.html#byjs">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/icon-15_边缘计算.svg"
+                            />
+                          </div>
+                          边缘计算
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_web.html#qkl">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/icon-15_区块链.svg"
+                            />
+                          </div>
+                          区块链
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./solution_web.html#rgzn">
+                          <div class="icon">
+                            <img
+                              src="./assets/img/icons/solutions/icon-15_人工智能-09.svg"
+                            />
+                          </div>
+                          人工智能
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <!-- <li>
                   <a
                     >ESG
                     <i class="fa iconfont icon-Down" aria-hidden="true"></i>
@@ -248,64 +295,64 @@
                 </ul>
               </li>
               <li><a>投资者关系</a></li> -->
-            <li><a href="./about.html">关于我们</a></li>
-          </ul>
-        </div>
-        <label for="langswtich" class="not_mobile">
-          <div class="lang_bt">
-            <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> English
+              <li><a href="./about.html">关于我们</a></li>
+            </ul>
           </div>
-          <div class="langswtich_mask switch_mask"></div>
-        </label>
-      </div>
-    </header>
-    <main class="main-container">
-      <div class="box-nav">
-        <a href="/">首页 ></a>
-        <a href="/about.html#xwdt">资讯中心 ></a>
-        <a href="/news/0" class="actType">用户视界 > </a>
-        <span>详情</span>
-      </div>
-      <div class="container">
-        <div class="box-left">
-          <div class="box-heading">
-            <div class="title">
-              CDN峰会丨安迈云以去中心化云计算抢先步入Web3.0时代
+          <label for="langswtich" class="not_mobile">
+            <div class="lang_bt">
+              <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> English
             </div>
-            <div class="line-two">
-              <div class="box-info">
-                <span class="date">2021年6月10日</span>
+            <div class="langswtich_mask switch_mask"></div>
+          </label>
+        </div>
+      </header>
+      <main class="main-container">
+        <div class="box-nav">
+          <a href="/">首页 ></a>
+          <a href="/about.html#xwdt">资讯中心 ></a>
+          <a href="/news/0" class="actType">用户视界 > </a>
+          <span>详情</span>
+        </div>
+        <div class="container">
+          <div class="box-left">
+            <div class="box-heading">
+              <div class="title">
+                CDN峰会丨安迈云以去中心化云计算抢先步入Web3.0时代
+              </div>
+              <div class="line-two">
+                <div class="box-info">
+                  <span class="date">2021年6月10日</span>
+                </div>
               </div>
             </div>
+            <div class="box-content">
+              近日，亚太内容分发大会暨CDN峰会在北京召开，该峰会不仅邀请到了阿里云、腾讯云等一线云计算厂商，同时还有中兴、网宿科技等传统CDN产业核心成员，是全球内容流量技术和运维领域最重要、规模最大的活动之一。安迈云作为去中心化云计算核心企业代表受邀出席大会。
+              “Web3.0时代是智能机器的时代，它就如同智能手机的出现，将改变当前人们的生活方式”，安迈云产品副总裁王磊在峰会上这样评价Web3.0时代所带来的改变。
+              <img src="assets/img/图层 16.png" />
+              智能机器时代，同样也是数据时代，有调研机构的分析数据显示，在2020年全球生成的数据量达到了58ZB，预计在未来三年中，还将增长三倍。通过中国信通院提供的数据显示，在2020年大数据产业的市场规模达到了586亿，在这庞大的市场规模下，也引发了新一轮的技术革新。成本问题、隐私安全问题、数据资产流动性问题是现阶段中心化云计算面临的三大难题。无法解决这三个问题，也就无法应对Web3.0下对计算和存储的更高需求。
+              <img src="assets/img/图层 17.png" />
+              在数据安全性上，得益于区块链技术的支持，具有高安全性的数据校验机制。正是这些特性，使矩阵存储非常适合应用在以下几大场景：
+              <img src="assets/img/图层 18.png" />
+              现场有很多嘉宾对安迈云提出的Web3.0分布式云计算平台表达了关注，对去中心化云计算这一概念十分感兴趣。去中心化云计算作为未来云计算新十年的起点，其未来发展速度将超越中心化云计算。从技术的角度来看，不管是边缘计算还是传统的中心化云计算，与去中心化云计算最主要的差别在于提供服务的模式。
+              去中心化云计算摆脱了某一个平台集中调配管理资源的方式，将每一个节点都作为一个独立的资源相互提供服务。安迈云所扮演的角色是为用户提供进入到节点网络上的平台。所以这样的技术特点，造就了它能够在Web3.0时代成为创新工具的重要基础设施。
+              王磊最后也谈到，希望能够有更多的合作伙伴一起推进Web3.0价值互联网的发展。去中心化云计算并非是取代中心化云计算而诞生的，两者是相互互补，产生出更多的应用场景。
+              相信随着去中心化云计算这一概念逐渐被更多企业所理解，在Web3.0的背景下，新的应用、新的需求将会不断涌现，安迈云会以去中心化技术，帮助更多人轻松迈入数字文明新世界。
+            </div>
+            <div class="divider bottom-divider"></div>
+            <div class="box-control">
+              <a href="javascript:;" class="button text has-icon prev">
+                <i class="fa iconfont icon-zuo" aria-hidden="true"></i>
+                <span class="_txt">上一篇</span>
+              </a>
+              <a href="javascript:;" class="button text has-icon next">
+                <span class="_txt">下一篇</span>
+                <i class="fa iconfont icon-you" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
-          <div class="box-content">
-            近日，亚太内容分发大会暨CDN峰会在北京召开，该峰会不仅邀请到了阿里云、腾讯云等一线云计算厂商，同时还有中兴、网宿科技等传统CDN产业核心成员，是全球内容流量技术和运维领域最重要、规模最大的活动之一。安迈云作为去中心化云计算核心企业代表受邀出席大会。
-            “Web3.0时代是智能机器的时代，它就如同智能手机的出现，将改变当前人们的生活方式”，安迈云产品副总裁王磊在峰会上这样评价Web3.0时代所带来的改变。
-            <img src="assets/img/图层 16.png" />
-            智能机器时代，同样也是数据时代，有调研机构的分析数据显示，在2020年全球生成的数据量达到了58ZB，预计在未来三年中，还将增长三倍。通过中国信通院提供的数据显示，在2020年大数据产业的市场规模达到了586亿，在这庞大的市场规模下，也引发了新一轮的技术革新。成本问题、隐私安全问题、数据资产流动性问题是现阶段中心化云计算面临的三大难题。无法解决这三个问题，也就无法应对Web3.0下对计算和存储的更高需求。
-            <img src="assets/img/图层 17.png" />
-            在数据安全性上，得益于区块链技术的支持，具有高安全性的数据校验机制。正是这些特性，使矩阵存储非常适合应用在以下几大场景：
-            <img src="assets/img/图层 18.png" />
-            现场有很多嘉宾对安迈云提出的Web3.0分布式云计算平台表达了关注，对去中心化云计算这一概念十分感兴趣。去中心化云计算作为未来云计算新十年的起点，其未来发展速度将超越中心化云计算。从技术的角度来看，不管是边缘计算还是传统的中心化云计算，与去中心化云计算最主要的差别在于提供服务的模式。
-            去中心化云计算摆脱了某一个平台集中调配管理资源的方式，将每一个节点都作为一个独立的资源相互提供服务。安迈云所扮演的角色是为用户提供进入到节点网络上的平台。所以这样的技术特点，造就了它能够在Web3.0时代成为创新工具的重要基础设施。
-            王磊最后也谈到，希望能够有更多的合作伙伴一起推进Web3.0价值互联网的发展。去中心化云计算并非是取代中心化云计算而诞生的，两者是相互互补，产生出更多的应用场景。
-            相信随着去中心化云计算这一概念逐渐被更多企业所理解，在Web3.0的背景下，新的应用、新的需求将会不断涌现，安迈云会以去中心化技术，帮助更多人轻松迈入数字文明新世界。
-          </div>
-          <div class="divider bottom-divider"></div>
-          <div class="box-control">
-            <a href="javascript:;"  class="button text has-icon prev">
-              <i class="fa iconfont icon-zuo" aria-hidden="true"></i>
-              <span class="_txt" >上一篇</span>
-            </a>
-            <a href="javascript:;" class="button text has-icon next">
-              <span class="_txt">下一篇</span>
-              <i class="fa iconfont icon-you" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="box-right">
-          <!-- 新闻标签开始 -->
-          <!-- <div class="news-tag">
+          <div class="box-right">
+            <!-- 新闻标签开始 -->
+            <!-- <div class="news-tag">
               <h3>新闻标签</h3>
               <ul>
                 <li>
@@ -323,178 +370,225 @@
               </ul>
             </div>
             <div class="divider"></div> -->
-          <!-- 新闻标签结束 -->
-          <div class="box-column feature-news">
-            <div class="header">
-              <h3 class="title">最新推荐</h3>
-              <a class="change" href="#">
-                <i class="fa iconfont icon-shuaxin" aria-hidden="true"></i>
-                <span onclick="changeBatch">换一批</span>
-              </a>
-            </div>
-            <div class="content">
-              <div class="item item_top">
-                <div class="box-img">
-                  <a href="test.html"><img src="./assets/img/图层 19.png" alt="" /></a>
-                </div>
-                <div class="box-text">
-                  <a href="test.html" class="title">安迈云矩阵存储产品动态获得Protocol
-                    Labs协议实验室官方关注</a>
-                  <div class="box-info">
-                    <span class="date">2021年06月07日</span>
-                  </div>
-                </div>
-              </div>
-              <!-- 分隔线 -->
-              <div class="divider"></div>
-              <div class="item item_bot">
-                <div class="box-img">
-                  <a href="test.html"><img src="./assets/img/图层 19.png" alt="" /></a>
-                </div>
-                <div class="box-text">
-                  <a href="test.html" class="title">安迈云矩阵存储产品动态获得Protocol
-                    Labs协议实验室官方关注</a>
-                  <div class="box-info">
-                    <span class="date">2021年06月07日</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <footer>
-      <div class="top-part">
-        <div class="left-part pos-r">
-          <div class="logo"><img src="./assets/img/logo_bottom.png" /></div>
-          <input id="langswtich2" class="langswtich foldable_menu" type="checkbox" hidden />
-          <label for="langswtich2">
-            <div class="lang_bt">
-              <i class="fa iconfont icon-yuyan" aria-hidden="true"></i>
-              English
-            </div>
-            <div class="langswtich_mask switch_mask"></div>
-          </label>
-          <ul class="lang-panel lang-panel-bottom">
-            <li>
-              <a>
-                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
-                中文</a>
-            </li>
-            <li class="selected">
-              <a>
-                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
-                English</a>
-            </li>
-          </ul>
-        </div>
-        <div class="right-part">
-          <div class="nav-item">
-            <input class="foldable_menu" id="navswtich1" type="checkbox" hidden />
-            <label for="navswtich1">
-              <div class="nav-title flex">
-                <span>产品</span>
-                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-              </div>
-            </label>
-            <ul>
-              <li>
-                <a href="./product_fbssjzx.html"> 分布式数据中心 </a>
-              </li>
-              <li>
-                <a href="./product_fbscdn.html" style="pointer-events: none">
-                  分布式CDN(即将上线)
+            <!-- 新闻标签结束 -->
+            <div class="box-column feature-news">
+              <div class="header">
+                <h3 class="title">最新推荐</h3>
+                <a class="change" href="#">
+                  <i class="fa iconfont icon-shuaxin" aria-hidden="true"></i>
+                  <span onclick="change_batch()">换一批</span>
                 </a>
-              </li>
-              <li>
-                <a href="./product_jzcc.html"> 矩阵存储 </a>
-              </li>
-              <li>
-                <a href="./product_ygpu.html"> 云GPU </a>
-              </li>
-            </ul>
-          </div>
-          <div class="nav-item">
-            <input class="foldable_menu" id="navswtich2" type="checkbox" hidden />
-            <label for="navswtich2">
-              <div class="nav-title flex">
-                <span>解决方案·场景</span>
-                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
               </div>
-            </label>
-            <ul>
-              <li>
-                <a href="./solution_cj.html#cc"> 存储 </a>
-              </li>
-              <li>
-                <a href="./solution_cj.html#rzybf"> 容灾与备份 </a>
-              </li>
-              <li>
-                <a href="./solution_cj.html#kxjs"> 科学计算 </a>
-              </li>
-              <li>
-                <a href="./solution_cj.html#aqjs"> 安全计算 </a>
-              </li>
-              <li>
-                <a href="./solution_cj.html#wly"> 物理云 </a>
-              </li>
-              <li>
-                <a href="./solution_cj.html#nrff"> 内容分发 </a>
-              </li>
-              <li>
-                <a href="./solution_cj.html#jqxx"> 机器学习 </a>
-              </li>
-            </ul>
-          </div>
-          <div class="nav-item">
-            <input class="foldable_menu" id="navswtich3" type="checkbox" hidden />
-            <label for="navswtich3">
-              <div class="nav-title flex">
-                <span>解决方案·行业</span>
-                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+              <div class="content">
+                <div class="item item_top">
+                  <div class="box-img">
+                    <a href="test.html"
+                      ><img src="./assets/img/图层 19.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="box-text">
+                    <a href="test.html" class="title"
+                      >安迈云矩阵存储产品动态获得Protocol
+                      Labs协议实验室官方关注</a
+                    >
+                    <div class="box-info">
+                      <span class="date">2021年06月07日</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- 分隔线 -->
+                <div class="divider"></div>
+                <div class="item item_bot">
+                  <div class="box-img">
+                    <a href="test.html"
+                      ><img src="./assets/img/图层 19.png" alt=""
+                    /></a>
+                  </div>
+                  <div class="box-text">
+                    <a href="test.html" class="title"
+                      >安迈云矩阵存储产品动态获得Protocol
+                      Labs协议实验室官方关注</a
+                    >
+                    <div class="box-info">
+                      <span class="date">2021年06月07日</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </label>
-            <ul>
-              <li>
-                <a href="./solution_hy.html#rgzn"> 人工智能 </a>
-              </li>
-              <li>
-                <a href="./solution_hy.html#ky"> 科研 </a>
-              </li>
-              <li>
-                <a href="./solution_hy.html#djk"> 大健康 </a>
-              </li>
-              <li>
-                <a href="./solution_hy.html#zw"> 政务 </a>
-              </li>
-              <li>
-                <a href="./solution_hy.html#swjy"> 生物基因 </a>
-              </li>
-            </ul>
+            </div>
           </div>
-          <div class="nav-item">
-            <input class="foldable_menu" id="navswtich4" type="checkbox" hidden />
-            <label for="navswtich4">
-              <div class="nav-title flex">
-                <span>解决方案·WEB3.0</span>
-                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+        </div>
+      </main>
+
+      <footer>
+        <div class="top-part">
+          <div class="left-part pos-r">
+            <div class="logo"><img src="./assets/img/logo_bottom.png" /></div>
+            <input
+              id="langswtich2"
+              class="langswtich foldable_menu"
+              type="checkbox"
+              hidden
+            />
+            <label for="langswtich2">
+              <div class="lang_bt">
+                <i class="fa iconfont icon-yuyan" aria-hidden="true"></i>
+                English
               </div>
+              <div class="langswtich_mask switch_mask"></div>
             </label>
-            <ul>
+            <ul class="lang-panel lang-panel-bottom">
               <li>
-                <a href="./solution_web.html#byjs"> 边缘计算 </a>
+                <a>
+                  <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+                  中文</a
+                >
               </li>
-              <li>
-                <a href="./solution_web.html#qkl"> 区块链 </a>
-              </li>
-              <li>
-                <a href="./solution_web.html#rgzn"> 人工智能 </a>
+              <li class="selected">
+                <a>
+                  <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+                  English</a
+                >
               </li>
             </ul>
           </div>
-          <!-- <div class="nav-item">
+          <div class="right-part">
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich1"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich1">
+                <div class="nav-title flex">
+                  <span>产品</span>
+                  <i
+                    class="fa iconfont icon-Down mobile"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </label>
+              <ul>
+                <li>
+                  <a href="./product_fbssjzx.html"> 分布式数据中心 </a>
+                </li>
+                <li>
+                  <a href="./product_fbscdn.html" style="pointer-events: none">
+                    分布式CDN(即将上线)
+                  </a>
+                </li>
+                <li>
+                  <a href="./product_jzcc.html"> 矩阵存储 </a>
+                </li>
+                <li>
+                  <a href="./product_ygpu.html"> 云GPU </a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich2"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich2">
+                <div class="nav-title flex">
+                  <span>解决方案·场景</span>
+                  <i
+                    class="fa iconfont icon-Down mobile"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </label>
+              <ul>
+                <li>
+                  <a href="./solution_cj.html#cc"> 存储 </a>
+                </li>
+                <li>
+                  <a href="./solution_cj.html#rzybf"> 容灾与备份 </a>
+                </li>
+                <li>
+                  <a href="./solution_cj.html#kxjs"> 科学计算 </a>
+                </li>
+                <li>
+                  <a href="./solution_cj.html#aqjs"> 安全计算 </a>
+                </li>
+                <li>
+                  <a href="./solution_cj.html#wly"> 物理云 </a>
+                </li>
+                <li>
+                  <a href="./solution_cj.html#nrff"> 内容分发 </a>
+                </li>
+                <li>
+                  <a href="./solution_cj.html#jqxx"> 机器学习 </a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich3"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich3">
+                <div class="nav-title flex">
+                  <span>解决方案·行业</span>
+                  <i
+                    class="fa iconfont icon-Down mobile"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </label>
+              <ul>
+                <li>
+                  <a href="./solution_hy.html#rgzn"> 人工智能 </a>
+                </li>
+                <li>
+                  <a href="./solution_hy.html#ky"> 科研 </a>
+                </li>
+                <li>
+                  <a href="./solution_hy.html#djk"> 大健康 </a>
+                </li>
+                <li>
+                  <a href="./solution_hy.html#zw"> 政务 </a>
+                </li>
+                <li>
+                  <a href="./solution_hy.html#swjy"> 生物基因 </a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich4"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich4">
+                <div class="nav-title flex">
+                  <span>解决方案·WEB3.0</span>
+                  <i
+                    class="fa iconfont icon-Down mobile"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </label>
+              <ul>
+                <li>
+                  <a href="./solution_web.html#byjs"> 边缘计算 </a>
+                </li>
+                <li>
+                  <a href="./solution_web.html#qkl"> 区块链 </a>
+                </li>
+                <li>
+                  <a href="./solution_web.html#rgzn"> 人工智能 </a>
+                </li>
+              </ul>
+            </div>
+            <!-- <div class="nav-item">
           <input class="foldable_menu" id="navswtich5" type="checkbox" hidden />
           <label for="navswtich5">
             <div class="nav-title flex">
@@ -508,199 +602,217 @@
             <li><a>公司治理</a></li>
           </ul>
         </div> -->
-          <div class="nav-item">
-            <input class="foldable_menu" id="navswtich6" type="checkbox" hidden />
-            <label for="navswtich6">
-              <div class="nav-title flex">
-                <span>关于我们</span>
-                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-              </div>
-            </label>
-            <ul>
-              <li><a href="./about.html#gsjs">公司介绍</a></li>
-              <li><a href="./about.html#fzlc">发展历程</a></li>
-              <li><a href="./about.html#xwdt">新闻动态</a></li>
-              <li><a href="./about.html#rczp">人才招聘</a></li>
-              <li><a href="./about.html#lxfs">联系方式</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="bottom-part">
-        <div class="flex jc-between flex-1 pos-r">
-          <div class="contacts sub-unit flex fd-c jc-between h-auto">
-            <div class="flex">
-              <div class="flex ai-center">
-                <i class="fa iconfont icon-dianhua" aria-hidden="true"></i>
-                +86 898 3286 7007
-              </div>
-              <div class="divider-v"></div>
-              <div class="flex ai-center">
-                <i class="fa iconfont icon-youjian" aria-hidden="true"></i>
-                contact@AnmaiCloud.com
-              </div>
-            </div>
-            <div class="flex line-2">
-              <span>地址：海南省省直辖县行政单位澄迈县老城镇高新技术产业示范区海南生态软件园A7幢二层3001</span>
-            </div>
-          </div>
-          <div class="divider-v ghost"></div>
-          <div class="product_part">
-            <div class="products flex fd-c jc-between h-auto">
-              <div class="title flex">产品平台</div>
-              <div class="product_imgs flex line-2 ai-start">
-                <a href="https://storage.anmaicloud.com/" target="_blank"><img src="assets/img/products1.png" /></a>
-                <div class="divider-v ghost"></div>
-                <a href="https://gpu.anmaicloud.com/" target="_blank"><img src="assets/img/products2.png" /></a>
-              </div>
-            </div>
-            <div class="gzh flex fd-c ai-end">
-              <div>关注公众号</div>
-              <img src="assets/img/qr_code.png" />
-            </div>
-          </div>
-          <div class="divider-v ghost"></div>
-          <div class="beian sub-unit flex fd-c jc-between h-auto">
-            <div class="flex ai-center"></div>
-            <div class="flex line-2">
-              <span>琼ICP备20000109号-1<br />
-                Copyright © 2013-2021 Anmai Cloud Rights Reserved.</span>
+            <div class="nav-item">
+              <input
+                class="foldable_menu"
+                id="navswtich6"
+                type="checkbox"
+                hidden
+              />
+              <label for="navswtich6">
+                <div class="nav-title flex">
+                  <span>关于我们</span>
+                  <i
+                    class="fa iconfont icon-Down mobile"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </label>
+              <ul>
+                <li><a href="./about.html#gsjs">公司介绍</a></li>
+                <li><a href="./about.html#fzlc">发展历程</a></li>
+                <li><a href="./about.html#xwdt">新闻动态</a></li>
+                <li><a href="./about.html#rczp">人才招聘</a></li>
+                <li><a href="./about.html#lxfs">联系方式</a></li>
+              </ul>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
-  </div>
+        <div class="bottom-part">
+          <div class="flex jc-between flex-1 pos-r">
+            <div class="contacts sub-unit flex fd-c jc-between h-auto">
+              <div class="flex">
+                <div class="flex ai-center">
+                  <i class="fa iconfont icon-dianhua" aria-hidden="true"></i>
+                  +86 898 3286 7007
+                </div>
+                <div class="divider-v"></div>
+                <div class="flex ai-center">
+                  <i class="fa iconfont icon-youjian" aria-hidden="true"></i>
+                  contact@AnmaiCloud.com
+                </div>
+              </div>
+              <div class="flex line-2">
+                <span
+                  >地址：海南省省直辖县行政单位澄迈县老城镇高新技术产业示范区海南生态软件园A7幢二层3001</span
+                >
+              </div>
+            </div>
+            <div class="divider-v ghost"></div>
+            <div class="product_part">
+              <div class="products flex fd-c jc-between h-auto">
+                <div class="title flex">产品平台</div>
+                <div class="product_imgs flex line-2 ai-start">
+                  <a href="https://storage.anmaicloud.com/" target="_blank"
+                    ><img src="assets/img/products1.png"
+                  /></a>
+                  <div class="divider-v ghost"></div>
+                  <a href="https://gpu.anmaicloud.com/" target="_blank"
+                    ><img src="assets/img/products2.png"
+                  /></a>
+                </div>
+              </div>
+              <div class="gzh flex fd-c ai-end">
+                <div>关注公众号</div>
+                <img src="assets/img/qr_code.png" />
+              </div>
+            </div>
+            <div class="divider-v ghost"></div>
+            <div class="beian sub-unit flex fd-c jc-between h-auto">
+              <div class="flex ai-center"></div>
+              <div class="flex line-2">
+                <span
+                  >琼ICP备20000109号-1<br />
+                  Copyright © 2013-2021 Anmai Cloud Rights Reserved.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
 
-  <script>
-    $(function () {
-      ScrollTrigger.create({
-        start: "top top",
-        end: "+=10",
-        onLeave: function () {
-          $(".header1").addClass("floated header_dark")
-        },
-        onEnterBack: function () {
-          $(".header1").removeClass("floated header_dark")
-        },
-        id: "header",
+    <script>
+      $(function () {
+        ScrollTrigger.create({
+          start: "top top",
+          end: "+=10",
+          onLeave: function () {
+            $(".header1").addClass("floated header_dark")
+          },
+          onEnterBack: function () {
+            $(".header1").removeClass("floated header_dark")
+          },
+          id: "header",
+        })
       })
-    })
-    let urlId = getQueryString('id') != null ? getQueryString('id') : 'S00096e73' //文章id暂时 S00096e73
-    var currentAtcId = "" //当前帖子类型id
-    var lastId = "",
+      let urlId =
+        getQueryString("id") != null ? getQueryString("id") : "S00096e73" //文章id暂时 S00096e73
+      var currentAtcId = "" //当前帖子类型id
+      var lastId = "",
         nextId = ""
-    $(document).ready(function () {
-      $('.box-control .prev').on('click', function(){
-        urlId = lastId;
-        getArticleContents()
+      $(document).ready(function () {
+        $(".box-control .prev").on("click", function () {
+          urlId = lastId
+          getArticleContents()
+        })
+        $(".box-control .next").on("click", function () {
+          urlId = nextId
+          getArticleContents()
+        })
       })
-      $('.box-control .next').on('click', function(){
-        urlId = nextId;
-        getArticleContents()
-      })
-    });
-    
-    //获取URL参数
-    function getQueryString(name) {
-      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-      var r = window.location.search.substr(1).match(reg);
-      if (r != null) return unescape(r[2]);
-      return null;
-    }
-    //获取文章上下篇ID
-    function getNeighborId(){
-      $.ajax({
+
+      //获取URL参数
+      function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i")
+        var r = window.location.search.substr(1).match(reg)
+        if (r != null) return unescape(r[2])
+        return null
+      }
+      //获取文章上下篇ID
+      function getNeighborId() {
+        $.ajax({
           url: "http://ixiezhi.vicp.cc/amyos/article/neighbor_article",
           type: "GET",
           data: { l: currentAtcId },
-          dataType: 'json',
+          dataType: "json",
           success: function (data) {
-            console.info(data);
+            console.info(data)
             lastId = data.last_id
             nextId = data.next_id
           },
-
         })
-    }
-    //面包屑帖子类型
-    function getArticleType() {
-      $.ajax({
-        url: "http://ixiezhi.vicp.cc/amyos/contact/article_type",
-        type: "GET",
-        dataType: 'json',
-        success: function (data) {
-          console.info(data);
-          let obj = data.data.find(function (e) {
-            return e.id === currentAtcId
-          })
-          console.log('obj', obj)
-          $('.actType').text(obj.name_cn + ' >')
+      }
+      //面包屑帖子类型
+      function getArticleType() {
+        $.ajax({
+          url: "http://ixiezhi.vicp.cc/amyos/contact/article_type",
+          type: "GET",
+          dataType: "json",
+          success: function (data) {
+            console.info(data)
+            let obj = data.data.find(function (e) {
+              return e.id === currentAtcId
+            })
+            console.log("obj", obj)
+            $(".actType").text(obj.name_cn + " >")
+          },
+        })
+      }
 
-        },
+      //换一批
+      function change_batch() {
+        getRecommendNews()
+      }
+      //文章内容
+      function getArticleContents() {
+        $.ajax({
+          url: "http://ixiezhi.vicp.cc/amyos/article/article_detail",
+          type: "GET",
+          data: {
+            l: urlId, //文章ID
+          },
+          dataType: "json",
+          success: function (data) {
+            console.info(data)
+            $(".box-heading .title").text(data.title)
+            $(".box-heading .box-info .date").text(data.open_at)
+            $(".box-content").html(data.content)
+            currentAtcId = data.id
+            getNeighborId()
+          },
+        })
+      }
+      var newPageId = "W00096e33"
+      //最新推荐
+      function getRecommendNews() {
+        $.ajax({
+          url: "http://ixiezhi.vicp.cc/amyos/article/getTopArticle",
+          type: "GET",
+          data: {
+            k: newPageId, //页数
+            l: 0, //文章ID
+          },
+          dataType: "json",
+          success: function (data) {
+            // console.info(data)
+            // const page = data.page
+            newPageId = data.page
+            const info = data.data
+            $(".feature-news .content .item_top img").attr("src", info[0].img)
+            $(".feature-news .content .item_top .box-text a").text(
+              info[0].title
+            )
+            $(".feature-news .content .item_top .box-info .date").text(
+              info[0].open_at
+            )
 
+            $(".feature-news .content .item_bot img").attr("src", info[1].img)
+            $(".feature-news .content .item_top .box-text a").text(
+              info[1].title
+            )
+            $(".feature-news .content .item_top .box-info .date").text(
+              info[1].open_at
+            )
+          },
+        })
+      }
+
+      getRecommendNews()
+      setTimeout(() => {
+        getArticleType()
       })
-    }
-
-    //换一批
-    function changeBatch() {
-
-    }
-    //文章内容
-    function getArticleContents() {
-      $.ajax({
-        url: "http://ixiezhi.vicp.cc/amyos/article/article_detail?l=S00096e73",
-        type: "GET",
-        data: {
-          l: urlId,//文章ID
-        },
-        dataType: 'json',
-        success: function (data) {
-          console.info(data)
-          $('.box-heading .title').text(data.title);
-          $('.box-heading .box-info .date').text(data.open_at);
-          $('.box-content').html(data.content);
-          currentAtcId = data.type_id;
-
-
-        },
-
-      })
-    }
-    //最新推荐
-    function getRecommendNews() {
-      $.ajax({
-        url: "http://ixiezhi.vicp.cc/amyos/article/getTopArticle",
-        type: "GET",
-        data: {
-          k: 1,//页数
-          l: 0,//文章ID
-        },
-        dataType: 'json',
-        success: function (data) {
-          console.info(data)
-          const page = data.page
-          const info = data.data
-          $('.feature-news .content .item_top img').attr("src", info[0].img)
-          $('.feature-news .content .item_top .box-text a').text(info[0].title)
-          $('.feature-news .content .item_top .box-info .date').text(info[0].open_at)
-
-          $('.feature-news .content .item_bot img').attr("src", info[1].img)
-          $('.feature-news .content .item_top .box-text a').text(info[1].title)
-          $('.feature-news .content .item_top .box-info .date').text(info[1].open_at)
-        },
-
-      })
-    }
-    
-    getNeighborId()
-    getRecommendNews();
-    setTimeout(() => {
-      getArticleType();
-    })
-    getArticleContents()
-
-  </script>
-</body>
-
+      getArticleContents()
+    </script>
+  </body>
 </html>
