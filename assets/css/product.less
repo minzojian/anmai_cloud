@@ -34,7 +34,7 @@
     }
 
     .banner {
-      background: url("../img/product/banner.png") no-repeat center;
+      // background: url("../img/product/banner.png") no-repeat center;
       background-size: cover;
       width: 100%;
       height: 761px;
@@ -253,7 +253,7 @@
           h1 {
             margin-bottom: 20px;
             height: 90px;
-            font-size: 120px;
+            font-size: 80px;
             font-family: Gilroy;
             font-weight: bold;
             color: rgba(239, 239, 239, 0);
@@ -285,14 +285,20 @@
           display: flex;
           align-items: center;
 
+          .c_left,
+          .c_rirht {
+            flex: 1;
+          }
+
           .c_left {
             .bottom_item,
             .top_item {
-              width: 420px;
+              width: 100%;
+              max-width: 420px;
               height: 540px;
               position: relative;
               background: url("../img/product/98.png") center no-repeat;
-
+              border-radius: 14px;
               h3 {
                 font-size: 26px;
                 font-family: OPPOSans;
@@ -330,7 +336,8 @@
             }
 
             .mid_item {
-              width: 420px;
+              width: 100%;
+              max-width: 420px;
               height: 129px;
               border-radius: 14px;
               background: linear-gradient(211deg, #8be5cf, #6cb2e7);
@@ -381,7 +388,7 @@
               height: 500px;
               position: relative;
               background: url("../img/product/99.png") center no-repeat;
-
+              border-radius: 14px;
               P {
                 width: 80%;
               }
@@ -400,6 +407,7 @@
               align-items: center;
               justify-content: center;
               box-sizing: border-box;
+
               // margin: 0 0 25px 25px;
               box-shadow: -5px 5px 10px rgb(136 136 136 / 18%);
 
@@ -450,12 +458,13 @@
             }
 
             .mid_item {
-              width: 420px;
+              width: 100%;
+              max-width: 420px;
               height: 540px;
               position: relative;
               background: url("../img/product/100.png") center no-repeat;
               margin: 21px 0 22px 0;
-
+              border-radius: 14px;
               h3 {
                 font-size: 26px;
                 font-family: OPPOSans;
@@ -503,7 +512,8 @@
             }
 
             .bottom_item {
-              width: 420px;
+              width: 100%;
+              max-width: 420px;
               height: 193px;
               background: linear-gradient(180deg, #4697d6, #afd4f1);
               border-radius: 14px;
@@ -544,12 +554,22 @@
       width: 100%;
       display: flex;
       align-items: center;
+      position: relative;
       height: 950px;
+
+      video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 0;
+        object-fit: cover;
+      }
 
       .wrapper {
         // width: 100%;
         // max-width: 1440px;
         // margin: 0 auto;
+        z-index: 1;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -557,11 +577,11 @@
         .gloab_img {
           margin-right: 120px;
           display: flex;
-
-          video {
-            width: 100%;
-            max-width: 756px;
-          }
+          flex: 1;
+          // video {
+          //   width: 100%;
+          //   max-width: 756px;
+          // }
         }
 
         .city {
@@ -692,7 +712,8 @@
           align-items: center;
 
           .items {
-            width: 420px;
+            width: 100%;
+            max-width: 420px;
 
             h3 {
               margin: 54px 0 26px 60px;
@@ -713,16 +734,22 @@
               line-height: 1.5;
             }
           }
+          .c_left,
+          .c_rirht {
+            flex: 1;
+          }
 
           .c_left {
             .bottom_item,
             .top_item {
-              width: 420px;
+              width: 100%;
+              max-width: 420px;
               height: 540px;
               position: relative;
               background: url("../img/product/产品-云GPU\ _slices/矩形 11 拷贝 5(1).png")
                 center no-repeat;
               background-size: cover;
+              border-radius: 14px;
             }
 
             .mid_item {
@@ -745,7 +772,8 @@
             margin-left: 21px;
 
             .top_item {
-              width: 420px;
+              width: 100%;
+              max-width: 420px;
               height: 250px;
               background: #edf3fd;
               border-radius: 14px;
@@ -757,17 +785,20 @@
             }
 
             .mid_item {
-              width: 420px;
+              width: 100%;
+              max-width: 420px;
               height: 540px;
               position: relative;
               background: url("../img/product/产品-云GPU\ _slices/矩形 11.png")
                 center no-repeat;
               background-size: cover;
               margin: 21px 0 22px 0;
+              border-radius: 14px;
             }
 
             .bottom_item {
-              width: 420px;
+              width: 100%;
+              max-width: 420px;
               height: 193px;
               background: linear-gradient(180deg, #4697d6, #afd4f1);
               border-radius: 14px;

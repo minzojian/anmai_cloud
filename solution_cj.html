@@ -21,10 +21,13 @@
     <!-- script -->
     <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
     <!-- <script src="./assets/js/nav.js"></script> -->
-
+<script src="./assets/js/lib/jquery.nicescroll.min.js"></script>
     <script src="./assets/js/lib/gsap.min.js"></script>
     <script src="./assets/js/lib/ScrollToPlugin.min.js"></script>
     <script src="./assets/js/lib/ScrollTrigger.min.js"></script>
+<script>
+window.disabledHeaderAudoSwitch=true;
+</script>
     <script src="./assets/js/common.js"></script>
 
 </head>
@@ -274,9 +277,8 @@
         </div>
         <div class="section nav-height" id="navHeight">
             <nav class="wrapper nav-wrap" id="nav-wrap">
-                <div class="nav-mobile">Click</div>
                 <ul class="clearfix">
-                    <li><a class="active" href="#cc"><img class="icon" src="./assets/img/solution/图层 5.png"
+                    <li><a class="active" href="#cc"><img class="icon" src="./assets/img/solution/图层 5 拷贝.png"
                                 alt="">存储</a></li>
                     <li><a class="" href="#rzybf"><img class="icon" src="./assets/img/solution/图层 6.png"
                                 alt="">容灾与备份</a></li>
@@ -1041,16 +1043,24 @@ $($(".nav-wrap a").get(index)).addClass('active');
 })
 })
 
+$(function(){
+ $("#nav-wrap").niceScroll({
+          cursorborder: "1px solid rgb(80,80,80,0.4)",
+          horizrailenabled: true,
+autohidemode:false,
+emulatetouch:true
+        })
+})
 
 
         // $(".click-me").navScroll({
         //     navHeight: 0,
         // })
 
-        $(".nav-wrap").on("click", ".nav-mobile", function (e) {
-            e.preventDefault()
-            $(".nav-wrap ul").slideToggle("fast")
-        })
+        // $(".nav-wrap").on("click", ".nav-mobile", function (e) {
+        //     e.preventDefault()
+        //     $(".nav-wrap ul").slideToggle("fast")
+        // })
     </script>
 </body>
 

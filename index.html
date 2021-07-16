@@ -8,6 +8,10 @@
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <meta name="author" content="KentWood (www.lunastudio.cn)" />
+    <base
+      href="http://static-1251577693.cos.ap-chengdu.myqcloud.com/projects/h5/anmai_cloud_mobile/"
+    />
+
 
     <title>
       专注于IPFS去中心化云计算_web3.0企业级分布式云存储计算_『安迈云』
@@ -2518,20 +2522,42 @@ x5-video-player-type="h5"
       })
 
       $(function () {
-        ScrollTrigger.create({
-          trigger: ".stage2",
-          start: "top top",
-          end: "+=50",
-          onLeave: function () {
-            $(".header1").addClass("floated header_dark")
-            $(".header1").removeClass("header_light")
+        ScrollTrigger.matchMedia({
+          "(min-width: 751px)": function () {
+            ScrollTrigger.create({
+              trigger: ".stage1",
+              start: "+=" + getScrollYByVideo(19).top,
+              end: "+=50",
+              onLeave: function () {
+                $(".header1").addClass("state3")
+                $(".header1").removeClass("state2")
+              },
+              onEnterBack: function () {
+                $(".header1").removeClass("state3")
+                $(".header1").addClass("state2")
+              },
+              id: "header",
+              markers: false,
+            })
           },
-          onEnterBack: function () {
-            $(".header1").removeClass("floated header_dark")
-            $(".header1").addClass("header_light")
+          // mobile only
+          "(max-width: 750px)": function () {
+            ScrollTrigger.create({
+              trigger: ".stage2",
+              start: "top top",
+              end: "+=50",
+              onLeave: function () {
+                $(".header1").addClass("floated header_dark")
+                $(".header1").removeClass("header_light")
+              },
+              onEnterBack: function () {
+                $(".header1").removeClass("floated header_dark")
+                $(".header1").addClass("header_light")
+              },
+              id: "header",
+              markers: false,
+            })
           },
-          id: "header",
-          markers: false,
         })
       })
     </script>

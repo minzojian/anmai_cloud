@@ -151,20 +151,26 @@ $(document).ready(function () {
 
 if (!window.disabledHeaderAudoSwitch) {
   $(function () {
-    ScrollTrigger.create({
-
-      start: "top top",
-      end: "+=50",
-      onLeave: function () {
-        $(".header1").addClass("floated header_dark")
-        $(".header1").removeClass("header_light")
+    
+    ScrollTrigger.matchMedia({
+      // mobile only
+      "(max-width: 750px)": function () {
+        ScrollTrigger.create({
+          start: "top top",
+          end: "+=50",
+          onLeave: function () {
+            $(".header1").addClass("floated header_dark")
+            $(".header1").removeClass("header_light")
+          },
+          onEnterBack: function () {
+            $(".header1").removeClass("floated header_dark")
+            $(".header1").addClass("header_light")
+          },
+          id: "header",
+          markers: false,
+        })
       },
-      onEnterBack: function () {
-        $(".header1").removeClass("floated header_dark")
-        $(".header1").addClass("header_light")
-      },
-      id: "header",
-      markers: false,
     })
+        
   })
 }
