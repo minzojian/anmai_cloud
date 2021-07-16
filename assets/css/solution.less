@@ -513,13 +513,18 @@ body {
 
       .concact_form {
         margin-top: 57px;
+
         section {
           display: flex;
           justify-content: space-between;
           margin-bottom: 50px;
+
           .input_box {
+            position: relative;
+
             label {
               position: relative;
+
               span {
                 font-size: 16px;
                 font-family: OPPOSans;
@@ -529,10 +534,12 @@ body {
                 position: absolute;
                 top: -30px;
               }
-              .contents{
+
+              .contents {
                 width: 625px;
               }
-              input{
+
+              input {
                 width: 287px;
                 border: 0;
                 font-family: inherit;
@@ -549,14 +556,46 @@ body {
                 border-bottom: 2px solid #eee;
               }
             }
+
+            .errorMsg {
+              font-size: 12px;
+              position: absolute;
+              color: red;
+              display: none;
+            }
           }
         }
-        .submitConcact{
+
+        .submitConcact {
           margin-top: 62px;
         }
       }
     }
   }
+}
+
+.data_message {
+  font-size: 14px;
+  position: fixed;
+  z-index: 1010;
+  width: 240px;
+  height: 30px;
+  top: 60px;
+  transition: .3s;
+  left: 0;
+  right: 0;
+  /* bottom: 0; */
+  margin: auto;
+  pointer-events: none;
+  pointer-events: all;
+  padding: 8px 16px;
+  border-radius: 4px;
+  box-shadow: 0 1px 6px rgb(0 0 0 / 20%);
+  background: rgba(0,0,0,.8);
+  /* position: relative; */
+  text-align: center;
+  display: none;
+  line-height: 35px;
 }
 
 .section-content {

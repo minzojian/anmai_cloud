@@ -98,12 +98,12 @@ function checkOs() {
     isWeixin =
       ua.match(/MicroMessenger/i) &&
       ua.match(/MicroMessenger/i)[0] == "micromessenger"
-  ;(isTablet =
-    /(?:iPad|PlayBook)/.test(ua) ||
-    (isAndroid && !/(?:Mobile)/.test(ua)) ||
-    (isFireFox && /(?:Tablet)/.test(ua))),
-    (isIPhone = /(?:iPhone)/.test(ua) && !isTablet),
-    (isPc = !isIPhone && !isAndroid && !isSymbian)
+    ; (isTablet =
+      /(?:iPad|PlayBook)/.test(ua) ||
+      (isAndroid && !/(?:Mobile)/.test(ua)) ||
+      (isFireFox && /(?:Tablet)/.test(ua))),
+      (isIPhone = /(?:iPhone)/.test(ua) && !isTablet),
+      (isPc = !isIPhone && !isAndroid && !isSymbian)
 
   window.isTablet = isTablet
   window.isIPhone = isIPhone
@@ -116,15 +116,40 @@ function checkOs() {
 checkOs()
 
 $(document).ready(function () {
+
+  var nickname, phone, email, content, industry
+
   $(".closeBtn").on("click", function () {
     $(".modalMask, .contactModal").hide()
   })
   $(".modalShow").on("click", function () {
     $(".modalMask, .contactModal").show()
   })
+
+  $("#nickname").focus(function () {
+    $('.name_errorMsg').hide()
+  });
+  $("#phone").focus(function () {
+    $('.phone_errorMsg').hide()
+  });
+  $("#email").focus(function () {
+    $('.email_errorMsg').hide()
+  });
+
   $(".submitConcact").on("click", function () {
     console.log("submit")
-    if ($("#email").val() == "" || $("#phone").val() == "") return false
+    if ($("#nickname").val() == "") {
+      $('.name_errorMsg').show()
+      return false
+    }
+    if ($("#phone").val() == "") {
+      $('.phone_errorMsg').show()
+      return false
+    }
+    if ($("#email").val() == "") {
+      $('.email_errorMsg').show()
+      return false
+    }
     else
       $.ajax({
         url: "http://ixiezhi.vicp.cc/amyos/contact/add_contact",
@@ -139,10 +164,18 @@ $(document).ready(function () {
         dataType: "json",
         success: function (data) {
           console.info(data)
-          alert(data.msg)
+          $('.data_message').text(data.msg).show();
           if (data.code === 0) {
-            $(".modalMask, .contactModal").hide()
+          
+            setTimeout(function () {
+              $('.contactModal, .modalMask').hide()
+            }, 2000);
           }
+
+          setTimeout(function () {
+            $(".data_message").hide();
+          }, 2000);
+
         },
       })
   })
