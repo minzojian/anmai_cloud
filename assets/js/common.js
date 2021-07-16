@@ -116,16 +116,42 @@ function checkOs() {
 checkOs()
 
 $(document).ready(function () {
+  var nickname, phone, email, content, industry
+
   $(".closeBtn").on("click", function () {
     $(".modalMask, .contactModal").hide()
+    document.body.style.overflow = "auto"
   })
   $(".modalShow").on("click", function () {
     $(".modalMask, .contactModal").show()
+    $(".contactModal").get(0).scrollIntoView()
+    document.body.style.overflow = "hidden"
   })
+
+  $("#nickname").focus(function () {
+    $(".name_errorMsg").hide()
+  })
+  $("#phone").focus(function () {
+    $(".phone_errorMsg").hide()
+  })
+  $("#email").focus(function () {
+    $(".email_errorMsg").hide()
+  })
+
   $(".submitConcact").on("click", function () {
     console.log("submit")
-    if ($("#email").val() == "" || $("#phone").val() == "") return false
-    else
+    if ($("#nickname").val() == "") {
+      $(".name_errorMsg").show()
+      return false
+    }
+    if ($("#phone").val() == "") {
+      $(".phone_errorMsg").show()
+      return false
+    }
+    if ($("#email").val() == "") {
+      $(".email_errorMsg").show()
+      return false
+    } else
       $.ajax({
         url: "http://ixiezhi.vicp.cc/amyos/contact/add_contact",
         type: "POST",
@@ -138,20 +164,23 @@ $(document).ready(function () {
         },
         dataType: "json",
         success: function (data) {
-          console.info(data)
-          alert(data.msg)
+          $(".data_message").text(data.msg).show().addClass("show")
           if (data.code === 0) {
-            $(".modalMask, .contactModal").hide()
+            setTimeout(function () {
+              $(".contactModal, .modalMask").hide().removeClass("show")
+            }, 2000)
           }
+
+          setTimeout(function () {
+            $(".data_message").hide().removeClass("show")
+          }, 2000)
         },
       })
   })
 })
 
-
 if (!window.disabledHeaderAudoSwitch) {
   $(function () {
-    
     ScrollTrigger.matchMedia({
       // mobile only
       "(max-width: 750px)": function () {
@@ -171,6 +200,5 @@ if (!window.disabledHeaderAudoSwitch) {
         })
       },
     })
-        
   })
 }

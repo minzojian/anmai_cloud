@@ -56,7 +56,7 @@ window.disabledHeaderAudoSwitch=true;
         /* margin-top: 112px; */
     }
 
-    .section-content .wrapper .bottom .card .d_wrp .btn {
+    /* .section-content .wrapper .bottom .card .d_wrp .btn {
         margin-top: 80px;
     }
 
@@ -73,7 +73,7 @@ window.disabledHeaderAudoSwitch=true;
     }
 
     #djk .wrapper .mid .ietms h2 {
-        width: 298px;
+        width: 310px;
         line-height: 1.2;
     }
 
@@ -94,7 +94,7 @@ window.disabledHeaderAudoSwitch=true;
 
     #zw .flex_between .img {
         margin-bottom: 45px;
-    }
+    } */
 </style>
 
 
@@ -488,27 +488,18 @@ window.disabledHeaderAudoSwitch=true;
                 <div class="mid">
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
                         <div class="icon"><img src="./assets/img/solution/图层 22.png" alt=""></div>
-                        <h2>遵从法规的数据存储<i>01</i></h2>
+                        <h2>遵从法规的数据存储<span class="text1"></span></h2>
+                        <p>档案，病例等海量健康数据的长期保存，满足法规要求</p>
                     </div>
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                         <div class="icon"><img src="./assets/img/solution/图层 23.png" alt=""></div>
-                        <h2>行业数据归档离线备份<i>02</i></h2>
+                        <h2>行业数据归档离线备份<span class="text2"></span></h2>
+                        <p>针对访问频次逐渐贬低的内容提供生命周期存储策略</p>
                     </div>
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".3s">
                         <div class="icon"><img src="./assets/img/solution/图层 24.png" alt=""></div>
-                        <h2>注重隐私永久保存<i>03</i></h2>
-                    </div>
-                    <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
-                        <div class="icon"><img src="./assets/img/solution/图层 22.png" alt=""></div>
-                        <h2>档案，病例等海量健康数据的长期保存，满足法规要求 <i>04</i></h2>
-                    </div>
-                    <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                        <div class="icon"><img src="./assets/img/solution/图层 23.png" alt=""></div>
-                        <h2>针对访问频次逐渐贬低的内容提供生命周期存储策略<i>05</i></h2>
-                    </div>
-                    <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".3s">
-                        <div class="icon"><img src="./assets/img/solution/图层 24.png" alt=""></div>
-                        <h2>用户健康数据通过加密后存储到IPFS去中心化网络永久保存及调用<i>06</i></h2>
+                        <h2>注重隐私永久保存<span class="text3"></span></h2>
+                        <p>用户健康数据通过加密后存储到IPFS去中心化网络永久保存及调用</p>
                     </div>
                 </div>
                 <div class="bottom">
@@ -638,7 +629,7 @@ window.disabledHeaderAudoSwitch=true;
                     <h2>与安迈云解决方案专家沟通</h2>
                     <p class="desc">安迈云致力于为您提供更加⾼效、更加专业的一站式解决⽅案，以及更加优质的定制化服务</p>
                     <div class="contact">
-                        您可以通过邮件、电话或者<a href="">方案咨询</a>的形式与安迈云解决方案专家获得联系，获取更多信息
+                        您可以通过邮件、电话或者方案咨询的形式与安迈云解决方案专家获得联系，获取更多信息
                     </div>
                 </div>
                 <div class="right">
@@ -652,7 +643,7 @@ window.disabledHeaderAudoSwitch=true;
                             <span>400 898 3286</span>
                         </div>
                         <div class="action_btn btn-with-arrow modalShow">
-                            <span>留言咨询</span>
+                            <span>方案咨询</span>
                             <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
                         </div>
                     </div>
@@ -667,48 +658,49 @@ window.disabledHeaderAudoSwitch=true;
                     <div class="concact_form">
                         <section>
                             <div class="input_box">                               
-                                <label >
                                     <span>如何称呼您 *</span>
                                     <input type="text" id="nickname">
-                                </label>
+                                    <p class="name_errorMsg errorMsg">姓名不能为空</p>
                             </div>
                             <div class="input_box">
-                                <label >
                                     <span>您的电话 *</span>
                                     <input type="text" id="phone">
-                                </label>
+                                    <p class="phone_errorMsg errorMsg">电话不能为空</p>
                             </div>
                         </section>
                         <section>
                             <div class="input_box">
                                 <label >
                                     <span>您的邮箱 *</span>
-                                    <input type="text" id="email">
                                 </label>
+                                    <input type="text" id="email">
+                                    <p class="email_errorMsg errorMsg">邮箱不能为空</p>
                             </div>
                             <div class="input_box">
                                 <label >
                                     <span>您想咨询的行业</span>
-                                    <input type="text" id="industry">
                                 </label>
+                                    <input type="text" id="industry">
                             </div>
                         </section>
                         <section>
                             <div class="input_box">
                                 <label >
                                     <span class="label">请描述您想咨询的内容</span>
-                                    <input type="text" class="contents" id="content">
                                 </label>
+                                    <input type="text" class="contents" id="content">
                             </div>
                         </section>
                         <div class="action_btn btn-with-arrow submitConcact">
                             <span>立即咨询</span>
                             <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
                         </div>
+                        <div class="data_message"></div>
                     </div>
                 </div>
             </div>
         </div>
+       
         <!-- footer -->
         <footer>
             <div class="top-part">
