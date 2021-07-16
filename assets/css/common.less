@@ -40,14 +40,22 @@ header {
   align-items: center;
   padding: 40px 64px 64px;
   transition: 0.3s linear;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-sizing: border-box;
+
+  ~ main,
+  ~ .section {
+    padding-top: 142px;
+  }
+
   &.floated {
     background: white;
-    position: sticky;
-    top: 0;
     margin: 0;
-    padding: 20px;
-    height: 80px;
-    box-sizing: border-box;
+    padding: 10px 20px;
+    // height: 80px;
+
     box-shadow: 0px 0px 5px 0px rgba(25, 36, 45, 0.03);
     z-index: 111;
 
@@ -198,7 +206,7 @@ header {
             transform: translateX(calc(-50% - 10px));
             opacity: 0;
             height: 0;
-            transition: all 0.3s 0.1s;
+            transition: all 0.1s;
             pointer-events: none;
 
             position: absolute;
@@ -996,7 +1004,7 @@ a.fade {
   // align-items: center;
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 800px) {
   .divider {
     margin: 10px 0;
   }

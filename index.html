@@ -51,6 +51,9 @@
       src="./assets/js/lib/modernizr.custom.min.js"
     ></script>
     <script src="./assets/js/lib/jquery.nicescroll.min.js"></script>
+    <script>
+      window.disabledHeaderAudoSwitch = true
+    </script>
     <script type="text/javascript" src="./assets/js/common.js"></script>
 
     <!-- <script src="https://unpkg.com/vconsole/dist/vconsole.min.js"></script>
@@ -76,7 +79,291 @@
       }
     </script>
 
-    
+    <header class="header1 header_light state2">
+      <a href="./index.html"> <div class="logo">&nbsp;</div></a>
+      <div class="right-part">
+        <input
+          id="langswtich"
+          class="langswtich foldable_menu"
+          type="checkbox"
+          hidden
+        />
+        <label for="langswtich" class="mobile">
+          <div class="lang_bt_mobile">
+            EN <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+          </div>
+          <div class="langswtich_mask switch_mask"></div>
+        </label>
+        <ul class="lang-panel">
+          <li>
+            <a> <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a>
+          </li>
+          <li class="selected">
+            <a>
+              <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+              English</a
+            >
+          </li>
+        </ul>
+        <input id="menuswtich" type="checkbox" hidden />
+        <label for="menuswtich" class="mobile">
+          <div class="menu-btn">
+            <i class="fa iconfont icon-menu" aria-hidden="true"></i>
+          </div>
+          <div class="switch_mask"></div>
+        </label>
+        <div class="nav">
+          <ul>
+            <li class="active"><a href="./index.html">首页</a></li>
+            <li class="">
+              <a
+                >产品 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+              </a>
+              <div class="submenu product_submenu">
+                <ul>
+                  <li>
+                    <a href="./product_fbssjzx.html">
+                      <div class="icon">
+                        <img
+                          src="./assets/img/icons/products/分布式数据中心.svg"
+                        />
+                      </div>
+                      分布式数据中心
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="./product_fbscdn.html"
+                      style="pointer-events: none"
+                    >
+                      <div class="icon">
+                        <img src="./assets/img/icons/products/分布式CDN.svg" />
+                      </div>
+                      分布式CDN(即将上线)
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./product_jzcc.html">
+                      <div class="icon">
+                        <img src="./assets/img/icons/products/矩阵存储.svg" />
+                      </div>
+                      矩阵存储
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./product_ygpu.html">
+                      <div class="icon">
+                        <img src="./assets/img/icons/products/云GPU.svg" />
+                      </div>
+                      云GPU
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a
+                >解决方案
+                <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+              </a>
+              <div class="submenu solution_submenu">
+                <div class="submenu-unit">
+                  <a href="./solution_cj.html">
+                    <div class="title">场景 Scenario</div></a
+                  >
+                  <ul>
+                    <li>
+                      <a href="./solution_cj.html#cc">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_存储.svg"
+                          />
+                        </div>
+                        存储
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_cj.html#rzybf">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_容灾与备份.svg"
+                          />
+                        </div>
+                        容灾与备份
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_cj.html#kxjs">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_科学计算.svg"
+                          />
+                        </div>
+                        科学计算
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_cj.html#aqjs">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_安全计算.svg"
+                          />
+                        </div>
+                        安全计算
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_cj.html#wly">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_物理云.svg"
+                          />
+                        </div>
+                        物理云
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_cj.html#nrff">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_内容分发.svg"
+                          />
+                        </div>
+                        内容分发
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_cj.html#jqxx">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_机器学习.svg"
+                          />
+                        </div>
+                        机器学习
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="divider-v"></div>
+                <div class="submenu-unit">
+                  <a href="./solution_hy.html">
+                    <div class="title">行业 Industry</div></a
+                  >
+                  <ul>
+                    <li>
+                      <a href="./solution_hy.html#rgzn">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_人工智能-08.svg"
+                          />
+                        </div>
+                        人工智能
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_hy.html#ky">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_科研.svg"
+                          />
+                        </div>
+                        科研
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_hy.html#djk">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_大健康.svg"
+                          />
+                        </div>
+                        大健康
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_hy.html#zw">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_政务.svg"
+                          />
+                        </div>
+                        政务
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_hy.html#swjy">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_生物基因.svg"
+                          />
+                        </div>
+                        生物基因
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="divider-v"></div>
+                <div class="submenu-unit">
+                  <a href="./solution_web.html">
+                    <div class="title">Web 3.0</div></a
+                  >
+                  <ul>
+                    <li>
+                      <a href="./solution_web.html#byjs">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_边缘计算.svg"
+                          />
+                        </div>
+                        边缘计算
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_web.html#qkl">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_区块链.svg"
+                          />
+                        </div>
+                        区块链
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_web.html#rgzn">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_人工智能-09.svg"
+                          />
+                        </div>
+                        人工智能
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- <li>
+                  <a
+                    >ESG
+                    <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+                  </a>
+                <ul>
+                  <li><a>方案1</a></li>
+                  <li><a>方案2</a></li>
+                </ul>
+              </li>
+              <li><a>投资者关系</a></li> -->
+            <li><a href="./about.html">关于我们</a></li>
+          </ul>
+        </div>
+        <label for="langswtich" class="not_mobile">
+          <div class="lang_bt">
+            <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> English
+          </div>
+          <div class="langswtich_mask switch_mask"></div>
+        </label>
+      </div>
+    </header>
 
     <div class="stage1">
       <div class="sticky">
@@ -301,6 +588,7 @@ ${
       myVideo.src = isPhone
         ? "assets/media/stage1_mobile.mp4"
         : "assets/media/stage1.mp4"
+
       // myVideo_src.src = isPhone
       //   ? "assets/media/stage1_mobile.mp4"
       //   : "assets/media/stage1.mp4"
@@ -317,7 +605,7 @@ ${
 
       function getScrollYByVideo(t) {
         var totalLength = 3.5
-        if (window.isPhone) totalLength = 1.5
+        if (window.isPhone) totalLength = 1
 
         return {
           left: 0,
@@ -329,7 +617,7 @@ ${
 
       function getTimerByScroll(prog) {
         var totalLength = 3.5
-        if (window.isPhone) totalLength = 1.5
+        if (window.isPhone) totalLength = 1
 
         let p =
           20 *
@@ -954,9 +1242,9 @@ ${
 
         function pausePlayVideo() {
           // myVideo.paused = true
- try {
-          myVideo.pause()
- }catch (e) {}
+          try {
+            myVideo.pause()
+          } catch (e) {}
         }
         function resumePlayVideo() {
           // myVideo.paused = false
@@ -1008,7 +1296,7 @@ ${
           $(".stage1").height(
             getScrollYByVideo(20).top +
               (isPhone
-                ? 0
+                ? 1 * window.onePageHeight
                 : 1 * window.onePageHeight +
                   ($(".inner_scroll_warpper").height() - $(".title3").height()))
           )
@@ -1017,7 +1305,7 @@ ${
         $(".stage1").height(
           getScrollYByVideo(20).top +
             (isPhone
-              ? 0
+              ? 1 * window.onePageHeight
               : 1 * window.onePageHeight +
                 ($(".inner_scroll_warpper").height() - $(".title3").height()))
         )
@@ -1632,23 +1920,21 @@ ${
       })
     </script>
     <div class="stage3">
+      <video
+        id="earthVideo"
+        muted="muted"
+        autoplay="autoplay"
+        loop="loop"
+        webkit-playsinline="true"
+        x-webkit-airplay="true"
+        playsinline="true"
+        x5-video-player-type="h5"
+        x5-video-orientation="h5"
+        preload="auto"
+      ></video>
       <div class="padding_area"></div>
       <div class="page_content flex jc-between">
         <div class="left-part flex-1">
-          <video
-            id="earthVideo"
-            src="assets/media/3d-Earth.mp4"
-            muted="muted"
-            autoplay="autoplay"
-            loop="loop"
-            webkit-playsinline="true"
-            x-webkit-airplay="true"
-            playsinline="true"
-            x5-video-player-type="h5"
-            x5-video-orientation="h5"
-            preload="auto"
-          ></video>
-
           <!-- <video
             id="index-hero-video"
             src="https://site-videos.oss-cn-chengdu.aliyuncs.com/fta/index/hero.mp4"
@@ -1737,30 +2023,34 @@ x5-video-player-type="h5"
       </div>
     </div>
     <script>
-      // $(function () {
-      /////////////STAGE3/////////////
+      $(function () {
+        /////////////STAGE3/////////////
 
-      // $(window).on("touchStart", function () {
-      //   earthVideo.play()
-      // })
+        earthVideo.src = isPhone
+          ? "assets/media/3d-Earth-Mobile.mp4"
+          : "assets/media/3d-Earth.mp4"
 
-      //   var tween = createTimeline()
+        // $(window).on("touchStart", function () {
+        //   earthVideo.play()
+        // })
 
-      //   var scene = new ScrollMagic.Scene({
-      //     triggerHook: "0",
-      //     triggerElement: ".contact-section",
-      //     duration: "100%",
-      //     offset: -100,
-      //   })
-      //     .setTween(tween)
-      //     //.setPin(".audio-screen")
-      //     .addIndicators({ name: "phone screen" }) // add indicators (requires plugin)
-      //     .addTo(controller)
-      //     .on("enter", function () {
-      //       cardOrImprintAndPrivacySwitch.checked = false
-      //       toggleCardOrImprintAndPrivacy()
-      //     })
-      // })
+        //   var tween = createTimeline()
+
+        //   var scene = new ScrollMagic.Scene({
+        //     triggerHook: "0",
+        //     triggerElement: ".contact-section",
+        //     duration: "100%",
+        //     offset: -100,
+        //   })
+        //     .setTween(tween)
+        //     //.setPin(".audio-screen")
+        //     .addIndicators({ name: "phone screen" }) // add indicators (requires plugin)
+        //     .addTo(controller)
+        //     .on("enter", function () {
+        //       cardOrImprintAndPrivacySwitch.checked = false
+        //       toggleCardOrImprintAndPrivacy()
+        //     })
+      })
     </script>
     <div class="stage4"></div>
     <footer>
@@ -2021,289 +2311,6 @@ x5-video-player-type="h5"
           <div class="dot"></div>
         </div>
       </div>
-<header class="header1 header_light">
-        <a href="./index.html"> <div class="logo">&nbsp;</div></a>
-        <div class="right-part">
-          <input
-            id="langswtich"
-            class="langswtich foldable_menu"
-            type="checkbox"
-            hidden
-          />
-          <label for="langswtich" class="mobile">
-            <div class="lang_bt_mobile">
-              EN <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-            </div>
-            <div class="langswtich_mask switch_mask"></div>
-          </label>
-          <ul class="lang-panel">
-            <li>
-              <a>
-                <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a
-              >
-            </li>
-            <li class="selected">
-              <a>
-                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
-                English</a
-              >
-            </li>
-          </ul>
-          <input id="menuswtich" type="checkbox" hidden />
-          <label for="menuswtich" class="mobile">
-            <div class="menu-btn">
-              <i class="fa iconfont icon-menu" aria-hidden="true"></i>
-            </div>
-            <div class="switch_mask"></div>
-          </label>
-          <div class="nav">
-            <ul>
-              <li class="active"><a href="./index.html">首页</a></li>
-              <li class="">
-                <a
-                  >产品 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-                </a>
-                <div class="submenu product_submenu">
-                  <ul>
-                    <li>
-                      <a href="./product_fbssjzx.html">
-                        <div class="icon">
-                          <img
-                            src="./assets/img/icons/products/分布式数据中心.svg"
-                          />
-                        </div>
-                        分布式数据中心
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="./product_fbscdn.html"
-                        style="pointer-events: none"
-                      >
-                        <div class="icon">
-                          <img
-                            src="./assets/img/icons/products/分布式CDN.svg"
-                          />
-                        </div>
-                        分布式CDN(即将上线)
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./product_jzcc.html">
-                        <div class="icon">
-                          <img src="./assets/img/icons/products/矩阵存储.svg" />
-                        </div>
-                        矩阵存储
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./product_ygpu.html">
-                        <div class="icon">
-                          <img src="./assets/img/icons/products/云GPU.svg" />
-                        </div>
-                        云GPU
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <a
-                  >解决方案
-                  <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-                </a>
-                <div class="submenu solution_submenu">
-                  <div class="submenu-unit">
-                    <div class="title">场景 Scenario</div>
-                    <ul>
-                      <li>
-                        <a href="./solution_cj.html#cc">
-                          <div class="icon">
-                            <img
-                              src="./assets/img/icons/solutions/icon-15_存储.svg"
-                            />
-                          </div>
-                          存储
-                        </a>
-                      </li>
-                      <li>
-                        <a href="./solution_cj.html#rzybf">
-                          <div class="icon">
-                            <img
-                              src="./assets/img/icons/solutions/icon-15_容灾与备份.svg"
-                            />
-                          </div>
-                          容灾与备份
-                        </a>
-                      </li>
-                      <li>
-                        <a href="./solution_cj.html#kxjs">
-                          <div class="icon">
-                            <img
-                              src="./assets/img/icons/solutions/icon-15_科学计算.svg"
-                            />
-                          </div>
-                          科学计算
-                        </a>
-                      </li>
-                      <li>
-                        <a href="./solution_cj.html#aqjs">
-                          <div class="icon">
-                            <img
-                              src="./assets/img/icons/solutions/icon-15_安全计算.svg"
-                            />
-                          </div>
-                          安全计算
-                        </a>
-                      </li>
-                      <li>
-                        <a href="./solution_cj.html#wly">
-                          <div class="icon">
-                            <img
-                              src="./assets/img/icons/solutions/icon-15_物理云.svg"
-                            />
-                          </div>
-                          物理云
-                        </a>
-                      </li>
-                      <li>
-                        <a href="./solution_cj.html#nrff">
-                          <div class="icon">
-                            <img
-                              src="./assets/img/icons/solutions/icon-15_内容分发.svg"
-                            />
-                          </div>
-                          内容分发
-                        </a>
-                      </li>
-                      <li>
-                        <a href="./solution_cj.html#jqxx">
-                          <div class="icon">
-                            <img
-                              src="./assets/img/icons/solutions/icon-15_机器学习.svg"
-                            />
-                          </div>
-                          机器学习
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="divider-v"></div>
-                  <div class="submenu-unit">
-                    <div class="title">行业 Industry</div>
-                    <ul>
-                      <li>
-                        <a href="./solution_hy.html#rgzn">
-                          <div class="icon">
-                            <img
-                              src="./assets/img/icons/solutions/icon-15_人工智能-08.svg"
-                            />
-                          </div>
-                          人工智能
-                        </a>
-                      </li>
-                      <li>
-                        <a href="./solution_hy.html#ky">
-                          <div class="icon">
-                            <img
-                              src="./assets/img/icons/solutions/icon-15_科研.svg"
-                            />
-                          </div>
-                          科研
-                        </a>
-                      </li>
-                      <li>
-                        <a href="./solution_hy.html#djk">
-                          <div class="icon">
-                            <img
-                              src="./assets/img/icons/solutions/icon-15_大健康.svg"
-                            />
-                          </div>
-                          大健康
-                        </a>
-                      </li>
-                      <li>
-                        <a href="./solution_hy.html#zw">
-                          <div class="icon">
-                            <img
-                              src="./assets/img/icons/solutions/icon-15_政务.svg"
-                            />
-                          </div>
-                          政务
-                        </a>
-                      </li>
-                      <li>
-                        <a href="./solution_hy.html#swjy">
-                          <div class="icon">
-                            <img
-                              src="./assets/img/icons/solutions/icon-15_生物基因.svg"
-                            />
-                          </div>
-                          生物基因
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="divider-v"></div>
-                  <div class="submenu-unit">
-                    <div class="title">Web 3.0</div>
-                    <ul>
-                      <li>
-                        <a href="./solution_web.html#byjs">
-                          <div class="icon">
-                            <img
-                              src="./assets/img/icons/solutions/icon-15_边缘计算.svg"
-                            />
-                          </div>
-                          边缘计算
-                        </a>
-                      </li>
-                      <li>
-                        <a href="./solution_web.html#qkl">
-                          <div class="icon">
-                            <img
-                              src="./assets/img/icons/solutions/icon-15_区块链.svg"
-                            />
-                          </div>
-                          区块链
-                        </a>
-                      </li>
-                      <li>
-                        <a href="./solution_web.html#rgzn">
-                          <div class="icon">
-                            <img
-                              src="./assets/img/icons/solutions/icon-15_人工智能-09.svg"
-                            />
-                          </div>
-                          人工智能
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <!-- <li>
-                  <a
-                    >ESG
-                    <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-                  </a>
-                <ul>
-                  <li><a>方案1</a></li>
-                  <li><a>方案2</a></li>
-                </ul>
-              </li>
-              <li><a>投资者关系</a></li> -->
-              <li><a href="./about.html">关于我们</a></li>
-            </ul>
-          </div>
-          <label for="langswtich" class="not_mobile">
-            <div class="lang_bt">
-              <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> English
-            </div>
-            <div class="langswtich_mask switch_mask"></div>
-          </label>
-        </div>
-      </header>
     </div>
     <!-- <div class="controls">
       <div onclick="myVideo.pause()">pause</div>
@@ -2319,36 +2326,36 @@ x5-video-player-type="h5"
 
         ////////////////header
 
-        gsap.fromTo(
-          ".header1",
-          50,
-          {},
-          {
-            scrollTrigger: {
-              trigger: ".stage1",
-              //   pin: true, // pin the trigger element while active
-              //   pinSpacing: false,
-              start: "top top", // when the top of the trigger hits the top of the viewport
-              end: "+=" + 0.5 * window.onePageHeight, // end after scrolling 500px beyond the start
-              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              markers: false,
-              onEnter: function () {
-                $(".header1").addClass("header_light")
-                $(".header1").addClass("state2")
-                $(".header1").removeClass("state3")
-              },
-              onEnterBack: function () {
-                $(".header1").addClass("header_light")
-                $(".header1").addClass("state2")
-                $(".header1").removeClass("state3")
-              },
-              onLeave: function () {
-                $(".header1").addClass("state3")
-                $(".header1").removeClass("state2")
-              },
-            },
-          }
-        )
+        // gsap.fromTo(
+        //   ".header1",
+        //   50,
+        //   {},
+        //   {
+        //     scrollTrigger: {
+        //       trigger: ".stage1",
+        //       //   pin: true, // pin the trigger element while active
+        //       //   pinSpacing: false,
+        //       start: "top top", // when the top of the trigger hits the top of the viewport
+        //       end: "+=" + 0.5 * window.onePageHeight, // end after scrolling 500px beyond the start
+        //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        //       markers: false,
+        //       onEnter: function () {
+        //         $(".header1").addClass("header_light")
+        //         $(".header1").addClass("state2")
+        //         $(".header1").removeClass("state3")
+        //       },
+        //       onEnterBack: function () {
+        //         $(".header1").addClass("header_light")
+        //         $(".header1").addClass("state2")
+        //         $(".header1").removeClass("state3")
+        //       },
+        //       onLeave: function () {
+        //         $(".header1").addClass("state3")
+        //         $(".header1").removeClass("state2")
+        //       },
+        //     },
+        //   }
+        // )
 
         /////header退去
 
@@ -2510,19 +2517,23 @@ x5-video-player-type="h5"
         // $(nice.autohidedom).addClass("hide")
       })
 
-      // $(function () {
-      //   ScrollTrigger.create({
-      //     start: "top top",
-      //     end: "+=50",
-      //     onLeave: function () {
-      //       $(".header1").addClass("floated header_dark")
-      //     },
-      //     onEnterBack: function () {
-      //       $(".header1").removeClass("floated header_dark")
-      //     },
-      //     id: "header",
-      //   })
-      // })
+      $(function () {
+        ScrollTrigger.create({
+          trigger: ".stage2",
+          start: "top top",
+          end: "+=50",
+          onLeave: function () {
+            $(".header1").addClass("floated header_dark")
+            $(".header1").removeClass("header_light")
+          },
+          onEnterBack: function () {
+            $(".header1").removeClass("floated header_dark")
+            $(".header1").addClass("header_light")
+          },
+          id: "header",
+          markers: false,
+        })
+      })
     </script>
 
     <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
