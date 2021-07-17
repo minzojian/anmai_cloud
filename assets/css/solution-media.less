@@ -23,29 +23,28 @@
 }
 
 @media screen and (max-width: 750px) {
-
-  header+main,
-  header+.section {
+  header + main,
+  header + .section {
     padding: 75px 0;
   }
-  .section-content .wrapper{
+  .section-content .wrapper {
     padding-top: 78px;
     padding-bottom: 105px;
   }
-  .section-content .wrapper .top .flex_between .left_tit .text{
+  .section-content .wrapper .top .flex_between .left_tit .text {
     font-size: 12px;
     margin-top: 16.5px;
   }
-  .section-content .wrapper .bottom .card .d_wrp h3{
+  .section-content .wrapper .bottom .card .d_wrp h3 {
     font-size: 19px;
   }
-  .section-content .wrapper .bottom .card .d_wrp .desc{
+  .section-content .wrapper .bottom .card .d_wrp .desc {
     font-size: 13px;
   }
-  .section-content .wrapper .mid .ietms h2{
+  .section-content .wrapper .mid .ietms h2 {
     font-size: 19px;
   }
-  .section-content .wrapper .mid .ietms p{
+  .section-content .wrapper .mid .ietms p {
     font-size: 12px;
   }
   .banner {
@@ -66,15 +65,15 @@
         .downBtn {
           width: 153px;
           height: 43px;
-          margin-top: 35px
+          margin-top: 35px;
         }
       }
     }
   }
-  .nav-height .nav-wrap ul{
-    li{
+  .nav-height .nav-wrap ul {
+    li {
       height: 60px;
-    line-height: 60px;
+      line-height: 60px;
     }
   }
 
@@ -106,10 +105,9 @@
     }
   }
 
-
   .section-content .wrapper .top .flex_between {
     flex-direction: column;
-
+    position: relative;
     .left_tit {
       width: 100% !important;
 
@@ -125,14 +123,15 @@
     }
 
     .img {
-      position: relative;
+      position: absolute;
+      bottom: 0;
       width: 100%;
-      padding-top: 100px;
+      // padding-top: 100px;
       img {
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 50%;
+        width: 40%;
       }
     }
   }

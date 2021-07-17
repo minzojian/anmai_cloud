@@ -371,7 +371,7 @@
 
     <div class="stage1">
       <div class="sticky">
-        <video
+        <!-- <video
           class="bg_video"
           id="myVideo"
           ontimeupdate="handleVideoPlaying(event)"
@@ -381,9 +381,7 @@
           webkit-playsinline=""
           x5-video-player-type="h5"
         >
-          <!-- <source id="myVideo_src" type="video/mp4" /> -->
-        </video>
-        <!-- <video id="index-hero-video" src="https://site-videos.oss-cn-chengdu.aliyuncs.com/fta/index/hero.mp4" muted="muted" autoplay="autoplay" loop="loop" playsinline="" webkit-playsinline="" class="video autoplay-video"></video> -->
+        </video> -->
 
         <div class="left-progress state1">
           <div class="trunk"></div>
@@ -589,20 +587,17 @@ ${
           })
         })
       }
-      myVideo.src = isPhone
-        ? "assets/media/stage1_mobile.mp4"
-        : "assets/media/stage1.mp4"
-
-      // myVideo_src.src = isPhone
+window.myVideo={currentTime:0,duration:20,play:()=>{},pause:()=>{}}
+      // myVideo.src = isPhone
       //   ? "assets/media/stage1_mobile.mp4"
       //   : "assets/media/stage1.mp4"
+
       var lastScroll = window.pageYOffset
       var isMouseWheel = false
       var isEnterStage1 = true
       var mouseWheelTimer = 0
       var mouseWheelTimer2 = 0
       function handleVideoPlaying(e) {
-        // console.log(myVideo.currentTime, "video progress")
         if (!window.isPhone && !isMouseWheel && isEnterStage1)
           window.scrollTo({ ...getScrollYByVideo() }) //, behavior: "smooth" })
       }
@@ -1924,7 +1919,7 @@ ${
       })
     </script>
     <div class="stage3">
-      <video
+      <!-- <video
         id="earthVideo"
         muted="muted"
         autoplay="autoplay"
@@ -1935,7 +1930,7 @@ ${
         x5-video-player-type="h5"
         x5-video-orientation="h5"
         preload="auto"
-      ></video>
+      ></video> -->
       <div class="padding_area"></div>
       <div class="page_content flex jc-between">
         <div class="left-part flex-1">
@@ -2030,13 +2025,10 @@ x5-video-player-type="h5"
       $(function () {
         /////////////STAGE3/////////////
 
-        earthVideo.src = isPhone
-          ? "assets/media/3d-Earth-Mobile.mp4"
-          : "assets/media/3d-Earth.mp4"
+        // earthVideo.src = isPhone
+        //   ? "assets/media/3d-Earth-Mobile.mp4"
+        //   : "assets/media/3d-Earth.mp4"
 
-        // $(window).on("touchStart", function () {
-        //   earthVideo.play()
-        // })
 
         //   var tween = createTimeline()
 
@@ -2562,7 +2554,7 @@ x5-video-player-type="h5"
       })
     </script>
 
-    <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
     <script>
       $(function () {
         myVideo = document.getElementById("myVideo")
@@ -2587,6 +2579,6 @@ x5-video-player-type="h5"
           false
         )
       })
-    </script>
+    </script> -->
   </body>
 </html>
