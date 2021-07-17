@@ -23,9 +23,7 @@
   <script src="./assets/js/lib/ScrollTrigger.min.js"></script>
   <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
   <script src="./assets/js/lib/jquery.nicescroll.min.js"></script>
-    <script>
-      window.disabledHeaderAudoSwitch = true
-    </script>
+
 
   <script src="./assets/js/common.js"></script>
   
@@ -266,7 +264,15 @@
   <!-- main -->
   <main class="main-container">
     <section class="section banner">
-      <video src="assets/media/about_banner.mp4" class="banner_video" loop autoplay muted></video>
+      <video src="assets/media/about_banner.mp4" id="banner_video" class="banner_video"  muted="muted"
+        autoplay="autoplay"
+        loop="loop"
+        webkit-playsinline="true"
+        x-webkit-airplay="true"
+        playsinline="true"
+        x5-video-player-type="h5"
+        x5-video-orientation="h5"
+        preload="auto"></video>
       <div class="wrapper">
         <div class="slogan">
           <div class="left">
@@ -376,7 +382,7 @@
         </div>
       </div>
     </section>
-    <section  id="xwdt" class="section4">
+    <section  id="xwdt" class="section section4">
       <div class="wrapper">
         <div class="title1">What's News</div>
         <div class="title-part">
@@ -440,7 +446,7 @@
         </div>
       </div>
     </section>
-    <section  id="rczp" class="section5">
+    <section  id="rczp" class="section section5">
       <div class="sticky">
         <div class="top-part">
           <!-- <div class="title1">Anmai Clound Recruitment</div> -->
@@ -499,6 +505,7 @@
       </div>
       <div class="map-part" id="map_container"></div>
       <div class="wrapper bottom-part">
+
         <div class=" bottom-part-wrapper">
           <div class="item">
             <div class="sub-top-part"><i class="iconfont icon-weizhi"></i>ADD</div>
@@ -512,7 +519,7 @@
             <div class="sub-top-part"><i class="iconfont icon-dianhua"></i>TEL</div>
             <div class="sub-bottom-part">+86 898 3286 7007 </div>
           </div>
-          <div class="item">
+          <div class="item not_mobile">
             <div class="sub-top-part"><i class="iconfont icon-weixin"></i>微信公众号</div>
             <div class="sub-bottom-part">
               <a class="qrcode_small fade"><i class="iconfont icon-qrcode"></i></a>
@@ -520,6 +527,14 @@
             </div>
           </div>
         </div>
+
+
+<div class="qrcode-holder item mobile">
+ <img class="qrcode" src="./assets/img/qr_code.png"  />
+            <div class="sub-top-part"><i class="iconfont icon-weixin"></i>微信公众号</div>
+          </div>
+
+
       </div>
     </section>
  <footer>
@@ -828,8 +843,7 @@ scrollWheel:false
 
     var jobs = [
       ["K8S运维工程师", 1, "运维", "成都", "2021-07-05",
-        `
-1.负责业务系统的环境搭建和部署发布； 
+        `1.负责业务系统的环境搭建和部署发布； 
 2.监控和处理网站系统服务故障，保障各系统和业务的安全稳定运行； 
 3.负责协助业务团队和现场技术维护团队进行故障排除；
 4.参与自动化/标准化的应用发布和运维平台建设（运维平台，监控平台，日志分析系统）；
@@ -837,23 +851,20 @@ scrollWheel:false
 6.参与标准化实施制度的制定，能从宏观和微观两个维度提出合理意见；
 `
         ,
-        `
-1.本科及以上学历，熟悉Linux常用命令、计划任务、服务开机自启； 
+        `1.本科及以上学历，熟悉Linux常用命令、计划任务、服务开机自启； 
 2.熟悉lvm/nfs/rsync/scp；熟悉shell脚本；熟悉docker/k8s；
 3.熟悉web服务，包括但不限于nginx、tomcat部署、配置；
 4.团队意识比较强，优秀的沟通协调能力。
 
 `],
       ["Python工程师", 1, "研发", "成都", "2021-07-05",
-        `
-1.根据开发需求，完成基于Python的模块开发；
+        `1.根据开发需求，完成基于Python的模块开发；
 2.负责产品的接口优化和性能优化；
 3.与各部门团队成员协同配合，完成迭代开发任务，确保产品的顺利上线；
 4.遵循开发流程和开发规范，完善代码注释；
 `
         ,
-        `
-1.本科以上学历，计算机相关专业；
+        `1.本科以上学历，计算机相关专业；
 2.熟练使用python语言，2年以上python工作经验；
 3.熟练掌握Django或其他Python Web开发框架；
 4.熟悉Git代码管理工具，熟悉常见数据库 (如 MySQL/PostgreSQL/SQLServer)；
@@ -861,14 +872,12 @@ scrollWheel:false
 
 `],
       ["PHP工程师", 1, "研发", "成都", "2021-07-05",
-        `
-1.负责APP和PC的接口，后台开发； 
+        `1.负责APP和PC的接口，后台开发； 
 2.参与公司后端项目的架构设计，代码编写工作；
 3.参与系统需求分析与设计，并负责完成PHP核心代码，接口规范制定; 
 `
         ,
-        `
-1.本科以上学历，计算机相关专业；
+        `1.本科以上学历，计算机相关专业；
 2.熟练使用python语言，2年以上python工作经验；
 3.熟练掌握Django或其他Python Web开发框架；
 4.熟悉Git代码管理工具，熟悉常见数据库 (如 MySQL/PostgreSQL/SQLServer)；
@@ -876,22 +885,19 @@ scrollWheel:false
 
 `],
       ["WEB前端工程师", 2, "研发", "成都", "2021-07-05",
-        `
-1.负责APP和PC的网页的开发；
+        `1.负责APP和PC的网页的开发；
 2.参与公司前端项目的设计，代码编写工作； 
 3.主要参与混合式APP，相关业务的开发工作；
 `
         ,
-        `
-1.本科以上学历，计算机相关专业，2年及以上前端开发经验； 
+        `1.本科以上学历，计算机相关专业，2年及以上前端开发经验； 
 2.熟悉HTML/CSS/JS；至少熟悉一种前端框架，如：React/Vue等；  
 3.熟悉前端生态，熟悉HTTP，Websocket等协议，熟悉浏览器调试； 
 4.熟悉前端性能优化，了解ES6/Babel，熟悉Linux的优先；
 有参与开源项目，有APIcloud或Hbuilder开发经验者优先。
 `],
       ["行政助理", 1, "职能", "成都", "2021-07-05",
-        `
-1.负责协调、处理部门有关的日常工作，包括但不限于会议、访客接待、办公用品管理等； 
+        `1.负责协调、处理部门有关的日常工作，包括但不限于会议、访客接待、办公用品管理等； 
 2.负责所在办公区环境规划，安全管理；
 3.高质量响应办公区各部门行政需求，以及突发情况汇报及处理； 
 4.行政相关费用账单核对统计；
@@ -899,21 +905,18 @@ scrollWheel:false
 完成领导安排的其他临时性事务； 
 `
         ,
-        `
-1.大专及以上学历，优秀应届毕业生优先考虑； 
+        `1.大专及以上学历，优秀应届毕业生优先考虑； 
 2.熟练使用WORD、EXCEL、POWERPOINT等常用办公软件，熟悉办公行政工作相关流程； 
 形象良好、性格开朗、学习能力强、应变能力强、执行能力强。
 `],
       ["运营专员", 1, "运营", "成都", "2021-07-05",
-        `
-1.按照公司要求，输出相关项目合同；
+        `1.按照公司要求，输出相关项目合同；
 2.按照公司要求建立标准合同台账，定期梳理和完善部门合同文书等资料备案存档； 
 3.监督项目款项进度，及时和甲方，己方财务保持良好沟通； 
 4.按时协调与项目有关的各个部门，并与之保持良好的关系； 
 `
         ,
-        `
-1.本科以上学历，2年以上销售内勤工作经验；
+        `1.本科以上学历，2年以上销售内勤工作经验；
 2.具备基础法务知识，熟悉《合同法》，能够在短暂培训后输出非标准化合同； 
 3.仔细认真，有责任心；优秀的沟通能力，较强的学习能力。
 `],
@@ -1003,7 +1006,7 @@ $("#fzlc .swiper-wrapper").html(slideStr)
 
  var swiper = new Swiper(".swiper-container", {
       slidesPerView: "auto",
-      spaceBetween: 0,
+      spaceBetween: isPhone?10:0,
       freeMode: true,
       navigation: {
         nextEl: ".btn-next",
@@ -1052,19 +1055,19 @@ change_new_type(selectedTypeIndex);
               <div class="j-title">${job[0]}</div>
               <div class="j-sub-info">
                 <div>
-                  <i class="iconfont icon-renyuan"></i> ${job[1]}人
+                  <i class="iconfont icon-renyuan"></i>${job[1]}人
                 </div>
                 <span>|</span>
                 <div>
-                  <i class="iconfont icon-briefcase"></i> ${job[2]}
+                  <i class="iconfont icon-briefcase"></i>${job[2]}
                 </div>
                 <span>|</span>
                 <div>
-                  <i class="iconfont icon-dingwei"></i> ${job[3]}
+                  <i class="iconfont icon-dingwei"></i>${job[3]}
                 </div>
               </div>
               <div class="divider"></div>
-              <div class="j-sub-desc"> ${job[5]} </div>
+              <div class="j-sub-desc">${job[5]} </div>
             </div>`)
 
         $(".job-list-ul").append(`
@@ -1075,15 +1078,15 @@ change_new_type(selectedTypeIndex);
                 <div class="l-j-bottom-part">
                   <div class="l-j-left-part">
                     <div>
-                      <i class="iconfont icon-renyuan"></i> ${job[1]}人
+                      <i class="iconfont icon-renyuan"></i>${job[1]}人
                     </div>
                     <span>|</span>
                     <div>
-                      <i class="iconfont icon-briefcase"></i> ${job[2]}
+                      <i class="iconfont icon-briefcase"></i>${job[2]}
                     </div>
                     <span>|</span>
                     <div>
-                      <i class="iconfont icon-dingwei"></i> ${job[3]}
+                      <i class="iconfont icon-dingwei"></i>${job[3]}
                     </div>
                   </div>
                   <div class="l-j-right-part">${job[4]}</div>
@@ -1101,15 +1104,15 @@ change_new_type(selectedTypeIndex);
                 <div class="l-j-bottom-part">
                   <div class="l-j-left-part">
                     <div>
-                      <i class="iconfont icon-renyuan"></i> ${job[1]}人
+                      <i class="iconfont icon-renyuan"></i>${job[1]}人
                     </div>
                     <span>|</span>
                     <div>
-                      <i class="iconfont icon-briefcase"></i> ${job[2]}
+                      <i class="iconfont icon-briefcase"></i>${job[2]}
                     </div>
                     <span>|</span>
                     <div>
-                      <i class="iconfont icon-dingwei"></i> ${job[3]}
+                      <i class="iconfont icon-dingwei"></i>${job[3]}
                     </div>
                   </div>
                   <div class="l-j-right-part"><i class="iconfont icon-youjian"></i>简历投送：<a href="mailto:Jobs@anmaicloud.com">Jobs@anmaicloud.com</a></div>
@@ -1235,7 +1238,7 @@ $("#rczp").get(0).scrollIntoView();
       })
 
 
-
+ScrollTrigger.refresh()
     })
 
     function backJobList(e) {
@@ -1246,7 +1249,34 @@ $("#rczp").get(0).scrollIntoView();
 if(location.hash)
 $(location.hash).get(0).scrollIntoView()
 
+
+
+
   </script>
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <script>
+      $(function () {
+        var banner_video = document.getElementById("banner_video")
+        banner_video.play()
+
+        document.addEventListener(
+          "WeixinJSBridgeReady",
+          function () {
+            banner_video.play()
+          },
+          false
+        )
+        document.addEventListener(
+          "YixinJSBridgeReady",
+          function () {
+            banner_video.play()
+          },
+          false
+        )
+      })
+    </script>
+
   </body>
 
 </html>

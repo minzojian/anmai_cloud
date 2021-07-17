@@ -199,6 +199,20 @@ if (!window.disabledHeaderAudoSwitch) {
           markers: false,
         })
       },
+      // "(min-width: 751px)": function () {
+      //   ScrollTrigger.create({
+      //     start: "top top",
+      //     end: "+=50",
+      //     onLeave: function () {
+      //       $(".header1").addClass("state3")
+      //     },
+      //     onEnterBack: function () {
+      //       $(".header1").removeClass("state3 header_dark")
+      //     },
+      //     id: "header",
+      //     markers: false,
+      //   })
+      // },
     })
   })
 }
