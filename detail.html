@@ -7,6 +7,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
+    <base
+      href="http://static-1251577693.cos.ap-chengdu.myqcloud.com/projects/h5/anmai_cloud_mobile/"
+    />
     <title>产品详情</title>
     <link rel="stylesheet" href="./assets/css/iconfont.css" />
     <link rel="stylesheet" href="./assets/css/common.css" />
@@ -116,9 +119,9 @@
                 </a>
                 <div class="submenu solution_submenu">
                   <div class="submenu-unit">
-                     <a href="./solution_cj.html">
-                    <div class="title">场景 Scenario</div></a
-                  >
+                    <a href="./solution_cj.html">
+                      <div class="title">场景 Scenario</div></a
+                    >
                     <ul>
                       <li>
                         <a href="./solution_cj.html#cc">
@@ -194,9 +197,9 @@
                   </div>
                   <div class="divider-v"></div>
                   <div class="submenu-unit">
-                     <a href="./solution_hy.html">
-                    <div class="title">行业 Industry</div></a
-                  >
+                    <a href="./solution_hy.html">
+                      <div class="title">行业 Industry</div></a
+                    >
                     <ul>
                       <li>
                         <a href="./solution_hy.html#rgzn">
@@ -252,9 +255,9 @@
                   </div>
                   <div class="divider-v"></div>
                   <div class="submenu-unit">
-                   <a href="./solution_web.html">
-                    <div class="title">Web 3.0</div></a
-                  >
+                    <a href="./solution_web.html">
+                      <div class="title">Web 3.0</div></a
+                    >
                     <ul>
                       <li>
                         <a href="./solution_web.html#byjs">
@@ -702,7 +705,6 @@
         })
       })
 
-
       let urlId =
         getQueryString("id") != null ? getQueryString("id") : "S00096e73" //文章id暂时 S00096e73
       var currentAtcId = "" //当前帖子类型id
@@ -786,7 +788,7 @@
             currentTypeId = data.type_id
             getNeighborId()
             getArticleType()
-window.scrollTo({top:0})
+            window.scrollTo({ top: 0 })
           },
         })
       }

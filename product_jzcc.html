@@ -7,7 +7,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-
+    <base
+      href="http://static-1251577693.cos.ap-chengdu.myqcloud.com/projects/h5/anmai_cloud_mobile/"
+    />
     <title>矩阵在线存储_去中心化数据储存_安迈云</title>
     <meta
       name="description"
@@ -35,16 +37,16 @@
     <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
     <script src="./assets/js/common.js"></script>
   </head>
-<style>
-body{
-background:rgb(25,36,45);
-}
-    .page-main .main-container .banner {
-        background: url('./assets/img/product/banner.png') no-repeat center;
-        background-size: cover;
-        background-position-y: top;
+  <style>
+    body {
+      background: rgb(25, 36, 45);
     }
-</style>
+    .page-main .main-container .banner {
+      background: url("./assets/img/product/banner.png") no-repeat center;
+      background-size: cover;
+      background-position-y: top;
+    }
+  </style>
   <body>
     <div class="page-main">
       <!-- header -->
@@ -560,18 +562,18 @@ background:rgb(25,36,45);
         </div>
 
         <section class="section section4">
-    <video
-        id="earthVideo"
-        muted="muted"
-        autoplay="autoplay"
-        loop="loop"
-        webkit-playsinline="true"
-        x-webkit-airplay="true"
-        playsinline="true"
-        x5-video-player-type="h5"
-        x5-video-orientation="h5"
-        preload="auto"
-      ></video>
+          <video
+            id="earthVideo"
+            muted="muted"
+            autoplay="autoplay"
+            loop="loop"
+            webkit-playsinline="true"
+            x-webkit-airplay="true"
+            playsinline="true"
+            x5-video-player-type="h5"
+            x5-video-orientation="h5"
+            preload="auto"
+          ></video>
           <div class="wrapper">
             <div class="gloab_img">
               <!-- <video
@@ -630,12 +632,11 @@ background:rgb(25,36,45);
             </div>
           </div>
         </section>
-<script>
-        earthVideo.src = isPhone
-          ? "assets/media/3d-Earth-Mobile.mp4"
-          : "assets/media/3d-Earth.mp4"
-</script>
-
+        <script>
+          earthVideo.src = isPhone
+            ? "assets/media/3d-Earth-Mobile.mp4"
+            : "assets/media/3d-Earth.mp4"
+        </script>
       </main>
       <!-- footer -->
       <footer>
