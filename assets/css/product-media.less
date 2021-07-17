@@ -170,12 +170,15 @@
                 .wrapper {
                     .tabsBar {
                         display: block;
-                        .contents .con .container{
+
+                        .contents .con .container {
                             padding: 265px 0 0 20px;
-                            .des{
+
+                            .des {
                                 width: 90%;
                             }
                         }
+
                         .nav {
                             position: relative;
                             right: 0;
@@ -184,9 +187,11 @@
                             display: flex;
                             justify-content: center;
                             align-items: center;
+
                             li:nth-of-type(1) {
                                 top: 0;
                             }
+
                             li:nth-of-type(3) {
                                 top: 0;
                             }
@@ -202,191 +207,95 @@
 
 
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
-    .page-main {
-        .main-container {
-            .banner {
-                .wrapper {
-                    max-width: 1000px;
-
-                    .slogan {
-                        .left {
-                            width: 100% !important;
-                        }
-                    }
-                }
-            }
-
-            .section {
-                .wrapper {
-                    width: min(88%, 1440px);
-                    max-width: none;
-                    position: relative;
-
-                    .tit_box {
-                        .title {
-                            font-size: 38px;
-                        }
-                    }
-                }
-
-            }
-
-            .section2 {
-                .wrapper {
-                    .tit_box {
-                        .arrows {
-                            position: absolute;
-                            display: flex;
-                            bottom: -100px;
-                        }
-                    }
-                }
-            }
-
-            .section3 {
-                padding: 60px 0;
-                height: 100% !important;
-
-                .wrapper {
-                    display: block;
-
-                    .left {
-                        margin: 0;
-
-                        h1 {
-                            line-height: 1;
-                            margin: 30px 0 20px;
-                        }
-
-                        h4 {
-                            margin-top: 40px;
-                            line-height: 1;
-                        }
-                    }
-
-                    .right {
-                        display: block;
-                        margin-top: 50px;
-
-                        .items {
-                            float: right;
-                        }
-
-                        .c_rirht {
-                            .top_item {
-                                margin-top: 24px;
-                                width: 420px;
-                            }
-                        }
-                    }
-
-                }
-            }
-
-            .section4 {
-                height: auto;
-                padding: 90px 0;
-
-                .wrapper {
-                    display: block;
-
-                    .gloab_img {
-                        width: 100%;
-                        margin: 0;
-                    }
-                }
-            }
-
-            .section5 {
-                height: 100% !important;
-                padding: 60px 0 !important;
-
-                .wrapper {
-                    display: block;
-                    height: 100% !important;
-
-                    .left {
-                        margin: 0;
-                    }
-
-                    .right {
-                        margin-top: 50px;
-                        display: block;
-
-                        .items {
-                            float: right;
-                        }
-                    }
-                }
-            }
-
-            .section6 {
-                .wrapper {
-                    .card_box {
-                        display: block;
-
-                        .card {
-                            width: 100%;
-                            margin: 0 0 20px 0;
-                        }
-                    }
-                }
-            }
-            .section7 {
-                .wrapper {
-                    .tabsBar {
-                        display: block;
-                        .contents .con .container{
-                            padding: 265px 0 0 20px;
-                            .des{
-                                width: 90%;
-                            }
-                        }
-                        .nav {
-                            position: relative;
-                            right: 0;
-                            top: -60px;
-                            margin-top: 0;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            li:nth-of-type(1) {
-                                top: 0;
-                            }
-                            li:nth-of-type(3) {
-                                top: 0;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+@media screen and (max-width: 750px) {
+    .page-main .main-container .section3 .wrapper .right .c_left .bottom_item span, .page-main .main-container .section3 .wrapper .right .c_left .top_item span{
+        font-size: 12px;
+        right: 12px;
     }
-}
-
-
-
-
-
-
-
-
-//-------------------------- phone ----------------------------
-/**iphone5*/
-@media (max-width: 320px) {
+    .page-main .main-container .section3 .wrapper .right .c_rirht .top_item .s_wrapper h4{
+        font-size: 30px;
+        margin:10px 33px
+    }
+    .page-main .main-container .section3 .wrapper .right .c_rirht .top_item .s_wrapper .flex_block p{
+        margin-left: 0 !important;
+       
+    }
+    .page-main .main-container .section3 .wrapper .right .c_rirht .top_item .s_wrapper .flex_block .line{
+        margin: 0 11px;
+    }
+    .page-main .main-container .section3 .wrapper .right .c_left .mid_item{
+        height: 64px !important;
+    }
+    .page-main .main-container .section3 .wrapper .right .c_left .mid_item h4{
+        font-size: 16px;
+        margin-left: 7px;
+        line-height: 62px;
+    }
+    .page-main .main-container .section3 .wrapper .right .c_left .mid_item .line{
+        margin: 0 11.5px;
+        height: 34px;
+    }
+    .page-main .main-container .section3 .wrapper .right .c_left .mid_item .text p{
+        width: 100%;
+        margin: 0 !important;
+    }
+    .page-main .main-container .section3 .wrapper .right .c_left .mid_item .text h3{
+        font-size: 26px !important;
+        margin: 0 !important;
+    }
+    .page-main .main-container .section3 .wrapper .right .c_rirht .top_item{
+        height: 137px !important;
+        width: 249px !important;
+    }
+    .page-main .main-container .section3 .wrapper .right .c_rirht .top_item .s_wrapper .flex_block h3{
+        margin: 0 !important;
+    }
+    .page-main .main-container .section3 .wrapper .right .c_rirht .bottom_item{
+        height: 137px !important;
+        width: 249px !important;
+    }
+    .page-main .main-container .section3 .wrapper .right .c_rirht .bottom_item .text{
+        width: 100%;
+    margin-left: 0;
+    }
+    .page-main .main-container .section3 .wrapper .right .c_rirht .bottom_item .text h3{
+        margin-top: 0 !important;
+    }
+    .page-main .main-container .section3 .wrapper .right .c_rirht .bottom_item img{
+        width: 45px;
+        height: 45px;
+    }
+    .page-main .main-container .section5 .wrapper .right .c_left .bottom_item, .page-main .main-container .section5 .wrapper .right .c_left .top_item{
+        height: 385px;
+    }
+    .page-main .main-container .section5 .wrapper .right .c_rirht{
+        margin-left: 0 !important;
+    }
     .page-main {
         .main-container {
             .banner {
-                .wrapper {
+                height: 375px;
+                padding-top: 200px !important;
 
-                    // max-width: 1000px;
+                .wrapper {
                     .slogan {
                         .left {
                             width: 100% !important;
 
                             .title1 {
-                                font-size: 26px;
+                                font-size: 27px;
+                            }
+
+                            p {
+                                font-size: 12px;
+                                margin-top: 15px;
+                            }
+
+                            .action_btn {
+                                margin-top: 40px;
+                                width: 153px;
+                                height: 40px;
+
                             }
                         }
                     }
@@ -401,7 +310,7 @@
 
                     .tit_box {
                         .title {
-                            font-size: 38px;
+                            font-size: 26px;
                         }
                     }
                 }
@@ -410,6 +319,11 @@
 
             .section2 {
                 .wrapper {
+                    .desc {
+                        font-size: 14px;
+                        margin-bottom: 0;
+                    }
+
                     .tit_box {
                         .arrows {
                             position: absolute;
@@ -419,222 +333,10 @@
                     }
                 }
             }
-
+         
             .section3 {
                 padding: 60px 0;
-
-                .wrapper {
-                    display: block;
-
-                    .left {
-                        margin: 0;
-
-                        h1 {
-                            line-height: 1;
-                            margin: 30px 0 20px;
-                        }
-
-                        h4 {
-                            margin-top: 40px;
-                            line-height: 1;
-                        }
-                    }
-
-                    .right {
-                        display: block;
-                        margin-top: 50px;
-
-                        .c_rirht {
-                            margin-left: 0;
-                        }
-
-                        .items {
-                            float: right;
-                            width: 100% !important;
-                            border-radius: 14px;
-                        }
-
-                        .c_rirht {
-                            .top_item {
-                                margin-top: 24px;
-                                width: 420px;
-                            }
-                        }
-                    }
-
-                }
-            }
-
-            .section4 {
-                height: auto;
-                padding: 90px 0;
-
-                .wrapper {
-                    display: block;
-
-                    .gloab_img {
-                        width: 100%;
-                        margin: 0;
-                    }
-                }
-            }
-
-            .section5 {
                 height: 100% !important;
-                padding: 60px 0 !important;
-                .wrapper {
-                    display: block;
-                    height: 100% !important;
-
-                    .left {
-                        margin: 0;
-
-                        h1 {
-                            font-size: 55px;
-                        }
-
-                        h4 {
-                            font-size: 36px;
-                        }
-                    }
-
-                    .right {
-                        margin-top: 50px;
-                        display: block;
-
-                        .c_rirht {
-                            margin-left: 0;
-                        }
-
-                        .items {
-                            float: right;
-                            width: 100% !important;
-                            border-radius: 14px;
-                            margin-top: 24px;
-                        }
-                    }
-                }
-            }
-
-            .section6 {
-                .wrapper {
-                    .card_box {
-                        display: block;
-
-                        .card {
-                            width: 100%;
-                            margin: 0 0 20px 0;
-                            height: 300px;
-
-                            .img {
-                                margin: 30px 0 20px 30px;
-                            }
-
-                            h4 {
-                                margin: 0 0 22px 30px;
-                            }
-
-                            p {
-                                margin: 0 0 0 30px;
-                                width: 80%;
-                            }
-                        }
-                    }
-                }
-            }
-            .section7 {
-                .wrapper {
-                    .tabsBar {
-                        display: block;
-                        .contents .con .container{
-                            padding: 160px 0 0 20px;
-                            .des{
-                                width: 90%;
-                            }
-                        }
-                        .nav {
-                            position: relative;
-                            right: 0;
-                            top: -60px;
-                            margin-top: 0;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            li:nth-of-type(1) {
-                                top: 0;
-                            }
-                            li:nth-of-type(3) {
-                                top: 0;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-/**iphone6*/
-@media (min-width: 375px) and (max-width: 479px) {
-    .page-main {
-        .main-container {
-            .banner {
-                height: 100vh;
-
-                .wrapper {
-                    max-width: 1000px;
-
-                    .slogan {
-                        .left {
-                            width: 100% !important;
-
-                            .title1 {
-                                font-size: 32px;
-                            }
-
-                            p {
-                                margin-top: 20px;
-                                font-size: 14px;
-                                line-height: 1.5;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .section {
-                .wrapper {
-                    width: min(88%, 1440px);
-                    max-width: none;
-                    position: relative;
-
-                    .tit_box {
-                        .title {
-                            font-size: 38px;
-                        }
-                    }
-                }
-
-            }
-
-            .section2 {
-                padding: 40px 0 140px;
-
-                .wrapper {
-                    .tit_box {
-                        .arrows {
-                            position: absolute;
-                            display: flex;
-                            bottom: -100px;
-                        }
-                    }
-                }
-            }
-
-            .section3 {
-                padding: 60px 0;
-                height: auto !important;
 
                 .wrapper {
                     display: block;
@@ -645,16 +347,15 @@
                         h1 {
                             line-height: 1;
                             margin: 0;
-                            font-size: 90px;
+                            font-size: 68px !important;
                         }
 
                         h4 {
-                            font-size: 30px;
-                            margin-top: 20px;
+                            margin-top: 0;
                             line-height: 1;
+                            font-size: 24px;
                         }
-
-                        p {
+                        p{
                             width: 100%;
                         }
                     }
@@ -665,13 +366,20 @@
 
                         .items {
                             float: right;
-                            width: 100% !important;
-                            border-radius: 14px;
+                            width: 210px !important;
+                            height: 270px !important;
+                            background-size: cover !important;
+                            h3 {
+                                font-size: 17px !important;
+                                margin: 36px 0 5px 32px !important;
+                            }
+                            p{
+                                font-size: 13px!important;
+                                margin-left:36px!important;
+                            }
                         }
 
                         .c_rirht {
-                            margin-left: 0;
-
                             .top_item {
                                 margin-top: 24px;
                                 width: 420px;
@@ -688,24 +396,26 @@
 
                 .wrapper {
                     display: block;
+                    .city{
+                        .title1{
+                            font-size: 22px;
+                        }
+                        .title2{
+                            font-size: 29px;
+                        }
+                        .divider{
+                            margin: 28px 0;
+                        }
+                        .locations{
+                            ul:not(:last-child){
+                                margin-right: 0;
+                            }
+                        }
+                    }
 
                     .gloab_img {
                         width: 100%;
                         margin: 0;
-                    }
-
-                    .city {
-                        .title1 {
-                            font-size: 30px;
-                        }
-
-                        .title2 {
-                            font-size: 40px;
-                        }
-
-                        .locations ul:not(:last-child) {
-                            margin-right: auto;
-                        }
                     }
                 }
             }
@@ -717,24 +427,32 @@
                 .wrapper {
                     display: block;
                     height: 100% !important;
-
+                    
                     .left {
                         margin: 0;
+                        h1 {
+                            line-height: 1;
+                            margin: 0;
+                            font-size: 68px !important;
+                        }
+
+                        h4 {
+                            margin-top: 0;
+                            line-height: 1;
+                            font-size: 24px;
+                        }
+                        p{
+                            width: 100%;
+                        }
                     }
 
                     .right {
                         margin-top: 50px;
                         display: block;
 
-                        .c_rirht {
-                            margin-left: 0;
-                        }
-
                         .items {
                             float: right;
                             margin-top: 24px;
-                            width: 100% !important;
-                            border-radius: 14px;
                         }
                     }
                 }
@@ -752,16 +470,20 @@
                     }
                 }
             }
+
             .section7 {
                 .wrapper {
                     .tabsBar {
                         display: block;
-                        .contents .con .container{
-                            padding: 200px 0 0 20px;
-                            .des{
+
+                        .contents .con .container {
+                            padding: 175px 0 0 20px;
+
+                            .des {
                                 width: 90%;
                             }
                         }
+
                         .nav {
                             position: relative;
                             right: 0;
@@ -770,9 +492,11 @@
                             display: flex;
                             justify-content: center;
                             align-items: center;
+
                             li:nth-of-type(1) {
                                 top: 0;
                             }
+
                             li:nth-of-type(3) {
                                 top: 0;
                             }
