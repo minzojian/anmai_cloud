@@ -47,7 +47,7 @@
 
 //             .section {
 //                 .wrapper {
-//                     width: min(88%, 1440px);
+//                     width: var(--contentwidth);
 //                     max-width: none;
 //                     position: relative;
 
@@ -382,7 +382,7 @@
 
       .section {
         .wrapper {
-          width: min(88%, 1440px);
+          width: var(--contentwidth);
           max-width: none;
           position: relative;
 
@@ -469,6 +469,12 @@
       .section4 {
         height: auto;
         padding: 90px 0;
+
+        &#locations {
+          padding-bottom: 500px;
+          overflow: hidden;
+          align-items: flex-start;
+        }
 
         .wrapper {
           display: block;

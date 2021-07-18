@@ -22,15 +22,15 @@
     flex-direction: column;
 
     // section {
-    //   width: min(88%, 1440px);
+    //   width: var(--contentwidth);
     //   max-width: 1440px;
-    //   left: calc(calc(100% - min(88%, 1440px)) / 2);
+    //   left: var(--contentpadding);
     // }
 
     section .wrapper {
-      width: min(88%, 1440px);
+      width: var(--contentwidth);
       max-width: 1440px;
-      margin-left: calc(calc(100% - min(88%, 1440px)) / 2);
+      margin-left: var(--contentpadding);
     }
 
     .banner {
@@ -316,7 +316,7 @@
 
                 .title1 {
                   font-size: 120px;
-                  font-family: Myriad Pro;
+                  font-family: Gilroy;
                   font-weight: bold;
                   color: #dae0e8;
                   line-height: 256px;
@@ -969,8 +969,8 @@
 
   .all-job-popup-container {
     .all-job-popup {
-      width: 100% !important;
-      height: 100% !important;
+      width: 80% !important;
+      height: 80% !important;
       ul {
         padding-right: 0 !important;
         li {
@@ -1063,7 +1063,7 @@
   .page-main {
     .main-container {
       .banner {
-        height: 916px;
+        height: 458px;
         .slogan {
           .title1 {
             margin-bottom: 20px !important;
@@ -1263,10 +1263,17 @@
       }
 
       .section5 {
+        .top-part {
+          height: 180px !important;
+          background-size: contain;
+        }
         .top-part .title3 {
           font-size: 10px !important;
         }
         .sticky {
+          .job-list {
+            margin-top: 100px;
+          }
           .job-list .job-item {
             padding: 30px;
             .j-title {

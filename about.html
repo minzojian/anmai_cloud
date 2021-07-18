@@ -938,7 +938,7 @@ load_news();
 
 function load_news(page){
 if(page && !isNaN(page))currentPage=Number(page);
-$.get("http://ixiezhi.vicp.cc/amyos/news/getArticle",{l:currentPage,t:allTypes[currentTypeIndex]}).then(function(data){
+$.get("http://amyos_test.t1.g4.wiminer.com/amyos/news/getArticle",{l:currentPage,t:allTypes[currentTypeIndex]}).then(function(data){
 
 var newsStr=``
 data.data.forEach(function(news){
@@ -983,7 +983,7 @@ $("#xwdt .page-part").html(pageStr);
 ///////////发展历程
 
 
-$.get("http://ixiezhi.vicp.cc/amyos/contact/article_year_top").then(function(data){
+$.get("http://amyos_test.t1.g4.wiminer.com/amyos/contact/article_year_top").then(function(data){
 
 let slideStr=``;
 
@@ -1019,7 +1019,7 @@ $("#fzlc .swiper-wrapper").html(slideStr)
 //////////新闻列表
 
 
-$.get("http://ixiezhi.vicp.cc/amyos/contact/article_type").then(function(data){
+$.get("http://amyos_test.t1.g4.wiminer.com/amyos/contact/article_type").then(function(data){
 
 var typesStr=` <a class="newstype `+(currentTypeIndex==0?'active':'')+`"  onclick="change_new_type(0)">全部</a>`;
 var typeIds=[0]

@@ -83,9 +83,32 @@ $(function () {
   $(window).on("resize", function () {
     window.onePageHeight = Math.max(window.innerHeight, 640)
     document.body.style.setProperty("--fullheight", window.onePageHeight + "px")
+
+    window.contentWidth = Math.min(window.innerWidth * 0.88, 1440)
+    document.body.style.setProperty(
+      "--contentwidth",
+      window.contentWidth + "px"
+    )
+
+    window.contentPadding =
+      (window.innerWidth - Math.min(window.innerWidth * 0.88, 1440)) / 2
+    document.body.style.setProperty(
+      "--contentpadding",
+      window.contentPadding + "px"
+    )
   })
   window.onePageHeight = Math.max(window.innerHeight, 640)
   document.body.style.setProperty("--fullheight", window.onePageHeight + "px")
+
+  window.contentWidth = Math.min(window.innerWidth * 0.88, 1440)
+  document.body.style.setProperty("--contentwidth", window.contentWidth + "px")
+
+  window.contentPadding =
+    (window.innerWidth - Math.min(window.innerWidth * 0.88, 1440)) / 2
+  document.body.style.setProperty(
+    "--contentpadding",
+    window.contentPadding + "px"
+  )
 })
 
 function checkOs() {
@@ -153,7 +176,7 @@ $(document).ready(function () {
       return false
     } else
       $.ajax({
-        url: "http://ixiezhi.vicp.cc/amyos/contact/add_contact",
+        url: "http://amyos_test.t1.g4.wiminer.com/amyos/contact/add_contact",
         type: "POST",
         data: {
           nickname: $("#nickname").val(),

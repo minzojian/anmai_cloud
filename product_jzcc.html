@@ -476,9 +476,19 @@
           </div>
         </section>
         <div class="section section3">
-          <video muted autoplay="autoplay" loop="loop" class="video_bg">
-            <source src="./assets/media/jzbg.webm" />
-          </video>
+          <video
+            class="video_bg"
+            muted="muted"
+            autoplay="autoplay"
+            loop="loop"
+            webkit-playsinline="true"
+            x-webkit-airplay="true"
+            playsinline="true"
+            x5-video-player-type="h5"
+            x5-video-orientation="h5"
+            preload="auto"
+            src="./assets/media/jzbg.mp4"
+          ></video>
           <div class="wrapper">
             <div
               class="left wow fadeInLeft"
@@ -561,7 +571,7 @@
           </div>
         </div>
 
-        <section class="section section4">
+        <section id="locations" class="section section4">
           <video
             id="earthVideo"
             muted="muted"
@@ -933,6 +943,25 @@
           },
           id: "header",
         })
+
+        document.addEventListener(
+          "WeixinJSBridgeReady",
+          function () {
+            $(".video_bg").get(0).play()
+            $("#earthVideo").get(0).play()
+          },
+          false
+        )
+        document.addEventListener(
+          "YixinJSBridgeReady",
+          function () {
+            $(".video_bg").get(0).play()
+            $("#earthVideo").get(0).play()
+          },
+          false
+        )
+        $("#earthVideo").get(0).play()
+        $(".video_bg").get(0).play()
       })
     </script>
   </body>

@@ -27,9 +27,9 @@
     }
 
     .section .wrapper {
-      width: min(88%, 1440px);
+      width: var(--contentwidth);
       max-width: 1440px;
-      padding-left: calc(calc(100% - min(88%, 1440px)) / 2);
+      padding-left: var(--contentpadding);
       // overflow: hidden;
     }
 
@@ -155,7 +155,7 @@
           // margin-left: 251px;
           .swiper-wrapper {
             .swiper-slide {
-              width: 446px !important;
+              width: 446px;
               height: 499px;
               cursor: pointer;
 
@@ -168,6 +168,10 @@
                 border-radius: 6px;
                 overflow: hidden;
 
+                padding: 30px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
                 h2 {
                   font-size: 90px;
                   font-family: Gilroy;
@@ -176,14 +180,15 @@
                   line-height: 90px;
                   opacity: 0.8;
                   height: 90px;
-                  margin: 38px 0 0 35px;
+                  // margin: 38px 0 0 35px;
                   -webkit-text-stroke: 1px #ffffff;
                   text-stroke: 1px #ffffff;
                 }
 
                 .contents {
-                  margin: 155px 0 0 35px;
-
+                  // margin: 155px 0 0 35px;
+                  margin-top: auto;
+                  height: 50%;
                   img {
                     width: 45px;
                     height: 45px;
@@ -258,8 +263,8 @@
             font-weight: bold;
             color: rgba(239, 239, 239, 0);
             line-height: 90px;
-            -webkit-text-stroke: 2px #96afd3;
-            text-stroke: 2px #96afd3;
+            -webkit-text-stroke: 2px #7c90ae;
+            text-stroke: 2px #7c90ae;
           }
 
           h4 {
@@ -684,8 +689,8 @@
             font-weight: bold;
             color: rgba(239, 239, 239, 0);
             line-height: 90px;
-            -webkit-text-stroke: 2px #96afd3;
-            text-stroke: 2px #96afd3;
+            -webkit-text-stroke: 2px #7c90ae;
+            text-stroke: 2px #7c90ae;
           }
 
           h4 {

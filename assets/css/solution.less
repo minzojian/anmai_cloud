@@ -15,9 +15,9 @@ body {
 }
 
 .section .wrapper {
-  width: min(88%, 1440px);
+  width: var(--contentwidth);
   max-width: 1440px;
-  margin-left: calc(calc(100% - min(88%, 1440px)) / 2);
+  margin-left: var(--contentpadding);
   // overflow: hidden;
 }
 
@@ -127,8 +127,8 @@ body {
 
     width: 100%;
     overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
+    // margin-left: auto;
+    // margin-right: auto;
 
     ul {
       min-width: 80%;
@@ -154,6 +154,7 @@ body {
         white-space: nowrap;
         a {
           //   width: 100%;
+          transition: none !important;
           display: block;
           padding: 0 20px;
           color: #818f9a;

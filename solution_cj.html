@@ -27,6 +27,11 @@
     <script src="./assets/js/lib/gsap.min.js"></script>
     <script src="./assets/js/lib/ScrollToPlugin.min.js"></script>
     <script src="./assets/js/lib/ScrollTrigger.min.js"></script>
+<!-- <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.9.0/vconsole.min.js"></script>
+<script>
+  // VConsole will be exported to `window.VConsole` by default.
+  var vConsole = new window.VConsole();
+</script> -->
 <script>
 window.disabledHeaderAudoSwitch=true;
 </script>
@@ -1041,9 +1046,25 @@ $(".nav-wrap a").removeClass('active');
 $(".section-content").each(function(index,sc){
 if($(sc).offset().top<window.pageYOffset+60 && $(sc).offset().top+$(sc).innerHeight()>window.pageYOffset+60){
 $($(".nav-wrap a").get(index)).addClass('active');
+
+scrollNavIntoView(index)
+// gasp.to("#nav-wrap",0.5,{},{scrollX:$($(".nav-wrap a").get(index)).offset().left})
+
+  // $($(".nav-wrap a").get(index)).get(0).scrollIntoView()
+// $("#nav-wrap").get(0).scrollLeft=$($(".nav-wrap a").get(index)).offset().left+$("#nav-wrap").get(0).scrollLeft
 }
 })
 })
+
+var st;
+function scrollNavIntoView(index)
+{
+st && clearTimeout(st);
+st=setTimeout(function(){
+$($(".nav-wrap a").get(index)).get(0) && $($(".nav-wrap a").get(index)).get(0).scrollIntoView({behavior:'smooth'})
+},100)
+}
+
 
 $(function(){
  $("#nav-wrap").niceScroll({

@@ -43,7 +43,8 @@
   <style>
     .banner {
       background: url("./assets/img/solution/解决方案-web/图层 29.png")
-        no-repeat center cover;
+        no-repeat center;
+      background-size: cover;
     }
 
     #byjs .wrapper .bottom {
@@ -1118,9 +1119,25 @@
             $(sc).offset().top + $(sc).innerHeight() > window.pageYOffset + 60
           ) {
             $($(".nav-wrap a").get(index)).addClass("active")
+            scrollNavIntoView(index)
+            // gasp.to("#nav-wrap",0.5,{},{scrollX:$($(".nav-wrap a").get(index)).offset().left})
+
+            // $($(".nav-wrap a").get(index)).get(0).scrollIntoView()
+            // $("#nav-wrap").get(0).scrollLeft=$($(".nav-wrap a").get(index)).offset().left+$("#nav-wrap").get(0).scrollLeft
           }
         })
       })
+
+      var st
+      function scrollNavIntoView(index) {
+        st && clearTimeout(st)
+        st = setTimeout(function () {
+          $($(".nav-wrap a").get(index)).get(0) &&
+            $($(".nav-wrap a").get(index))
+              .get(0)
+              .scrollIntoView({ behavior: "smooth" })
+        }, 100)
+      }
 
       $(function () {
         $("#nav-wrap").niceScroll({
