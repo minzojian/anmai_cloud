@@ -33,12 +33,18 @@ body {
   margin-bottom: 50px;
 
   .box-nav {
+ font-weight: 500;
+opacity: 1;
     color: #262221;
     margin-bottom: 46px;
     a {
+opacity: 0.6;
       color: #262221;
     }
+
   }
+
+
 }
 
 .container {
@@ -126,6 +132,7 @@ body {
       .content {
         .box-img {
           margin-bottom: 20px;
+
           a {
             img {
               object-fit: cover;
@@ -177,6 +184,11 @@ body {
       }
     }
   }
+.box-left{
+.divider{
+display: none;
+}
+}
 
   .box-content {
     user-select: auto;
@@ -215,15 +227,7 @@ body {
   }
 }
 
-.box-nav {
-  font-weight: 500;
-  color: #262221;
-  opacity: 0.6;
-  span {
-    font-weight: 500;
-    color: #262221;
-  }
-}
+
 
 @media screen and (max-width: 750px) {
   // .header1 {
@@ -242,6 +246,15 @@ body {
       flex-direction: column;
       .box-left {
         margin-bottom: 50px;
+
+  .box-heading {
+    margin-bottom: 0px;
+
+}
+.divider{
+margin:22px 0 6px;
+}
+
       }
       .box-right {
         width: 100%;

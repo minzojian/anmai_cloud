@@ -23,7 +23,7 @@ body {
 
 .banner {
   height: 760px;
-  background: url("../img/solution/banner.png") no-repeat center;
+  // background-image: url("../img/solution/banner.png") ;
   background-size: cover;
   width: 100%;
   display: flex;
@@ -42,7 +42,7 @@ body {
       width: auto;
       min-width: 390px;
 
-      h1 {
+      .h1 {
         font-size: 54px;
         color: #fff;
         display: flex;
@@ -50,9 +50,10 @@ body {
         line-height: 1;
         font-family: OPPOSans;
         font-weight: 500;
+margin-bottom: 20px;
       }
 
-      h2 {
+      .h2 {
         font-size: 54px;
         color: #fff;
         display: flex;
@@ -91,7 +92,7 @@ body {
           display: inline-block;
           opacity: 0.4;
           background-size: cover;
-          margin-left: 59px;
+          margin-left: 39px;
         }
       }
     }
@@ -117,15 +118,25 @@ body {
   /* margin-top: -40px; */
   //   width: 1399px;
   //   margin: -40px auto 0;
-  margin-top: -40px;
   z-index: 9;
 
   .nav-wrap {
     // background: #f2f4f8;
     // box-shadow: 0 0 5px 0 rgb(25 36 45 / 5%);
     // border-radius: 40px;
+max-width: unset!important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 
-    width: 100%;
+padding-left: var(--contentpadding);
+    padding-right: var(--contentpadding);
+
+
+position: absolute;
+top:-35px;
+    
+
+    // width: 100%;
     overflow: hidden;
     // margin-left: auto;
     // margin-right: auto;
@@ -141,13 +152,13 @@ body {
 
       background: #f2f4f8;
       box-shadow: 0 0 5px 0 rgba(25, 36, 45, 0.05);
-      border-radius: 40px;
+      border-radius: 35px;
       margin: 0 auto;
       li {
         display: inline-block;
         text-align: center;
-        height: 80px;
-        line-height: 80px;
+        height: 70px;
+        line-height: 70px;
         /* float: left; */
         width: 100%;
         text-align: center;
@@ -156,7 +167,7 @@ body {
           //   width: 100%;
           transition: none !important;
           display: block;
-          padding: 0 20px;
+          padding: 0 30px;
           color: #818f9a;
           text-decoration: none;
           display: flex;
@@ -227,7 +238,7 @@ body {
     rgba(151, 160, 178, 0.23),
     rgba(238, 241, 246, 1)
   );
-  margin-top: -40px;
+  // margin-top: -40px;
 }
 
 .section2 {
@@ -240,9 +251,9 @@ body {
 
   background: #fff;
 
-  .wrapper .bottom {
-    background: url(../img/solution/150927753.png) no-repeat center;
-  }
+  // .wrapper .bottom {
+  //   background-image: url(../img/solution/150927753.png) !important;
+  // }
 }
 
 .section3 {
@@ -259,9 +270,9 @@ body {
     rgba(238, 241, 246, 0.23)
   );
 
-  .wrapper .bottom {
-    background: url(../img/solution/131472841.png) no-repeat center;
-  }
+  // .wrapper .bottom {
+  //   background-image: url(../img/solution/131472841.png) !important;
+  // }
 }
 
 .section4 {
@@ -274,10 +285,10 @@ body {
 
   background: #ffffff;
 
-  .wrapper .bottom {
-    background: url("../img/solution/图层 35.png") no-repeat center;
-    margin-top: 52px;
-  }
+  // .wrapper .bottom {
+  //   background-image: url("../img/solution/图层 35.png")  !important;
+  //   margin-top: 52px;
+  // }
 
   // .flex_between .left_tit .text {
   //   line-height: 1;
@@ -303,10 +314,10 @@ body {
     rgba(238, 241, 246, 0.23)
   );
 
-  .wrapper .bottom {
-    background: url("../img/solution/图层 37.png") no-repeat center;
-    margin-top: 48px;
-  }
+  // .wrapper .bottom {
+  //   background-image: url("../img/solution/图层 37.png")!important;
+  //   margin-top: 48px;
+  // }
 
   // .bottom .card .d_wrp .btn {
   //   margin-top: 56px;
@@ -364,16 +375,17 @@ body {
   //   width: 597px;
   // }
 
-  .wrapper .bottom {
-    background: url("../img/solution/图层 39.png") no-repeat center;
-    margin-top: 126px;
-  }
+  // .wrapper .bottom {
+  //   background-image: url("../img/solution/图层 39.png")!important;
+  //   margin-top: 126px;
+  // }
 }
 
 .section8 {
   width: 100%;
-  background: url("../img/solution/图层 20.png") no-repeat center;
+  background-image: url("../img/solution/图层 20.png")!important;
   background-size: cover;
+  background-position: center;
   height: 788px;
   box-sizing: border-box;
   display: flex;
@@ -392,7 +404,7 @@ body {
       text-align: left;
       margin-right: 60px;
       flex: 2;
-      h2 {
+      .h2 {
         font-size: 50px;
         font-family: OPPOSans;
         font-weight: 500;
@@ -634,6 +646,11 @@ body {
   }
 }
 
+
+#cc .top{
+border-bottom: 1px solid #c9ced6;
+}
+
 .section-content {
   .wrapper {
     // width: 100%;
@@ -652,13 +669,14 @@ body {
           text-align: left;
           width: 45%;
 
-          h1 {
+          .h1 {
             font-size: 54px;
+            line-height: 1;
             font-family: OPPOSans;
             font-weight: 500;
             color: #000000;
             display: flex;
-
+            margin-bottom: 25px;
             p {
               color: #486587;
               font-weight: normal;
@@ -667,7 +685,7 @@ body {
               font-family: Gilroy;
               font-weight: 400;
               color: #486587;
-              line-height: 75px;
+              line-height: 1;
             }
           }
 
@@ -699,6 +717,8 @@ body {
       }
     }
 
+
+
     .mid {
       display: flex;
       justify-content: space-between;
@@ -725,7 +745,7 @@ body {
           }
         }
 
-        h2 {
+        .h2 {
           color: #000;
           font-size: 30px;
           font-family: OPPOSans;
@@ -733,7 +753,8 @@ body {
           line-height: 1;
           text-align: left;
           position: relative;
-
+          display: flex;
+margin-right: 10px;
           span {
             position: relative;
           }
@@ -746,8 +767,8 @@ body {
             font-family: Gilroy;
             font-weight: 500;
             color: #818f9a;
-            top: 0;
-            right: -22px;
+            top: -5px;
+            left: 5px;
           }
 
           .text1::after {
@@ -777,7 +798,7 @@ body {
     }
 
     .bottom {
-      background: url(../img/solution/310146318.png) no-repeat center;
+      background-image: url(../img/solution/310146318.png)  ;
       background-size: cover;
       width: 100%;
       height: 600px;
@@ -808,7 +829,7 @@ body {
             line-height: 1;
           }
 
-          h3 {
+          .h3 {
             font-size: 30px;
             color: #000000;
             line-height: 1.2;
@@ -931,15 +952,15 @@ body {
   font-size: 14px;
 }
 
-@media screen and (max-width: 1440px) {
-  .nav-height {
-    ul li {
-      .icon {
-        display: none !important;
-      }
-    }
-  }
-}
+// @media screen and (max-width: 1440px) {
+//   .nav-height {
+//     ul li {
+//       .icon {
+//         display: none !important;
+//       }
+//     }
+//   }
+// }
 
 @media screen and (max-width: 750px) {
   .nav-wrap {

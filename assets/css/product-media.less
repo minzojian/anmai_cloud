@@ -82,12 +82,12 @@
 //                     .left {
 //                         margin: 0;
 
-//                         h1 {
+//                         .h1 {
 //                             line-height: 1;
 //                             margin: 30px 0 20px;
 //                         }
 
-//                         h4 {
+//                         .h4 {
 //                             margin-top: 40px;
 //                             line-height: 1;
 //                         }
@@ -200,11 +200,7 @@
 // }
 
 @media screen and (max-width: 750px) {
-  .section2 {
-    .swiper-container .swiper-wrapper .swiper-slide {
-      width: 80% !important;
-    }
-  }
+
 
   .page-main
     .main-container
@@ -225,42 +221,27 @@
     .right
     .c_rirht
     .top_item
-    .s_wrapper
-    h4 {
-    font-size: 30px;
-    margin: 10px 33px;
+    .s_wrapper{
+.flex_block{
+margin-bottom: 10px!important;
+p{
+font-size: 12px !important;
+margin-left: 0 !important;
+}
+}
+    .h4 {
+    font-size: 35px;
+    margin: 0;
   }
-  .page-main
-    .main-container
-    .section3
-    .wrapper
-    .right
-    .c_rirht
-    .top_item
-    .s_wrapper
-    .flex_block
-    p {
-    margin-left: 0 !important;
-  }
-  .page-main
-    .main-container
-    .section3
-    .wrapper
-    .right
-    .c_rirht
-    .top_item
-    .s_wrapper
-    .flex_block
-    .line {
-    margin: 0 11px;
-  }
+    }
+
   .page-main .main-container .section3 .wrapper .right .c_left .mid_item {
     height: 64px !important;
   }
-  .page-main .main-container .section3 .wrapper .right .c_left .mid_item h4 {
+  .page-main .main-container .section3 .wrapper .right .c_left .mid_item .h4 {
     font-size: 16px;
     margin-left: 7px;
-    line-height: 62px;
+    line-height: 1.2;
   }
   .page-main .main-container .section3 .wrapper .right .c_left .mid_item .line {
     margin: 0 11.5px;
@@ -286,7 +267,7 @@
     .c_left
     .mid_item
     .text
-    h3 {
+    .h3 {
     font-size: 26px !important;
     margin: 0 !important;
   }
@@ -303,7 +284,7 @@
     .top_item
     .s_wrapper
     .flex_block
-    h3 {
+    .h3 {
     margin: 0 !important;
   }
   .page-main .main-container .section3 .wrapper .right .c_rirht .bottom_item {
@@ -329,7 +310,7 @@
     .c_rirht
     .bottom_item
     .text
-    h3 {
+    .h3 {
     margin-top: 0 !important;
   }
   .page-main
@@ -355,8 +336,12 @@
       .banner {
         height: 375px;
         padding-top: 200px !important;
-
+padding-bottom: 100px !important;
+align-items: flex-end!important;
+p{line-height: 1.5!important;}
         .wrapper {
+margin-top: 0;
+margin-bottom: 20px;
           .slogan {
             .left {
               width: 100% !important;
@@ -379,33 +364,190 @@
           }
         }
       }
-
-      .section {
-        .wrapper {
+.section{
+ .wrapper {
           width: var(--contentwidth);
           max-width: none;
           position: relative;
 
+
           .tit_box {
             .title {
-              font-size: 26px;
+              font-size: 24px;
+              line-height: 1;
             }
           }
         }
+}
+
+      .section.section3,.section.section5 {
+       
+.h1{
+margin-bottom: 12px!important;
+}
+
+.items{
+height: auto!important;
+margin:0px 0 16px 0!important;
+
+&.type1{
+box-sizing: border-box;
+padding:35px 15px 15px 32px!important;
+>.h3{margin:0!important;margin-bottom: 7px!important;font-size: 17px!important;
+strong{
+font-size: 32px!important;
+}
+}
+>p{margin:0!important;margin-right:10%!important;width:auto!important;font-size: 13px!important;}
+>span{
+right:15px!important;bottom:15px!important;font-size: 11px!important;
+}
+.h4{
+// float: left!important;
+font-size: 14px;
+margin:0!important;
+strong{
+font-size: 32px!important;
+}
+}
+
+}
+
+&.type2{
+padding:10px 30px 8px!important ;
+box-sizing: border-box;
+>img{
+margin-right: 31px!important;
+}
+>.h4{
+font-weight: bold!important;
+margin-left: 0px!important;
+width: 45%!important;
+}
+.line{
+height: 32px!important;
+    margin: 0 8px!important;
+  }
+>.text{
+margin-left:5px!important;
+
+p{
+font-size:12px!important;
+}
+.h3{
+line-height: 1.2!important;
+&:only-child{
+margin-bottom: 0!important;
+}
+// &:not(:only-child){
+// margin-bottom: 12px!important;
+// }
+}
+
+// width:50%!important;
+}
+}
+
+&.type3{
+padding:54px 26px!important;
+box-sizing: border-box;
+.h3{
+margin:0!important;
+margin-bottom:18px!important;
+font-size: 19px!important;
+}
+p{
+margin-right: 0!important;
+margin:0!important;
+width: 100%!important;
+font-size: 13px!important;
+}
+
+}
+
+}
+
+
+.section_title{
+.h1 {
+              line-height: 1!important;
+              margin: 0!important;
+              font-size: 68px !important;
+height: auto!important;
+margin-bottom:5px!important;
+            }
+
+            .h4 {
+              margin-top: 0!important;
+              line-height: 1!important;
+              font-size: 24px!important;
+            }
+}
+
+
+
+.section_title2{
+.h1 {
+              line-height: 1!important;
+              margin: 0!important;
+             font-size: 15px!important;
+height: auto!important;
+margin-bottom:18px!important;
+            }
+
+            .h4 {
+font-size: 30px!important;
+              margin-top: 0!important;
+              line-height: 1!important;
+            }
+}
+
+
       }
 
-      .section2 {
+
+
+
+  .section2 {
+padding: 70px 0 160px!important;
+.swiper-container{
+margin-top:41px!important;
+}
+    .swiper-container .swiper-wrapper .swiper-slide {
+      width: 85% !important;
+    height: 320px!important;
+h2{
+font-size: 64px!important;
+}
+img{
+width: 24px!important;
+    height: 24px!important;
+display: block!important;
+}
+.h4{
+ margin: 10px 0 20px!important;
+font-size: 18px!important;
+}
+p{
+font-size: 12px!important;
+line-height: 1.5!important;
+}
+    }
         .wrapper {
           .desc {
             font-size: 14px;
-            margin-bottom: 0;
+            margin-bottom: 10px;
           }
 
           .tit_box {
             .arrows {
               position: absolute;
               display: flex;
-              bottom: -100px;
+              bottom: -70px;
+.round_btn {
+width: 42px!important;
+height: 42px!important;
+}
             }
           }
         }
@@ -421,19 +563,11 @@
           .left {
             margin: 0;
 
-            h1 {
-              line-height: 1;
-              margin: 0;
-              font-size: 68px !important;
-            }
-
-            h4 {
-              margin-top: 0;
-              line-height: 1;
-              font-size: 24px;
-            }
+            
             p {
               width: 100%;
+    margin-top: 32px;
+font-size: 16px;
             }
           }
 
@@ -446,13 +580,13 @@
               width: 210px !important;
               height: 270px !important;
               background-size: cover !important;
-              h3 {
+              .h3 {
                 font-size: 17px !important;
-                margin: 36px 0 5px 32px !important;
+                // margin: 36px 0 5px 32px !important;
               }
               p {
                 font-size: 13px !important;
-                margin-left: 36px !important;
+                // margin-left: 32px !important;
               }
             }
 
@@ -471,9 +605,15 @@
         padding: 90px 0;
 
         &#locations {
+padding-top: 0;
           padding-bottom: 500px;
           overflow: hidden;
           align-items: flex-start;
+
+.wrapper{
+padding-top: 90px;
+}
+
         }
 
         .wrapper {
@@ -486,9 +626,28 @@
               font-size: 29px;
             }
             .divider {
-              margin: 28px 0;
+              margin: 32px 0;
             }
             .locations {
+margin-bottom: 37px !important;
+ul {
+          // height: 0;
+          // transform: translateY(-10px);
+          // pointer-events: none;
+          // transition: all 0.3s;
+          position: relative;
+          // overflow: hidden;
+          li {
+
+            text-align: left;
+            margin-bottom: 5px !important;
+            a {
+font-size: 12px!important;
+              opacity: 1 !important;
+            }
+          }
+        }
+
               ul:not(:last-child) {
                 margin-right: 0;
               }
@@ -512,17 +671,6 @@
 
           .left {
             margin: 0;
-            h1 {
-              line-height: 1;
-              margin: 0;
-              font-size: 68px !important;
-            }
-
-            h4 {
-              margin-top: 0;
-              line-height: 1;
-              font-size: 24px;
-            }
             p {
               width: 100%;
             }
@@ -541,29 +689,81 @@
       }
 
       .section6 {
+padding: 60px 0 60px!important; 
         .wrapper {
+.s-til{
+font-size: 15px!important;
+}
+.b-tit{
+font-size: 30px!important;
+}
+
+
           .card_box {
             display: block;
 
             .card {
               width: 100%;
               margin: 0 0 20px 0;
+height: 286px;
+padding:60px 40px!important;
+box-sizing: border-box;
+
+img{
+width: 48px!important;
+height: 48px!important;
+margin:0 0 30px 0!important;
+}
+.h4{
+margin:0 0 20px 0!important;
+width: 100%!important;
+font-size: 24px!important;
+}
+p{
+margin:0!important;
+width: 100%!important;
+font-size: 13px!important;
+}
+
+
             }
           }
         }
       }
 
       .section7 {
+padding: 60px 0 0px 0!important;
         .wrapper {
+
+.s-til{
+font-size: 15px!important;
+}
+.b-tit{
+font-size: 30px!important;
+}
+
           .tabsBar {
             display: block;
+margin-top: 60px!important;
 
-            .contents .con .container {
-              padding: 175px 0 0 20px;
+            .contents .con{
+
+              width: 100%;
+              height: 473px;
+              background-image: url("../img/product/产品-分布式数据中心/产品场景图.png");
+
+ .container {
+              padding: 185px 0 0 20px;
+padding-top:50%;
+.num{
+font-size: 64px!important;
+}
 
               .des {
                 width: 90%;
+font-size: 13px!important;
               }
+            }
             }
 
             .nav {
@@ -574,6 +774,15 @@
               display: flex;
               justify-content: center;
               align-items: center;
+li{
+height:150px!important;
+    width: 33.3%!important;
+p{font-size: 12px!important;}
+&.act{
+    height: 150px;
+p{font-size: 14px!important;}
+}
+}
 
               li:nth-of-type(1) {
                 top: 0;

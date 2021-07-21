@@ -34,29 +34,36 @@ window.disabledHeaderAudoSwitch=true;
 </head>
 <style>
     .banner {
-        background: url("./assets/img/solution/解决方案-行业/图层 26.png") no-repeat center ;
-        background-size: cover;
+        background-image: url("./assets/img/solution/解决方案-行业/行业banner.jpg")  ;
     }
 
+#rgzn .top{
+border-bottom: 1px solid #c9ced6;
+}
+
     #rgzn .wrapper .bottom {
-        background: url("./assets/img/solution/解决方案-行业/图层 27.png") no-repeat center;
+        background-image: url("./assets/img/solution/解决方案-行业/行业版块1.jpg") ;
     }
 
     #ky .wrapper .bottom {
-        background: url("./assets/img/solution/解决方案-行业/图层 29.png") no-repeat center;
+        background-image: url("./assets/img/solution/解决方案-行业/行业版块2.jpg") ;
     }
 
     #djk .wrapper .bottom {
-        background: url("./assets/img/solution/解决方案-行业/图层 31.png") no-repeat center;
+        background-image: url("./assets/img/solution/解决方案-行业/行业版块3.jpg") ;
     }
 
+#zw .top img{
+    padding-bottom: 20px!important;
+}
+
     #zw .wrapper .bottom {
-        background: url("./assets/img/solution/解决方案-行业/图层 32.png") no-repeat center;
-        margin-top: 112px;
+        background-image: url("./assets/img/solution/解决方案-行业/行业版块4.jpg") ;
+        /* margin-top: 112px; */
     }
 
     #swjy .wrapper .bottom {
-        background: url("./assets/img/solution/解决方案-行业/图层 34.png") no-repeat center;
+        background-image: url("./assets/img/solution/解决方案-行业/行业版块5.jpg") ;
         /* margin-top: 112px; */
     }
 
@@ -99,6 +106,35 @@ window.disabledHeaderAudoSwitch=true;
     #zw .flex_between .img {
         margin-bottom: 45px;
     } */
+
+
+@media screen and (max-width: 750px) {
+.banner {
+        background-image: url("./assets/img/solution/解决方案-行业/行业-1.jpg")!important  ;
+    }
+
+    #rgzn .wrapper .bottom {
+        background-image: url("./assets/img/solution/解决方案-行业/行业2.jpg")!important ;
+    }
+
+    #ky .wrapper .bottom {
+        background-image: url("./assets/img/solution/解决方案-行业/行业3.jpg") !important;
+    }
+
+    #djk .wrapper .bottom {
+        background-image: url("./assets/img/solution/解决方案-行业/行业4.jpg")!important ;
+    }
+
+    #zw .wrapper .bottom {
+        background-image: url("./assets/img/solution/解决方案-行业/行业5.jpg") !important;
+    }
+
+    #swjy .wrapper .bottom {
+        background-image: url("./assets/img/solution/解决方案-行业/行业6.jpg") !important;
+        /* margin-top: 112px; */
+    }
+}
+
 </style>
 
 
@@ -339,9 +375,9 @@ window.disabledHeaderAudoSwitch=true;
         <div class="banner section">
             <div class="wrapper">
                 <div class="slogan">
-                    <h1 class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0">解决方案 <img
-                            src="./assets/img/solution/line.png" class="line"> 行业</h1>
-                    <h2 class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0.1">Solution Industry</h2>
+                    <div class="h1 wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0">解决方案 <img
+                            src="./assets/img/solution/line.png" class="line"> 行业</div>
+                    <div class="h2 wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0.1">Solution Industry</div>
                     <a href="javascript:;" onclick="click_scroll()" class="downBtn fadeInUp" data-wow-duration=".8s"
                         data-wow-delay="0.2">方案咨询 <i class="arrow_icon"></i></a>
                 </div>
@@ -367,9 +403,9 @@ window.disabledHeaderAudoSwitch=true;
                 <div class="top">
                     <div class="flex_between">
                         <div class="left_tit">
-                            <h1 class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
+                            <div class="h1 wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
                                 <p>01</p><span>人工智能</span>
-                            </h1>
+                            </div>
                             <p class="desc wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
                                 安迈云基于裸金属服务器、去中心化存储、GPU云服务器及人工智能平台等产品解决AI
                                 行业客户在模型训练推理过程中所需要的大量计算存储资源，基于丰富的IDC资源和混合云组网经验为AI
@@ -388,17 +424,17 @@ window.disabledHeaderAudoSwitch=true;
                 <div class="mid">
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
                         <div class="icon"><img src="./assets/img/solution/图层 5 拷贝.png" alt=""></div>
-                        <h2>灵活配置<span class="text1"></span></h2>
+                        <div class="h2">灵活配置<span class="text1"></span></div>
                         <p>为用户提供了多种类型的计算资源和存储资源，可用于科学计算、深度学习、图形处理等多种计算任务。用户还可以根据任务量大小灵活调配资源使用量。</p>
                     </div>
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                         <div class="icon"><img src="./assets/img/solution/图层 18.png" alt=""></div>
-                        <h2>海量存储<span class="text2"></span></h2>
+                        <div class="h2">海量存储<span class="text2"></span></div>
                         <p>安迈云提供海量、低成本、高可靠的去中心化存储服务，为用户解决AI 场景下大数据量存储、数据可靠及分布式等相关复杂问题，方便用户存储图片、音视频、文本等各类型数据。</p>
                     </div>
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".3s">
                         <div class="icon"><img src="./assets/img/solution/图层 19.png" alt=""></div>
-                        <h2>极速访问<span class="text3"></span></h2>
+                        <div class="h2">极速访问<span class="text3"></span></div>
                         <p>通过多线路BGP和大带宽的接入，减小访问时网络延时，协助AI 行业客户极速访问云端资源。</p>
                     </div>
                 </div>
@@ -406,7 +442,7 @@ window.disabledHeaderAudoSwitch=true;
                     <div class="card wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".3s">
                         <div class="d_wrp">
                             <p class="til">案例 Cases</p>
-                            <h3>KODA</h3>
+                            <div class="h3">KODA</div>
                             <p class="desc">满足Koda机器狗的去中心化存储需求和深度学习需求。</p>
                             <div class="btn">
                                 <div class="left"><img src="./assets/img/solution/左箭头.png" alt=""></div>
@@ -422,9 +458,9 @@ window.disabledHeaderAudoSwitch=true;
                 <div class="top">
                     <div class="flex_between">
                         <div class="left_tit">
-                            <h1 class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
+                            <div class="h1 wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
                                 <p>02</p><span>科研</span>
-                            </h1>
+                            </div>
                             <p class="desc wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
                                 云计算的到来，使数据和计算全部可以在云上完成，科研数据不下云，内部协同更高效，减少科研重资产投入以及运维工作，使得科研单位能够聚焦在科研课题研究上。</p>
                             <div class="text wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
@@ -440,17 +476,17 @@ window.disabledHeaderAudoSwitch=true;
                 <div class="mid">
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
                         <div class="icon"><img src="./assets/img/solution/图层 22.png" alt=""></div>
-                        <h2>卓越的性能体验<span class="text1"></span></h2>
+                        <div class="h2">卓越的性能体验<span class="text1"></span></div>
                         <p>具有行业优势的性能，提供100G高速计算网络，本地3.2T企业级SSD盘，云服务中具备本地高速缓存盘</p>
                     </div>
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                         <div class="icon"><img src="./assets/img/solution/图层 23.png" alt=""></div>
-                        <h2>多方面安全防护<span class="text2"></span></h2>
+                        <div class="h2">多方面安全防护<span class="text2"></span></div>
                         <p>安全可靠的高性能计算平台，基于区块链沙箱技术，提供端到端的安全解决方案，保证用户数据安全不泄露</p>
                     </div>
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".3s">
                         <div class="icon"><img src="./assets/img/solution/图层 24.png" alt=""></div>
-                        <h2>完善的生态合作<span class="text3"></span></h2>
+                        <div class="h2">完善的生态合作<span class="text3"></span></div>
                         <p>集成业内主流的HPC应用软件，提供基础算法资源库，让用户在云上更稳定、便捷、可靠的运行业务</p>
                     </div>
                 </div>
@@ -458,7 +494,7 @@ window.disabledHeaderAudoSwitch=true;
                     <div class="card wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".3s">
                         <div class="d_wrp">
                             <p class="til">案例 Cases</p>
-                            <h3>电子科技大学</h3>
+                            <div class="h3">电子科技大学</div>
                             <p class="desc">通过使用安迈云的解决方案，促进双方的技术交流与深度合作，实际促进了电子科技大学的学研产一体化进程</p>
                             <div class="btn">
                                 <div class="left"><img src="./assets/img/solution/左箭头.png" alt=""></div>
@@ -474,9 +510,9 @@ window.disabledHeaderAudoSwitch=true;
                 <div class="top">
                     <div class="flex_between">
                         <div class="left_tit">
-                            <h1 class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
+                            <div class="h1 wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
                                 <p>03</p><span>大健康</span>
-                            </h1>
+                            </div>
                             <p class="desc wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
                                 安迈云去中心化存储能够轻松应对大健康行业的海量数据存储，分析，建模等工作，形成去中心化数据仓库。</p>
                             <div class="text wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">General Health
@@ -492,17 +528,17 @@ window.disabledHeaderAudoSwitch=true;
                 <div class="mid">
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
                         <div class="icon"><img src="./assets/img/solution/图层 22.png" alt=""></div>
-                        <h2>遵从法规的数据存储<span class="text1"></span></h2>
+                        <div class="h2">遵从法规的数据存储<span class="text1"></span></div>
                         <p>档案，病例等海量健康数据的长期保存，满足法规要求</p>
                     </div>
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                         <div class="icon"><img src="./assets/img/solution/图层 23.png" alt=""></div>
-                        <h2>行业数据归档离线备份<span class="text2"></span></h2>
+                        <div class="h2">行业数据归档离线备份<span class="text2"></span></div>
                         <p>针对访问频次逐渐贬低的内容提供生命周期存储策略</p>
                     </div>
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".3s">
                         <div class="icon"><img src="./assets/img/solution/图层 24.png" alt=""></div>
-                        <h2>注重隐私永久保存<span class="text3"></span></h2>
+                        <div class="h2">注重隐私永久保存<span class="text3"></span></div>
                         <p>用户健康数据通过加密后存储到IPFS去中心化网络永久保存及调用</p>
                     </div>
                 </div>
@@ -510,7 +546,7 @@ window.disabledHeaderAudoSwitch=true;
                     <div class="card wow fadeInUp" data-wow-duration=".4s" data-wow-delay=".3s">
                         <div class="d_wrp">
                             <p class="til">案例 Cases</p>
-                            <h3>咕咚健康</h3>
+                            <div class="h3">咕咚健康</div>
                             <p class="desc">为咕咚健康大量的健康数据做归档存储</p>
                             <div class="btn">
                                 <div class="left"><img src="./assets/img/solution/左箭头.png" alt=""></div>
@@ -526,9 +562,9 @@ window.disabledHeaderAudoSwitch=true;
                 <div class="top">
                     <div class="flex_between">
                         <div class="left_tit">
-                            <h1 class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
+                            <div class="h1 wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
                                 <p>04</p><span>政务</span>
-                            </h1>
+                            </div>
                             <p class="desc wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
                                 安迈云去中心化存储及工具集针对遗嘱，版权，举证，电子合同等冷数据存储做出优化，在确保数据隐私和安全的前提下，满足公检法应用场景需求。
                             </p>
@@ -546,17 +582,17 @@ window.disabledHeaderAudoSwitch=true;
                 <div class="mid">
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
                         <div class="icon"><img src="./assets/img/solution/矢量智能对象.png" alt=""></div>
-                        <h2>数据安全稳定<span class="text1"></span></h2>
+                        <div class="h2">数据安全稳定<span class="text1"></span></div>
                         <p>针对各种冷数据存储做出优化，确保相关隐私和数据安全。</p>
                     </div>
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                         <div class="icon"><img src="./assets/img/solution/矢量智能对象 (1).png" alt=""></div>
-                        <h2>数据溯源<span class="text2"></span></h2>
+                        <div class="h2">数据溯源<span class="text2"></span></div>
                         <p>所有安迈云存储的数据全都可进行溯源追踪。</p>
                     </div>
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".3s">
                         <div class="icon"><img src="./assets/img/solution/矢量智能对象 (2).png" alt=""></div>
-                        <h2>极速调取<span class="text3"></span></h2>
+                        <div class="h2">极速调取<span class="text3"></span></div>
                         <p>相关应用场景中所需要的冷数据，可以在海量数据中被极速调取出来。</p>
                     </div>
                 </div>
@@ -564,7 +600,7 @@ window.disabledHeaderAudoSwitch=true;
                     <div class="card wow fadeInUp" data-wow-duration=".4s" data-wow-delay=".3s">
                         <div class="d_wrp">
                             <p class="til">案例 Cases</p>
-                            <h3>中经天平</h3>
+                            <div class="h3">中经天平</div>
                             <p class="desc">帮助中经天平将公，检，法领域数据进行区块链存储数据,确保数据访问安全，保障隐私。</p>
                             <div class="btn">
                                 <div class="left"><img src="./assets/img/solution/左箭头.png" alt=""></div>
@@ -580,9 +616,9 @@ window.disabledHeaderAudoSwitch=true;
                 <div class="top">
                     <div class="flex_between">
                         <div class="left_tit">
-                            <h1 class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
+                            <div class="h1 wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
                                 <p>05</p><span>生物基因</span>
-                            </h1>
+                            </div>
                             <p class="desc wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
                                 2020年H1基因企业融资同比增长287%，基因大数据的积累及其转化应用将出现井喷式发展，高性能、可扩展、经济的IT技术平台是生信技术高速发展的重要底座。安迈云可以为企业提供安全的数据存储，计算分析和数据共享。
                             </p>
@@ -597,17 +633,17 @@ window.disabledHeaderAudoSwitch=true;
                 <div class="mid">
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".1s">
                         <div class="icon"><img src="./assets/img/solution/矢量智能对象 (3).png" alt=""></div>
-                        <h2>计算加速<span class="text1"></span></h2>
+                        <div class="h2">计算加速<span class="text1"></span></div>
                         <p>基因测序分析算法已逐渐稳定，行业除了使用传统的CPU为核心算力，通过容器、FGPA、GPU、大数据和分布式等技术可以极大缩短分析耗时，提高服务效率。</p>
                     </div>
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                         <div class="icon"><img src="./assets/img/solution/矢量智能对象 (4).png" alt=""></div>
-                        <h2>数据归档<span class="text2"></span></h2>
+                        <div class="h2">数据归档<span class="text2"></span></div>
                         <p>基因数据量级剧增，归档存储的成本递增，安迈云提供基于IPFS技术的归档存储服务，有效降低单位存储成本。</p>
                     </div>
                     <div class="ietms wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".3s">
                         <div class="icon"><img src="./assets/img/solution/矢量智能对象 (5).png" alt=""></div>
-                        <h2>灵活租用<span class="text3"></span></h2>
+                        <div class="h2">灵活租用<span class="text3"></span></div>
                         <p>基因行业存在淡旺季，旺季业务量可能是淡季的10倍以上，本地资源不足以支撑峰值资源需求，用户可在安迈云云端平台一键租赁海量资源，从容应对业务旺季。</p>
                     </div>
                 </div>
@@ -615,7 +651,7 @@ window.disabledHeaderAudoSwitch=true;
                     <div class="card wow fadeInUp" data-wow-duration=".4s" data-wow-delay=".3s">
                         <div class="d_wrp">
                             <p class="til">案例 Cases</p>
-                            <h3>23魔方</h3>
+                            <div class="h3">23魔方</div>
                             <p class="desc">对海量的基因检测数据进行去中心化存储，同时对于海量数据的研究将形成研究结果进行存储。</p>
                             <div class="btn">
                                 <div class="left"><img src="./assets/img/solution/左箭头.png" alt=""></div>
@@ -630,7 +666,7 @@ window.disabledHeaderAudoSwitch=true;
             <div class="flex_center wrapper">
                 <div class="left">
                     <img src="./assets/img/solution/HELLO.png" alt="">
-                    <h2>与安迈云解决方案专家沟通</h2>
+                    <div class="h2">与安迈云解决方案专家沟通</div>
                     <p class="desc">安迈云致力于为您提供更加⾼效、更加专业的一站式解决⽅案，以及更加优质的定制化服务</p>
                     <div class="contact">
                         您可以通过邮件、电话或者方案咨询的形式与安迈云解决方案专家获得联系，获取更多信息
@@ -657,7 +693,7 @@ window.disabledHeaderAudoSwitch=true;
             <div class="contactModal">
                 <a href="javascript:;" class="closeBtn"></a>
                 <div class="wrap">
-                    <h2 class="til">解决方案咨询</h2>
+                    <div class="h2 til">解决方案咨询</div>
                     <p class="dec">请您先填写一下基本信息，以便我们可以更好地服务您</p>
                     <div class="concact_form">
                         <section>
@@ -1034,18 +1070,22 @@ function scrollNavIntoView(index)
 {
 st && clearTimeout(st);
 st=setTimeout(function(){
-$($(".nav-wrap a").get(index)).get(0) && $($(".nav-wrap a").get(index)).get(0).scrollIntoView({behavior:'smooth'})
+if($($(".nav-wrap a").get(index)).offset()){
+gsap.to("#nav-wrap",0.3,{scrollLeft:$("#nav-wrap").get(0).scrollLeft+$($(".nav-wrap a").get(index)).offset().left})
+}
 },100)
 }
 
 
-
 $(function(){
+if(!isPhone )
  $("#nav-wrap").niceScroll({
           cursorborder: "1px solid rgb(80,80,80,0.4)",
           horizrailenabled: true,
-autohidemode:false,
-emulatetouch:true
+autohidemode:"hidden",
+emulatetouch:true,
+cursorcolor:"rgba(0,0,0,0)",
+cursorborder:"none"
         })
 })
 

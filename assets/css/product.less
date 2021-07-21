@@ -18,12 +18,14 @@
     // .section:first-child {
     //   padding-top: 150px;
     // }
-    .video_bg {
+    .video_bg,.fake_video {
       position: absolute;
-      z-index: -1;
+      z-index: 0;
       object-fit: cover;
       width: 100%;
-      height: 100%;
+    height: calc(100% + 40px);
+    margin-top: -20px;
+margin-bottom: -20px;
     }
 
     .section .wrapper {
@@ -42,12 +44,15 @@
       align-items: center;
       background-color: #19242d;
       padding-top: 0 !important;
-
+margin-bottom: -1px;
       .wrapper {
+ width: 94%;
+        padding-left: 6%;
+        max-width: unset;
+
         // max-width: 1440px;
         margin: 0 auto;
         // width: 100%;
-        padding: 0;
         margin-top: 150px;
 
         .slogan {
@@ -108,7 +113,9 @@
         // margin: 0 auto;
 
         width: 94%;
-        padding-left: 6%;
+            margin-left: 6%;
+    padding-left: unset;
+
         max-width: unset;
         .desc {
           font-size: 24px;
@@ -124,7 +131,6 @@
         .tit_box {
           display: flex;
           justify-content: space-between;
-          max-width: 1400px;
           margin: 0 auto;
 
           .title {
@@ -138,6 +144,7 @@
           .arrows {
             position: relative;
             display: flex;
+margin-right: 6%;
 
             .round_btn:first-child {
               margin-right: 11px;
@@ -190,17 +197,18 @@
                   margin-top: auto;
                   height: 50%;
                   img {
-                    width: 45px;
-                    height: 45px;
-                    display: inline-block;
+                        width: 32px;
+    height: 32px;
+                    display: block;
                   }
 
-                  h4 {
+                  .h4 {
+display: inline-block;
                     font-size: 24px;
                     font-family: OPPOSans;
                     font-weight: 500;
                     color: #ffffff;
-                    margin: 15px 0 20px;
+                    margin: 10px 0 20px;
                   }
 
                   p {
@@ -238,6 +246,8 @@
     .section3 {
       width: 100%;
       height: auto;
+background: white;
+overflow: hidden;
       // height: 1539px;
       background-position-x: inherit;
       display: flex;
@@ -255,19 +265,20 @@
         .left {
           margin-top: 200px;
           margin-right: 20px;
-          h1 {
-            margin-bottom: 20px;
-            height: 90px;
+          .h1 {
+
+            margin-bottom: 31px;
             font-size: 80px;
             font-family: Gilroy;
             font-weight: bold;
             color: rgba(239, 239, 239, 0);
             line-height: 90px;
-            -webkit-text-stroke: 2px #7c90ae;
-            text-stroke: 2px #7c90ae;
+            -webkit-text-stroke: 1px #7c90ae;
+            text-stroke: 1px #7c90ae;
           }
 
-          h4 {
+          .h4 {
+display: inline-block;
             font-size: 48px;
             font-family: OPPOSans;
             font-weight: 500;
@@ -281,8 +292,8 @@
             font-weight: 400;
             color: #777777;
             line-height: 1.4;
-            margin-top: 48px;
-            width: 53%;
+            margin-top: 28px;
+            width: 55%;
           }
         }
 
@@ -304,7 +315,8 @@
               position: relative;
               background: url("../img/product/98.png") center no-repeat;
               border-radius: 14px;
-              h3 {
+              .h3 {
+display: inline-block;
                 font-size: 26px;
                 font-family: OPPOSans;
                 font-weight: bold;
@@ -351,15 +363,18 @@
               justify-content: start;
               align-items: center;
               margin: 24px 0 26px;
+padding:37px 50px;
+box-sizing: border-box;
 
-              h4 {
+              .h4 {
+display: inline-block;
                 font-size: 26px;
                 font-family: OPPOSans;
-                font-weight: normal;
+                font-weight: bold;
                 line-height: 31px;
-                height: 62px;
                 color: #ffffff;
-                margin-left: 50px;
+width:40%
+                // margin-left: 50px;
               }
 
               .line {
@@ -368,7 +383,7 @@
                 height: 57px;
                 background: #ffffff;
                 opacity: 0.4;
-                margin: 0 42px;
+                margin: 0 42px 0 32px;
               }
 
               .text {
@@ -379,7 +394,8 @@
                   color: #ffffff;
                 }
 
-                h3 {
+                .h3 {
+display: inline-block;
                   font-size: 46px;
                   font-family: OPPOSans;
                   font-weight: bold;
@@ -424,7 +440,8 @@
                   justify-content: center;
                   align-items: center;
 
-                  h3 {
+                  .h3 {
+display: inline-block;
                     font-size: 24px;
                     font-family: OPPOSans;
                     font-weight: bold;
@@ -448,7 +465,8 @@
                   }
                 }
 
-                h4 {
+                .h4 {
+display: inline-block;
                   font-size: 58px;
                   font-family: OPPOSans;
                   font-weight: bold;
@@ -470,15 +488,18 @@
               background: url("../img/product/100.png") center no-repeat;
               margin: 21px 0 22px 0;
               border-radius: 14px;
-              h3 {
+              .h3 {
+display: inline-block;
                 font-size: 26px;
                 font-family: OPPOSans;
                 font-weight: bold;
                 color: #f9fcfe;
                 margin: 69px 0 20px 63px;
+
               }
 
-              h4 {
+              .h4 {
+display: inline-block;
                 margin: 0 0 0 63px;
                 font-size: 26px;
 
@@ -531,7 +552,8 @@
                 width: 45%;
                 margin-left: 50px;
 
-                h3 {
+                .h3 {
+display: inline-block;
                   font-size: 26px;
                   font-family: OPPOSans;
                   font-weight: bold;
@@ -562,7 +584,7 @@
       position: relative;
       height: 950px;
 
-      video {
+      video,.fake_video {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -667,7 +689,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: url("./assets/img/product/产品-云GPU _slices/矩形 3 拷贝 4.png")
+      background: url("./assets/img/product/产品-云GPU/矩形 3 拷贝 4.png")
         no-repeat center;
       padding: 120px 0 106px;
       background-size: cover;
@@ -681,19 +703,29 @@
           margin-top: 200px;
           margin-right: 20px;
 
-          h1 {
+          .h1 {
             margin-bottom: 20px;
             height: 90px;
             font-size: 80px;
             font-family: Gilroy;
-            font-weight: bold;
-            color: rgba(239, 239, 239, 0);
+    font-weight: normal;
+    // color: #42505b;
+            // color: rgba(239, 239, 239, 0);
             line-height: 90px;
-            -webkit-text-stroke: 2px #7c90ae;
-            text-stroke: 2px #7c90ae;
+            // -webkit-text-stroke: 1px #7c90ae;
+            // text-stroke: 1px #7c90ae;
           }
 
-          h4 {
+&.section_title{
+ .h1 {
+            color: rgba(239, 239, 239, 0);
+            -webkit-text-stroke: 1px #7c90ae;
+            text-stroke: 1px #7c90ae;
+font-weight: bold;
+}
+}
+
+          .h4 {
             font-size: 48px;
             font-family: OPPOSans;
             font-weight: 500;
@@ -720,7 +752,8 @@
             width: 100%;
             max-width: 420px;
 
-            h3 {
+            .h3 {
+display: inline-block;
               margin: 54px 0 26px 60px;
               font-size: 26px;
               font-family: OPPOSans;
@@ -730,7 +763,7 @@
             }
 
             p {
-              font-size: 16px;
+              font-size: 14px;
               font-family: OPPOSans;
               font-weight: 400;
               color: #f9fcfe;
@@ -751,7 +784,7 @@
               max-width: 420px;
               height: 540px;
               position: relative;
-              background: url("../img/product/产品-云GPU\ _slices/矩形 11 拷贝 5(1).png")
+              background: url("../img/product/产品-云GPU/矩形 11 拷贝 5(1).png")
                 center no-repeat;
               background-size: cover;
               border-radius: 14px;
@@ -765,7 +798,7 @@
             }
 
             .bottom_item {
-              background: url("../img/product/产品-分布式数据中心 _slices/矩形 11 拷贝 3.png")
+              background: url("../img/product/产品-分布式数据中心/矩形 11 拷贝 3.png")
                 center no-repeat;
               background-size: cover;
               margin-top: 24px;
@@ -783,7 +816,7 @@
               background: #edf3fd;
               border-radius: 14px;
 
-              h3,
+              .h3,
               p {
                 color: #3f547b;
               }
@@ -794,7 +827,7 @@
               max-width: 420px;
               height: 540px;
               position: relative;
-              background: url("../img/product/产品-云GPU\ _slices/矩形 11.png")
+              background: url("../img/product/产品-云GPU/矩形 11.png")
                 center no-repeat;
               background-size: cover;
               margin: 21px 0 22px 0;
@@ -820,7 +853,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: url("../img/product/产品-云GPU _slices/矩形 14.png") no-repeat
+      background: url("../img/product/产品-云GPU/矩形 14.png") no-repeat
         center;
       background-size: cover;
       padding: 140px 0 134px 0;
@@ -828,26 +861,29 @@
       .wrapper {
         text-align: center;
 
-        .s-til {
+       .s-til {
           font-size: 24px;
-          font-family: Gilroy-Medium;
+          font-family: Gilroy;
           font-weight: normal;
           color: #42505b;
           line-height: 1;
+    text-align: left;
         }
 
-        h2 {
+        .b-tit {
           font-size: 50px;
           font-family: OPPOSans;
           font-weight: 500;
           color: #ffffff;
           line-height: 1;
           margin-top: 18px;
+    text-align: left;
         }
+
 
         .card_box {
           display: flex;
-          justify-content: center;
+          justify-content: flex-start;
           align-items: center;
           margin-top: 77px;
 
@@ -860,7 +896,7 @@
               rgb(9, 38, 72)
             );
             border-radius: 7px;
-            margin: 0 6.5px;
+            margin-right: 7px;
             text-align: left;
             transition: 0.3s linear;
             cursor: pointer;
@@ -872,7 +908,8 @@
               margin: 60px 0 40px 53px;
             }
 
-            h4 {
+            .h4 {
+display: inline-block;
               font-size: 30px;
               font-family: OPPOSans;
               font-weight: 500;
@@ -913,7 +950,7 @@
 
         .s-til {
           font-size: 24px;
-          font-family: Gilroy-Medium;
+          font-family: Gilroy;
           font-weight: normal;
           color: #42505b;
           line-height: 1;
@@ -939,8 +976,7 @@
             .con {
               width: 100%;
               height: 573px;
-              background: url("../img/product/产品-分布式数据中心\ _slices/矩形 15.png")
-                no-repeat center;
+              background-image: url("../img/product/产品-分布式数据中心/矩形 15.png");
               background-size: cover;
               display: none;
               border-radius: 14px;
@@ -951,7 +987,7 @@
                 .num {
                   font-size: 90px;
                   margin: 0 0 26px 0;
-                  font-family: Gilroy-Bold;
+                  font-family: Gilroy;
                   font-weight: normal;
                   color: rgba(239, 239, 239, 0);
                   line-height: 1;
@@ -1069,3 +1105,121 @@
     // margin-left: 120px;
   }
 }
+
+
+
+      .section.section3,.section.section5 {
+       
+.h1{
+margin-bottom: 4px!important;
+}
+
+.items{
+ strong {
+                  font-size: 46px;
+                  font-weight: normal;
+                }
+&.type1{
+box-sizing: border-box;
+padding:35px 15px 15px 32px!important;
+>.h3{margin:0!important;margin-bottom: 7px!important;display: block!important; }
+>p{margin:0!important;margin-right:10%!important;width:auto!important; }
+>span{
+right:15px!important;bottom:15px!important; 
+}
+.h4{
+// float: left!important;
+display: block!important;
+margin:0!important;
+}
+
+}
+
+&.type2{
+padding:10px 30px 8px!important ;
+box-sizing: border-box;
+>img{
+margin-right: 31px!important;
+}
+>.h4{
+font-weight: bold!important;
+margin-left: 0px!important;
+width: 45%!important;
+}
+.line{
+height: 32px!important;
+    margin: 0 8px!important;
+  }
+>.text{
+margin-left:5px!important;
+
+p{
+}
+.h3{
+line-height: 1.2!important;
+&:only-child{
+margin-bottom: 0!important;
+}
+// &:not(:only-child){
+// margin-bottom: 12px!important;
+// }
+}
+
+// width:50%!important;
+}
+}
+
+&.type3{
+padding:54px 26px!important;
+box-sizing: border-box;
+.h3{
+margin:0!important;
+margin-bottom:26px!important;
+}
+p{
+margin-right: 0!important;
+margin:0!important;
+width: 100%!important;
+}
+
+}
+
+}
+
+
+// .section_title{
+// .h1 {
+//               line-height: 1!important;
+//               margin: 0!important;
+//               font-size: 68px !important;
+// height: auto!important;
+// margin-bottom:5px!important;
+//             }
+
+//             .h4 {
+//               margin-top: 0!important;
+//               line-height: 1!important;
+//               font-size: 24px!important;
+//             }
+// }
+
+
+
+// .section_title2{
+// .h1 {
+//               line-height: 1!important;
+//               margin: 0!important;
+//              font-size: 15px!important;
+// height: auto!important;
+// margin-bottom:18px!important;
+//             }
+
+//             .h4 {
+// font-size: 30px!important;
+//               margin-top: 0!important;
+//               line-height: 1!important;
+//             }
+// }
+
+
+      }

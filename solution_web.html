@@ -42,24 +42,27 @@
   </head>
   <style>
     .banner {
-      background: url("./assets/img/solution/解决方案-web/图层 29.png")
-        no-repeat center;
-      background-size: cover;
+      background-image: url("./assets/img/solution/解决方案-web/web-pc-banner.jpg");
     }
 
     #byjs .wrapper .bottom {
-      background: url("./assets/img/solution/解决方案-web/150927753.png")
-        no-repeat center;
+      background-image: url("./assets/img/solution/解决方案-web/web-pc1.jpg")        ;
     }
+#byjs .ietms .h2{
+white-space: pre-line;
+font-size: 28px;
+line-height: 1.2;
+}
 
     #qkl .wrapper .bottom {
-      background: url("./assets/img/solution/解决方案-web/图层 29.png")
-        no-repeat center;
+      /* background-image: url("./assets/img/solution/解决方案-web/图层 29.png")        ; */
     }
     #rgzn .wrapper .bottom {
-      background: url("./assets/img/solution/解决方案-web/图层 33.png")
-        no-repeat center;
+      background-image: url("./assets/img/solution/解决方案-web/web-pc2.jpg")        ;
     }
+#byjs .top{
+border-bottom: 1px solid #c9ced6;
+}
     #byjs .wrapper .flex_between .img {
       margin-bottom: 45px;
     }
@@ -70,6 +73,35 @@
     #byjs .wrapper .bottom .card .d_wrp .btn {
       margin-top: 31px;
     }
+
+@media screen and (max-width: 750px) {
+    .banner {
+      background-image: url("./assets/img/solution/解决方案-web/web.jpg");
+    }
+
+    #byjs .wrapper .bottom {
+      background-image: url("./assets/img/solution/解决方案-web/web1.jpg")        ;
+    }
+#byjs .ietms .h2{
+white-space: normal;
+font-size: 19px!important;
+}
+ #byjs .wrapper .flex_between .img {
+      margin-bottom: 20px;
+    }
+
+
+    #qkl .wrapper
+{
+  padding-top: 78px;
+    padding-bottom: 35px;
+
+
+}
+    #rgzn .wrapper .bottom {
+      background-image: url("./assets/img/solution/解决方案-web/web2.jpg")        ;
+    }
+}
   </style>
 
   <body>
@@ -368,17 +400,16 @@
       <div class="banner section">
         <div class="wrapper">
           <div class="slogan">
-            <h1 class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0">
+            <div class="h1 wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0">
               解决方案
               <img src="./assets/img/solution/line.png" class="line" /> WEB3.0
-            </h1>
-            <h2
-              class="wow fadeInUp"
+            </div>
+            <div class="h2 wow fadeInUp"
               data-wow-duration=".8s"
               data-wow-delay="0.1"
             >
               Solution
-            </h2>
+           </div>
             <a
               href="javascript:;"
               onclick="click_scroll()"
@@ -429,14 +460,13 @@
           <div class="top">
             <div class="flex_between">
               <div class="left_tit">
-                <h1
-                  class="wow fadeInUp"
+                <div class="h1 wow fadeInUp"
                   data-wow-duration=".8s"
                   data-wow-delay=".1s"
                 >
                   <p>01</p>
                   <span>边缘计算</span>
-                </h1>
+                </div>
                 <p
                   class="desc wow fadeInUp"
                   data-wow-duration=".8s"
@@ -469,9 +499,9 @@
               <div class="icon">
                 <img src="./assets/img/solution/图层 5 拷贝.png" alt="" />
               </div>
-              <h2>
-                全国省会三大<br />运营商全域覆盖<span class="text1"></span>
-              </h2>
+              <div class="h2">全国省会三大
+运营商全域覆盖<span class="text1"></span>
+             </div>
             </div>
             <div
               class="ietms wow fadeInUp"
@@ -481,11 +511,11 @@
               <div class="icon">
                 <img src="./assets/img/solution/图层 18.png" alt="" />
               </div>
-              <h2>
-                秒级批量下发的、<br />安全稳定的边缘算力<span
+              <div class="h2">秒级批量下发的、
+安全稳定的边缘算力<span
                   class="text2"
                 ></span>
-              </h2>
+             </div>
             </div>
             <div
               class="ietms wow fadeInUp"
@@ -495,7 +525,8 @@
               <div class="icon">
                 <img src="./assets/img/solution/图层 19.png" alt="" />
               </div>
-              <h2>多边、边云的<br />全网链路优化<span class="text3"></span></h2>
+              <div class="h2">多边、边云的
+全网链路优化<span class="text3"></span></div>
             </div>
           </div>
           <div class="bottom">
@@ -506,7 +537,7 @@
             >
               <div class="d_wrp">
                 <p class="til">案例 Cases</p>
-                <h3>华栖云</h3>
+                <div class="h3">华栖云</div>
                 <p class="desc">
                   边缘计算为华栖云提供稳定可靠的计算和网络服务，具备弹性和分钟级交付能力，边缘就近收流、合流、转码、弹幕的架构，有效提升链路质量，降低骨干网络压力。
                 </p>
@@ -528,14 +559,13 @@
           <div class="top">
             <div class="flex_between">
               <div class="left_tit">
-                <h1
-                  class="wow fadeInUp"
+                <div class="h1 wow fadeInUp"
                   data-wow-duration=".8s"
                   data-wow-delay=".1s"
                 >
                   <p>02</p>
                   <span>区块链</span>
-                </h1>
+                </div>
                 <p
                   class="desc wow fadeInUp"
                   data-wow-duration=".8s"
@@ -568,7 +598,7 @@
               <div class="icon">
                 <img src="./assets/img/solution/图层 22.png" alt="" />
               </div>
-              <h2>高性能平台<span class="text1"></span></h2>
+              <div class="h2">高性能平台<span class="text1"></span></div>
               <p>
                 平台依托安迈云多年区块链行业研发经验，提供海量数据存储，具备万级
                 TPS 的处理能力。
@@ -582,7 +612,7 @@
               <div class="icon">
                 <img src="./assets/img/solution/图层 23.png" alt="" />
               </div>
-              <h2>安全可信<span class="text2"></span></h2>
+              <div class="h2">安全可信<span class="text2"></span></div>
               <p>
                 平台不仅从区块链底层实现了金融级别的隐私保护能力，在应用层也提供了对于企业身份、实人身份、内容安全等认证的能力。
               </p>
@@ -595,7 +625,7 @@
               <div class="icon">
                 <img src="./assets/img/solution/图层 24.png" alt="" />
               </div>
-              <h2>简单易用<span class="text3"></span></h2>
+              <div class="h2">简单易用<span class="text3"></span></div>
               <p>
                 快速的区块链部署能力、丰富的落地业务场景，极大减少客户的区块链投入成本。
               </p>
@@ -608,14 +638,13 @@
           <div class="top">
             <div class="flex_between">
               <div class="left_tit">
-                <h1
-                  class="wow fadeInUp"
+                <div class="h1 wow fadeInUp"
                   data-wow-duration=".8s"
                   data-wow-delay=".1s"
                 >
                   <p>03</p>
                   <span>人工智能</span>
-                </h1>
+                </div>
                 <p
                   class="desc wow fadeInUp"
                   data-wow-duration=".8s"
@@ -645,7 +674,7 @@
               <div class="icon">
                 <img src="./assets/img/solution/图层 22.png" alt="" />
               </div>
-              <h2>可视化调度<span class="text1"></span></h2>
+              <div class="h2">可视化调度<span class="text1"></span></div>
               <p>
                 提供可视化、可拖拽的任务编排和调度能力，提供包括数据连接、AI
                 服务、操作网关等组件，轻松实现多算法融合、多数据组件拼装和多业务服务组合，快速构建满足企业业务场景诉求的应用。
@@ -659,7 +688,7 @@
               <div class="icon">
                 <img src="./assets/img/solution/图层 23.png" alt="" />
               </div>
-              <h2>部署维护简单<span class="text2"></span></h2>
+              <div class="h2">部署维护简单<span class="text2"></span></div>
               <p>
                 以容器镜像方式部署，有效解决环境差异问题，降低平台维护成本。完全兼容
                 kubernetes
@@ -674,7 +703,7 @@
               <div class="icon">
                 <img src="./assets/img/solution/图层 24.png" alt="" />
               </div>
-              <h2>多数据接入<span class="text3"></span></h2>
+              <div class="h2">多数据接入<span class="text3"></span></div>
               <p>
                 为开发者提供多种数据接入的能力，支持完善的存储、汇总和分析等一站式服务，实现用户数据、设备数据与平台服务的全周期连接，便捷完成客户业务的数据分析，让数据从“看见”到“看懂”。
               </p>
@@ -688,7 +717,7 @@
             >
               <div class="d_wrp">
                 <p class="til">案例 Cases</p>
-                <h3>KODA</h3>
+                <div class="h3">KODA</div>
                 <p class="desc">
                   满足Koda机器狗的去中心化存储需求和深度学习需求。
                 </p>
@@ -709,7 +738,7 @@
         <div class="flex_center wrapper">
           <div class="left">
             <img src="./assets/img/solution/HELLO.png" alt="" />
-            <h2>与安迈云解决方案专家沟通</h2>
+            <div class="h2">与安迈云解决方案专家沟通</div>
             <p class="desc">
               安迈云致力于为您提供更加⾼效、更加专业的一站式解决⽅案，以及更加优质的定制化服务
             </p>
@@ -738,7 +767,7 @@
         <div class="contactModal">
           <a href="javascript:;" class="closeBtn"></a>
           <div class="wrap">
-            <h2 class="til">解决方案咨询</h2>
+            <div class="h2  til">解决方案咨询</div>
             <p class="dec">请您先填写一下基本信息，以便我们可以更好地服务您</p>
             <div class="concact_form">
               <section>
@@ -1129,23 +1158,26 @@
       })
 
       var st
-      function scrollNavIntoView(index) {
-        st && clearTimeout(st)
-        st = setTimeout(function () {
-          $($(".nav-wrap a").get(index)).get(0) &&
-            $($(".nav-wrap a").get(index))
-              .get(0)
-              .scrollIntoView({ behavior: "smooth" })
-        }, 100)
-      }
+      function scrollNavIntoView(index)
+{
+st && clearTimeout(st);
+st=setTimeout(function(){
+if($($(".nav-wrap a").get(index)).offset()){
+gsap.to("#nav-wrap",0.3,{scrollLeft:$("#nav-wrap").get(0).scrollLeft+$($(".nav-wrap a").get(index)).offset().left})
+}
+},100)
+}
 
       $(function () {
-        $("#nav-wrap").niceScroll({
-          cursorborder: "1px solid rgb(80,80,80,0.4)",
-          horizrailenabled: true,
-          autohidemode: false,
-          emulatetouch: true,
-        })
+        if(!isPhone  )
+          $("#nav-wrap").niceScroll({
+            cursorborder: "1px solid rgb(80,80,80,0.4)",
+            horizrailenabled: true,
+            autohidemode:"hidden",
+            emulatetouch: true,
+cursorcolor:"rgba(0,0,0,0)",
+cursorborder:"none"
+          })
       })
 
       // $(".nav-wrap").on("click", ".nav-mobile", function (e) {

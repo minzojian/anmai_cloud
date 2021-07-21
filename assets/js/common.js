@@ -63,6 +63,11 @@ Promise.all(
       style: { weight: "bold" },
     },
     {
+      fontFamily: "Gilroy",
+      src: `url(./assets/fonts/Gilroy-Medium-2.otf)`,
+      style: { weight: 500 },
+    },
+    {
       fontFamily: "OPPOSans",
       src: `url(./assets/fonts/OPPOSans-R.ttf)`,
       style: { weight: 400 },
@@ -71,6 +76,11 @@ Promise.all(
       fontFamily: "OPPOSans",
       src: `url(./assets/fonts/OPPOSans-M.ttf)`,
       style: { weight: 500 },
+    },
+    {
+      fontFamily: "OPPOSans",
+      src: `url(./assets/fonts/OPPOSans-B.ttf)`,
+      style: { weight: "bold" },
     },
   ].map(({ fontFamily, src, style }) => loadFont(fontFamily, src, style))
 ).then((fonts) => {
@@ -96,6 +106,12 @@ $(function () {
       "--contentpadding",
       window.contentPadding + "px"
     )
+
+ document.body.style.setProperty(
+      "--solutionright",
+      (window.innerWidth-$($(".header1 .nav>ul>li").get(2)).offset().left) + "px"
+    )
+
   })
   window.onePageHeight = Math.max(window.innerHeight, 640)
   document.body.style.setProperty("--fullheight", window.onePageHeight + "px")
@@ -109,6 +125,12 @@ $(function () {
     "--contentpadding",
     window.contentPadding + "px"
   )
+
+ document.body.style.setProperty(
+      "--solutionright",
+      (window.innerWidth-$($(".header1 .nav>ul>li").get(2)).offset().left) + "px"
+    )
+
 })
 
 function checkOs() {
@@ -118,6 +140,8 @@ function checkOs() {
     isAndroid = /(?:Android)/.test(ua),
     isFireFox = /(?:Firefox)/.test(ua),
     isChrome = /(?:Chrome|CriOS)/.test(ua),
+isXiaoMi = /(?:XiaoMi)/i.test(ua),
+isOnePlus = /(?:OnePlus|Vivo|One Plus)/i.test(ua),
     isWeixin =
       ua.match(/MicroMessenger/i) &&
       ua.match(/MicroMessenger/i)[0] == "micromessenger"
@@ -126,7 +150,12 @@ function checkOs() {
     (isAndroid && !/(?:Mobile)/.test(ua)) ||
     (isFireFox && /(?:Tablet)/.test(ua))),
     (isIPhone = /(?:iPhone)/.test(ua) && !isTablet),
-    (isPc = !isIPhone && !isAndroid && !isSymbian)
+    (isPc = !isIPhone && !isAndroid && !isSymbian);
+
+// var isSafari = ua.indexOf("Safari") > -1;
+  
+// // Discard Safari since it also matches Chrome
+// if ((isChrome) && (isSafari)) isSafari = false;
 
   window.isTablet = isTablet
   window.isIPhone = isIPhone
@@ -134,6 +163,15 @@ function checkOs() {
   window.isPc = isPc
   window.isPhone = !isPc
   window.isWeixin = isWeixin
+  window.isXiaoMi = isXiaoMi
+  window.isOnePlus = isOnePlus
+window.isSafari=false;//isSafari;
+
+setTimeout(function(){
+// if( window.isPhone )
+if( window.isPhone)
+    $(document.body).addClass('strange_os')
+},10)
 }
 
 checkOs()

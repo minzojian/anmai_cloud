@@ -24,7 +24,7 @@
   <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
   <script src="./assets/js/lib/jquery.nicescroll.min.js"></script>
 
-
+ <script src="./assets/js/lib/vframeplayer.min.js"></script>
   <script src="./assets/js/common.js"></script>
   
 
@@ -264,6 +264,8 @@
   <!-- main -->
   <main class="main-container">
     <section class="section banner">
+ <div id="stage1Player" class="fake_video frameplayer"  ></div>
+
       <video src="assets/media/about_banner.mp4" id="banner_video" class="banner_video"  muted="muted"
         autoplay="autoplay"
         loop="loop"
@@ -288,8 +290,8 @@
       <div class="wrapper">
         <div class="top_part">
           <div class="left_part">
-            <div class="title1">Company introduction</div>
-            <div class="title2">企业介绍</div>
+            <div class="title1">Company Profile</div>
+            <div class="title2">公司介绍</div>
           </div>
           <div class="right_part">
             <ul>
@@ -384,9 +386,9 @@
     </section>
     <section  id="xwdt" class="section section4">
       <div class="wrapper">
-        <div class="title1">What's News</div>
+        <div class="title1">What's New</div>
         <div class="title-part">
-          <div class="title2">企业最新动态</div>
+          <div class="title2">公司最新动态</div>
           <div class="right-part">
             <!-- <a class="active" href="#">全部</a>
             <a href="#">新闻</a>
@@ -449,14 +451,16 @@
     <section  id="rczp" class="section section5">
       <div class="sticky">
         <div class="top-part">
-          <!-- <div class="title1">Anmai Clound Recruitment</div> -->
+          <div class="title1">Career</div>
           <div class="title2">安迈云人才招聘</div>
-          <div class="title3"> <label for="job-pop-switch"><a class="fade">查看所有职位 <i
+          <div class="title3 not_mobile"> <label for="job-pop-switch"><a class="fade">查看所有职位 <i
                   class="iconfont icon-you"></i></a></label></div>
         </div>
         <div class="wrapper job-list-wraper">
           <div class="job-list">
           </div>
+ <div class="title3 mobile bottom-seemore"> <label for="job-pop-switch"><a class="fade">查看所有职位 <i
+                  class="iconfont icon-you"></i></a></label></div>
         </div>
         <input id="job-pop-switch" type="checkbox" hidden onchange="handlePopUpDisplay(event)" />
         <div class="all-job-popup-container">
@@ -465,7 +469,7 @@
             <label for="job-pop-switch" class="p-closebt"><a> <i class="iconfont icon-close"></i></a></label>
             <div class="p-wrapper">
               <div class="list-wrapper">
-                <div class="p-top-part">所有岗位 (23个)</div>
+                <div class="p-top-part">所有岗位 (6个)</div>
                 <ul class="job-list-ul">
                   <!-- <li class="p-job-item">
                 <div class="l-j-title">K8S运维工程师</div>
@@ -509,7 +513,7 @@
         <div class=" bottom-part-wrapper">
           <div class="item">
             <div class="sub-top-part"><i class="iconfont icon-weizhi"></i>ADD</div>
-            <div class="sub-bottom-part">海南省省直辖县行政单位澄迈县老城镇高新技术产业 示范区海南生态软件园A7幢二层3001 </div>
+            <div class="sub-bottom-part">海南省省直辖县行政单位澄迈县老城镇高新技术产业示范区海南生态软件园A7幢二层3001 </div>
           </div>
           <div class="item">
             <div class="sub-top-part"><i class="iconfont icon-youjian"></i>MAIL</div>
@@ -805,6 +809,28 @@ scrollWheel:false
       map.add(marker)
     }
 
+
+
+if(isPhone)
+{
+var imgs=[]
+for(var i=0;i<191;i++)
+{
+
+var num='00000'.slice(0,-String(i).length)+i;
+
+imgs.push('assets/media/about_banner_frames/f_'+num+'.jpg');
+}
+
+var framePlayer = new vFramePlayer({
+    dom : document.getElementById("stage1Player"),
+    imgArr : imgs,
+fps:12,
+useCanvas:true,
+loop:-1,
+});
+framePlayer.play()
+}
    
 
     new WOW().init()
@@ -1043,11 +1069,18 @@ change_new_type(selectedTypeIndex);
 
 
 
-
+if(!isPhone)
+{
       window.nice = $(".all-job-popup-container ul").niceScroll({
         cursorcolor: "#EEEEEE",
         autohidemode: false
       })
+}
+else{
+window.nice ={resize:function(){},doScrollPos:function(pos){
+$(".all-job-popup-container ul").scrollTop(pos.top);
+}}
+}
 
 
       jobs.forEach(function (job, i) {
@@ -1117,8 +1150,8 @@ change_new_type(selectedTypeIndex);
                   </div>
                   <div class="l-j-right-part"><i class="iconfont icon-youjian"></i>简历投送：<a href="mailto:Jobs@anmaicloud.com">Jobs@anmaicloud.com</a></div>
                 </div>
- <div class="l-j-desc-part">
-${["岗位职责:", job[5], "", '任职要求:', job[6], "", bouns].join(`
+<div class="divider"></div>
+ <div class="l-j-desc-part">${["岗位职责:", job[5], "", '任职要求:', job[6], "", bouns].join(`
 `)}
 </div>
               </li> 
@@ -1142,62 +1175,62 @@ breakAt: {
 
 
 
-ScrollTrigger.matchMedia({
+// ScrollTrigger.matchMedia({
 	
-  // desktop
-  "(min-width: 751px)": function() {
-gsap.fromTo(
-          ".section5 .job-list-wraper",
-          1,
-          {},
-          {
-            // scrollTo: $(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight()+350 ,
-            immediateRender: false,
+//   // desktop
+//   "(min-width: 751px)": function() {
+// gsap.fromTo(
+//           ".section5 .job-list-wraper",
+//           1,
+//           {},
+//           {
+//             // scrollTo: $(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight()+350 ,
+//             immediateRender: false,
 
-            scrollTrigger: {
-              trigger: ".section5",
-              //pin: true, // pin the trigger element while active
-              start: "+=" + 0.2 * window.onePageHeight, // when the top of the trigger hits the top of the viewport
-              end: "+=" + 1 * window.onePageHeight, // end after scrolling 500px beyond the start
-              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              // markers: true,
-              id: "44414",
-              onUpdate: function (self) {
+//             scrollTrigger: {
+//               trigger: ".section5",
+//               //pin: true, // pin the trigger element while active
+//               start: "+=" + 0.2 * window.onePageHeight, // when the top of the trigger hits the top of the viewport
+//               end: "+=" + 1 * window.onePageHeight, // end after scrolling 500px beyond the start
+//               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+//               // markers: true,
+//               id: "44414",
+//               onUpdate: function (self) {
 
-                $(".section5 .job-list-wraper").get(0).scrollTop = ($(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight() + 350) * self.progress
-              }
-            },
-          }
-        )
-$(".section5").height(2.4 * window.onePageHeight)
-},
-"(max-width: 750px)": function() {
-gsap.fromTo(
-          ".section5 .job-list-wraper",
-          1,
-          {},
-          {
-            // scrollTo: $(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight()+350 ,
-            immediateRender: false,
+//                 $(".section5 .job-list-wraper").get(0).scrollTop = ($(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight() + 350) * self.progress
+//               }
+//             },
+//           }
+//         )
+// $(".section5").height(2.4 * window.onePageHeight)
+// },
+// "(max-width: 750px)": function() {
+// gsap.fromTo(
+//           ".section5 .job-list-wraper",
+//           1,
+//           {},
+//           {
+//             // scrollTo: $(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight()+350 ,
+//             immediateRender: false,
 
-            scrollTrigger: {
-              trigger: ".section5",
-              //pin: true, // pin the trigger element while active
-              start: "+=" + 350, // when the top of the trigger hits the top of the viewport
-              end: "+=" + ($(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight() ), // end after scrolling 500px beyond the start
-              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              // markers: true,
-              id: "44414",
-              onUpdate: function (self) {
+//             scrollTrigger: {
+//               trigger: ".section5",
+//               //pin: true, // pin the trigger element while active
+//               start: "+=" + 350, // when the top of the trigger hits the top of the viewport
+//               end: "+=" + ($(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight() ), // end after scrolling 500px beyond the start
+//               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+//               // markers: true,
+//               id: "44414",
+//               onUpdate: function (self) {
 
-                $(".section5 .job-list-wraper").get(0).scrollTop = ($(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight()+350 ) * self.progress
-              }
-            },
-          }
-        )
-$(".section5").height($(".section5 .job-list").innerHeight() +window.onePageHeight)
-}
-})
+//                 $(".section5 .job-list-wraper").get(0).scrollTop = ($(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight()+350 ) * self.progress
+//               }
+//             },
+//           }
+//         )
+// $(".section5").height($(".section5 .job-list").innerHeight() +500)
+// }
+// })
 
 
         
@@ -1246,8 +1279,18 @@ ScrollTrigger.refresh()
       $(".detail-wrapper").removeClass('show');
       window.nice.resize();
     }
-if(location.hash)
+
+setTimeout(
+function(){
+if(location.hash){
+if(location.hash=='#lxfs')
+$('#lxfs .top-part .title1').get(0).scrollIntoView()
+else
 $(location.hash).get(0).scrollIntoView()
+}
+},500
+)
+
 
 
 

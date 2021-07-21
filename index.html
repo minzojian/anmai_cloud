@@ -12,7 +12,6 @@
       href="http://static-1251577693.cos.ap-chengdu.myqcloud.com/projects/h5/anmai_cloud_mobile/"
     /> -->
 
-
     <title>
       专注于IPFS去中心化云计算_web3.0企业级分布式云存储计算_『安迈云』
     </title>
@@ -60,6 +59,7 @@
     </script>
     <script type="text/javascript" src="./assets/js/common.js"></script>
 
+    <script src="./assets/js/lib/vframeplayer.min.js"></script>
     <!-- <script src="https://unpkg.com/vconsole/dist/vconsole.min.js"></script>
     <script>
       // VConsole will be exported to `window.VConsole` by default.
@@ -371,19 +371,36 @@
 
     <div class="stage1">
       <div class="sticky">
+<!-- <img class='fake_video' src='assets/img/图层 454.png' /> -->
+
+ <div id="stage1Player" class="fake_video frameplayer"  ></div>
+
         <video
           class="bg_video"
           id="myVideo"
-          ontimeupdate="handleVideoPlaying(event)"
-          muted="muted"
-          autoplay="autoplay"
-          playsinline=""
-          webkit-playsinline=""
+          webkit-playsinline="true"
+          x-webkit-airplay="true"
           x5-video-player-type="h5"
+          x5-video-orientation="h5"
+          muted
+          autoplay
+          defaultMuted
+          playsinline
+          oncontextmenu="return false;"
+          preload="none"
+          src="assets/media/stage1.mp4"
         >
-          <!-- <source id="myVideo_src" type="video/mp4" /> -->
+          <source
+            id="myVideo_src"
+            src="assets/media/stage1.mp4"
+            type="video/mp4"
+          />
+          <!-- <source
+            id="myVideo_src2"
+            src="assets/media/stage1_mobile.webm"
+            type="video/webm"
+          /> -->
         </video>
-        <!-- <video id="index-hero-video" src="https://site-videos.oss-cn-chengdu.aliyuncs.com/fta/index/hero.mp4" muted="muted" autoplay="autoplay" loop="loop" playsinline="" webkit-playsinline="" class="video autoplay-video"></video> -->
 
         <div class="left-progress state1">
           <div class="trunk"></div>
@@ -416,6 +433,11 @@
         </div>
         <div class="title3_mask"></div>
         <div class="page_content title_part title3 state1">
+<div class="sub_part_title">
+                  <span>企业里程碑</span>
+                  <span>Milestone</span>
+                </div>
+
           <div class="inner_scroll_warpper"></div>
         </div>
       </div>
@@ -491,14 +513,6 @@
               `<div class="sub_part">
               <div class="left-part">
                 <div class="divider"></div>
-                ${
-                  yindex == 0 && mIndex == 0
-                    ? `<div class="sub_part_title">
-                  <span>企业里程碑</span>
-                  <span>milestone</span>
-                </div>`
-                    : ``
-                }
 
                 <div class="sub_part_content">
 ${monthData.items
@@ -549,10 +563,10 @@ ${
                   </defs>
                   <text
                     class="side-title"
+                    y="100"
                     stroke-width="2"
                     stroke="url(#gradient)"
                     fill="none"
-                    style="transform: translateY(calc(100% - 4px))"
                   >
                     ${yearData.year}
                   </text>
@@ -578,7 +592,7 @@ ${
                     stroke-width="2"
                     stroke="url(#gradient)"
                     fill="none"
-                    style="transform: translateY(calc(100% - 4px))"
+y="100"
                   >
                     ${monthData.month}
                   </text>
@@ -589,13 +603,36 @@ ${
           })
         })
       }
-      myVideo.src = isPhone
-        ? "assets/media/stage1_mobile.mp4"
-        : "assets/media/stage1.mp4"
+      // myVideo.src = isPhone
+      //   ? "assets/media/stage1_mobile.mp4"
+      //   : "assets/media/stage1.mp4"
 
       // myVideo_src.src = isPhone
       //   ? "assets/media/stage1_mobile.mp4"
       //   : "assets/media/stage1.mp4"
+
+if(isPhone)
+{
+var imgs=[]
+for(var i=0;i<115;i++)
+{
+
+var num='00000'.slice(0,-String(i).length)+i;
+
+imgs.push('assets/media/stage1_frames/a_'+num+'.jpg');
+}
+
+var framePlayer = new vFramePlayer({
+    dom : document.getElementById("stage1Player"),
+    imgArr : imgs,
+fps:12,
+useCanvas:true,
+loop:-1,
+});
+framePlayer.play()
+}
+
+
       var lastScroll = window.pageYOffset
       var isMouseWheel = false
       var isEnterStage1 = true
@@ -839,38 +876,8 @@ ${
           }
         )
 
-        // createTween(
-        //   ".title2",
-        //   getScrollYByVideo(1).top,
-        //   {
-        //     // translateY: 0, opacity: 1
-        //   },
-        //   {
-        //     delay: getScrollYByVideo(18.5).top,
-        //     // translateY: -30,
-        //     // opacity: 0,
-        //     ease: Linear.easeNone,
-        //     immediateRender: false,
-        //     onComplete: function () {
-        //       //$(".title_part").addClass("state3")
-        //       this.targets().forEach((elem) => {
-        //         elem.classList.remove("state1")
-        //         elem.classList.remove("state2")
-        //         elem.classList.add("state3")
-        //       })
-        //     },
-        //     onReverseComplete: function () {
-        //       //$(".title_part").addClass("state3")
-        //       this.targets().forEach((elem) => {
-        //         elem.classList.remove("state1")
-        //         elem.classList.remove("state3")
-        //         elem.classList.add("state2")
-        //       })
-        //     },
-        //   }
-        // ),
 
-        if (!isPhone) {
+        // if (!isPhone) {
           createTween(
             ".title3_mask",
             getScrollYByVideo(1).top,
@@ -942,89 +949,8 @@ ${
               },
             }
           )
-        }
+        // }
 
-        // createTween(
-        //   ".title3",
-        //   getScrollYByVideo(1).top,
-        //   {
-        //     //  translateY: 30, opacity: 0
-        //   },
-        //   {
-        //     delay: getScrollYByVideo(19).top,
-        //     // translateY: 0,
-        //     // opacity: 1,
-        //     // ease: Linear.easeNone,
-        //     immediateRender: false,
-        //     onStart: function () {
-        //       // $(".left-progress").removeClass("state1")
-        //       // $(".left-progress").removeClass("state2")
-        //       // $(".left-progress").addClass("state3")
-        //     },
-        //     onComplete: function () {
-        //       //$(".title_part").addClass("state3")
-
-        //       this.targets().forEach((elem) => {
-        //         elem.classList.add("state2")
-        //         elem.classList.remove("state1")
-        //         elem.classList.remove("state3")
-        //       })
-        //     },
-        //     onReverseComplete: function () {
-        //       //$(".title_part").addClass("state3")
-        //       this.targets().forEach((elem) => {
-        //         elem.classList.remove("state2")
-        //         elem.classList.remove("state3")
-        //         elem.classList.add("state1")
-        //       })
-        //     },
-        //   }
-        // ),
-
-        //   createTween(
-        //     ".title3", // { v: 0 },
-        //     2 * window.onePageHeight,
-        //     {
-        //       scrollTo: 0,
-        //       //  translateY: 30, opacity: 0
-        //     },
-        //     {
-        //       delay: getScrollYByVideo(20).top,
-        //       // v: $(".inner_scroll_warpper").height() - $(".title3").height(),
-        //       scrollTo:
-        //         $(".inner_scroll_warpper").height() - $(".title3").height(),
-        //       // translateY: 0,
-        //       // opacity: 1,
-        //       // ease: Linear.easeNone,
-        //       immediateRender: false,
-        //       onUpdate: function () {
-        //         // console.log(
-        //         //   // this.targets()[0].v,
-        //         //   $(".title3").get(0).scrollTop,
-        //         //   "vvvvvv"
-        //         // )
-        //         // gsap.to(".title3", 0.6, { scrollTo: this.targets()[0].v })
-        //       },
-        //     }
-        //   ),
-        // ])
-
-        // tween.add([gsap.to("body", getScrollYByVideo(5).top, {})])
-
-        // var scene = new ScrollMagic.Scene({
-        //   triggerHook: "0",
-        //   triggerElement: ".stage1",
-        //   duration: getScrollYByVideo(10).top,
-        // })
-        //   .addIndicators({ name: "first11111" })
-        //   .addTo(controller)
-
-        // var scene = new ScrollMagic.Scene({
-        //   triggerHook: "0",
-        //   triggerElement: ".stage1",
-        //   duration: getScrollYByVideo(20).top,
-        // })
-        //   .setTween(tween)
 
         var tl = gsap.timeline({
           // yes, we can add it to an entire timeline!
@@ -1163,41 +1089,7 @@ ${
           }
         )
 
-        // var tween2 = createTimeline()
-        // tween2.add([
-        //   createTween(
-        //     ".title3", // { v: 0 },
-        //     window.onePageHeight,
-        //     {
-        //       // scrollTo: 0,
-        //       //  translateY: 30, opacity: 0
-        //     },
-        //     {
-        //       // delay: 5.5 * window.onePageHeight,
-        //       // v: $(".inner_scroll_warpper").height() - $(".title3").height(),
-        //       // scrollTo:
-        //       //   $(".inner_scroll_warpper").height() - $(".title3").height(),
-        //       // translateY: 0,
-        //       // opacity: 1,
-        //       // ease: Linear.easeNone,
-        //       immediateRender: false,
-        //       onUpdate: function (self) {
-        //         $(".title3").get(0).scrollTop =
-        //           ($(".inner_scroll_warpper").height() -
-        //             $(".title3").height()) *
-        //           self.progress
-        //         // console.log(
-        //         //   // this.targets()[0].v,
-        //         //   $(".title3").get(0).scrollTop,
-        //         //   "vvvvvv"
-        //         // )
-        //         // gsap.to(".title3", 0.6, { scrollTo: this.targets()[0].v })
-        //       },
-        //     }
-        //   ),
-        // ])
-        // tween2.add([gsap.to("body", window.onePageHeight, {})])
-        if (!isPhone) {
+        // if (!isPhone) {
           gsap.timeline({
             // yes, we can add it to an entire timeline!
             scrollTrigger: {
@@ -1226,23 +1118,9 @@ ${
               },
             },
           })
-        }
+        // }
         // .add(tween2)
 
-        // var scene2 = new ScrollMagic.Scene({
-        //   triggerHook: "0",
-        //   triggerElement: ".stage1",
-        //   duration: 1 * window.onePageHeight,
-        //   offset: getScrollYByVideo(20).top,
-        // })
-        //   .setTween(tween2)
-        //   // .setPin(".landing-section")
-        //   .addIndicators({ name: "first2" }) // add indicators (requires plugin)
-        //   .addTo(controller)
-        //   .on("progress", function (progEvent) {
-        //     // console.log(window.pageYOffset / window.onePageHeight)
-        //     // myVideo.currentTime = 66 * progEvent.progress
-        //   })
 
         function pausePlayVideo() {
           // myVideo.paused = true
@@ -1269,18 +1147,9 @@ ${
 
           clearTimeout(mouseWheelTimer2)
           mouseWheelTimer2 = setTimeout(function () {
-            $(nice.autohidedom).addClass("hide")
+            nice && $(nice.autohidedom).addClass("hide")
           }, 2000)
 
-          // if (learnCycleSwitch.checked) {
-          //   // if((window.pageYOffset+ event.deltaY)>=window.onePageHeight * 11 || (window.pageYOffset+ event.deltaY)<=window.onePageHeight * 9)
-          //     event.preventDefault()
-
-          // var s = Math.max(Math.min(window.pageYOffset+ event.deltaY, window.onePageHeight * 11), window.onePageHeight * 9)
-          //   window.scrollTo({ top: s });
-
-          // // window.scrollTo({ top: window.pageYOffset + event.deltaY,behavior: "smooth" });
-          // }
         }
 
         window.addEventListener("wheel", wheeled, {
@@ -1291,26 +1160,30 @@ ${
         // there are other wheel events in the code that adjust the scroll position
         // window.addEventListener('scroll', scrolled, { passive: true })
 
-        if (isPhone) {
-          $(".title3").hide()
-          $(".title3_mask").hide()
-        }
+        // if (isPhone) {
+          // $(".title3").hide()
+          // $(".title3_mask").hide()
+        // }
 
         $(window).resize(function () {
           $(".stage1").height(
             getScrollYByVideo(20).top +
-              (isPhone
-                ? 1 * window.onePageHeight
-                : 1 * window.onePageHeight +
+              (
+// isPhone
+//                 ? 1 * window.onePageHeight
+//                 : 
+1 * window.onePageHeight +
                   ($(".inner_scroll_warpper").height() - $(".title3").height()))
           )
         })
 
         $(".stage1").height(
           getScrollYByVideo(20).top +
-            (isPhone
-              ? 1 * window.onePageHeight
-              : 1 * window.onePageHeight +
+            (
+// isPhone
+//               ? 1 * window.onePageHeight
+//               : 
+1 * window.onePageHeight +
                 ($(".inner_scroll_warpper").height() - $(".title3").height()))
         )
       })
@@ -1857,43 +1730,39 @@ ${
             $(".stage2_pc").height(getStage2Height(1))
           },
           "(max-width: 750px)": function () {
-            // gsap.fromTo(
-            //   ".stage2_mobile .bussinenss_content_wrapper",
-            //   1,
-            //   {},
-            //   {
-            //     // scrollTo: $(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight()+350 ,
-            //     immediateRender: false,
-            //     scrollTrigger: {
-            //       trigger: ".stage2_mobile",
-            //       //pin: true, // pin the trigger element while active
-            //       start: "+=" + 150, // when the top of the trigger hits the top of the viewport
-            //       end:
-            //         "+=" +
-            //         ($(".stage2_mobile .bussiness_content").innerHeight() -
-            //           $(
-            //             ".stage2_mobile .bussinenss_content_wrapper"
-            //           ).innerHeight()), // end after scrolling 500px beyond the start
-            //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-            //       // markers: true,
-            //       id: "44414",
-            //       onUpdate: function (self) {
-            //         $(".stage2_mobile .bussinenss_content_wrapper").get(
-            //           0
-            //         ).scrollTop =
-            //           ($(".stage2_mobile .bussiness_content").innerHeight() -
-            //             $(
-            //               ".stage2_mobile .bussinenss_content_wrapper"
-            //             ).innerHeight() +
-            //             150) *
-            //           self.progress
-            //       },
-            //     },
-            //   }
-            // )
-            // $(".stage2_mobile").height(
-            //   $(".stage2_mobile .bussiness_content").innerHeight() + 150
-            // )
+            gsap.set(".stage2_mobile .pic_part", { opacity: 0, translateY: 20 })
+            ScrollTrigger.batch(".stage2_mobile .pic_part", {
+              onEnter: (elements, triggers) => {
+                gsap.to(elements, {
+                  delay: 0.5,
+                  opacity: 1,
+                  translateY: 0,
+                })
+              },
+              // onLeave: (elements, triggers) => {
+              //   gsap.to(elements, { opacity: 0, translateY: 10, stagger: 0.15 })
+              //   console.log(elements.length, "elements left")
+              // },
+            })
+
+            gsap.set(".stage2_mobile .bussiness_sub_item ", {
+              opacity: 0,
+              translateY: 20,
+            })
+            ScrollTrigger.batch(".stage2_mobile .bussiness_sub_item ", {
+              onEnter: (elements, triggers) => {
+                gsap.to(elements, {
+                  delay: 0.5,
+                  opacity: 1,
+                  translateY: 0,
+                })
+              },
+              // onLeave: (elements, triggers) => {
+              //   gsap.to(elements, { opacity: 0, translateY: 10, stagger: 0.15 })
+              //   console.log(elements.length, "elements left")
+              // },
+            })
+
           },
         })
 
@@ -1924,17 +1793,20 @@ ${
       })
     </script>
     <div class="stage3">
+<div id='earthVideoPlayer' class='bg_video fake_video'  ></div>
       <video
         id="earthVideo"
-        muted="muted"
-        autoplay="autoplay"
-        loop="loop"
         webkit-playsinline="true"
         x-webkit-airplay="true"
         playsinline="true"
         x5-video-player-type="h5"
         x5-video-orientation="h5"
-        preload="auto"
+        muted
+        loop
+        defaultMuted
+        playsinline
+        oncontextmenu="return false;"
+        preload="none" src="assets/media/3d-Earth.mp4"
       ></video>
       <div class="padding_area"></div>
       <div class="page_content flex jc-between">
@@ -2003,6 +1875,13 @@ x5-video-player-type="h5"
               <li><a href="#" style="pointer-events: none">披风</a></li>
               <li><a href="#" style="pointer-events: none">纽约</a></li>
             </ul>
+<ul>
+              <li><a href="#" style="pointer-events: none">温哥华</a></li>
+              <li><a href="#" style="pointer-events: none">洛杉矶</a></li>
+              <li><a href="#" style="pointer-events: none">芝加哥</a></li>
+              <li><a href="#" style="pointer-events: none">华盛顿</a></li>
+              <li><a href="#" style="pointer-events: none">堪培拉</a></li>
+            </ul>
             <ul>
               <li><a href="#" style="pointer-events: none">曼彻斯特</a></li>
               <li><a href="#" style="pointer-events: none">中国台北</a></li>
@@ -2030,9 +1909,34 @@ x5-video-player-type="h5"
       $(function () {
         /////////////STAGE3/////////////
 
-        earthVideo.src = isPhone
-          ? "assets/media/3d-Earth-Mobile.mp4"
-          : "assets/media/3d-Earth.mp4"
+        // earthVideo.src = isPhone
+        //   ? "assets/media/3d-Earth-Mobile.mp4"
+        //   : "assets/media/3d-Earth.mp4"
+
+
+if(isPhone)
+{
+
+var imgs=[]
+for(var i=0;i<193;i++)
+{
+
+var num='00000'.slice(0,-String(i).length)+i;
+
+imgs.push('assets/media/3d-Earth-Mobile_frames/g_'+num+'.jpg');
+}
+
+
+var framePlayer = new vFramePlayer({
+    dom : document.getElementById("earthVideoPlayer"),
+    imgArr : imgs,
+fps:12,
+useCanvas:true,
+loop:-1,
+});
+framePlayer.play()
+}
+
 
         // $(window).on("touchStart", function () {
         //   earthVideo.play()
@@ -2309,12 +2213,14 @@ x5-video-player-type="h5"
       //   Stickyfill.add(elements)
     </script>
     <div class="overview">
+      <!-- <div class="video_mask"></div> -->
       <div class="mouse flex fd-c ai-center">
         <span>scroll</span>
         <div class="round flex jc-center">
           <div class="dot"></div>
         </div>
       </div>
+      <div class="arrow-down mobile"><img src="./assets/img/Arrow.svg" /></div>
     </div>
     <!-- <div class="controls">
       <div onclick="myVideo.pause()">pause</div>
@@ -2323,10 +2229,12 @@ x5-video-player-type="h5"
     <script>
       var nice = undefined
       $(function () {
-        nice = $("body").niceScroll({
-          cursorborder: "1px solid rgb(80,80,80,0.4)",
-          horizrailenabled: false,
-        })
+        // if (!isPhone && !isSafari) {
+        //   nice = $("body").niceScroll({
+        //     cursorborder: "1px solid rgb(80,80,80,0.4)",
+        //     horizrailenabled: false,
+        //   })
+        // }
 
         ////////////////header
 
@@ -2522,6 +2430,12 @@ x5-video-player-type="h5"
       })
 
       $(function () {
+        // $(".video_mask").on("mousedown", function () {
+        //   myVideo.play()
+        //   earthVideo.play()
+        //   $(".video_mask").addClass("hide")
+        // })
+
         ScrollTrigger.matchMedia({
           "(min-width: 751px)": function () {
             ScrollTrigger.create({
@@ -2557,6 +2471,27 @@ x5-video-player-type="h5"
               id: "header",
               markers: false,
             })
+
+            gsap.to(".arrow-down", 1, {
+              translateY: 10,
+              repeat: -1,
+              yoyo: true,
+              repeatDelay: 0.5,
+            })
+
+            ScrollTrigger.create({
+              trigger: "footer",
+              start: "-50 bottom",
+              end: "+=50",
+              onEnter: function () {
+                $(".arrow-down").addClass("hide")
+              },
+              onLeaveBack: function () {
+                $(".arrow-down").removeClass("hide")
+              },
+              id: "header11",
+              markers: false,
+            })
           },
         })
       })
@@ -2586,7 +2521,26 @@ x5-video-player-type="h5"
           },
           false
         )
+
+        if (isPhone) {
+          recheckVideoPlay()
+        }
       })
+
+      function recheckVideoPlay() {
+        if (myVideo && myVideo.paused) {
+          try {
+            myVideo.muted = true
+            myVideo.play()
+            earthVideo.muted = true
+            earthVideo.play()
+          } catch (err) {
+            setTimeout(recheckVideoPlay, 1000)
+          }
+        } else {
+          setTimeout(recheckVideoPlay, 1000)
+        }
+      }
     </script>
   </body>
 </html>

@@ -36,16 +36,24 @@
 
     <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
     <script src="./assets/js/common.js"></script>
+ <script src="./assets/js/lib/vframeplayer.min.js"></script>
   </head>
   <style>
     body {
       background: rgb(25, 36, 45);
     }
     .page-main .main-container .banner {
-      background: url("./assets/img/product/banner.png") no-repeat center;
+      background-image: url("./assets/img/product/banner.png") ;
       background-size: cover;
       background-position-y: top;
     }
+
+@media screen and (max-width: 750px) {
+ .page-main .main-container .banner {
+      background-image: url("./assets/img/product/banner_mobile.jpg") ;
+ }
+}
+
   </style>
   <body>
     <div class="page-main">
@@ -416,7 +424,7 @@
                     <h2>01</h2>
                     <div class="contents">
                       <img src="./assets/img/product/87.gif" alt="" />
-                      <h4>在线存储</h4>
+                      <div class='h4'>在线存储</div>
                       <p>
                         支持一键上传、拖拽等方式上传；存储状态即时可查，本地数据轻松上云
                       </p>
@@ -428,7 +436,7 @@
                     <h2>02</h2>
                     <div class="contents">
                       <img src="./assets/img/product/88.gif" alt="" />
-                      <h4>API对接</h4>
+                      <div class='h4'>API对接</div>
                       <p>
                         开放API接口；可视化调试、在线命令行工具助你完成进阶操作
                       </p>
@@ -440,7 +448,7 @@
                     <h2>03</h2>
                     <div class="contents">
                       <img src="./assets/img/product/89.gif" alt="" />
-                      <h4>应用SDK</h4>
+                      <div class='h4'>应用SDK</div>
                       <p>
                         提供Java、Python、C等多语言SDK，完成二次开发;有效提升效率和性能
                       </p>
@@ -452,7 +460,7 @@
                     <h2>04</h2>
                     <div class="contents">
                       <img src="./assets/img/product/90.gif" alt="" />
-                      <h4>离线存储</h4>
+                      <div class='h4'>离线存储</div>
                       <p>
                         无惧带宽，通过专属定制化硬件设备，实现PB等量级数据迁移上云
                       </p>
@@ -464,7 +472,7 @@
                     <h2>05</h2>
                     <div class="contents">
                       <img src="./assets/img/product/3.gif" alt="" />
-                      <h4>EASY NFT</h4>
+                      <div class='h4'>EASY NFT</div>
                       <p>
                         面向Web3.0，支持连接多个应用程序和自动化任务平台，帮NFT开发者轻松接入IPFS网络
                       </p>
@@ -476,6 +484,7 @@
           </div>
         </section>
         <div class="section section3">
+<img  class='fake_video' src='assets/img/product/beijing.jpg' />
           <video
             class="video_bg"
             muted="muted"
@@ -491,78 +500,78 @@
           ></video>
           <div class="wrapper">
             <div
-              class="left wow fadeInLeft"
+              class="left wow fadeInLeft section_title"
               data-wow-duration="1s"
               data-wow-delay=".3s"
             >
-              <h1>Data</h1>
-              <h4>构建去中心化数据仓库</h4>
+              <div class="h1">Data</div>
+              <div class='h4'>构建去中心化数据仓库</div>
             </div>
             <div class="right">
               <div class="c_left">
                 <div
-                  class="top_item wow fadeInUp items"
+                  class="top_item wow fadeInUp items  type1"
                   data-wow-duration="1s"
                   data-wow-delay=".1s"
                 >
-                  <h3>全链路校验</h3>
+                  <div class='h3'>全链路校验</div>
                   <p>最安全的全链路数据校验机制</p>
-                  <span>Full link verification</span>
+                  <span>Full Link Verification</span>
                 </div>
                 <div
-                  class="mid_item wow fadeInUp items"
+                  class="mid_item wow fadeInUp items type2"
                   data-wow-duration="1s"
                   data-wow-delay=".2s"
                 >
-                  <h4>较标准存储成本</h4>
-                  <div class="line"></div>
+                  <div class='h4'>较标准存储成本</div>
+                  <div class="line"  ></div>
                   <div class="text">
                     <p>最高节省</p>
-                    <h3>70%</h3>
+                    <div class='h3'>70%</div>
                   </div>
                 </div>
                 <div
-                  class="bottom_item wow fadeInUp items"
+                  class="bottom_item wow fadeInUp items type1"
                   data-wow-duration="1s"
                   data-wow-delay=".3s"
                 >
-                  <h3>IPFS技术与应用</h3>
+                  <div class='h3'>IPFS技术与应用</div>
                   <p>基于区块链技术与IPFS结合，实现不可篡改的数据存储</p>
-                  <span>IPFS and Application</span>
+                  <span>IPFS And Application</span>
                 </div>
               </div>
               <div class="c_rirht">
                 <div
-                  class="top_item wow fadeInUp items"
+                  class="top_item wow fadeInUp items type2"
                   data-wow-duration="1s"
                   data-wow-delay=".15s"
                 >
                   <div class="s_wrapper">
                     <div class="flex_block">
-                      <h3>数据<br />可靠性</h3>
+                      <div class='h3'>数据<br />可靠性</div>
                       <div class="line"></div>
                       <p>全球多区域基建部署<br />可靠度高达99.9999%</p>
                     </div>
-                    <h4>99.9999%</h4>
+                    <div class='h4'>99.9999%</div>
                   </div>
                 </div>
                 <div
-                  class="mid_item wow fadeInUp items"
+                  class="mid_item wow fadeInUp items type1"
                   data-wow-duration="1s"
                   data-wow-delay=".25s"
                 >
-                  <h3>存储工具与API</h3>
-                  <p>提供去中心化存储工具与 API接口</p>
-                  <span>Storage tools and API</span>
+                  <div class='h3'>存储工具与API</div>
+                  <p>提供去中心化存储工具与API接口</p>
+                  <span>Storage Tools And API</span>
                 </div>
                 <div
-                  class="bottom_item wow fadeInUp items"
+                  class="bottom_item wow fadeInUp items type2"
                   data-wow-duration="1s"
                   data-wow-delay=".35s"
                 >
                   <img src="./assets/img/product/cloud.png" alt="" />
                   <div class="text">
-                    <h3>弹性数据扩容</h3>
+                    <div class='h3'>弹性数据扩容</div>
                     <p>依托IPFS网络和技术支持数据弹性扩容</p>
                   </div>
                 </div>
@@ -572,6 +581,7 @@
         </div>
 
         <section id="locations" class="section section4">
+<div id='earthVideoPlayer' class='bg_video fake_video'  ></div>
           <video
             id="earthVideo"
             muted="muted"
@@ -594,8 +604,8 @@
               ></video> -->
             </div>
             <div class="city">
-              <div class="title1">Global network</div>
-              <div class="title2">全球存储节点<span>72+</span></div>
+              <div class="title1">Global Network</div>
+              <div class="title2">全球存储节点<span>74+</span></div>
               <div class="divider"></div>
               <div class="locations">
                 <ul>
@@ -917,9 +927,33 @@
     <script src="./assets/js/lib/wow.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
+
+if(isPhone)
+{
+
+var imgs=[]
+for(var i=0;i<193;i++)
+{
+
+var num='00000'.slice(0,-String(i).length)+i;
+
+imgs.push('assets/media/3d-Earth-Mobile_frames/g_'+num+'.jpg');
+}
+
+
+var framePlayer = new vFramePlayer({
+    dom : document.getElementById("earthVideoPlayer"),
+    imgArr : imgs,
+fps:12,
+useCanvas:true,
+loop:-1,
+});
+framePlayer.play()
+}
+
       var swiper = new Swiper(".swiper-container", {
         slidesPerView: "auto",
-        spaceBetween: 30,
+        spaceBetween: isPhone?10:30,
         freeMode: true,
         navigation: {
           nextEl: ".btn-next",
