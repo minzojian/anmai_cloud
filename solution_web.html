@@ -1133,20 +1133,19 @@ font-size: 19px!important;
             .slice($(e.target).prop("href").lastIndexOf("#"))
         )
           .get(0)
-          .scrollIntoView({ behavior: "smooth" })
+          .scrollIntoView( )
         e.preventDefault()
       })
       $(".nav-wrap a").removeClass("active")
-      if (location.hash) {
-        $($(".nav-wrap a")[$(location.hash).data("index")]).addClass("active")
+      if(location.hash){
+$($(".nav-wrap a")[$(location.hash).data("index")]).addClass('active');
+
+$(location.hash).get(0).scrollIntoView()
       }
       window.addEventListener("scroll", function () {
         $(".nav-wrap a").removeClass("active")
         $(".section-content").each(function (index, sc) {
-          if (
-            $(sc).offset().top < window.pageYOffset + 60 &&
-            $(sc).offset().top + $(sc).innerHeight() > window.pageYOffset + 60
-          ) {
+         if($(sc).offset().top<window.pageYOffset+window.onePageHeight/2 && $(sc).offset().top+$(sc).innerHeight()>window.pageYOffset+window.onePageHeight/2){
             $($(".nav-wrap a").get(index)).addClass("active")
             scrollNavIntoView(index)
             // gasp.to("#nav-wrap",0.5,{},{scrollX:$($(".nav-wrap a").get(index)).offset().left})

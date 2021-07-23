@@ -289,8 +289,7 @@ body {
           }
         }
 
-    .inner_scroll_warpper {
-    }
+    
     .sub_part {
       // &:first-child {
       //   margin-top: 10%;
@@ -319,6 +318,9 @@ body {
           grid-template-areas: "a a";
           grid-auto-columns: 1fr 1fr;
           grid-gap: 94px;
+
+
+
 
           .sub_part_content_item {
             display: flex;
@@ -361,9 +363,21 @@ body {
           color: #0c1217;
           background: linear-gradient(0deg, #041627 0%, #081521 100%);
         }
+
+svg.year{
+width: 270px;
+height: 92px;
+}
+svg.month{
+width: 135px;
+height: 92px;
+margin-right:20px;
+}
+
         svg {
           position: sticky;
-          top: 0%;
+          top: 0;
+left:0;
           &.year {
             position: relative;
           }
@@ -764,11 +778,74 @@ body {
       height: 100%;
       top: 0%;
 .sub_part_title {
-            margin-top: 80px;
+            margin-top:0%;
+margin-bottom: 0%;
+font-size: 18px;
+display: flex;
+flex-direction: column;
+span:first-child{
+font-size: 24px;
+margin-bottom: 8px;
+}
           }
 
+display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+.inner_scroll_warpper {
+display: flex;
+    overflow: auto;
+    }
+
+
+
+
+
       .sub_part {
-        flex-direction: column-reverse;
+width:auto;
+flex-direction: column;
+    height: 100%;
+margin-bottom: 0;
+
+.left-part{
+width: unset;
+.divider{
+margin:50px 0;
+}
+ .sub_part_content{
+display: flex;
+grid-gap: unset;
+
+
+
+
+ .sub_part_content_item
+{
+max-width: calc(0.8* var(--contentwidth));
+min-width: calc(0.8* var(--contentwidth));
+margin-right:20px;
+}
+}
+}
+
+.right-part{
+display: flex;
+    width: unset;
+margin-top: 22px;
+svg.year{
+width: 162px;
+    height: 55px;
+}
+svg.month{
+width: 81px;
+    height: 55px;
+}
+
+}
+
+
         .left-part,
         .right-part {
           width: 100%;
@@ -788,7 +865,7 @@ font-size:15px;
 }
 }
 .sub_part_content_item_caption span{
-font-size: 16px;
+font-size: 14px;
 line-height: 22px;
 }
           }

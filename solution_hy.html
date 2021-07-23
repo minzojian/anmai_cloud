@@ -1041,20 +1041,18 @@ border-bottom: 1px solid #c9ced6;
         $(".nav-wrap a").on("click", function (e) {
             $(".nav-wrap a").removeClass('active');
             $(e.target).addClass('active');
-            $($(e.target).prop("href").slice($(e.target).prop("href").lastIndexOf("#"))).get(0).scrollIntoView({
-                behavior: 'smooth'
-            })
+            $($(e.target).prop("href").slice($(e.target).prop("href").lastIndexOf("#"))).get(0).scrollIntoView( )
             e.preventDefault();
         })
         $(".nav-wrap a").removeClass('active');
-        if (location.hash) {
-            $($(".nav-wrap a")[$(location.hash).data("index")]).addClass('active');
+        if(location.hash){
+$($(".nav-wrap a")[$(location.hash).data("index")]).addClass('active');
+$(location.hash).get(0).scrollIntoView();
         }
         window.addEventListener('scroll', function () {
             $(".nav-wrap a").removeClass('active');
             $(".section-content").each(function (index, sc) {
-                if ($(sc).offset().top < window.pageYOffset + 60 && $(sc).offset().top + $(sc)
-                    .innerHeight() > window.pageYOffset + 60) {
+               if($(sc).offset().top<window.pageYOffset+window.onePageHeight/2 && $(sc).offset().top+$(sc).innerHeight()>window.pageYOffset+window.onePageHeight/2){
                     $($(".nav-wrap a").get(index)).addClass('active');
 scrollNavIntoView(index)
 // gasp.to("#nav-wrap",0.5,{},{scrollX:$($(".nav-wrap a").get(index)).offset().left})

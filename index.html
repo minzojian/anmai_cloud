@@ -81,6 +81,47 @@
         tweens.push(tween)
         return tween
       }
+
+   var lastScroll = window.pageYOffset
+      var isMouseWheel = false
+      var isEnterStage1 = true
+      var mouseWheelTimer = 0
+      var mouseWheelTimer2 = 0
+
+
+      function getScrollYByVideo(t) {
+        var totalLength = 3.5
+        if (window.isPhone) totalLength = 1
+
+        return {
+          left: 0,
+          top:
+            (totalLength * window.onePageHeight * (t || myVideo.currentTime)) /
+            20,
+        }
+      }
+
+      function getTimerByScroll(prog) {
+        var totalLength = 3.5
+        if (window.isPhone) totalLength = 1
+
+        let p =
+          20 *
+          (prog || window.pageYOffset / (totalLength * window.onePageHeight))
+
+        return Math.min(20, p)
+      }
+
+      function handleVideoPlaying(e) {
+        // console.log(myVideo.currentTime, "video progress")
+        if (!window.isPhone && !isMouseWheel && isEnterStage1)
+{
+var p=getScrollYByVideo();
+          window.scrollTo({ top:p.top }) //, behavior: "smooth" })
+}
+      }
+
+
     </script>
 
     <header class="header1 header_light state2">
@@ -373,11 +414,12 @@
       <div class="sticky">
 <!-- <img class='fake_video' src='assets/img/图层 454.png' /> -->
 
- <div id="stage1Player" class="fake_video frameplayer"  ></div>
+ <div id="stage1Player" class="fake_video frameplayer" style="background-image: url(assets/media/stage1_frames/a_00000.jpg);background-size: cover;"  ></div>
 
         <video
           class="bg_video"
           id="myVideo"
+ontimeupdate="handleVideoPlaying(event)"
           webkit-playsinline="true"
           x-webkit-airplay="true"
           x5-video-player-type="h5"
@@ -551,8 +593,6 @@ ${
     ? `<svg
                   class="year"
                   xmlns="http://www.w3.org/2000/svg"
-                  width="270px"
-                  height="92px"
                   viewBox="0 0 330 100"
                 >
                   <defs>
@@ -575,11 +615,9 @@ ${
 }
                 
 
-                <svg
+                <svg class="month"
                   xmlns="http://www.w3.org/2000/svg"
-                  width="270px"
-                  height="92px"
-                  viewBox="0 0 330 100"
+                  viewBox="0 0 165 100"
                 >
                   <defs>
                     <linearGradient id="gradient" y1="0" y2="1">
@@ -611,7 +649,7 @@ y="100"
       //   ? "assets/media/stage1_mobile.mp4"
       //   : "assets/media/stage1.mp4"
 
-if(isPhone)
+if(window.isPhone)
 {
 var imgs=[]
 for(var i=0;i<115;i++)
@@ -621,51 +659,22 @@ var num='00000'.slice(0,-String(i).length)+i;
 
 imgs.push('assets/media/stage1_frames/a_'+num+'.jpg');
 }
-
-var framePlayer = new vFramePlayer({
+//2秒后才加载上边的动画
+setTimeout(function(){
+window.framePlayera = new vFramePlayer({
     dom : document.getElementById("stage1Player"),
     imgArr : imgs,
 fps:12,
 useCanvas:true,
 loop:-1,
 });
-framePlayer.play()
+framePlayera.play()
+},2000)
+
 }
 
 
-      var lastScroll = window.pageYOffset
-      var isMouseWheel = false
-      var isEnterStage1 = true
-      var mouseWheelTimer = 0
-      var mouseWheelTimer2 = 0
-      function handleVideoPlaying(e) {
-        // console.log(myVideo.currentTime, "video progress")
-        if (!window.isPhone && !isMouseWheel && isEnterStage1)
-          window.scrollTo({ ...getScrollYByVideo() }) //, behavior: "smooth" })
-      }
-
-      function getScrollYByVideo(t) {
-        var totalLength = 3.5
-        if (window.isPhone) totalLength = 1
-
-        return {
-          left: 0,
-          top:
-            (totalLength * window.onePageHeight * (t || myVideo.currentTime)) /
-            20,
-        }
-      }
-
-      function getTimerByScroll(prog) {
-        var totalLength = 3.5
-        if (window.isPhone) totalLength = 1
-
-        let p =
-          20 *
-          (prog || window.pageYOffset / (totalLength * window.onePageHeight))
-
-        return Math.min(20, p)
-      }
+   
 
       $(function () {
         // pathPrepare($(".svg_path"));
@@ -674,60 +683,41 @@ framePlayer.play()
 
         // var tween = createTimeline()
         // tween.add([
-        createTween(
-          ".title1",
-          getScrollYByVideo(1).top,
-          // 0.2 * window.onePageHeight,
-          {
-            // translateY: 30, opacity: 0
-          },
-          {
-            // translateY: 0,
-            // opacity: 1,
-            ease: Linear.easeNone,
-            immediateRender: false,
+//         createTween(
+//           ".title1",
+//           getScrollYByVideo(1).top,
+//           // 0.2 * window.onePageHeight,
+//           {
+//             // translateY: 30, opacity: 0
+//           },
+//           {
+//             // translateY: 0,
+//             // opacity: 1,
+//             ease: Linear.easeNone,
+//             immediateRender: false,
 
-            scrollTrigger: {
-              trigger: ".stage1",
-              // pin: true, // pin the trigger element while active
-              start: "-=100", // when the top of the trigger hits the top of the viewport
-              end: "+=100", // end after scrolling 500px beyond the start
-              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              markers: false,
-              id: "aaa",
-              onStart: function () {
-                // $(".left-progress").removeClass("state2")
-                // $(".left-progress").removeClass("state3")
-                // $(".left-progress").addClass("state1")
-                // $(".header1").removeClass("state2")
-                // $(".header1").removeClass("state3")
-                // $(".header1").addClass("state1")
-              },
-              onLeave: function () {
-                // console.log(this.targets)
-                $(".title1")
-                  .removeClass(["state1", "state3"])
-                  .addClass("state2")
-                //$(".title_part").addClass("state3")
-                // this.targets().forEach((elem) => {
-                //   elem.classList.add("state2")
-                //   elem.classList.remove("state1")
-                //   elem.classList.remove("state3")
-                // })
-
-                // $(".header1").removeClass("state1")
-                // $(".header1").removeClass("state3")
-                // $(".header1").addClass("state2")
-              },
-              onReverseComplete: function () {
-                // this.targets().forEach((elem) => {
-                //   elem.classList.add("state1")
-                //   elem.classList.remove("state2")
-                // })
-              },
-            },
-          }
-        )
+//             scrollTrigger: {
+//               trigger: ".stage1",
+//               // pin: true, // pin the trigger element while active
+//               start: "-=100", // when the top of the trigger hits the top of the viewport
+//               end: "+=100", // end after scrolling 500px beyond the start
+//               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+//               markers: false,
+//               id: "aaa",
+//               onLeave: function () {
+//                 // console.log(this.targets)
+//                 $(".title1")
+//                   .removeClass(["state1", "state3"])
+//                   .addClass("state2")
+//               },
+//               onEnterBack: function () {
+//  $(".title1")
+//                   .removeClass(["state1", "state2"])
+//                   .addClass("state3")
+//               },
+//             },
+//           }
+//         )
         createTween(
           ".title1",
           getScrollYByVideo(1).top,
@@ -743,33 +733,33 @@ framePlayer.play()
             scrollTrigger: {
               trigger: ".stage1",
               // pin: true, // pin the trigger element while active
-              start: "+=" + getScrollYByVideo(9).top, // when the top of the trigger hits the top of the viewport
-              end: getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
+              start: "-=100", // when the top of the trigger hits the top of the viewport
+              end: getScrollYByVideo(9).top, // end after scrolling 500px beyond the start
               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
               markers: false,
               id: "aaa",
+ onEnter: function () {
+                $(".title1")
+                  .removeClass(["state1", "state3"])
+                  .addClass("state2")
+              },
+onEnterBack: function () {
+                $(".title1")
+                  .removeClass(["state1", "state3"])
+                  .addClass("state2")
+              },
+
               onLeave: function () {
                 //$(".title_part").addClass("state3")
                 $(".title1")
                   .removeClass(["state1", "state2"])
                   .addClass("state3")
-                // this.targets().forEach((elem) => {
-                // elem.classList.remove("state1")
-                // elem.classList.remove("state2")
-                // elem.classList.add("state3")
-                // })
               },
-              onLeaveBack: function () {
-                $(".title1")
-                  .removeClass(["state1", "state3"])
-                  .addClass("state2")
-                //$(".title_part").addClass("state3")
-                // this.targets().forEach((elem) => {
-                //   elem.classList.remove("state1")
-                //   elem.classList.remove("state3")
-                //   elem.classList.add("state2")
-                // })
-              },
+              // onLeaveBack: function () {
+              //   $(".title1")
+              //     .removeClass(["state1", "state3"])
+              //     .addClass("state2")
+              // },
             },
           }
         )
@@ -789,95 +779,74 @@ framePlayer.play()
             scrollTrigger: {
               trigger: ".stage1",
               // pin: true, // pin the trigger element while active
-              start: "+=" + getScrollYByVideo(9.5).top, // when the top of the trigger hits the top of the viewport
-              end: getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
+              start:  getScrollYByVideo(9.5).top, // when the top of the trigger hits the top of the viewport
+              end: getScrollYByVideo(18.5).top, // end after scrolling 500px beyond the start
               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
               markers: false,
               id: "aaa",
-              onStart: function () {
-                // $(".left-progress").removeClass("state1")
-                // $(".left-progress").removeClass("state3")
-                // $(".left-progress").addClass("state2")
-              },
-              onLeave: function () {
-                //$(".title_part").addClass("state3")
+              onEnter: function () {
                 $(".title2")
                   .removeClass(["state1", "state3"])
                   .addClass("state2")
-                // this.targets().forEach((elem) => {
-                // elem.classList.remove("state1")
-                // elem.classList.remove("state2")
-                // elem.classList.add("state3")
-                // })
+              },
+onEnterBack: function () {
+                $(".title2")
+                  .removeClass(["state1", "state3"])
+                  .addClass("state2")
+              },
+onLeave: function () {
+                $(".title2")
+                  .removeClass(["state2", "state1"])
+                  .addClass("state3")
               },
               onLeaveBack: function () {
                 $(".title2")
                   .removeClass(["state2", "state3"])
                   .addClass("state1")
-                //$(".title_part").addClass("state3")
-                // this.targets().forEach((elem) => {
-                //   elem.classList.remove("state1")
-                //   elem.classList.remove("state3")
-                //   elem.classList.add("state2")
-                // })
               },
             },
           }
         )
 
-        createTween(
-          ".title2",
-          getScrollYByVideo(1).top,
-          {
-            //  translateY: 30, opacity: 0
-          },
-          {
-            // delay: getScrollYByVideo(9.5).top,
-            // translateY: 0,
-            // opacity: 1,
-            // ease: Linear.easeNone,
-            immediateRender: false,
-            scrollTrigger: {
-              trigger: ".stage1",
-              // pin: true, // pin the trigger element while active
-              start: "+=" + getScrollYByVideo(18.5).top, // when the top of the trigger hits the top of the viewport
-              end: getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
-              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-              markers: false,
-              id: "aaa",
-              onStart: function () {
-                // $(".left-progress").removeClass("state1")
-                // $(".left-progress").removeClass("state3")
-                // $(".left-progress").addClass("state2")
-              },
-              onLeave: function () {
-                //$(".title_part").addClass("state3")
-                $(".title2")
-                  .removeClass(["state1", "state2"])
-                  .addClass("state3")
-                // this.targets().forEach((elem) => {
-                // elem.classList.remove("state1")
-                // elem.classList.remove("state2")
-                // elem.classList.add("state3")
-                // })
-              },
-              onLeaveBack: function () {
-                $(".title2")
-                  .removeClass(["state1", "state3"])
-                  .addClass("state2")
-                //$(".title_part").addClass("state3")
-                // this.targets().forEach((elem) => {
-                //   elem.classList.remove("state1")
-                //   elem.classList.remove("state3")
-                //   elem.classList.add("state2")
-                // })
-              },
-            },
-          }
-        )
+//         createTween(
+//           ".title2",
+//           getScrollYByVideo(1).top,
+//           {
+//             //  translateY: 30, opacity: 0
+//           },
+//           {
+//             // delay: getScrollYByVideo(9.5).top,
+//             // translateY: 0,
+//             // opacity: 1,
+//             // ease: Linear.easeNone,
+//             immediateRender: false,
+//             scrollTrigger: {
+//               trigger: ".stage1",
+//               // pin: true, // pin the trigger element while active
+//               start: "+=" + getScrollYByVideo(18.5).top, // when the top of the trigger hits the top of the viewport
+//               end: getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
+//               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+//               markers: false,
+//               id: "aaa",
+//               onLeave: function () {
+//                 //$(".title_part").addClass("state3")
+//                 $(".title2")
+//                   .removeClass(["state1", "state2"])
+//                   .addClass("state3")
+//               },
+//               onEnterBack: function () {
+// console.log(window.scrollY,getScrollYByVideo(18.5).top-getScrollYByVideo(1).top,'aaaaaaaaa')
+// if(window.scrollY>getScrollYByVideo(18.5).top-getScrollYByVideo(1).top)
+//                 $(".title2")
+//                   .removeClass(["state1", "state3"])
+//                   .addClass("state2")
+//               },
+//             },
+//           }
+//         )
 
 
-        // if (!isPhone) {
+        // if (!window.isPhone) {
           createTween(
             ".title3_mask",
             getScrollYByVideo(1).top,
@@ -890,8 +859,8 @@ framePlayer.play()
               scrollTrigger: {
                 trigger: ".stage1",
                 // pin: true, // pin the trigger element while active
-                start: "+=" + getScrollYByVideo(19).top, // when the top of the trigger hits the top of the viewport
-                end: getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
+                start:   getScrollYByVideo(18.5).top, // when the top of the trigger hits the top of the viewport
+                end: getScrollYByVideo(19).top, // end after scrolling 500px beyond the start
                 scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
                 markers: false,
                 id: "aaa",
@@ -914,37 +883,21 @@ framePlayer.play()
               scrollTrigger: {
                 trigger: ".stage1",
                 // pin: true, // pin the trigger element while active
-                start: "+=" + getScrollYByVideo(19).top, // when the top of the trigger hits the top of the viewport
-                end: getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
+                start:   getScrollYByVideo(18.5).top, // when the top of the trigger hits the top of the viewport
+                end: getScrollYByVideo(19).top, // end after scrolling 500px beyond the start
                 scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
                 markers: false,
                 id: "aaa",
-                onStart: function () {
-                  // $(".left-progress").removeClass("state1")
-                  // $(".left-progress").removeClass("state3")
-                  // $(".left-progress").addClass("state2")
-                },
                 onLeave: function () {
                   //$(".title_part").addClass("state3")
                   $(".title3")
                     .removeClass(["state1", "state3"])
                     .addClass("state2")
-                  // this.targets().forEach((elem) => {
-                  // elem.classList.remove("state1")
-                  // elem.classList.remove("state2")
-                  // elem.classList.add("state3")
-                  // })
                 },
                 onLeaveBack: function () {
                   $(".title3")
                     .removeClass(["state2", "state3"])
                     .addClass("state1")
-                  //$(".title_part").addClass("state3")
-                  // this.targets().forEach((elem) => {
-                  //   elem.classList.remove("state1")
-                  //   elem.classList.remove("state3")
-                  //   elem.classList.add("state2")
-                  // })
                 },
               },
             }
@@ -958,7 +911,7 @@ framePlayer.play()
             trigger: ".stage1",
             // pin: true, // pin the trigger element while active
             start: "top top", // when the top of the trigger hits the top of the viewport
-            end: getScrollYByVideo(20).top, // end after scrolling 500px beyond the start
+            end: getScrollYByVideo(19).top, // end after scrolling 500px beyond the start
             scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
             markers: false,
             id: "aaa",
@@ -973,23 +926,20 @@ framePlayer.play()
 
             onEnter: function () {
               isEnterStage1 = true
+// myVideo.play()
             },
             onLeave: function () {
               isEnterStage1 = false
-              if (!window.isPhone) {
-                myVideo.currentTime = Math.ceil(myVideo.duration)
-                myVideo.pause()
-              }
+              // if (!window.isPhone) {
+                // myVideo.currentTime = Math.ceil(myVideo.duration)
+                // myVideo.pause()
+              // }
             },
             onEnterBack: function () {
               isEnterStage1 = true
+// myVideo.play()
             },
 
-            onUpdate: function () {
-              if (!window.isPhone && isMouseWheel) {
-                myVideo.currentTime = getTimerByScroll(this.progress)
-              }
-            },
           },
         })
 
@@ -1089,14 +1039,14 @@ framePlayer.play()
           }
         )
 
-        // if (!isPhone) {
+         if (!window.isPhone) {
           gsap.timeline({
             // yes, we can add it to an entire timeline!
             scrollTrigger: {
               trigger: ".stage1",
               immediateRender: false,
               //pin: true, // pin the trigger element while active
-              start: getScrollYByVideo(20).top, // when the top of the trigger hits the top of the viewport
+              start: "+="+getScrollYByVideo(20).top, // when the top of the trigger hits the top of the viewport
               end:
                 getScrollYByVideo(20).top +
                 $(".inner_scroll_warpper").height() -
@@ -1107,18 +1057,19 @@ framePlayer.play()
               onUpdate: function (self) {
                 $(".title3").get(0).scrollTop =
                   ($(".inner_scroll_warpper").height() -
-                    $(".title3").height()) *
+                    $(".title3").height()+170) *
                   self.progress
-                // console.log(
-                //   // this.targets()[0].v,
-                //   $(".title3").get(0).scrollTop,
-                //   "vvvvvv"
-                // )
+//                 console.log(
+//                   // this.targets()[0].v,
+// self.progress,
+//                   $(".title3").get(0).scrollTop,
+//                   "vvvvvv"
+//                 )
                 // gsap.to(".title3", 0.6, { scrollTo: this.targets()[0].v })
               },
             },
           })
-        // }
+        }
         // .add(tween2)
 
 
@@ -1137,18 +1088,18 @@ framePlayer.play()
         }
 
         function wheeled(event) {
-          if (isPhone) return
-          isMouseWheel = true
-          pausePlayVideo()
-          clearTimeout(mouseWheelTimer)
-          mouseWheelTimer = setTimeout(resumePlayVideo, 500)
+          if (window.isPhone) return
+          // isMouseWheel = true
+          // pausePlayVideo()
+          // clearTimeout(mouseWheelTimer)
+          // mouseWheelTimer = setTimeout(resumePlayVideo, 500)
 
-          nice && nice.autohidedom && $(nice.autohidedom).removeClass("hide")
+          // nice && nice.autohidedom && $(nice.autohidedom).removeClass("hide")
 
-          clearTimeout(mouseWheelTimer2)
-          mouseWheelTimer2 = setTimeout(function () {
-            nice && $(nice.autohidedom).addClass("hide")
-          }, 2000)
+          // clearTimeout(mouseWheelTimer2)
+          // mouseWheelTimer2 = setTimeout(function () {
+          //   nice && $(nice.autohidedom).addClass("hide")
+          // }, 2000)
 
         }
 
@@ -1160,7 +1111,7 @@ framePlayer.play()
         // there are other wheel events in the code that adjust the scroll position
         // window.addEventListener('scroll', scrolled, { passive: true })
 
-        // if (isPhone) {
+        // if (window.isPhone) {
           // $(".title3").hide()
           // $(".title3_mask").hide()
         // }
@@ -1169,9 +1120,9 @@ framePlayer.play()
           $(".stage1").height(
             getScrollYByVideo(20).top +
               (
-// isPhone
-//                 ? 1 * window.onePageHeight
-//                 : 
+isPhone
+                ? 1 * window.onePageHeight+$(".inner_scroll_warpper").height()
+                : 
 1 * window.onePageHeight +
                   ($(".inner_scroll_warpper").height() - $(".title3").height()))
           )
@@ -1180,9 +1131,9 @@ framePlayer.play()
         $(".stage1").height(
           getScrollYByVideo(20).top +
             (
-// isPhone
-//               ? 1 * window.onePageHeight
-//               : 
+isPhone
+              ? 1 * window.onePageHeight+$(".inner_scroll_warpper").height()
+              : 
 1 * window.onePageHeight +
                 ($(".inner_scroll_warpper").height() - $(".title3").height()))
         )
@@ -1782,8 +1733,76 @@ framePlayer.play()
           }
         })
 
-        $(window).on("scroll", function () {
+//  var beforeScrollTop = window.scrollY;
+
+//         $(window).on("wheel", function (e) {
+// isMouseWheel = true
+
+// var delta=e.originalEvent.deltaY;//window.scrollY-beforeScrollTop;  
+// // beforeScrollTop = window.scrollY;
+// if(isEnterStage1){
+
+// stepNext(delta>0);
+// if(!stepIsFroze){
+// // isMouseWheel=true;
+// stepIsFroze=true;
+// seekToTime(myVideo.currentTime+(delta>0?8:-8));
+// // if(myVideo.currentTime<10 && delta>0){
+// // seekToTime(myVideo.currentTime+10);
+// // }else if(myVideo.currentTime<20 && delta>0){
+// // seekToTime(20)
+// // }else if(myVideo.currentTime>20 && delta<0){
+// // seekToTime(myVideo.currentTime-10)
+// // }else if(myVideo.currentTime>10 && delta<0){
+// // seekToTime(myVideo.currentTime-10)
+// // }
+// // else if(myVideo.currentTime<10 && delta<0){
+// // seekToTime(0)
+// // }
+// }
+// }
+
+// })
+
+ window.addEventListener("wheel", function (e) {
+isMouseWheel = true
+
+var delta=e.deltaY;//window.scrollY-beforeScrollTop;  
+// beforeScrollTop = window.scrollY;
+if(isEnterStage1){
+
+stepNext(delta>0);
+if(!stepIsFroze){
+// isMouseWheel=true;
+stepIsFroze=true;
+seekToTime(myVideo.currentTime+(delta>0?9:-9));
+// if(myVideo.currentTime<10 && delta>0){
+// seekToTime(myVideo.currentTime+10);
+// }else if(myVideo.currentTime<20 && delta>0){
+// seekToTime(20)
+// }else if(myVideo.currentTime>20 && delta<0){
+// seekToTime(myVideo.currentTime-10)
+// }else if(myVideo.currentTime>10 && delta<0){
+// seekToTime(myVideo.currentTime-10)
+// }
+// else if(myVideo.currentTime<10 && delta<0){
+// seekToTime(0)
+// }
+}
+myVideo.play();
+e.preventDefault();
+
+}
+
+}, {
+          passive: false,
+          // capture: true,
+        })
+
+        $(window).on("scroll", function (e) {
           ScrollTrigger.refresh()
+
+
         })
 
         // $(window).resize(function () {
@@ -1791,9 +1810,53 @@ framePlayer.play()
         // })
         // $(".stage2").height(getStage2Height(1))
       })
+
+var stepfroze;
+var stepIsFroze=false;
+var lastDir;
+function stepNext(updown)
+{
+if(lastDir!=updown)
+{
+stepIsFroze=false
+lastDir=updown;
+}
+clearTimeout(stepfroze);
+
+stepfroze=setTimeout(function(){stepIsFroze=false},200)
+}
+
+function seekToTime(ts) {
+  // try and avoid pauses after seeking
+  // myVideo.pause();
+  myVideo.currentTime =Math.max(0, Math.min(20,ts)); // if this is far enough away from current, it implies a "play" call as well...oddly. I mean seriously that is junk.
+if(ts>=20){
+myVideo.currentTime=20;
+}
+//    else{
+// myVideo.play();
+// } 
+// however if it close enough, then we need to call play manually
+    // some shenanigans to try and work around this:
+    var timer = setInterval(function() {
+//         if (myVideo.paused && myVideo.readyState ==4 || !myVideo.paused) {
+// if(ts<20){
+//             myVideo.play();
+// }
+isMouseWheel = false
+            clearInterval(timer);
+        // }       
+    }, 50);
+
+var p=getScrollYByVideo();
+          window.scrollTo({ top:p.top }) 
+
+}
+
+
     </script>
     <div class="stage3">
-<div id='earthVideoPlayer' class='bg_video fake_video'  ></div>
+<div id='earthVideoPlayer' class='bg_video fake_video' style="background-image: url(assets/media/3d-Earth-Mobile_frames/g_00000.jpg);background-size: cover;"  ></div>
       <video
         id="earthVideo"
         webkit-playsinline="true"
@@ -1914,27 +1977,29 @@ x5-video-player-type="h5"
         //   : "assets/media/3d-Earth.mp4"
 
 
-if(isPhone)
+if(window.isPhone)
 {
 
 var imgs=[]
-for(var i=0;i<193;i++)
+for(var i=0;i<111;i++)
 {
 
 var num='00000'.slice(0,-String(i).length)+i;
 
 imgs.push('assets/media/3d-Earth-Mobile_frames/g_'+num+'.jpg');
 }
-
-
+//2秒后才加载下边的地球
+setTimeout(function(){
 var framePlayer = new vFramePlayer({
     dom : document.getElementById("earthVideoPlayer"),
     imgArr : imgs,
 fps:12,
 useCanvas:true,
 loop:-1,
+yoyo:true
 });
 framePlayer.play()
+},2000)
 }
 
 
@@ -2229,7 +2294,7 @@ framePlayer.play()
     <script>
       var nice = undefined
       $(function () {
-        // if (!isPhone && !isSafari) {
+        // if (!window.isPhone && !isSafari) {
         //   nice = $("body").niceScroll({
         //     cursorborder: "1px solid rgb(80,80,80,0.4)",
         //     horizrailenabled: false,
@@ -2522,7 +2587,7 @@ framePlayer.play()
           false
         )
 
-        if (isPhone) {
+        if (window.isPhone) {
           recheckVideoPlay()
         }
       })
