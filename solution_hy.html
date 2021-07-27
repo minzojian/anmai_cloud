@@ -728,7 +728,7 @@ border-bottom: 1px solid #c9ced6;
                                 <label >
                                     <span class="label">请描述您想咨询的内容</span>
                                 </label>
-                                    <input type="text" class="contents" id="content">
+                                    <textarea class="contents" id="content" rows="3"  ></textarea>
                             </div>
                         </section>
                         <div class="action_btn btn-with-arrow submitConcact">
@@ -948,7 +948,7 @@ border-bottom: 1px solid #c9ced6;
                     <div class="contacts sub-unit flex fd-c jc-between h-auto">
                         <div class="flex">
                             <div class="flex ai-center">
-                                <i class="fa iconfont icon-dianhua" aria-hidden="true"></i> +86 898 3286 7007
+                                <i class="fa iconfont icon-dianhua" aria-hidden="true"></i> +86 898-32867012
                             </div>
                             <div class="divider-v"></div>
                             <div class="flex ai-center">
@@ -1076,6 +1076,21 @@ gsap.to("#nav-wrap",0.3,{scrollLeft:$("#nav-wrap").get(0).scrollLeft+$($(".nav-w
 
 
 $(function(){
+
+
+
+ ScrollTrigger.create({
+          start: "top top",
+          end: "+=10",
+          onLeave: function () {
+            $(".header1").addClass("floated header_dark")
+          },
+          onEnterBack: function () {
+            $(".header1").removeClass("floated header_dark")
+          },
+          id: "header",
+        })
+
 if(!isPhone )
  $("#nav-wrap").niceScroll({
           cursorborder: "1px solid rgb(80,80,80,0.4)",

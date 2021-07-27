@@ -338,7 +338,7 @@ background-image: url('./assets/img/solution/解决方案-场景/mb-7.jpg')!impo
                 <div class="slogan">
                     <div class="h1 wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0">解决方案 <img
                             src="./assets/img/solution/line.png" class="line"> 场景</div>
-                   <div class="h2 wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0.1">Solution Scene</div>
+                   <div class="h2 wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0.1">Solution Scenario</div>
                     <a href="javascript:;" onclick="click_scroll()" class="downBtn fadeInUp" data-wow-duration=".8s"
                         data-wow-delay="0.2">方案咨询 <i class="arrow_icon"></i></a>
                 </div>
@@ -784,7 +784,7 @@ background-image: url('./assets/img/solution/解决方案-场景/mb-7.jpg')!impo
                                 <label >
                                     <span class="label">请描述您想咨询的内容</span>
                                 </label>
-                                    <input type="text" class="contents" id="content">
+                                    <textarea class="contents" id="content" rows="3" ></textarea>
                             </div>
                         </section>
                         <div class="action_btn btn-with-arrow submitConcact">
@@ -1002,7 +1002,7 @@ background-image: url('./assets/img/solution/解决方案-场景/mb-7.jpg')!impo
         <div class="contacts sub-unit flex fd-c jc-between h-auto">
           <div class="flex">
             <div class="flex ai-center">
-              <i class="fa iconfont icon-dianhua" aria-hidden="true"></i> +86 898 3286 7007
+              <i class="fa iconfont icon-dianhua" aria-hidden="true"></i> +86 898-32867012
             </div>
             <div class="divider-v"></div>
             <div class="flex ai-center">
@@ -1067,7 +1067,7 @@ background-image: url('./assets/img/solution/解决方案-场景/mb-7.jpg')!impo
 
             scrollTrigger: {
                 trigger: "#cc",
-                start: "-=60", // when the top of the trigger hits the top of the viewport
+                start: isPhone?"-=80":"-=110", // when the top of the trigger hits the top of the viewport
                 end: 99999, // end after scrolling 500px beyond the start
                 scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
                 // markers: true,
@@ -1132,6 +1132,26 @@ gsap.to("#nav-wrap",0.3,{scrollLeft:$("#nav-wrap").get(0).scrollLeft+$($(".nav-w
 
 
 $(function(){
+
+
+
+
+
+ ScrollTrigger.create({
+          start: "top top",
+          end: "+=10",
+          onLeave: function () {
+            $(".header1").addClass("floated header_dark")
+          },
+          onEnterBack: function () {
+            $(".header1").removeClass("floated header_dark")
+          },
+          id: "header",
+        })
+
+
+
+
 if(!window.isPhone )
  $("#nav-wrap").niceScroll({
           cursorborder: "1px solid rgb(80,80,80,0.4)",

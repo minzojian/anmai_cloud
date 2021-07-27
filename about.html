@@ -25,6 +25,7 @@
   <script src="./assets/js/lib/jquery.nicescroll.min.js"></script>
 
  <script src="./assets/js/lib/vframeplayer.min.js"></script>
+ <script src="./assets/js/lib/numberAnimate.js"></script>
   <script src="./assets/js/common.js"></script>
   
 
@@ -295,10 +296,10 @@
           </div>
           <div class="right_part">
             <ul>
-              <li>解决计算成本挑战，隐私和安全挑战，数字资产流动性的问题</li>
-              <li> 覆盖IPFS去中心化云计算和存储中整个产业链的独特企业</li>
-              <li> 提供去中心化云计算产品和服务，包括Web 2.0基础服务，Web 3.0 链接服务, 和Web 3.0 应用程序生态</li>
-              <li> 支持去中心化网络新基础设施，包括销售，科技和建设问题</li>
+              <li>以新型技术方案，解决数据隐私与安全，计算成本高昂、数据流动性问题</li>
+              <li>覆盖IPFS去中心化云计算和存储中整个产业链的独特企业</li>
+              <li>提供去中心化云计算产品和服务，包括Web 2.0基础服务，Web 3.0 链接服务, 和Web 3.0 应用程序生态</li>
+              <li>支持去中心化网络新基础设施，包括销售，科技和建设问题</li>
             </ul>
           </div>
         </div>
@@ -311,17 +312,17 @@
           <div class="item">
             <img src="assets/img/about/2.png" />
             <div class="sub_title1">技术驱动</div>
-            <div class="sub_title2">超过100项专利<br /> 40％的研发人员</div>
+            <div class="sub_title2">高密度的研发人员布局、全球顶尖科研合作与高质量专利储备</div>
           </div>
           <div class="item">
             <img src="assets/img/about/3.png" />
             <div class="sub_title1">生态战略</div>
-            <div class="sub_title2">50多家生态企业</div>
+            <div class="sub_title2">Web3.0国际化生态布局</div>
           </div>
           <div class="item">
             <img src="assets/img/about/4.png" />
             <div class="sub_title1">市场地位</div>
-            <div class="sub_title2">行业领先分布式存储全网可调用算力规模超10%市场份额</div>
+            <div class="sub_title2">行业领先分布式存储领军企业</div>
           </div>
         </div>
       </div>
@@ -521,7 +522,7 @@
           </div>
           <div class="item">
             <div class="sub-top-part"><i class="iconfont icon-dianhua"></i>TEL</div>
-            <div class="sub-bottom-part">+86 898 3286 7007 </div>
+            <div class="sub-bottom-part">+86 898-32867012 </div>
           </div>
           <div class="item not_mobile">
             <div class="sub-top-part"><i class="iconfont icon-weixin"></i>微信公众号</div>
@@ -746,7 +747,7 @@
         <div class="contacts sub-unit flex fd-c jc-between h-auto">
           <div class="flex">
             <div class="flex ai-center">
-              <i class="fa iconfont icon-dianhua" aria-hidden="true"></i> +86 898 3286 7007
+              <i class="fa iconfont icon-dianhua" aria-hidden="true"></i> +86 898-32867012
             </div>
             <div class="divider-v"></div>
             <div class="flex ai-center">
@@ -1009,13 +1010,34 @@ if(!stopScroll)
 }
 
     $(function () {
+
+
+
+
+ ScrollTrigger.create({
+          start: "top top",
+          end: "+=10",
+          onLeave: function () {
+            $(".header1").addClass("floated header_dark")
+          },
+          onEnterBack: function () {
+            $(".header1").removeClass("floated header_dark")
+          },
+          id: "header",
+        })
+
+
+
+
+
 ///////////发展历程
 
-
+var slideDatas=[];
 $.get("http://amyos_test.t1.g4.wiminer.com/amyos/contact/article_year_top").then(function(data){
 
 let slideStr=``;
 
+slideDatas=data;
 data.forEach(function(d){
 slideStr+=`<a class="swiper-slide" href="detail.html?id=`+d.id+`">
                 <div class="items bg1">
@@ -1033,6 +1055,11 @@ slideStr+=`<a class="swiper-slide" href="detail.html?id=`+d.id+`">
 
 $("#fzlc .swiper-wrapper").html(slideStr)
 
+// var myCounter = $('#fzlc .year');
+// myCounter.numberAnimate({
+//   animationTimes: [100, 500, 100]
+// });
+
  var swiper = new Swiper(".swiper-container", {
       slidesPerView: "auto",
 freeModeSticky:true,
@@ -1042,7 +1069,13 @@ freeModeSticky:true,
         nextEl: ".btn-next",
         prevEl: ".btn-prev",
       },
-    })
+    }).on('slideChange', function (slider){
+
+
+// myCounter.numberAnimate('set',slideDatas[slider.realIndex].year)
+$("#fzlc .year").text(slideDatas[slider.realIndex].year)
+// console.log(slider)
+});
 
 })
 
@@ -1178,70 +1211,6 @@ breakAt: {
         });
 
 
-
-// ScrollTrigger.matchMedia({
-	
-//   // desktop
-//   "(min-width: 751px)": function() {
-// gsap.fromTo(
-//           ".section5 .job-list-wraper",
-//           1,
-//           {},
-//           {
-//             // scrollTo: $(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight()+350 ,
-//             immediateRender: false,
-
-//             scrollTrigger: {
-//               trigger: ".section5",
-//               //pin: true, // pin the trigger element while active
-//               start: "+=" + 0.2 * window.onePageHeight, // when the top of the trigger hits the top of the viewport
-//               end: "+=" + 1 * window.onePageHeight, // end after scrolling 500px beyond the start
-//               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-//               // markers: true,
-//               id: "44414",
-//               onUpdate: function (self) {
-
-//                 $(".section5 .job-list-wraper").get(0).scrollTop = ($(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight() + 350) * self.progress
-//               }
-//             },
-//           }
-//         )
-// $(".section5").height(2.4 * window.onePageHeight)
-// },
-// "(max-width: 750px)": function() {
-// gsap.fromTo(
-//           ".section5 .job-list-wraper",
-//           1,
-//           {},
-//           {
-//             // scrollTo: $(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight()+350 ,
-//             immediateRender: false,
-
-//             scrollTrigger: {
-//               trigger: ".section5",
-//               //pin: true, // pin the trigger element while active
-//               start: "+=" + 350, // when the top of the trigger hits the top of the viewport
-//               end: "+=" + ($(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight() ), // end after scrolling 500px beyond the start
-//               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-//               // markers: true,
-//               id: "44414",
-//               onUpdate: function (self) {
-
-//                 $(".section5 .job-list-wraper").get(0).scrollTop = ($(".section5 .job-list").innerHeight() - $(".section5 .job-list-wraper").innerHeight()+350 ) * self.progress
-//               }
-//             },
-//           }
-//         )
-// $(".section5").height($(".section5 .job-list").innerHeight() +500)
-// }
-// })
-
-
-        
-
-        // $(window).resize(function () {
-        //   $(".section5").height(2.4 * window.onePageHeight)
-        // })
         
 
  $(".job-list-wraper .job-list").on("click", ".job-item", function (e) {
@@ -1295,8 +1264,18 @@ $(location.hash).get(0).scrollIntoView()
 },500
 )
 
+function closeQrCode(){
+$(".qrcode").hide('fade');
+$('body').off('click',closeQrCode);
+}
 
+$(".qrcode_small").click(function(){
+$(".qrcode").show('fade');
+setTimeout(function(){
+$('body').on('click',closeQrCode)
+},10)
 
+})
 
 
   </script>
