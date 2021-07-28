@@ -44,7 +44,8 @@
       padding-top: 0 !important;
       position: relative;
 
-      .banner_video,.fake_video {
+      .banner_video,
+      .fake_video {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -323,10 +324,9 @@
                 }
 
                 .contents {
-                  height: 40%;
+                  height: 60%;
                   display: flex;
                   flex-direction: column;
-                  margin-bottom: 74px;
                   white-space: normal;
 
                   .title2 {
@@ -349,6 +349,7 @@
                   }
                   .pic_wrapper {
                     margin-top: 20px;
+                    margin-bottom: 20px;
                     img {
                       width: 100%;
                       object-fit: cover;
@@ -555,24 +556,22 @@
     // justify-content: center;
   }
 
-//自然滚动
+  //自然滚动
 
-
-
-height: auto;
-        .sticky {
-position: relative;
-height: auto;
+  height: auto;
+  .sticky {
+    position: relative;
+    height: auto;
     flex-direction: column;
-.wrapper{
-height:auto!important;
-position: relative;
-padding-top: 0;
-.job-list{
-margin-top:0;
-}
-
-}}
+    .wrapper {
+      height: auto !important;
+      position: relative;
+      padding-top: 0;
+      .job-list {
+        margin-top: 0;
+      }
+    }
+  }
 
   .top-part {
     width: 100%;
@@ -610,7 +609,7 @@ margin-top:0;
       align-items: center;
     }
 
-    // margin-bottom: 58px; 
+    // margin-bottom: 58px;
   }
 
   .job-list-wraper {
@@ -673,7 +672,9 @@ margin-top:0;
         font-weight: 400;
         color: #58616d;
         line-height: 1;
-        .iconfont{margin-right:4px;}
+        .iconfont {
+          margin-right: 4px;
+        }
         span {
           color: #d3d3d3;
         }
@@ -781,17 +782,11 @@ margin-top:0;
       ul.job-detail-ul {
         li {
           display: none;
-
-
-
         }
 
         li.show {
           display: block;
         }
-
-
-
       }
 
       ul {
@@ -819,11 +814,10 @@ margin-top:0;
             margin-bottom: 16px;
           }
 
-
-.divider{
-height:2px;
-background: #EEEEEE;
-}
+          .divider {
+            height: 2px;
+            background: #eeeeee;
+          }
 
           .l-j-title {
             font-size: 28px;
@@ -849,7 +843,9 @@ background: #EEEEEE;
             font-weight: 400;
             color: #58616d;
             line-height: 1;
-.iconfont{margin-right: 4px;}
+            .iconfont {
+              margin-right: 4px;
+            }
 
             div,
             span {
@@ -885,17 +881,17 @@ background: #EEEEEE;
   position: relative;
 
   .top-part {
-    background: linear-gradient(180deg, #ffffff 50%, rgba(255,255,255,0));
+    background: linear-gradient(180deg, #ffffff 50%, rgba(255, 255, 255, 0));
     height: 411px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 111;
+    z-index: 1;
     position: absolute;
 
-top:-1px;
-left:0;
+    top: -1px;
+    left: 0;
 
     .title1 {
       margin-top: 119px;
@@ -1050,7 +1046,7 @@ left:0;
   .page-main {
     .main-container {
       .section2 {
-        padding:90px 0;
+        padding: 90px 0;
         height: auto;
 
         .wrapper {
@@ -1123,7 +1119,7 @@ left:0;
       }
 
       .section2 {
-        padding:60px 0  90px;
+        padding: 60px 0 90px;
         height: auto;
 
         .wrapper {
@@ -1260,19 +1256,17 @@ left:0;
       //   width: 100%;
       // }
 
-.section4 {
-  padding: 60px 0 50px;
+      .section4 {
+        padding: 60px 0 50px;
 
         .wrapper {
           .title-part {
             display: block;
-margin-bottom: 30px;
-.right-part{
-margin-top: 30px;
-border-bottom: 1px solid #e5ebf221;
-}
-
-
+            margin-bottom: 30px;
+            .right-part {
+              margin-top: 30px;
+              border-bottom: 1px solid #e5ebf221;
+            }
 
             .right-part a {
               font-size: 12px !important;
@@ -1289,11 +1283,8 @@ border-bottom: 1px solid #e5ebf221;
             }
           }
 
-
-
           .news-list {
-
-margin-bottom: 35px;
+            margin-bottom: 35px;
             .news-item {
               width: 100%;
               margin-bottom: 15px;
@@ -1307,7 +1298,7 @@ margin-bottom: 35px;
             }
           }
           .page-part {
-margin: auto;
+            margin: auto;
             a {
               font-size: 12px !important;
             }
@@ -1316,38 +1307,38 @@ margin: auto;
       }
 
       .section5 {
-background-attachment: local;
+        background-attachment: local;
         .top-part {
-padding-top: 37px;
+          padding-top: 37px;
           height: 180px !important;
           background-size: contain;
         }
-.top-part .title2 {
+        .top-part .title2 {
           margin-bottom: 16px !important;
         }
         .top-part .title3 {
           font-size: 10px !important;
         }
         .sticky {
-position: relative;
-.wrapper{
-height:auto!important;
-}
+          position: relative;
+          .wrapper {
+            height: auto !important;
+          }
 
-.bottom-seemore{
-margin-bottom: 50px;
-text-align: center;
-    color: #7b7b7b;
-label a{
-line-height: 1.2;
-display: flex;
-align-items: center;
-    justify-content: center;
-}
-}
+          .bottom-seemore {
+            margin-bottom: 50px;
+            text-align: center;
+            color: #7b7b7b;
+            label a {
+              line-height: 1.2;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
           .job-list {
             // margin-top: 150px;
-margin-bottom: 0;
+            margin-bottom: 0;
           }
           .job-list .job-item {
             padding: 30px;
@@ -1368,8 +1359,6 @@ margin-bottom: 0;
             // margin-bottom: 40px;
           }
           .p-job-item {
-
-
             .l-j-title {
               font-size: 18px !important;
             }
@@ -1379,7 +1368,6 @@ margin-bottom: 0;
               font-size: 12px !important;
               line-height: 19px !important;
             }
-
           }
         }
       }

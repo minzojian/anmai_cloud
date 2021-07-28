@@ -50,7 +50,7 @@ body {
         line-height: 1;
         font-family: OPPOSans;
         font-weight: 500;
-margin-bottom: 20px;
+        margin-bottom: 20px;
       }
 
       .h2 {
@@ -124,17 +124,15 @@ margin-bottom: 20px;
     // background: #f2f4f8;
     // box-shadow: 0 0 5px 0 rgb(25 36 45 / 5%);
     // border-radius: 40px;
-max-width: unset!important;
+    max-width: unset !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
 
-padding-left: var(--contentpadding);
+    padding-left: var(--contentpadding);
     padding-right: var(--contentpadding);
 
-
-position: absolute;
-top:-35px;
-    
+    position: absolute;
+    top: -35px;
 
     // width: 100%;
     overflow: hidden;
@@ -383,7 +381,7 @@ top:-35px;
 
 .section8 {
   width: 100%;
-  background-image: url("../img/solution/图层 20.png")!important;
+  background-image: url("../img/solution/图层 20.png") !important;
   background-size: cover;
   background-position: center;
   height: 788px;
@@ -511,7 +509,7 @@ top:-35px;
   }
 
   .contactModal {
-        position: fixed;
+    position: fixed;
     width: 741px;
     height: auto;
     background: #ffffff;
@@ -520,7 +518,7 @@ top:-35px;
     margin: auto;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     left: 5;
     z-index: 9999;
 
@@ -584,7 +582,8 @@ top:-35px;
               width: 100%;
             }
 
-            input,textarea {
+            input,
+            textarea {
               width: 100%;
               border: 0;
               font-family: inherit;
@@ -602,11 +601,11 @@ top:-35px;
               border-bottom: 2px solid #eee;
               padding: 0 10px;
               box-sizing: border-box;
-resize:none;
+              resize: none;
             }
-textarea{
- height: auto;
-}
+            textarea {
+              height: auto;
+            }
 
             .errorMsg {
               font-size: 12px;
@@ -627,7 +626,7 @@ textarea{
   position: absolute;
   z-index: 1010;
   width: 240px;
-  height: 30px;
+  /* height: 30px;*/
   top: 50%;
   transition: all 0.3s;
   left: 0;
@@ -651,9 +650,8 @@ textarea{
   }
 }
 
-
-#cc .top{
-border-bottom: 1px solid #c9ced6;
+#cc .top {
+  border-bottom: 1px solid #c9ced6;
 }
 
 .section-content {
@@ -722,8 +720,6 @@ border-bottom: 1px solid #c9ced6;
       }
     }
 
-
-
     .mid {
       display: flex;
       justify-content: space-between;
@@ -759,7 +755,7 @@ border-bottom: 1px solid #c9ced6;
           text-align: left;
           position: relative;
           display: flex;
-margin-right: 10px;
+          margin-right: 10px;
           span {
             position: relative;
           }
@@ -803,7 +799,7 @@ margin-right: 10px;
     }
 
     .bottom {
-      background-image: url(../img/solution/310146318.png)  ;
+      background-image: url(../img/solution/310146318.png);
       background-size: cover;
       width: 100%;
       height: 600px;
@@ -973,6 +969,13 @@ margin-right: 10px;
   }
   .nav-wrap.navFix {
     position: fixed;
-    top: 50px!important;
+    top: 50px !important;
   }
+}
+
+input:-internal-autofill-selected {
+  background-color: transparent !important;
+}
+input:-webkit-autofill {
+  background-clip: text;
 }

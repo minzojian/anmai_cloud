@@ -107,11 +107,12 @@ $(function () {
       window.contentPadding + "px"
     )
 
- document.body.style.setProperty(
+    document.body.style.setProperty(
       "--solutionright",
-      (window.innerWidth-$($(".header1 .nav>ul>li").get(2)).offset().left) + "px"
+      window.innerWidth -
+        $($(".header1 .nav>ul>li").get(2)).offset().left +
+        "px"
     )
-
   })
   window.onePageHeight = Math.max(window.innerHeight, 640)
   document.body.style.setProperty("--fullheight", window.onePageHeight + "px")
@@ -126,11 +127,10 @@ $(function () {
     window.contentPadding + "px"
   )
 
- document.body.style.setProperty(
-      "--solutionright",
-      (window.innerWidth-$($(".header1 .nav>ul>li").get(2)).offset().left) + "px"
-    )
-
+  document.body.style.setProperty(
+    "--solutionright",
+    window.innerWidth - $($(".header1 .nav>ul>li").get(2)).offset().left + "px"
+  )
 })
 
 function checkOs() {
@@ -140,8 +140,8 @@ function checkOs() {
     isAndroid = /(?:Android)/.test(ua),
     isFireFox = /(?:Firefox)/.test(ua),
     isChrome = /(?:Chrome|CriOS)/.test(ua),
-isXiaoMi = /(?:XiaoMi)/i.test(ua),
-isOnePlus = /(?:OnePlus|Vivo|One Plus)/i.test(ua),
+    isXiaoMi = /(?:XiaoMi)/i.test(ua),
+    isOnePlus = /(?:OnePlus|Vivo|One Plus)/i.test(ua),
     isWeixin =
       ua.match(/MicroMessenger/i) &&
       ua.match(/MicroMessenger/i)[0] == "micromessenger"
@@ -150,12 +150,12 @@ isOnePlus = /(?:OnePlus|Vivo|One Plus)/i.test(ua),
     (isAndroid && !/(?:Mobile)/.test(ua)) ||
     (isFireFox && /(?:Tablet)/.test(ua))),
     (isIPhone = /(?:iPhone)/.test(ua) && !isTablet),
-    (isPc = !isIPhone && !isAndroid && !isSymbian);
+    (isPc = !isIPhone && !isAndroid && !isSymbian)
 
-// var isSafari = ua.indexOf("Safari") > -1;
-  
-// // Discard Safari since it also matches Chrome
-// if ((isChrome) && (isSafari)) isSafari = false;
+  // var isSafari = ua.indexOf("Safari") > -1;
+
+  // // Discard Safari since it also matches Chrome
+  // if ((isChrome) && (isSafari)) isSafari = false;
 
   window.isTablet = isTablet
   window.isIPhone = isIPhone
@@ -165,13 +165,12 @@ isOnePlus = /(?:OnePlus|Vivo|One Plus)/i.test(ua),
   window.isWeixin = isWeixin
   window.isXiaoMi = isXiaoMi
   window.isOnePlus = isOnePlus
-window.isSafari=false;//isSafari;
+  window.isSafari = false //isSafari;
 
-setTimeout(function(){
-// if( window.isPhone )
-if( window.isPhone)
-    $(document.body).addClass('strange_os')
-},10)
+  setTimeout(function () {
+    // if( window.isPhone )
+    if (window.isPhone) $(document.body).addClass("strange_os")
+  }, 10)
 }
 
 checkOs()
@@ -200,7 +199,6 @@ $(document).ready(function () {
   })
 
   $(".submitConcact").on("click", function () {
-    console.log("submit")
     if ($("#nickname").val() == "") {
       $(".name_errorMsg").show()
       return false

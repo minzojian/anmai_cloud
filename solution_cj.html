@@ -105,7 +105,7 @@ background-image: url('./assets/img/solution/解决方案-场景/mb-7.jpg')!impo
 <body>
     <div class="page-main">
         <!-- header -->
-       <header class="header1 header_dark">
+       <header class="header1 header_light">
       <a href="./index.html"> <div class="logo">&nbsp;</div></a>
       <div class="right-part">
         <input id="langswtich" class="langswtich foldable_menu" type="checkbox" hidden />
@@ -755,12 +755,12 @@ background-image: url('./assets/img/solution/解决方案-场景/mb-7.jpg')!impo
                         <section>
                             <div class="input_box">                               
                                     <span>如何称呼您 *</span>
-                                    <input type="text" id="nickname">
+                                    <input type="text" id="nickname" autocomplete="off" >
                                     <p class="name_errorMsg errorMsg">姓名不能为空</p>
                             </div>
                             <div class="input_box">
                                     <span>您的电话 *</span>
-                                    <input type="text" id="phone">
+                                    <input type="text" id="phone"  autocomplete="off">
                                     <p class="phone_errorMsg errorMsg">电话不能为空</p>
                             </div>
                         </section>
@@ -769,14 +769,14 @@ background-image: url('./assets/img/solution/解决方案-场景/mb-7.jpg')!impo
                                 <label >
                                     <span>您的邮箱 *</span>
                                 </label>
-                                    <input type="text" id="email">
+                                    <input type="text" id="email" autocomplete="off" >
                                     <p class="email_errorMsg errorMsg">邮箱不能为空</p>
                             </div>
                             <div class="input_box">
                                 <label >
                                     <span>您想咨询的行业</span>
                                 </label>
-                                    <input type="text" id="industry">
+                                    <input type="text" id="industry" autocomplete="off">
                             </div>
                         </section>
                         <section>
@@ -784,7 +784,7 @@ background-image: url('./assets/img/solution/解决方案-场景/mb-7.jpg')!impo
                                 <label >
                                     <span class="label">请描述您想咨询的内容</span>
                                 </label>
-                                    <textarea class="contents" id="content" rows="3" ></textarea>
+                                    <textarea class="contents" id="content" rows="3"  autocomplete="off"></textarea>
                             </div>
                         </section>
                         <div class="action_btn btn-with-arrow submitConcact">
