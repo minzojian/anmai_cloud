@@ -109,8 +109,8 @@ $(function () {
 
     document.body.style.setProperty(
       "--solutionright",
-      window.innerWidth -
-        $($(".header1 .nav>ul>li").get(2)).offset().left +
+      -(window.innerWidth -
+        $($(".header1 .nav>ul>li").get(2)).offset().left - $($(".header1 .nav>ul>li").get(2)).width() - $(".solution_submenu").width()) +
         "px"
     )
   })
@@ -129,7 +129,9 @@ $(function () {
 
   document.body.style.setProperty(
     "--solutionright",
-    window.innerWidth - $($(".header1 .nav>ul>li").get(2)).offset().left + "px"
+   -(window.innerWidth -
+        $($(".header1 .nav>ul>li").get(2)).offset().left - $($(".header1 .nav>ul>li").get(2)).width() - $(".solution_submenu").width()) +
+        "px"
   )
 })
 
