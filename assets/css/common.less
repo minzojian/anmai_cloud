@@ -84,11 +84,7 @@ header {
     border: 1px solid #ffffff42;
   }
   &.header_light {
-    .lang-panel {
-      a {
-        color: black;
-      }
-    }
+    
   }
   &.header_dark {
     color: #000;
@@ -445,7 +441,7 @@ footer {
 ////////////////end footer
 
 ul.lang-panel {
-  display: none; //暂时隐藏
+  // display: none; //暂时隐藏
   top: calc(100% - 1px);
   left: unset;
   right: 16px;
@@ -458,8 +454,12 @@ ul.lang-panel {
   transform: translateY(-10px);
   transition: all 0.3s;
   position: absolute;
+  z-index: 11111;
   li {
     text-align: left;
+&:not(:last-child){
+margin-bottom: 8px;
+}
   }
   .selected {
     i.fa {
@@ -469,6 +469,8 @@ ul.lang-panel {
   a {
     display: flex;
     align-items: center;
+
+        color: black;
 
     i.fa {
       opacity: 0;
@@ -522,6 +524,7 @@ a {
   display: inline-flex;
   text-decoration: none;
   transition: all 0.3s;
+cursor: pointer;
   &.changeable {
     &:hover {
       color: #3aab8b !important;
@@ -578,8 +581,8 @@ i.fa {
   }
 }
 .lang_bt {
-  display: none; //暂时隐藏
-  // display: flex;
+  // display: none; //暂时隐藏
+  display: flex;
   padding: 0 10px;
   justify-content: center;
   align-items: center;
@@ -732,8 +735,8 @@ input:checked + label {
       margin: auto 0;
     }
     .lang_bt_mobile {
-      display: none;
-      // display: flex;
+      // display: none;
+      display: flex;
       align-items: center;
       i {
         margin-left: 5px;

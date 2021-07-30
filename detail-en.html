@@ -43,10 +43,10 @@ window.disabledHeaderAudoSwitch=true;
           <div class="langswtich_mask switch_mask"></div>
         </label>
         <ul class="lang-panel">
-          <li>
+          <li class="selected">
             <a> <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a>
           </li>
-          <li class="selected">
+          <li>
             <a>
               <i class="fa iconfont icon-gou" aria-hidden="true"></i>
               English</a
@@ -306,7 +306,7 @@ window.disabledHeaderAudoSwitch=true;
         </div>
         <label for="langswtich" class="not_mobile">
           <div class="lang_bt">
-            <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> English
+            <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> 中文
           </div>
           <div class="langswtich_mask switch_mask"></div>
         </label>
@@ -405,17 +405,17 @@ window.disabledHeaderAudoSwitch=true;
           />
           <label for="langswtich2">
             <div class="lang_bt">
-              <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> English
+              <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> 中文
             </div>
             <div class="langswtich_mask switch_mask"></div>
           </label>
           <ul class="lang-panel lang-panel-bottom">
-            <li>
+            <li class="selected">
               <a>
                 <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a
               >
             </li>
-            <li class="selected">
+            <li>
               <a>
                 <i class="fa iconfont icon-gou" aria-hidden="true"></i>
                 English</a
@@ -447,10 +447,10 @@ window.disabledHeaderAudoSwitch=true;
                 </a>
               </li>
               <li>
-                <a href="./product_jzcc.html">Distributed CDN</a>
+                <a href="./product_jzcc-en.html">Distributed CDN</a>
               </li>
               <li>
-                <a href="./product_ygpu.html">Cloud GPU</a>
+                <a href="./product_ygpu-en.html">Cloud GPU</a>
               </li>
             </ul>
           </div>
@@ -811,6 +811,9 @@ window.disabledHeaderAudoSwitch=true;
           },
         })
       }
+
+$(".lang-panel li:nth-child(2) a").attr('href','./detail.html'+location.search)
+
 
       getRecommendNews()
       getArticleContents()
