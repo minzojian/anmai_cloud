@@ -33,7 +33,9 @@ font-size: 14px;
 line-height: 22px;
 }
 }
-.section5 .all-job-popup-container .all-job-popup ul li{
+
+
+.section5 .all-job-popup-container .all-job-popup .detail-wrapper ul li{
 .l-j-top-part{
 
 flex-direction: column;
@@ -49,9 +51,15 @@ white-space: nowrap;
 
 }
 .l-j-bottom-part{
-flex-direction: column-reverse;
-.l-j-right-part{
+flex-direction: column;
+.l-j-left-part{
 margin-bottom: 24px;
+align-self: flex-start;
+}
+.l-j-right-part{
+&:not(:last-child){
+margin-bottom: 24px;
+}
     align-self: flex-end;
 }
 }

@@ -473,7 +473,7 @@
           </div>
           <div class="item">
             <div class="sub-top-part"><i class="iconfont icon-youjian"></i>MAIL</div>
-            <div class="sub-bottom-part">contact@anmaicloud.com </div>
+            <div class="sub-bottom-part">contact@AnmaiCloud.com </div>
           </div>
           <div class="item">
             <div class="sub-top-part"><i class="iconfont icon-dianhua"></i>TEL</div>
@@ -920,7 +920,7 @@ load_news(1,true);
 
 function load_news(page,stopScroll){
 if(page && !isNaN(page))currentPage=Number(page);
-$.get("http://amyos_test.t1.g4.wiminer.com/amyos/news/getArticle",{lang:"en-us",l:currentPage,t:allTypes[currentTypeIndex]}).then(function(data){
+$.get("https://cms-api-amy.anmaicloud.com/amyos/news/getArticle",{lang:"en-us",l:currentPage,t:allTypes[currentTypeIndex]}).then(function(data){
 
 var newsStr=``
 data.data.forEach(function(news){
@@ -988,7 +988,7 @@ if(!stopScroll)
 ///////////发展历程
 
 var slideDatas=[];
-$.get("http://amyos_test.t1.g4.wiminer.com/amyos/contact/article_year_top",{lang:"en-us"}).then(function(data){
+$.get("https://cms-api-amy.anmaicloud.com/amyos/contact/article_year_top",{lang:"en-us"}).then(function(data){
 
 let slideStr=``;
 
@@ -1037,7 +1037,7 @@ $("#fzlc .year").text(slideDatas[slider.realIndex].year)
 //////////新闻列表
 
 
-$.get("http://amyos_test.t1.g4.wiminer.com/amyos/contact/article_type",{lang:"en-us"}).then(function(data){
+$.get("https://cms-api-amy.anmaicloud.com/amyos/contact/article_type",{lang:"en-us"}).then(function(data){
 
 var typesStr=` <a class="newstype `+(currentTypeIndex==0?'active':'')+`"  onclick="change_new_type(0)">All</a>`;
 var typeIds=[0]
@@ -1124,7 +1124,7 @@ $(".all-job-popup-container ul").scrollTop(pos.top);
 <li class="p-job-item" data-index="${i}">
  <div class="l-j-top-part">
                 <div class="l-j-title">${job[0]}</div>
- <div class="l-j-right-part">Publish at ${job[4]}</div>
+ 
 </div>
                 <div class="l-j-bottom-part">
                   <div class="l-j-left-part">
@@ -1140,8 +1140,11 @@ $(".all-job-popup-container ul").scrollTop(pos.top);
                       <i class="iconfont icon-dingwei"></i>${job[3]}
                     </div>
                   </div>
+<div class="l-j-right-part">Publish at ${job[4]}</div>
                   <div class="l-j-right-part"><i class="iconfont icon-youjian"></i>Send Resume: <a href="mailto:Jobs@anmaicloud.com">Jobs@anmaicloud.com</a></div>
                 </div>
+
+
 <div class="divider"></div>
  <div class="l-j-desc-part">${["Job Responsibilities:", job[5], "", 'Job Requirements:', job[6], "", bouns].join(`
 `)}
