@@ -1039,7 +1039,7 @@ $("#fzlc .year").text(slideDatas[slider.realIndex].year)
 
 $.get("http://amyos_test.t1.g4.wiminer.com/amyos/contact/article_type",{lang:"en-us"}).then(function(data){
 
-var typesStr=` <a class="newstype `+(currentTypeIndex==0?'active':'')+`"  onclick="change_new_type(0)">全部</a>`;
+var typesStr=` <a class="newstype `+(currentTypeIndex==0?'active':'')+`"  onclick="change_new_type(0)">All</a>`;
 var typeIds=[0]
 data.sort(function(a,b){return a.weight>b.weight?-1:1}).forEach(function(t,i){
 typesStr+=`<a class="newstype `+(currentTypeIndex==i+1?'active':'')+`"   onclick="change_new_type(`+(i+1)+`)">`+t.name_cn+`</a>`

@@ -682,7 +682,7 @@ window.disabledHeaderAudoSwitch=true;
         $.ajax({
           url: "http://amyos_test.t1.g4.wiminer.com/amyos/article/neighbor_article",
           type: "GET",
-          data: { l: currentAtcId },
+          data: {lang:'en-us', l: currentAtcId },
           dataType: "json",
           success: function (data) {
             console.info(data)
@@ -701,6 +701,7 @@ window.disabledHeaderAudoSwitch=true;
         $.ajax({
           url: "http://amyos_test.t1.g4.wiminer.com/amyos/contact/article_type",
           type: "GET",
+ data: {lang:'en-us'},
           dataType: "json",
           success: function (data) {
             console.info(data)
@@ -724,6 +725,7 @@ window.disabledHeaderAudoSwitch=true;
           url: "http://amyos_test.t1.g4.wiminer.com/amyos/article/article_detail",
           type: "GET",
           data: {
+lang:'en-us',
             l: urlId, //文章ID
           },
           dataType: "json",
@@ -747,6 +749,7 @@ window.disabledHeaderAudoSwitch=true;
           url: "http://amyos_test.t1.g4.wiminer.com/amyos/article/getTopArticle",
           type: "GET",
           data: {
+lang:'en-us',
             k: newPageId, //页数
             l: urlId, //文章ID
           },
@@ -763,7 +766,7 @@ window.disabledHeaderAudoSwitch=true;
               newsStr +=
                 `<div class="item item_top">
                         <div class="box-img">
-                          <a class="pic_wrapper" href="detail.html?id=` +
+                          <a class="pic_wrapper" href="detail-en.html?id=` +
                 d.id +
                 `"
                             ><img src="` +
@@ -772,7 +775,7 @@ window.disabledHeaderAudoSwitch=true;
                           /></a>
                         </div>
                         <div class="box-text">
-                          <a  href="detail.html?id=` +
+                          <a  href="detail-en.html?id=` +
                 d.id +
                 `" class="title"
                             >` +
@@ -812,7 +815,7 @@ window.disabledHeaderAudoSwitch=true;
         })
       }
 
-$(".lang-panel li:nth-child(2) a").attr('href','./detail.html'+location.search)
+$(".lang-panel li:nth-child(2) a").attr('href','./detail-en.html'+location.search)
 
 
       getRecommendNews()
