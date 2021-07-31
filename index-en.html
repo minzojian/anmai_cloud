@@ -485,7 +485,7 @@ ontimeupdate="handleVideoPlaying(event)"
     <script>
       /////////STAGE1/////////
       ////////初始视频播放，同时可能会存在按钮////
-      $.get("https://cms-api-amy.anmaicloud.com/amyos/news/company_dynamic",{lang:"en-us",}).then(function (
+      $.get("http://amyos_test.t1.g4.wiminer.com/amyos/news/company_dynamic",{lang:"en-us",}).then(function (
         data
       ) {
         // console.log(data)
@@ -1273,7 +1273,7 @@ isPhone
               </div>
 
               <div class="divider"></div>
-              <div class="bussiness_sub_item">
+              <div class="bussiness_sub_item active">
                 <div class="bussiness_sub_item_title" data-index="1">
                   02 Distributed CDN (coming soon)
                 </div>
@@ -1323,7 +1323,7 @@ isPhone
                 </div>
               </div>
               <div class="divider"></div>
-              <div class="bussiness_sub_item">
+              <div class="bussiness_sub_item active">
                 <div class="bussiness_sub_item_title" data-index="2">
                   03 Matrix Storage
                 </div>
@@ -1377,7 +1377,7 @@ isPhone
                 </div>
               </div>
               <div class="divider"></div>
-              <div class="bussiness_sub_item">
+              <div class="bussiness_sub_item active">
                 <div class="bussiness_sub_item_title" data-index="3">
                   04 Cloud GPU
                 </div>
@@ -1435,6 +1435,7 @@ isPhone
               </div>
             </div>
           </div>
+        </div>
         </div>
       <!-- </div> -->
     </div>
