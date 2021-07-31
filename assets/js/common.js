@@ -214,7 +214,7 @@ $(document).ready(function () {
       return false
     } else
       $.ajax({
-        url: "http://amyos_test.t1.g4.wiminer.com/amyos/contact/add_contact",
+        url: "https://cms-api-amy.anmaicloud.com/amyos/contact/add_contact",
         type: "POST",
         data: {
           lang:location.pathname.includes('-en')?"en-us":"",
