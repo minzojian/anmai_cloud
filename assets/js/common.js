@@ -108,10 +108,10 @@ $(function () {
     )
 
     document.body.style.setProperty(
-      "--solutionright",
-      -(window.innerWidth -
-        $($(".header1 .nav>ul>li").get(2)).offset().left - $($(".header1 .nav>ul>li").get(2)).width() - $(".solution_submenu").width()) +
-        "px"
+     "--solutionright",($(".solution_submenu").width()/2)+'px'
+  //  -(window.innerWidth -
+  //       $($(".header1 .nav>ul>li").get(2)).offset().left - $($(".header1 .nav>ul>li").get(2)).width() - $(".solution_submenu").width()) +
+  //       "px"
     )
   })
   window.onePageHeight = Math.max(window.innerHeight, 640)
@@ -128,10 +128,10 @@ $(function () {
   )
 
   document.body.style.setProperty(
-    "--solutionright",
-   -(window.innerWidth -
-        $($(".header1 .nav>ul>li").get(2)).offset().left - $($(".header1 .nav>ul>li").get(2)).width() - $(".solution_submenu").width()) +
-        "px"
+    "--solutionright",($(".solution_submenu").width()/2)+'px'
+  //  -(window.innerWidth -
+  //       $($(".header1 .nav>ul>li").get(2)).offset().left - $($(".header1 .nav>ul>li").get(2)).width() - $(".solution_submenu").width()) +
+  //       "px"
   )
 })
 
