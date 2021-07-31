@@ -13,3 +13,19 @@ font-size: 42px;
 .bussiness_sub_item_child li span{
 margin-right: 8px;
 }
+
+
+//针对第二屏在高度不够时的处理
+@media screen and (max-height: 860px) {
+  .stage2 .left_part .bussiness_title2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .stage2
+    .left_part
+    .bussiness_content
+    .bussiness_sub_item.active
+    .bussiness_sub_item_title {
+    margin-bottom: 10px !important;
+  }
+}
