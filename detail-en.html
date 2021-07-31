@@ -43,10 +43,10 @@ window.disabledHeaderAudoSwitch=true;
           <div class="langswtich_mask switch_mask"></div>
         </label>
         <ul class="lang-panel">
-          <li class="selected">
+          <li >
             <a> <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a>
           </li>
-          <li>
+          <li class="selected">
             <a>
               <i class="fa iconfont icon-gou" aria-hidden="true"></i>
               English</a
@@ -410,12 +410,12 @@ window.disabledHeaderAudoSwitch=true;
             <div class="langswtich_mask switch_mask"></div>
           </label>
           <ul class="lang-panel lang-panel-bottom">
-            <li class="selected">
+            <li >
               <a>
                 <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a
               >
             </li>
-            <li>
+            <li class="selected">
               <a>
                 <i class="fa iconfont icon-gou" aria-hidden="true"></i>
                 English</a
@@ -657,6 +657,7 @@ window.disabledHeaderAudoSwitch=true;
         getQueryString("id") != null ? getQueryString("id") : "S00096e73" //文章id暂时 S00096e73
       var currentAtcId = "" //当前帖子类型id
       var currentTypeId = 1 //当前帖子类型
+var releatedArtId='';
       var lastId = "",
         nextId = ""
       $(document).ready(function () {
@@ -680,7 +681,7 @@ window.disabledHeaderAudoSwitch=true;
       //获取文章上下篇ID
       function getNeighborId() {
         $.ajax({
-          url: "https://cms-api-amy.anmaicloud.com/amyos/article/neighbor_article",
+          url: "http://amyos_test.t1.g4.wiminer.com/amyos/article/neighbor_article",
           type: "GET",
           data: {lang:'en-us', l: currentAtcId },
           dataType: "json",
@@ -699,13 +700,13 @@ window.disabledHeaderAudoSwitch=true;
       //面包屑帖子类型
       function getArticleType() {
         $.ajax({
-          url: "https://cms-api-amy.anmaicloud.com/amyos/contact/article_type",
+          url: "http://amyos_test.t1.g4.wiminer.com/amyos/contact/article_type",
           type: "GET",
  data: {lang:'en-us'},
           dataType: "json",
           success: function (data) {
             console.info(data)
-            let obj = data.data.find(function (e) {
+            let obj = data.find(function (e) {
               return e.id === currentTypeId
             })
             $(".actType")
@@ -722,7 +723,7 @@ window.disabledHeaderAudoSwitch=true;
       //文章内容
       function getArticleContents() {
         $.ajax({
-          url: "https://cms-api-amy.anmaicloud.com/amyos/article/article_detail",
+          url: "http://amyos_test.t1.g4.wiminer.com/amyos/article/article_detail",
           type: "GET",
           data: {
 lang:'en-us',
@@ -736,6 +737,11 @@ lang:'en-us',
             $(".box-content").html(data.content)
             currentAtcId = urlId
             currentTypeId = data.type_id
+releatedArtId=data.related_id;
+if(releatedArtId)
+$(".lang-panel li:nth-child(1) a").attr('href','./detail.html?id='+releatedArtId)
+else
+$(".lang-panel li:nth-child(1) a").attr('href','./about.html#xwdt')
             getNeighborId()
             getArticleType()
             window.scrollTo({ top: 0 })
@@ -746,7 +752,7 @@ lang:'en-us',
       //最新推荐
       function getRecommendNews() {
         $.ajax({
-          url: "https://cms-api-amy.anmaicloud.com/amyos/article/getTopArticle",
+          url: "http://amyos_test.t1.g4.wiminer.com/amyos/article/getTopArticle",
           type: "GET",
           data: {
 lang:'en-us',
@@ -815,7 +821,7 @@ lang:'en-us',
         })
       }
 
-$(".lang-panel li:nth-child(2) a").attr('href','./detail-en.html'+location.search)
+
 
 
       getRecommendNews()

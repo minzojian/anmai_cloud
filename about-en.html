@@ -827,7 +827,7 @@ Meal supplement, transportation subsidy, computer subsidy, seniority subsidy, we
 `
 
     var jobs = [
-      ["K8S operation and maintenance engineer", 1, "Operation and maintenance", "Chengdu", "2021-07-05",
+      ["K8S DevOps", 1, "DevOps", "Chengdu", "2021-07-05",
         `1.Responsible for the environment construction, deployment and release of business systems; 
 2.Monitor and handle website system service failures to ensure the safe and stable operation of various systems and services;
 3.Responsible for assisting the business team and on-site technical maintenance team in troubleshooting;
@@ -841,7 +841,7 @@ Meal supplement, transportation subsidy, computer subsidy, seniority subsidy, we
 3.Familiar with web services, including but not limited to nginx, tomcat deployment and configuration;
 4.Strong team consciousness and excellent communication and coordination skills.
 `],
-      ["Python engineer", 1, "Research and development", "Chengdu", "2021-07-05",
+      ["Python engineer", 1, "Development", "Chengdu", "2021-07-05",
         `1.Complete module development based on Python according to development requirements;
 2.Responsible for product interface optimization and performance optimization;
 3.Cooperate with team members of various departments to complete iterative development tasks and ensure the smooth launch of products;
@@ -854,7 +854,7 @@ Meal supplement, transportation subsidy, computer subsidy, seniority subsidy, we
 4.Familiar with Git code management tools and common databases (such as MySQL/PostgreSQL/SQL Server);
 Familiar with HTML, JS, CSS, jQuery and other Web developers is preferred. 
 `],
-      ["PHP engineer", 3, "Research and development", "Chengdu", "2021-07-05",
+      ["PHP engineer", 3, "Development", "Chengdu", "2021-07-05",
         `1.Responsible for the interface between APP and PC, background development;
 2.Participate in the architecture design and code writing of the back-end project of the company;
 3.Participate in system requirements analysis and design, and be responsible for completing PHP core code and interface specification formulation;
@@ -866,7 +866,7 @@ Familiar with HTML, JS, CSS, jQuery and other Web developers is preferred. 
 4.Familiar with Git code management tools and common databases (such as MySQL/PostgreSQL/SQL Server);
 5.Familiar with HTML, JS, CSS, jQuery and other Web developers is preferred.
 `],
-      ["WEB front end engineer", 2,  "Research and development", "Chengdu",  "2021-07-05",
+      ["WEB front end engineer", 2,  "Development", "Chengdu",  "2021-07-05",
         `1.Responsible for the development of APP and PC web pages;
 2.Participate in the design and code writing of the company's front-end projects; 
 3.Mainly involved in the development of hybrid APP and related businesses;
@@ -920,7 +920,7 @@ load_news(1,true);
 
 function load_news(page,stopScroll){
 if(page && !isNaN(page))currentPage=Number(page);
-$.get("https://cms-api-amy.anmaicloud.com/amyos/news/getArticle",{lang:"en-us",l:currentPage,t:allTypes[currentTypeIndex]}).then(function(data){
+$.get("http://amyos_test.t1.g4.wiminer.com/amyos/news/getArticle",{lang:"en-us",l:currentPage,t:allTypes[currentTypeIndex]}).then(function(data){
 
 var newsStr=``
 data.data.forEach(function(news){
@@ -988,7 +988,7 @@ if(!stopScroll)
 ///////////发展历程
 
 var slideDatas=[];
-$.get("https://cms-api-amy.anmaicloud.com/amyos/contact/article_year_top",{lang:"en-us"}).then(function(data){
+$.get("http://amyos_test.t1.g4.wiminer.com/amyos/contact/article_year_top",{lang:"en-us"}).then(function(data){
 
 let slideStr=``;
 
@@ -1037,7 +1037,7 @@ $("#fzlc .year").text(slideDatas[slider.realIndex].year)
 //////////新闻列表
 
 
-$.get("https://cms-api-amy.anmaicloud.com/amyos/contact/article_type",{lang:"en-us"}).then(function(data){
+$.get("http://amyos_test.t1.g4.wiminer.com/amyos/contact/article_type",{lang:"en-us"}).then(function(data){
 
 var typesStr=` <a class="newstype `+(currentTypeIndex==0?'active':'')+`"  onclick="change_new_type(0)">All</a>`;
 var typeIds=[0]
