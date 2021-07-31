@@ -217,6 +217,7 @@ $(document).ready(function () {
         url: "http://amyos_test.t1.g4.wiminer.com/amyos/contact/add_contact",
         type: "POST",
         data: {
+          lang:location.pathname.includes('-en')?"en-us":"",
           nickname: $("#nickname").val(),
           email: $("#email").val(),
           phone: $("#phone").val(),
