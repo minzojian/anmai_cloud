@@ -999,7 +999,7 @@ load_news(1,true);
 
 function load_news(page,stopScroll){
 if(page && !isNaN(page))currentPage=Number(page);
-$.get("http://amyos_test.t1.g4.wiminer.com/amyos/news/getArticle",{l:currentPage,t:allTypes[currentTypeIndex]}).then(function(data){
+$.get("https://cms-api-amy.anmaicloud.com/amyos/news/getArticle",{l:currentPage,t:allTypes[currentTypeIndex]}).then(function(data){
 
 var newsStr=``
 data.data.forEach(function(news){
@@ -1067,7 +1067,7 @@ if(!stopScroll)
 ///////////发展历程
 
 var slideDatas=[];
-$.get("http://amyos_test.t1.g4.wiminer.com/amyos/contact/article_year_top").then(function(data){
+$.get("https://cms-api-amy.anmaicloud.com/amyos/contact/article_year_top").then(function(data){
 
 let slideStr=``;
 
@@ -1116,7 +1116,7 @@ $("#fzlc .year").text(slideDatas[slider.realIndex].year)
 //////////新闻列表
 
 
-$.get("http://amyos_test.t1.g4.wiminer.com/amyos/contact/article_type").then(function(data){
+$.get("https://cms-api-amy.anmaicloud.com/amyos/contact/article_type").then(function(data){
 
 var typesStr=` <a class="newstype `+(currentTypeIndex==0?'active':'')+`"  onclick="change_new_type(0)">全部</a>`;
 var typeIds=[0]
