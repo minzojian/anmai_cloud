@@ -1514,12 +1514,12 @@ y="100"
               immediateRender: false,
 
               scrollTrigger: {
-                trigger: ".stage2",
+                trigger: ".stage2_pc",
                 //pin: true, // pin the trigger element while active
-                start: "+=" + getStage2Height(0.2), // when the top of the trigger hits the top of the viewport
-                end: "+=" + getStage2Height(0.6), // end after scrolling 500px beyond the start
+                start: "=" + getStage2Height(0.2), // when the top of the trigger hits the top of the viewport
+                end:  "="+getStage2Height(3/4), // end after scrolling 500px beyond the start
                 scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-                // markers: false,
+                markers: true,
                 id: "44414",
               },
             }
@@ -1567,15 +1567,24 @@ y="100"
         var i = $(this).data("index")
         // window.pageYOffset =
         if ($(".stage2_pc").is(":visible")) {
+// 
+var toPos=$(".stage1").height()  + getStage2Height(0.2);
+if(i==1)
+{
+toPos=$(".stage1").height()  + getStage2Height(1/4)*1.2;
+}else if(i==2){
+toPos=$(".stage1").height()  + getStage2Height(1/4)*1.72;
+}else if(i==3){
+toPos=$(".stage1").height()  + getStage2Height(3/4);
+}
+
           window.scrollTo({
-            top:
-              Number(
-                $(".stage2_pc").offset().top +
-                Number(i) * getStage2Height(0.2) +
-                getStage2Height(0.1)
-              ) ^ 0,
+            top:toPos,
             behavior: "smooth",
           })
+// setTimeout(function(){
+// $($(".stage2_pc .pic_part").get(i)).get(0).scrollIntoView({behavior: "smooth"});
+// },10)
         }
       })
 
@@ -2024,7 +2033,7 @@ x5-video-player-type="h5"
             </div>
             <div class="divider-v"></div>
             <div class="flex ai-center">
-              <i class="fa iconfont icon-youjian" aria-hidden="true"></i> contact@AnmaiCloud.com
+              <i class="fa iconfont icon-youjian" aria-hidden="true"></i> contact@anmaicloud.com
             </div>
           </div>
           <div class="flex line-2">
