@@ -565,7 +565,7 @@
               </li>
               <li>
                 <a href="./product_fbscdn-en.html" style="pointer-events: none">
-                  Distributed CDN(coming soon)
+                  Distributed CDN
                 </a>
               </li>
               <li>
@@ -680,7 +680,7 @@
           <ul>
             <li> <a href="./esg-en.html"> ESG Overview</a></li>
             <li> <a href="#"> ESG Reports</a></li>
-            <li> <a href="#"> Study Community</a></li>
+            <li> <a href="#"> Learning</a></li>
             <li> <a href="#"> Giving Back</a></li>
           </ul>
         </div>
@@ -860,7 +860,7 @@ Meal supplement, transportation subsidy, computer subsidy, seniority subsidy, we
 3.Familiar with web services, including but not limited to nginx, tomcat deployment and configuration;
 4.Strong team consciousness and excellent communication and coordination skills.
 `],
-      ["Python engineer", 1, "Development", "Chengdu", "2021-07-05",
+      ["Python Engineer", 1, "Development", "Chengdu", "2021-07-05",
         `1.Complete module development based on Python according to development requirements;
 2.Responsible for product interface optimization and performance optimization;
 3.Cooperate with team members of various departments to complete iterative development tasks and ensure the smooth launch of products;
@@ -873,7 +873,7 @@ Meal supplement, transportation subsidy, computer subsidy, seniority subsidy, we
 4.Familiar with Git code management tools and common databases (such as MySQL/PostgreSQL/SQL Server);
 Familiar with HTML, JS, CSS, jQuery and other Web developers is preferred. 
 `],
-      ["PHP engineer", 3, "Development", "Chengdu", "2021-07-05",
+      ["PHP Engineer", 3, "Development", "Chengdu", "2021-07-05",
         `1.Responsible for the interface between APP and PC, background development;
 2.Participate in the architecture design and code writing of the back-end project of the company;
 3.Participate in system requirements analysis and design, and be responsible for completing PHP core code and interface specification formulation;
@@ -885,7 +885,7 @@ Familiar with HTML, JS, CSS, jQuery and other Web developers is preferred. 
 4.Familiar with Git code management tools and common databases (such as MySQL/PostgreSQL/SQL Server);
 5.Familiar with HTML, JS, CSS, jQuery and other Web developers is preferred.
 `],
-      ["WEB front end engineer", 2,  "Development", "Chengdu",  "2021-07-05",
+      ["WEB Frontend Engineer", 2,  "Development", "Chengdu",  "2021-07-05",
         `1.Responsible for the development of APP and PC web pages;
 2.Participate in the design and code writing of the company's front-end projects; 
 3.Mainly involved in the development of hybrid APP and related businesses;
@@ -897,7 +897,7 @@ Familiar with HTML, JS, CSS, jQuery and other Web developers is preferred. 
 4.Familiar with front-end performance optimization, ES6/Babel and Linux is preferred;
 5.Participate in open source projects, and experience in APIcloud or Hbuilder development is preferred.
 `],
-      ["Administrative assistant", 1, "Function", "Chengdu", "2021-07-05",
+      ["Administrative Assistant", 1, "Function", "Chengdu", "2021-07-05",
         `1.Responsible for coordinating and handling the daily work of the department, including but not limited to meetings, visitor reception and office supplies management;
 2.Responsible for the environmental planning and safety management of the office area;
 3.Respond to the administrative needs of various departments in the office area with high quality, and report and deal with unexpected situations; 
@@ -910,7 +910,7 @@ Familiar with HTML, JS, CSS, jQuery and other Web developers is preferred. 
 2.Proficient in using common office software such as WORD, EXCEL, POWERPOINT, etc., and familiar with the relevant processes of office administration; 
 3.Good image, cheerful personality, strong learning ability, strong adaptability and strong execution ability.
 `],
-      ["Operations specialist", 1, "Operations", "Chengdu", "2021-07-05",
+      ["Operations Specialist", 1, "Operations", "Chengdu", "2021-07-05",
         `1.According to the company's requirements, export related project contracts;
 2.Establish a standard contract ledger according to the company's requirements, regularly sort out and improve the departmental contract documents and other materials for filing and archiving;
 3.Supervise the progress of project payment, and keep good communication with Party A and its own finance in time;
@@ -1187,6 +1187,15 @@ breakAt: {
 
         });
 
+document.fonts.ready.then(function () {
+  setTimeout(function(){window.macy.recalculate(true);},100)
+});
+setTimeout(function(){window.macy.recalculate(true);},100)
+
+window.addEventListener('resize', event => {
+      window.macy.recalculate(true);
+    });
+        
 
         
 
@@ -1257,7 +1266,7 @@ $('body').on('click',closeQrCode)
 
   </script>
 
-<script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
     <script>
       $(function () {
         var banner_video = document.getElementById("banner_video")

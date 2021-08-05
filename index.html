@@ -1,480 +1,540 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="author" content="KentWood (www.lunastudio.cn)" />
-  <!-- <base
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="author" content="KentWood (www.lunastudio.cn)" />
+    <!-- <base
       href="http://static-1251577693.cos.ap-chengdu.myqcloud.com/projects/h5/anmai_cloud_mobile/"
     /> -->
-  <title> 专注于IPFS去中心化云计算_web3.0企业级分布式云存储计算_『安迈云』 </title>
-  <meta name="description"
-    content="安迈云是全球去中心化云计算一站式服务商，致力于用去中心化技术，帮助每个人轻松迈入数字文明新世界。提供分布式云计算资源、产品和服务。以卓越的科技能力打造以分布式互联网为核心的各类解决方案，协同推进数字产业化和产业数字化转型，培育新经济、新技术、新产业。成为全球最值得信赖的，Web3.0云计算一站式服务领军者。" />
-  <meta name="keywords" content="云算力,IPFS,分布式云存储,分布式云计算,SWARM,web3.0,新基建,分布式云存储,去中心化云计算" />
-  <!-- <link
+    <title>
+      专注于IPFS去中心化云计算_web3.0企业级分布式云存储计算_『安迈云』
+    </title>
+    <meta
+      name="description"
+      content="安迈云是全球去中心化云计算一站式服务商，致力于用去中心化技术，帮助每个人轻松迈入数字文明新世界。提供分布式云计算资源、产品和服务。以卓越的科技能力打造以分布式互联网为核心的各类解决方案，协同推进数字产业化和产业数字化转型，培育新经济、新技术、新产业。成为全球最值得信赖的，Web3.0云计算一站式服务领军者。"
+    />
+    <meta
+      name="keywords"
+      content="云算力,IPFS,分布式云存储,分布式云计算,SWARM,web3.0,新基建,分布式云存储,去中心化云计算"
+    />
+    <!-- <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:wght@200;300;400;600|Source+Sans+Pro:300,400,700,400italic|Josefin+Slab:400,700italic"
       rel="stylesheet"
       type="text/css"
     /> -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet"> -->
-  <link rel="stylesheet" href="./assets/css/normalize.css" type="text/css" />
-  <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
-  <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="./assets/css/iconfont.css" />
-  <!-- <link href="./assets/css/old-style.css" rel="stylesheet" type="text/css" /> -->
-  <link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
-  <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
-  <!-- <script
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="./assets/css/normalize.css" type="text/css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/iconfont.css" />
+    <!-- <link href="./assets/css/old-style.css" rel="stylesheet" type="text/css" /> -->
+    <link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- <script
       type="text/javascript"
       src="./assets/js/lib/greensock/TweenMax.min.js"
     ></script> -->
-  <script src="./assets/js/lib/gsap.min.js"></script>
-  <script src="./assets/js/lib/ScrollToPlugin.min.js"></script>
-  <script src="./assets/js/lib/ScrollTrigger.min.js"></script>
-  <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
-  <script type="text/javascript" src="./assets/js/lib/modernizr.custom.min.js"></script>
-  <script src="./assets/js/lib/jquery.nicescroll.min.js"></script>
-  <script>
-    window.disabledHeaderAudoSwitch = true
-  </script>
-  <script type="text/javascript" src="./assets/js/common.js"></script>
-  <script src="./assets/js/lib/vframeplayer.min.js"></script>
-  <!-- <script src="https://unpkg.com/vconsole/dist/vconsole.min.js"></script>
+    <script src="./assets/js/lib/gsap.min.js"></script>
+    <script src="./assets/js/lib/ScrollToPlugin.min.js"></script>
+    <script src="./assets/js/lib/ScrollTrigger.min.js"></script>
+    <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="./assets/js/lib/modernizr.custom.min.js"
+    ></script>
+    <script src="./assets/js/lib/jquery.nicescroll.min.js"></script>
+    <script>
+      window.disabledHeaderAudoSwitch = true
+    </script>
+    <script type="text/javascript" src="./assets/js/common.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="./assets/js/lib/vframeplayer.min.js"></script>
+    <!-- <script src="https://unpkg.com/vconsole/dist/vconsole.min.js"></script>
     <script>
       // VConsole will be exported to `window.VConsole` by default.
       var vConsole = new window.VConsole()
     </script> -->
-</head>
+  </head>
 
-<body class="">
-  <div class="main_bg"></div>
-  <script>
-    var tweens = []
-    function createTimeline() {
-      var tween = gsap.timeline()
-      return tween
-    }
-
-    function createTween() {
-      var tween = gsap.fromTo.apply(gsap, arguments)
-      tweens.push(tween)
-      return tween
-    }
-
-    var lastScroll = window.pageYOffset
-    var isMouseWheel = false
-    var isEnterStage1 = true
-    var mouseWheelTimer = 0
-    var mouseWheelTimer2 = 0
-
-
-    function getScrollYByVideo(t) {
-      var totalLength = 3.5
-      if (window.isPhone) totalLength = 1
-
-      return {
-        left: 0,
-        top:
-          (totalLength * window.onePageHeight * (t || myVideo.currentTime)) /
-          20,
+  <body class="">
+    <div class="main_bg"></div>
+    <script>
+      var tweens = []
+      function createTimeline() {
+        var tween = gsap.timeline()
+        return tween
       }
-    }
 
-    function getTimerByScroll(prog) {
-      var totalLength = 3.5
-      if (window.isPhone) totalLength = 1
-
-      let p =
-        20 *
-        (prog || window.pageYOffset / (totalLength * window.onePageHeight))
-
-      return Math.min(20, p)
-    }
-
-    function handleVideoPlaying(e) {
-      // console.log(myVideo.currentTime, "video progress")
-      if (!window.isPhone && !isMouseWheel && isEnterStage1) {
-        var p = getScrollYByVideo();
-        window.scrollTo({ top: p.top }) //, behavior: "smooth" })
+      function createTween() {
+        var tween = gsap.fromTo.apply(gsap, arguments)
+        tweens.push(tween)
+        return tween
       }
-    }
 
+      var lastScroll = window.pageYOffset
+      var isMouseWheel = false
+      var isEnterStage1 = true
+      var mouseWheelTimer = 0
+      var mouseWheelTimer2 = 0
 
-  </script>
-  <header class="header1 header_light state2">
-    <a href="./index.html">
-      <div class="logo">&nbsp;</div>
-    </a>
-    <div class="right-part">
-      <input id="langswtich" class="langswtich foldable_menu" type="checkbox" hidden />
-      <label for="langswtich" class="mobile">
-        <div class="lang_bt_mobile"> EN <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-        </div>
-        <div class="langswtich_mask switch_mask"></div>
-      </label>
-      <ul class="lang-panel">
-        <li class="selected">
-          <a> <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a>
-        </li>
-        <li>
-          <a href='./index-en.html'>
-            <i class="fa iconfont icon-gou" aria-hidden="true"></i> English</a>
-        </li>
-      </ul>
-      <input id="menuswtich" type="checkbox" hidden />
-      <label for="menuswtich" class="mobile">
-        <div class="menu-btn">
-          <i class="fa iconfont icon-menu" aria-hidden="true"></i>
-        </div>
-        <div class="switch_mask"></div>
-      </label>
-      <div class="nav">
-        <ul>
-          <li class="active"><a href="./index.html">首页</a></li>
-          <li class="">
-            <a>产品 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-            </a>
-            <div class="submenu product_submenu">
-              <ul>
-                <li>
-                  <a href="./product_fbssjzx.html">
-                    <div class="icon">
-                      <img src="./assets/img/icons/products/分布式数据中心.svg" />
-                    </div> 分布式数据中心
-                  </a>
-                </li>
-                <li>
-                  <a href="./product_fbscdn.html" style="pointer-events: none">
-                    <div class="icon">
-                      <img src="./assets/img/icons/products/分布式CDN.svg" />
-                    </div> 分布式CDN(即将上线)
-                  </a>
-                </li>
-                <li>
-                  <a href="./product_jzcc.html">
-                    <div class="icon">
-                      <img src="./assets/img/icons/products/矩阵存储.svg" />
-                    </div> 矩阵存储
-                  </a>
-                </li>
-                <li>
-                  <a href="./product_ygpu.html">
-                    <div class="icon">
-                      <img src="./assets/img/icons/products/云GPU.svg" />
-                    </div> 云GPU
-                  </a>
-                </li>
-              </ul>
-            </div>
+      function getScrollYByVideo(t) {
+        var totalLength = 3.5
+        if (window.isPhone) totalLength = 1
+
+        return {
+          left: 0,
+          top:
+            (totalLength * window.onePageHeight * (t || myVideo.currentTime)) /
+            20,
+        }
+      }
+
+      function getTimerByScroll(prog) {
+        var totalLength = 3.5
+        if (window.isPhone) totalLength = 1
+
+        let p =
+          20 *
+          (prog || window.pageYOffset / (totalLength * window.onePageHeight))
+
+        return Math.min(20, p)
+      }
+
+      function handleVideoPlaying(e) {
+        // console.log(myVideo.currentTime, "video progress")
+        if (!window.isPhone && !isMouseWheel && isEnterStage1) {
+          var p = getScrollYByVideo()
+          window.scrollTo({ top: p.top }) //, behavior: "smooth" })
+        }
+      }
+    </script>
+    <header class="header1 header_light state2">
+      <a href="./index.html">
+        <div class="logo">&nbsp;</div>
+      </a>
+      <div class="right-part">
+        <input
+          id="langswtich"
+          class="langswtich foldable_menu"
+          type="checkbox"
+          hidden
+        />
+        <label for="langswtich" class="mobile">
+          <div class="lang_bt_mobile">
+            EN <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+          </div>
+          <div class="langswtich_mask switch_mask"></div>
+        </label>
+        <ul class="lang-panel">
+          <li class="selected">
+            <a> <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a>
           </li>
           <li>
-            <a>解决方案 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-            </a>
-            <div class="submenu solution_submenu">
-              <div class="submenu-unit">
-                <a href="./solution_cj.html">
-                  <div class="title">场景 Scenario</div>
-                </a>
-                <ul>
-                  <li>
-                    <a href="./solution_cj.html#cc">
-                      <div class="icon">
-                        <img src="./assets/img/icons/solutions/icon-15_存储.svg" />
-                      </div> 存储
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./solution_cj.html#rzybf">
-                      <div class="icon">
-                        <img src="./assets/img/icons/solutions/icon-15_容灾与备份.svg" />
-                      </div> 容灾与备份
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./solution_cj.html#kxjs">
-                      <div class="icon">
-                        <img src="./assets/img/icons/solutions/icon-15_科学计算.svg" />
-                      </div> 科学计算
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./solution_cj.html#aqjs">
-                      <div class="icon">
-                        <img src="./assets/img/icons/solutions/icon-15_安全计算.svg" />
-                      </div> 安全计算
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./solution_cj.html#wly">
-                      <div class="icon">
-                        <img src="./assets/img/icons/solutions/icon-15_物理云.svg" />
-                      </div> 物理云
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./solution_cj.html#nrff">
-                      <div class="icon">
-                        <img src="./assets/img/icons/solutions/icon-15_内容分发.svg" />
-                      </div> 内容分发
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./solution_cj.html#jqxx">
-                      <div class="icon">
-                        <img src="./assets/img/icons/solutions/icon-15_机器学习.svg" />
-                      </div> 机器学习
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="divider-v"></div>
-              <div class="submenu-unit">
-                <a href="./solution_hy.html">
-                  <div class="title">行业 Industry</div>
-                </a>
-                <ul>
-                  <li>
-                    <a href="./solution_hy.html#rgzn">
-                      <div class="icon">
-                        <img src="./assets/img/icons/solutions/icon-15_人工智能-08.svg" />
-                      </div> 人工智能
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./solution_hy.html#ky">
-                      <div class="icon">
-                        <img src="./assets/img/icons/solutions/icon-15_科研.svg" />
-                      </div> 科研
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./solution_hy.html#djk">
-                      <div class="icon">
-                        <img src="./assets/img/icons/solutions/icon-15_大健康.svg" />
-                      </div> 大健康
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./solution_hy.html#zw">
-                      <div class="icon">
-                        <img src="./assets/img/icons/solutions/icon-15_政务.svg" />
-                      </div> 政务
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./solution_hy.html#swjy">
-                      <div class="icon">
-                        <img src="./assets/img/icons/solutions/icon-15_生物基因.svg" />
-                      </div> 生物基因
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="divider-v"></div>
-              <div class="submenu-unit">
-                <a href="./solution_web.html">
-                  <div class="title">Web 3.0</div>
-                </a>
-                <ul>
-                  <li>
-                    <a href="./solution_web.html#byjs">
-                      <div class="icon">
-                        <img src="./assets/img/icons/solutions/icon-15_边缘计算.svg" />
-                      </div> 边缘计算
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./solution_web.html#qkl">
-                      <div class="icon">
-                        <img src="./assets/img/icons/solutions/icon-15_区块链.svg" />
-                      </div> 区块链
-                    </a>
-                  </li>
-                  <li>
-                    <a href="./solution_web.html#rgzn">
-                      <div class="icon">
-                        <img src="./assets/img/icons/solutions/icon-15_人工智能-09.svg" />
-                      </div> 人工智能
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <a href="./index-en.html">
+              <i class="fa iconfont icon-gou" aria-hidden="true"></i> English</a
+            >
           </li>
-          <li>
-            <a>ESG <i class="fa iconfont icon-Down" aria-hidden="true"></i>
-            </a>
-            <div class="submenu product_submenu">
-              <ul>
-                <li> <a href="./esg.html">
-                    <div class="icon">
-                      <img src="./assets/img/icons/esg/ESG.svg" />
-                    </div> ESG
-                  </a></li>
-                <li> <a href="#">
-                    <div class="icon">
-                      <img src="./assets/img/icons/esg/ESG报告.svg" />
-                    </div> ESG报告（即将上线）
-                  </a></li>
-                <li> <a href="#">
-                    <div class="icon">
-                      <img src="./assets/img/icons/esg/学习社区.svg" />
-                    </div> 学习社区（即将上线）
-                  </a></li>
-                <li> <a href="#">
-                    <div class="icon">
-                      <img src="./assets/img/icons/esg/社会公益.svg" />
-                    </div> 社会公益（即将上线）
-                  </a></li>
-              </ul>
-            </div>
-          </li>
-          <!-- <li><a>投资者关系</a></li> -->
-          <li><a href="./about.html">关于我们</a></li>
         </ul>
-      </div>
-      <label for="langswtich" class="not_mobile">
-        <div class="lang_bt">
-          <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> English
+        <input id="menuswtich" type="checkbox" hidden />
+        <label for="menuswtich" class="mobile">
+          <div class="menu-btn">
+            <i class="fa iconfont icon-menu" aria-hidden="true"></i>
+          </div>
+          <div class="switch_mask"></div>
+        </label>
+        <div class="nav">
+          <ul>
+            <li class="active"><a href="./index.html">首页</a></li>
+            <li class="">
+              <a
+                >产品 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+              </a>
+              <div class="submenu product_submenu">
+                <ul>
+                  <li>
+                    <a href="./product_fbssjzx.html">
+                      <div class="icon">
+                        <img
+                          src="./assets/img/icons/products/分布式数据中心.svg"
+                        />
+                      </div>
+                      分布式数据中心
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="./product_fbscdn.html"
+                      style="pointer-events: none"
+                    >
+                      <div class="icon">
+                        <img src="./assets/img/icons/products/分布式CDN.svg" />
+                      </div>
+                      分布式CDN(即将上线)
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./product_jzcc.html">
+                      <div class="icon">
+                        <img src="./assets/img/icons/products/矩阵存储.svg" />
+                      </div>
+                      矩阵存储
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./product_ygpu.html">
+                      <div class="icon">
+                        <img src="./assets/img/icons/products/云GPU.svg" />
+                      </div>
+                      云GPU
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a
+                >解决方案
+                <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+              </a>
+              <div class="submenu solution_submenu">
+                <div class="submenu-unit">
+                  <a href="./solution_cj.html">
+                    <div class="title">场景 Scenario</div>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="./solution_cj.html#cc">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_存储.svg"
+                          />
+                        </div>
+                        存储
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_cj.html#rzybf">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_容灾与备份.svg"
+                          />
+                        </div>
+                        容灾与备份
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_cj.html#kxjs">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_科学计算.svg"
+                          />
+                        </div>
+                        科学计算
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_cj.html#aqjs">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_安全计算.svg"
+                          />
+                        </div>
+                        安全计算
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_cj.html#wly">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_物理云.svg"
+                          />
+                        </div>
+                        物理云
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_cj.html#nrff">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_内容分发.svg"
+                          />
+                        </div>
+                        内容分发
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_cj.html#jqxx">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_机器学习.svg"
+                          />
+                        </div>
+                        机器学习
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="divider-v"></div>
+                <div class="submenu-unit">
+                  <a href="./solution_hy.html">
+                    <div class="title">行业 Industry</div>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="./solution_hy.html#rgzn">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_人工智能-08.svg"
+                          />
+                        </div>
+                        人工智能
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_hy.html#ky">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_科研.svg"
+                          />
+                        </div>
+                        科研
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_hy.html#djk">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_大健康.svg"
+                          />
+                        </div>
+                        大健康
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_hy.html#zw">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_政务.svg"
+                          />
+                        </div>
+                        政务
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_hy.html#swjy">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_生物基因.svg"
+                          />
+                        </div>
+                        生物基因
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="divider-v"></div>
+                <div class="submenu-unit">
+                  <a href="./solution_web.html">
+                    <div class="title">Web 3.0</div>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="./solution_web.html#byjs">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_边缘计算.svg"
+                          />
+                        </div>
+                        边缘计算
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_web.html#qkl">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_区块链.svg"
+                          />
+                        </div>
+                        区块链
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./solution_web.html#rgzn">
+                        <div class="icon">
+                          <img
+                            src="./assets/img/icons/solutions/icon-15_人工智能-09.svg"
+                          />
+                        </div>
+                        人工智能
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a
+                >ESG <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+              </a>
+              <div class="submenu product_submenu">
+                <ul>
+                  <li>
+                    <a href="./esg.html">
+                      <div class="icon">
+                        <img src="./assets/img/icons/esg/ESG.svg" />
+                      </div>
+                      ESG
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="icon">
+                        <img src="./assets/img/icons/esg/ESG报告.svg" />
+                      </div>
+                      ESG报告（即将上线）
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="icon">
+                        <img src="./assets/img/icons/esg/学习社区.svg" />
+                      </div>
+                      学习社区（即将上线）
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="icon">
+                        <img src="./assets/img/icons/esg/社会公益.svg" />
+                      </div>
+                      社会公益（即将上线）
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- <li><a>投资者关系</a></li> -->
+            <li><a href="./about.html">关于我们</a></li>
+          </ul>
         </div>
-        <div class="langswtich_mask switch_mask"></div>
-      </label>
-    </div>
-  </header>
-  <div class="stage1">
-    <div class="sticky">
-      <!-- <img class='fake_video' src='assets/img/图层 454.png' /> -->
-      <div id="stage1Player" class="fake_video frameplayer"
-        style="background-image: url(assets/media/stage1_frames/a_00000.jpg);background-size: cover;"></div>
-      <video class="bg_video" id="myVideo" ontimeupdate="handleVideoPlaying(event)" webkit-playsinline="true"
-        x-webkit-airplay="true" x5-video-player-type="h5" x5-video-orientation="h5" muted autoplay defaultMuted
-        playsinline oncontextmenu="return false;" preload="preload"
-        src="https://g4-tmp-data.oss-cn-chengdu.aliyuncs.com/stage1.mp4?OSSAccessKeyId=LTAI5t8QKac6eXT4fr3vNkSL&Expires=360000001627528000&Signature=boXKxOrROjWEnCdEsFJnXkyoBjs%3D">
-        <!-- <source
+        <label for="langswtich" class="not_mobile">
+          <div class="lang_bt">
+            <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> English
+          </div>
+          <div class="langswtich_mask switch_mask"></div>
+        </label>
+      </div>
+    </header>
+    <div class="stage1">
+      <div class="sticky">
+        <!-- <img class='fake_video' src='assets/img/图层 454.png' /> -->
+        <div
+          id="stage1Player"
+          class="fake_video frameplayer"
+          style="
+            background-image: url(assets/media/stage1_frames/a_00000.jpg);
+            background-size: cover;
+          "
+        ></div>
+        <video
+          class="bg_video"
+          id="myVideo"
+          ontimeupdate="handleVideoPlaying(event)"
+          webkit-playsinline="true"
+          x-webkit-airplay="true"
+          x5-video-player-type="h5"
+          x5-video-orientation="h5"
+          muted
+          autoplay
+          defaultMuted
+          playsinline
+          oncontextmenu="return false;"
+          preload="preload"
+          src="https://g4-tmp-data.oss-cn-chengdu.aliyuncs.com/stage1.mp4?OSSAccessKeyId=LTAI5t8QKac6eXT4fr3vNkSL&Expires=360000001627528000&Signature=boXKxOrROjWEnCdEsFJnXkyoBjs%3D"
+        >
+          <!-- <source
             id="myVideo_src"
             src="assets/media/stage1.mp4"
             type="video/mp4"
           /> -->
-        <!-- <source
+          <!-- <source
             id="myVideo_src2"
             src="assets/media/stage1_mobile.webm"
             type="video/webm"
           /> -->
-      </video>
-      <div class="left-progress state1">
-        <div class="trunk"></div>
-        <div class="bar"></div>
-        <span class="info"></span>
-      </div>
-      <div class="page_content title_part title1 state1">
-        <span class="sub_part1">Web 3.0 分布式云计算平台</span>
-        <span class="sub_part2">全球去中心化云计算<br />一站式技术服务商</span>
-        <a href="./about.html" target="_blank">
-          <div class="action_btn btn-with-arrow">
-            <span> 立刻探索 </span>
-            <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-          </div>
-        </a>
-      </div>
-      <div class="page_content title_part title2 state1">
-        <span class="sub_part1">Web 3.0 新型云计算平台</span>
-        <span class="sub_part2">用去中心化技术<br />帮助每个人轻松迈入<br />数字文明新世界</span>
-        <a href="./about.html" target="_blank">
-          <div class="action_btn btn-with-arrow">
-            <span> 立刻探索 </span>
-            <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-          </div>
-        </a>
-      </div>
-      <div class="title3_mask"></div>
-      <div class="page_content title_part title3 state1">
-        <div class="sub_part_title">
-          <span>聚焦·安迈云</span>
-          <span>In the Spotlight</span>
+        </video>
+        <div class="left-progress state1">
+          <div class="trunk"></div>
+          <div class="bar"></div>
+          <span class="info"></span>
         </div>
-        <div class="inner_scroll_warpper"></div>
+        <div class="page_content title_part title1 state1">
+          <span class="sub_part1">Web 3.0 分布式云计算平台</span>
+          <span class="sub_part2"
+            >全球去中心化云计算<br />一站式技术服务商</span
+          >
+          <a href="./about.html" target="_blank">
+            <div class="action_btn btn-with-arrow">
+              <span> 立刻探索 </span>
+              <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
+            </div>
+          </a>
+        </div>
+        <div class="page_content title_part title2 state1">
+          <span class="sub_part1">Web 3.0 新型云计算平台</span>
+          <span class="sub_part2"
+            >用去中心化技术<br />帮助每个人轻松迈入<br />数字文明新世界</span
+          >
+          <a href="./about.html" target="_blank">
+            <div class="action_btn btn-with-arrow">
+              <span> 立刻探索 </span>
+              <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
+            </div>
+          </a>
+        </div>
+        <div class="title3_mask"></div>
+        <div class="page_content title_part title3 state1">
+          <div class="sub_part_title">
+            <span>聚焦·安迈云</span>
+            <span>In the Spotlight</span>
+          </div>
+          <div class="inner_scroll_warpper"></div>
+        </div>
       </div>
     </div>
-  </div>
-  <script>
-    /////////STAGE1/////////
-    ////////初始视频播放，同时可能会存在按钮////
-    $.get("https://cms-api-amy.anmaicloud.com/amyos/news/company_dynamic").then(function (
-      data
-    ) {
-      // console.log(data)
-      setMileStones(data)
-    })
-    setMileStones()
-    function setMileStones(data) {
-      window.meilestoneData = data ||
-        window.meilestoneData || [
-          {
-            year: "2021",
-            records: [
-              {
-                month: "07",
-                items: [
-                  {
-                    link: "\/amyos\/article\/detail.html?l=Q00096e75",
-                    pic: "https:\/\/xnmatrix.oss-cn-hangzhou.aliyuncs.com\/微信图片_202107091144581625807577.jpg",
-                    title:
-                      "安迈云矩阵存储携手中经天平，强化电子证据防篡改能力",
-                  },
-                ],
-              },
-              {
-                month: "06",
-                items: [
-                  {
-                    link: "\/amyos\/article\/detail.html?l=R00096e6d",
-                    pic: "https:\/\/xnmatrix.oss-cn-hangzhou.aliyuncs.com\/微信图片_202106101635231623314133.jpg",
-                    title:
-                      "安迈云链接世界名校：对话伯克利大学Greg LaBlanc教授畅谈云潜能",
-                  },
-                  {
-                    link: "\/amyos\/article\/detail.html?l=W00096e67",
-                    pic: "http:\/\/amyosimg_test.t1.g4.wiminer.com\/portal\/20210712\/386a017302d0e3207da10d81cf16c80d.png",
-                    title:
-                      "安迈云矩阵存储产品动态获得Protocol Labs协议实验室官方关注",
-                  },
-                ],
-              },
-              {
-                month: "05",
-                items: [
-                  {
-                    link: "\/amyos\/article\/detail.html?l=Z00096e61",
-                    pic: "http:\/\/amyosimg_test.t1.g4.wiminer.com\/portal\/20210712\/2c3011ff162abb9e402f9203a0b88374.png",
-                    title:
-                      "安迈云出席Web3.0云响力峰会，与一线云厂商共话分布式计算未来",
-                  },
-                  {
-                    link: "\/amyos\/article\/detail.html?l=P00096e5d",
-                    pic: "http:\/\/amyosimg_test.t1.g4.wiminer.com\/portal\/20210712\/8331a91a779e34874bc9ae9e67110a6c.png",
-                    title:
-                      "安迈云矩阵存储Matrix Storage，推动分布式存储技术规模化应用",
-                  },
-                ],
-              },
-            ],
-          },
-        ]
-      $(".inner_scroll_warpper").html("")
-      window.meilestoneData.forEach(function (yearData, yindex) {
-        yearData.records.forEach(function (monthData, mIndex) {
-          $(".inner_scroll_warpper").append(
-            `<div class="sub_part">
+    <script>
+      /////////STAGE1/////////
+      ////////初始视频播放，同时可能会存在按钮////
+      $.get(
+        "https://cms-api-amy.anmaicloud.com/amyos/news/company_dynamic"
+      ).then(function (data) {
+        // console.log(data)
+        setMileStones(data)
+      })
+      setMileStones()
+      function setMileStones(data) {
+        window.meilestoneData = data || window.meilestoneData || []
+        $(".inner_scroll_warpper").html("")
+        window.meilestoneData.forEach(function (yearData, yindex) {
+          yearData.records.forEach(function (monthData, mIndex) {
+            $(".inner_scroll_warpper").append(
+              `<div class="sub_part">
               <div class="left-part">
                 <div class="divider"></div>
 
                 <div class="sub_part_content">
 ${monthData.items
-              .map(function (recData, rindex) {
-                return `<div class="sub_part_content_item">
+  .map(function (recData, rindex) {
+    return `<div class="sub_part_content_item">
 <div class="pic_wrapper">
                     <img
                       class="sub_part_content_item_img"
@@ -485,8 +545,8 @@ ${monthData.items
                         >${recData.title}</span
                       >
                       <a href="detail.html?id=${recData.link.slice(
-                  recData.link.lastIndexOf("l=") + 2
-                )}"><div class="round_btn btn-with-arrow">
+                        recData.link.lastIndexOf("l=") + 2
+                      )}"><div class="round_btn btn-with-arrow">
                         <i
                           class="fa iconfont icon-youjiantou"
                           aria-hidden="true"
@@ -494,8 +554,8 @@ ${monthData.items
                       </div></a>
                     </div>
                   </div>`
-              })
-              .join("")}
+  })
+  .join("")}
 
                  
                  
@@ -503,8 +563,9 @@ ${monthData.items
               </div>
               <div class="right-part">
 
-${mIndex == 0
-              ? `<svg
+${
+  mIndex == 0
+    ? `<svg
                   class="year"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 330 100"
@@ -525,13 +586,13 @@ ${mIndex == 0
                     ${yearData.year}
                   </text>
                 </svg>`
-              : ``
-            }
+    : ``
+}
                 
 
                 <svg class="month"
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 165 100"
+                  viewBox="0 0 170 100"
                 >
                   <defs>
                     <linearGradient id="gradient" y1="0" y2="1">
@@ -551,1173 +612,1262 @@ y="100"
                 </svg>
               </div>
             </div>`
-          )
+            )
+          })
         })
-      })
-    }
-    // myVideo.src = isPhone
-    //   ? "assets/media/stage1_mobile.mp4"
-    //   : "assets/media/stage1.mp4"
 
-    // myVideo_src.src = isPhone
-    //   ? "assets/media/stage1_mobile.mp4"
-    //   : "assets/media/stage1.mp4"
+setTimeout(function () {
 
-    if (window.isPhone) {
-      var imgs = []
-      for (var i = 0; i < 115; i++) {
+$(".stage1").height(
+          getScrollYByVideo(20).top +
+            (isPhone
+              ? 1 * window.onePageHeight + $(".inner_scroll_warpper").height()
+              : 1 * window.onePageHeight +
+                ($(".inner_scroll_warpper").height() - $(".title3").height()))
+        )
 
-        var num = '00000'.slice(0, -String(i).length) + i;
-
-        imgs.push('assets/media/stage1_frames/a_' + num + '.jpg');
+ScrollTrigger.refresh()},100)
       }
-      //2秒后才加载上边的动画
-      setTimeout(function () {
-        window.framePlayera = new vFramePlayer({
-          dom: document.getElementById("stage1Player"),
-          imgArr: imgs,
-          fps: 12,
-          useCanvas: true,
-          loop: -1,
-        });
-        framePlayera.play()
-      }, 2000)
+      // myVideo.src = isPhone
+      //   ? "assets/media/stage1_mobile.mp4"
+      //   : "assets/media/stage1.mp4"
 
-    }
+      // myVideo_src.src = isPhone
+      //   ? "assets/media/stage1_mobile.mp4"
+      //   : "assets/media/stage1.mp4"
 
+      if (window.isPhone) {
+        var imgs = []
+        for (var i = 0; i < 115; i++) {
+          var num = "00000".slice(0, -String(i).length) + i
 
-
-
-    $(function () {
-      // pathPrepare($(".svg_path"));
-
-      // requestAnimationFrame(handleVideoPlaying)
-
-      // var tween = createTimeline()
-      // tween.add([
-      //         createTween(
-      //           ".title1",
-      //           getScrollYByVideo(1).top,
-      //           // 0.2 * window.onePageHeight,
-      //           {
-      //             // translateY: 30, opacity: 0
-      //           },
-      //           {
-      //             // translateY: 0,
-      //             // opacity: 1,
-      //             ease: Linear.easeNone,
-      //             immediateRender: false,
-
-      //             scrollTrigger: {
-      //               trigger: ".stage1",
-      //               // pin: true, // pin the trigger element while active
-      //               start: "-=100", // when the top of the trigger hits the top of the viewport
-      //               end: "+=100", // end after scrolling 500px beyond the start
-      //               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-      //               markers: false,
-      //               id: "aaa",
-      //               onLeave: function () {
-      //                 // console.log(this.targets)
-      //                 $(".title1")
-      //                   .removeClass(["state1", "state3"])
-      //                   .addClass("state2")
-      //               },
-      //               onEnterBack: function () {
-      //  $(".title1")
-      //                   .removeClass(["state1", "state2"])
-      //                   .addClass("state3")
-      //               },
-      //             },
-      //           }
-      //         )
-      createTween(
-        ".title1",
-        getScrollYByVideo(1).top,
-        {
-          // translateY: 0, opacity: 1
-        },
-        {
-          // delay: getScrollYByVideo(9).top,
-          // translateY: -30,
-          // opacity: 0,
-          ease: Linear.easeNone,
-          immediateRender: false,
-          scrollTrigger: {
-            trigger: ".stage1",
-            // pin: true, // pin the trigger element while active
-            start: "-=100", // when the top of the trigger hits the top of the viewport
-            end: getScrollYByVideo(9).top, // end after scrolling 500px beyond the start
-            scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-            markers: false,
-            id: "aaa",
-            onEnter: function () {
-              $(".title1")
-                .removeClass(["state1", "state3"])
-                .addClass("state2")
-            },
-            onEnterBack: function () {
-              $(".title1")
-                .removeClass(["state1", "state3"])
-                .addClass("state2")
-            },
-
-            onLeave: function () {
-              //$(".title_part").addClass("state3")
-              $(".title1")
-                .removeClass(["state1", "state2"])
-                .addClass("state3")
-            },
-            // onLeaveBack: function () {
-            //   $(".title1")
-            //     .removeClass(["state1", "state3"])
-            //     .addClass("state2")
-            // },
-          },
+          imgs.push("assets/media/stage1_frames/a_" + num + ".jpg")
         }
-      )
+        //2秒后才加载上边的动画
+        setTimeout(function () {
+          window.framePlayera = new vFramePlayer({
+            dom: document.getElementById("stage1Player"),
+            imgArr: imgs,
+            fps: 12,
+            useCanvas: true,
+            loop: -1,
+          })
+          framePlayera.play()
+        }, 2000)
+      }
 
-      createTween(
-        ".title2",
-        getScrollYByVideo(1).top,
-        {
-          //  translateY: 30, opacity: 0
-        },
-        {
-          // delay: getScrollYByVideo(9.5).top,
-          // translateY: 0,
-          // opacity: 1,
-          // ease: Linear.easeNone,
-          immediateRender: false,
-          scrollTrigger: {
-            trigger: ".stage1",
-            // pin: true, // pin the trigger element while active
-            start: getScrollYByVideo(9.5).top, // when the top of the trigger hits the top of the viewport
-            end: getScrollYByVideo(18.5).top, // end after scrolling 500px beyond the start
-            scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-            markers: false,
-            id: "aaa",
-            onEnter: function () {
-              $(".title2")
-                .removeClass(["state1", "state3"])
-                .addClass("state2")
-            },
-            onEnterBack: function () {
-              $(".title2")
-                .removeClass(["state1", "state3"])
-                .addClass("state2")
-            },
-            onLeave: function () {
-              $(".title2")
-                .removeClass(["state2", "state1"])
-                .addClass("state3")
-            },
-            onLeaveBack: function () {
-              $(".title2")
-                .removeClass(["state2", "state3"])
-                .addClass("state1")
-            },
+      $(function () {
+        // pathPrepare($(".svg_path"));
+
+        // requestAnimationFrame(handleVideoPlaying)
+
+        // var tween = createTimeline()
+        // tween.add([
+        //         createTween(
+        //           ".title1",
+        //           getScrollYByVideo(1).top,
+        //           // 0.2 * window.onePageHeight,
+        //           {
+        //             // translateY: 30, opacity: 0
+        //           },
+        //           {
+        //             // translateY: 0,
+        //             // opacity: 1,
+        //             ease: Linear.easeNone,
+        //             immediateRender: false,
+
+        //             scrollTrigger: {
+        //               trigger: ".stage1",
+        //               // pin: true, // pin the trigger element while active
+        //               start: "-=100", // when the top of the trigger hits the top of the viewport
+        //               end: "+=100", // end after scrolling 500px beyond the start
+        //               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        //               markers: false,
+        //               id: "aaa",
+        //               onLeave: function () {
+        //                 // console.log(this.targets)
+        //                 $(".title1")
+        //                   .removeClass(["state1", "state3"])
+        //                   .addClass("state2")
+        //               },
+        //               onEnterBack: function () {
+        //  $(".title1")
+        //                   .removeClass(["state1", "state2"])
+        //                   .addClass("state3")
+        //               },
+        //             },
+        //           }
+        //         )
+        createTween(
+          ".title1",
+          getScrollYByVideo(1).top,
+          {
+            // translateY: 0, opacity: 1
           },
-        }
-      )
+          {
+            // delay: getScrollYByVideo(9).top,
+            // translateY: -30,
+            // opacity: 0,
+            ease: Linear.easeNone,
+            immediateRender: false,
+            scrollTrigger: {
+              trigger: ".stage1",
+              // pin: true, // pin the trigger element while active
+              start: "-=100", // when the top of the trigger hits the top of the viewport
+              end: getScrollYByVideo(9).top, // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              markers: false,
+              id: "aaa",
+              onEnter: function () {
+                $(".title1")
+                  .removeClass(["state1", "state3"])
+                  .addClass("state2")
+              },
+              onEnterBack: function () {
+                $(".title1")
+                  .removeClass(["state1", "state3"])
+                  .addClass("state2")
+              },
 
-      //         createTween(
-      //           ".title2",
-      //           getScrollYByVideo(1).top,
-      //           {
-      //             //  translateY: 30, opacity: 0
-      //           },
-      //           {
-      //             // delay: getScrollYByVideo(9.5).top,
-      //             // translateY: 0,
-      //             // opacity: 1,
-      //             // ease: Linear.easeNone,
-      //             immediateRender: false,
-      //             scrollTrigger: {
-      //               trigger: ".stage1",
-      //               // pin: true, // pin the trigger element while active
-      //               start: "+=" + getScrollYByVideo(18.5).top, // when the top of the trigger hits the top of the viewport
-      //               end: getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
-      //               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-      //               markers: false,
-      //               id: "aaa",
-      //               onLeave: function () {
-      //                 //$(".title_part").addClass("state3")
-      //                 $(".title2")
-      //                   .removeClass(["state1", "state2"])
-      //                   .addClass("state3")
-      //               },
-      //               onEnterBack: function () {
-      // console.log(window.scrollY,getScrollYByVideo(18.5).top-getScrollYByVideo(1).top,'aaaaaaaaa')
-      // if(window.scrollY>getScrollYByVideo(18.5).top-getScrollYByVideo(1).top)
-      //                 $(".title2")
-      //                   .removeClass(["state1", "state3"])
-      //                   .addClass("state2")
-      //               },
-      //             },
-      //           }
-      //         )
-
-
-      // if (!window.isPhone) {
-      createTween(
-        ".title3_mask",
-        getScrollYByVideo(1).top,
-        { opacity: 0 },
-        {
-          immediateRender: false,
-          // delay: getScrollYByVideo(19).top,
-          opacity: 1,
-
-          scrollTrigger: {
-            trigger: ".stage1",
-            // pin: true, // pin the trigger element while active
-            start: getScrollYByVideo(18.5).top, // when the top of the trigger hits the top of the viewport
-            end: getScrollYByVideo(19).top, // end after scrolling 500px beyond the start
-            scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-            markers: false,
-            id: "aaa",
-          },
-        }
-      )
-
-      createTween(
-        ".title3",
-        getScrollYByVideo(1).top,
-        {
-          //  translateY: 30, opacity: 0
-        },
-        {
-          // delay: getScrollYByVideo(9.5).top,
-          // translateY: 0,
-          // opacity: 1,
-          // ease: Linear.easeNone,
-          immediateRender: false,
-          scrollTrigger: {
-            trigger: ".stage1",
-            // pin: true, // pin the trigger element while active
-            start: getScrollYByVideo(18.5).top, // when the top of the trigger hits the top of the viewport
-            end: getScrollYByVideo(19).top, // end after scrolling 500px beyond the start
-            scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-            markers: false,
-            id: "aaa",
-            onLeave: function () {
-              //$(".title_part").addClass("state3")
-              $(".title3")
-                .removeClass(["state1", "state3"])
-                .addClass("state2")
+              onLeave: function () {
+                //$(".title_part").addClass("state3")
+                $(".title1")
+                  .removeClass(["state1", "state2"])
+                  .addClass("state3")
+              },
+              // onLeaveBack: function () {
+              //   $(".title1")
+              //     .removeClass(["state1", "state3"])
+              //     .addClass("state2")
+              // },
             },
-            onLeaveBack: function () {
-              $(".title3")
-                .removeClass(["state2", "state3"])
-                .addClass("state1")
+          }
+        )
+
+        createTween(
+          ".title2",
+          getScrollYByVideo(1).top,
+          {
+            //  translateY: 30, opacity: 0
+          },
+          {
+            // delay: getScrollYByVideo(9.5).top,
+            // translateY: 0,
+            // opacity: 1,
+            // ease: Linear.easeNone,
+            immediateRender: false,
+            scrollTrigger: {
+              trigger: ".stage1",
+              // pin: true, // pin the trigger element while active
+              start: getScrollYByVideo(9.5).top, // when the top of the trigger hits the top of the viewport
+              end: getScrollYByVideo(18.5).top, // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              markers: false,
+              id: "aaa",
+              onEnter: function () {
+                $(".title2")
+                  .removeClass(["state1", "state3"])
+                  .addClass("state2")
+              },
+              onEnterBack: function () {
+                $(".title2")
+                  .removeClass(["state1", "state3"])
+                  .addClass("state2")
+              },
+              onLeave: function () {
+                $(".title2")
+                  .removeClass(["state2", "state1"])
+                  .addClass("state3")
+              },
+              onLeaveBack: function () {
+                $(".title2")
+                  .removeClass(["state2", "state3"])
+                  .addClass("state1")
+              },
             },
+          }
+        )
+
+        //         createTween(
+        //           ".title2",
+        //           getScrollYByVideo(1).top,
+        //           {
+        //             //  translateY: 30, opacity: 0
+        //           },
+        //           {
+        //             // delay: getScrollYByVideo(9.5).top,
+        //             // translateY: 0,
+        //             // opacity: 1,
+        //             // ease: Linear.easeNone,
+        //             immediateRender: false,
+        //             scrollTrigger: {
+        //               trigger: ".stage1",
+        //               // pin: true, // pin the trigger element while active
+        //               start: "+=" + getScrollYByVideo(18.5).top, // when the top of the trigger hits the top of the viewport
+        //               end: getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
+        //               scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        //               markers: false,
+        //               id: "aaa",
+        //               onLeave: function () {
+        //                 //$(".title_part").addClass("state3")
+        //                 $(".title2")
+        //                   .removeClass(["state1", "state2"])
+        //                   .addClass("state3")
+        //               },
+        //               onEnterBack: function () {
+        // console.log(window.scrollY,getScrollYByVideo(18.5).top-getScrollYByVideo(1).top,'aaaaaaaaa')
+        // if(window.scrollY>getScrollYByVideo(18.5).top-getScrollYByVideo(1).top)
+        //                 $(".title2")
+        //                   .removeClass(["state1", "state3"])
+        //                   .addClass("state2")
+        //               },
+        //             },
+        //           }
+        //         )
+
+        // if (!window.isPhone) {
+        createTween(
+          ".title3_mask",
+          getScrollYByVideo(1).top,
+          { opacity: 0 },
+          {
+            immediateRender: false,
+            // delay: getScrollYByVideo(19).top,
+            opacity: 1,
+
+            scrollTrigger: {
+              trigger: ".stage1",
+              // pin: true, // pin the trigger element while active
+              start: getScrollYByVideo(18.5).top, // when the top of the trigger hits the top of the viewport
+              end: getScrollYByVideo(19).top, // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              markers: false,
+              id: "aaa",
+            },
+          }
+        )
+
+        createTween(
+          ".title3",
+          getScrollYByVideo(1).top,
+          {
+            //  translateY: 30, opacity: 0
           },
-        }
-      )
-      // }
+          {
+            // delay: getScrollYByVideo(9.5).top,
+            // translateY: 0,
+            // opacity: 1,
+            // ease: Linear.easeNone,
+            immediateRender: false,
+            scrollTrigger: {
+              trigger: ".stage1",
+              // pin: true, // pin the trigger element while active
+              start: getScrollYByVideo(18.5).top, // when the top of the trigger hits the top of the viewport
+              end: getScrollYByVideo(19).top, // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              markers: false,
+              id: "aaa",
+              onLeave: function () {
+                //$(".title_part").addClass("state3")
+                $(".title3")
+                  .removeClass(["state1", "state3"])
+                  .addClass("state2")
+              },
+              onLeaveBack: function () {
+                $(".title3")
+                  .removeClass(["state2", "state3"])
+                  .addClass("state1")
+              },
+            },
+          }
+        )
+        // }
 
-
-      var tl = gsap.timeline({
-        // yes, we can add it to an entire timeline!
-        scrollTrigger: {
-          trigger: ".stage1",
-          // pin: true, // pin the trigger element while active
-          start: "top top", // when the top of the trigger hits the top of the viewport
-          end: getScrollYByVideo(19).top, // end after scrolling 500px beyond the start
-          scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-          markers: false,
-          id: "aaa",
-          // pinType: "fixed",
-          // anticipatePin: 1,
-          //   snap: {
-          //     snapTo: "labels", // snap to the closest label in the timeline
-          //     duration: {min: 0.2, max: 3}, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-          //     delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-          //     ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
-          //   }
-
-          onEnter: function () {
-            isEnterStage1 = true
-            // myVideo.play()
-          },
-          onLeave: function () {
-            isEnterStage1 = false
-            // if (!window.isPhone) {
-            // myVideo.currentTime = Math.ceil(myVideo.duration)
-            // myVideo.pause()
-            // }
-          },
-          onEnterBack: function () {
-            isEnterStage1 = true
-            // myVideo.play()
-          },
-
-        },
-      })
-
-      // tl.add(tween)
-
-      gsap.fromTo(
-        ".title1",
-        getScrollYByVideo(1).top,
-        {},
-        {
-          immediateRender: false,
-
+        var tl = gsap.timeline({
+          // yes, we can add it to an entire timeline!
           scrollTrigger: {
             trigger: ".stage1",
             // pin: true, // pin the trigger element while active
             start: "top top", // when the top of the trigger hits the top of the viewport
-            end: getScrollYByVideo(9).top, // end after scrolling 500px beyond the start
+            end: getScrollYByVideo(19).top, // end after scrolling 500px beyond the start
             scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
             markers: false,
             id: "aaa",
+            // pinType: "fixed",
+            // anticipatePin: 1,
+            //   snap: {
+            //     snapTo: "labels", // snap to the closest label in the timeline
+            //     duration: {min: 0.2, max: 3}, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+            //     delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+            //     ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
+            //   }
+
             onEnter: function () {
-              $(".left-progress").removeClass("state2")
-              $(".left-progress").removeClass("state3")
-              $(".left-progress").addClass("state1")
-
-              // $(".header1").removeClass("state2")
-              // $(".header1").removeClass("state3")
-              // $(".header1").addClass("state1")
+              isEnterStage1 = true
+              // myVideo.play()
             },
-          },
-        }
-      )
-
-      gsap.fromTo(
-        ".title1",
-        getScrollYByVideo(1).top,
-        {},
-        {
-          immediateRender: false,
-
-          scrollTrigger: {
-            trigger: ".stage1",
-            // pin: true, // pin the trigger element while active
-            start: getScrollYByVideo(9).top, // when the top of the trigger hits the top of the viewport
-            end: "+=" + getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
-            scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-            markers: false,
-            id: "aaa",
-            onEnter: function () {
-              $(".left-progress").removeClass("state1")
-              $(".left-progress").removeClass("state3")
-              $(".left-progress").addClass("state2")
-
-              // $(".header1").removeClass("state2")
-              // $(".header1").removeClass("state3")
-              // $(".header1").addClass("state1")
+            onLeave: function () {
+              isEnterStage1 = false
+              // if (!window.isPhone) {
+              // myVideo.currentTime = Math.ceil(myVideo.duration)
+              // myVideo.pause()
+              // }
             },
-            onLeaveBack: function () {
-              $(".left-progress").removeClass("state2")
-              $(".left-progress").removeClass("state3")
-              $(".left-progress").addClass("state1")
-            },
-          },
-        }
-      )
-
-      gsap.fromTo(
-        ".title1",
-        getScrollYByVideo(1).top,
-        {},
-        {
-          immediateRender: false,
-
-          scrollTrigger: {
-            trigger: ".stage1",
-            // pin: true, // pin the trigger element while active
-            start: getScrollYByVideo(19).top, // when the top of the trigger hits the top of the viewport
-            end: "+=" + getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
-            scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-            markers: false,
-            id: "aaa",
-            onEnter: function () {
-              $(".left-progress").removeClass("state1")
-              $(".left-progress").removeClass("state2")
-              $(".left-progress").addClass("state3")
-
-              // $(".header1").removeClass("state2")
-              // $(".header1").removeClass("state3")
-              // $(".header1").addClass("state1")
-            },
-            onLeaveBack: function () {
-              $(".left-progress").removeClass("state1")
-              $(".left-progress").removeClass("state3")
-              $(".left-progress").addClass("state2")
-            },
-          },
-        }
-      )
-
-      if (!window.isPhone) {
-        gsap.timeline({
-          // yes, we can add it to an entire timeline!
-          scrollTrigger: {
-            trigger: ".stage1",
-            immediateRender: false,
-            //pin: true, // pin the trigger element while active
-            start: "+=" + getScrollYByVideo(20).top, // when the top of the trigger hits the top of the viewport
-            end:
-              getScrollYByVideo(20).top +
-              $(".inner_scroll_warpper").height() -
-              $(".title3").height(), // end after scrolling 500px beyond the start
-            scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-            markers: false,
-            id: "ttttt",
-            onUpdate: function (self) {
-              $(".title3").get(0).scrollTop =
-                ($(".inner_scroll_warpper").height() -
-                  $(".title3").height() + 170) *
-                self.progress
-              //                 console.log(
-              //                   // this.targets()[0].v,
-              // self.progress,
-              //                   $(".title3").get(0).scrollTop,
-              //                   "vvvvvv"
-              //                 )
-              // gsap.to(".title3", 0.6, { scrollTo: this.targets()[0].v })
+            onEnterBack: function () {
+              isEnterStage1 = true
+              // myVideo.play()
             },
           },
         })
-      }
-      // .add(tween2)
 
+        // tl.add(tween)
 
-      function pausePlayVideo() {
-        // myVideo.paused = true
-        try {
-          myVideo.pause()
-        } catch (e) { }
-      }
-      function resumePlayVideo() {
-        // myVideo.paused = false
-        isMouseWheel = false
-        try {
-          if (isEnterStage1) myVideo.play()
-        } catch (e) { }
-      }
+        gsap.fromTo(
+          ".title1",
+          getScrollYByVideo(1).top,
+          {},
+          {
+            immediateRender: false,
 
-      function wheeled(event) {
-        if (window.isPhone) return
-        // isMouseWheel = true
-        // pausePlayVideo()
-        // clearTimeout(mouseWheelTimer)
-        // mouseWheelTimer = setTimeout(resumePlayVideo, 500)
+            scrollTrigger: {
+              trigger: ".stage1",
+              // pin: true, // pin the trigger element while active
+              start: "top top", // when the top of the trigger hits the top of the viewport
+              end: getScrollYByVideo(9).top, // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              markers: false,
+              id: "aaa",
+              onEnter: function () {
+                $(".left-progress").removeClass("state2")
+                $(".left-progress").removeClass("state3")
+                $(".left-progress").addClass("state1")
 
-        // nice && nice.autohidedom && $(nice.autohidedom).removeClass("hide")
+                // $(".header1").removeClass("state2")
+                // $(".header1").removeClass("state3")
+                // $(".header1").addClass("state1")
+              },
+            },
+          }
+        )
 
-        // clearTimeout(mouseWheelTimer2)
-        // mouseWheelTimer2 = setTimeout(function () {
-        //   nice && $(nice.autohidedom).addClass("hide")
-        // }, 2000)
+        gsap.fromTo(
+          ".title1",
+          getScrollYByVideo(1).top,
+          {},
+          {
+            immediateRender: false,
 
-      }
+            scrollTrigger: {
+              trigger: ".stage1",
+              // pin: true, // pin the trigger element while active
+              start: getScrollYByVideo(9).top, // when the top of the trigger hits the top of the viewport
+              end: "+=" + getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              markers: false,
+              id: "aaa",
+              onEnter: function () {
+                $(".left-progress").removeClass("state1")
+                $(".left-progress").removeClass("state3")
+                $(".left-progress").addClass("state2")
 
-      window.addEventListener("wheel", wheeled, {
-        passive: false,
-        // capture: true,
-      })
-      // actual render code is in the `scrolled` handler because
-      // there are other wheel events in the code that adjust the scroll position
-      // window.addEventListener('scroll', scrolled, { passive: true })
+                // $(".header1").removeClass("state2")
+                // $(".header1").removeClass("state3")
+                // $(".header1").addClass("state1")
+              },
+              onLeaveBack: function () {
+                $(".left-progress").removeClass("state2")
+                $(".left-progress").removeClass("state3")
+                $(".left-progress").addClass("state1")
+              },
+            },
+          }
+        )
 
-      // if (window.isPhone) {
-      // $(".title3").hide()
-      // $(".title3_mask").hide()
-      // }
+        gsap.fromTo(
+          ".title1",
+          getScrollYByVideo(1).top,
+          {},
+          {
+            immediateRender: false,
 
-      $(window).resize(function () {
+            scrollTrigger: {
+              trigger: ".stage1",
+              // pin: true, // pin the trigger element while active
+              start: getScrollYByVideo(19).top, // when the top of the trigger hits the top of the viewport
+              end: "+=" + getScrollYByVideo(1).top, // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              markers: false,
+              id: "aaa",
+              onEnter: function () {
+                $(".left-progress").removeClass("state1")
+                $(".left-progress").removeClass("state2")
+                $(".left-progress").addClass("state3")
+
+                // $(".header1").removeClass("state2")
+                // $(".header1").removeClass("state3")
+                // $(".header1").addClass("state1")
+              },
+              onLeaveBack: function () {
+                $(".left-progress").removeClass("state1")
+                $(".left-progress").removeClass("state3")
+                $(".left-progress").addClass("state2")
+              },
+            },
+          }
+        )
+
+        if (!window.isPhone) {
+          gsap.timeline({
+            // yes, we can add it to an entire timeline!
+            scrollTrigger: {
+              trigger: ".stage1",
+              immediateRender: false,
+              //pin: true, // pin the trigger element while active
+              start: "+=" + getScrollYByVideo(20).top, // when the top of the trigger hits the top of the viewport
+              end:
+                getScrollYByVideo(20).top +
+                $(".inner_scroll_warpper").height() -
+                $(".title3").height(), // end after scrolling 500px beyond the start
+              scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+              markers: false,
+              id: "ttttt",
+              onUpdate: function (self) {
+
+self.vars.end= getScrollYByVideo(20).top +
+                $(".inner_scroll_warpper").height() -
+                $(".title3").height();
+
+                $(".title3").get(0).scrollTop =
+                  ($(".inner_scroll_warpper").height() -
+                    $(".title3").height() +
+                    170) *
+                  self.progress
+                //                 console.log(
+                //                   // this.targets()[0].v,
+                // self.progress,
+                //                   $(".title3").get(0).scrollTop,
+                //                   "vvvvvv"
+                //                 )
+                // gsap.to(".title3", 0.6, { scrollTo: this.targets()[0].v })
+              },
+            },
+          })
+        }
+        // .add(tween2)
+
+        function pausePlayVideo() {
+          // myVideo.paused = true
+          try {
+            myVideo.pause()
+          } catch (e) {}
+        }
+        function resumePlayVideo() {
+          // myVideo.paused = false
+          isMouseWheel = false
+          try {
+            if (isEnterStage1) myVideo.play()
+          } catch (e) {}
+        }
+
+        function wheeled(event) {
+          if (window.isPhone) return
+          // isMouseWheel = true
+          // pausePlayVideo()
+          // clearTimeout(mouseWheelTimer)
+          // mouseWheelTimer = setTimeout(resumePlayVideo, 500)
+
+          // nice && nice.autohidedom && $(nice.autohidedom).removeClass("hide")
+
+          // clearTimeout(mouseWheelTimer2)
+          // mouseWheelTimer2 = setTimeout(function () {
+          //   nice && $(nice.autohidedom).addClass("hide")
+          // }, 2000)
+        }
+
+        window.addEventListener("wheel", wheeled, {
+          passive: false,
+          // capture: true,
+        })
+        // actual render code is in the `scrolled` handler because
+        // there are other wheel events in the code that adjust the scroll position
+        // window.addEventListener('scroll', scrolled, { passive: true })
+
+        // if (window.isPhone) {
+        // $(".title3").hide()
+        // $(".title3_mask").hide()
+        // }
+
+        $(window).resize(function () {
+          $(".stage1").height(
+            getScrollYByVideo(20).top +
+              (isPhone
+                ? 1 * window.onePageHeight + $(".inner_scroll_warpper").height()
+                : 1 * window.onePageHeight +
+                  ($(".inner_scroll_warpper").height() - $(".title3").height()))
+          )
+        })
+
         $(".stage1").height(
           getScrollYByVideo(20).top +
-          (
-            isPhone
+            (isPhone
               ? 1 * window.onePageHeight + $(".inner_scroll_warpper").height()
-              :
-              1 * window.onePageHeight +
-              ($(".inner_scroll_warpper").height() - $(".title3").height()))
+              : 1 * window.onePageHeight +
+                ($(".inner_scroll_warpper").height() - $(".title3").height()))
         )
-      })
 
-      $(".stage1").height(
-        getScrollYByVideo(20).top +
-        (
-          isPhone
-            ? 1 * window.onePageHeight + $(".inner_scroll_warpper").height()
-            :
-            1 * window.onePageHeight +
-            ($(".inner_scroll_warpper").height() - $(".title3").height()))
-      )
-    })
-  </script>
-  <div class="stage2 stage2_pc">
-    <div class="sticky">
+      
+      })
+    </script>
+    <div class="stage2 stage2_pc">
+      <div class="sticky">
+        <div class="page_content business_content flex">
+          <div class="left_part flex fd-c">
+            <div class="bussiness_title1">安迈云业务模式</div>
+            <div class="bussiness_title2">
+              IPFS网络设备及解决方案提供+IPFS云存储服务
+            </div>
+            <div class="bussiness_content flex fd-c">
+              <div class="divider"></div>
+              <div class="bussiness_sub_item active">
+                <div class="bussiness_sub_item_title" data-index="0">
+                  01 分布式数据中心 Distributed Data Center
+                </div>
+                <ul class="bussiness_sub_item_child">
+                  <li>建造 “精/简”机房</li>
+                  <li>保护硬件投资</li>
+                  <li>高性能</li>
+                  <li>高可靠，故障自愈</li>
+                  <li>单一界面，易于管理</li>
+                </ul>
+              </div>
+              <div class="divider"></div>
+              <div class="bussiness_sub_item">
+                <div class="bussiness_sub_item_title" data-index="1">
+                  02 分布式CDN Distributed CDN (即将上线)
+                </div>
+                <ul class="bussiness_sub_item_child">
+                  <li>全网覆盖</li>
+                  <li>安全稳定</li>
+                  <li>节约成本</li>
+                </ul>
+              </div>
+              <div class="divider"></div>
+              <div class="bussiness_sub_item">
+                <div class="bussiness_sub_item_title" data-index="2">
+                  03 矩阵存储 Matrix Storage
+                </div>
+                <ul class="bussiness_sub_item_child">
+                  <li><span>在线存储：</span>支持一键上传、拖拽等方式上传</li>
+                  <li>
+                    <span>API对接：</span>OpenAPI，为开发者提供灵活的访问接口
+                  </li>
+                  <li>
+                    <span>应用SDK：</span
+                    >提供Java、Python、C等多语言完成二次开发
+                  </li>
+                  <li>
+                    <span>离线存储：</span>无惧带宽，专属定制化硬件设备迁移数据
+                  </li>
+                </ul>
+              </div>
+              <div class="divider"></div>
+              <div class="bussiness_sub_item">
+                <div class="bussiness_sub_item_title" data-index="3">
+                  04 云GPU Cloud GPU
+                </div>
+                <ul class="bussiness_sub_item_child">
+                  <li>
+                    <span>高校科研：</span
+                    >一键部署海量学习环境场景进入计算“云”时代
+                  </li>
+                  <li>
+                    <span>智能驾驶：</span>满足高性能计算，缩短算法训练周期
+                  </li>
+                  <li><span>AI智能：</span>缩短训练环境部署，加速AI落地使用</li>
+                  <li>
+                    <span>云游戏：</span>提供低成本优质稳定的存储能力和解决方案
+                  </li>
+                  <li><span>区块链：</span>提供关于IPFS相关服务加速C2处理</li>
+                  <li>
+                    <span>视频渲染：</span>集群调配，高弹性高灵活性渲染资源
+                  </li>
+                </ul>
+              </div>
+              <div class="divider"></div>
+              <div class="bussiness_bottom_part flex">
+                <a
+                  id="product_url"
+                  href="./product_fbssjzx.html"
+                  target="_blank"
+                >
+                  <div class="action_btn btn-with-arrow first">
+                    <span> 探索更多 </span>
+                    <i
+                      class="fa iconfont icon-youjiantou"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </a>
+                <a href="./solution_hy.html" target="_blank">
+                  <div class="action_btn btn-with-arrow second">
+                    <span> 相关解决方案 </span>
+                    <i
+                      class="fa iconfont icon-youjiantou"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="right_part state1">
+            <div class="pic_part">
+              <div class="wrapper">
+                <img src="./assets/img/01.png" />
+                <div class="info_part flex fd-c">
+                  <img src="./assets/img/gif1.gif" />
+                  <!-- <div class="title_part">云计算</div>
+                  <span
+                    >通过区块链技术让人工智能的运算。去中心化分布在全世界海量节点之上，打造AI大数据时代下去中心云计算市场的基础设施，构建算力供需精准对接平台。
+                  </span> -->
+                </div>
+                <!-- <div class="_number">01</div> -->
+              </div>
+            </div>
+            <div class="pic_part">
+              <div class="wrapper">
+                <img src="./assets/img/02.png" />
+                <div class="info_part flex fd-c">
+                  <img src="./assets/img/gif2.gif" />
+                  <!-- <div class="title_part">矩阵存储</div>
+                  <span
+                    >矩阵存储提供简单易用的PaaS服务、OpenAPI服务和存储工具集套件，致力于用户有效使用稳定可靠的IPFS去中心化存储服务。</span
+                  > -->
+                </div>
+                <!-- <div class="_number">02</div> -->
+              </div>
+            </div>
+            <div class="pic_part">
+              <div class="wrapper">
+                <img src="./assets/img/03.png" />
+                <div class="info_part flex fd-c">
+                  <img src="./assets/img/gif3.gif" />
+                  <!-- <div class="title_part">云GPU</div>
+                  <span
+                    >依托自建规模化存储能力中心与强大的供应链体系；汇集业内顶尖GPU显卡集群，为客户提供海量GPU存储能力服务。</span
+                  > -->
+                </div>
+                <!-- <div class="_number">03</div> -->
+              </div>
+            </div>
+            <div class="pic_part">
+              <div class="wrapper">
+                <img src="./assets/img/04.png" />
+                <div class="info_part flex fd-c">
+                  <img src="./assets/img/gif3.gif" />
+                  <!-- <div class="title_part">云GPU</div>
+                  <span
+                    >依托自建规模化存储能力中心与强大的供应链体系；汇集业内顶尖GPU显卡集群，为客户提供海量GPU存储能力服务。</span
+                  > -->
+                </div>
+                <!-- <div class="_number">04</div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="stage2 stage2_mobile">
+      <!-- <div class="sticky"> -->
       <div class="page_content business_content flex">
         <div class="left_part flex fd-c">
           <div class="bussiness_title1">安迈云业务模式</div>
-          <div class="bussiness_title2"> IPFS网络设备及解决方案提供+IPFS云存储服务 </div>
-          <div class="bussiness_content flex fd-c">
-            <div class="divider"></div>
-            <div class="bussiness_sub_item active">
-              <div class="bussiness_sub_item_title" data-index="0"> 01 分布式数据中心 Distributed Data Center </div>
-              <ul class="bussiness_sub_item_child">
-                <li>建造 “精/简”机房</li>
-                <li>保护硬件投资</li>
-                <li>高性能</li>
-                <li>高可靠，故障自愈</li>
-                <li>单一界面，易于管理</li>
-              </ul>
-            </div>
-            <div class="divider"></div>
-            <div class="bussiness_sub_item ">
-              <div class="bussiness_sub_item_title" data-index="1"> 02 分布式CDN Distributed CDN (即将上线) </div>
-              <ul class="bussiness_sub_item_child">
-                <li>全网覆盖</li>
-                <li>安全稳定</li>
-                <li>节约成本</li>
-              </ul>
-            </div>
-            <div class="divider"></div>
-            <div class="bussiness_sub_item">
-              <div class="bussiness_sub_item_title" data-index="2"> 03 矩阵存储 Matrix Storage </div>
-              <ul class="bussiness_sub_item_child">
-                <li><span>在线存储：</span>支持一键上传、拖拽等方式上传</li>
-                <li>
-                  <span>API对接：</span>OpenAPI，为开发者提供灵活的访问接口
-                </li>
-                <li>
-                  <span>应用SDK：</span>提供Java、Python、C等多语言完成二次开发
-                </li>
-                <li>
-                  <span>离线存储：</span>无惧带宽，专属定制化硬件设备迁移数据
-                </li>
-              </ul>
-            </div>
-            <div class="divider"></div>
-            <div class="bussiness_sub_item">
-              <div class="bussiness_sub_item_title" data-index="3"> 04 云GPU Cloud GPU </div>
-              <ul class="bussiness_sub_item_child">
-                <li>
-                  <span>高校科研：</span>一键部署海量学习环境场景进入计算“云”时代
-                </li>
-                <li>
-                  <span>智能驾驶：</span>满足高性能计算，缩短算法训练周期
-                </li>
-                <li><span>AI智能：</span>缩短训练环境部署，加速AI落地使用</li>
-                <li>
-                  <span>云游戏：</span>提供低成本优质稳定的存储能力和解决方案
-                </li>
-                <li><span>区块链：</span>提供关于IPFS相关服务加速C2处理</li>
-                <li>
-                  <span>视频渲染：</span>集群调配，高弹性高灵活性渲染资源
-                </li>
-              </ul>
-            </div>
-            <div class="divider"></div>
-            <div class="bussiness_bottom_part flex">
-              <a id="product_url" href="./product_fbssjzx.html" target="_blank">
-                <div class="action_btn btn-with-arrow first">
-                  <span> 探索更多 </span>
-                  <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-                </div>
-              </a>
-              <a href="./solution_hy.html" target="_blank">
-                <div class="action_btn btn-with-arrow second">
-                  <span> 相关解决方案 </span>
-                  <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-                </div>
-              </a>
-            </div>
+          <div class="bussiness_title2">
+            IPFS网络设备及解决方案提供+IPFS云存储服务
           </div>
-        </div>
-        <div class="right_part state1">
-          <div class="pic_part">
-            <div class="wrapper">
-              <img src="./assets/img/01.png" />
-              <div class="info_part flex fd-c">
-                <img src="./assets/img/gif1.gif" />
-                <!-- <div class="title_part">云计算</div>
+          <div class="bussinenss_content_wrapper">
+            <div class="bussiness_content flex fd-c">
+              <div class="divider"></div>
+              <div class="bussiness_sub_item active">
+                <div class="bussiness_sub_item_title" data-index="0">
+                  01 分布式数据中心 Distributed Data Center
+                </div>
+                <ul class="bussiness_sub_item_child">
+                  <li>建造 “精/简”机房</li>
+                  <li>保护硬件投资</li>
+                  <li>高性能</li>
+                  <li>高可靠，故障自愈</li>
+                  <li>单一界面，易于管理</li>
+                </ul>
+                <div class="divider"></div>
+                <div class="bussiness_bottom_part flex">
+                  <a href="./product_fbssjzx.html" target="_blank">
+                    <div class="action_btn btn-with-arrow first">
+                      <span> 探索更多 </span>
+                      <i
+                        class="fa iconfont icon-youjiantou"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                  </a>
+                  <a href="./solution_hy.html" target="_blank">
+                    <div class="action_btn btn-with-arrow second">
+                      <span> 相关解决方案 </span>
+                      <i
+                        class="fa iconfont icon-youjiantou"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                  </a>
+                </div>
+                <div class="pic_part">
+                  <div class="wrapper">
+                    <img src="./assets/img/01.png" />
+                    <div class="info_part flex fd-c">
+                      <img src="./assets/img/gif1.gif" />
+                      <!-- <div class="title_part">云计算</div>
                   <span
                     >通过区块链技术让人工智能的运算。去中心化分布在全世界海量节点之上，打造AI大数据时代下去中心云计算市场的基础设施，构建算力供需精准对接平台。
                   </span> -->
+                    </div>
+                    <!-- <div class="_number">01</div> -->
+                  </div>
+                </div>
               </div>
-              <!-- <div class="_number">01</div> -->
-            </div>
-          </div>
-          <div class="pic_part">
-            <div class="wrapper">
-              <img src="./assets/img/02.png" />
-              <div class="info_part flex fd-c">
-                <img src="./assets/img/gif2.gif" />
-                <!-- <div class="title_part">矩阵存储</div>
+              <div class="divider"></div>
+              <div class="bussiness_sub_item active">
+                <div class="bussiness_sub_item_title" data-index="1">
+                  02 分布式CDN Distributed CDN (即将上线)
+                </div>
+                <ul class="bussiness_sub_item_child">
+                  <li>全网覆盖</li>
+                  <li>安全稳定</li>
+                  <li>节约成本</li>
+                </ul>
+                <div class="divider"></div>
+                <div class="bussiness_bottom_part flex">
+                  <a
+                    href="./product_fbssjzx.html"
+                    target="_blank"
+                    class="disabled"
+                  >
+                    <div class="action_btn btn-with-arrow first">
+                      <span> 探索更多 </span>
+                      <i
+                        class="fa iconfont icon-youjiantou"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                  </a>
+                  <a href="./solution_hy.html" target="_blank">
+                    <div class="action_btn btn-with-arrow second">
+                      <span> 相关解决方案 </span>
+                      <i
+                        class="fa iconfont icon-youjiantou"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                  </a>
+                </div>
+                <div class="pic_part">
+                  <div class="wrapper">
+                    <img src="./assets/img/02.png" />
+                    <div class="info_part flex fd-c">
+                      <img src="./assets/img/gif2.gif" />
+                      <!-- <div class="title_part">矩阵存储</div>
                   <span
                     >矩阵存储提供简单易用的PaaS服务、OpenAPI服务和存储工具集套件，致力于用户有效使用稳定可靠的IPFS去中心化存储服务。</span
                   > -->
-              </div>
-              <!-- <div class="_number">02</div> -->
-            </div>
-          </div>
-          <div class="pic_part">
-            <div class="wrapper">
-              <img src="./assets/img/03.png" />
-              <div class="info_part flex fd-c">
-                <img src="./assets/img/gif3.gif" />
-                <!-- <div class="title_part">云GPU</div>
-                  <span
-                    >依托自建规模化存储能力中心与强大的供应链体系；汇集业内顶尖GPU显卡集群，为客户提供海量GPU存储能力服务。</span
-                  > -->
-              </div>
-              <!-- <div class="_number">03</div> -->
-            </div>
-          </div>
-          <div class="pic_part">
-            <div class="wrapper">
-              <img src="./assets/img/04.png" />
-              <div class="info_part flex fd-c">
-                <img src="./assets/img/gif3.gif" />
-                <!-- <div class="title_part">云GPU</div>
-                  <span
-                    >依托自建规模化存储能力中心与强大的供应链体系；汇集业内顶尖GPU显卡集群，为客户提供海量GPU存储能力服务。</span
-                  > -->
-              </div>
-              <!-- <div class="_number">04</div> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="stage2 stage2_mobile">
-    <!-- <div class="sticky"> -->
-    <div class="page_content business_content flex">
-      <div class="left_part flex fd-c">
-        <div class="bussiness_title1">安迈云业务模式</div>
-        <div class="bussiness_title2"> IPFS网络设备及解决方案提供+IPFS云存储服务 </div>
-        <div class="bussinenss_content_wrapper">
-          <div class="bussiness_content flex fd-c">
-            <div class="divider"></div>
-            <div class="bussiness_sub_item active">
-              <div class="bussiness_sub_item_title" data-index="0"> 01 分布式数据中心 Distributed Data Center </div>
-              <ul class="bussiness_sub_item_child">
-                <li>建造 “精/简”机房</li>
-                <li>保护硬件投资</li>
-                <li>高性能</li>
-                <li>高可靠，故障自愈</li>
-                <li>单一界面，易于管理</li>
-              </ul>
-              <div class="divider"></div>
-              <div class="bussiness_bottom_part flex">
-                <a href="./product_fbssjzx.html" target="_blank">
-                  <div class="action_btn btn-with-arrow first">
-                    <span> 探索更多 </span>
-                    <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
+                    </div>
+                    <!-- <div class="_number">02</div> -->
                   </div>
-                </a>
-                <a href="./solution_hy.html" target="_blank">
-                  <div class="action_btn btn-with-arrow second">
-                    <span> 相关解决方案 </span>
-                    <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-                  </div>
-                </a>
-              </div>
-              <div class="pic_part">
-                <div class="wrapper">
-                  <img src="./assets/img/01.png" />
-                  <div class="info_part flex fd-c">
-                    <img src="./assets/img/gif1.gif" />
-                    <!-- <div class="title_part">云计算</div>
-                  <span
-                    >通过区块链技术让人工智能的运算。去中心化分布在全世界海量节点之上，打造AI大数据时代下去中心云计算市场的基础设施，构建算力供需精准对接平台。
-                  </span> -->
-                  </div>
-                  <!-- <div class="_number">01</div> -->
                 </div>
               </div>
-            </div>
-            <div class="divider"></div>
-            <div class="bussiness_sub_item active">
-              <div class="bussiness_sub_item_title" data-index="1"> 02 分布式CDN Distributed CDN (即将上线) </div>
-              <ul class="bussiness_sub_item_child">
-                <li>全网覆盖</li>
-                <li>安全稳定</li>
-                <li>节约成本</li>
-              </ul>
               <div class="divider"></div>
-              <div class="bussiness_bottom_part flex">
-                <a href="./product_fbssjzx.html" target="_blank" class="disabled">
-                  <div class="action_btn btn-with-arrow first">
-                    <span> 探索更多 </span>
-                    <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-                  </div>
-                </a>
-                <a href="./solution_hy.html" target="_blank">
-                  <div class="action_btn btn-with-arrow second">
-                    <span> 相关解决方案 </span>
-                    <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-                  </div>
-                </a>
-              </div>
-              <div class="pic_part">
-                <div class="wrapper">
-                  <img src="./assets/img/02.png" />
-                  <div class="info_part flex fd-c">
-                    <img src="./assets/img/gif2.gif" />
-                    <!-- <div class="title_part">矩阵存储</div>
-                  <span
-                    >矩阵存储提供简单易用的PaaS服务、OpenAPI服务和存储工具集套件，致力于用户有效使用稳定可靠的IPFS去中心化存储服务。</span
-                  > -->
-                  </div>
-                  <!-- <div class="_number">02</div> -->
+              <div class="bussiness_sub_item active">
+                <div class="bussiness_sub_item_title" data-index="2">
+                  03 矩阵存储 Matrix Storage
                 </div>
-              </div>
-            </div>
-            <div class="divider"></div>
-            <div class="bussiness_sub_item active">
-              <div class="bussiness_sub_item_title" data-index="2"> 03 矩阵存储 Matrix Storage </div>
-              <ul class="bussiness_sub_item_child">
-                <li><span>在线存储：</span>支持一键上传、拖拽等方式上传</li>
-                <li>
-                  <span>API对接：</span>OpenAPI，为开发者提供灵活的访问接口
-                </li>
-                <li>
-                  <span>应用SDK：</span>提供Java、Python、C等多语言完成二次开发
-                </li>
-                <li>
-                  <span>离线存储：</span>无惧带宽，专属定制化硬件设备迁移数据
-                </li>
-              </ul>
-              <div class="divider"></div>
-              <div class="bussiness_bottom_part flex">
-                <a href="./product_jzcc.html" target="_blank">
-                  <div class="action_btn btn-with-arrow first">
-                    <span> 探索更多 </span>
-                    <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-                  </div>
-                </a>
-                <a href="./solution_hy.html" target="_blank">
-                  <div class="action_btn btn-with-arrow second">
-                    <span> 相关解决方案 </span>
-                    <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-                  </div>
-                </a>
-              </div>
-              <div class="pic_part">
-                <div class="wrapper">
-                  <img src="./assets/img/03.png" />
-                  <div class="info_part flex fd-c">
-                    <img src="./assets/img/gif3.gif" />
-                    <!-- <div class="title_part">云GPU</div>
+                <ul class="bussiness_sub_item_child">
+                  <li><span>在线存储：</span>支持一键上传、拖拽等方式上传</li>
+                  <li>
+                    <span>API对接：</span>OpenAPI，为开发者提供灵活的访问接口
+                  </li>
+                  <li>
+                    <span>应用SDK：</span
+                    >提供Java、Python、C等多语言完成二次开发
+                  </li>
+                  <li>
+                    <span>离线存储：</span>无惧带宽，专属定制化硬件设备迁移数据
+                  </li>
+                </ul>
+                <div class="divider"></div>
+                <div class="bussiness_bottom_part flex">
+                  <a href="./product_jzcc.html" target="_blank">
+                    <div class="action_btn btn-with-arrow first">
+                      <span> 探索更多 </span>
+                      <i
+                        class="fa iconfont icon-youjiantou"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                  </a>
+                  <a href="./solution_hy.html" target="_blank">
+                    <div class="action_btn btn-with-arrow second">
+                      <span> 相关解决方案 </span>
+                      <i
+                        class="fa iconfont icon-youjiantou"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                  </a>
+                </div>
+                <div class="pic_part">
+                  <div class="wrapper">
+                    <img src="./assets/img/03.png" />
+                    <div class="info_part flex fd-c">
+                      <img src="./assets/img/gif3.gif" />
+                      <!-- <div class="title_part">云GPU</div>
                   <span
                     >依托自建规模化存储能力中心与强大的供应链体系；汇集业内顶尖GPU显卡集群，为客户提供海量GPU存储能力服务。</span
                   > -->
+                    </div>
+                    <!-- <div class="_number">03</div> -->
                   </div>
-                  <!-- <div class="_number">03</div> -->
                 </div>
               </div>
-            </div>
-            <div class="divider"></div>
-            <div class="bussiness_sub_item active">
-              <div class="bussiness_sub_item_title" data-index="3"> 04 云GPU Cloud GPU </div>
-              <ul class="bussiness_sub_item_child">
-                <li>
-                  <span>高校科研：</span>一键部署海量学习环境场景进入计算“云”时代
-                </li>
-                <li>
-                  <span>智能驾驶：</span>满足高性能计算，缩短算法训练周期
-                </li>
-                <li><span>AI智能：</span>缩短训练环境部署，加速AI落地使用</li>
-                <li>
-                  <span>云游戏：</span>提供低成本优质稳定的存储能力和解决方案
-                </li>
-                <li><span>区块链：</span>提供关于IPFS相关服务加速C2处理</li>
-                <li>
-                  <span>视频渲染：</span>集群调配，高弹性高灵活性渲染资源
-                </li>
-              </ul>
               <div class="divider"></div>
-              <div class="bussiness_bottom_part flex">
-                <a href="./product_ygpu.html" target="_blank">
-                  <div class="action_btn btn-with-arrow first">
-                    <span> 探索更多 </span>
-                    <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-                  </div>
-                </a>
-                <a href="./solution_hy.html" target="_blank">
-                  <div class="action_btn btn-with-arrow second">
-                    <span> 相关解决方案 </span>
-                    <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-                  </div>
-                </a>
-              </div>
-              <div class="pic_part">
-                <div class="wrapper">
-                  <img src="./assets/img/04.png" />
-                  <div class="info_part flex fd-c">
-                    <img src="./assets/img/gif3.gif" />
-                    <!-- <div class="title_part">云GPU</div>
+              <div class="bussiness_sub_item active">
+                <div class="bussiness_sub_item_title" data-index="3">
+                  04 云GPU Cloud GPU
+                </div>
+                <ul class="bussiness_sub_item_child">
+                  <li>
+                    <span>高校科研：</span
+                    >一键部署海量学习环境场景进入计算“云”时代
+                  </li>
+                  <li>
+                    <span>智能驾驶：</span>满足高性能计算，缩短算法训练周期
+                  </li>
+                  <li><span>AI智能：</span>缩短训练环境部署，加速AI落地使用</li>
+                  <li>
+                    <span>云游戏：</span>提供低成本优质稳定的存储能力和解决方案
+                  </li>
+                  <li><span>区块链：</span>提供关于IPFS相关服务加速C2处理</li>
+                  <li>
+                    <span>视频渲染：</span>集群调配，高弹性高灵活性渲染资源
+                  </li>
+                </ul>
+                <div class="divider"></div>
+                <div class="bussiness_bottom_part flex">
+                  <a href="./product_ygpu.html" target="_blank">
+                    <div class="action_btn btn-with-arrow first">
+                      <span> 探索更多 </span>
+                      <i
+                        class="fa iconfont icon-youjiantou"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                  </a>
+                  <a href="./solution_hy.html" target="_blank">
+                    <div class="action_btn btn-with-arrow second">
+                      <span> 相关解决方案 </span>
+                      <i
+                        class="fa iconfont icon-youjiantou"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                  </a>
+                </div>
+                <div class="pic_part">
+                  <div class="wrapper">
+                    <img src="./assets/img/04.png" />
+                    <div class="info_part flex fd-c">
+                      <img src="./assets/img/gif3.gif" />
+                      <!-- <div class="title_part">云GPU</div>
                   <span
                     >依托自建规模化存储能力中心与强大的供应链体系；汇集业内顶尖GPU显卡集群，为客户提供海量GPU存储能力服务。</span
                   > -->
+                    </div>
+                    <!-- <div class="_number">04</div> -->
                   </div>
-                  <!-- <div class="_number">04</div> -->
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- </div> -->
     </div>
-    <!-- </div> -->
-  </div>
-  <script>
-    ////////STAGE2/////////
-    function getStage2Height(p) {
-      return 4 * window.onePageHeight * p
-    }
-    $(function () {
-      ScrollTrigger.matchMedia({
-        // desktop
-        "(min-width: 751px)": function () {
-          createTween(
-            ".title3_mask",
-            50,
-            { opacity: 1 },
-            {
-              immediateRender: false,
-              opacity: 0,
-              scrollTrigger: {
-                trigger: ".stage2_pc",
-                //pin: true, // pin the trigger element while active
-                start: "0", // when the top of the trigger hits the top of the viewport
-                end: "+=50", // end after scrolling 500px beyond the start
-                scrub: true,
-              },
-            }
-          ),
+
+    <script>
+      ////////STAGE2/////////
+      function getStage2Height(p) {
+        return 4 * window.onePageHeight * p
+      }
+      $(function () {
+        ScrollTrigger.matchMedia({
+          // desktop
+          "(min-width: 751px)": function () {
+            createTween(
+              ".title3_mask",
+              50,
+              { opacity: 1 },
+              {
+                immediateRender: false,
+                opacity: 0,
+                scrollTrigger: {
+                  trigger: ".stage2_pc",
+                  //pin: true, // pin the trigger element while active
+                  start: "0", // when the top of the trigger hits the top of the viewport
+                  end: "+=50", // end after scrolling 500px beyond the start
+                  scrub: true,
+                },
+              }
+            ),
+              gsap.fromTo(
+                ".stage2_pc .right_part",
+                0.1 * window.onePageHeight,
+                {},
+                {
+                  immediateRender: false,
+
+                  scrollTrigger: {
+                    trigger: ".stage2_pc",
+                    //pin: true, // pin the trigger element while active
+                    start: "+=" + getStage2Height(0.2), // when the top of the trigger hits the top of the viewport
+                    end: "+=" + getStage2Height(0.1), // end after scrolling 500px beyond the start
+                    scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+                    // markers: false,
+                    id: "4444",
+                    onEnter: function () {
+                      $($(".stage2_pc .bussiness_sub_item")[0]).removeClass(
+                        "active"
+                      )
+                      $($(".stage2_pc .bussiness_sub_item")[1]).addClass(
+                        "active"
+                      )
+                    },
+                    onLeaveBack: function () {
+                      $($(".stage2_pc .bussiness_sub_item")[0]).addClass(
+                        "active"
+                      )
+                      $($(".stage2_pc .bussiness_sub_item")[1]).removeClass(
+                        "active"
+                      )
+                      $("#product_url").prop("href", "./product_fbssjzx.html")
+                    },
+                  },
+                }
+              )
+
             gsap.fromTo(
               ".stage2_pc .right_part",
               0.1 * window.onePageHeight,
-              {},
               {
+                // scrollTo: $(".stage2 .right_part").innerHeight(),
+              },
+              {
+                immediateRender: false,
+
+                // scrollTo: 2 * $(".stage2 .right_part").innerHeight(),
+                scrollTrigger: {
+                  trigger: ".stage2_pc",
+                  //pin: true, // pin the trigger element while active
+                  start: "+=" + getStage2Height(0.4), // when the top of the trigger hits the top of the viewport
+                  end: "+=" + getStage2Height(0.1), // end after scrolling 500px beyond the start
+                  scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+                  markers: false,
+                  id: "6666",
+                  onEnter: function () {
+                    $($(".stage2_pc .bussiness_sub_item")[1]).removeClass(
+                      "active"
+                    )
+                    $($(".stage2_pc .bussiness_sub_item")[2]).addClass("active")
+                    $("#product_url").prop("href", "./product_jzcc.html")
+                  },
+                  onLeaveBack: function () {
+                    $($(".stage2_pc .bussiness_sub_item")[1]).addClass("active")
+                    $($(".stage2_pc .bussiness_sub_item")[2]).removeClass(
+                      "active"
+                    )
+                    $("#product_url").prop("href", "./product_jzcc.html")
+                  },
+                  onUpdate: function () {},
+                },
+              }
+            )
+
+            gsap.fromTo(
+              ".stage2_pc .right_part",
+              0.1 * window.onePageHeight,
+              {
+                // scrollTo: $(".stage2 .right_part").innerHeight(),
+              },
+              {
+                immediateRender: false,
+
+                // scrollTo: 2 * $(".stage2 .right_part").innerHeight(),
+                scrollTrigger: {
+                  trigger: ".stage2_pc",
+                  //pin: true, // pin the trigger element while active
+                  start: "+=" + getStage2Height(0.6), // when the top of the trigger hits the top of the viewport
+                  end: "+=" + getStage2Height(0.1), // end after scrolling 500px beyond the start
+                  scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+                  markers: false,
+                  id: "6666",
+                  onEnter: function () {
+                    $($(".stage2_pc .bussiness_sub_item")[2]).removeClass(
+                      "active"
+                    )
+                    $($(".stage2_pc .bussiness_sub_item")[3]).addClass("active")
+                    $("#product_url").prop("href", "./product_ygpu.html")
+                  },
+                  onLeaveBack: function () {
+                    $($(".stage2_pc .bussiness_sub_item")[2]).addClass("active")
+                    $($(".stage2_pc .bussiness_sub_item")[3]).removeClass(
+                      "active"
+                    )
+                    $("#product_url").prop("href", "./product_jzcc.html")
+                  },
+                  onUpdate: function () {},
+                },
+              }
+            )
+
+            gsap.fromTo(
+              ".stage2_pc .right_part",
+              getStage2Height(0.8),
+              { scrollTo: 0 },
+              {
+                scrollTo: 3 * $(".stage2_pc .right_part").innerHeight(),
                 immediateRender: false,
 
                 scrollTrigger: {
                   trigger: ".stage2_pc",
                   //pin: true, // pin the trigger element while active
-                  start: "+=" + getStage2Height(0.2), // when the top of the trigger hits the top of the viewport
-                  end: "+=" + getStage2Height(0.1), // end after scrolling 500px beyond the start
+                  start: "=" + getStage2Height(0.2), // when the top of the trigger hits the top of the viewport
+                  end: "=" + getStage2Height(3 / 4), // end after scrolling 500px beyond the start
                   scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-                  // markers: false,
-                  id: "4444",
-                  onEnter: function () {
-                    $($(".stage2_pc .bussiness_sub_item")[0]).removeClass(
-                      "active"
-                    )
-                    $($(".stage2_pc .bussiness_sub_item")[1]).addClass(
-                      "active"
-                    )
-                  },
-                  onLeaveBack: function () {
-                    $($(".stage2_pc .bussiness_sub_item")[0]).addClass(
-                      "active"
-                    )
-                    $($(".stage2_pc .bussiness_sub_item")[1]).removeClass(
-                      "active"
-                    )
-                    $("#product_url").prop("href", "./product_fbssjzx.html")
-                  },
+                 //markers: true,
+                  id: "44414",
                 },
               }
             )
-
-          gsap.fromTo(
-            ".stage2_pc .right_part",
-            0.1 * window.onePageHeight,
-            {
-              // scrollTo: $(".stage2 .right_part").innerHeight(),
-            },
-            {
-              immediateRender: false,
-
-              // scrollTo: 2 * $(".stage2 .right_part").innerHeight(),
-              scrollTrigger: {
-                trigger: ".stage2_pc",
-                //pin: true, // pin the trigger element while active
-                start: "+=" + getStage2Height(0.4), // when the top of the trigger hits the top of the viewport
-                end: "+=" + getStage2Height(0.1), // end after scrolling 500px beyond the start
-                scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-                markers: false,
-                id: "6666",
-                onEnter: function () {
-                  $($(".stage2_pc .bussiness_sub_item")[1]).removeClass(
-                    "active"
-                  )
-                  $($(".stage2_pc .bussiness_sub_item")[2]).addClass("active")
-                  $("#product_url").prop("href", "./product_jzcc.html")
-                },
-                onLeaveBack: function () {
-                  $($(".stage2_pc .bussiness_sub_item")[1]).addClass("active")
-                  $($(".stage2_pc .bussiness_sub_item")[2]).removeClass(
-                    "active"
-                  )
-                  $("#product_url").prop("href", "./product_jzcc.html")
-                },
-                onUpdate: function () { },
+            $(".stage2_pc").height(getStage2Height(1))
+          },
+          "(max-width: 750px)": function () {
+            gsap.set(".stage2_mobile .pic_part", { opacity: 0, translateY: 20 })
+            ScrollTrigger.batch(".stage2_mobile .pic_part", {
+              onEnter: (elements, triggers) => {
+                gsap.to(elements, {
+                  delay: 0.5,
+                  opacity: 1,
+                  translateY: 0,
+                })
               },
-            }
-          )
+              // onLeave: (elements, triggers) => {
+              //   gsap.to(elements, { opacity: 0, translateY: 10, stagger: 0.15 })
+              //   console.log(elements.length, "elements left")
+              // },
+            })
 
-          gsap.fromTo(
-            ".stage2_pc .right_part",
-            0.1 * window.onePageHeight,
-            {
-              // scrollTo: $(".stage2 .right_part").innerHeight(),
-            },
-            {
-              immediateRender: false,
-
-              // scrollTo: 2 * $(".stage2 .right_part").innerHeight(),
-              scrollTrigger: {
-                trigger: ".stage2_pc",
-                //pin: true, // pin the trigger element while active
-                start: "+=" + getStage2Height(0.6), // when the top of the trigger hits the top of the viewport
-                end: "+=" + getStage2Height(0.1), // end after scrolling 500px beyond the start
-                scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-                markers: false,
-                id: "6666",
-                onEnter: function () {
-                  $($(".stage2_pc .bussiness_sub_item")[2]).removeClass(
-                    "active"
-                  )
-                  $($(".stage2_pc .bussiness_sub_item")[3]).addClass("active")
-                  $("#product_url").prop("href", "./product_ygpu.html")
-                },
-                onLeaveBack: function () {
-                  $($(".stage2_pc .bussiness_sub_item")[2]).addClass("active")
-                  $($(".stage2_pc .bussiness_sub_item")[3]).removeClass(
-                    "active"
-                  )
-                  $("#product_url").prop("href", "./product_jzcc.html")
-                },
-                onUpdate: function () { },
+            gsap.set(".stage2_mobile .bussiness_sub_item ", {
+              opacity: 0,
+              translateY: 20,
+            })
+            ScrollTrigger.batch(".stage2_mobile .bussiness_sub_item ", {
+              onEnter: (elements, triggers) => {
+                gsap.to(elements, {
+                  delay: 0.5,
+                  opacity: 1,
+                  translateY: 0,
+                })
               },
+              // onLeave: (elements, triggers) => {
+              //   gsap.to(elements, { opacity: 0, translateY: 10, stagger: 0.15 })
+              //   console.log(elements.length, "elements left")
+              // },
+            })
+          },
+        })
+
+        $(".bussiness_sub_item_title").on("click", function (e) {
+          var i = $(this).data("index")
+          // window.pageYOffset =
+          if ($(".stage2_pc").is(":visible")) {
+            //
+            var toPos = $(".stage1").height() + getStage2Height(0.2)
+            if (i == 1) {
+              toPos = $(".stage1").height() + getStage2Height(1 / 4) * 1.2
+            } else if (i == 2) {
+              toPos = $(".stage1").height() + getStage2Height(1 / 4) * 1.72
+            } else if (i == 3) {
+              toPos = $(".stage1").height() + getStage2Height(3 / 4)
             }
-          )
 
-          gsap.fromTo(
-            ".stage2_pc .right_part",
-            getStage2Height(0.8),
-            { scrollTo: 0 },
-            {
-              scrollTo: 3 * $(".stage2_pc .right_part").innerHeight(),
-              immediateRender: false,
-
-              scrollTrigger: {
-                trigger: ".stage2_pc",
-                //pin: true, // pin the trigger element while active
-                start: "=" + getStage2Height(0.2), // when the top of the trigger hits the top of the viewport
-                end:  "="+getStage2Height(3/4), // end after scrolling 500px beyond the start
-                scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-                markers: true,
-                id: "44414",
-              },
-            }
-          )
-          $(".stage2_pc").height(getStage2Height(1))
-        },
-        "(max-width: 750px)": function () {
-          gsap.set(".stage2_mobile .pic_part", { opacity: 0, translateY: 20 })
-          ScrollTrigger.batch(".stage2_mobile .pic_part", {
-            onEnter: (elements, triggers) => {
-              gsap.to(elements, {
-                delay: 0.5,
-                opacity: 1,
-                translateY: 0,
-              })
-            },
-            // onLeave: (elements, triggers) => {
-            //   gsap.to(elements, { opacity: 0, translateY: 10, stagger: 0.15 })
-            //   console.log(elements.length, "elements left")
-            // },
-          })
-
-          gsap.set(".stage2_mobile .bussiness_sub_item ", {
-            opacity: 0,
-            translateY: 20,
-          })
-          ScrollTrigger.batch(".stage2_mobile .bussiness_sub_item ", {
-            onEnter: (elements, triggers) => {
-              gsap.to(elements, {
-                delay: 0.5,
-                opacity: 1,
-                translateY: 0,
-              })
-            },
-            // onLeave: (elements, triggers) => {
-            //   gsap.to(elements, { opacity: 0, translateY: 10, stagger: 0.15 })
-            //   console.log(elements.length, "elements left")
-            // },
-          })
-
-        },
-      })
-
-      $(".bussiness_sub_item_title").on("click", function (e) {
-        var i = $(this).data("index")
-        // window.pageYOffset =
-        if ($(".stage2_pc").is(":visible")) {
-// 
-var toPos=$(".stage1").height()  + getStage2Height(0.2);
-if(i==1)
-{
-toPos=$(".stage1").height()  + getStage2Height(1/4)*1.2;
-}else if(i==2){
-toPos=$(".stage1").height()  + getStage2Height(1/4)*1.72;
-}else if(i==3){
-toPos=$(".stage1").height()  + getStage2Height(3/4);
-}
-
-          window.scrollTo({
-            top:toPos,
-            behavior: "smooth",
-          })
-// setTimeout(function(){
-// $($(".stage2_pc .pic_part").get(i)).get(0).scrollIntoView({behavior: "smooth"});
-// },10)
-        }
-      })
-
-      //  var beforeScrollTop = window.scrollY;
-
-      //         $(window).on("wheel", function (e) {
-      // isMouseWheel = true
-
-      // var delta=e.originalEvent.deltaY;//window.scrollY-beforeScrollTop;  
-      // // beforeScrollTop = window.scrollY;
-      // if(isEnterStage1){
-
-      // stepNext(delta>0);
-      // if(!stepIsFroze){
-      // // isMouseWheel=true;
-      // stepIsFroze=true;
-      // seekToTime(myVideo.currentTime+(delta>0?8:-8));
-      // // if(myVideo.currentTime<10 && delta>0){
-      // // seekToTime(myVideo.currentTime+10);
-      // // }else if(myVideo.currentTime<20 && delta>0){
-      // // seekToTime(20)
-      // // }else if(myVideo.currentTime>20 && delta<0){
-      // // seekToTime(myVideo.currentTime-10)
-      // // }else if(myVideo.currentTime>10 && delta<0){
-      // // seekToTime(myVideo.currentTime-10)
-      // // }
-      // // else if(myVideo.currentTime<10 && delta<0){
-      // // seekToTime(0)
-      // // }
-      // }
-      // }
-
-      // })
-
-      window.addEventListener("wheel", function (e) {
-        isMouseWheel = true
-
-        var delta = e.deltaY;//window.scrollY-beforeScrollTop;  
-        // beforeScrollTop = window.scrollY;
-        if (isEnterStage1) {
-
-          stepNext(delta > 0);
-          if (!stepIsFroze) {
-            // isMouseWheel=true;
-            stepIsFroze = true;
-            seekToTime(myVideo.currentTime + (delta > 0 ? 9 : -9));
-            // if(myVideo.currentTime<10 && delta>0){
-            // seekToTime(myVideo.currentTime+10);
-            // }else if(myVideo.currentTime<20 && delta>0){
-            // seekToTime(20)
-            // }else if(myVideo.currentTime>20 && delta<0){
-            // seekToTime(myVideo.currentTime-10)
-            // }else if(myVideo.currentTime>10 && delta<0){
-            // seekToTime(myVideo.currentTime-10)
-            // }
-            // else if(myVideo.currentTime<10 && delta<0){
-            // seekToTime(0)
-            // }
+            window.scrollTo({
+              top: toPos,
+              behavior: "smooth",
+            })
+            // setTimeout(function(){
+            // $($(".stage2_pc .pic_part").get(i)).get(0).scrollIntoView({behavior: "smooth"});
+            // },10)
           }
-          myVideo.play();
-          e.preventDefault();
+        })
 
-        }
+        //  var beforeScrollTop = window.scrollY;
 
-      }, {
-        passive: false,
-        // capture: true,
-      })
+        //         $(window).on("wheel", function (e) {
+        // isMouseWheel = true
 
-      $(window).on("scroll", function (e) {
-        ScrollTrigger.refresh()
+        // var delta=e.originalEvent.deltaY;//window.scrollY-beforeScrollTop;
+        // // beforeScrollTop = window.scrollY;
+        // if(isEnterStage1){
 
-
-      })
-
-      // $(window).resize(function () {
-      //   $(".stage2").height(getStage2Height(1))
-      // })
-      // $(".stage2").height(getStage2Height(1))
-    })
-
-    var stepfroze;
-    var stepIsFroze = false;
-    var lastDir;
-    function stepNext(updown) {
-      if (lastDir != updown) {
-        stepIsFroze = false
-        lastDir = updown;
-      }
-      clearTimeout(stepfroze);
-
-      stepfroze = setTimeout(function () { stepIsFroze = false }, 200)
-    }
-
-    function seekToTime(ts) {
-      // try and avoid pauses after seeking
-      // myVideo.pause();
-      myVideo.currentTime = Math.max(0, Math.min(20, ts)); // if this is far enough away from current, it implies a "play" call as well...oddly. I mean seriously that is junk.
-      if (ts >= 20) {
-        myVideo.currentTime = 20;
-      }
-      //    else{
-      // myVideo.play();
-      // } 
-      // however if it close enough, then we need to call play manually
-      // some shenanigans to try and work around this:
-      var timer = setInterval(function () {
-        //         if (myVideo.paused && myVideo.readyState ==4 || !myVideo.paused) {
-        // if(ts<20){
-        //             myVideo.play();
+        // stepNext(delta>0);
+        // if(!stepIsFroze){
+        // // isMouseWheel=true;
+        // stepIsFroze=true;
+        // seekToTime(myVideo.currentTime+(delta>0?8:-8));
+        // // if(myVideo.currentTime<10 && delta>0){
+        // // seekToTime(myVideo.currentTime+10);
+        // // }else if(myVideo.currentTime<20 && delta>0){
+        // // seekToTime(20)
+        // // }else if(myVideo.currentTime>20 && delta<0){
+        // // seekToTime(myVideo.currentTime-10)
+        // // }else if(myVideo.currentTime>10 && delta<0){
+        // // seekToTime(myVideo.currentTime-10)
+        // // }
+        // // else if(myVideo.currentTime<10 && delta<0){
+        // // seekToTime(0)
+        // // }
         // }
-        isMouseWheel = false
-        clearInterval(timer);
-        // }       
-      }, 50);
+        // }
 
-      var p = getScrollYByVideo();
-      window.scrollTo({ top: p.top })
+        // })
 
-    }
+        window.addEventListener(
+          "wheel",_.debounce(
+          function (e) {
+            isMouseWheel = true
+
+            var delta = e.deltaY //window.scrollY-beforeScrollTop;
+            // beforeScrollTop = window.scrollY;
+            if (isEnterStage1) {
+              // stepNext(delta > 0)
 
 
-  </script>
-  <div class="stage3">
-    <div id='earthVideoPlayer' class='bg_video fake_video'
-      style="background-image: url(assets/media/3d-Earth-Mobile_frames/g_00000.jpg);background-size: cover;"></div>
-    <video id="earthVideo" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true"
-      x5-video-player-type="h5" x5-video-orientation="h5" muted loop defaultMuted playsinline
-      oncontextmenu="return false;" preload="preload" src="assets/media/3d-Earth.mp4"></video>
-    <div class="padding_area"></div>
-    <div class="page_content flex jc-between">
-      <div class="left-part flex-1">
-        <!-- <video
+              // if (!stepIsFroze) {
+                // isMouseWheel=true;
+                // stepIsFroze = true
+
+
+
+                seekToTime(myVideo.currentTime + (delta > 0 ? 9 : -9))
+                // if(myVideo.currentTime<10 && delta>0){
+                // seekToTime(myVideo.currentTime+10);
+                // }else if(myVideo.currentTime<20 && delta>0){
+                // seekToTime(20)
+                // }else if(myVideo.currentTime>20 && delta<0){
+                // seekToTime(myVideo.currentTime-10)
+                // }else if(myVideo.currentTime>10 && delta<0){
+                // seekToTime(myVideo.currentTime-10)
+                // }
+                // else if(myVideo.currentTime<10 && delta<0){
+                // seekToTime(0)
+                // }
+              // }
+              myVideo.play()
+              e.preventDefault()
+            }
+          },200),
+          {
+            passive: false,
+            // capture: true,
+          }
+
+        )
+
+        $(window).on("scroll", function (e) {
+          ScrollTrigger.refresh()
+        })
+
+        // $(window).resize(function () {
+        //   $(".stage2").height(getStage2Height(1))
+        // })
+        // $(".stage2").height(getStage2Height(1))
+      })
+
+      // var stepfroze
+      // var stepIsFroze = false
+      // var lastDir
+      // function stepNext(updown) {
+      //   if (lastDir != updown) {
+      //     stepIsFroze = false
+      //     lastDir = updown
+      //   }
+      //   clearTimeout(stepfroze)
+
+      //   stepfroze = setTimeout(function () {
+      //     stepIsFroze = false
+      //   }, 200)
+      // }
+
+      function seekToTime(ts) {
+        // try and avoid pauses after seeking
+        // myVideo.pause();
+        myVideo.currentTime = Math.max(0, Math.min(20, ts)) // if this is far enough away from current, it implies a "play" call as well...oddly. I mean seriously that is junk.
+        if (ts >= 20) {
+          myVideo.currentTime = 20
+        }
+        //    else{
+        // myVideo.play();
+        // }
+        // however if it close enough, then we need to call play manually
+        // some shenanigans to try and work around this:
+        var timer = setInterval(function () {
+          //         if (myVideo.paused && myVideo.readyState ==4 || !myVideo.paused) {
+          // if(ts<20){
+          //             myVideo.play();
+          // }
+          isMouseWheel = false
+          clearInterval(timer)
+          // }
+        }, 50)
+
+        var p = getScrollYByVideo()
+        window.scrollTo({ top: p.top })
+      }
+    </script>
+    <div class="stage3">
+      <div
+        id="earthVideoPlayer"
+        class="bg_video fake_video"
+        style="
+          background-image: url(assets/media/3d-Earth-Mobile_frames/g_00000.jpg);
+          background-size: cover;
+        "
+      ></div>
+      <video
+        id="earthVideo"
+        webkit-playsinline="true"
+        x-webkit-airplay="true"
+        playsinline="true"
+        x5-video-player-type="h5"
+        x5-video-orientation="h5"
+        muted
+        loop
+        defaultMuted
+        playsinline
+        oncontextmenu="return false;"
+        preload="preload"
+        src="assets/media/3d-Earth.mp4"
+      ></video>
+      <div class="padding_area"></div>
+      <div class="page_content flex jc-between">
+        <div class="left-part flex-1">
+          <!-- <video
             id="index-hero-video"
             src="https://site-videos.oss-cn-chengdu.aliyuncs.com/fta/index/hero.mp4"
             muted="muted"
@@ -1728,12 +1878,12 @@ toPos=$(".stage1").height()  + getStage2Height(3/4);
             class="video autoplay-video"
 x5-video-player-type="h5"
           ></video> -->
-      </div>
-      <div class="right-part flex-1 flex fd-c">
-        <div class="title flex fd-c">
-          <span>全球基础设施</span>
-          <img src="./assets/img/Global.png" />
-          <!-- <svg
+        </div>
+        <div class="right-part flex-1 flex fd-c">
+          <div class="title flex fd-c">
+            <span>全球基础设施</span>
+            <img src="./assets/img/Global.png" />
+            <!-- <svg
               xmlns="http://www.w3.org/2000/svg"
               width="401px"
               height="115px"
@@ -1758,650 +1908,689 @@ x5-video-player-type="h5"
                 Global
               </text>
             </svg> -->
-        </div>
-        <div class="locations">
-          <ul>
-            <li><a href="#" style="pointer-events: none">北京</a></li>
-            <li><a href="#" style="pointer-events: none">上海</a></li>
-            <li><a href="#" style="pointer-events: none">海口</a></li>
-            <li><a href="#" style="pointer-events: none">成都</a></li>
-            <li><a href="#" style="pointer-events: none">曼谷</a></li>
-          </ul>
-          <ul>
-            <li><a href="#" style="pointer-events: none">东京</a></li>
-            <li><a href="#" style="pointer-events: none">悉尼</a></li>
-            <li><a href="#" style="pointer-events: none">伦敦</a></li>
-            <li><a href="#" style="pointer-events: none">巴黎</a></li>
-            <li><a href="#" style="pointer-events: none">柏林 </a></li>
-          </ul>
-          <ul>
-            <li><a href="#" style="pointer-events: none">首尔</a></li>
-            <li><a href="#" style="pointer-events: none">莫斯科</a></li>
-            <li><a href="#" style="pointer-events: none">加沙</a></li>
-            <!-- <li><a href="#" style="pointer-events: none">披风</a></li> -->
-            <li><a href="#" style="pointer-events: none">纽约</a></li>
-            <li><a href="#" style="pointer-events: none">温哥华</a></li>
-          </ul>
-          <ul>
-            <li><a href="#" style="pointer-events: none">洛杉矶</a></li>
-            <li><a href="#" style="pointer-events: none">芝加哥</a></li>
-            <li><a href="#" style="pointer-events: none">华盛顿</a></li>
-            <li><a href="#" style="pointer-events: none">堪培拉</a></li>
-            <li><a href="#" style="pointer-events: none">曼彻斯特</a></li>
-          </ul>
-          <ul>
-            <li><a href="#" style="pointer-events: none">中国台北</a></li>
-            <li><a href="#" style="pointer-events: none">阿拉木图 </a></li>
-          </ul>
-        </div>
-        <div class="bussiness_bottom_part flex">
-          <a href="./about.html">
-            <div class="action_btn btn-with-arrow first">
-              <span> 关于我们 </span>
-              <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-            </div>
-          </a>
-          <a href="./about.html#lxfs">
-            <div class="action_btn btn-with-arrow second">
-              <span> 联系我们 </span>
-              <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
-            </div>
-          </a>
+          </div>
+          <div class="locations">
+            <ul>
+              <li><a href="#" style="pointer-events: none">北京</a></li>
+              <li><a href="#" style="pointer-events: none">上海</a></li>
+              <li><a href="#" style="pointer-events: none">海口</a></li>
+              <li><a href="#" style="pointer-events: none">成都</a></li>
+              <li><a href="#" style="pointer-events: none">曼谷</a></li>
+            </ul>
+            <ul>
+              <li><a href="#" style="pointer-events: none">东京</a></li>
+              <li><a href="#" style="pointer-events: none">悉尼</a></li>
+              <li><a href="#" style="pointer-events: none">伦敦</a></li>
+              <li><a href="#" style="pointer-events: none">巴黎</a></li>
+              <li><a href="#" style="pointer-events: none">柏林 </a></li>
+            </ul>
+            <ul>
+              <li><a href="#" style="pointer-events: none">首尔</a></li>
+              <li><a href="#" style="pointer-events: none">莫斯科</a></li>
+              <li><a href="#" style="pointer-events: none">加沙</a></li>
+              <!-- <li><a href="#" style="pointer-events: none">披风</a></li> -->
+              <li><a href="#" style="pointer-events: none">纽约</a></li>
+              <li><a href="#" style="pointer-events: none">温哥华</a></li>
+            </ul>
+            <ul>
+              <li><a href="#" style="pointer-events: none">洛杉矶</a></li>
+              <li><a href="#" style="pointer-events: none">芝加哥</a></li>
+              <li><a href="#" style="pointer-events: none">华盛顿</a></li>
+              <li><a href="#" style="pointer-events: none">堪培拉</a></li>
+              <li><a href="#" style="pointer-events: none">曼彻斯特</a></li>
+            </ul>
+            <ul>
+              <li><a href="#" style="pointer-events: none">中国台北</a></li>
+              <li><a href="#" style="pointer-events: none">阿拉木图 </a></li>
+            </ul>
+          </div>
+          <div class="bussiness_bottom_part flex">
+            <a href="./about.html">
+              <div class="action_btn btn-with-arrow first">
+                <span> 关于我们 </span>
+                <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
+              </div>
+            </a>
+            <a href="./about.html#lxfs">
+              <div class="action_btn btn-with-arrow second">
+                <span> 联系我们 </span>
+                <i class="fa iconfont icon-youjiantou" aria-hidden="true"></i>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <script>
-    $(function () {
-      /////////////STAGE3/////////////
+    <script>
+      $(function () {
+        /////////////STAGE3/////////////
 
-      // earthVideo.src = isPhone
-      //   ? "assets/media/3d-Earth-Mobile.mp4"
-      //   : "assets/media/3d-Earth.mp4"
+        // earthVideo.src = isPhone
+        //   ? "assets/media/3d-Earth-Mobile.mp4"
+        //   : "assets/media/3d-Earth.mp4"
 
+        if (window.isPhone) {
+          var imgs = []
+          for (var i = 0; i < 111; i++) {
+            var num = "00000".slice(0, -String(i).length) + i
 
-      if (window.isPhone) {
-
-        var imgs = []
-        for (var i = 0; i < 111; i++) {
-
-          var num = '00000'.slice(0, -String(i).length) + i;
-
-          imgs.push('assets/media/3d-Earth-Mobile_frames/g_' + num + '.jpg');
+            imgs.push("assets/media/3d-Earth-Mobile_frames/g_" + num + ".jpg")
+          }
+          //2秒后才加载下边的地球
+          setTimeout(function () {
+            var framePlayer = new vFramePlayer({
+              dom: document.getElementById("earthVideoPlayer"),
+              imgArr: imgs,
+              fps: 12,
+              useCanvas: true,
+              loop: -1,
+              yoyo: true,
+            })
+            framePlayer.play()
+          }, 2000)
         }
-        //2秒后才加载下边的地球
-        setTimeout(function () {
-          var framePlayer = new vFramePlayer({
-            dom: document.getElementById("earthVideoPlayer"),
-            imgArr: imgs,
-            fps: 12,
-            useCanvas: true,
-            loop: -1,
-            yoyo: true
-          });
-          framePlayer.play()
-        }, 2000)
-      }
 
+        // $(window).on("touchStart", function () {
+        //   earthVideo.play()
+        // })
 
-      // $(window).on("touchStart", function () {
-      //   earthVideo.play()
-      // })
+        //   var tween = createTimeline()
 
-      //   var tween = createTimeline()
-
-      //   var scene = new ScrollMagic.Scene({
-      //     triggerHook: "0",
-      //     triggerElement: ".contact-section",
-      //     duration: "100%",
-      //     offset: -100,
-      //   })
-      //     .setTween(tween)
-      //     //.setPin(".audio-screen")
-      //     .addIndicators({ name: "phone screen" }) // add indicators (requires plugin)
-      //     .addTo(controller)
-      //     .on("enter", function () {
-      //       cardOrImprintAndPrivacySwitch.checked = false
-      //       toggleCardOrImprintAndPrivacy()
-      //     })
-    })
-  </script>
-  <div class="stage4"></div>
-  <footer>
-    <div class="top-part">
-      <div class="left-part pos-r">
-        <div class="logo"><img src="./assets/img/logo_bottom.png" /></div>
-        <input id="langswtich2" class="langswtich foldable_menu" type="checkbox" hidden />
-        <label for="langswtich2">
-          <div class="lang_bt">
-            <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> English
+        //   var scene = new ScrollMagic.Scene({
+        //     triggerHook: "0",
+        //     triggerElement: ".contact-section",
+        //     duration: "100%",
+        //     offset: -100,
+        //   })
+        //     .setTween(tween)
+        //     //.setPin(".audio-screen")
+        //     .addIndicators({ name: "phone screen" }) // add indicators (requires plugin)
+        //     .addTo(controller)
+        //     .on("enter", function () {
+        //       cardOrImprintAndPrivacySwitch.checked = false
+        //       toggleCardOrImprintAndPrivacy()
+        //     })
+      })
+    </script>
+    <div class="stage4"></div>
+    <footer>
+      <div class="top-part">
+        <div class="left-part pos-r">
+          <div class="logo"><img src="./assets/img/logo_bottom.png" /></div>
+          <input
+            id="langswtich2"
+            class="langswtich foldable_menu"
+            type="checkbox"
+            hidden
+          />
+          <label for="langswtich2">
+            <div class="lang_bt">
+              <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> English
+            </div>
+            <div class="langswtich_mask switch_mask"></div>
+          </label>
+          <ul class="lang-panel lang-panel-bottom">
+            <li class="selected">
+              <a>
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a
+              >
+            </li>
+            <li>
+              <a href="./index-en.html">
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+                English</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="right-part">
+          <div class="nav-item">
+            <input
+              class="foldable_menu"
+              id="navswtich1"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich1">
+              <div class="nav-title flex">
+                <span>产品</span>
+                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+            <ul>
+              <li>
+                <a href="./product_fbssjzx.html"> 分布式数据中心 </a>
+              </li>
+              <li>
+                <a href="./product_fbscdn.html" style="pointer-events: none">
+                  分布式CDN
+                </a>
+              </li>
+              <li>
+                <a href="./product_jzcc.html"> 矩阵存储 </a>
+              </li>
+              <li>
+                <a href="./product_ygpu.html"> 云GPU </a>
+              </li>
+            </ul>
           </div>
-          <div class="langswtich_mask switch_mask"></div>
-        </label>
-        <ul class="lang-panel lang-panel-bottom">
-          <li class="selected">
-            <a>
-              <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a>
-          </li>
-          <li>
-            <a href='./index-en.html'>
-              <i class="fa iconfont icon-gou" aria-hidden="true"></i> English</a>
-          </li>
-        </ul>
-      </div>
-      <div class="right-part">
-        <div class="nav-item">
-          <input class="foldable_menu" id="navswtich1" type="checkbox" hidden />
-          <label for="navswtich1">
-            <div class="nav-title flex">
-              <span>产品</span>
-              <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-            </div>
-          </label>
-          <ul>
-            <li>
-              <a href="./product_fbssjzx.html"> 分布式数据中心 </a>
-            </li>
-            <li>
-              <a href="./product_fbscdn.html" style="pointer-events: none"> 分布式CDN(即将上线) </a>
-            </li>
-            <li>
-              <a href="./product_jzcc.html"> 矩阵存储 </a>
-            </li>
-            <li>
-              <a href="./product_ygpu.html"> 云GPU </a>
-            </li>
-          </ul>
-        </div>
-        <div class="nav-item">
-          <input class="foldable_menu" id="navswtich2" type="checkbox" hidden />
-          <label for="navswtich2">
-            <div class="nav-title flex">
-              <span>解决方案·场景</span>
-              <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-            </div>
-          </label>
-          <ul>
-            <li>
-              <a href="./solution_cj.html#cc"> 存储 </a>
-            </li>
-            <li>
-              <a href="./solution_cj.html#rzybf"> 容灾与备份 </a>
-            </li>
-            <li>
-              <a href="./solution_cj.html#kxjs"> 科学计算 </a>
-            </li>
-            <li>
-              <a href="./solution_cj.html#aqjs"> 安全计算 </a>
-            </li>
-            <li>
-              <a href="./solution_cj.html#wly"> 物理云 </a>
-            </li>
-            <li>
-              <a href="./solution_cj.html#nrff"> 内容分发 </a>
-            </li>
-            <li>
-              <a href="./solution_cj.html#jqxx"> 机器学习 </a>
-            </li>
-          </ul>
-        </div>
-        <div class="nav-item">
-          <input class="foldable_menu" id="navswtich3" type="checkbox" hidden />
-          <label for="navswtich3">
-            <div class="nav-title flex">
-              <span>解决方案·行业</span>
-              <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-            </div>
-          </label>
-          <ul>
-            <li>
-              <a href="./solution_hy.html#rgzn"> 人工智能 </a>
-            </li>
-            <li>
-              <a href="./solution_hy.html#ky"> 科研 </a>
-            </li>
-            <li>
-              <a href="./solution_hy.html#djk"> 大健康 </a>
-            </li>
-            <li>
-              <a href="./solution_hy.html#zw"> 政务 </a>
-            </li>
-            <li>
-              <a href="./solution_hy.html#swjy"> 生物基因 </a>
-            </li>
-          </ul>
-        </div>
-        <div class="nav-item">
-          <input class="foldable_menu" id="navswtich4" type="checkbox" hidden />
-          <label for="navswtich4">
-            <div class="nav-title flex">
-              <span>解决方案·WEB3.0</span>
-              <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-            </div>
-          </label>
-          <ul>
-            <li>
-              <a href="./solution_web.html#byjs"> 边缘计算 </a>
-            </li>
-            <li>
-              <a href="./solution_web.html#qkl"> 区块链 </a>
-            </li>
-            <li>
-              <a href="./solution_web.html#rgzn"> 人工智能 </a>
-            </li>
-          </ul>
-        </div>
-        <div class="nav-item">
-          <input class="foldable_menu" id="navswtich5" type="checkbox" hidden />
-          <label for="navswtich5">
-            <div class="nav-title flex">
-              <span>ESG</span>
-              <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-            </div>
-          </label>
-          <ul>
-            <li> <a href="./esg.html"> ESG </a></li>
-            <li> <a href="#"> ESG报告（即将上线） </a></li>
-            <li> <a href="#"> 学习社区（即将上线） </a></li>
-            <li> <a href="#"> 社会公益（即将上线） </a></li>
-          </ul>
-        </div>
-        <div class="nav-item">
-          <input class="foldable_menu" id="navswtich6" type="checkbox" hidden />
-          <label for="navswtich6">
-            <div class="nav-title flex">
-              <span>关于我们</span>
-              <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-            </div>
-          </label>
-          <ul>
-            <li><a href="./about.html#gsjs">公司介绍</a></li>
-            <li><a href="./about.html#fzlc">发展历程</a></li>
-            <li><a href="./about.html#xwdt">新闻动态</a></li>
-            <li><a href="./about.html#rczp">人才招聘</a></li>
-            <li><a href="./about.html#lxfs">联系方式</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="bottom-part">
-      <div class="flex jc-between flex-1 pos-r">
-        <div class="contacts sub-unit flex fd-c jc-between h-auto">
-          <div class="flex">
-            <div class="flex ai-center">
-              <i class="fa iconfont icon-dianhua" aria-hidden="true"></i> +86 898 3286 7007
-            </div>
-            <div class="divider-v"></div>
-            <div class="flex ai-center">
-              <i class="fa iconfont icon-youjian" aria-hidden="true"></i> contact@anmaicloud.com
-            </div>
+          <div class="nav-item">
+            <input
+              class="foldable_menu"
+              id="navswtich2"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich2">
+              <div class="nav-title flex">
+                <span>解决方案·场景</span>
+                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+            <ul>
+              <li>
+                <a href="./solution_cj.html#cc"> 存储 </a>
+              </li>
+              <li>
+                <a href="./solution_cj.html#rzybf"> 容灾与备份 </a>
+              </li>
+              <li>
+                <a href="./solution_cj.html#kxjs"> 科学计算 </a>
+              </li>
+              <li>
+                <a href="./solution_cj.html#aqjs"> 安全计算 </a>
+              </li>
+              <li>
+                <a href="./solution_cj.html#wly"> 物理云 </a>
+              </li>
+              <li>
+                <a href="./solution_cj.html#nrff"> 内容分发 </a>
+              </li>
+              <li>
+                <a href="./solution_cj.html#jqxx"> 机器学习 </a>
+              </li>
+            </ul>
           </div>
-          <div class="flex line-2">
-            <span>地址：海南省省直辖县行政单位澄迈县老城镇高新技术产业示范区海南生态软件园A7幢二层3001</span>
+          <div class="nav-item">
+            <input
+              class="foldable_menu"
+              id="navswtich3"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich3">
+              <div class="nav-title flex">
+                <span>解决方案·行业</span>
+                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+            <ul>
+              <li>
+                <a href="./solution_hy.html#rgzn"> 人工智能 </a>
+              </li>
+              <li>
+                <a href="./solution_hy.html#ky"> 科研 </a>
+              </li>
+              <li>
+                <a href="./solution_hy.html#djk"> 大健康 </a>
+              </li>
+              <li>
+                <a href="./solution_hy.html#zw"> 政务 </a>
+              </li>
+              <li>
+                <a href="./solution_hy.html#swjy"> 生物基因 </a>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="divider-v ghost"></div>
-        <div class="product_part">
-          <div class="products flex fd-c jc-between h-auto">
-            <div class="title flex">产品平台</div>
-            <div class="product_imgs flex line-2 ai-start">
-              <a href="https://storage.anmaicloud.com/" target="_blank"><img src="assets/img/products1.png" /></a>
-              <div class="divider-v ghost"></div>
-              <a href="https://gpu.anmaicloud.com/" target="_blank"><img src="assets/img/products2.png" /></a>
-            </div>
+          <div class="nav-item">
+            <input
+              class="foldable_menu"
+              id="navswtich4"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich4">
+              <div class="nav-title flex">
+                <span>解决方案·WEB3.0</span>
+                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+            <ul>
+              <li>
+                <a href="./solution_web.html#byjs"> 边缘计算 </a>
+              </li>
+              <li>
+                <a href="./solution_web.html#qkl"> 区块链 </a>
+              </li>
+              <li>
+                <a href="./solution_web.html#rgzn"> 人工智能 </a>
+              </li>
+            </ul>
           </div>
-          <div class="gzh flex fd-c ai-end">
-            <div>关注公众号</div>
-            <img src="assets/img/qr_code.png" />
+          <div class="nav-item">
+            <input
+              class="foldable_menu"
+              id="navswtich5"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich5">
+              <div class="nav-title flex">
+                <span>ESG</span>
+                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+            <ul>
+              <li><a href="./esg.html"> ESG </a></li>
+              <li><a href="#"> ESG报告（即将上线） </a></li>
+              <li><a href="#"> 学习社区（即将上线） </a></li>
+              <li><a href="#"> 社会公益（即将上线） </a></li>
+            </ul>
           </div>
-        </div>
-        <div class="divider-v ghost"></div>
-        <div class="beian sub-unit flex fd-c jc-between h-auto">
-          <div class="flex ai-center"></div>
-          <div class="flex line-2">
-            <span>琼ICP备20000109号-1<br /> Copyright © 2013-2021 Anmai Cloud Rights Reserved.</span>
+          <div class="nav-item">
+            <input
+              class="foldable_menu"
+              id="navswtich6"
+              type="checkbox"
+              hidden
+            />
+            <label for="navswtich6">
+              <div class="nav-title flex">
+                <span>关于我们</span>
+                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+            <ul>
+              <li><a href="./about.html#gsjs">公司介绍</a></li>
+              <li><a href="./about.html#fzlc">发展历程</a></li>
+              <li><a href="./about.html#xwdt">新闻动态</a></li>
+              <li><a href="./about.html#rczp">人才招聘</a></li>
+              <li><a href="./about.html#lxfs">联系方式</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <script>
+      <div class="bottom-part">
+        <div class="flex jc-between flex-1 pos-r">
+          <div class="contacts sub-unit flex fd-c jc-between h-auto">
+            <div class="flex">
+              <div class="flex ai-center">
+                <i class="fa iconfont icon-dianhua" aria-hidden="true"></i> +86
+                898 3286 7007
+              </div>
+              <div class="divider-v"></div>
+              <div class="flex ai-center">
+                <i class="fa iconfont icon-youjian" aria-hidden="true"></i>
+                contact@anmaicloud.com
+              </div>
+            </div>
+            <div class="flex line-2">
+              <span
+                >地址：海南省省直辖县行政单位澄迈县老城镇高新技术产业示范区海南生态软件园A7幢二层3001</span
+              >
+            </div>
+          </div>
+          <div class="divider-v ghost"></div>
+          <div class="product_part">
+            <div class="products flex fd-c jc-between h-auto">
+              <div class="title flex">产品平台</div>
+              <div class="product_imgs flex line-2 ai-start">
+                <a href="https://storage.anmaicloud.com/" target="_blank"
+                  ><img src="assets/img/products1.png"
+                /></a>
+                <div class="divider-v ghost"></div>
+                <a href="https://gpu.anmaicloud.com/" target="_blank"
+                  ><img src="assets/img/products2.png"
+                /></a>
+              </div>
+            </div>
+            <div class="gzh flex fd-c ai-end">
+              <div>关注公众号</div>
+              <img src="assets/img/qr_code.png" />
+            </div>
+          </div>
+          <div class="divider-v ghost"></div>
+          <div class="beian sub-unit flex fd-c jc-between h-auto">
+            <div class="flex ai-center"></div>
+            <div class="flex line-2">
+              <span
+                >琼ICP备20000109号-1<br />
+                Copyright © 2013-2021 Anmai Cloud Rights Reserved.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
       /////////STAGE4////////
       /////////白色的背景，左侧MENU切换////////一共三组元素
-  </script>
-  <script>
+    </script>
+    <script>
       //   var elements = document.querySelectorAll(".sticky")
       //   Stickyfill.add(elements)
-  </script>
-  <div class="overview">
-    <!-- <div class="video_mask"></div> -->
-    <div class="mouse flex fd-c ai-center">
-      <span>scroll</span>
-      <div class="round flex jc-center">
-        <div class="dot"></div>
+    </script>
+    <div class="overview">
+      <!-- <div class="video_mask"></div> -->
+      <div class="mouse flex fd-c ai-center">
+        <span>scroll</span>
+        <div class="round flex jc-center">
+          <div class="dot"></div>
+        </div>
       </div>
+      <div class="arrow-down mobile"><img src="./assets/img/Arrow.svg" /></div>
     </div>
-    <div class="arrow-down mobile"><img src="./assets/img/Arrow.svg" /></div>
-  </div>
-  <!-- <div class="controls">
+    <!-- <div class="controls">
       <div onclick="myVideo.pause()">pause</div>
       <div onclick="myVideo.play()">play</div>
     </div> -->
-  <script>
-    var nice = undefined
-    $(function () {
-      // if (!window.isPhone && !isSafari) {
-      //   nice = $("body").niceScroll({
-      //     cursorborder: "1px solid rgb(80,80,80,0.4)",
-      //     horizrailenabled: false,
-      //   })
-      // }
-
-      ////////////////header
-
-      // gsap.fromTo(
-      //   ".header1",
-      //   50,
-      //   {},
-      //   {
-      //     scrollTrigger: {
-      //       trigger: ".stage1",
-      //       //   pin: true, // pin the trigger element while active
-      //       //   pinSpacing: false,
-      //       start: "top top", // when the top of the trigger hits the top of the viewport
-      //       end: "+=" + 0.5 * window.onePageHeight, // end after scrolling 500px beyond the start
-      //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-      //       markers: false,
-      //       onEnter: function () {
-      //         $(".header1").addClass("header_light")
-      //         $(".header1").addClass("state2")
-      //         $(".header1").removeClass("state3")
-      //       },
-      //       onEnterBack: function () {
-      //         $(".header1").addClass("header_light")
-      //         $(".header1").addClass("state2")
-      //         $(".header1").removeClass("state3")
-      //       },
-      //       onLeave: function () {
-      //         $(".header1").addClass("state3")
-      //         $(".header1").removeClass("state2")
-      //       },
-      //     },
-      //   }
-      // )
-
-      /////header退去
-
-      // gsap.fromTo(
-      //   ".header1",
-      //   1 * window.onePageHeight,
-      //   {},
-      //   {
-      //     scrollTrigger: {
-      //       trigger: ".stage2",
-      //       // pin: true, // pin the trigger element while active
-      //       // pinSpacing: false,
-      //       start: "-=" + 2 * window.onePageHeight, // when the top of the trigger hits the top of the viewport
-      //       end: "+=" + window.onePageHeight, // end after scrolling 500px beyond the start
-      //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-      //       // markers: false,
-      //       id: "1111123123",
-      //       onEnter: function () {
-      //         $(".header1").removeClass("state1")
-      //         $(".header1").removeClass("state2")
-      //         $(".header1").addClass("state3")
-      //       },
-      //       onEnterBack: function () {
-      //         $(".header1").removeClass("state1")
-      //         $(".header1").addClass("state2")
-      //         $(".header1").removeClass("state3")
-      //       },
-      //       onUpdate: function (self) {
-      //         $(".header1").css({
-      //           transform: `translateY(${
-      //             window.onePageHeight * self.progress * -1
-      //           }px)`,
-      //         })
-      //       },
-      //     },
-      //   }
-      // )
-
-      // gsap.fromTo(
-      //   ".header1",
-      //   100,
-      //   {},
-      //   {
-      //     scrollTrigger: {
-      //       trigger: ".stage2",
-      //       //   pin: true, // pin the trigger element while active
-      //       //   pinSpacing: false,
-      //       start: "-=100", // when the top of the trigger hits the top of the viewport
-      //       end: "top bottom", // end after scrolling 500px beyond the start
-      //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-      //       markers: false,
-      //       id: "hhhhhhh",
-      //       onEnter: function () {
-      //         // $(".header1").addClass("state3")
-      //         // $(".header1").removeClass("state2")
-      //       },
-
-      //       onEnterBack: function () {
-      //         $(".header1").addClass("header_light")
-      //         $(".header1").removeClass("header_dark")
-      //         // $(".header1").removeClass("floated")
-      //       },
-
-      //       onLeave: function () {
-      //         $(".header1").removeClass("header_light")
-      //         $(".header1").addClass("header_dark")
-      //         // $(".header1").addClass("floated")
-      //       },
-      //       onLeaveBack: function () {
-      //         // $(".header1").addClass("state2")
-      //         // $(".header1").removeClass("state3")
-      //       },
-      //     },
-      //   }
-      // )
-
-      // gsap.fromTo(
-      //   ".header1",
-      //   1 * window.onePageHeight,
-      //   {},
-      //   {
-      //     scrollTrigger: {
-      //       trigger: ".stage3",
-      //       // pin: true, // pin the trigger element while active
-      //       // pinSpacing: false,
-      //       start: "+=" + 3 * window.onePageHeight, // when the top of the trigger hits the top of the viewport
-      //       end: "+=" + window.onePageHeight, // end after scrolling 500px beyond the start
-      //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-      //       // markers: false,
-      //       id: "hhhhhhh12312",
-      //       onEnter: function () {
-      //         $(".header1").removeClass("state1")
-      //         $(".header1").removeClass("state2")
-      //         $(".header1").removeClass("state3")
-      //       },
-      //       onEnterBack: function () {
-      //         $(".header1").removeClass("state1")
-      //         $(".header1").removeClass("state2")
-      //         $(".header1").removeClass("state3")
-      //       },
-      //       onUpdate: function (self) {
-      //         $(".header1").css({
-      //           transform: `translateY(${
-      //             window.onePageHeight * self.progress * -1
-      //           }px)`,
-      //         })
-      //       },
-      //       // onEnter: function () {
-      //       //   $(".header1").addClass("state3")
-      //       //   $(".header1").removeClass("state2")
-      //       // },
-
-      //       // onEnterBack: function () {
-      //       //   $(".header1").addClass("header_light")
-      //       //   $(".header1").removeClass("header_dark")
-      //       //   // $(".header1").removeClass("floated")
-      //       // },
-
-      //       // onLeave: function () {
-      //       //   $(".header1").removeClass("header_light")
-      //       //   $(".header1").addClass("header_dark")
-      //       //   // $(".header1").addClass("floated")
-      //       // },
-      //       // onLeaveBack: function () {
-      //       //   $(".header1").addClass("state2")
-      //       //   $(".header1").removeClass("state3")
-      //       // },
-      //     },
-      //   }
-      // )
-
-      // gsap.fromTo(
-      //   ".header1",
-      //   100,
-      //   {},
-      //   {
-      //     scrollTrigger: {
-      //       trigger: ".stage3",
-      //       //   pin: true, // pin the trigger element while active
-      //       //   pinSpacing: false,
-      //       start: "top top", // when the top of the trigger hits the top of the viewport
-      //       end: "+=100", // end after scrolling 500px beyond the start
-      //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-      //       markers: false,
-      //       id: "mmmmmm",
-      //       onEnter: function () {
-      //         $(".header1").addClass("state2")
-      //         $(".header1").removeClass("state3")
-      //       },
-
-      //       onEnterBack: function () {
-      //         $(".header1").addClass("state3")
-      //         $(".header1").removeClass("state2")
-      //       },
-      //     },
-      //   }
-      // )
-
-      // $(nice.autohidedom).addClass("hide")
-    })
-
-    $(function () {
-      // $(".video_mask").on("mousedown", function () {
-      //   myVideo.play()
-      //   earthVideo.play()
-      //   $(".video_mask").addClass("hide")
-      // })
-
-      ScrollTrigger.matchMedia({
-        "(min-width: 751px)": function () {
-          ScrollTrigger.create({
-            trigger: ".stage1",
-            start: "+=" + getScrollYByVideo(19).top,
-            end: "+=50",
-            onLeave: function () {
-              $(".header1").addClass("state3")
-              $(".header1").removeClass("state2")
-            },
-            onEnterBack: function () {
-              $(".header1").removeClass("state3")
-              $(".header1").addClass("state2")
-            },
-            id: "header",
-            markers: false,
-          })
-        },
-        // mobile only
-        "(max-width: 750px)": function () {
-          ScrollTrigger.create({
-            trigger: ".stage2",
-            start: "top top",
-            end: "+=50",
-            onLeave: function () {
-              $(".header1").addClass("floated header_dark")
-              $(".header1").removeClass("header_light")
-            },
-            onEnterBack: function () {
-              $(".header1").removeClass("floated header_dark")
-              $(".header1").addClass("header_light")
-            },
-            id: "header",
-            markers: false,
-          })
-
-          gsap.to(".arrow-down", 1, {
-            translateY: 10,
-            repeat: -1,
-            yoyo: true,
-            repeatDelay: 0.5,
-          })
-
-          ScrollTrigger.create({
-            trigger: "footer",
-            start: "-50 bottom",
-            end: "+=50",
-            onEnter: function () {
-              $(".arrow-down").addClass("hide")
-            },
-            onLeaveBack: function () {
-              $(".arrow-down").removeClass("hide")
-            },
-            id: "header11",
-            markers: false,
-          })
-        },
+    <script>
+      var nice = undefined
+      $(function () {
+        // if (!window.isPhone && !isSafari) {
+        //   nice = $("body").niceScroll({
+        //     cursorborder: "1px solid rgb(80,80,80,0.4)",
+        //     horizrailenabled: false,
+        //   })
+        // }
+        ////////////////header
+        // gsap.fromTo(
+        //   ".header1",
+        //   50,
+        //   {},
+        //   {
+        //     scrollTrigger: {
+        //       trigger: ".stage1",
+        //       //   pin: true, // pin the trigger element while active
+        //       //   pinSpacing: false,
+        //       start: "top top", // when the top of the trigger hits the top of the viewport
+        //       end: "+=" + 0.5 * window.onePageHeight, // end after scrolling 500px beyond the start
+        //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        //       markers: false,
+        //       onEnter: function () {
+        //         $(".header1").addClass("header_light")
+        //         $(".header1").addClass("state2")
+        //         $(".header1").removeClass("state3")
+        //       },
+        //       onEnterBack: function () {
+        //         $(".header1").addClass("header_light")
+        //         $(".header1").addClass("state2")
+        //         $(".header1").removeClass("state3")
+        //       },
+        //       onLeave: function () {
+        //         $(".header1").addClass("state3")
+        //         $(".header1").removeClass("state2")
+        //       },
+        //     },
+        //   }
+        // )
+        /////header退去
+        // gsap.fromTo(
+        //   ".header1",
+        //   1 * window.onePageHeight,
+        //   {},
+        //   {
+        //     scrollTrigger: {
+        //       trigger: ".stage2",
+        //       // pin: true, // pin the trigger element while active
+        //       // pinSpacing: false,
+        //       start: "-=" + 2 * window.onePageHeight, // when the top of the trigger hits the top of the viewport
+        //       end: "+=" + window.onePageHeight, // end after scrolling 500px beyond the start
+        //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        //       // markers: false,
+        //       id: "1111123123",
+        //       onEnter: function () {
+        //         $(".header1").removeClass("state1")
+        //         $(".header1").removeClass("state2")
+        //         $(".header1").addClass("state3")
+        //       },
+        //       onEnterBack: function () {
+        //         $(".header1").removeClass("state1")
+        //         $(".header1").addClass("state2")
+        //         $(".header1").removeClass("state3")
+        //       },
+        //       onUpdate: function (self) {
+        //         $(".header1").css({
+        //           transform: `translateY(${
+        //             window.onePageHeight * self.progress * -1
+        //           }px)`,
+        //         })
+        //       },
+        //     },
+        //   }
+        // )
+        // gsap.fromTo(
+        //   ".header1",
+        //   100,
+        //   {},
+        //   {
+        //     scrollTrigger: {
+        //       trigger: ".stage2",
+        //       //   pin: true, // pin the trigger element while active
+        //       //   pinSpacing: false,
+        //       start: "-=100", // when the top of the trigger hits the top of the viewport
+        //       end: "top bottom", // end after scrolling 500px beyond the start
+        //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        //       markers: false,
+        //       id: "hhhhhhh",
+        //       onEnter: function () {
+        //         // $(".header1").addClass("state3")
+        //         // $(".header1").removeClass("state2")
+        //       },
+        //       onEnterBack: function () {
+        //         $(".header1").addClass("header_light")
+        //         $(".header1").removeClass("header_dark")
+        //         // $(".header1").removeClass("floated")
+        //       },
+        //       onLeave: function () {
+        //         $(".header1").removeClass("header_light")
+        //         $(".header1").addClass("header_dark")
+        //         // $(".header1").addClass("floated")
+        //       },
+        //       onLeaveBack: function () {
+        //         // $(".header1").addClass("state2")
+        //         // $(".header1").removeClass("state3")
+        //       },
+        //     },
+        //   }
+        // )
+        // gsap.fromTo(
+        //   ".header1",
+        //   1 * window.onePageHeight,
+        //   {},
+        //   {
+        //     scrollTrigger: {
+        //       trigger: ".stage3",
+        //       // pin: true, // pin the trigger element while active
+        //       // pinSpacing: false,
+        //       start: "+=" + 3 * window.onePageHeight, // when the top of the trigger hits the top of the viewport
+        //       end: "+=" + window.onePageHeight, // end after scrolling 500px beyond the start
+        //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        //       // markers: false,
+        //       id: "hhhhhhh12312",
+        //       onEnter: function () {
+        //         $(".header1").removeClass("state1")
+        //         $(".header1").removeClass("state2")
+        //         $(".header1").removeClass("state3")
+        //       },
+        //       onEnterBack: function () {
+        //         $(".header1").removeClass("state1")
+        //         $(".header1").removeClass("state2")
+        //         $(".header1").removeClass("state3")
+        //       },
+        //       onUpdate: function (self) {
+        //         $(".header1").css({
+        //           transform: `translateY(${
+        //             window.onePageHeight * self.progress * -1
+        //           }px)`,
+        //         })
+        //       },
+        //       // onEnter: function () {
+        //       //   $(".header1").addClass("state3")
+        //       //   $(".header1").removeClass("state2")
+        //       // },
+        //       // onEnterBack: function () {
+        //       //   $(".header1").addClass("header_light")
+        //       //   $(".header1").removeClass("header_dark")
+        //       //   // $(".header1").removeClass("floated")
+        //       // },
+        //       // onLeave: function () {
+        //       //   $(".header1").removeClass("header_light")
+        //       //   $(".header1").addClass("header_dark")
+        //       //   // $(".header1").addClass("floated")
+        //       // },
+        //       // onLeaveBack: function () {
+        //       //   $(".header1").addClass("state2")
+        //       //   $(".header1").removeClass("state3")
+        //       // },
+        //     },
+        //   }
+        // )
+        // gsap.fromTo(
+        //   ".header1",
+        //   100,
+        //   {},
+        //   {
+        //     scrollTrigger: {
+        //       trigger: ".stage3",
+        //       //   pin: true, // pin the trigger element while active
+        //       //   pinSpacing: false,
+        //       start: "top top", // when the top of the trigger hits the top of the viewport
+        //       end: "+=100", // end after scrolling 500px beyond the start
+        //       scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+        //       markers: false,
+        //       id: "mmmmmm",
+        //       onEnter: function () {
+        //         $(".header1").addClass("state2")
+        //         $(".header1").removeClass("state3")
+        //       },
+        //       onEnterBack: function () {
+        //         $(".header1").addClass("state3")
+        //         $(".header1").removeClass("state2")
+        //       },
+        //     },
+        //   }
+        // )
+        // $(nice.autohidedom).addClass("hide")
       })
-    })
-  </script>
-  <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
-  <script>
-    $(function () {
-      myVideo = document.getElementById("myVideo")
-      myVideo.play()
-      earthVideo = document.getElementById("earthVideo")
-      earthVideo.play()
 
-      document.addEventListener(
-        "WeixinJSBridgeReady",
-        function () {
-          myVideo.play()
-          earthVideo.play()
-        },
-        false
-      )
-      document.addEventListener(
-        "YixinJSBridgeReady",
-        function () {
-          myVideo.play()
-          earthVideo.play()
-        },
-        false
-      )
+      $(function () {
+        // $(".video_mask").on("mousedown", function () {
+        //   myVideo.play()
+        //   earthVideo.play()
+        //   $(".video_mask").addClass("hide")
+        // })
 
-      if (window.isPhone) {
-        recheckVideoPlay()
-      }
-    })
+        ScrollTrigger.matchMedia({
+          "(min-width: 751px)": function () {
+            ScrollTrigger.create({
+              trigger: ".stage1",
+              start: "+=" + getScrollYByVideo(19).top,
+              end: "+=50",
+              onLeave: function () {
+                $(".header1").addClass("state3")
+                $(".header1").removeClass("state2")
+              },
+              onEnterBack: function () {
+                $(".header1").removeClass("state3")
+                $(".header1").addClass("state2")
+              },
+              id: "header",
+              markers: false,
+            })
+          },
+          // mobile only
+          "(max-width: 750px)": function () {
+            ScrollTrigger.create({
+              trigger: ".stage2",
+              start: "top top",
+              end: "+=50",
+              onLeave: function () {
+                $(".header1").addClass("floated header_dark")
+                $(".header1").removeClass("header_light")
+              },
+              onEnterBack: function () {
+                $(".header1").removeClass("floated header_dark")
+                $(".header1").addClass("header_light")
+              },
+              id: "header",
+              markers: false,
+            })
 
-    function recheckVideoPlay() {
-      if (myVideo && myVideo.paused) {
-        try {
-          myVideo.muted = true
-          myVideo.play()
-          earthVideo.muted = true
-          earthVideo.play()
-        } catch (err) {
+            gsap.to(".arrow-down", 1, {
+              translateY: 10,
+              repeat: -1,
+              yoyo: true,
+              repeatDelay: 0.5,
+            })
+
+            ScrollTrigger.create({
+              trigger: "footer",
+              start: "-50 bottom",
+              end: "+=50",
+              onEnter: function () {
+                $(".arrow-down").addClass("hide")
+              },
+              onLeaveBack: function () {
+                $(".arrow-down").removeClass("hide")
+              },
+              id: "header11",
+              markers: false,
+            })
+          },
+        })
+      })
+    </script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <script>
+      $(function () {
+        myVideo = document.getElementById("myVideo")
+        myVideo.play()
+        earthVideo = document.getElementById("earthVideo")
+        earthVideo.play()
+
+        document.addEventListener(
+          "WeixinJSBridgeReady",
+          function () {
+            myVideo.play()
+            earthVideo.play()
+          },
+          false
+        )
+        document.addEventListener(
+          "YixinJSBridgeReady",
+          function () {
+            myVideo.play()
+            earthVideo.play()
+          },
+          false
+        )
+
+        if (window.isPhone) {
+          recheckVideoPlay()
+        }
+      })
+
+      function recheckVideoPlay() {
+        if (myVideo && myVideo.paused) {
+          try {
+            myVideo.muted = true
+            myVideo.play()
+            earthVideo.muted = true
+            earthVideo.play()
+          } catch (err) {
+            setTimeout(recheckVideoPlay, 1000)
+          }
+        } else {
           setTimeout(recheckVideoPlay, 1000)
         }
-      } else {
-        setTimeout(recheckVideoPlay, 1000)
       }
-    }
-  </script>
-</body>
+window.scrollTo({top:0},{behavior:'smooth'});
+setTimeout(function(){
+$(".stage1 .title3_mask").css('opacity',0);
+},10);
 
+
+    </script>
+  </body>
 </html>

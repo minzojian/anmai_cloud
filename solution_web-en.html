@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="./assets/css/common.css" />
   <link rel="stylesheet" href="./assets/css/solution.css" />
   <link rel="stylesheet" href="./assets/css/solution-media.css" />
-  <link rel="stylesheet" href="https://cdn.dowebok.com/98/css/animate.min.css" />
+  <link rel="stylesheet" href="https://cdn.dowebok.com/98/css/animate.min.css" /> 
   <!-- script -->
   <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
   <!-- <script src="./assets/js/nav.js"></script> -->
@@ -456,8 +456,7 @@
               <p class="til">Cases</p>
               <div class="h3">China M Cloud</div>
               <p class="desc">
-                reduce the cost of file storage, provide storage services base on customers’ archived
-                data.
+                Edge Computing provides China M Cloud with a stable and reliable computing and network services: elastic and minute-level delivery capabilities; edge-side streaming, convergence, transcoding, and bullet-screen architecture, effectively improving network connection quality and reducing pressure on the backbone network.
               </p>
               <div class="btn">
                 <div class="left">
@@ -714,7 +713,7 @@
               </li>
               <li>
                 <a href="./product_fbscdn-en.html" style="pointer-events: none">
-                  Distributed CDN(coming soon)
+                  Distributed CDN
                 </a>
               </li>
               <li>
@@ -946,7 +945,7 @@
     if (location.hash) {
       $($(".nav-wrap a")[$(location.hash).data("index")]).addClass("active")
 
-      $(location.hash).get(0).scrollIntoView()
+      $(location.hash).get(0)&&$(location.hash).get(0).scrollIntoView()
     }
     window.addEventListener("scroll", function () {
       $(".nav-wrap a").removeClass("active")

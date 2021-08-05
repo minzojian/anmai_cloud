@@ -614,7 +614,7 @@
                   </li>
                   <li>
                     <a href="./product_fbscdn.html" style='pointer-events:none;'>
-                        分布式CDN(即将上线)                    </a>
+                        分布式CDN</a>
                   </li>
                   <li>
                     <a href="./product_jzcc.html">
@@ -1244,7 +1244,14 @@ breakAt: {
 
         });
 
+document.fonts.ready.then(function () {
+  setTimeout(function(){window.macy.recalculate(true);},100)
+});
+setTimeout(function(){window.macy.recalculate(true);},100)
 
+window.addEventListener('resize', event => {
+      window.macy.recalculate(true);
+    });
         
 
  $(".job-list-wraper .job-list").on("click", ".job-item", function (e) {
@@ -1314,7 +1321,7 @@ $('body').on('click',closeQrCode)
 
   </script>
 
-<script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
     <script>
       $(function () {
         var banner_video = document.getElementById("banner_video")

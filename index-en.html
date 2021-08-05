@@ -60,6 +60,7 @@
     </script>
     <script type="text/javascript" src="./assets/js/common.js"></script>
 
+<script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
     <script src="./assets/js/lib/vframeplayer.min.js"></script>
     <!-- <script src="https://unpkg.com/vconsole/dist/vconsole.min.js"></script>
     <script>
@@ -503,7 +504,7 @@ ontimeupdate="handleVideoPlaying(event)"
     <script>
       /////////STAGE1/////////
       ////////初始视频播放，同时可能会存在按钮////
-      $.get("https://cms-api-amy.anmaicloud.com/amyos/news/company_dynamic",{lang:"en-us",}).then(function (
+      $.get("https://cms-api-amy.anmaicloud.com/amyos/news/company_dynamic",{lang:"en-us"}).then(function (
         data
       ) {
         // console.log(data)
@@ -513,57 +514,7 @@ ontimeupdate="handleVideoPlaying(event)"
       function setMileStones(data) {
         window.meilestoneData = data ||
           window.meilestoneData || [
-            {
-              year: "2021",
-              records: [
-                {
-                  month: "07",
-                  items: [
-                    {
-                      link: "\/amyos\/article\/detail-en.html?l=Q00096e75",
-                      pic: "https:\/\/xnmatrix.oss-cn-hangzhou.aliyuncs.com\/微信图片_202107091144581625807577.jpg",
-                      title:
-                        "安迈云矩阵存储携手中经天平，强化电子证据防篡改能力",
-                    },
-                  ],
-                },
-                {
-                  month: "06",
-                  items: [
-                    {
-                      link: "\/amyos\/article\/detail-en.html?l=R00096e6d",
-                      pic: "https:\/\/xnmatrix.oss-cn-hangzhou.aliyuncs.com\/微信图片_202106101635231623314133.jpg",
-                      title:
-                        "安迈云链接世界名校：对话伯克利大学Greg LaBlanc教授畅谈云潜能",
-                    },
-                    {
-                      link: "\/amyos\/article\/detail-en.html?l=W00096e67",
-                      pic: "http:\/\/amyosimg_test.t1.g4.wiminer.com\/portal\/20210712\/386a017302d0e3207da10d81cf16c80d.png",
-                      title:
-                        "安迈云矩阵存储产品动态获得Protocol Labs协议实验室官方关注",
-                    },
-                  ],
-                },
-                {
-                  month: "05",
-                  items: [
-                    {
-                      link: "\/amyos\/article\/detail-en.html?l=Z00096e61",
-                      pic: "http:\/\/amyosimg_test.t1.g4.wiminer.com\/portal\/20210712\/2c3011ff162abb9e402f9203a0b88374.png",
-                      title:
-                        "安迈云出席Web3.0云响力峰会，与一线云厂商共话分布式计算未来",
-                    },
-                    {
-                      link: "\/amyos\/article\/detail-en.html?l=P00096e5d",
-                      pic: "http:\/\/amyosimg_test.t1.g4.wiminer.com\/portal\/20210712\/8331a91a779e34874bc9ae9e67110a6c.png",
-                      title:
-                        "安迈云矩阵存储Matrix Storage，推动分布式存储技术规模化应用",
-                    },
-                  ],
-                },
-              ],
-            },
-          ]
+            ]
         $(".inner_scroll_warpper").html("")
         window.meilestoneData.forEach(function (yearData, yindex) {
           yearData.records.forEach(function (monthData, mIndex) {
@@ -633,7 +584,7 @@ ${
 
                 <svg class="month"
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 165 100"
+                  viewBox="0 0 170 100"
                 >
                   <defs>
                     <linearGradient id="gradient" y1="0" y2="1">
@@ -656,6 +607,19 @@ y="100"
             )
           })
         })
+
+
+setTimeout(function () {
+$(".stage1").height(
+          getScrollYByVideo(20).top +
+            (isPhone
+              ? 1 * window.onePageHeight + $(".inner_scroll_warpper").height()
+              : 1 * window.onePageHeight +
+                ($(".inner_scroll_warpper").height() - $(".title3").height()))
+        )
+
+ScrollTrigger.refresh()},100)
+
       }
       // myVideo.src = isPhone
       //   ? "assets/media/stage1_mobile.mp4"
@@ -986,6 +950,10 @@ onLeave: function () {
               markers: false,
               id: "ttttt",
               onUpdate: function (self) {
+self.vars.end= getScrollYByVideo(20).top +
+                $(".inner_scroll_warpper").height() -
+                $(".title3").height();
+
                 $(".title3").get(0).scrollTop =
                   ($(".inner_scroll_warpper").height() -
                     $(".title3").height()+170) *
@@ -1110,16 +1078,16 @@ isPhone
                   03 Matrix Storage
                 </div>
                 <ul class="bussiness_sub_item_child">
-                  <li><span>Online Storage:</span>One-click uploading, drag-and-drop uploading and more uploading methods are supported; Storage state is visible and local data uplinking is so easy</li>
+                  <li><span>Online Storage:</span>Streamlined upload and download</li>
                   <li>
-                    <span>APIs:</span>API interface is open; Visual debugging, online command-line tools to help you complete the advanced operations
+                    <span>APIs:</span>Open API interface for advanced operations
                   </li>
                   <li>
                     <span>SDKs:</span
-                    >Java, Python, C and other multilingual SDK is provided to support the secondary development, improving efficiency and performance
+                    >For Java, Python, C and others
                   </li>
                   <li>
-                    <span>Off-line storage:</span>Do not worry about bandwidth. PiB level of data can be uploaded to the cloud through customized hardware devices
+                    <span>Off-line storage:</span>No worry about bandwidth and size
                   </li>
                 </ul>
               </div>
@@ -1590,7 +1558,7 @@ isPhone
               }
             )
 
-            gsap.fromTo(
+           gsap.fromTo(
               ".stage2_pc .right_part",
               getStage2Height(0.8),
               { scrollTo: 0 },
@@ -1599,12 +1567,12 @@ isPhone
                 immediateRender: false,
 
                 scrollTrigger: {
-                  trigger: ".stage2",
+                  trigger: ".stage2_pc",
                   //pin: true, // pin the trigger element while active
-                  start: "+=" + getStage2Height(0.2), // when the top of the trigger hits the top of the viewport
-                  end: "+=" + getStage2Height(0.6), // end after scrolling 500px beyond the start
+                  start: "=" + getStage2Height(0.2), // when the top of the trigger hits the top of the viewport
+                  end: "=" + getStage2Height(3 / 4), // end after scrolling 500px beyond the start
                   scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-                  // markers: false,
+                 //markers: true,
                   id: "44414",
                 },
               }
@@ -1648,19 +1616,27 @@ isPhone
           },
         })
 
-        $(".bussiness_sub_item_title").on("click", function (e) {
+         $(".bussiness_sub_item_title").on("click", function (e) {
           var i = $(this).data("index")
           // window.pageYOffset =
           if ($(".stage2_pc").is(":visible")) {
+            //
+            var toPos = $(".stage1").height() + getStage2Height(0.2)
+            if (i == 1) {
+              toPos = $(".stage1").height() + getStage2Height(1 / 4) * 1.2
+            } else if (i == 2) {
+              toPos = $(".stage1").height() + getStage2Height(1 / 4) * 1.72
+            } else if (i == 3) {
+              toPos = $(".stage1").height() + getStage2Height(3 / 4)
+            }
+
             window.scrollTo({
-              top:
-                Number(
-                  $(".stage2_pc").offset().top +
-                    Number(i) * getStage2Height(0.2) +
-                    getStage2Height(0.1)
-                ) ^ 0,
+              top: toPos,
               behavior: "smooth",
             })
+            // setTimeout(function(){
+            // $($(".stage2_pc .pic_part").get(i)).get(0).scrollIntoView({behavior: "smooth"});
+            // },10)
           }
         })
 
@@ -1694,46 +1670,50 @@ isPhone
 // }
 
 // })
+ window.addEventListener(
+          "wheel",_.debounce(
+          function (e) {
+            isMouseWheel = true
 
- window.addEventListener("wheel", function (e) {
-isMouseWheel = true
+            var delta = e.deltaY //window.scrollY-beforeScrollTop;
+            // beforeScrollTop = window.scrollY;
+            if (isEnterStage1) {
+              // stepNext(delta > 0)
 
-var delta=e.deltaY;//window.scrollY-beforeScrollTop;  
-// beforeScrollTop = window.scrollY;
-if(isEnterStage1){
 
-stepNext(delta>0);
-if(!stepIsFroze){
-// isMouseWheel=true;
-stepIsFroze=true;
-seekToTime(myVideo.currentTime+(delta>0?9:-9));
-// if(myVideo.currentTime<10 && delta>0){
-// seekToTime(myVideo.currentTime+10);
-// }else if(myVideo.currentTime<20 && delta>0){
-// seekToTime(20)
-// }else if(myVideo.currentTime>20 && delta<0){
-// seekToTime(myVideo.currentTime-10)
-// }else if(myVideo.currentTime>10 && delta<0){
-// seekToTime(myVideo.currentTime-10)
-// }
-// else if(myVideo.currentTime<10 && delta<0){
-// seekToTime(0)
-// }
-}
-myVideo.play();
-e.preventDefault();
+              // if (!stepIsFroze) {
+                // isMouseWheel=true;
+                // stepIsFroze = true
 
-}
 
-}, {
-          passive: false,
-          // capture: true,
-        })
+
+                seekToTime(myVideo.currentTime + (delta > 0 ? 9 : -9))
+                // if(myVideo.currentTime<10 && delta>0){
+                // seekToTime(myVideo.currentTime+10);
+                // }else if(myVideo.currentTime<20 && delta>0){
+                // seekToTime(20)
+                // }else if(myVideo.currentTime>20 && delta<0){
+                // seekToTime(myVideo.currentTime-10)
+                // }else if(myVideo.currentTime>10 && delta<0){
+                // seekToTime(myVideo.currentTime-10)
+                // }
+                // else if(myVideo.currentTime<10 && delta<0){
+                // seekToTime(0)
+                // }
+              // }
+              myVideo.play()
+              e.preventDefault()
+            }
+          },200),
+          {
+            passive: false,
+            // capture: true,
+          }
+
+        )
 
         $(window).on("scroll", function (e) {
           ScrollTrigger.refresh()
-
-
         })
 
         // $(window).resize(function () {
@@ -1742,20 +1722,20 @@ e.preventDefault();
         // $(".stage2").height(getStage2Height(1))
       })
 
-var stepfroze;
-var stepIsFroze=false;
-var lastDir;
-function stepNext(updown)
-{
-if(lastDir!=updown)
-{
-stepIsFroze=false
-lastDir=updown;
-}
-clearTimeout(stepfroze);
+      // var stepfroze
+      // var stepIsFroze = false
+      // var lastDir
+      // function stepNext(updown) {
+      //   if (lastDir != updown) {
+      //     stepIsFroze = false
+      //     lastDir = updown
+      //   }
+      //   clearTimeout(stepfroze)
 
-stepfroze=setTimeout(function(){stepIsFroze=false},200)
-}
+      //   stepfroze = setTimeout(function () {
+      //     stepIsFroze = false
+      //   }, 200)
+      // }
 
 function seekToTime(ts) {
   // try and avoid pauses after seeking
@@ -1925,12 +1905,7 @@ framePlayer.play()
       <div class="top-part">
         <div class="left-part pos-r">
           <div class="logo"><img src="./assets/img/logo_bottom.png" /></div>
-          <input
-            id="langswtich2"
-            class="langswtich foldable_menu"
-            type="checkbox"
-            hidden
-          />
+          <input id="langswtich2" class="langswtich foldable_menu" type="checkbox" hidden />
           <label for="langswtich2">
             <div class="lang_bt">
               <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> 中文
@@ -1939,26 +1914,19 @@ framePlayer.play()
           </label>
           <ul class="lang-panel lang-panel-bottom">
             <li>
-              <a href='./index.html'>
-                <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a
-              >
+              <a href='./esg.html'>
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a>
             </li>
             <li class="selected">
               <a>
                 <i class="fa iconfont icon-gou" aria-hidden="true"></i>
-                English</a
-              >
+                English</a>
             </li>
           </ul>
         </div>
         <div class="right-part">
           <div class="nav-item">
-            <input
-              class="foldable_menu"
-              id="navswtich1"
-              type="checkbox"
-              hidden
-            />
+            <input class="foldable_menu" id="navswtich1" type="checkbox" hidden />
             <label for="navswtich1">
               <div class="nav-title flex">
                 <span>Products</span>
@@ -1971,7 +1939,7 @@ framePlayer.play()
               </li>
               <li>
                 <a href="./product_fbscdn-en.html" style="pointer-events: none">
-                  Distributed CDN(coming soon)
+                  Distributed CDN
                 </a>
               </li>
               <li>
@@ -1983,12 +1951,7 @@ framePlayer.play()
             </ul>
           </div>
           <div class="nav-item">
-            <input
-              class="foldable_menu"
-              id="navswtich2"
-              type="checkbox"
-              hidden
-            />
+            <input class="foldable_menu" id="navswtich2" type="checkbox" hidden />
             <label for="navswtich2">
               <div class="nav-title flex">
                 <span>Solutions·Scenario</span>
@@ -2020,12 +1983,7 @@ framePlayer.play()
             </ul>
           </div>
           <div class="nav-item">
-            <input
-              class="foldable_menu"
-              id="navswtich3"
-              type="checkbox"
-              hidden
-            />
+            <input class="foldable_menu" id="navswtich3" type="checkbox" hidden />
             <label for="navswtich3">
               <div class="nav-title flex">
                 <span>Solutions·Industry</span>
@@ -2051,12 +2009,7 @@ framePlayer.play()
             </ul>
           </div>
           <div class="nav-item">
-            <input
-              class="foldable_menu"
-              id="navswtich4"
-              type="checkbox"
-              hidden
-            />
+            <input class="foldable_menu" id="navswtich4" type="checkbox" hidden />
             <label for="navswtich4">
               <div class="nav-title flex">
                 <span>Solutions·WEB3.0</span>
@@ -2075,28 +2028,23 @@ framePlayer.play()
               </li>
             </ul>
           </div>
-         <div class="nav-item">
-          <input class="foldable_menu" id="navswtich5" type="checkbox" hidden />
-          <label for="navswtich5">
-            <div class="nav-title flex">
-             <span>ESG</span>
-              <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-            </div>
-          </label>
-          <ul>
-            <li> <a href="./esg-en.html"> ESG Overview</a></li>
-            <li> <a href="#"> ESG Reports</a></li>
-            <li> <a href="#"> Study Community</a></li>
-            <li> <a href="#"> Giving Back</a></li>
-          </ul>
-        </div>
           <div class="nav-item">
-            <input
-              class="foldable_menu"
-              id="navswtich6"
-              type="checkbox"
-              hidden
-            />
+            <input class="foldable_menu" id="navswtich5" type="checkbox" hidden />
+            <label for="navswtich5">
+              <div class="nav-title flex">
+                <span>ESG</span>
+                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+              </div>
+            </label>
+            <ul>
+              <li> <a href="./esg-en.html"> ESG Overview</a></li>
+              <li> <a href="#"> ESG Reports</a></li>
+              <li> <a href="#"> Learning</a></li>
+              <li> <a href="#"> Giving Back</a></li>
+            </ul>
+          </div>
+          <div class="nav-item">
+            <input class="foldable_menu" id="navswtich6" type="checkbox" hidden />
             <label for="navswtich6">
               <div class="nav-title flex">
                 <span>About</span>
@@ -2128,9 +2076,9 @@ framePlayer.play()
               </div>
             </div>
             <div class="flex line-2">
-              <span
-                >Address:Room 3001, Floor 2, Building A7, Hainan Ecological Software Park, High-tech Industry Demonstration Zone, Laocheng Town, Chengmai County, Hainan Province</span
-              >
+              <span>Address:Room 3001, Floor 2, Building A7, Hainan Ecological Software Park, High-tech Industry
+                Demonstration Zone, Laocheng Town, Chengmai County, Hainan Province, the administrative unit of the
+                county directly under the jurisdiction of Hainan Province</span>
             </div>
           </div>
           <div class="divider-v ghost"></div>
@@ -2138,13 +2086,9 @@ framePlayer.play()
             <div class="products flex fd-c jc-between h-auto">
               <div class="title flex">Products</div>
               <div class="product_imgs flex line-2 ai-start">
-                <a href="https://storage.anmaicloud.com/" target="_blank"
-                  ><img src="assets/img/products1.png"
-                /></a>
+                <a href="https://storage.anmaicloud.com/" target="_blank"><img src="assets/img/products1.png" /></a>
                 <div class="divider-v ghost"></div>
-                <a href="https://gpu.anmaicloud.com/" target="_blank"
-                  ><img src="assets/img/products2.png"
-                /></a>
+                <a href="https://gpu.anmaicloud.com/" target="_blank"><img src="assets/img/products2.png" /></a>
               </div>
             </div>
             <div class="gzh flex fd-c ai-end">
@@ -2156,10 +2100,8 @@ framePlayer.play()
           <div class="beian sub-unit flex fd-c jc-between h-auto">
             <div class="flex ai-center"></div>
             <div class="flex line-2">
-              <span
-                >琼ICP备20000109号-1<br />
-                Copyright © 2013-2021 Anmai Cloud Rights Reserved.</span
-              >
+              <span>琼ICP备20000109号-1<br />
+                Copyright © 2013-2021 Anmai Cloud Rights Reserved.</span>
             </div>
           </div>
         </div>
@@ -2253,7 +2195,7 @@ framePlayer.play()
       })
     </script>
 
-    <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
     <script>
       $(function () {
         myVideo = document.getElementById("myVideo")
@@ -2297,6 +2239,10 @@ framePlayer.play()
           setTimeout(recheckVideoPlay, 1000)
         }
       }
+window.scrollTo({top:0},{behavior:'smooth'});
+setTimeout(function(){
+$(".stage1 .title3_mask").css('opacity',0);
+},10);
     </script>
   </body>
 </html>

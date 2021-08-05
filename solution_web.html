@@ -24,10 +24,7 @@
     <link rel="stylesheet" href="./assets/css/common.css" />
     <link rel="stylesheet" href="./assets/css/solution.css" />
     <link rel="stylesheet" href="./assets/css/solution-media.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.dowebok.com/98/css/animate.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.dowebok.com/98/css/animate.min.css" /> 
     <!-- script -->
     <script type="text/javascript" src="./assets/js/lib/jquery.min.js"></script>
     <!-- <script src="./assets/js/nav.js"></script> -->
@@ -573,7 +570,7 @@
                 <p class="til">案例 Cases</p>
                 <div class="h3">华栖云</div>
                 <p class="desc">
-                  边缘计算为华栖云提供稳定可靠的计算和网络服务，具备弹性和分钟级交付能力，边缘就近收流、合流、转码、弹幕的架构，有效提升链路质量，降低骨干网络压力。
+                  边缘计算为华栖云提供稳定可靠的计算和网络服务，具备弹性和分钟级交付能力，边缘就近收流、合流、转码、弹幕的架构，有效提升链路质量，降低骨干网络压力。<br>边缘节点覆盖全，解决地域分布广泛、网络质量不稳定带来的体验和延时问题。
                 </p>
                 <div class="btn">
                   <div class="left">
@@ -911,7 +908,7 @@
                 </li>
                 <li>
                   <a href="./product_fbscdn.html" style="pointer-events: none">
-                    分布式CDN(即将上线)
+                    分布式CDN
                   </a>
                 </li>
                 <li>
@@ -1182,7 +1179,7 @@
       if (location.hash) {
         $($(".nav-wrap a")[$(location.hash).data("index")]).addClass("active")
 
-        $(location.hash).get(0).scrollIntoView()
+        $(location.hash).get(0)&&$(location.hash).get(0).scrollIntoView()
       }
       window.addEventListener("scroll", function () {
         $(".nav-wrap a").removeClass("active")

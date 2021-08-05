@@ -1,12 +1,12 @@
-@font-face {
-  font-family: "iconfont"; /* Project id 2652720 */
-  src: url("//at.alicdn.com/t/font_2652720_5q953n8yiko.woff2?t=1626337796140")
+ @font-face {
+  font-family: "iconfont"; 
+  src: url("https://at.alicdn.com/t/font_2652720_5q953n8yiko.woff2?t=1626337796140")
       format("woff2"),
-    url("//at.alicdn.com/t/font_2652720_5q953n8yiko.woff?t=1626337796140")
+    url("https://at.alicdn.com/t/font_2652720_5q953n8yiko.woff?t=1626337796140")
       format("woff"),
-    url("//at.alicdn.com/t/font_2652720_5q953n8yiko.ttf?t=1626337796140")
+    url("https://at.alicdn.com/t/font_2652720_5q953n8yiko.ttf?t=1626337796140")
       format("truetype");
-}
+} 
 
 .iconfont {
   font-family: "iconfont" !important;

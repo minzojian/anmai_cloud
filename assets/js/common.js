@@ -47,47 +47,47 @@ function loadFont(fontFamily, src, style) {
   return new FontFace(fontFamily, src, style).load()
 }
 
-Promise.all(
-  [
-    {
-      fontFamily: "FZLanTingHeiS-DB1-GBK",
-      src: `url(./assets/fonts/FZLanTingHei-DB-GBK.ttf)`,
-    },
-    {
-      fontFamily: "PingFangSC",
-      src: `url(./assets/fonts/PingFang-Regular.ttf)`,
-    },
-    {
-      fontFamily: "Gilroy",
-      src: `url(./assets/fonts/gilroy-bold-4.otf)`,
-      style: { weight: "bold" },
-    },
-    {
-      fontFamily: "Gilroy",
-      src: `url(./assets/fonts/Gilroy-Medium-2.otf)`,
-      style: { weight: 500 },
-    },
-    {
-      fontFamily: "OPPOSans",
-      src: `url(./assets/fonts/OPPOSans-R.ttf)`,
-      style: { weight: 400 },
-    },
-    {
-      fontFamily: "OPPOSans",
-      src: `url(./assets/fonts/OPPOSans-M.ttf)`,
-      style: { weight: 500 },
-    },
-    {
-      fontFamily: "OPPOSans",
-      src: `url(./assets/fonts/OPPOSans-B.ttf)`,
-      style: { weight: "bold" },
-    },
-  ].map(({ fontFamily, src, style }) => loadFont(fontFamily, src, style))
-).then((fonts) => {
-  fonts.forEach((f) => {
-    document.fonts.add(f)
-  })
-})
+// Promise.all(
+//   [
+//     {
+//       fontFamily: "FZLanTingHeiS-DB1-GBK",
+//       src: `url(./assets/fonts/FZLanTingHei-DB-GBK.ttf)`,
+//     },
+//     {
+//       fontFamily: "PingFangSC",
+//       src: `url(./assets/fonts/PingFang-Regular.ttf)`,
+//     },
+//     {
+//       fontFamily: "Gilroy",
+//       src: `url(./assets/fonts/gilroy-bold-4.otf)`,
+//       style: { weight: "bold" },
+//     },
+//     {
+//       fontFamily: "Gilroy",
+//       src: `url(./assets/fonts/Gilroy-Medium-2.otf)`,
+//       style: { weight: 500 },
+//     },
+//     {
+//       fontFamily: "OPPOSans",
+//       src: `url(./assets/fonts/OPPOSans-R.ttf)`,
+//       style: { weight: 400 },
+//     },
+//     {
+//       fontFamily: "OPPOSans",
+//       src: `url(./assets/fonts/OPPOSans-M.ttf)`,
+//       style: { weight: 500 },
+//     },
+//     {
+//       fontFamily: "OPPOSans",
+//       src: `url(./assets/fonts/OPPOSans-B.ttf)`,
+//       style: { weight: "bold" },
+//     },
+//   ].map(({ fontFamily, src, style }) => loadFont(fontFamily, src, style))
+// ).then((fonts) => {
+//   fonts.forEach((f) => {
+//     document.fonts.add(f)
+//   })
+// })
 
 $(function () {
   $(window).on("resize", function () {
@@ -277,4 +277,24 @@ if (!window.disabledHeaderAudoSwitch) {
       // },
     })
   })
+}
+
+
+
+$.ajax = (($oldAjax) => {
+  // on fail, retry by creating a new Ajax deferred
+  function check(a,b,c){
+    var shouldRetry = b != 'success' && b != 'parsererror';
+    if( shouldRetry && --this.retries > 0 )
+      setTimeout(() => { $.ajax(this) }, this.retryInterval || 100);
+  }
+
+  return settings => $oldAjax(settings).always(check)
+})($.ajax);
+$.get=(url,parm)=>{
+return $.ajax({url,method:'get',data:parm,retries:3,retryInterval:2000})
+}
+
+$.post=(url,data,parm)=>{
+return $.ajax({url,method:'post',data,...parm,retries:3,retryInterval:2000})
 }
