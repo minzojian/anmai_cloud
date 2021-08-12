@@ -230,6 +230,7 @@ $(document).ready(function () {
           if (data.code === 0) {
             setTimeout(function () {
               $(".contactModal, .modalMask").hide().removeClass("show")
+              document.body.style.overflow = "auto"
             }, 2000)
           }
 
