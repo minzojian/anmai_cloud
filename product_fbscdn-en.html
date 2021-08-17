@@ -82,15 +82,32 @@
     background: url('./assets/img/product/产品-分布式CDN/矩形 11@2x.png') no-repeat center;
     background-size: cover;
   }
-  .page-main .main-container .section5 .wrapper .right .c_left .mid_item{
+
+  .page-main .main-container .section5 .wrapper .right .c_left .mid_item {
     min-height: 231px;
     height: auto;
   }
-  .page-main .main-container .section5 .wrapper .left .h1{
+
+  .page-main .main-container .section5 .wrapper .left .h1 {
     line-height: 1;
   }
-  .page-main .main-container .section5 .wrapper .left .h4{
+
+  .page-main .main-container .section5 .wrapper .left .h4 {
     margin-top: 90px;
+  }
+
+  .page-main .main-container .section2 .wrapper .swiper-container .swiper-wrapper .swiper-slide .items .contents {
+    height: 63%;
+  }
+
+  @media screen and (max-width: 750px) {
+    .page-main .main-container .section2 .swiper-container .swiper-wrapper .swiper-slide {
+      width: 85% !important;
+      height: auto !important;
+    }
+    .page-main .main-container .section2 .wrapper .swiper-container .swiper-wrapper .swiper-slide .items .contents{
+      height: 76%;
+    }
   }
 </style>
 
@@ -107,25 +124,26 @@
 
   <div class="page-main">
     <!-- header -->
-    <header class="header1 header_light">
-      <a href="./index.html">
+    <header class="header1 header_light state2">
+      <a href="./index-en.html">
         <div class="logo">&nbsp;</div>
       </a>
       <div class="right-part">
         <input id="langswtich" class="langswtich foldable_menu" type="checkbox" hidden />
         <label for="langswtich" class="mobile">
-          <div class="lang_bt_mobile"> EN <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+          <div class="lang_bt_mobile">
+            中文 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
           </div>
           <div class="langswtich_mask switch_mask"></div>
         </label>
         <ul class="lang-panel">
+          <li>
+            <a href='./product_jzcc.html'> <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a>
+          </li>
           <li class="selected">
             <a>
-              <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a>
-          </li>
-          <li>
-            <a href='./product_ygpu-en.html'>
-              <i class="fa iconfont icon-gou" aria-hidden="true"></i> English</a>
+              <i class="fa iconfont icon-gou" aria-hidden="true"></i>
+              English</a>
           </li>
         </ul>
         <input id="menuswtich" type="checkbox" hidden />
@@ -137,178 +155,191 @@
         </label>
         <div class="nav">
           <ul>
-            <li class=""><a href="./index.html">首页</a></li>
+            <li class=""><a href="./index-en.html">Home</a></li>
             <li class="active">
-              <a>产品 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+              <a>Products <i class="fa iconfont icon-Down" aria-hidden="true"></i>
               </a>
               <div class="submenu product_submenu">
                 <ul>
                   <li>
-                    <a href="./product_fbssjzx.html">
+                    <a href="./product_fbssjzx-en.html">
                       <div class="icon">
                         <img src="./assets/img/icons/products/分布式数据中心.svg" />
-                      </div> 分布式数据中心
+                      </div>
+                      Distributed Data Center
                     </a>
                   </li>
                   <li>
-                    <a href="./product_fbscdn.html" style='pointer-events:none;'>
+                    <a href="./product_fbscdn-en.html" style="pointer-events: none">
                       <div class="icon">
                         <img src="./assets/img/icons/products/分布式CDN.svg" />
-                      </div> 分布式CDN(即将上线)
+                      </div>
+                      Distributed CDN(coming soon)
                     </a>
                   </li>
                   <li>
-                    <a href="./product_jzcc.html">
+                    <a href="./product_jzcc-en.html">
                       <div class="icon">
                         <img src="./assets/img/icons/products/矩阵存储.svg" />
-                      </div> 矩阵存储
+                      </div>
+                      Matrix Storage
                     </a>
                   </li>
                   <li>
-                    <a href="./product_ygpu.html">
+                    <a href="./product_ygpu-en.html">
                       <div class="icon">
                         <img src="./assets/img/icons/products/云GPU.svg" />
-                      </div> 云GPU
+                      </div>
+                      Cloud GPU
                     </a>
                   </li>
                 </ul>
               </div>
             </li>
             <li>
-              <a>解决方案 <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+              <a>Solutions
+                <i class="fa iconfont icon-Down" aria-hidden="true"></i>
               </a>
               <div class="submenu solution_submenu">
                 <div class="submenu-unit">
-                  <a href="./solution_cj.html">
-                    <div class="title">场景 Scenario</div>
+                  <a href="./solution_cj-en.html">
+                    <div class="title">Scenario</div>
                   </a>
                   <ul>
                     <li>
-                      <a href="./solution_cj.html#cc">
+                      <a href="./solution_cj-en.html#cc">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/icon-15_存储.svg" />
-                        </div> 存储
+                        </div>
+                        Storage
                       </a>
                     </li>
                     <li>
-                      <a href="./solution_cj.html#rzybf">
+                      <a href="./solution_cj-en.html#rzybf">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/icon-15_容灾与备份.svg" />
-                        </div> 容灾与备份
+                        </div>
+                        Backup and Restore
                       </a>
                     </li>
                     <li>
-                      <a href="./solution_cj.html#kxjs">
+                      <a href="./solution_cj-en.html#kxjs">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/icon-15_科学计算.svg" />
-                        </div> 科学计算
+                        </div>
+                        Scientific Computing
                       </a>
                     </li>
                     <li>
-                      <a href="./solution_cj.html#aqjs">
+                      <a href="./solution_cj-en.html#aqjs">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/icon-15_安全计算.svg" />
-                        </div> 安全计算
+                        </div>
+                        Security Computing
                       </a>
                     </li>
                     <li>
-                      <a href="./solution_cj.html#wly">
+                      <a href="./solution_cj-en.html#wly">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/icon-15_物理云.svg" />
-                        </div> 物理云
+                        </div>
+                        Physical Cloud
                       </a>
                     </li>
                     <li>
-                      <a href="./solution_cj.html#nrff">
+                      <a href="./solution_cj-en.html#nrff">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/icon-15_内容分发.svg" />
-                        </div> 内容分发
-
+                        </div>
+                        Content Distribution
                       </a>
                     </li>
                     <li>
-                      <a href="./solution_cj.html#jqxx">
+                      <a href="./solution_cj-en.html#jqxx">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/icon-15_机器学习.svg" />
-                        </div> 机器学习
+                        </div>
+                        Machine Learning
                       </a>
                     </li>
                   </ul>
                 </div>
                 <div class="divider-v"></div>
                 <div class="submenu-unit">
-                  <a href="./solution_hy.html">
-                    <div class="title">行业 Industry</div>
+                  <a href="./solution_hy-en.html">
+                    <div class="title">Industry</div>
                   </a>
                   <ul>
                     <li>
-                      <a href="./solution_hy.html#rgzn">
+                      <a href="./solution_hy-en.html#rgzn">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/icon-15_人工智能-08.svg" />
-                        </div> 人工智能
-
+                        </div>
+                        Artificial Intelligence
                       </a>
                     </li>
                     <li>
-                      <a href="./solution_hy.html#ky">
+                      <a href="./solution_hy-en.html#ky">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/icon-15_科研.svg" />
-                        </div> 科研
-
+                        </div>
+                        Science
                       </a>
                     </li>
                     <li>
-                      <a href="./solution_hy.html#djk">
+                      <a href="./solution_hy-en.html#djk">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/icon-15_大健康.svg" />
-                        </div> 大健康
-
+                        </div>
+                        General Health
                       </a>
                     </li>
                     <li>
-                      <a href="./solution_hy.html#zw">
+                      <a href="./solution_hy-en.html#zw">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/icon-15_政务.svg" />
-                        </div> 政务
-
+                        </div>
+                        Government Affairs
                       </a>
                     </li>
                     <li>
-                      <a href="./solution_hy.html#swjy">
+                      <a href="./solution_hy-en.html#swjy">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/icon-15_生物基因.svg" />
-                        </div> 生物基因
+                        </div>
+                        Biogen
                       </a>
                     </li>
                   </ul>
                 </div>
                 <div class="divider-v"></div>
                 <div class="submenu-unit">
-                  <a href="./solution_web.html">
+                  <a href="./solution_web-en.html">
                     <div class="title">Web 3.0</div>
                   </a>
                   <ul>
                     <li>
-                      <a href="./solution_web.html#byjs">
+                      <a href="./solution_web-en.html#byjs">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/icon-15_边缘计算.svg" />
-                        </div> 边缘计算
-
+                        </div>
+                        Edge Computing
                       </a>
                     </li>
                     <li>
-                      <a href="./solution_web.html#qkl">
+                      <a href="./solution_web-en.html#qkl">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/icon-15_区块链.svg" />
-                        </div> 区块链
-
+                        </div>
+                        Blockchain
                       </a>
                     </li>
                     <li>
-                      <a href="./solution_web.html#rgzn">
+                      <a href="./solution_web-en.html#rgzn">
                         <div class="icon">
                           <img src="./assets/img/icons/solutions/icon-15_人工智能-09.svg" />
-                        </div> 人工智能
+                        </div>
+                        Artificial Intelligence
                       </a>
                     </li>
                   </ul>
@@ -316,46 +347,40 @@
               </div>
             </li>
             <li>
-              <a>ESG
-                <i class="fa iconfont icon-Down" aria-hidden="true"></i>
+              <a>ESG <i class="fa iconfont icon-Down" aria-hidden="true"></i>
               </a>
               <div class="submenu product_submenu">
                 <ul>
-                  <li> <a href="./esg.html">
+                  <li> <a href="./esg-en.html">
                       <div class="icon">
                         <img src="./assets/img/icons/esg/ESG.svg" />
-                      </div>
-                      ESG
+                      </div> ESG Overview
                     </a></li>
                   <li> <a href="#">
                       <div class="icon">
                         <img src="./assets/img/icons/esg/ESG报告.svg" />
-                      </div>
-                      ESG报告（即将上线）
+                      </div> ESG Reports(coming soon)
                     </a></li>
                   <li> <a href="#">
                       <div class="icon">
                         <img src="./assets/img/icons/esg/学习社区.svg" />
-                      </div>
-                      学习社区（即将上线）
+                      </div> Learning(coming soon)
                     </a></li>
                   <li> <a href="#">
                       <div class="icon">
                         <img src="./assets/img/icons/esg/社会公益.svg" />
-                      </div>
-                      社会公益（即将上线）
+                      </div> Giving Back(coming soon)
                     </a></li>
                 </ul>
               </div>
             </li>
-            <!-- 
-              <li><a>投资者关系</a></li> -->
-            <li><a href="./about.html">关于我们</a></li>
+            <!-- <li><a>投资者关系</a></li> -->
+            <li><a href="./about-en.html">About</a></li>
           </ul>
         </div>
         <label for="langswtich" class="not_mobile">
           <div class="lang_bt">
-            <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> English
+            <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> 中文
           </div>
           <div class="langswtich_mask switch_mask"></div>
         </label>
@@ -368,16 +393,19 @@
           <div class="slogan">
             <div class="left">
               <div class="title1 wow fadeInUp" data-wow-duration=".6s" data-wow-delay="0">
-                分布式CDN
+                Distributed CDN
               </div>
               <div class="title1 wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".2s">
                 Distributed CDN
               </div>
               <p class="title2 wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".4s">
-                AMC DCDN通过KAD网络尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。
+                AMC DCDN possibly avoids the bottleneck and sections that may impact the data transmission speed and
+                stability on the internet via KAD network, enabling content transmission to be faster and more stable.
               </p>
               <p class="title2 wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".5s" style="margin-top: 20px;">
-                通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。
+                According to integrated information such as network flow, connection to each node, load, distance to
+                users and response time, etc., the CDN system can redirect user’s request to the nearest service node
+                via the intelligent virtual network composed by node servers placed on the network.
               </p>
 
             </div>
@@ -393,7 +421,7 @@
           </p>
           <div class="tit_box">
             <div class="title wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".8s">
-              产品优势
+              Advantages
             </div>
 
           </div>
@@ -404,8 +432,10 @@
                 <div class="items bg1">
                   <h2>01</h2>
                   <div class="contents">
-                    <div class='h4'>全网覆盖</div>
-                    <p>CDN加速可以覆盖全球的线路，通过和运营商合作，部署IDC资源，在全国骨干节点上，合理部署CDN边缘分发存储节点，充分利用带宽资源，平衡源站流量。
+                    <div class='h4'>Entire network coverage</div>
+                    <p>CDN Speedup could cover global lines. IDC resources can be deployed by cooperating with
+                      operators. CDN edge distribution and storage nodes can be reasonably deployed across national
+                      backbone nodes to fully use broadband resources and balance flow of source stations.
                     </p>
                   </div>
                 </div>
@@ -414,8 +444,10 @@
                 <div class="items bg2">
                   <h2>02</h2>
                   <div class="contents">
-                    <div class='h4'>安全稳定</div>
-                    <p>CDN的负载均衡和分布式存储技术，可以加强网站的可靠性，相当无无形中给你的网站添加了一把保护伞，应对绝大部分的互联网攻击事件。防攻击系统也能避免网站遭到恶意攻击。
+                    <div class='h4'>Safe and stable </div>
+                    <p>CDN load balance and distributed storage technologies enhance the website’s reliability, they act
+                      like an umbrella to protect your website to defend against most internet attack events. The
+                      anti-attack system also defends your website against malicious attacks.
                     </p>
                   </div>
                 </div>
@@ -424,8 +456,10 @@
                 <div class="items bg3">
                   <h2>03</h2>
                   <div class="contents">
-                    <div class='h4'>节约成本</div>
-                    <p>使用CDN加速可以实现网站的全国铺设，你根本不用考虑购买服务器与后续的托管运维，服务器之间镜像同步，也不用为了管理维护技术人员而烦恼，节省了人力、精力和财力。
+                    <div class='h4'>Save money </div>
+                    <p>CDN Speedup enables the allocation of networks across the country. No consideration is necessary
+                      for the purchase of servers and the following operations as synchronous mirroring is achieved
+                      among servers as well as the management of technicians, which saves manpower, energy and money.
                     </p>
                   </div>
                 </div>
@@ -444,24 +478,28 @@
         <div class="wrapper">
           <div class="left wow fadeInLeft section_title" data-wow-duration="1s" data-wow-delay=".3s">
             <div class='h1'>Application Scenarios</div>
-            <div class='h4'>应用场景</div>
+            <div class='h4'>Application Scenarios</div>
           </div>
           <div class="right">
             <div class="c_left">
               <div class="top_item items wow fadeInUp type3" data-wow-duration="1s" data-wow-delay=".1s">
-                <div class='h3'>下载加速</div>
-                <p>针对大文件获取、应用下载、音视频下载等业务场景，提供稳定、优质的下载加速</p>
+                <div class='h3'>Accelerated downloading</div>
+                <p>To provide stable and quality accelerated downloading speed to obtain large files, applications,
+                  audio and video and other business scenarios.</p>
               </div>
               <div class="mid_item items wow fadeInUp animated type3" data-wow-duration="1s" data-wow-delay=".2s">
-                <div class='h3'>网站加速</div>
-                <p>针对门户网站、Dapp应用、区块链服务等业务场景，提供强大的静态内容（如各类型网页样式、图片、小文件）加速分发处理能力，显著提升网页用户的体验</p>
+                <div class='h3'>Website speedup</div>
+                <p>To powerfully accelerate the distribution and processing of static contents (such as all types of
+                  websites, images and small files) for portal website, Dapp, blockchain service and other business
+                  scenarios to significantly improve the web users’experience. </p>
               </div>
             </div>
             <div class="c_rirht">
 
               <div class="mid_item wow items fadeInUp type3" data-wow-duration="1s" data-wow-delay=".25s">
-                <div class='h3'>安全加速</div>
-                <p>DCDN 在拥有 CDN 全部加速优势的基础上，提供超强的安全防护能：防护大流量 DDoS 攻击，抵抗大型 CC 攻击</p>
+                <div class='h3'>Security Speedup</div>
+                <p>DCDN provides ultra strong security protection ability while having the full speed-up advantages of
+                  CDN which defends against mass flow DDoS attacks and resists large-scale CC attacks.</p>
               </div>
 
             </div>
@@ -479,19 +517,17 @@
           <input id="langswtich2" class="langswtich foldable_menu" type="checkbox" hidden />
           <label for="langswtich2">
             <div class="lang_bt">
-              <i class="fa iconfont icon-yuyan" aria-hidden="true"></i>
-              English
+              <i class="fa iconfont icon-yuyan" aria-hidden="true"></i> 中文
             </div>
             <div class="langswtich_mask switch_mask"></div>
           </label>
           <ul class="lang-panel lang-panel-bottom">
+            <li>
+              <a href='./product_fbssjzx.html'>
+                <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a>
+            </li>
             <li class="selected">
               <a>
-                <i class="fa iconfont icon-gou" aria-hidden="true"></i>
-                中文</a>
-            </li>
-            <li>
-              <a href='./product_ygpu-en.html'>
                 <i class="fa iconfont icon-gou" aria-hidden="true"></i>
                 English</a>
             </li>
@@ -502,22 +538,24 @@
             <input class="foldable_menu" id="navswtich1" type="checkbox" hidden />
             <label for="navswtich1">
               <div class="nav-title flex">
-                <span>产品</span>
+                <span>Products</span>
                 <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
               </div>
             </label>
             <ul>
               <li>
-                <a href="./product_fbssjzx.html"> 分布式数据中心 </a>
+                <a href="./product_fbssjzx-en.html">Distributed Data Center</a>
               </li>
               <li>
-                <a href="./product_fbscdn.html" style='pointer-events:none;'> 分布式CDN</a>
+                <a href="./product_fbscdn-en.html" style="pointer-events: none">
+                  Distributed CDN
+                </a>
               </li>
               <li>
-                <a href="./product_jzcc.html"> 矩阵存储 </a>
+                <a href="./product_jzcc-en.html">Matrix Storage</a>
               </li>
               <li>
-                <a href="./product_ygpu.html"> 云GPU </a>
+                <a href="./product_ygpu-en.html">Cloud GPU</a>
               </li>
             </ul>
           </div>
@@ -525,31 +563,31 @@
             <input class="foldable_menu" id="navswtich2" type="checkbox" hidden />
             <label for="navswtich2">
               <div class="nav-title flex">
-                <span>解决方案·场景</span>
+                <span>Solutions·Scenario</span>
                 <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
               </div>
             </label>
             <ul>
               <li>
-                <a href="./solution_cj.html#cc"> 存储 </a>
+                <a href="./solution_cj-en.html#cc"> Storage </a>
               </li>
               <li>
-                <a href="./solution_cj.html#rzybf"> 容灾与备份 </a>
+                <a href="./solution_cj-en.html#rzybf"> Backup and Restore </a>
               </li>
               <li>
-                <a href="./solution_cj.html#kxjs"> 科学计算 </a>
+                <a href="./solution_cj-en.html#kxjs"> Scientific Computing </a>
               </li>
               <li>
-                <a href="./solution_cj.html#aqjs"> 安全计算 </a>
+                <a href="./solution_cj-en.html#aqjs"> Security Computing </a>
               </li>
               <li>
-                <a href="./solution_cj.html#wly"> 物理云 </a>
+                <a href="./solution_cj-en.html#wly"> Physical Cloud </a>
               </li>
               <li>
-                <a href="./solution_cj.html#nrff"> 内容分发 </a>
+                <a href="./solution_cj-en.html#nrff"> Content Distribution </a>
               </li>
               <li>
-                <a href="./solution_cj.html#jqxx"> 机器学习 </a>
+                <a href="./solution_cj-en.html#jqxx"> Machine Learning </a>
               </li>
             </ul>
           </div>
@@ -557,25 +595,25 @@
             <input class="foldable_menu" id="navswtich3" type="checkbox" hidden />
             <label for="navswtich3">
               <div class="nav-title flex">
-                <span>解决方案·行业</span>
+                <span>Solutions·Industry</span>
                 <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
               </div>
             </label>
             <ul>
               <li>
-                <a href="./solution_hy.html#rgzn"> 人工智能 </a>
+                <a href="./solution_hy-en.html#rgzn"> Artificial Intelligence </a>
               </li>
               <li>
-                <a href="./solution_hy.html#ky"> 科研 </a>
+                <a href="./solution_hy-en.html#ky"> Science </a>
               </li>
               <li>
-                <a href="./solution_hy.html#djk"> 大健康 </a>
+                <a href="./solution_hy-en.html#djk"> General Health </a>
               </li>
               <li>
-                <a href="./solution_hy.html#zw"> 政务 </a>
+                <a href="./solution_hy-en.html#zw"> Government Affairs </a>
               </li>
               <li>
-                <a href="./solution_hy.html#swjy"> 生物基因 </a>
+                <a href="./solution_hy-en.html#swjy"> Biogen </a>
               </li>
             </ul>
           </div>
@@ -583,51 +621,50 @@
             <input class="foldable_menu" id="navswtich4" type="checkbox" hidden />
             <label for="navswtich4">
               <div class="nav-title flex">
-                <span>解决方案·WEB3.0</span>
+                <span>Solutions·WEB3.0</span>
                 <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
               </div>
             </label>
             <ul>
               <li>
-                <a href="./solution_web.html#byjs"> 边缘计算 </a>
+                <a href="./solution_web-en.html#byjs"> Edge Computing </a>
               </li>
               <li>
-                <a href="./solution_web.html#qkl"> 区块链 </a>
+                <a href="./solution_web-en.html#qkl"> Blockchain </a>
               </li>
               <li>
-                <a href="./solution_web.html#rgzn"> 人工智能 </a>
+                <a href="./solution_web-en.html#rgzn"> Artificial Intelligence </a>
               </li>
             </ul>
           </div>
-          <div class="nav-item">
-            <input class="foldable_menu" id="navswtich5" type="checkbox" hidden />
-            <label for="navswtich5">
-              <div class="nav-title flex">
-                <span>ESG</span>
-                <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
-              </div>
-            </label>
-            <ul>
-              <li> <a href="./esg.html"> ESG </a></li>
-              <li> <a href="#"> ESG报告（即将上线） </a></li>
-              <li> <a href="#"> 学习社区（即将上线） </a></li>
-              <li> <a href="#"> 社会公益（即将上线） </a></li>
-            </ul>
-          </div>
+          <!-- <div class="nav-item">
+              <input class="foldable_menu" id="navswtich5" type="checkbox" hidden />
+              <label for="navswtich5">
+                <div class="nav-title flex">
+                  <span>ESG</span>
+                  <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
+                </div>
+              </label>
+              <ul>
+                <li><a>社会责任</a></li>
+                <li><a>信任承诺</a></li>
+                <li><a>公司治理</a></li>
+              </ul>
+            </div> -->
           <div class="nav-item">
             <input class="foldable_menu" id="navswtich6" type="checkbox" hidden />
             <label for="navswtich6">
               <div class="nav-title flex">
-                <span>关于我们</span>
+                <span>About</span>
                 <i class="fa iconfont icon-Down mobile" aria-hidden="true"></i>
               </div>
             </label>
             <ul>
-              <li><a href="./about.html#gsjs">公司介绍</a></li>
-              <li><a href="./about.html#fzlc">发展历程</a></li>
-              <li><a href="./about.html#xwdt">新闻动态</a></li>
-              <li><a href="./about.html#rczp">人才招聘</a></li>
-              <li><a href="./about.html#lxfs">联系方式</a></li>
+              <li><a href="./about-en.html#gsjs">Company Profile</a></li>
+              <li><a href="./about-en.html#fzlc">Development History</a></li>
+              <li><a href="./about-en.html#xwdt">What's News</a></li>
+              <li><a href="./about-en.html#rczp">Career</a></li>
+              <li><a href="./about-en.html#lxfs">Contact Us</a></li>
             </ul>
           </div>
         </div>
@@ -637,8 +674,8 @@
           <div class="contacts sub-unit flex fd-c jc-between h-auto">
             <div class="flex">
               <div class="flex ai-center">
-                <i class="fa iconfont icon-dianhua" aria-hidden="true"></i>
-                +86 898-32867012
+                <i class="fa iconfont icon-dianhua" aria-hidden="true"></i> +86
+                898 3286 7007
               </div>
               <div class="divider-v"></div>
               <div class="flex ai-center">
@@ -647,13 +684,14 @@
               </div>
             </div>
             <div class="flex line-2">
-              <span>地址：海南省省直辖县行政单位澄迈县老城镇高新技术产业示范区海南生态软件园A7幢二层3001</span>
+              <span>Address: Room 3001, Floor 2, Building A7, Hainan Ecological Software Park, High-tech Industry
+                Demonstration Zone, Laocheng Town, Chengmai County, Hainan Province, China</span>
             </div>
           </div>
           <div class="divider-v ghost"></div>
           <div class="product_part">
             <div class="products flex fd-c jc-between h-auto">
-              <div class="title flex">产品平台</div>
+              <div class="title flex">Products</div>
               <div class="product_imgs flex line-2 ai-start">
                 <a href="https://storage.anmaicloud.com/" target="_blank"><img src="assets/img/products1.png" /></a>
                 <div class="divider-v ghost"></div>
