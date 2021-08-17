@@ -652,6 +652,17 @@
       padding: 70px 58px;
       box-sizing: border-box;
       max-width: 440px;
+      max-height: 400px;
+overflow: hidden;
+&::after{
+content:"";
+position: absolute;
+width: 100%;
+bottom: 0;
+left: 0;
+    height: 50px;
+    background: linear-gradient(0deg, #fff 50%, rgba(255,255,255,0));
+}
 
       .j-title {
         font-size: 28px;
@@ -751,7 +762,7 @@ min-height: 200px;
 
       .p-top-part {
         margin-bottom: 40px;
-
+        white-space: nowrap;
         .iconfont {
           margin-right: 10px;
         }
@@ -997,6 +1008,17 @@ min-height: 200px;
 }
 
 @media screen and (max-width: 1440px) {
+
+.page-main .main-container .section3 .wrapper .left-part .bottom-part .year
+{
+margin-right: 50px;
+}
+.page-main .main-container .section3 .wrapper .left-part
+{
+margin-right: 50px;
+}
+
+
 }
 
 @media screen and (max-width: 750px) {
@@ -1345,7 +1367,9 @@ min-height: 200px;
             margin-bottom: 0;
           }
           .job-list .job-item {
+
             padding: 30px;
+
             .j-title {
               font-size: 18px !important;
             }
