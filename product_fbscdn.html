@@ -40,13 +40,14 @@
     background-color: #19242D;
   }
 
-  .page-main .main-container .section2 .wrapper {
+  /* .page-main .main-container .section2 .wrapper {
     margin-left: 13%;
   }
 
   .page-main .main-container .banner .wrapper {
     padding-left: 13%;
-  }
+padding-right: 13%;
+  } */
 
   .page-main .main-container .section2 .wrapper .swiper-container .swiper-wrapper .swiper-slide .bg1 {
     background: url('./assets/img/product/产品-分布式CDN/圆角矩形 1@2x.png');
@@ -92,6 +93,14 @@
   .page-main .main-container .section5 .wrapper .left .h4{
     margin-top: 90px;
   }
+
+
+  @media screen and (max-width: 750px) {
+    .page-main .main-container .banner {
+      background-image: url("./assets/img/product/产品-分布式CDN/mobile_banner.png");
+    }
+  }
+
 </style>
 
 <body>
@@ -124,7 +133,7 @@
               <i class="fa iconfont icon-gou" aria-hidden="true"></i> 中文</a>
           </li>
           <li>
-            <a href='./product_ygpu-en.html'>
+            <a href='./product_fbscdn-en.html'>
               <i class="fa iconfont icon-gou" aria-hidden="true"></i> English</a>
           </li>
         </ul>
@@ -374,10 +383,7 @@
                 Distributed CDN
               </div>
               <p class="title2 wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".4s">
-                AMC DCDN通过KAD网络尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。
-              </p>
-              <p class="title2 wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".5s" style="margin-top: 20px;">
-                通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。
+                AMC DCDN通过KAD网络尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。
               </p>
 
             </div>
@@ -415,7 +421,7 @@
                   <h2>02</h2>
                   <div class="contents">
                     <div class='h4'>安全稳定</div>
-                    <p>CDN的负载均衡和分布式存储技术，可以加强网站的可靠性，相当无无形中给你的网站添加了一把保护伞，应对绝大部分的互联网攻击事件。防攻击系统也能避免网站遭到恶意攻击。
+                    <p>CDN的负载均衡和分布式存储技术，可以加强网站的可靠性，相当于无形中给你的网站添加了一把保护伞，应对绝大部分的互联网攻击事件。防攻击系统也能避免网站遭到恶意攻击。
                     </p>
                   </div>
                 </div>
@@ -491,7 +497,7 @@
                 中文</a>
             </li>
             <li>
-              <a href='./product_ygpu-en.html'>
+              <a href='./product_fbscdn-en.html'>
                 <i class="fa iconfont icon-gou" aria-hidden="true"></i>
                 English</a>
             </li>
@@ -636,7 +642,7 @@
         <div class="flex jc-between flex-1 pos-r">
           <div class="contacts sub-unit flex fd-c jc-between h-auto">
             <div class="flex">
-              <div class="flex ai-center">
+              <div class="flex no-wrap ai-center">
                 <i class="fa iconfont icon-dianhua" aria-hidden="true"></i>
                 +86 898-32867012
               </div>
@@ -687,7 +693,10 @@
     var swiper = new Swiper(".swiper-container", {
       slidesPerView: "auto",
       freeModeSticky: true,
-      spaceBetween: isPhone ? 10 : 30,
+      spaceBetween: 0,
+observer: true, //修改swiper自己或子元素时，自动初始化swiper
+    observeParents: true, 
+      // spaceBetween: isPhone ? 10 : 30,
       freeMode: true,
       navigation: {
         nextEl: ".btn-next",

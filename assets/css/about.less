@@ -71,7 +71,7 @@
             .title1 {
               font-size: 16px;
               font-weight: 400;
-              line-height: 1;
+              line-height: 1.5;
               opacity: 0.96;
               margin-bottom: 28px;
             }
@@ -825,7 +825,7 @@ min-height: 200px;
           .l-j-top-part {
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: flex-start;
             margin-bottom: 16px;
           }
 
@@ -840,18 +840,19 @@ min-height: 200px;
             font-weight: bold;
             color: #000000;
             line-height: 1;
+            white-space: nowrap;
           }
 
           .l-j-bottom-part {
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: flex-start;
           }
 
           .l-j-left-part {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
 
             font-size: 16px;
             font-family: OPPOSans;
@@ -1042,7 +1043,7 @@ margin-right: 50px;
       .job-list-ul {
         .p-job-item {
           .l-j-top-part {
-            justify-content: center !important;
+            justify-content: flex-start !important;
           }
         }
       }
@@ -1050,8 +1051,9 @@ margin-right: 50px;
         .p-job-item {
           .l-j-top-part {
             flex-direction: column !important;
-            align-items: center !important;
+            align-items: flex-start !important;
             .l-j-title {
+white-space: nowrap;
               margin-bottom: 10px !important;
             }
           }
@@ -1295,7 +1297,7 @@ margin-right: 50px;
             }
 
             .right-part a {
-              font-size: 12px !important;
+              font-size: 10px !important;
               white-space: nowrap;
               margin-right: 0px !important;
               // flex: 1;
@@ -1356,7 +1358,7 @@ margin-right: 50px;
             text-align: center;
             color: #7b7b7b;
             label a {
-              line-height: 1.2;
+              line-height: normal;
               display: flex;
               align-items: center;
               justify-content: center;
@@ -1401,7 +1403,9 @@ margin-right: 50px;
       }
 
       .section6 {
-        .top-part {
+
+  .top-part {
+        background: linear-gradient(180deg, #ffffff 70%, rgba(255, 255, 255, 0));
           height: 205px;
           .title1 {
             margin-top: 57px;
@@ -1410,6 +1414,7 @@ margin-right: 50px;
           }
           .title2 {
             font-size: 27px;
+            white-space:nowrap;
           }
         }
         .bottom-part {

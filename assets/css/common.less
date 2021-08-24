@@ -579,6 +579,10 @@ i.fa {
 }
 .flex {
   display: flex;
+&.no-wrap{
+    flex-wrap: nowrap;
+white-space: nowrap;
+}
   &.fd-c {
     flex-direction: column;
   }
@@ -628,7 +632,7 @@ i.fa {
 .action_btn {
   width: 186px;
   height: 52px;
-
+  white-space: nowrap;
   // border: 1px solid #818181;
 
   border-radius: 26px;
@@ -938,9 +942,12 @@ background: #eef1f6 !important;
           transition: all 0.3s;
           position: relative;
           overflow: hidden;
+width: 100%;
           li {
             text-align: left;
             margin-bottom: 5px !important;
+width: 100%;
+white-space: nowrap;
             a {
               opacity: 1 !important;
             }
@@ -969,6 +976,7 @@ background: #eef1f6 !important;
           margin-right: 0;
           > .flex {
             flex-direction: column;
+            width: 100%;
           }
         }
         .product_part {
