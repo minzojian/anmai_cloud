@@ -1241,7 +1241,7 @@ $(".all-job-popup-container ul").scrollTop(pos.top);
         window.macy=Macy({
           container: '.job-list',
           columns: 3,
-          margin: 41,
+          margin: 20,
 
 breakAt: {
     760: {
@@ -1270,7 +1270,7 @@ window.addEventListener('resize', event => {
           $(".detail-wrapper").addClass('show');
           $(".detail-wrapper li").removeClass("show");
           $($(".detail-wrapper li")[$(this).data('index')]).addClass("show");
-
+document.body.style.overflow = "hidden";
 $("#rczp").get(0).scrollIntoView();
 
           window.nice.resize();
