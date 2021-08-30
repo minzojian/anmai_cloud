@@ -112,7 +112,7 @@
 
       function handleVideoPlaying(e) {
         // console.log(myVideo.currentTime, "video progress")
-        if (!window.isPhone && !isMouseWheel && isEnterStage1) {
+        if (!window.isPhone && !isMouseWheel && isEnterStage1 && !window.isMac) {
           var p = getScrollYByVideo()
           window.scrollTo({ top: p.top }) //, behavior: "smooth" })
         }
@@ -1819,6 +1819,9 @@ self.vars.end= getScrollYByVideo(20).top +
       function seekToTime(ts) {
         // try and avoid pauses after seeking
         // myVideo.pause();
+
+if(window.isMac){ isMouseWheel = false;return false};
+
         myVideo.currentTime = Math.max(0, Math.min(20, ts)) // if this is far enough away from current, it implies a "play" call as well...oddly. I mean seriously that is junk.
         if (ts >= 20) {
           myVideo.currentTime = 20
